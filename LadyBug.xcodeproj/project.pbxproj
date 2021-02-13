@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069225D8913E002D55F1 /* AppDelegate.swift */; };
-		5019069525D8913E002D55F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069425D8913E002D55F1 /* SceneDelegate.swift */; };
-		5019069725D8913E002D55F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069625D8913E002D55F1 /* ViewController.swift */; };
-		5019069A25D8913E002D55F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5019069825D8913E002D55F1 /* Main.storyboard */; };
 		5019069C25D89140002D55F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5019069B25D89140002D55F1 /* Assets.xcassets */; };
 		5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5019069D25D89140002D55F1 /* LaunchScreen.storyboard */; };
 		65E47962DF2E6F139812F4D2 /* Pods_LadyBug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91CF55B22029C4B2363CECE /* Pods_LadyBug.framework */; };
@@ -20,9 +17,6 @@
 		18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.debug.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
 		5019068F25D8913E002D55F1 /* LadyBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadyBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5019069225D8913E002D55F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5019069425D8913E002D55F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5019069625D8913E002D55F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5019069925D8913E002D55F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5019069B25D89140002D55F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5019069E25D89140002D55F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		501906A025D89140002D55F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,9 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				5019069225D8913E002D55F1 /* AppDelegate.swift */,
-				5019069425D8913E002D55F1 /* SceneDelegate.swift */,
-				5019069625D8913E002D55F1 /* ViewController.swift */,
-				5019069825D8913E002D55F1 /* Main.storyboard */,
 				5019069B25D89140002D55F1 /* Assets.xcassets */,
 				5019069D25D89140002D55F1 /* LaunchScreen.storyboard */,
 				501906A025D89140002D55F1 /* Info.plist */,
@@ -80,7 +71,6 @@
 				18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */,
 				F24B7BEE370B48BED12C3B59 /* Pods-LadyBug.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,7 +142,6 @@
 			files = (
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
-				5019069A25D8913E002D55F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,23 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5019069725D8913E002D55F1 /* ViewController.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
-				5019069525D8913E002D55F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5019069825D8913E002D55F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5019069925D8913E002D55F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5019069D25D89140002D55F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
