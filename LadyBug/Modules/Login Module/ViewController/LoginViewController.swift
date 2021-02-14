@@ -9,18 +9,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginImageView: UIImageView!
+    @IBOutlet weak var loginTitleLabel: UILabel!
+    @IBOutlet weak var loginDistributionTitleLabel: UILabel!
+    @IBOutlet weak var loginWelcomeTitleLabel: UILabel!
+    @IBOutlet weak var loginRegistrationTitleLabel: UILabel!
+    @IBOutlet weak var loginRegistrationButton: UIButton!
+    @IBOutlet weak var loginByLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     
     }
     
-    @IBAction func buttonDidTapped(_ sender: Any) {
-        if LanguageManager.shared.isArabic {
-            LanguageManager.shared.setLanguage(language: .en)
-        } else {
-            LanguageManager.shared.setLanguage(language: .ar)
-        }
-    }
+    
     
 }
