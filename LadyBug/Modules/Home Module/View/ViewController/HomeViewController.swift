@@ -9,12 +9,17 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var headerView: HomeHeaderView!
+    @IBOutlet weak var tableView: UITableView!
+    
     //Attribuites
+    private var presnter: HomePresenterProtocol!
     private let images = HomeImages()
     private let localizer = HomeLocalizer()
     
     init() {
         super.init(nibName: "\(HomeViewController.self)", bundle: nil)
+        presnter = HomePresenter(view: self)
     }
     
     @available(*, unavailable)
@@ -26,6 +31,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        presnter.attach()
     }
     
 }
@@ -36,6 +42,7 @@ extension HomeViewController {
         setupNaviagtionBarUI()
         addSearchBarToNaviagtionBar()
         addBarButtonsToNavigationBar()
+        setupHeaderView()
     }
     
     private func setupNaviagtionBarUI() {
@@ -67,4 +74,13 @@ extension HomeViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: images.nofication), style: .plain, target: nil, action: nil)
     }
+    
+    private func setupHeaderView() {
+        headerView.attach(delegate: presnter)
+        headerView.notifyDatasourceChanged()
+    }
+}
+
+extension HomeViewController: HomeViewProtocol {
+    
 }

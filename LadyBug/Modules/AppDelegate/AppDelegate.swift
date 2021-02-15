@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = TabBarViewController()
         window?.makeKeyAndVisible()
     }
 
