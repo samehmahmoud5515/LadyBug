@@ -3,5 +3,19 @@
   LadyBug
 
   Created by Sameh on 2/14/21.
+  "login_screen_title" = "لادي بج";
+  "login_screen_description = "طبيب محاصيلك" ;
+  "login_screen_welcome" = "مرحبا";
+  "login_screen_registrationtitle" = "يرجى تسجيل الدخول إلى حسابك";
+  "log_screen_new_user_title = "مستخدم جديد؟";
+"log_screen_forget_password_title" = "هل نسيت كلمة المرور؟";
+  "login_screen_registration" = "تسجيل الدخول";
+  "login_screen_by" = "يرجى تسجيل الدخول إلى حسابك";
+ "login_screen_login_title " = "البريد الإلكتروني أو رقم الهاتف";
+ ""login_screen_password " = "كلمه السر";
+ "login_screen_google_title"= "جوجل";
+  "login_screen_facebook_title"= "فيسبوك";
+  "login_screen_apple_title"= "ابل";
   
 */
+
