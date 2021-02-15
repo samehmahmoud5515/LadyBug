@@ -49,9 +49,9 @@ class TabBarViewController: UITabBarController {
     }
     
     private func addHomeViewController() {
-        let homeVc = UIViewController()
+        let homeVc = HomeViewController()
         let navigationController = UINavigationController(rootViewController: homeVc)
-        
+        navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.home, image: UIImage(named: "tabBar_home_ic"), selectedImage: UIImage(named: "tabBar_home_ic"))
         
         homeVc.tabBarItem = item
@@ -61,7 +61,7 @@ class TabBarViewController: UITabBarController {
     private func addMyFarmViewController() {
         let farmVc = UIViewController()
         let navigationController = UINavigationController(rootViewController: farmVc)
-        
+        navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.myFarm, image: UIImage(named: "tabBar_farm_ic"), selectedImage: UIImage(named: "tabBar_farm_ic"))
         
         farmVc.tabBarItem = item
@@ -72,7 +72,7 @@ class TabBarViewController: UITabBarController {
     private func addVideosViewController() {
         let videosVc = UIViewController()
         let navigationController = UINavigationController(rootViewController: videosVc)
-        
+        navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.videos, image: UIImage(named: "tabBar_videos_ic"), selectedImage: UIImage(named: "tabBar_videos_ic"))
             
         videosVc.tabBarItem = item
@@ -82,7 +82,7 @@ class TabBarViewController: UITabBarController {
     private func addProductsViewController() {
         let productsVc = UIViewController()
         let navigationController = UINavigationController(rootViewController: productsVc)
-        
+        navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.products, image: UIImage(named: "tabBar_products_ic"), selectedImage: UIImage(named: "tabBar_products_ic"))
         
         productsVc.tabBarItem = item
@@ -92,7 +92,7 @@ class TabBarViewController: UITabBarController {
     private func addProfileViewController() {
         let profileVc = UIViewController()
         let navigationController = UINavigationController(rootViewController: profileVc)
-        
+        navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.profile, image: UIImage(named: "tabBar_profile_ic"), selectedImage: UIImage(named: "tabBar_profile_ic"))
         
         profileVc.tabBarItem = item
