@@ -10,12 +10,22 @@
 		5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069225D8913E002D55F1 /* AppDelegate.swift */; };
 		5019069C25D89140002D55F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5019069B25D89140002D55F1 /* Assets.xcassets */; };
 		5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5019069D25D89140002D55F1 /* LaunchScreen.storyboard */; };
+		50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D2F25D9EA550054E80D /* TabBarViewController.swift */; };
+		50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3025D9EA550054E80D /* TabBarViewController.xib */; };
+		50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3525D9EEE00054E80D /* TSRotger-Light.ttf */; };
+		50A77D3A25D9EEE10054E80D /* TSRotger-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3625D9EEE10054E80D /* TSRotger-Regular.ttf */; };
+		50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3725D9EEE10054E80D /* TSRotger-Black.ttf */; };
+		50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3825D9EEE10054E80D /* TSRotger-Bold.ttf */; };
+		50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D3F25D9F2640054E80D /* TabBarLoclizer.swift */; };
+		50A77D4525D9F2A10054E80D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D4425D9F2A10054E80D /* String.swift */; };
 		50E3014925D8A031008271B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E3014B25D8A031008271B6 /* Localizable.strings */; };
 		50E3015325D8A093008271B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015125D8A093008271B6 /* LoginViewController.swift */; };
 		50E3015425D8A093008271B6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E3015225D8A093008271B6 /* LoginViewController.xib */; };
 		50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015825D8A33E008271B6 /* LocalizerService.swift */; };
 		50E3015C25D8A33E008271B6 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015925D8A33E008271B6 /* Language.swift */; };
 		50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015A25D8A33E008271B6 /* LanguageManager.swift */; };
+		50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0F30A25D9FA5E00F0517E /* UIColors.swift */; };
+		50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0F35B25DA04F400F0517E /* UIFont.swift */; };
 		65E47962DF2E6F139812F4D2 /* Pods_LadyBug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91CF55B22029C4B2363CECE /* Pods_LadyBug.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +36,14 @@
 		5019069B25D89140002D55F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5019069E25D89140002D55F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		501906A025D89140002D55F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A77D2F25D9EA550054E80D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		50A77D3025D9EA550054E80D /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		50A77D3525D9EEE00054E80D /* TSRotger-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Light.ttf"; sourceTree = "<group>"; };
+		50A77D3625D9EEE10054E80D /* TSRotger-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Regular.ttf"; sourceTree = "<group>"; };
+		50A77D3725D9EEE10054E80D /* TSRotger-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Black.ttf"; sourceTree = "<group>"; };
+		50A77D3825D9EEE10054E80D /* TSRotger-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Bold.ttf"; sourceTree = "<group>"; };
+		50A77D3F25D9F2640054E80D /* TabBarLoclizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLoclizer.swift; sourceTree = "<group>"; };
+		50A77D4425D9F2A10054E80D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		50E3014A25D8A031008271B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50E3014D25D8A035008271B6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50E3015125D8A093008271B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +51,8 @@
 		50E3015825D8A33E008271B6 /* LocalizerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizerService.swift; sourceTree = "<group>"; };
 		50E3015925D8A33E008271B6 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		50E3015A25D8A33E008271B6 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		50F0F30A25D9FA5E00F0517E /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
+		50F0F35B25DA04F400F0517E /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		E91CF55B22029C4B2363CECE /* Pods_LadyBug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LadyBug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24B7BEE370B48BED12C3B59 /* Pods-LadyBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.release.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,9 +98,65 @@
 			path = LadyBug;
 			sourceTree = "<group>";
 		};
+		50A77D2D25D9E9100054E80D /* TabBar Module */ = {
+			isa = PBXGroup;
+			children = (
+				50A77D3E25D9F2500054E80D /* Localizer */,
+				50A77D2E25D9EA120054E80D /* ViewController */,
+			);
+			path = "TabBar Module";
+			sourceTree = "<group>";
+		};
+		50A77D2E25D9EA120054E80D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50A77D2F25D9EA550054E80D /* TabBarViewController.swift */,
+				50A77D3025D9EA550054E80D /* TabBarViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		50A77D3425D9EED00054E80D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				50A77D3725D9EEE10054E80D /* TSRotger-Black.ttf */,
+				50A77D3825D9EEE10054E80D /* TSRotger-Bold.ttf */,
+				50A77D3525D9EEE00054E80D /* TSRotger-Light.ttf */,
+				50A77D3625D9EEE10054E80D /* TSRotger-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		50A77D3E25D9F2500054E80D /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				50A77D3F25D9F2640054E80D /* TabBarLoclizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		50A77D4325D9F2890054E80D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50F0F35A25DA04D900F0517E /* UIFont */,
+				50F0F30925D9FA3800F0517E /* UIColor */,
+				50A77D4725D9F2A40054E80D /* String */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		50A77D4725D9F2A40054E80D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				50A77D4425D9F2A10054E80D /* String.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50A77D2D25D9E9100054E80D /* TabBar Module */,
 				50E3014F25D8A061008271B6 /* Login Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 			);
@@ -98,6 +174,7 @@
 		50E3012125D89968008271B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				50A77D3425D9EED00054E80D /* Fonts */,
 				50E3012225D89976008271B6 /* Assets */,
 				50E3012325D8997D008271B6 /* Storyboard */,
 				50E3014E25D8A04C008271B6 /* Localization */,
@@ -165,6 +242,7 @@
 		50E3015725D8A31D008271B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				50A77D4325D9F2890054E80D /* Extensions */,
 				50E3015F25D8A42B008271B6 /* LocalizationService */,
 			);
 			path = Core;
@@ -178,6 +256,22 @@
 				50E3015825D8A33E008271B6 /* LocalizerService.swift */,
 			);
 			path = LocalizationService;
+			sourceTree = "<group>";
+		};
+		50F0F30925D9FA3800F0517E /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				50F0F30A25D9FA5E00F0517E /* UIColors.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		50F0F35A25DA04D900F0517E /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				50F0F35B25DA04F400F0517E /* UIFont.swift */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 		58FA8C7A3D95FA81869A2CF0 /* Pods */ = {
@@ -256,8 +350,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A77D3A25D9EEE10054E80D /* TSRotger-Regular.ttf in Resources */,
+				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
+				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
+				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				50E3015425D8A093008271B6 /* LoginViewController.xib in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
+				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
 			);
@@ -299,7 +398,12 @@
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
+				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
+				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
+				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
+				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
+				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

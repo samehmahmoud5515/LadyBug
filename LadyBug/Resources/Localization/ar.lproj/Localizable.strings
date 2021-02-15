@@ -5,3 +5,9 @@
   Created by Sameh on 2/14/21.
   
 */
+
+"tab_bar_screen_home_title" = "الرئيسية";
+"tab_bar_screen_my_farm_title" = "مزرعتي";
+"tab_bar_screen_videos_title" = "فيديوهات";
+"tab_bar_screen_products_title" = "المنتجات";
+"tab_bar_screen_profile_title" = "ملفك الشخصي";
