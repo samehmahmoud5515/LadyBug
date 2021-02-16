@@ -21,10 +21,21 @@
 		501F740C25DAB59200333F16 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F740825DAB59200333F16 /* UIViewController+Keyboard.swift */; };
 		501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F740925DAB59200333F16 /* UIViewController+Alert.swift */; };
 		501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F741125DAB5DB00333F16 /* UILabel+LineSpacing.swift */; };
+		503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DFC5625DB1F990093CAF2 /* HomeHeaderViewCell.swift */; };
+		503DFC5925DB1F990093CAF2 /* HomeHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503DFC5725DB1F990093CAF2 /* HomeHeaderViewCell.xib */; };
+		503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DFC5D25DB2D5B0093CAF2 /* HeaderViewUIModel.swift */; };
+		503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DFC6225DB34840093CAF2 /* HomeHeaderViewEditCell.swift */; };
+		503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503DFC6325DB34840093CAF2 /* HomeHeaderViewEditCell.xib */; };
+		503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DFC6925DB385D0093CAF2 /* HomePostsCell.swift */; };
+		503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503DFC6A25DB385D0093CAF2 /* HomePostsCell.xib */; };
 		503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F7A1625DAA69F00EBD730 /* HomeViewController.swift */; };
 		503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503F7A1725DAA69F00EBD730 /* HomeViewController.xib */; };
 		503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F7A1E25DAAFD400EBD730 /* HomeImages.swift */; };
 		503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F7A2325DAB05000EBD730 /* HomeLocalizer.swift */; };
+		5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39725DAD2D8005363CB /* HomeHeaderView.swift */; };
+		5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5072D39825DAD2D8005363CB /* HomeHeaderView.xib */; };
+		5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39D25DAD485005363CB /* HomePresenter.swift */; };
+		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
 		50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D2F25D9EA550054E80D /* TabBarViewController.swift */; };
 		50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3025D9EA550054E80D /* TabBarViewController.xib */; };
 		50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3525D9EEE00054E80D /* TSRotger-Light.ttf */; };
@@ -33,6 +44,8 @@
 		50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3825D9EEE10054E80D /* TSRotger-Bold.ttf */; };
 		50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D3F25D9F2640054E80D /* TabBarLoclizer.swift */; };
 		50A77D4525D9F2A10054E80D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D4425D9F2A10054E80D /* String.swift */; };
+		50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6136725DC195100228385 /* CommonLocalizer.swift */; };
+		50D6136D25DC198900228385 /* CommonImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6136C25DC198900228385 /* CommonImages.swift */; };
 		50E3014925D8A031008271B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E3014B25D8A031008271B6 /* Localizable.strings */; };
 		50E3015325D8A093008271B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015125D8A093008271B6 /* LoginViewController.swift */; };
 		50E3015425D8A093008271B6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E3015225D8A093008271B6 /* LoginViewController.xib */; };
@@ -62,10 +75,21 @@
 		501F740825DAB59200333F16 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		501F740925DAB59200333F16 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		501F741125DAB5DB00333F16 /* UILabel+LineSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+LineSpacing.swift"; sourceTree = "<group>"; };
+		503DFC5625DB1F990093CAF2 /* HomeHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewCell.swift; sourceTree = "<group>"; };
+		503DFC5725DB1F990093CAF2 /* HomeHeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderViewCell.xib; sourceTree = "<group>"; };
+		503DFC5D25DB2D5B0093CAF2 /* HeaderViewUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewUIModel.swift; sourceTree = "<group>"; };
+		503DFC6225DB34840093CAF2 /* HomeHeaderViewEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewEditCell.swift; sourceTree = "<group>"; };
+		503DFC6325DB34840093CAF2 /* HomeHeaderViewEditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderViewEditCell.xib; sourceTree = "<group>"; };
+		503DFC6925DB385D0093CAF2 /* HomePostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostsCell.swift; sourceTree = "<group>"; };
+		503DFC6A25DB385D0093CAF2 /* HomePostsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePostsCell.xib; sourceTree = "<group>"; };
 		503F7A1625DAA69F00EBD730 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		503F7A1725DAA69F00EBD730 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		503F7A1E25DAAFD400EBD730 /* HomeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImages.swift; sourceTree = "<group>"; };
 		503F7A2325DAB05000EBD730 /* HomeLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalizer.swift; sourceTree = "<group>"; };
+		5072D39725DAD2D8005363CB /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		5072D39825DAD2D8005363CB /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		5072D39D25DAD485005363CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		50A77D2F25D9EA550054E80D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		50A77D3025D9EA550054E80D /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		50A77D3525D9EEE00054E80D /* TSRotger-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Light.ttf"; sourceTree = "<group>"; };
@@ -74,6 +98,8 @@
 		50A77D3825D9EEE10054E80D /* TSRotger-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Bold.ttf"; sourceTree = "<group>"; };
 		50A77D3F25D9F2640054E80D /* TabBarLoclizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLoclizer.swift; sourceTree = "<group>"; };
 		50A77D4425D9F2A10054E80D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		50D6136725DC195100228385 /* CommonLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLocalizer.swift; sourceTree = "<group>"; };
+		50D6136C25DC198900228385 /* CommonImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImages.swift; sourceTree = "<group>"; };
 		50E3014A25D8A031008271B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50E3014D25D8A035008271B6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50E3015125D8A093008271B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +125,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21A5A12D25DAD068001A2F64 /* MyFarmModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyFarmModule;
+			sourceTree = "<group>";
+		};
 		5019068625D8913E002D55F1 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +173,8 @@
 		501F73D425DAB41A00333F16 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				503DFC5325DB1F5F0093CAF2 /* Cells */,
+				5072D39625DAD2B9005363CB /* HeaderView */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -183,9 +218,57 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		503DFC5325DB1F5F0093CAF2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				503DFC6825DB383C0093CAF2 /* PostCell */,
+				503DFC6125DB346C0093CAF2 /* HomeHeaderViewEditCell */,
+				503DFC5525DB1F790093CAF2 /* HomeHeaderViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		503DFC5525DB1F790093CAF2 /* HomeHeaderViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				503DFC5625DB1F990093CAF2 /* HomeHeaderViewCell.swift */,
+				503DFC5725DB1F990093CAF2 /* HomeHeaderViewCell.xib */,
+			);
+			path = HomeHeaderViewCell;
+			sourceTree = "<group>";
+		};
+		503DFC5C25DB2D3C0093CAF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				503DFC5D25DB2D5B0093CAF2 /* HeaderViewUIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		503DFC6125DB346C0093CAF2 /* HomeHeaderViewEditCell */ = {
+			isa = PBXGroup;
+			children = (
+				503DFC6225DB34840093CAF2 /* HomeHeaderViewEditCell.swift */,
+				503DFC6325DB34840093CAF2 /* HomeHeaderViewEditCell.xib */,
+			);
+			path = HomeHeaderViewEditCell;
+			sourceTree = "<group>";
+		};
+		503DFC6825DB383C0093CAF2 /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				503DFC6925DB385D0093CAF2 /* HomePostsCell.swift */,
+				503DFC6A25DB385D0093CAF2 /* HomePostsCell.xib */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
 		503F7A1325DAA63100EBD730 /* Home Module */ = {
 			isa = PBXGroup;
 			children = (
+				503DFC5C25DB2D3C0093CAF2 /* Models */,
+				5072D3A025DAD4A7005363CB /* Protocols */,
+				5072D39C25DAD46D005363CB /* Presenter */,
 				503F7A1C25DAAFBA00EBD730 /* Resources */,
 				501F73D225DAB3BF00333F16 /* View */,
 			);
@@ -224,6 +307,31 @@
 				503F7A2325DAB05000EBD730 /* HomeLocalizer.swift */,
 			);
 			path = Localizer;
+			sourceTree = "<group>";
+		};
+		5072D39625DAD2B9005363CB /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				5072D39725DAD2D8005363CB /* HomeHeaderView.swift */,
+				5072D39825DAD2D8005363CB /* HomeHeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		5072D39C25DAD46D005363CB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5072D39D25DAD485005363CB /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5072D3A025DAD4A7005363CB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5072D3A125DAD4B7005363CB /* HomeProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		50A77D2D25D9E9100054E80D /* TabBar Module */ = {
@@ -285,9 +393,26 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		50D6136625DC192F00228385 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				50D6136725DC195100228385 /* CommonLocalizer.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		50D6136B25DC197F00228385 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				50D6136C25DC198900228385 /* CommonImages.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				21A5A12D25DAD068001A2F64 /* MyFarmModule */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
 				50E3014F25D8A061008271B6 /* Login Module */,
@@ -318,6 +443,7 @@
 		50E3012225D89976008271B6 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				50D6136B25DC197F00228385 /* Common */,
 				5019069B25D89140002D55F1 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -350,6 +476,7 @@
 		50E3014E25D8A04C008271B6 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				50D6136625DC192F00228385 /* Common */,
 				50E3014B25D8A031008271B6 /* Localizable.strings */,
 			);
 			path = Localization;
@@ -483,8 +610,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */,
+				503DFC5925DB1F990093CAF2 /* HomeHeaderViewCell.xib in Resources */,
 				50A77D3A25D9EEE10054E80D /* TSRotger-Regular.ttf in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
+				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				50E3015425D8A093008271B6 /* LoginViewController.xib in Resources */,
@@ -493,6 +623,7 @@
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
+				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,18 +663,26 @@
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
 				50E3015325D8A093008271B6 /* LoginViewController.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
+				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
+				50D6136D25DC198900228385 /* CommonImages.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
+				5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
+				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
+				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
+				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
+				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
 				501F73FE25DAB54300333F16 /* UIView+FromNib.swift in Sources */,
 				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
+				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
@@ -551,6 +690,7 @@
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
+				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

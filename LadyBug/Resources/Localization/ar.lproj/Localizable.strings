@@ -13,16 +13,39 @@
 "tab_bar_screen_products_title" = "المنتجات";
 "tab_bar_screen_profile_title" = "ملفك الشخصي";
 "search_placeholder_ic" = "ابحث في المنتدى";
+
 "login_screen_title" = "لادي بج";
-"login_screen_description = "طبيب محاصيلك" ;
+"login_screen_description" = "طبيب محاصيلك" ;
 "login_screen_welcome" = "مرحبا";
 "login_screen_registrationtitle" = "يرجى تسجيل الدخول إلى حسابك";
-"log_screen_new_user_title = "مستخدم جديد؟";
+"log_screen_new_user_title" = "مستخدم جديد؟";
 "log_screen_forget_password_title" = "هل نسيت كلمة المرور؟";
 "login_screen_registration" = "تسجيل الدخول";
 "login_screen_by" = "يرجى تسجيل الدخول إلى حسابك";
 "login_screen_login_title " = "البريد الإلكتروني أو رقم الهاتف";
-""login_screen_password " = "كلمه السر";
+"login_screen_password " = "كلمه السر";
 "login_screen_google_title"= "جوجل";
 "login_screen_facebook_title"= "فيسبوك";
 "login_screen_apple_title"= "ابل";
+
+"home_screen_beafollower" = "كن متابع";
+"home_screen_post_details" = "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من صورة حقيقية لتصميم الموقع.";
+"home_screen_post_owner_name "="محمد خليفة";
+"home_screen_post_owner_name_occupation"="طبيب بيطري";
+"home_screen_Show_problem"="عرض مشكلة";
+"home_screen_post_like"="اعجبني";
+"home_screen_post_dislike"="لا يعجبني";
+"common_fruits_and_vegetables_tomato" = "طماطم" ;
+"common_fruits_and_vegetables_lemon" = "ليمون";
+"common_fruits_and_vegetables_orange"="برتقال";
+"common_fruits_and_vegetables_watermelon"="بطيخ";
+"common_fruits_and_vegetables_avocado"="افوكادو";
+"common_fruits_and_vegetables_apricot"="مشمش";
+"common_fruits_and_vegetables_Grape"="عنب";
+"common_fruits_and_vegetables_Pineapple"="اناناس";
+"common_fruits_and_vegetables_banana"="موز";
+"common_fruits_and_vegetables_kiwi"="كيوي";
+"common_fruits_and_vegetables_Youssendi"="يوسفندي";
+"common_fruits_and_vegetables_guava"="جوافة";
+"common_add_post" = "اضف مشاركتك";
+
