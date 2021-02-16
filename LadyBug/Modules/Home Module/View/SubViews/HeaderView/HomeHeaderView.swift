@@ -45,8 +45,11 @@ extension HomeHeaderView {
     }
     
     private func registerCollectionViewCell() {
-        let nib = UINib(nibName: "\(HomeHeaderViewCell.self)", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "\(HomeHeaderViewCell.self)")
+        let homeHeaderViewCellNib = UINib(nibName: "\(HomeHeaderViewCell.self)", bundle: nil)
+        collectionView.register(homeHeaderViewCellNib, forCellWithReuseIdentifier: "\(HomeHeaderViewCell.self)")
+        
+        let homeHeaderViewEditCellNib = UINib(nibName: "\(HomeHeaderViewEditCell.self)", bundle: nil)
+        collectionView.register(homeHeaderViewEditCellNib, forCellWithReuseIdentifier: "\(HomeHeaderViewEditCell.self)")
     }
     
     private func setupCollectionViewLayout() {
@@ -54,7 +57,7 @@ extension HomeHeaderView {
         layout.minimumLineSpacing = 6
         layout.minimumInteritemSpacing = 6
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 19)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 19, bottom: 0, right: 0)
         layout.itemSize = UICollectionViewFlowLayout.automaticSize
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.setCollectionViewLayout(layout, animated: false)
@@ -64,13 +67,20 @@ extension HomeHeaderView {
 extension HomeHeaderView: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return delegate?.headerDatasource.count ?? 0
+        return section == 0 ? 1 : delegate?.headerDatasource.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(HomeHeaderViewCell.self)", for: indexPath) as? HomeHeaderViewCell ?? HomeHeaderViewCell()
-        cell.setupUI()
-        return cell
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(HomeHeaderViewEditCell.self)", for: indexPath) as? HomeHeaderViewEditCell ?? HomeHeaderViewEditCell()
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(HomeHeaderViewCell.self)", for: indexPath) as? HomeHeaderViewCell ?? HomeHeaderViewCell()
+            if let item = delegate?.headerDatasource[indexPath.row] {
+                cell.setupUI(model: item)
+            }
+            return cell
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -78,7 +88,7 @@ extension HomeHeaderView: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 }
 
-extension HomeHeaderView: HomeHeaderViewProtocol {
+extension HomeHeaderView {
     func notifyDatasourceChanged() {
         collectionView.reloadData()
     }

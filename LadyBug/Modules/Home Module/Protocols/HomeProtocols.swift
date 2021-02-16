@@ -8,18 +8,16 @@
 import Foundation
 
 protocol HomePresenterProtocol: HomeHeaderDelegate {
+    var postsDatasource: [String] { get }
+    var localizer: HomeLocalizer { get }
     func attach()
 }
 
-protocol HomeHeaderViewProtocol: class {
-    func notifyDatasourceChanged()
-}
-
 protocol HomeHeaderDelegate: class {
-    var headerDatasource: [String] { get }
+    var headerDatasource: [HeaderViewUIModel] { get }
     var numberOfSectionsInHeader: Int { get }
 }
 
 protocol HomeViewProtocol: class {
-    
+    func notifyHeaderViewDatasourceChanged()
 }

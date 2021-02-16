@@ -11,11 +11,11 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var headerView: HomeHeaderView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addPostButton: UIButton!
     
     //Attribuites
     private var presnter: HomePresenterProtocol!
     private let images = HomeImages()
-    private let localizer = HomeLocalizer()
     
     init() {
         super.init(nibName: "\(HomeViewController.self)", bundle: nil)
@@ -43,6 +43,9 @@ extension HomeViewController {
         addSearchBarToNaviagtionBar()
         addBarButtonsToNavigationBar()
         setupHeaderView()
+        registerTableViewCell()
+        setupTableViewRowHeight()
+        setupAddPostButton()
     }
     
     private func setupNaviagtionBarUI() {
@@ -59,7 +62,7 @@ extension HomeViewController {
         searchBar.tintColor = .black
         navigationItem.titleView = searchBar
         
-        let attributes = NSAttributedString(string: localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
+        let attributes = NSAttributedString(string: presnter.localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
         
         if #available(iOS 13.0, *) {
             searchBar.searchTextField.attributedPlaceholder = attributes
@@ -79,8 +82,37 @@ extension HomeViewController {
         headerView.attach(delegate: presnter)
         headerView.notifyDatasourceChanged()
     }
+    
+    private func registerTableViewCell() {
+        let nib = UINib(nibName: "\(HomePostsCell.self)", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "\(HomePostsCell.self)")
+    }
+    
+    private func setupTableViewRowHeight() {
+        tableView.estimatedRowHeight = 351.0
+        tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func setupAddPostButton() {
+        addPostButton.setTitle(presnter.localizer.addPost, for: .normal)
+        addPostButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
+    }
 }
 
 extension HomeViewController: HomeViewProtocol {
+    func notifyHeaderViewDatasourceChanged() {
+        headerView.notifyDatasourceChanged()
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presnter.postsDatasource.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(HomePostsCell.self)", for: indexPath) as? HomePostsCell ?? HomePostsCell()
+        cell.setupUI(localizer: presnter.localizer)
+        return cell
+    }
 }

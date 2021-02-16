@@ -139,3 +139,9 @@ extension UITextView {
     }
 
 }
+
+extension UICollectionViewFlowLayout {
+    open override var flipsHorizontallyInOppositeLayoutDirection: Bool {
+        return LanguageManager.shared.isArabic
+    }
+}
