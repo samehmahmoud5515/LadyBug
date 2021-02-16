@@ -12,7 +12,8 @@
 "tab_bar_screen_products_title" = "المنتجات";
 "tab_bar_screen_profile_title" = "ملفك الشخصي";
 "search_placeholder_ic" = "ابحث في المنتدى";
-"home_screen_beafollower"="Be a follower";
+"home_screen_beafollower" = "كن متابع";
+"home_screen_post_details" = "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من صورة حقيقية لتصميم الموقع.";
 "home_screen_post_owner_name "="محمد خليفة";
 "home_screen_post_owner_name_occupation"="طبيب بيطري";
 "home_screen_Show_problem"="عرض مشكلة";
@@ -21,7 +22,7 @@
 "common_fruits_and_vegetables_tomato" = "طماطم" ;
 "common_fruits_and_vegetables_lemon" = "ليمون";
 "common_fruits_and_vegetables_orange"="برتقال";
-"common_fruits_and_vegetables_mango"="بطيخ";
+"common_fruits_and_vegetables_watermelon"="بطيخ";
 "common_fruits_and_vegetables_avocado"="افوكادو";
 "common_fruits_and_vegetables_apricot"="مشمش";
 "common_fruits_and_vegetables_Grape"="عنب";
@@ -30,6 +31,7 @@
 "common_fruits_and_vegetables_kiwi"="كيوي";
 "common_fruits_and_vegetables_Youssendi"="يوسفندي";
 "common_fruits_and_vegetables_guava"="جوافة";
+"common_add_post" = "اضف مشاركتك";
 //MARk: -  my_farm_localizer
 "my_farm_localizer_search_placeholder_ic" = "ابحث عن محصولك";
 "my_farm_localizer_temperature_title" = "17.4C";
