@@ -30,3 +30,37 @@
 "common_fruits_and_vegetables_kiwi"="كيوي";
 "common_fruits_and_vegetables_Youssendi"="يوسفندي";
 "common_fruits_and_vegetables_guava"="جوافة";
+//MARk: -  my_farm_localizer
+"my_farm_localizer_search_placeholder_ic" = "ابحث عن محصولك";
+"my_farm_localizer_temperature_title" = "17.4C";
+"my_farm_localizer_date_title" = "20يناير,القاهرة";
+"my_farm_localizer_sun_state_title" = "غروب الشمس";
+"my_farm_localizer_time_title" = "5:24م";
+"my_farm_localizer_notes_title" = "لا تنسى تفقد الملاحظات";
+"my_farm_localizer_about_notes_title" = "غائم جزئيا خلال اليوم اليوم هو يوم سئ للقيام برش المبيدات الحشرية";
+"my_farm_localizer_post_title" = "مزرعة طماطم";
+"my_farm_localizer_type_of_farm_title" = "حقيقية";
+
+"my_farm_localizer_the_number_of_acres_title"="عدد الافدنة";
+"my_farm_localizer_chemical_source_title"="مصدر الكيماوي";
+"my_farm_localizer_history_of_cultivation_title" = "تاريخ الزراعة";
+"my_farm_localizer_seedling_source_title"="مصدر الشتلة";
+"my_farm_localizer_widget_code_title"="كود القطعة";
+"my_farm_localizer_the_farm_location_title"="موقع المزرعة";
+
+"my_farm_localizer_the_number_of_acres_value_title"="فدان5";
+"my_farm_localizer_chemical_source_value_title"="شوري";
+"my_farm_localizer_history_of_cultivation_value_title" = "15-2-2020";
+"my_farm_localizer_seedling_source_value_title"="46 هاي تك";
+"my_farm_localizer_widget_code_value_title"="Y123";
+"my_farm_localizer_the_farm_location_value_title"="الواحات البحرية";
+
+"my_farm_localizer_the_next_mission_title"="المهمة القادمة";
+"my_farm_localizer_after_two_days_title"="بعد يومين";
+"my_farm_localizer_planting_seeds_on_terraces_title"="زراعة بذور على المصاطب";
+"my_farm_localizer_weight_title"="ك50";
+"my_farm_localizer_lemon_farm_title"="مزرعة ليمون";
+"my_farm_localizer_hypothetical_title" ="افتراضي";
+"my_farm_localizer_today_title" = "اليوم";
+"my_farm_localizer_add_your_farm_title" = "اضف مزرعتك";
+

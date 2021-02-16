@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
 		5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069225D8913E002D55F1 /* AppDelegate.swift */; };
 		5019069C25D89140002D55F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5019069B25D89140002D55F1 /* Assets.xcassets */; };
 		5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5019069D25D89140002D55F1 /* LaunchScreen.storyboard */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.debug.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
+		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
 		5019068F25D8913E002D55F1 /* LadyBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadyBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5019069225D8913E002D55F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5019069B25D89140002D55F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,8 +104,49 @@
 		21A5A12D25DAD068001A2F64 /* MyFarmModule */ = {
 			isa = PBXGroup;
 			children = (
+				21A5A12E25DB2C54001A2F64 /* Resources */,
+				21A5A12F25DB2C80001A2F64 /* View */,
 			);
 			path = MyFarmModule;
+			sourceTree = "<group>";
+		};
+		21A5A12E25DB2C54001A2F64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21A5A13125DB2CA4001A2F64 /* Localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21A5A12F25DB2C80001A2F64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21A5A13325DB2CC9001A2F64 /* SubViews */,
+				21A5A13225DB2CC6001A2F64 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21A5A13125DB2CA4001A2F64 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		21A5A13225DB2CC6001A2F64 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		21A5A13325DB2CC9001A2F64 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		5019068625D8913E002D55F1 = {
@@ -542,6 +585,7 @@
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
+				21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
