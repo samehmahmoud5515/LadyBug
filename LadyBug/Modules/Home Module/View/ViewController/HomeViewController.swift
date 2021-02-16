@@ -45,6 +45,7 @@ extension HomeViewController {
         setupHeaderView()
         registerTableViewCell()
         setupTableViewRowHeight()
+        setupTableViewFooter()
         setupAddPostButton()
     }
     
@@ -91,6 +92,10 @@ extension HomeViewController {
     private func setupTableViewRowHeight() {
         tableView.estimatedRowHeight = 351.0
         tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func setupTableViewFooter() {
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: addPostButton.bounds.height + 43))
     }
     
     private func setupAddPostButton() {
