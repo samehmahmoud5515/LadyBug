@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2105FD7B25DD8AA100DA4A9C /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2105FD7A25DD8AA100DA4A9C /* LoginImages.swift */; };
-		2126F06925DC3E2A00EDF320 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126F06825DC3E2A00EDF320 /* LoginLoclizer.swift */; };
-		21F6A59925DE84F3008DD539 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6A59825DE84F3008DD539 /* loginPresenter.swift */; };
-		21F6A59C25DEA907008DD539 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6A59B25DEA907008DD539 /* Protocols.swift */; };
+		2114C2E325DF25E800A992C8 /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2D825DF25E800A992C8 /* LoginImages.swift */; };
+		2114C2E425DF25E800A992C8 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2DA25DF25E800A992C8 /* LoginLoclizer.swift */; };
+		2114C2E525DF25E800A992C8 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2DC25DF25E800A992C8 /* loginPresenter.swift */; };
+		2114C2E625DF25E800A992C8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2114C2DF25DF25E800A992C8 /* LoginViewController.xib */; };
+		2114C2E725DF25E800A992C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2E025DF25E800A992C8 /* LoginViewController.swift */; };
+		2114C2E825DF25E800A992C8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2E225DF25E800A992C8 /* Protocols.swift */; };
 		5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069225D8913E002D55F1 /* AppDelegate.swift */; };
 		5019069C25D89140002D55F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5019069B25D89140002D55F1 /* Assets.xcassets */; };
 		5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5019069D25D89140002D55F1 /* LaunchScreen.storyboard */; };
@@ -50,23 +52,32 @@
 		50A77D4525D9F2A10054E80D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D4425D9F2A10054E80D /* String.swift */; };
 		50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6136725DC195100228385 /* CommonLocalizer.swift */; };
 		50D6136D25DC198900228385 /* CommonImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6136C25DC198900228385 /* CommonImages.swift */; };
+		50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6137325DC1CEC00228385 /* MyFarmViewController.swift */; };
+		50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D6137425DC1CEC00228385 /* MyFarmViewController.xib */; };
+		50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6137925DC1D2700228385 /* MyFarmImages.swift */; };
+		50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6137D25DC206400228385 /* MyFarmWeatherHeaderView.swift */; };
+		50D6138025DC206400228385 /* MyFarmWeatherHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D6137E25DC206400228385 /* MyFarmWeatherHeaderView.xib */; };
 		50E3014925D8A031008271B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50E3014B25D8A031008271B6 /* Localizable.strings */; };
-		50E3015325D8A093008271B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015125D8A093008271B6 /* LoginViewController.swift */; };
-		50E3015425D8A093008271B6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E3015225D8A093008271B6 /* LoginViewController.xib */; };
 		50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015825D8A33E008271B6 /* LocalizerService.swift */; };
 		50E3015C25D8A33E008271B6 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015925D8A33E008271B6 /* Language.swift */; };
 		50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3015A25D8A33E008271B6 /* LanguageManager.swift */; };
 		50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0F30A25D9FA5E00F0517E /* UIColors.swift */; };
 		50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0F35B25DA04F400F0517E /* UIFont.swift */; };
+		50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA841E25DC4636008A9216 /* MyFarmPresenter.swift */; };
+		50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA842225DC466D008A9216 /* MyFarmProtocols.swift */; };
+		50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA843025DC49DA008A9216 /* FarmCell.swift */; };
+		50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FA843125DC49DA008A9216 /* FarmCell.xib */; };
 		65E47962DF2E6F139812F4D2 /* Pods_LadyBug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91CF55B22029C4B2363CECE /* Pods_LadyBug.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.debug.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
-		2105FD7A25DD8AA100DA4A9C /* LoginImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
-		2126F06825DC3E2A00EDF320 /* LoginLoclizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
-		21F6A59825DE84F3008DD539 /* loginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
-		21F6A59B25DEA907008DD539 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		2114C2D825DF25E800A992C8 /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
+		2114C2DA25DF25E800A992C8 /* LoginLoclizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
+		2114C2DC25DF25E800A992C8 /* loginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
+		2114C2DF25DF25E800A992C8 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		2114C2E025DF25E800A992C8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2114C2E225DF25E800A992C8 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5019068F25D8913E002D55F1 /* LadyBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadyBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5019069225D8913E002D55F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5019069B25D89140002D55F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,15 +119,22 @@
 		50A77D4425D9F2A10054E80D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		50D6136725DC195100228385 /* CommonLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLocalizer.swift; sourceTree = "<group>"; };
 		50D6136C25DC198900228385 /* CommonImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImages.swift; sourceTree = "<group>"; };
+		50D6137325DC1CEC00228385 /* MyFarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmViewController.swift; sourceTree = "<group>"; };
+		50D6137425DC1CEC00228385 /* MyFarmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmViewController.xib; sourceTree = "<group>"; };
+		50D6137925DC1D2700228385 /* MyFarmImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmImages.swift; sourceTree = "<group>"; };
+		50D6137D25DC206400228385 /* MyFarmWeatherHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmWeatherHeaderView.swift; sourceTree = "<group>"; };
+		50D6137E25DC206400228385 /* MyFarmWeatherHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmWeatherHeaderView.xib; sourceTree = "<group>"; };
 		50E3014A25D8A031008271B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50E3014D25D8A035008271B6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		50E3015125D8A093008271B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		50E3015225D8A093008271B6 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		50E3015825D8A33E008271B6 /* LocalizerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizerService.swift; sourceTree = "<group>"; };
 		50E3015925D8A33E008271B6 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		50E3015A25D8A33E008271B6 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		50F0F30A25D9FA5E00F0517E /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		50F0F35B25DA04F400F0517E /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		50FA841E25DC4636008A9216 /* MyFarmPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmPresenter.swift; sourceTree = "<group>"; };
+		50FA842225DC466D008A9216 /* MyFarmProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmProtocols.swift; sourceTree = "<group>"; };
+		50FA843025DC49DA008A9216 /* FarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmCell.swift; sourceTree = "<group>"; };
+		50FA843125DC49DA008A9216 /* FarmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmCell.xib; sourceTree = "<group>"; };
 		E91CF55B22029C4B2363CECE /* Pods_LadyBug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LadyBug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24B7BEE370B48BED12C3B59 /* Pods-LadyBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.release.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,37 +151,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2105FD7725DD875400DA4A9C /* view */ = {
+		2114C2D525DF25E800A992C8 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
-				50E3015025D8A070008271B6 /* ViewController */,
+				2114C2D625DF25E800A992C8 /* Resources */,
+				2114C2DB25DF25E800A992C8 /* Presenter */,
+				2114C2DD25DF25E800A992C8 /* view */,
+				2114C2E125DF25E800A992C8 /* Protocols */,
 			);
-			path = view;
+			path = "Login Module";
 			sourceTree = "<group>";
 		};
-		2105FD7825DD878000DA4A9C /* Resources */ = {
+		2114C2D625DF25E800A992C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2126F06725DC3DF900EDF320 /* Localizer */,
-				2105FD7925DD879A00DA4A9C /* Images */,
+				2114C2D725DF25E800A992C8 /* Images */,
+				2114C2D925DF25E800A992C8 /* Localizer */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		2105FD7925DD879A00DA4A9C /* Images */ = {
+		2114C2D725DF25E800A992C8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2105FD7A25DD8AA100DA4A9C /* LoginImages.swift */,
+				2114C2D825DF25E800A992C8 /* LoginImages.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
 		};
-		2126F06725DC3DF900EDF320 /* Localizer */ = {
+		2114C2D925DF25E800A992C8 /* Localizer */ = {
 			isa = PBXGroup;
 			children = (
-				2126F06825DC3E2A00EDF320 /* LoginLoclizer.swift */,
+				2114C2DA25DF25E800A992C8 /* LoginLoclizer.swift */,
 			);
 			path = Localizer;
+			sourceTree = "<group>";
+		};
+		2114C2DB25DF25E800A992C8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2DC25DF25E800A992C8 /* loginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2114C2DD25DF25E800A992C8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2DE25DF25E800A992C8 /* ViewController */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2114C2DE25DF25E800A992C8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2DF25DF25E800A992C8 /* LoginViewController.xib */,
+				2114C2E025DF25E800A992C8 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2114C2E125DF25E800A992C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2E225DF25E800A992C8 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		21A5A12D25DAD068001A2F64 /* MyFarmModule */ = {
@@ -171,22 +225,6 @@
 			children = (
 			);
 			path = MyFarmModule;
-			sourceTree = "<group>";
-		};
-		21F6A59725DE84D0008DD539 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				21F6A59825DE84F3008DD539 /* loginPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		21F6A59A25DE8508008DD539 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				21F6A59B25DEA907008DD539 /* Protocols.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		5019068625D8913E002D55F1 = {
@@ -466,13 +504,61 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		50D6137025DC1CA900228385 /* Farm */ = {
+			isa = PBXGroup;
+			children = (
+				50FA842125DC465B008A9216 /* Protocols */,
+				50FA841D25DC461A008A9216 /* Presenter */,
+				50D6137825DC1D0700228385 /* Images */,
+				50D6137125DC1CAF00228385 /* View */,
+			);
+			path = Farm;
+			sourceTree = "<group>";
+		};
+		50D6137125DC1CAF00228385 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50FA842725DC47C2008A9216 /* SubViews */,
+				50D6137C25DC202900228385 /* WeatherHeaderView */,
+				50D6137225DC1CB900228385 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50D6137225DC1CB900228385 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50D6137325DC1CEC00228385 /* MyFarmViewController.swift */,
+				50D6137425DC1CEC00228385 /* MyFarmViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		50D6137825DC1D0700228385 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				50D6137925DC1D2700228385 /* MyFarmImages.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		50D6137C25DC202900228385 /* WeatherHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				50D6137D25DC206400228385 /* MyFarmWeatherHeaderView.swift */,
+				50D6137E25DC206400228385 /* MyFarmWeatherHeaderView.xib */,
+			);
+			path = WeatherHeaderView;
+			sourceTree = "<group>";
+		};
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50D6137025DC1CA900228385 /* Farm */,
 				21A5A12D25DAD068001A2F64 /* MyFarmModule */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
+				2114C2D525DF25E800A992C8 /* Login Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
-				50E3014F25D8A061008271B6 /* Login Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 			);
 			path = Modules;
@@ -539,26 +625,6 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		50E3014F25D8A061008271B6 /* Login Module */ = {
-			isa = PBXGroup;
-			children = (
-				21F6A59A25DE8508008DD539 /* Protocols */,
-				21F6A59725DE84D0008DD539 /* Presenter */,
-				2105FD7825DD878000DA4A9C /* Resources */,
-				2105FD7725DD875400DA4A9C /* view */,
-			);
-			path = "Login Module";
-			sourceTree = "<group>";
-		};
-		50E3015025D8A070008271B6 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				50E3015125D8A093008271B6 /* LoginViewController.swift */,
-				50E3015225D8A093008271B6 /* LoginViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		50E3015725D8A31D008271B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +658,39 @@
 				50F0F35B25DA04F400F0517E /* UIFont.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		50FA841D25DC461A008A9216 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50FA841E25DC4636008A9216 /* MyFarmPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		50FA842125DC465B008A9216 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				50FA842225DC466D008A9216 /* MyFarmProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		50FA842725DC47C2008A9216 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				50FA842825DC47CD008A9216 /* FarmCell */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		50FA842825DC47CD008A9216 /* FarmCell */ = {
+			isa = PBXGroup;
+			children = (
+				50FA843025DC49DA008A9216 /* FarmCell.swift */,
+				50FA843125DC49DA008A9216 /* FarmCell.xib */,
+			);
+			path = FarmCell;
 			sourceTree = "<group>";
 		};
 		58FA8C7A3D95FA81869A2CF0 /* Pods */ = {
@@ -677,13 +776,16 @@
 				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
-				50E3015425D8A093008271B6 /* LoginViewController.xib in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
+				2114C2E625DF25E800A992C8 /* LoginViewController.xib in Resources */,
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
+				50D6138025DC206400228385 /* MyFarmWeatherHeaderView.xib in Resources */,
+				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
 				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
+				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,43 +821,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2114C2E725DF25E800A992C8 /* LoginViewController.swift in Sources */,
 				501F740C25DAB59200333F16 /* UIViewController+Keyboard.swift in Sources */,
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
-				50E3015325D8A093008271B6 /* LoginViewController.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
+				2114C2E425DF25E800A992C8 /* LoginLoclizer.swift in Sources */,
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
 				50D6136D25DC198900228385 /* CommonImages.swift in Sources */,
+				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
+				2114C2E325DF25E800A992C8 /* LoginImages.swift in Sources */,
 				5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */,
-				21F6A59925DE84F3008DD539 /* loginPresenter.swift in Sources */,
+				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
-				2126F06925DC3E2A00EDF320 /* LoginLoclizer.swift in Sources */,
 				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
+				50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
+				2114C2E525DF25E800A992C8 /* loginPresenter.swift in Sources */,
 				501F73FE25DAB54300333F16 /* UIView+FromNib.swift in Sources */,
 				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
+				2114C2E825DF25E800A992C8 /* Protocols.swift in Sources */,
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
-				2105FD7B25DD8AA100DA4A9C /* LoginImages.swift in Sources */,
+				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
+				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
-				21F6A59C25DEA907008DD539 /* Protocols.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
+				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

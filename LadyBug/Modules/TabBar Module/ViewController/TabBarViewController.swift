@@ -59,7 +59,7 @@ class TabBarViewController: UITabBarController {
     }
     
     private func addMyFarmViewController() {
-        let farmVc = UIViewController()
+        let farmVc = MyFarmViewController()
         let navigationController = UINavigationController(rootViewController: farmVc)
         navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.myFarm, image: UIImage(named: "tabBar_farm_ic"), selectedImage: UIImage(named: "tabBar_farm_ic"))
@@ -96,7 +96,6 @@ class TabBarViewController: UITabBarController {
         let item = UITabBarItem(title: localizer.profile, image: UIImage(named: "tabBar_profile_ic"), selectedImage: UIImage(named: "tabBar_profile_ic"))
         
         profileVc.tabBarItem = item
-        
         tabsNavigationController.append(navigationController)
     }
     
