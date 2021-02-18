@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2105FD7B25DD8AA100DA4A9C /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2105FD7A25DD8AA100DA4A9C /* LoginImages.swift */; };
+		2126F06925DC3E2A00EDF320 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126F06825DC3E2A00EDF320 /* LoginLoclizer.swift */; };
+		21F6A59925DE84F3008DD539 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6A59825DE84F3008DD539 /* loginPresenter.swift */; };
+		21F6A59C25DEA907008DD539 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6A59B25DEA907008DD539 /* Protocols.swift */; };
 		5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069225D8913E002D55F1 /* AppDelegate.swift */; };
 		5019069C25D89140002D55F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5019069B25D89140002D55F1 /* Assets.xcassets */; };
 		5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5019069D25D89140002D55F1 /* LaunchScreen.storyboard */; };
@@ -59,6 +63,10 @@
 
 /* Begin PBXFileReference section */
 		18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.debug.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
+		2105FD7A25DD8AA100DA4A9C /* LoginImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
+		2126F06825DC3E2A00EDF320 /* LoginLoclizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
+		21F6A59825DE84F3008DD539 /* loginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
+		21F6A59B25DEA907008DD539 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5019068F25D8913E002D55F1 /* LadyBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadyBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5019069225D8913E002D55F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5019069B25D89140002D55F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,11 +133,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2105FD7725DD875400DA4A9C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				50E3015025D8A070008271B6 /* ViewController */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2105FD7825DD878000DA4A9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2126F06725DC3DF900EDF320 /* Localizer */,
+				2105FD7925DD879A00DA4A9C /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2105FD7925DD879A00DA4A9C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2105FD7A25DD8AA100DA4A9C /* LoginImages.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2126F06725DC3DF900EDF320 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				2126F06825DC3E2A00EDF320 /* LoginLoclizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
 		21A5A12D25DAD068001A2F64 /* MyFarmModule */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = MyFarmModule;
+			sourceTree = "<group>";
+		};
+		21F6A59725DE84D0008DD539 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				21F6A59825DE84F3008DD539 /* loginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		21F6A59A25DE8508008DD539 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21F6A59B25DEA907008DD539 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		5019068625D8913E002D55F1 = {
@@ -485,7 +542,10 @@
 		50E3014F25D8A061008271B6 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
-				50E3015025D8A070008271B6 /* ViewController */,
+				21F6A59A25DE8508008DD539 /* Protocols */,
+				21F6A59725DE84D0008DD539 /* Presenter */,
+				2105FD7825DD878000DA4A9C /* Resources */,
+				2105FD7725DD875400DA4A9C /* view */,
 			);
 			path = "Login Module";
 			sourceTree = "<group>";
@@ -671,11 +731,13 @@
 				50D6136D25DC198900228385 /* CommonImages.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
 				5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */,
+				21F6A59925DE84F3008DD539 /* loginPresenter.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
+				2126F06925DC3E2A00EDF320 /* LoginLoclizer.swift in Sources */,
 				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
@@ -685,12 +747,14 @@
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
+				2105FD7B25DD8AA100DA4A9C /* LoginImages.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
+				21F6A59C25DEA907008DD539 /* Protocols.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
