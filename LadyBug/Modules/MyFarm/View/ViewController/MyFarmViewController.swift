@@ -84,7 +84,7 @@ extension MyFarmViewController {
     }
     
     private func setupTableViewHeaderView() {
-        let headerView = MyFarmWeatherHeaderView()
+        let headerView = MyFarmWeatherHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 182))
         headerView.translatesAutoresizingMaskIntoConstraints = false
         tableView.tableHeaderView = headerView
         

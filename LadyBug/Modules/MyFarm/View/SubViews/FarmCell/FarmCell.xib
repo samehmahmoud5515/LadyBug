@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApA-Ox-UkL">
                         <rect key="frame" x="14" y="4.5" width="313" height="303"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ode-xE-E1g">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ode-xE-E1g">
                                 <rect key="frame" x="0.0" y="0.0" width="313" height="303"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLQ-Ye-L1g">
@@ -89,14 +89,14 @@
                                         </constraints>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kRl-U5-izM" customClass="FarmDetailsView" customModule="LadyBug" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44" width="313" height="176.5"/>
+                                        <rect key="frame" x="0.0" y="56" width="313" height="163.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guN-ki-mMM">
-                                        <rect key="frame" x="0.0" y="220.5" width="313" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="231.5" width="313" height="71.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcp-Kf-cWT">
-                                                <rect key="frame" x="4" y="11" width="305" height="67.5"/>
+                                                <rect key="frame" x="4" y="0.0" width="305" height="67.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="e3M-C8-TPO">
                                                         <rect key="frame" x="10" y="3" width="41.5" height="61.5"/>
@@ -147,7 +147,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Vcp-Kf-cWT" secondAttribute="bottom" constant="4" id="0hM-al-GaC"/>
-                                            <constraint firstItem="Vcp-Kf-cWT" firstAttribute="top" secondItem="guN-ki-mMM" secondAttribute="top" constant="11" id="POC-AJ-N76"/>
+                                            <constraint firstItem="Vcp-Kf-cWT" firstAttribute="top" secondItem="guN-ki-mMM" secondAttribute="top" id="POC-AJ-N76"/>
                                             <constraint firstAttribute="trailing" secondItem="Vcp-Kf-cWT" secondAttribute="trailing" constant="4" id="fK3-kh-sgw"/>
                                             <constraint firstItem="Vcp-Kf-cWT" firstAttribute="leading" secondItem="guN-ki-mMM" secondAttribute="leading" constant="4" id="xXJ-rD-Fjb"/>
                                         </constraints>
