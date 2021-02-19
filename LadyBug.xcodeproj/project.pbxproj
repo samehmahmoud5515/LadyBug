@@ -63,6 +63,11 @@
 		50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA842225DC466D008A9216 /* MyFarmProtocols.swift */; };
 		50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA843025DC49DA008A9216 /* FarmCell.swift */; };
 		50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FA843125DC49DA008A9216 /* FarmCell.xib */; };
+		50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA849B25DC60EC008A9216 /* DynamicHeightCollectionView.swift */; };
+		50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA84A025DC6325008A9216 /* FarmDetailsView.swift */; };
+		50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FA84A125DC6325008A9216 /* FarmDetailsView.xib */; };
+		50FA84A925DC6414008A9216 /* FarmDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA84A725DC6414008A9216 /* FarmDetailsCell.swift */; };
+		50FA84AA25DC6414008A9216 /* FarmDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FA84A825DC6414008A9216 /* FarmDetailsCell.xib */; };
 		65E47962DF2E6F139812F4D2 /* Pods_LadyBug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91CF55B22029C4B2363CECE /* Pods_LadyBug.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +132,11 @@
 		50FA842225DC466D008A9216 /* MyFarmProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmProtocols.swift; sourceTree = "<group>"; };
 		50FA843025DC49DA008A9216 /* FarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmCell.swift; sourceTree = "<group>"; };
 		50FA843125DC49DA008A9216 /* FarmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmCell.xib; sourceTree = "<group>"; };
+		50FA849B25DC60EC008A9216 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
+		50FA84A025DC6325008A9216 /* FarmDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDetailsView.swift; sourceTree = "<group>"; };
+		50FA84A125DC6325008A9216 /* FarmDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmDetailsView.xib; sourceTree = "<group>"; };
+		50FA84A725DC6414008A9216 /* FarmDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDetailsCell.swift; sourceTree = "<group>"; };
+		50FA84A825DC6414008A9216 /* FarmDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmDetailsCell.xib; sourceTree = "<group>"; };
 		E91CF55B22029C4B2363CECE /* Pods_LadyBug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LadyBug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24B7BEE370B48BED12C3B59 /* Pods-LadyBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.release.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -568,6 +578,7 @@
 		50E3015725D8A31D008271B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				50FA849925DC60D1008A9216 /* UIViews */,
 				50A77D4325D9F2890054E80D /* Extensions */,
 				50E3015F25D8A42B008271B6 /* LocalizationService */,
 			);
@@ -619,6 +630,8 @@
 		50FA842725DC47C2008A9216 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				50FA84A625DC63F4008A9216 /* FarmDetailsCell */,
+				50FA849F25DC62C9008A9216 /* FarmDetailsView */,
 				50FA842825DC47CD008A9216 /* FarmCell */,
 			);
 			path = SubViews;
@@ -631,6 +644,40 @@
 				50FA843125DC49DA008A9216 /* FarmCell.xib */,
 			);
 			path = FarmCell;
+			sourceTree = "<group>";
+		};
+		50FA849925DC60D1008A9216 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				50FA849A25DC60D9008A9216 /* DynamicCollectionView */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		50FA849A25DC60D9008A9216 /* DynamicCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				50FA849B25DC60EC008A9216 /* DynamicHeightCollectionView.swift */,
+			);
+			path = DynamicCollectionView;
+			sourceTree = "<group>";
+		};
+		50FA849F25DC62C9008A9216 /* FarmDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				50FA84A025DC6325008A9216 /* FarmDetailsView.swift */,
+				50FA84A125DC6325008A9216 /* FarmDetailsView.xib */,
+			);
+			path = FarmDetailsView;
+			sourceTree = "<group>";
+		};
+		50FA84A625DC63F4008A9216 /* FarmDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				50FA84A725DC6414008A9216 /* FarmDetailsCell.swift */,
+				50FA84A825DC6414008A9216 /* FarmDetailsCell.xib */,
+			);
+			path = FarmDetailsCell;
 			sourceTree = "<group>";
 		};
 		58FA8C7A3D95FA81869A2CF0 /* Pods */ = {
@@ -718,9 +765,11 @@
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				50E3015425D8A093008271B6 /* LoginViewController.xib in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
+				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
+				50FA84AA25DC6414008A9216 /* FarmDetailsCell.xib in Resources */,
 				50D6138025DC206400228385 /* MyFarmWeatherHeaderView.xib in Resources */,
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
@@ -791,12 +840,15 @@
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
+				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
+				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
+				50FA84A925DC6414008A9216 /* FarmDetailsCell.swift in Sources */,
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,
