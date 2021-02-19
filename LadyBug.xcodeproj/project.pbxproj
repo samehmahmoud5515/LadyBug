@@ -257,6 +257,13 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		503CB59925E06D5C00B7A393 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		503DFC5325DB1F5F0093CAF2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +458,7 @@
 		50D6137025DC1CA900228385 /* MyFarm */ = {
 			isa = PBXGroup;
 			children = (
+				503CB59925E06D5C00B7A393 /* Models */,
 				21A5A12E25DB2C54001A2F64 /* Resources */,
 				50FA842125DC465B008A9216 /* Protocols */,
 				50FA841D25DC461A008A9216 /* Presenter */,

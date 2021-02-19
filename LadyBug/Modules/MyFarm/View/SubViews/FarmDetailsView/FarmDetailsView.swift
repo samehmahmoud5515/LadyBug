@@ -68,8 +68,8 @@ extension FarmDetailsView {
         let marginsAndInsets = flowLayout.sectionInset.left + flowLayout.sectionInset.right + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + flowLayout.minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
         let extractedExpr: CGFloat = CGFloat(cellsPerRow)
         let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / extractedExpr).rounded(.down)
-        flowLayout.itemSize =  CGSize(width: itemWidth, height: 50)
-        flowLayout.estimatedItemSize = CGSize(width: 1,height: 1)
+        flowLayout.itemSize = CGSize(width: itemWidth, height: 30)
+        //flowLayout.estimatedItemSize = CGSize(width: 1,height: 1)
     }
     
 }
@@ -81,7 +81,7 @@ extension FarmDetailsView: UICollectionViewDataSource, UICollectionViewDelegate 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(FarmDetailsCell.self)", for: indexPath) as? FarmDetailsCell ?? FarmDetailsCell()
-        
+        cell.updateUI()
         return cell
     }
     

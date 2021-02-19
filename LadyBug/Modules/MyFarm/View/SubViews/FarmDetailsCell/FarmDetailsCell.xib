@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="189" height="59"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="عدد الافدنة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-cj-ibc">
-                                <rect key="frame" x="0.0" y="0.0" width="189" height="38.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="189" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Uo1-cj-ibc" firstAttribute="leading" secondItem="ufN-nW-icY" secondAttribute="leading" id="1yh-am-Rsm"/>
-                            <constraint firstItem="7AY-kZ-zuS" firstAttribute="top" secondItem="Uo1-cj-ibc" secondAttribute="bottom" id="6Ye-je-x09"/>
+                            <constraint firstItem="7AY-kZ-zuS" firstAttribute="top" secondItem="Uo1-cj-ibc" secondAttribute="bottom" constant="5" id="6Ye-je-x09"/>
                             <constraint firstAttribute="bottom" secondItem="7AY-kZ-zuS" secondAttribute="bottom" id="Gnt-Ez-duh"/>
                             <constraint firstAttribute="trailing" secondItem="Uo1-cj-ibc" secondAttribute="trailing" id="YvK-kT-BGP"/>
                             <constraint firstItem="Uo1-cj-ibc" firstAttribute="top" secondItem="ufN-nW-icY" secondAttribute="top" id="mhs-sw-bNd"/>
@@ -54,6 +54,7 @@
             </constraints>
             <size key="customSize" width="189" height="59"/>
             <connections>
+                <outlet property="detailsLabel" destination="7AY-kZ-zuS" id="Xr6-ma-3Lg"/>
                 <outlet property="titleLabel" destination="Uo1-cj-ibc" id="vUY-by-adg"/>
             </connections>
             <point key="canvasLocation" x="238.40579710144928" y="78.013392857142847"/>

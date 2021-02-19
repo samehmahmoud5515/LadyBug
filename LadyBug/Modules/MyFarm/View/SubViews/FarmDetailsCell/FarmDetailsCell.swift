@@ -11,15 +11,14 @@ class FarmDetailsCell: UICollectionViewCell {
 
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
     
-    func updateUI(_ title: String, value: String) {
-        titleLabel.text = title
+    func updateUI() {
+        //titleLabel.text = title
+        //detailsLabel.text = value
+        titleLabel.textColor = .blueGrey
+        titleLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
+        detailsLabel.textColor = .midGreenTwo
+        detailsLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
     }
-    
-//    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-//        detailsLabel.preferredMaxLayoutWidth = layoutAttributes.size.width - contentView.layoutMargins.left - contentView.layoutMargins.left
-//        titleLabel.preferredMaxLayoutWidth = layoutAttributes.size.width - contentView.layoutMargins.left - contentView.layoutMargins.left
-//        layoutAttributes.bounds.size.height = systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
-//        return layoutAttributes
-//    }
 }
