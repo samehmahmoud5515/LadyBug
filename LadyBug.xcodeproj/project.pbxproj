@@ -155,15 +155,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21A5A12D25DAD068001A2F64 /* MyFarmModule */ = {
-			isa = PBXGroup;
-			children = (
-				21A5A12E25DB2C54001A2F64 /* Resources */,
-				21A5A12F25DB2C80001A2F64 /* View */,
-			);
-			path = MyFarmModule;
-			sourceTree = "<group>";
-		};
 		21A5A12E25DB2C54001A2F64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,35 +163,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		21A5A12F25DB2C80001A2F64 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				21A5A13325DB2CC9001A2F64 /* SubViews */,
-				21A5A13225DB2CC6001A2F64 /* ViewController */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		21A5A13125DB2CA4001A2F64 /* Localizer */ = {
 			isa = PBXGroup;
 			children = (
 				21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */,
 			);
 			path = Localizer;
-			sourceTree = "<group>";
-		};
-		21A5A13225DB2CC6001A2F64 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		21A5A13325DB2CC9001A2F64 /* SubViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SubViews;
 			sourceTree = "<group>";
 		};
 		5019068625D8913E002D55F1 = {
@@ -480,15 +448,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		50D6137025DC1CA900228385 /* Farm */ = {
+		50D6137025DC1CA900228385 /* MyFarm */ = {
 			isa = PBXGroup;
 			children = (
+				21A5A12E25DB2C54001A2F64 /* Resources */,
 				50FA842125DC465B008A9216 /* Protocols */,
 				50FA841D25DC461A008A9216 /* Presenter */,
 				50D6137825DC1D0700228385 /* Images */,
 				50D6137125DC1CAF00228385 /* View */,
 			);
-			path = Farm;
+			path = MyFarm;
 			sourceTree = "<group>";
 		};
 		50D6137125DC1CAF00228385 /* View */ = {
@@ -530,8 +499,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				50D6137025DC1CA900228385 /* Farm */,
-				21A5A12D25DAD068001A2F64 /* MyFarmModule */,
+				50D6137025DC1CA900228385 /* MyFarm */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
 				50E3014F25D8A061008271B6 /* Login Module */,
