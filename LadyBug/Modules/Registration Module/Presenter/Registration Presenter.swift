@@ -1,13 +1,13 @@
 //
-//  loginPresenter.swift
+//  Registration Presenter.swift
 //  LadyBug
 //
-//  Created by Mohamed Abdelhamed Ahmed on 2/18/21.
+//  Created by Mohamed Abdelhamed Ahmed on 2/19/21.
 //
 
 import Foundation
 
-class loginPresenter {
+class RegistrationPresenter {
     
     
         weak var view: loginViewProtocol?
@@ -16,6 +16,6 @@ class loginPresenter {
            self.view = view
        }
 //    func viewDidLoad(){
-//        
+//
 //    }
 }

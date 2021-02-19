@@ -13,6 +13,11 @@
 		2114C2E625DF25E800A992C8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2114C2DF25DF25E800A992C8 /* LoginViewController.xib */; };
 		2114C2E725DF25E800A992C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2E025DF25E800A992C8 /* LoginViewController.swift */; };
 		2114C2E825DF25E800A992C8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2E225DF25E800A992C8 /* Protocols.swift */; };
+		2114C2F825DFE3E400A992C8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2114C2F625DFE3E400A992C8 /* RegistrationViewController.swift */; };
+		2114C2F925DFE3E400A992C8 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2114C2F725DFE3E400A992C8 /* RegistrationViewController.xib */; };
+		2166B87E25E01AE1008FE0A0 /* Registration Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B87D25E01AE1008FE0A0 /* Registration Presenter.swift */; };
+		2166B88025E01B8F008FE0A0 /* RegistrationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B87F25E01B8F008FE0A0 /* RegistrationProtocols.swift */; };
+		2166B88225E05CCC008FE0A0 /* RegistrationLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88125E05CCC008FE0A0 /* RegistrationLocalizer.swift */; };
 		5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019069225D8913E002D55F1 /* AppDelegate.swift */; };
 		5019069C25D89140002D55F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5019069B25D89140002D55F1 /* Assets.xcassets */; };
 		5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5019069D25D89140002D55F1 /* LaunchScreen.storyboard */; };
@@ -78,6 +83,11 @@
 		2114C2DF25DF25E800A992C8 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		2114C2E025DF25E800A992C8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2114C2E225DF25E800A992C8 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		2114C2F625DFE3E400A992C8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		2114C2F725DFE3E400A992C8 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		2166B87D25E01AE1008FE0A0 /* Registration Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Registration Presenter.swift"; sourceTree = "<group>"; };
+		2166B87F25E01B8F008FE0A0 /* RegistrationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProtocols.swift; sourceTree = "<group>"; };
+		2166B88125E05CCC008FE0A0 /* RegistrationLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationLocalizer.swift; sourceTree = "<group>"; };
 		5019068F25D8913E002D55F1 /* LadyBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadyBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5019069225D8913E002D55F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5019069B25D89140002D55F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				2114C2D625DF25E800A992C8 /* Resources */,
+				2114C2E125DF25E800A992C8 /* Protocols */,
 				2114C2DB25DF25E800A992C8 /* Presenter */,
 				2114C2DD25DF25E800A992C8 /* view */,
-				2114C2E125DF25E800A992C8 /* Protocols */,
 			);
 			path = "Login Module";
 			sourceTree = "<group>";
@@ -218,6 +228,74 @@
 				2114C2E225DF25E800A992C8 /* Protocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2114C2EA25DF2CFD00A992C8 /* Registration Module */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2EB25DF2DB100A992C8 /* Protocols */,
+				2114C2EC25DF2EB200A992C8 /* Presenter */,
+				2114C2ED25DFDF1100A992C8 /* Resources */,
+				2114C2F025DFDF4800A992C8 /* View */,
+			);
+			path = "Registration Module";
+			sourceTree = "<group>";
+		};
+		2114C2EB25DF2DB100A992C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2166B87F25E01B8F008FE0A0 /* RegistrationProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2114C2EC25DF2EB200A992C8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2166B87D25E01AE1008FE0A0 /* Registration Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2114C2ED25DFDF1100A992C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2EF25DFDF3000A992C8 /* Images */,
+				2114C2EE25DFDF2200A992C8 /* Localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2114C2EE25DFDF2200A992C8 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				2166B88125E05CCC008FE0A0 /* RegistrationLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		2114C2EF25DFDF3000A992C8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2114C2F025DFDF4800A992C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2F125DFDF6200A992C8 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2114C2F125DFDF6200A992C8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2114C2F625DFE3E400A992C8 /* RegistrationViewController.swift */,
+				2114C2F725DFE3E400A992C8 /* RegistrationViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		21A5A12D25DAD068001A2F64 /* MyFarmModule */ = {
@@ -554,11 +632,12 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2114C2EA25DF2CFD00A992C8 /* Registration Module */,
 				50D6137025DC1CA900228385 /* Farm */,
 				21A5A12D25DAD068001A2F64 /* MyFarmModule */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
-				2114C2D525DF25E800A992C8 /* Login Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
+				2114C2D525DF25E800A992C8 /* Login Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 			);
 			path = Modules;
@@ -772,6 +851,7 @@
 				503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */,
 				503DFC5925DB1F990093CAF2 /* HomeHeaderViewCell.xib in Resources */,
 				50A77D3A25D9EEE10054E80D /* TSRotger-Regular.ttf in Resources */,
+				2114C2F925DFE3E400A992C8 /* RegistrationViewController.xib in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
 				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
@@ -826,6 +906,7 @@
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
 				2114C2E425DF25E800A992C8 /* LoginLoclizer.swift in Sources */,
+				2166B87E25E01AE1008FE0A0 /* Registration Presenter.swift in Sources */,
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
@@ -835,8 +916,10 @@
 				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
 				2114C2E325DF25E800A992C8 /* LoginImages.swift in Sources */,
+				2114C2F825DFE3E400A992C8 /* RegistrationViewController.swift in Sources */,
 				5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
+				2166B88025E01B8F008FE0A0 /* RegistrationProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
@@ -852,6 +935,7 @@
 				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
+				2166B88225E05CCC008FE0A0 /* RegistrationLocalizer.swift in Sources */,
 				2114C2E825DF25E800A992C8 /* Protocols.swift in Sources */,
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,

@@ -33,12 +33,13 @@ class LoginViewController: UIViewController {
         setColor()
         setLabelFonts()
         setButtonFonts()
-        presenter.viewDidLoad()
+//        presenter.viewDidLoad()
     }
     
     
 }
 extension LoginViewController{
+    
     private func setColor(){
         loginTitleLabel.textColor = UIColor.darkishGreen
         loginTitleDescriptionlabel.textColor = UIColor.darkishGreen
@@ -57,6 +58,7 @@ extension LoginViewController{
         loginSignInButtonTitle.backgroundColor = UIColor.lightBlueGrey
         
     }
+    
     private func setLabelFonts(){
         loginTitleLabel.font = UIFont.get(enFont: .bold(32), arFont: .bold(32))
         loginTitleDescriptionlabel.font = UIFont.get(enFont: .regular(18), arFont: .regular(18))
@@ -64,6 +66,7 @@ extension LoginViewController{
         loginRegistrationLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         loginSignByLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
     }
+    
     private func setButtonFonts(){
         loginNewUserButtontitle.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         loginForgetPasswordTitle.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))

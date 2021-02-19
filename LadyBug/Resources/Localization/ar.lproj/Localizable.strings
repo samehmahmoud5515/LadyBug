@@ -49,3 +49,13 @@
 "common_fruits_and_vegetables_guava"="جوافة";
 "common_add_post" = "اضف مشاركتك";
 
+"registration_screen_create_new_account_title" = "تسجيل حساب جديد";
+"registration_screen_add_pic_title" = "ارفق صورتك";
+"registration_screen_user_name_title" = "حسن علي محم";
+"registration_screen_email_title" = "البريد الإلكتروني";
+"registration_screen_choose_your_profession_title" = "اختر مهنتك";
+"registration_screen_phone_numer_title" = "رقم الهاتف";
+"registration_screen_password_title" = "كلمه السر";
+"registration_screen_password_confirmation_title" = "تأكيد كلمة السر";
+"registration_screen_create_account_title" = "إنشاء حساب";
+"registration_screen_terms_and_conditions_title" = "بالنقر فوق تسجيل ، فإنك توافق على الشروط والأحكام التالية بدون تحفظ";
