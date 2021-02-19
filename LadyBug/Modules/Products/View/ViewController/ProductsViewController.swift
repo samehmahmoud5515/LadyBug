@@ -1,24 +1,23 @@
 //
-//  HomeViewController.swift
+//  ProductsViewController.swift
 //  LadyBug
 //
-//  Created by Sameh on 2/15/21.
+//  Created by Sameh on 2/20/21.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ProductsViewController: UIViewController {
     
-    @IBOutlet weak var headerView: HomeHeaderView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addPostButton: UIButton!
+    @IBOutlet weak var addProductButton: UIButton!
     
     //Attribuites
-    private var presnter: HomePresenterProtocol!
+    private var presnter: ProductsPresenterProtocol!
     
     init() {
-        super.init(nibName: "\(HomeViewController.self)", bundle: nil)
-        presnter = HomePresenter(view: self)
+        super.init(nibName: "\(ProductsViewController.self)", bundle: nil)
+        presnter = ProductsPresenter(view: self)
     }
     
     @available(*, unavailable)
@@ -28,24 +27,23 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         presnter.attach()
     }
-    
+
 }
 
+
 // MARK:- UI Setup
-extension HomeViewController {
+extension ProductsViewController {
     private func setupUI() {
         setupNaviagtionBarUI()
         addSearchBarToNaviagtionBar()
         addBarButtonsToNavigationBar()
-        setupHeaderView()
         registerTableViewCell()
         setupTableViewRowHeight()
         setupTableViewFooter()
-        setupAddPostButton()
+        setupAddProductButton()
     }
     
     private func setupNaviagtionBarUI() {
@@ -78,14 +76,9 @@ extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: nil, action: nil)
     }
     
-    private func setupHeaderView() {
-        headerView.attach(delegate: presnter)
-        headerView.notifyDatasourceChanged()
-    }
-    
     private func registerTableViewCell() {
-        let nib = UINib(nibName: "\(HomePostsCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "\(HomePostsCell.self)")
+        let nib = UINib(nibName: "\(ProductCell.self)", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "\(ProductCell.self)")
     }
     
     private func setupTableViewRowHeight() {
@@ -94,29 +87,27 @@ extension HomeViewController {
     }
     
     private func setupTableViewFooter() {
-        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: addPostButton.bounds.height + 43))
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: addProductButton.bounds.height + 43))
     }
     
-    private func setupAddPostButton() {
-        addPostButton.setTitle(presnter.localizer.addPost, for: .normal)
-        addPostButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
+    private func setupAddProductButton() {
+        addProductButton.setTitle(presnter.localizer.addPost, for: .normal)
+        addProductButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
     }
 }
 
-extension HomeViewController: HomeViewProtocol {
-    func notifyHeaderViewDatasourceChanged() {
-        headerView.notifyDatasourceChanged()
-    }
+extension ProductsViewController: ProductsViewProtocol {
+    
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presnter.postsDatasource.count
+        presnter.getProductsCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(HomePostsCell.self)", for: indexPath) as? HomePostsCell ?? HomePostsCell()
-        cell.setupUI(localizer: presnter.localizer)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductCell.self)", for: indexPath) as? ProductCell ?? ProductCell()
+        
         return cell
     }
 }

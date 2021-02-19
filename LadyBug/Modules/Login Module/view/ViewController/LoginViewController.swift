@@ -47,7 +47,7 @@ extension LoginViewController{
         loginRegistrationLabel.textColor = UIColor.purplishBrown
         loginNewUserButtontitle.setTitleColor(.midGreenTwo, for: .normal)
         loginForgetPasswordTitle.setTitleColor(.midGreenTwo, for: .normal)
-        loginSignInButtonTitle.setTitleColor(.bluegrey, for: .normal)
+        loginSignInButtonTitle.setTitleColor(.blueGrey, for: .normal)
         loginSignByLabel.textColor = UIColor.black
         loginFaceBookButtonTitle.setTitleColor(.white, for: .normal)
         loginGoogleButtonTitle.setTitleColor(.white, for: .normal)

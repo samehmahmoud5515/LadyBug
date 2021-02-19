@@ -80,7 +80,7 @@ class TabBarViewController: UITabBarController {
     }
     
     private func addProductsViewController() {
-        let productsVc = UIViewController()
+        let productsVc = ProductsViewController()
         let navigationController = UINavigationController(rootViewController: productsVc)
         navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.products, image: UIImage(named: "tabBar_products_ic"), selectedImage: UIImage(named: "tabBar_products_ic"))

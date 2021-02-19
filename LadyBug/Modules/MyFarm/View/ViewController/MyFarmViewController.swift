@@ -79,12 +79,12 @@ extension MyFarmViewController {
     }
     
     private func setupTableViewRowHeight() {
-        tableView.estimatedRowHeight = 195.0
+        tableView.estimatedRowHeight = 110
         tableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setupTableViewHeaderView() {
-        let headerView = MyFarmWeatherHeaderView()
+        let headerView = MyFarmWeatherHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 182))
         headerView.translatesAutoresizingMaskIntoConstraints = false
         tableView.tableHeaderView = headerView
         
@@ -111,7 +111,7 @@ extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(FarmCell.self)", for: indexPath) as? FarmCell ?? FarmCell()
-        
+        cell.setupUI()
         return cell
     }
 }

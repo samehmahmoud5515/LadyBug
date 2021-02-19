@@ -10,6 +10,7 @@ import Foundation
 protocol HomePresenterProtocol: HomeHeaderDelegate {
     var postsDatasource: [String] { get }
     var localizer: HomeLocalizer { get }
+    var images: HomeImages { get }
     func attach()
 }
 
