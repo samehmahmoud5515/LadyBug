@@ -26,5 +26,8 @@ class CommonImages: CommonFruitsAndVegetablesImages {
     var search = "common_search_ic"
     var nofication = "common_notification_ic"
     var ladyBug = "common_ladybug_ic"
+    var openEye = "comman_open_eye_icon"
+    var closeEye = "comman_close_eye_icon"
     var tasks = "common_tasks_ic"
+    
 }
