@@ -29,5 +29,7 @@ class CommonImages: CommonFruitsAndVegetablesImages {
     var openEye = "comman_open_eye_icon"
     var closeEye = "comman_close_eye_icon"
     var tasks = "common_tasks_ic"
-    
+    var share = "common_share_ic"
+    var like = "common_like_ic"
+    var dislike = "common_dislike_ic"
 }

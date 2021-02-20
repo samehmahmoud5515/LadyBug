@@ -116,7 +116,44 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(HomePostsCell.self)", for: indexPath) as? HomePostsCell ?? HomePostsCell()
-        cell.setupUI(localizer: presnter.localizer)
+        cell.delegate = self
+        presnter.setupCellUI(cell, index: indexPath.row)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presnter.didTappedCell(with: indexPath.row)
+    }
+}
+
+extension HomeViewController: HomePostsCellDelegate {
+    func openProblemButtonDidTapped(_ cell: HomePostsCell) {
+        if let index = tableView.indexPath(for: cell) {
+            print(index)
+        }
+    }
+    
+    func likeButtonDidTapped(_ cell: HomePostsCell) {
+        if let index = tableView.indexPath(for: cell) {
+            print(index)
+        }
+    }
+    
+    func dislikeButtonDidTapped(_ cell: HomePostsCell) {
+        if let index = tableView.indexPath(for: cell) {
+            print(index)
+        }
+    }
+    
+    func shareButtonDidTapped(_ cell: HomePostsCell) {
+        if let index = tableView.indexPath(for: cell) {
+            print(index)
+        }
+    }
+    
+    func playButtonDidTapped(_ cell: HomePostsCell) {
+        if let index = tableView.indexPath(for: cell) {
+            print(index)
+        }
     }
 }
