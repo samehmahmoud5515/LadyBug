@@ -7,12 +7,9 @@
 
 import Foundation
 
-struct MyFarmLocalizer {
+class MyFarmLocalizer: CommonLocalizer {
     var searchPlaceholderIc: String {
         "my_farm_localizer_search_placeholder_ic".localized
-    }
-    var searchPlaceHolder: String {
-        "search_placeholder_ic".localized
     }
     var temperatureTitle: String {
         "my_farm_localizer_temperature_title".localized

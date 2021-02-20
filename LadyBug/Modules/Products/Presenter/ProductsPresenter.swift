@@ -21,6 +21,6 @@ class ProductsPresenter: ProductsPresenterProtocol {
     }
     
     func getProductsCount() -> Int {
-        return 5
+        return 10
     }
 }

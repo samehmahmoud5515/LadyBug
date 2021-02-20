@@ -100,3 +100,6 @@
 "forgot_screen_example_email_title" = "mathewnguyen@gma";
 "forgot_screen_try_again_title" = "حاول مرة أخري";
 
+//MARK: - More Menu
+"more_menu_title" = "ملفك الشخصي";
+

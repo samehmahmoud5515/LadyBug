@@ -41,4 +41,12 @@ class HomePresenter: HomePresenterProtocol {
     
         view?.notifyHeaderViewDatasourceChanged()
     }
+    
+    func setupCellUI(_ cell: HomePostsCellProtocol, index: Int) {
+        cell.setupUI(localizer: localizer)
+    }
+    
+    func didTappedCell(with index: Int) {
+        
+    }
 }

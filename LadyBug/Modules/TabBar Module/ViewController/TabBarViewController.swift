@@ -22,7 +22,7 @@ class TabBarViewController: UITabBarController {
         addMyFarmViewController()
         addVideosViewController()
         addProductsViewController()
-        addProfileViewController()
+        addMoreMenuViewController()
         setupUITabBarItem()
         setupTabBarTintColor()
         viewControllers = tabsNavigationController
@@ -70,7 +70,7 @@ class TabBarViewController: UITabBarController {
     }
     
     private func addVideosViewController() {
-        let videosVc = UIViewController()
+        let videosVc = VideosViewController()
         let navigationController = UINavigationController(rootViewController: videosVc)
         navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.videos, image: UIImage(named: "tabBar_videos_ic"), selectedImage: UIImage(named: "tabBar_videos_ic"))
@@ -89,8 +89,8 @@ class TabBarViewController: UITabBarController {
         tabsNavigationController.append(navigationController)
     }
     
-    private func addProfileViewController() {
-        let profileVc = UIViewController()
+    private func addMoreMenuViewController() {
+        let profileVc = MoreMenuViewController()
         let navigationController = UINavigationController(rootViewController: profileVc)
         navigationController.setNavigationBarHidden(true, animated: false)
         let item = UITabBarItem(title: localizer.profile, image: UIImage(named: "tabBar_profile_ic"), selectedImage: UIImage(named: "tabBar_profile_ic"))

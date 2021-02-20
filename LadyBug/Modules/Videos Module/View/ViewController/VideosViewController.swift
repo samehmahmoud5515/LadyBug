@@ -1,24 +1,22 @@
 //
-//  HomeViewController.swift
+//  VideosViewController.swift
 //  LadyBug
 //
-//  Created by Sameh on 2/15/21.
+//  Created by Sameh on 2/20/21.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    @IBOutlet weak var headerView: HomeHeaderView!
+class VideosViewController: UIViewController, VideosViewProtocol {
+
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addPostButton: UIButton!
-    
+
     //Attribuites
-    private var presnter: HomePresenterProtocol!
+    private var presnter: VideosPresenterProtocol!
     
     init() {
-        super.init(nibName: "\(HomeViewController.self)", bundle: nil)
-        presnter = HomePresenter(view: self)
+        super.init(nibName: "\(VideosViewController.self)", bundle: nil)
+        presnter = VideosPresenter(view: self)
     }
     
     @available(*, unavailable)
@@ -32,20 +30,17 @@ class HomeViewController: UIViewController {
         setupUI()
         presnter.attach()
     }
-    
+
 }
 
 // MARK:- UI Setup
-extension HomeViewController {
+extension VideosViewController {
     private func setupUI() {
         setupNaviagtionBarUI()
         addSearchBarToNaviagtionBar()
         addBarButtonsToNavigationBar()
-        setupHeaderView()
         registerTableViewCell()
         setupTableViewRowHeight()
-        setupTableViewFooter()
-        setupAddPostButton()
     }
     
     private func setupNaviagtionBarUI() {
@@ -78,44 +73,24 @@ extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: nil, action: nil)
     }
     
-    private func setupHeaderView() {
-        headerView.attach(delegate: presnter)
-        headerView.notifyDatasourceChanged()
-    }
-    
     private func registerTableViewCell() {
-        let nib = UINib(nibName: "\(HomePostsCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "\(HomePostsCell.self)")
+        let nib = UINib(nibName: "\(VideosCell.self)", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "\(VideosCell.self)")
     }
     
     private func setupTableViewRowHeight() {
         tableView.estimatedRowHeight = 351.0
         tableView.rowHeight = UITableView.automaticDimension
     }
-    
-    private func setupTableViewFooter() {
-        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: addPostButton.bounds.height + 43))
-    }
-    
-    private func setupAddPostButton() {
-        addPostButton.setTitle(presnter.localizer.addPost, for: .normal)
-        addPostButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
-    }
 }
 
-extension HomeViewController: HomeViewProtocol {
-    func notifyHeaderViewDatasourceChanged() {
-        headerView.notifyDatasourceChanged()
-    }
-}
-
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension VideosViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presnter.postsDatasource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(HomePostsCell.self)", for: indexPath) as? HomePostsCell ?? HomePostsCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(VideosCell.self)", for: indexPath) as? VideosCell ?? VideosCell()
         cell.delegate = self
         presnter.setupCellUI(cell, index: indexPath.row)
         return cell
@@ -126,32 +101,33 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension HomeViewController: HomePostsCellDelegate {
-    func openProblemButtonDidTapped(_ cell: HomePostsCell) {
+extension VideosViewController: VideosCellDelegate {
+    
+    func openProblemButtonDidTapped(_ cell: VideosCell) {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }
     }
     
-    func likeButtonDidTapped(_ cell: HomePostsCell) {
+    func likeButtonDidTapped(_ cell: VideosCell) {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }
     }
     
-    func dislikeButtonDidTapped(_ cell: HomePostsCell) {
+    func dislikeButtonDidTapped(_ cell: VideosCell) {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }
     }
     
-    func shareButtonDidTapped(_ cell: HomePostsCell) {
+    func shareButtonDidTapped(_ cell: VideosCell) {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }
     }
     
-    func playButtonDidTapped(_ cell: HomePostsCell) {
+    func playButtonDidTapped(_ cell: VideosCell) {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }

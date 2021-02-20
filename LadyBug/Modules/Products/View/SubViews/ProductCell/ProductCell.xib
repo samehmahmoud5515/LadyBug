@@ -19,7 +19,59 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-nD-Hn1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZS-1g-c5g">
+                                <rect key="frame" x="5" y="5" width="76" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="zMy-Ds-A4J"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-pM-syr">
+                                <rect key="frame" x="90" y="5" width="221" height="87.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مجموعة كالفون للاسمدة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzZ-SO-762">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8C-2X-6Gs">
+                                        <rect key="frame" x="0.0" y="26.5" width="221" height="61"/>
+                                        <string key="text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديدصورة حقيقية لتصميم الموقع.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جنية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXu-Ny-etV">
+                                <rect key="frame" x="90" y="120.5" width="32" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بنى سويف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-xT-uxN">
+                                <rect key="frame" x="244" y="120.5" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="EqQ-xT-uxN" secondAttribute="bottom" constant="9" id="GOq-dM-Pls"/>
+                            <constraint firstAttribute="trailing" secondItem="vdS-pM-syr" secondAttribute="trailing" constant="9" id="JWX-mD-YB7"/>
+                            <constraint firstAttribute="trailing" secondItem="EqQ-xT-uxN" secondAttribute="trailing" constant="8" id="NFc-NI-TEm"/>
+                            <constraint firstItem="tXu-Ny-etV" firstAttribute="leading" secondItem="vdS-pM-syr" secondAttribute="leading" id="PdU-dQ-WDB"/>
+                            <constraint firstItem="ZZS-1g-c5g" firstAttribute="top" secondItem="h0x-nD-Hn1" secondAttribute="top" constant="5" id="QkB-Z4-Fxe"/>
+                            <constraint firstItem="vdS-pM-syr" firstAttribute="leading" secondItem="ZZS-1g-c5g" secondAttribute="trailing" constant="9" id="Qwb-he-Tc3"/>
+                            <constraint firstItem="EqQ-xT-uxN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vdS-pM-syr" secondAttribute="bottom" constant="9" id="hkW-cS-naI"/>
+                            <constraint firstItem="vdS-pM-syr" firstAttribute="top" secondItem="ZZS-1g-c5g" secondAttribute="top" id="lBe-va-hS5"/>
+                            <constraint firstItem="EqQ-xT-uxN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tXu-Ny-etV" secondAttribute="trailing" constant="4" id="lQr-BQ-xz9"/>
+                            <constraint firstItem="tXu-Ny-etV" firstAttribute="bottom" secondItem="EqQ-xT-uxN" secondAttribute="bottom" id="n8u-F6-dsQ"/>
+                            <constraint firstItem="ZZS-1g-c5g" firstAttribute="leading" secondItem="h0x-nD-Hn1" secondAttribute="leading" constant="5" id="vle-L9-bx5"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZS-1g-c5g" secondAttribute="bottom" constant="5" id="waI-Sk-RhP"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -29,6 +81,12 @@
                     <constraint firstAttribute="bottom" secondItem="h0x-nD-Hn1" secondAttribute="bottom" id="xVs-Th-7Xz"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="cityLabel" destination="EqQ-xT-uxN" id="92d-iU-qB7"/>
+                <outlet property="priceLabel" destination="tXu-Ny-etV" id="PR2-WF-7DT"/>
+                <outlet property="productDescriptionLabel" destination="q8C-2X-6Gs" id="Jsn-Ob-L0d"/>
+                <outlet property="productTitleLabel" destination="UzZ-SO-762" id="gHf-cD-wq0"/>
+            </connections>
             <point key="canvasLocation" x="-10.144927536231885" y="111.16071428571428"/>
         </tableViewCell>
     </objects>

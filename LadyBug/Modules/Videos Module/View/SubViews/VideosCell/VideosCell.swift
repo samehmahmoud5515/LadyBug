@@ -1,13 +1,13 @@
 //
-//  HomeCell.swift
+//  VideosCell.swift
 //  LadyBug
 //
-//  Created by Sameh on 2/16/21.
+//  Created by Sameh on 2/20/21.
 //
 
 import UIKit
 
-class HomePostsCell: UITableViewCell, HomePostsCellProtocol {
+class VideosCell: UITableViewCell, VideosCellProtocol {
 
     @IBOutlet weak var postImageAspectRatioConstraint: NSLayoutConstraint!
     @IBOutlet weak var beAFollowerButton: UIButton!
@@ -21,9 +21,9 @@ class HomePostsCell: UITableViewCell, HomePostsCellProtocol {
     @IBOutlet weak var dislikeButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     
-    weak var delegate: HomePostsCellDelegate?
+    weak var delegate: VideosCellDelegate?
     
-    func setupUI(localizer: HomeLocalizer) {
+    func setupUI(localizer: VideosLocalizer) {
         beAFollowerButton.titleLabel?.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         postOwnerNameLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         postOwnerJobLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))

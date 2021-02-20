@@ -12,6 +12,8 @@ protocol HomePresenterProtocol: HomeHeaderDelegate {
     var localizer: HomeLocalizer { get }
     var images: HomeImages { get }
     func attach()
+    func setupCellUI(_ cell: HomePostsCellProtocol, index: Int)
+    func didTappedCell(with index: Int)
 }
 
 protocol HomeHeaderDelegate: class {
@@ -21,4 +23,16 @@ protocol HomeHeaderDelegate: class {
 
 protocol HomeViewProtocol: class {
     func notifyHeaderViewDatasourceChanged()
+}
+
+protocol HomePostsCellProtocol {
+    func setupUI(localizer: HomeLocalizer)
+}
+
+protocol HomePostsCellDelegate: class {
+    func likeButtonDidTapped(_ cell: HomePostsCell)
+    func dislikeButtonDidTapped(_ cell: HomePostsCell)
+    func shareButtonDidTapped(_ cell: HomePostsCell)
+    func playButtonDidTapped(_ cell: HomePostsCell)
+    func openProblemButtonDidTapped(_ cell: HomePostsCell)
 }
