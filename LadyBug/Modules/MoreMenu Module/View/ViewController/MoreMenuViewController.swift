@@ -76,7 +76,7 @@ extension MoreMenuViewController {
     }
     
     private func setupTableViewRowHeight() {
-        tableView.estimatedRowHeight = 351.0
+        tableView.estimatedRowHeight = 56
         tableView.rowHeight = UITableView.automaticDimension
     }
 }
