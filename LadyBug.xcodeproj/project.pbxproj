@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21621C0925E0941700B0413F /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C0725E0941700B0413F /* ForgotPasswordViewController.swift */; };
+		21621C0A25E0941700B0413F /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C0825E0941700B0413F /* ForgotPasswordViewController.xib */; };
+		21621C0C25E09FA600B0413F /* ForgotLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C0B25E09FA600B0413F /* ForgotLocalizer.swift */; };
+		21621C0E25E0A50800B0413F /* ForgotPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C0D25E0A50800B0413F /* ForgotPresenter.swift */; };
+		21621C1025E0A5C700B0413F /* ForgotProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C0F25E0A5C700B0413F /* ForgotProtocols.swift */; };
+		21621C1225E161A100B0413F /* ForgotImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C1125E161A100B0413F /* ForgotImages.swift */; };
+		21621C1425E1645200B0413F /* RegistrationImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C1325E1645200B0413F /* RegistrationImages.swift */; };
 		2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88625E081BC008FE0A0 /* LoginImages.swift */; };
 		2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */; };
-		2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* loginPresenter.swift */; };
+		2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */; };
 		2166B89425E081BC008FE0A0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166B88D25E081BC008FE0A0 /* LoginViewController.xib */; };
 		2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88E25E081BC008FE0A0 /* LoginViewController.swift */; };
-		2166B89625E081BC008FE0A0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89025E081BC008FE0A0 /* Protocols.swift */; };
+		2166B89625E081BC008FE0A0 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89025E081BC008FE0A0 /* LoginProtocols.swift */; };
 		2166B8A425E081C8008FE0A0 /* RegistrationLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89B25E081C8008FE0A0 /* RegistrationLocalizer.swift */; };
 		2166B8A525E081C8008FE0A0 /* Registration Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89D25E081C8008FE0A0 /* Registration Presenter.swift */; };
 		2166B8A625E081C8008FE0A0 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */; };
@@ -91,12 +98,19 @@
 
 /* Begin PBXFileReference section */
 		18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.debug.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
+		21621C0725E0941700B0413F /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		21621C0825E0941700B0413F /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		21621C0B25E09FA600B0413F /* ForgotLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotLocalizer.swift; sourceTree = "<group>"; };
+		21621C0D25E0A50800B0413F /* ForgotPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPresenter.swift; sourceTree = "<group>"; };
+		21621C0F25E0A5C700B0413F /* ForgotProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotProtocols.swift; sourceTree = "<group>"; };
+		21621C1125E161A100B0413F /* ForgotImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotImages.swift; sourceTree = "<group>"; };
+		21621C1325E1645200B0413F /* RegistrationImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationImages.swift; sourceTree = "<group>"; };
 		2166B88625E081BC008FE0A0 /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
 		2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
-		2166B88A25E081BC008FE0A0 /* loginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
+		2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		2166B88D25E081BC008FE0A0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		2166B88E25E081BC008FE0A0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2166B89025E081BC008FE0A0 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		2166B89025E081BC008FE0A0 /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		2166B89B25E081C8008FE0A0 /* RegistrationLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationLocalizer.swift; sourceTree = "<group>"; };
 		2166B89D25E081C8008FE0A0 /* Registration Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Registration Presenter.swift"; sourceTree = "<group>"; };
 		2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
@@ -189,13 +203,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21621BFF25E090CD00B0413F /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				21621C0325E0911D00B0413F /* Protocols */,
+				21621C0125E0911800B0413F /* Presenter */,
+				21621C0225E0911A00B0413F /* View */,
+				21621C0025E0910F00B0413F /* Resources */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		21621C0025E0910F00B0413F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21621C0525E0936000B0413F /* Localizer */,
+				21621C0425E0935100B0413F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21621C0125E0911800B0413F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				21621C0D25E0A50800B0413F /* ForgotPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		21621C0225E0911A00B0413F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21621C0625E0937300B0413F /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21621C0325E0911D00B0413F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21621C0F25E0A5C700B0413F /* ForgotProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		21621C0425E0935100B0413F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				21621C1125E161A100B0413F /* ForgotImages.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		21621C0525E0936000B0413F /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				21621C0B25E09FA600B0413F /* ForgotLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		21621C0625E0937300B0413F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				21621C0725E0941700B0413F /* ForgotPasswordViewController.swift */,
+				21621C0825E0941700B0413F /* ForgotPasswordViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
 				2166B88425E081BC008FE0A0 /* Resources */,
+				2166B88F25E081BC008FE0A0 /* Protocols */,
 				2166B88925E081BC008FE0A0 /* Presenter */,
 				2166B88B25E081BC008FE0A0 /* view */,
-				2166B88F25E081BC008FE0A0 /* Protocols */,
 			);
 			path = "Login Module";
 			sourceTree = "<group>";
@@ -228,7 +311,7 @@
 		2166B88925E081BC008FE0A0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				2166B88A25E081BC008FE0A0 /* loginPresenter.swift */,
+				2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -253,7 +336,7 @@
 		2166B88F25E081BC008FE0A0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				2166B89025E081BC008FE0A0 /* Protocols.swift */,
+				2166B89025E081BC008FE0A0 /* LoginProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -263,8 +346,8 @@
 			children = (
 				2166B89825E081C8008FE0A0 /* Resources */,
 				2166B89C25E081C8008FE0A0 /* Presenter */,
-				2166B89E25E081C8008FE0A0 /* View */,
 				2166B8A225E081C8008FE0A0 /* Protocols */,
+				2166B89E25E081C8008FE0A0 /* View */,
 			);
 			path = "Registration Module";
 			sourceTree = "<group>";
@@ -281,6 +364,7 @@
 		2166B89925E081C8008FE0A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				21621C1325E1645200B0413F /* RegistrationImages.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -765,6 +849,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				21621BFF25E090CD00B0413F /* ForgotPassword */,
 				2166B89725E081C8008FE0A0 /* Registration Module */,
 				2166B88325E081BC008FE0A0 /* Login Module */,
 				503CB59B25E07AD100B7A393 /* Products */,
@@ -1026,6 +1111,7 @@
 				2166B8A625E081C8008FE0A0 /* RegistrationViewController.xib in Resources */,
 				2166B89425E081BC008FE0A0 /* LoginViewController.xib in Resources */,
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
+				21621C0A25E0941700B0413F /* ForgotPasswordViewController.xib in Resources */,
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
 				503CB5BB25E07DD900B7A393 /* ProductCell.xib in Resources */,
@@ -1080,9 +1166,10 @@
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
 				503CB5AF25E07BCB00B7A393 /* ProductsPresenter.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
+				21621C0E25E0A50800B0413F /* ForgotPresenter.swift in Sources */,
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
-				2166B89625E081BC008FE0A0 /* Protocols.swift in Sources */,
+				2166B89625E081BC008FE0A0 /* LoginProtocols.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
 				21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
@@ -1100,6 +1187,7 @@
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
+				21621C1225E161A100B0413F /* ForgotImages.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
 				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
 				2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */,
@@ -1111,6 +1199,7 @@
 				50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
 				501F73FE25DAB54300333F16 /* UIView+FromNib.swift in Sources */,
+				21621C1025E0A5C700B0413F /* ForgotProtocols.swift in Sources */,
 				503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */,
 				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
@@ -1120,10 +1209,11 @@
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
 				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
+				21621C0C25E09FA600B0413F /* ForgotLocalizer.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
 				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
-				2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */,
+				2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
@@ -1131,6 +1221,8 @@
 				50FA84A925DC6414008A9216 /* FarmDetailsCell.swift in Sources */,
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
+				21621C0925E0941700B0413F /* ForgotPasswordViewController.swift in Sources */,
+				21621C1425E1645200B0413F /* RegistrationImages.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

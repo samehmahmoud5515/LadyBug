@@ -6,6 +6,16 @@
 //
 
 import Foundation
+protocol RegistrationPresenterProtocol:RegistrationHeaderDelegate {
+  
+    var localizer: RegistrationLocalizer { get }
+    var images: RegistrationImages{ get }
+    func attach()
+}
+
+protocol RegistrationHeaderDelegate: class {
+    
+}
+
 protocol RegistrationViewProtocol: class {
-   
 }

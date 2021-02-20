@@ -7,15 +7,20 @@
 
 import Foundation
 
-class RegistrationPresenter {
-    
-    
-        weak var view: loginViewProtocol?
+class RegistrationPresenter: RegistrationPresenterProtocol {
+ 
+    weak var view: RegistrationViewProtocol?
 
-     init(view: loginViewProtocol) {
-           self.view = view
-       }
-//    func viewDidLoad(){
-//
-//    }
+    var images = RegistrationImages()
+    var localizer = RegistrationLocalizer()
+    
+    
+    init(view: RegistrationViewProtocol) {
+        self.view = view
+    }
+    
+    func attach() {
+    }
+    
+   
 }

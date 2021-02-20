@@ -24,10 +24,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginGoogleButtonTitle: UIButton!
     @IBOutlet weak var loginAppleButtonTitle: UIButton!
     
-    private var presenter: loginPresenter!
-    
-    
-    
+    private var presenter: LoginPresenterProtocol!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setColor()
@@ -76,8 +74,4 @@ extension LoginViewController{
         loginAppleButtonTitle.titleLabel?.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
     }
 }
-extension LoginViewController:loginViewProtocol{
-    
-    
-    
-}
+

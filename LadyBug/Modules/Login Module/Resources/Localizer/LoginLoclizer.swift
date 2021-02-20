@@ -8,7 +8,7 @@
 import Foundation
 import Foundation
 
-class loginLocalizer: CommonLocalizer {
+class LoginLocalizer: CommonLocalizer {
     
     var loginScreenTitle: String {
         "login_screen_title".localized

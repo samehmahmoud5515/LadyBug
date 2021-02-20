@@ -48,7 +48,7 @@
 "common_fruits_and_vegetables_Youssendi"="يوسفندي";
 "common_fruits_and_vegetables_guava"="جوافة";
 "common_add_post" = "اضف مشاركتك";
-
+//MARk: -  registration_screen_localizer
 "registration_screen_create_new_account_title" = "تسجيل حساب جديد";
 "registration_screen_add_pic_title" = "ارفق صورتك";
 "registration_screen_user_name_title" = "حسن علي محم";
@@ -92,4 +92,11 @@
 "my_farm_localizer_hypothetical_title" ="افتراضي";
 "my_farm_localizer_today_title" = "اليوم";
 "my_farm_localizer_add_your_farm_title" = "اضف مزرعتك";
+
+//MARk: -  forgot_screen_localizer
+
+"forgot_screen_did_you_forget_your_password_title" = "هل نسيت كلمة المرور";
+"forgot_screen_enter_number_or_email_title" = "أدخل رقم هاتفك او بريدك الالكتروني أدناه ، وسنرسل لك رمز التحقق";
+"forgot_screen_example_email_title" = "mathewnguyen@gma";
+"forgot_screen_try_again_title" = "حاول مرة أخري";
 
