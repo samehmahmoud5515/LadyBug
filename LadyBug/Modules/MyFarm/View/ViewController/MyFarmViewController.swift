@@ -57,7 +57,7 @@ extension MyFarmViewController {
         searchBar.tintColor = .black
         navigationItem.titleView = searchBar
         
-        let attributes = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
+        let attributes = NSAttributedString(string: presnter.localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
         
         if #available(iOS 13.0, *) {
             searchBar.searchTextField.attributedPlaceholder = attributes

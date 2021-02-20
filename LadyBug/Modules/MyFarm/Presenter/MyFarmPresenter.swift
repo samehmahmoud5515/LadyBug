@@ -11,6 +11,7 @@ class MyFarmPresenter: MyFarmPresenterProtocol {
     
     weak var view: MyFarmViewProtocol?
     let images = MyFarmImages()
+    let localizer = MyFarmLocalizer()
     
     init(view: MyFarmViewProtocol) {
         self.view = view
