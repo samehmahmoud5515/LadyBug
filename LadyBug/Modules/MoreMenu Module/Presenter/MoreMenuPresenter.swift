@@ -30,14 +30,8 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     }
     
     func handleCellDidTapped(index: Int) {
-        switch presnter.datasource[index] {
-        case let .profile(profile):
-            print(profile)
-        case let .tasks(tasks):
-            print(tasks)
-        default:
-            break
-        }
+        let model = datasource[index]
+        view?.naviageteTo(model: model)
     }
 
 }

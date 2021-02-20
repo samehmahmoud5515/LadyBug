@@ -105,6 +105,15 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension MoreMenuViewController: MoreMenuViewProtocol {
+    func naviageteTo(model: MoreMenuUIModel) {
+        switch model {
+        case .profile:
+            break
+        default:
+            break
+        }
+    }
+    
     func notifiyDataChange() {
         tableView.reloadData()
     }

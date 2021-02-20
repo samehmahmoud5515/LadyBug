@@ -17,4 +17,5 @@ protocol MoreMenuPresenterProtocol {
 
 protocol MoreMenuViewProtocol: class {
     func notifiyDataChange()
+    func naviageteTo(model: MoreMenuUIModel)
 }
