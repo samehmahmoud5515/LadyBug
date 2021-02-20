@@ -72,6 +72,8 @@
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
 		50A5CC0E25E152BA00D17682 /* MoreMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC0C25E152BA00D17682 /* MoreMenuCell.swift */; };
 		50A5CC0F25E152BA00D17682 /* MoreMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */; };
+		50A5CC1525E15C3400D17682 /* MoreMenuUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC1425E15C3400D17682 /* MoreMenuUIModel.swift */; };
+		50A5CC1925E15E1D00D17682 /* MoreMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC1825E15E1D00D17682 /* MoreMenuModel.swift */; };
 		50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D2F25D9EA550054E80D /* TabBarViewController.swift */; };
 		50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3025D9EA550054E80D /* TabBarViewController.xib */; };
 		50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3525D9EEE00054E80D /* TSRotger-Light.ttf */; };
@@ -174,6 +176,8 @@
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		50A5CC0C25E152BA00D17682 /* MoreMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuCell.swift; sourceTree = "<group>"; };
 		50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuCell.xib; sourceTree = "<group>"; };
+		50A5CC1425E15C3400D17682 /* MoreMenuUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuUIModel.swift; sourceTree = "<group>"; };
+		50A5CC1825E15E1D00D17682 /* MoreMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuModel.swift; sourceTree = "<group>"; };
 		50A77D2F25D9EA550054E80D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		50A77D3025D9EA550054E80D /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		50A77D3525D9EEE00054E80D /* TSRotger-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Light.ttf"; sourceTree = "<group>"; };
@@ -463,6 +467,7 @@
 		5037901125E1494100570471 /* MoreMenu Module */ = {
 			isa = PBXGroup;
 			children = (
+				50A5CC1225E15C1500D17682 /* Models */,
 				5037902725E14B2000570471 /* Protocols */,
 				5037902325E14B0500570471 /* Presenter */,
 				5037901A25E14ABB00570471 /* Resources */,
@@ -842,6 +847,23 @@
 				50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */,
 			);
 			path = MoreMenuCell;
+			sourceTree = "<group>";
+		};
+		50A5CC1225E15C1500D17682 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50A5CC1325E15C1E00D17682 /* UIModels */,
+				50A5CC1825E15E1D00D17682 /* MoreMenuModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50A5CC1325E15C1E00D17682 /* UIModels */ = {
+			isa = PBXGroup;
+			children = (
+				50A5CC1425E15C3400D17682 /* MoreMenuUIModel.swift */,
+			);
+			path = UIModels;
 			sourceTree = "<group>";
 		};
 		50A77D2D25D9E9100054E80D /* TabBar Module */ = {
@@ -1328,6 +1350,7 @@
 				50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
 				501F73FE25DAB54300333F16 /* UIView+FromNib.swift in Sources */,
+				50A5CC1525E15C3400D17682 /* MoreMenuUIModel.swift in Sources */,
 				503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */,
 				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
 				503CB5CF25E0A19800B7A393 /* VideosProtocols.swift in Sources */,
@@ -1339,6 +1362,7 @@
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
 				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
+				50A5CC1925E15E1D00D17682 /* MoreMenuModel.swift in Sources */,
 				503CB5D425E0A1B200B7A393 /* VideosImages.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,

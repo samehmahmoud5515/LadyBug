@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoreMenuViewController: UIViewController, MoreMenuViewProtocol {
+class MoreMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -87,11 +87,25 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuCell.self)", for: indexPath) as? MoreMenuCell ?? MoreMenuCell()
-        return cell
+        switch presnter.datasource[indexPath.row] {
+        case let .profile(profile):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuCell.self)", for: indexPath) as? MoreMenuCell ?? MoreMenuCell()
+            return cell
+        case let .tasks(tasks):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuCell.self)", for: indexPath) as? MoreMenuCell ?? MoreMenuCell()
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presnter.handleCellDidTapped(index: indexPath.row)
+    }
+}
 
+extension MoreMenuViewController: MoreMenuViewProtocol {
+    func notifiyDataChange() {
+        tableView.reloadData()
     }
 }
