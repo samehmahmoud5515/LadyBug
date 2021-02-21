@@ -79,6 +79,7 @@
 		509643C825E2F1C40000FB60 /* AddPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509643C625E2F1C40000FB60 /* AddPostCell.swift */; };
 		509643C925E2F1C40000FB60 /* AddPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509643C725E2F1C40000FB60 /* AddPostCell.xib */; };
 		509643CE25E2F6A20000FB60 /* AddPostUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509643CD25E2F6A20000FB60 /* AddPostUIModel.swift */; };
+		509643DD25E303180000FB60 /* ToolbarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509643DC25E303180000FB60 /* ToolbarPickerView.swift */; };
 		50A5CC0E25E152BA00D17682 /* MoreMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC0C25E152BA00D17682 /* MoreMenuCell.swift */; };
 		50A5CC0F25E152BA00D17682 /* MoreMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */; };
 		50A5CC1525E15C3400D17682 /* MoreMenuUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC1425E15C3400D17682 /* MoreMenuUIModel.swift */; };
@@ -192,6 +193,7 @@
 		509643C625E2F1C40000FB60 /* AddPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostCell.swift; sourceTree = "<group>"; };
 		509643C725E2F1C40000FB60 /* AddPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPostCell.xib; sourceTree = "<group>"; };
 		509643CD25E2F6A20000FB60 /* AddPostUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostUIModel.swift; sourceTree = "<group>"; };
+		509643DC25E303180000FB60 /* ToolbarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPickerView.swift; sourceTree = "<group>"; };
 		50A5CC0C25E152BA00D17682 /* MoreMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuCell.swift; sourceTree = "<group>"; };
 		50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuCell.xib; sourceTree = "<group>"; };
 		50A5CC1425E15C3400D17682 /* MoreMenuUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuUIModel.swift; sourceTree = "<group>"; };
@@ -946,6 +948,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		509643DB25E303110000FB60 /* ToolbarPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				509643DC25E303180000FB60 /* ToolbarPickerView.swift */,
+			);
+			path = ToolbarPickerView;
+			sourceTree = "<group>";
+		};
 		50A5CC0A25E1529C00D17682 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -1256,6 +1266,7 @@
 		50FA849925DC60D1008A9216 /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
+				509643DB25E303110000FB60 /* ToolbarPickerView */,
 				50FA849A25DC60D9008A9216 /* DynamicCollectionView */,
 			);
 			path = UIViews;
@@ -1467,6 +1478,7 @@
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
 				503CB5BA25E07DD900B7A393 /* ProductCell.swift in Sources */,
+				509643DD25E303180000FB60 /* ToolbarPickerView.swift in Sources */,
 				503CB5A625E07B8100B7A393 /* ProductsLocalizer.swift in Sources */,
 				50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
