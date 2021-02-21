@@ -95,3 +95,11 @@
 
 //MARK:- More Menu
 "more_menu_title" = "ملفك الشخصي";
+
+//MARK:- Add Post
+"add_post_create_post" = "انشاء مشاركة";
+"add_post_title" = "اضف مشاركتك";
+"add_post_question_type" = "اختر نوع سؤالك";
+"add_post_problem_display" = "عرض مشكلة";
+"add_post_crop_title" = "نوع المحصول";
+"add_post_select_farm" = "اضغط لاختيار موقع المزرعة";

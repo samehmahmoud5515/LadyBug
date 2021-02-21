@@ -157,3 +157,11 @@ extension HomeViewController: HomePostsCellDelegate {
         }
     }
 }
+
+//MARK:- Actions
+extension HomeViewController {
+    @IBAction func didTappedAddPost(_ sender: Any) {
+        let addPostViewController = AddPostViewController()
+        navigationController?.pushViewController(addPostViewController, animated: true)
+    }
+}
