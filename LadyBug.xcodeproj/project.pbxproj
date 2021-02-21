@@ -15,6 +15,14 @@
 		21621C2825E1708300B0413F /* ForgotProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C2225E1708300B0413F /* ForgotProtocols.swift */; };
 		21621C2B25E1715500B0413F /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C2A25E1715500B0413F /* LoginProtocols.swift */; };
 		21621C2D25E171C600B0413F /* RegistrationImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C2C25E171C500B0413F /* RegistrationImages.swift */; };
+		21621C3425E18AD700B0413F /* MoreMenuProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C3225E18AD700B0413F /* MoreMenuProfileCell.swift */; };
+		21621C3525E18AD700B0413F /* MoreMenuprofileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C3325E18AD700B0413F /* MoreMenuprofileCell.xib */; };
+		21621C3825E18C6300B0413F /* MoreMenuTaskesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C3625E18C6300B0413F /* MoreMenuTaskesCell.swift */; };
+		21621C3925E18C6300B0413F /* MoreMenuTaskesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C3725E18C6300B0413F /* MoreMenuTaskesCell.xib */; };
+		21621C3D25E18CBB00B0413F /* MoreMenuLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C3B25E18CBB00B0413F /* MoreMenuLanguageCell.swift */; };
+		21621C3E25E18CBB00B0413F /* MoreMenuLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C3C25E18CBB00B0413F /* MoreMenuLanguageCell.xib */; };
+		21621C4225E18D4C00B0413F /* MoreMenuNotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C4025E18D4C00B0413F /* MoreMenuNotificationsCell.swift */; };
+		21621C4325E18D4C00B0413F /* MoreMenuNotificationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C4125E18D4C00B0413F /* MoreMenuNotificationsCell.xib */; };
 		2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88625E081BC008FE0A0 /* LoginImages.swift */; };
 		2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */; };
 		2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* loginPresenter.swift */; };
@@ -77,8 +85,6 @@
 		5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5072D39825DAD2D8005363CB /* HomeHeaderView.xib */; };
 		5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39D25DAD485005363CB /* HomePresenter.swift */; };
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
-		50A5CC0E25E152BA00D17682 /* MoreMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC0C25E152BA00D17682 /* MoreMenuCell.swift */; };
-		50A5CC0F25E152BA00D17682 /* MoreMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */; };
 		50A5CC1525E15C3400D17682 /* MoreMenuUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC1425E15C3400D17682 /* MoreMenuUIModel.swift */; };
 		50A5CC1925E15E1D00D17682 /* MoreMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A5CC1825E15E1D00D17682 /* MoreMenuModel.swift */; };
 		50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D2F25D9EA550054E80D /* TabBarViewController.swift */; };
@@ -124,6 +130,14 @@
 		21621C2225E1708300B0413F /* ForgotProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotProtocols.swift; sourceTree = "<group>"; };
 		21621C2A25E1715500B0413F /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		21621C2C25E171C500B0413F /* RegistrationImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationImages.swift; sourceTree = "<group>"; };
+		21621C3225E18AD700B0413F /* MoreMenuProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuProfileCell.swift; sourceTree = "<group>"; };
+		21621C3325E18AD700B0413F /* MoreMenuprofileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuprofileCell.xib; sourceTree = "<group>"; };
+		21621C3625E18C6300B0413F /* MoreMenuTaskesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuTaskesCell.swift; sourceTree = "<group>"; };
+		21621C3725E18C6300B0413F /* MoreMenuTaskesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuTaskesCell.xib; sourceTree = "<group>"; };
+		21621C3B25E18CBB00B0413F /* MoreMenuLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuLanguageCell.swift; sourceTree = "<group>"; };
+		21621C3C25E18CBB00B0413F /* MoreMenuLanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuLanguageCell.xib; sourceTree = "<group>"; };
+		21621C4025E18D4C00B0413F /* MoreMenuNotificationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuNotificationsCell.swift; sourceTree = "<group>"; };
+		21621C4125E18D4C00B0413F /* MoreMenuNotificationsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuNotificationsCell.xib; sourceTree = "<group>"; };
 		2166B88625E081BC008FE0A0 /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
 		2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
 		2166B88A25E081BC008FE0A0 /* loginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
@@ -188,8 +202,6 @@
 		5072D39825DAD2D8005363CB /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		5072D39D25DAD485005363CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
-		50A5CC0C25E152BA00D17682 /* MoreMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuCell.swift; sourceTree = "<group>"; };
-		50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuCell.xib; sourceTree = "<group>"; };
 		50A5CC1425E15C3400D17682 /* MoreMenuUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuUIModel.swift; sourceTree = "<group>"; };
 		50A5CC1825E15E1D00D17682 /* MoreMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuModel.swift; sourceTree = "<group>"; };
 		50A77D2F25D9EA550054E80D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +326,42 @@
 				21621C2A25E1715500B0413F /* LoginProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		21621C3025E1886600B0413F /* MoreMenuProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				21621C3225E18AD700B0413F /* MoreMenuProfileCell.swift */,
+				21621C3325E18AD700B0413F /* MoreMenuprofileCell.xib */,
+			);
+			path = MoreMenuProfileCell;
+			sourceTree = "<group>";
+		};
+		21621C3125E1889400B0413F /* MoreMenuTaskesCell */ = {
+			isa = PBXGroup;
+			children = (
+				21621C3625E18C6300B0413F /* MoreMenuTaskesCell.swift */,
+				21621C3725E18C6300B0413F /* MoreMenuTaskesCell.xib */,
+			);
+			path = MoreMenuTaskesCell;
+			sourceTree = "<group>";
+		};
+		21621C3A25E18C7E00B0413F /* MoreMenuLanguageCell */ = {
+			isa = PBXGroup;
+			children = (
+				21621C3B25E18CBB00B0413F /* MoreMenuLanguageCell.swift */,
+				21621C3C25E18CBB00B0413F /* MoreMenuLanguageCell.xib */,
+			);
+			path = MoreMenuLanguageCell;
+			sourceTree = "<group>";
+		};
+		21621C3F25E18D1400B0413F /* MoreMenuNotificationsCell */ = {
+			isa = PBXGroup;
+			children = (
+				21621C4025E18D4C00B0413F /* MoreMenuNotificationsCell.swift */,
+				21621C4125E18D4C00B0413F /* MoreMenuNotificationsCell.xib */,
+			);
+			path = MoreMenuNotificationsCell;
 			sourceTree = "<group>";
 		};
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
@@ -919,18 +967,20 @@
 		50A5CC0A25E1529C00D17682 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				50A5CC0B25E152A100D17682 /* MoreMenuCell */,
+				50A5CC0B25E152A100D17682 /* Cell */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
 		};
-		50A5CC0B25E152A100D17682 /* MoreMenuCell */ = {
+		50A5CC0B25E152A100D17682 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				50A5CC0C25E152BA00D17682 /* MoreMenuCell.swift */,
-				50A5CC0D25E152BA00D17682 /* MoreMenuCell.xib */,
+				21621C3F25E18D1400B0413F /* MoreMenuNotificationsCell */,
+				21621C3A25E18C7E00B0413F /* MoreMenuLanguageCell */,
+				21621C3125E1889400B0413F /* MoreMenuTaskesCell */,
+				21621C3025E1886600B0413F /* MoreMenuProfileCell */,
 			);
-			path = MoreMenuCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		50A5CC1225E15C1500D17682 /* Models */ = {
@@ -1334,7 +1384,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */,
-				50A5CC0F25E152BA00D17682 /* MoreMenuCell.xib in Resources */,
 				503CB5C525E0A15F00B7A393 /* VideosViewController.xib in Resources */,
 				503DFC5925DB1F990093CAF2 /* HomeHeaderViewCell.xib in Resources */,
 				50A77D3A25D9EEE10054E80D /* TSRotger-Regular.ttf in Resources */,
@@ -1348,17 +1397,21 @@
 				21621C2725E1708300B0413F /* ForgotPasswordViewController.xib in Resources */,
 				503CB5BB25E07DD900B7A393 /* ProductCell.xib in Resources */,
 				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
+				21621C3925E18C6300B0413F /* MoreMenuTaskesCell.xib in Resources */,
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
+				21621C3525E18AD700B0413F /* MoreMenuprofileCell.xib in Resources */,
 				5037901725E1497400570471 /* MoreMenuViewController.xib in Resources */,
 				50FA84AA25DC6414008A9216 /* FarmDetailsCell.xib in Resources */,
+				21621C3E25E18CBB00B0413F /* MoreMenuLanguageCell.xib in Resources */,
 				503CB5E525E0A23300B7A393 /* VideosCell.xib in Resources */,
 				503CB5A125E07AF700B7A393 /* ProductsViewController.xib in Resources */,
 				50D6138025DC206400228385 /* MyFarmWeatherHeaderView.xib in Resources */,
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
 				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
+				21621C4325E18D4C00B0413F /* MoreMenuNotificationsCell.xib in Resources */,
 				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1402,6 +1455,7 @@
 				503CB5AF25E07BCB00B7A393 /* ProductsPresenter.swift in Sources */,
 				21621C2B25E1715500B0413F /* LoginProtocols.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
+				21621C3425E18AD700B0413F /* MoreMenuProfileCell.swift in Sources */,
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
@@ -1415,6 +1469,7 @@
 				503CB5E425E0A23300B7A393 /* VideosCell.swift in Sources */,
 				21621C2825E1708300B0413F /* ForgotProtocols.swift in Sources */,
 				50D6136D25DC198900228385 /* CommonImages.swift in Sources */,
+				21621C3D25E18CBB00B0413F /* MoreMenuLanguageCell.swift in Sources */,
 				503CB5AA25E07BA300B7A393 /* ProductsImages.swift in Sources */,
 				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
@@ -1437,6 +1492,7 @@
 				503CB5BA25E07DD900B7A393 /* ProductCell.swift in Sources */,
 				503CB5A625E07B8100B7A393 /* ProductsLocalizer.swift in Sources */,
 				50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */,
+				21621C4225E18D4C00B0413F /* MoreMenuNotificationsCell.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
 				501F73FE25DAB54300333F16 /* UIView+FromNib.swift in Sources */,
 				50A5CC1525E15C3400D17682 /* MoreMenuUIModel.swift in Sources */,
@@ -1447,7 +1503,6 @@
 				21621C2325E1708300B0413F /* ForgotImages.swift in Sources */,
 				503CB5CF25E0A19800B7A393 /* VideosProtocols.swift in Sources */,
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
-				50A5CC0E25E152BA00D17682 /* MoreMenuCell.swift in Sources */,
 				503CB5DA25E0A1C400B7A393 /* VideosLocalizer.swift in Sources */,
 				2166B8A425E081C8008FE0A0 /* RegistrationLocalizer.swift in Sources */,
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
@@ -1465,6 +1520,7 @@
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
+				21621C3825E18C6300B0413F /* MoreMenuTaskesCell.swift in Sources */,
 				5037902525E14B1600570471 /* MoreMenuPresenter.swift in Sources */,
 				503CB5C425E0A15F00B7A393 /* VideosViewController.swift in Sources */,
 				2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */,
