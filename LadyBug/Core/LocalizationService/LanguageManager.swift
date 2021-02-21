@@ -66,5 +66,6 @@ class LanguageManager {
         UINavigationBar.appearance().semanticContentAttribute = semantic
         UITabBar.appearance().semanticContentAttribute = semantic
         UISearchBar.appearance().semanticContentAttribute = semantic
+        UICollectionView.appearance().semanticContentAttribute = semantic
     }
 }
