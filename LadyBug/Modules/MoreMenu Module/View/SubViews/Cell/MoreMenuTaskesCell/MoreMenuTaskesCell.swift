@@ -12,15 +12,13 @@ class MoreMenuTaskesCell: UITableViewCell {
     @IBOutlet weak var taskesLabel: UILabel!
     @IBOutlet weak var taskesarrowIamgeView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setupUI(model: MoreMenuModel) {
+        taskesImageView.image = UIImage(named: model.image)
+        taskesLabel.text = model.title
+        setupFonts()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func setupFonts(){
+        taskesLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
     }
     
 }

@@ -17,18 +17,36 @@ class MoreMenuProfileCell: UITableViewCell {
     @IBOutlet weak var profileEditeLabel: UILabel!
     @IBOutlet weak var profileArrowImageView: UIImageView!
     @IBOutlet weak var profilePointNumberLabel: UILabel!
-    @IBOutlet weak var profilePointsNumberTitleLAbel: UILabel!
+    //@IBOutlet weak var profilePointsNumberTitleLAbel: UILabel!
     
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    func setupUI(model: MoreMenuProfileModel) {
+        profileImageView.image = UIImage(named: model.profileImage)
+        
+        profileUserNameLabel.text = model.name
+        
+        profileNumberLabel.text =
+            model.mobileNumber
+        
+        pofileOccupationLabel.text = model.job
+        
+        profilePointsImageView.image = UIImage(named: model.numberOfPointsImage)
+        
+        profilePointsLabel.text = model.numberOfPointsTitle
+        
+        profileEditeLabel.text = model.editTitle
+        
+        profilePointNumberLabel.text = model.pointsValue
+        setupFonts()
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+     }
+    private func setupFonts(){
+        profileUserNameLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        profileNumberLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        pofileOccupationLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        profilePointsLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        profileEditeLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        profilePointNumberLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
     }
     
 }

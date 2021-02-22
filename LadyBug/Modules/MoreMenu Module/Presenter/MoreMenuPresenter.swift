@@ -23,60 +23,60 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     }
     
     func prepareDatasource() {
-        let profileModel = MoreMenuProfileModel(profileImage: "", name: "", job: "", mobileNumber: "", editTitle: "", editImage: "", numberOfPointsImage: "", numberOfPointsTitle: "", pointsValue: "")
-        datasource += [.profile(MoreMenuProfileModel())]
+        let profileModel = MoreMenuProfileModel(profileImage: images.profilePicture, name: localizer.userName, job: localizer.occupation, mobileNumber: localizer.phoneNumber, editTitle: localizer.edit, numberOfPointsImage: images.bestSellerPoints, numberOfPointsTitle: localizer.points, pointsValue: localizer.pointNumber)
+        datasource += [.profile(profileModel)]
         
         let notificationModel = MoreMenuNotificationModel()
-        notificationModel.isNotificationOn = false
-        notificationModel.image = ""
-        notificationModel.title = ""
-        datasource += [.notification(MoreMenuNotificationModel())]
+        notificationModel.isNotificationOn = true
+        notificationModel.image = images.notifications
+        notificationModel.title = localizer.notifications
+        datasource += [.notification(notificationModel)]
         
         let tasksModel = MoreMenuModel()
-        tasksModel.image = ""
-        tasksModel.title = ""
-        datasource += [.tasks(MoreMenuModel())]
+        tasksModel.image = images.tasksToday
+        tasksModel.title = localizer.tasksToday
+        datasource += [.tasks(tasksModel)]
         
         let productsModel = MoreMenuModel()
-        productsModel.image = ""
-        productsModel.title = ""
-        datasource += [.products(MoreMenuModel())]
+        productsModel.image = images.products
+        productsModel.title = localizer.products
+        datasource += [.products(productsModel)]
         
         let postsModel = MoreMenuModel()
-        postsModel.image = ""
-        postsModel.title = ""
-        datasource += [.posts(MoreMenuModel())]
+        postsModel.image = images.posts
+        postsModel.title = localizer.posts
+        datasource += [.posts(postsModel)]
         
         let followersModel = MoreMenuModel()
-        followersModel.image = ""
-        followersModel.title = ""
-        datasource += [.followers(MoreMenuModel())]
+        followersModel.image = images.followers
+        followersModel.title = localizer.followers
+        datasource += [.followers(followersModel)]
         
         let interestsModel = MoreMenuModel()
-        interestsModel.image = ""
-        interestsModel.title = ""
-        datasource += [.interests(MoreMenuModel())]
+        interestsModel.image = images.Interests
+        interestsModel.title = localizer.interests
+        datasource += [.interests(interestsModel)]
         
         let usageAgreementsModel = MoreMenuModel()
-        usageAgreementsModel.image = ""
-        usageAgreementsModel.title = ""
-        datasource += [.usageAgreement(MoreMenuModel())]
+        usageAgreementsModel.image = images.usageAgreement
+        usageAgreementsModel.title = localizer.usageAgreement
+        datasource += [.usageAgreement(usageAgreementsModel)]
         
-        let languageModel = MoreMenuModel()
-        languageModel.image = ""
-        languageModel.title = ""
-        languageModel.image = ""
-        datasource += [.language(MoreMenuLanguageModel())]
+        let languageModel = MoreMenuLanguageModel()
+        languageModel.image = images.language
+        languageModel.title = localizer.language
+        languageModel.language = localizer.arbic
+        datasource += [.language(languageModel)]
         
         let helpModel = MoreMenuModel()
-        helpModel.image = ""
-        helpModel.title = ""
-        datasource += [.help(MoreMenuModel())]
+        helpModel.image = images.help
+        helpModel.title = localizer.help
+        datasource += [.help(helpModel)]
         
         let logOutModel = MoreMenuModel()
-        logOutModel.image = ""
-        logOutModel.title = ""
-        datasource += [.logOut(MoreMenuModel())]
+        logOutModel.image = images.logout
+        logOutModel.title = localizer.logout
+        datasource += [.logOut(logOutModel)]
         view?.notifiyDataChange()
     }
     

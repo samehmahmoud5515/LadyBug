@@ -16,7 +16,7 @@
 		21621C2B25E1715500B0413F /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C2A25E1715500B0413F /* LoginProtocols.swift */; };
 		21621C2D25E171C600B0413F /* RegistrationImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C2C25E171C500B0413F /* RegistrationImages.swift */; };
 		21621C3425E18AD700B0413F /* MoreMenuProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C3225E18AD700B0413F /* MoreMenuProfileCell.swift */; };
-		21621C3525E18AD700B0413F /* MoreMenuprofileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C3325E18AD700B0413F /* MoreMenuprofileCell.xib */; };
+		21621C3525E18AD700B0413F /* MoreMenuProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C3325E18AD700B0413F /* MoreMenuProfileCell.xib */; };
 		21621C3825E18C6300B0413F /* MoreMenuTaskesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C3625E18C6300B0413F /* MoreMenuTaskesCell.swift */; };
 		21621C3925E18C6300B0413F /* MoreMenuTaskesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21621C3725E18C6300B0413F /* MoreMenuTaskesCell.xib */; };
 		21621C3D25E18CBB00B0413F /* MoreMenuLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21621C3B25E18CBB00B0413F /* MoreMenuLanguageCell.swift */; };
@@ -131,7 +131,7 @@
 		21621C2A25E1715500B0413F /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		21621C2C25E171C500B0413F /* RegistrationImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationImages.swift; sourceTree = "<group>"; };
 		21621C3225E18AD700B0413F /* MoreMenuProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuProfileCell.swift; sourceTree = "<group>"; };
-		21621C3325E18AD700B0413F /* MoreMenuprofileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuprofileCell.xib; sourceTree = "<group>"; };
+		21621C3325E18AD700B0413F /* MoreMenuProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuProfileCell.xib; sourceTree = "<group>"; };
 		21621C3625E18C6300B0413F /* MoreMenuTaskesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuTaskesCell.swift; sourceTree = "<group>"; };
 		21621C3725E18C6300B0413F /* MoreMenuTaskesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreMenuTaskesCell.xib; sourceTree = "<group>"; };
 		21621C3B25E18CBB00B0413F /* MoreMenuLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuLanguageCell.swift; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				21621C3225E18AD700B0413F /* MoreMenuProfileCell.swift */,
-				21621C3325E18AD700B0413F /* MoreMenuprofileCell.xib */,
+				21621C3325E18AD700B0413F /* MoreMenuProfileCell.xib */,
 			);
 			path = MoreMenuProfileCell;
 			sourceTree = "<group>";
@@ -1401,7 +1401,7 @@
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
-				21621C3525E18AD700B0413F /* MoreMenuprofileCell.xib in Resources */,
+				21621C3525E18AD700B0413F /* MoreMenuProfileCell.xib in Resources */,
 				5037901725E1497400570471 /* MoreMenuViewController.xib in Resources */,
 				50FA84AA25DC6414008A9216 /* FarmDetailsCell.xib in Resources */,
 				21621C3E25E18CBB00B0413F /* MoreMenuLanguageCell.xib in Resources */,

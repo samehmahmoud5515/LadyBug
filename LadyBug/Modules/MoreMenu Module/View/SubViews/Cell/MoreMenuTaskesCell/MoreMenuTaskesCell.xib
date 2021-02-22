@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,38 +19,39 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9I-cg-NWW">
-                        <rect key="frame" x="0.0" y="6" width="340" height="58"/>
+                        <rect key="frame" x="0.0" y="6" width="340" height="54"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Wc-8c-BJW">
-                                <rect key="frame" x="15" y="24" width="17.5" height="16"/>
+                                <rect key="frame" x="307.5" y="18" width="17.5" height="17.5"/>
+                                <color key="tintColor" red="0.52941176470588236" green="0.60784313725490191" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="upe-BO-BU8">
-                                <rect key="frame" x="204" y="18" width="118" height="22"/>
+                                <rect key="frame" x="14" y="16" width="118" height="22"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مهامك اليوم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-yX-vf3">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more_menu_tasks_today" translatesAutoresizingMaskIntoConstraints="NO" id="p9z-BZ-QMZ">
-                                        <rect key="frame" x="96" y="0.0" width="22" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="9PK-Gz-Twv"/>
                                             <constraint firstAttribute="width" constant="22" id="Wql-jI-gay"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مهامك اليوم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-yX-vf3">
+                                        <rect key="frame" x="37" y="0.0" width="81" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3Wc-8c-BJW" firstAttribute="leading" secondItem="U9I-cg-NWW" secondAttribute="leading" constant="15" id="Hgj-u2-7sd"/>
-                            <constraint firstItem="upe-BO-BU8" firstAttribute="top" secondItem="U9I-cg-NWW" secondAttribute="top" constant="18" id="KuH-k6-b0d"/>
-                            <constraint firstItem="3Wc-8c-BJW" firstAttribute="top" secondItem="upe-BO-BU8" secondAttribute="top" constant="4" id="MSF-ih-l3H"/>
-                            <constraint firstItem="3Wc-8c-BJW" firstAttribute="bottom" secondItem="upe-BO-BU8" secondAttribute="bottom" constant="2.5" id="Yje-g9-hLG"/>
-                            <constraint firstAttribute="trailing" secondItem="upe-BO-BU8" secondAttribute="trailing" constant="18" id="bBq-UM-n0V"/>
-                            <constraint firstAttribute="bottom" secondItem="upe-BO-BU8" secondAttribute="bottom" constant="18" id="jRD-vi-kfs"/>
+                            <constraint firstAttribute="trailing" secondItem="3Wc-8c-BJW" secondAttribute="trailing" constant="15" id="24V-ww-6Y7"/>
+                            <constraint firstItem="3Wc-8c-BJW" firstAttribute="top" secondItem="upe-BO-BU8" secondAttribute="top" id="DJU-v1-vqp"/>
+                            <constraint firstAttribute="bottom" secondItem="upe-BO-BU8" secondAttribute="bottom" constant="16" id="FZM-p9-ThT"/>
+                            <constraint firstItem="upe-BO-BU8" firstAttribute="leading" secondItem="U9I-cg-NWW" secondAttribute="leading" constant="14" id="Oom-5m-Lx3"/>
+                            <constraint firstItem="upe-BO-BU8" firstAttribute="top" secondItem="U9I-cg-NWW" secondAttribute="top" constant="16" id="gmZ-uy-dWe"/>
+                            <constraint firstItem="3Wc-8c-BJW" firstAttribute="bottom" secondItem="upe-BO-BU8" secondAttribute="bottom" id="ygt-tp-Ruf"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -66,11 +68,14 @@
                 <outlet property="taskesLabel" destination="JNE-yX-vf3" id="xMc-nU-ATs"/>
                 <outlet property="taskesarrowIamgeView" destination="3Wc-8c-BJW" id="lfx-1P-05M"/>
             </connections>
-            <point key="canvasLocation" x="100.00000000000001" y="36.495535714285715"/>
+            <point key="canvasLocation" x="236" y="49"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
         <image name="more_menu_tasks_today" width="17" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
