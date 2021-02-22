@@ -103,3 +103,11 @@
 "add_post_problem_display" = "عرض مشكلة";
 "add_post_crop_title" = "نوع المحصول";
 "add_post_select_farm" = "اضغط لاختيار موقع المزرعة";
+
+//MARK:- Interested Selection
+"interested_selection_search" = "ابحث عن المحصول الذي تهتم بة";
+"interested_selection_next_title" = "حدد المحاصيل التي تهتم بها";
+"interested_selection_next_button_title" = "التالي";
+"interested_selection_header1" = "المحاصيل التي تهتم بها";
+"interested_selection_header2" = "الاشجار التي تهتم بها";
+"interested_selection_header3" = "نباتات منزلية التي تهتم بها";

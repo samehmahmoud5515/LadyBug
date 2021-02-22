@@ -10,6 +10,9 @@ import UIKit
 class InterestedSelectionViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nextLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextViewContainer: UIView!
     
     var presnter: InterestedSelectionPresenterProtocol!
     let margin: CGFloat = 22
@@ -27,8 +30,7 @@ class InterestedSelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCollectionViewCell()
-        setupCollectionViewLayout()
+        setupUI()
         presnter.attach()
     }
     
@@ -40,6 +42,67 @@ class InterestedSelectionViewController: UIViewController {
         let extractedExpr: CGFloat = CGFloat(cellsPerRow)
         let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / extractedExpr).rounded(.down)
         flowLayout.itemSize =  CGSize(width: itemWidth, height: itemWidth)
+    }
+
+}
+
+// MARK:- UI Setup
+extension InterestedSelectionViewController {
+    private func setupUI() {
+        setupNaviagtionBarUI()
+        addSearchBarToNaviagtionBar()
+        addBarButtonsToNavigationBar()
+        setupNextViews()
+        registerCollectionViewCell()
+        setupCollectionViewLayout()
+    }
+    
+    private func setupNaviagtionBarUI() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    private func addSearchBarToNaviagtionBar() {
+        let searchBar = UISearchBar()
+        searchBar.setImage(UIImage(named: presnter.images.search), for: .search, state: .normal)
+        searchBar.barTintColor = .paleGrey
+        searchBar.tintColor = .black
+        navigationItem.titleView = searchBar
+        
+        let attributes = NSAttributedString(string: presnter.localizer.searchTitle, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
+        
+        if #available(iOS 13.0, *) {
+            searchBar.searchTextField.attributedPlaceholder = attributes
+        } else {
+           let searchField = searchBar.value(forKey: "searchField") as? UITextField
+           searchField?.attributedPlaceholder = attributes
+        }
+    }
+    
+    private func addBarButtonsToNavigationBar() {
+        navigationItem.leftBarButtonItem = getLeftButton()
+    }
+    
+    private func getLeftButton() -> UIBarButtonItem {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        button.setImage(UIImage(named: presnter.images.back), for: .normal)
+        button.backgroundColor = .paleGreyThree
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
+        return UIBarButtonItem(customView: button)
+    }
+    
+    private func setupNextViews() {
+        nextLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        nextLabel.textColor = .purplishBrown
+        nextLabel.text = presnter.localizer.nextTitle
+        
+        nextButton.titleLabel?.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
+        nextButton.titleLabel?.textColor = .white
+        nextButton.setTitle(presnter.localizer.next, for: .normal)
     }
     
     private func registerCollectionViewCell() {
@@ -59,63 +122,25 @@ class InterestedSelectionViewController: UIViewController {
         flowLayout.headerReferenceSize = CGSize(width: collectionView.bounds.width, height: 32)
         flowLayout.scrollDirection = .vertical
     }
-
-}
-
-// MARK:- UI Setup
-extension InterestedSelectionViewController {
-    private func setupUI() {
-        setupNaviagtionBarUI()
-        addSearchBarToNaviagtionBar()
-        addBarButtonsToNavigationBar()
-    }
     
-    private func setupNaviagtionBarUI() {
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.largeTitleDisplayMode = .never
-    }
-    
-    private func addSearchBarToNaviagtionBar() {
-        let searchBar = UISearchBar()
-        searchBar.setImage(UIImage(named: presnter.images.search), for: .search, state: .normal)
-        searchBar.barTintColor = .paleGrey
-        searchBar.tintColor = .black
-        navigationItem.titleView = searchBar
+    private func setupCollectionViewFooter() {
         
-        let attributes = NSAttributedString(string: presnter.localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
-        
-        if #available(iOS 13.0, *) {
-            searchBar.searchTextField.attributedPlaceholder = attributes
-        } else {
-           let searchField = searchBar.value(forKey: "searchField") as? UITextField
-           searchField?.attributedPlaceholder = attributes
-        }
-    }
-    
-    private func addBarButtonsToNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.ladyBug), style: .plain, target: nil, action: nil)
-    }
-    
-    private func setupNextViews() {
-    
     }
 }
 
 extension InterestedSelectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 6
+        return presnter.datasource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return presnter.datasource[section].numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(InterestedSelectionCell.self)", for: indexPath) as? InterestedSelectionCell ?? InterestedSelectionCell()
-        
+        cell.setupUI(model: presnter.datasource[indexPath.section].data[indexPath.row])
         return cell
     }
     
@@ -123,7 +148,7 @@ extension InterestedSelectionViewController: UICollectionViewDataSource, UIColle
 
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(InterestedSelectionHeaderView.self)", for: indexPath) as? InterestedSelectionHeaderView ?? InterestedSelectionHeaderView()
         headerView.frame.size.height = 32
-
+        headerView.setupUI(with: presnter.datasource[indexPath.section].title)
         return headerView
     }
     
@@ -131,10 +156,22 @@ extension InterestedSelectionViewController: UICollectionViewDataSource, UIColle
         view.frame.size.height = 32
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? InterestedSelectionCell {
+            presnter.didSelectItemAt(row: indexPath.row, section: indexPath.section, cell: cell)
+            collectionView.reloadItems(at: [indexPath])
+        }
+    }
 }
 
 extension InterestedSelectionViewController: InterestedSelectionViewProtocol {
-    
-    
+    func notifyDatasourceChanged() {
+        collectionView.reloadData()
+    }
+}
+
+extension InterestedSelectionViewController {
+    @objc func didTappedBackButton() {
+        
+    }
 }

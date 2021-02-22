@@ -17,26 +17,42 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TM-Pj-13b">
-                            <rect key="frame" x="264" y="14.5" width="42" height="21"/>
+                            <rect key="frame" x="14" y="14.5" width="41.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8vF-N0-5rn">
+                            <rect key="frame" x="282" y="20.5" width="14" height="9"/>
+                            <color key="tintColor" red="0.21568627450980393" green="0.20784313725490194" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13" id="1Sl-VL-gI4"/>
+                                <constraint firstAttribute="width" constant="14" id="a1g-W8-bkv"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.87058823529411766" green="0.89803921568627454" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="2TM-Pj-13b" firstAttribute="centerY" secondItem="yvV-uT-K9c" secondAttribute="centerY" id="6Lh-sQ-NBZ"/>
-                        <constraint firstAttribute="trailing" secondItem="2TM-Pj-13b" secondAttribute="trailing" constant="14" id="T1S-dm-0v1"/>
+                        <constraint firstItem="8vF-N0-5rn" firstAttribute="centerY" secondItem="2TM-Pj-13b" secondAttribute="centerY" id="2l4-yj-UD4"/>
+                        <constraint firstAttribute="trailing" secondItem="8vF-N0-5rn" secondAttribute="trailing" constant="24" id="IHS-rk-2i2"/>
+                        <constraint firstItem="2TM-Pj-13b" firstAttribute="centerY" secondItem="yvV-uT-K9c" secondAttribute="centerY" id="kBa-VJ-9r5"/>
+                        <constraint firstItem="2TM-Pj-13b" firstAttribute="leading" secondItem="yvV-uT-K9c" secondAttribute="leading" constant="14" id="uUc-Pw-ntC"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="yvV-uT-K9c" secondAttribute="trailing" id="UnQ-qq-J2V"/>
-                <constraint firstItem="yvV-uT-K9c" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="e2J-iM-mdh"/>
-                <constraint firstAttribute="bottom" secondItem="yvV-uT-K9c" secondAttribute="bottom" id="jtL-D2-qj8"/>
-                <constraint firstItem="yvV-uT-K9c" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="uwS-3S-hSz"/>
+                <constraint firstAttribute="bottom" secondItem="yvV-uT-K9c" secondAttribute="bottom" id="H2J-f9-PA8"/>
+                <constraint firstItem="yvV-uT-K9c" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="PwC-ce-PVF"/>
+                <constraint firstAttribute="trailing" secondItem="yvV-uT-K9c" secondAttribute="trailing" id="Tgb-pI-wsX"/>
+                <constraint firstItem="yvV-uT-K9c" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="hX0-F3-Gev"/>
             </constraints>
-            <point key="canvasLocation" x="-17" y="78"/>
+            <connections>
+                <outlet property="titleLabel" destination="2TM-Pj-13b" id="ZMe-RC-vK5"/>
+            </connections>
+            <point key="canvasLocation" x="-17.39130434782609" y="77.678571428571431"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
+    </resources>
 </document>

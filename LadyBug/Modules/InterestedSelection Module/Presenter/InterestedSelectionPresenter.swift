@@ -13,8 +13,10 @@ class InterestedSelectionPresenter: InterestedSelectionPresenterProtocol {
     
     var datasource: [InterestedSelectionUIModel] = []
     
+    weak var view: InterestedSelectionViewProtocol?
+    
     init(view: InterestedSelectionViewProtocol) {
-        
+        self.view = view
     }
     
     func attach() {
@@ -22,6 +24,16 @@ class InterestedSelectionPresenter: InterestedSelectionPresenterProtocol {
     }
     
     private func prepareDatasource() {
-         
+        datasource += [InterestedSelectionUIModel(title: localizer.header1, data: [CropUIModel(), CropUIModel(), CropUIModel()])]
+        datasource += [InterestedSelectionUIModel(title: localizer.header2, data: [CropUIModel(), CropUIModel(), CropUIModel(), CropUIModel(), CropUIModel(), CropUIModel()])]
+        datasource += [InterestedSelectionUIModel(title: localizer.header3, data: [CropUIModel(), CropUIModel(), CropUIModel(), CropUIModel(), CropUIModel(), CropUIModel()])]
+        view?.notifyDatasourceChanged()
     }
+    
+    func didSelectItemAt(row: Int, section: Int, cell: InterestedSelectionCellProtocol) {
+        datasource[section].data[row].toggleSelection()
+        
+        cell.setupUI(model: datasource[section].data[row])
+    }
+
 }

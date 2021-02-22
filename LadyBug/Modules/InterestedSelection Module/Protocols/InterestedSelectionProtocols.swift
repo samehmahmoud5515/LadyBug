@@ -12,8 +12,9 @@ protocol InterestedSelectionPresenterProtocol {
     var localizer: InterestedSelectionLocalizer { get }
     var datasource: [InterestedSelectionUIModel] { get }
     func attach()
+    func didSelectItemAt(row: Int, section: Int, cell: InterestedSelectionCellProtocol)
 }
 
-protocol InterestedSelectionViewProtocol {
-    
+protocol InterestedSelectionViewProtocol: class {
+    func notifyDatasourceChanged()
 }
