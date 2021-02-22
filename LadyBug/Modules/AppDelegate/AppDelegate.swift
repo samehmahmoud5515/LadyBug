@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = TabBarViewController()
+        let rootViewController = InterestedSelectionViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navigationController
