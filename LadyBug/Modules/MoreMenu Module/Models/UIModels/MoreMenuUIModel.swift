@@ -10,7 +10,14 @@ import Foundation
 enum MoreMenuUIModel {
     case profile(MoreMenuProfileModel)
     case notification(MoreMenuNotificationModel)
-    case tasks(MoreMenuModel)
     case language(MoreMenuLanguageModel)
+    case tasks(MoreMenuModel)
+    case products(MoreMenuModel)
+    case posts(MoreMenuModel)
+    case followers(MoreMenuModel)
+    case interests(MoreMenuModel)
+    case usageAgreement(MoreMenuModel)
+    case help(MoreMenuModel)
+    case logOut(MoreMenuModel)
 }
 

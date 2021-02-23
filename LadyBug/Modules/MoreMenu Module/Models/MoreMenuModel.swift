@@ -7,13 +7,12 @@
 
 import Foundation
 
-struct MoreMenuProfileModel {
+struct  MoreMenuProfileModel {
     var profileImage: String = ""
     var name: String = ""
     var job: String = ""
     var mobileNumber: String = ""
     var editTitle: String = ""
-    var editImage: String = ""
     var numberOfPointsImage: String = ""
     var numberOfPointsTitle: String = ""
     var pointsValue: String = ""

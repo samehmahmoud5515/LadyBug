@@ -22,13 +22,13 @@ class MoreMenuViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         presnter.attach()
     }
-
+    
 }
 
 // MARK:- UI Setup
@@ -66,13 +66,22 @@ extension MoreMenuViewController {
         titleLabel.textColor = .purplishBrown
         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         titleLabel.sizeToFit()
-
+        
         return UIBarButtonItem(customView: titleLabel)
     }
     
     private func registerTableViewCell() {
-        let nib = UINib(nibName: "\(MoreMenuCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "\(MoreMenuCell.self)")
+        let profileNib = UINib(nibName: "\(MoreMenuProfileCell.self)", bundle: nil)
+        tableView.register(profileNib, forCellReuseIdentifier: "\(MoreMenuProfileCell.self)")
+        
+        let notificationsNib = UINib(nibName: "\(MoreMenuNotificationsCell.self)", bundle: nil)
+        tableView.register(notificationsNib, forCellReuseIdentifier: "\(MoreMenuNotificationsCell.self)")
+        
+        let languageNib = UINib(nibName: "\(MoreMenuLanguageCell.self)", bundle: nil)
+        tableView.register(languageNib, forCellReuseIdentifier: "\(MoreMenuLanguageCell.self)")
+        
+        let taskesNib = UINib(nibName: "\(MoreMenuTaskesCell.self)", bundle: nil)
+        tableView.register(taskesNib, forCellReuseIdentifier: "\(MoreMenuTaskesCell.self)")
     }
     
     private func setupTableViewRowHeight() {
@@ -88,11 +97,50 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch presnter.datasource[indexPath.row] {
-        case let .profile(profile):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuCell.self)", for: indexPath) as? MoreMenuCell ?? MoreMenuCell()
+        case let .profile(MoreMenuProfileModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuProfileCell.self)", for: indexPath) as? MoreMenuProfileCell ?? MoreMenuProfileCell()
+            cell.setupUI(model: MoreMenuProfileModel)
             return cell
-        case let .tasks(tasks):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuCell.self)", for: indexPath) as? MoreMenuCell ?? MoreMenuCell()
+        case let .notification(notificationModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuNotificationsCell.self)", for: indexPath) as? MoreMenuNotificationsCell ?? MoreMenuNotificationsCell()
+            cell.setupUI(model: notificationModel)
+            return cell
+        case let .language(languageModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuLanguageCell.self)", for: indexPath) as? MoreMenuLanguageCell ?? MoreMenuLanguageCell()
+            cell.setupUI(model: languageModel)
+            return cell
+        case let .tasks(tasksModel) :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as? MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: tasksModel)
+            return cell
+        case let .products(productsModel) :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as? MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: productsModel)
+            return cell
+        case let .posts(postsModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as? MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: postsModel)
+            return cell
+        case let .followers(followersModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as? MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: followersModel)
+            return cell
+        case let .interests(interestsModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as? MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: interestsModel)
+            return cell
+        case let.usageAgreement(usageAgreementModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as?
+                MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: usageAgreementModel)
+            return cell
+        case let.help(helpModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as? MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: helpModel)
+            return cell
+        case let .logOut(logOutModel):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuTaskesCell.self)", for: indexPath) as? MoreMenuTaskesCell ?? MoreMenuTaskesCell()
+            cell.setupUI(model: logOutModel)
             return cell
         default:
             return UITableViewCell()
@@ -108,6 +156,12 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
     func naviageteTo(model: MoreMenuUIModel) {
         switch model {
         case .profile:
+            break
+        case .notification:
+            break
+        case .language :
+            break
+        case.tasks,.products,.posts,.followers,.interests,.usageAgreement,.help,.logOut :
             break
         default:
             break
