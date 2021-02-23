@@ -95,7 +95,23 @@
 
 //MARK:- More Menu
 "more_menu_title" = "ملفك الشخصي";
-
+"more_menu_profile_user_name_title" = "محمد خليفة";
+"more_menu_profile_phone_number_title" = "+201018685227";
+"more_menu_pofile_occupation_title"="مهندس زراعي";
+"more_menu_profile_points_title"="عدد نقاط نشاطك";
+"more_menu_profile_edite_title"="تعديل";
+"more_menu_profile_point_number_title"="600 نقطة";
+"more_menu_notifications_title"="الاشعارات";
+"more_menu_tasks_today_title"="مهامك اليوم";
+"more_menu_products_title"="منتجاتك";
+"more_menu_posts_title"="منشوراتي";
+"more_menu_followers_title"="متابعون";
+"more_menu_interests_title"="اهتماماتك";
+"more_menu_usage_agreement_title"="اتفاقية الاستخدام";
+"more_menu_language_title"="اللغة";
+"more_menu_arbic_title"="العربية";
+"more_menu_help_title"="المساعدة";
+"more_menu_logout"="تسجيل خروج";
 //MARK:- Add Post
 "add_post_create_post" = "انشاء مشاركة";
 "add_post_title" = "اضف مشاركتك";
