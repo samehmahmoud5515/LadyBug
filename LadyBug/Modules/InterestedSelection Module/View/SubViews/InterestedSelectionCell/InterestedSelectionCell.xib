@@ -10,24 +10,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="InterestedSelectionCell" customModule="LadyBug" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="InterestedSelectionCell" customModule="LadyBug" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="259" height="91"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="259" height="91"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTv-AG-Ub1">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTv-AG-Ub1">
                         <rect key="frame" x="0.0" y="0.0" width="259" height="91"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="O98-oZ-LrC">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="O98-oZ-LrC">
                                 <rect key="frame" x="0.0" y="4" width="259" height="83"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_apple" translatesAutoresizingMaskIntoConstraints="NO" id="Hne-aJ-qxc">
                                         <rect key="frame" x="105.5" y="0.0" width="48" height="50"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="تفاح" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyF-MN-IC0">
-                                        <rect key="frame" x="114.5" y="57" width="30" height="26"/>
+                                        <rect key="frame" x="114.5" y="58" width="30" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -54,19 +54,36 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1nV-ve-UFK">
+                        <rect key="frame" x="-10" y="-9.5" width="26" height="25"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="hsW-VA-NgN"/>
+                            <constraint firstAttribute="width" constant="26" id="xGa-je-YLJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="mTv-AG-Ub1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5sW-Id-q2U"/>
+                <constraint firstItem="1nV-ve-UFK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-10" id="6w7-xe-Trp"/>
                 <constraint firstAttribute="bottom" secondItem="mTv-AG-Ub1" secondAttribute="bottom" id="BZ2-Ym-NXo"/>
                 <constraint firstItem="mTv-AG-Ub1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="K9e-Xs-wvm"/>
                 <constraint firstAttribute="trailing" secondItem="mTv-AG-Ub1" secondAttribute="trailing" id="QN0-Cq-u3u"/>
+                <constraint firstItem="1nV-ve-UFK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-10" id="xbp-oA-W6X"/>
             </constraints>
             <size key="customSize" width="259" height="91"/>
+            <connections>
+                <outlet property="logoImageView" destination="Hne-aJ-qxc" id="yOE-71-7Vi"/>
+                <outlet property="selectionImageView" destination="1nV-ve-UFK" id="ggX-WW-bkg"/>
+                <outlet property="titleLabel" destination="OyF-MN-IC0" id="v9o-Du-LFN"/>
+            </connections>
             <point key="canvasLocation" x="132.60869565217394" y="90.066964285714278"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="common_apple" width="48" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
