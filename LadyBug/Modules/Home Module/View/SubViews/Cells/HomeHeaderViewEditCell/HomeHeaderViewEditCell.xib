@@ -50,7 +50,7 @@
                 <constraint firstItem="9JL-ma-1oZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="j7m-i6-lE1"/>
             </constraints>
             <size key="customSize" width="109" height="133"/>
-            <point key="canvasLocation" x="99.275362318840592" y="132.58928571428572"/>
+            <point key="canvasLocation" x="-131.15942028985509" y="-30.46875"/>
         </collectionViewCell>
     </objects>
     <resources>

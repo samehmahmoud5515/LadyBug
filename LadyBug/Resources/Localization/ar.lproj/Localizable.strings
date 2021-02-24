@@ -119,6 +119,8 @@
 "add_post_problem_display" = "عرض مشكلة";
 "add_post_crop_title" = "نوع المحصول";
 "add_post_select_farm" = "اضغط لاختيار موقع المزرعة";
+"add_post_description_title" = "اضف وصف مشاركتك";
+"add_post_add_here" = "اضف هنا";
 //MARK: - More Menu
 "more_menu_title" = "ملفك الشخصي";
 "more_menu_profile_user_name_title" = "محمد خليفة";

@@ -14,4 +14,6 @@ class AddPostLocalizer: CommonLocalizer {
     var problemDisplay = "add_post_problem_display".localized
     var cropTitle = "add_post_crop_title".localized
     var selectFarm = "add_post_select_farm".localized
+    var description = "add_post_description_title".localized
+    var add = "add_post_add_here".localized
 }

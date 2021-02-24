@@ -8,8 +8,11 @@
 import Foundation
 
 class AddPostPresenter: AddPostPresenterProtocol {
-    weak var view: AddPostViewProtocol?
+    var numberOfSectionsInHeader: Int
     
+    weak var view: AddPostViewProtocol?
+    var footerDatasource: [FooterViewUIModel] = []
+    var numberOfSectionsInFooter: Int = 2
     var images = AddPostImages()
     var localizer = AddPostLocalizer()
     
@@ -21,14 +24,25 @@ class AddPostPresenter: AddPostPresenterProtocol {
     
     func attach() {
         setupDataSource()
+        setupFooterViewDatasource()
     }
     
     private func setupDataSource() {
         datasource += [.postType(AddPostModel(title: localizer.questionType, selectionTitle: localizer.problemDisplay))]
         datasource += [.cropType(AddPostModel(title: localizer.cropTitle, selectionTitle: localizer.selectFarm))]
+        datasource += [.Description(AddPostDescription(title: localizer.description, text: localizer.add))]
     }
     
     func getItemFor(index: Int) -> AddPostUIModel {
         return datasource[index]
     }
+    
+    private func setupHeaderViewDatasource() {
+        footerDatasource = [
+            
+        ]
+    
+        view?.notifyHeaderViewDatasourceChanged()
+    }
+    
 }

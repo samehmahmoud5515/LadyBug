@@ -8,6 +8,6 @@
 import Foundation
 
 struct HeaderViewUIModel {
-    var title: String
     var image: String
+    var title: String
 }

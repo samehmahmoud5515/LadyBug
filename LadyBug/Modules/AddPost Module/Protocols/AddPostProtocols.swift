@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AddPostPresenterProtocol {
+protocol AddPostPresenterProtocol:AddPostFooterDelegate {
     var images: AddPostImages { get }
     var localizer: AddPostLocalizer { get }
     var datasource: [AddPostUIModel] { get }
@@ -17,4 +17,9 @@ protocol AddPostPresenterProtocol {
 
 protocol AddPostViewProtocol: class {
     func notifyDataChange()
+}
+
+protocol AddPostFooterDelegate: class {
+    var footerDatasource: [FooterViewUIModel] { get }
+    var numberOfSectionsInHeader: Int { get }
 }

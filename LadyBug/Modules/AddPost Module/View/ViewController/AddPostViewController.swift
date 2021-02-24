@@ -88,8 +88,10 @@ extension AddPostViewController {
     }
     
     private func registerTableViewCell() {
-        let nib = UINib(nibName: "\(AddPostCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "\(AddPostCell.self)")
+        let addPostNib = UINib(nibName: "\(AddPostCell.self)", bundle: nil)
+        tableView.register(addPostNib, forCellReuseIdentifier: "\(AddPostCell.self)")
+        let descriptionNib = UINib(nibName: "\(AddPostDescriptionCell.self)", bundle: nil)
+        tableView.register(descriptionNib, forCellReuseIdentifier: "\(AddPostDescriptionCell.self)")
     }
     
     private func setupTableViewRowHeight() {
@@ -117,14 +119,17 @@ extension AddPostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostCell.self)", for: indexPath) as? AddPostCell ?? AddPostCell()
+        
         switch presnter.getItemFor(index: indexPath.row) {
-        case let .postType(model):
+        case let .postType(model), let .cropType(model):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostCell.self)", for: indexPath) as? AddPostCell ?? AddPostCell()
             cell.setupUI(model: model)
-        case let .cropType(model):
-            cell.setupUI(model: model)
+            return cell
+        case let .Description(model):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostDescriptionCell.self)", for: indexPath) as? AddPostDescriptionCell ?? AddPostDescriptionCell()
+            cell.setupCell(model: model)
+            return cell
         }
-        return cell
     }
 }
 

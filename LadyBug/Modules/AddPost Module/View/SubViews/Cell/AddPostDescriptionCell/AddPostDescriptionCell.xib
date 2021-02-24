@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="151" id="KGk-i7-Jjw" customClass="AddPostDescriptionCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="434" height="151"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iWt-ym-Mqz">
+                        <rect key="frame" x="0.0" y="0.0" width="434" height="147"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اضف وصف مشاركتك" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svL-zr-Qbb">
+                                <rect key="frame" x="0.0" y="0.0" width="434" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="jVN-C5-7sa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.21568627450980393" green="0.20784313725490194" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBp-kE-4Sc">
+                                <rect key="frame" x="0.0" y="34" width="434" height="113"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-qt-lcf">
+                                        <rect key="frame" x="0.0" y="0.0" width="434" height="113"/>
+                                        <color key="backgroundColor" red="0.96470588235294119" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="113" id="kf7-lF-mTr"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.52941176470588236" green="0.60784313725490191" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dbc-qt-lcf" secondAttribute="trailing" id="4yc-VE-72H"/>
+                                    <constraint firstItem="dbc-qt-lcf" firstAttribute="leading" secondItem="JBp-kE-4Sc" secondAttribute="leading" id="qln-A2-s86"/>
+                                    <constraint firstAttribute="bottom" secondItem="dbc-qt-lcf" secondAttribute="bottom" id="tL9-O2-oIS"/>
+                                    <constraint firstAttribute="height" constant="113" id="vbd-2f-eyN"/>
+                                    <constraint firstItem="dbc-qt-lcf" firstAttribute="top" secondItem="JBp-kE-4Sc" secondAttribute="top" id="vkK-Ia-bkS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iWt-ym-Mqz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Eh8-ag-oMH"/>
+                    <constraint firstItem="iWt-ym-Mqz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VFW-gO-wcA"/>
+                    <constraint firstAttribute="bottom" secondItem="iWt-ym-Mqz" secondAttribute="bottom" id="VjJ-st-SDq"/>
+                    <constraint firstAttribute="trailing" secondItem="iWt-ym-Mqz" secondAttribute="trailing" id="tNF-kd-Tmf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addPostDescripationTextView" destination="dbc-qt-lcf" id="iQs-Z4-OJD"/>
+                <outlet property="addPostDescriptionLabel" destination="svL-zr-Qbb" id="SAg-tr-tBW"/>
+            </connections>
+            <point key="canvasLocation" x="-7.2463768115942031" y="-2.34375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
