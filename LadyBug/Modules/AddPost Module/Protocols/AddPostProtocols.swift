@@ -21,5 +21,5 @@ protocol AddPostViewProtocol: class {
 
 protocol AddPostFooterDelegate: class {
     var footerDatasource: [FooterViewUIModel] { get }
-    var numberOfSectionsInHeader: Int { get }
+    var numberOfSectionsInFooter: Int { get }
 }

@@ -37,58 +37,58 @@ class AddPostFooterViewViewController: UIView {
     }
 }
 
-//extension AddPostFooterViewViewController {
-//    private func setupUI() {
-//        registerCollectionViewCell()
-//        setupCollectionViewLayout()
-//    }
+extension AddPostFooterViewViewController {
+    private func setupUI() {
+        registerCollectionViewCell()
+        setupCollectionViewLayout()
+    }
 
-//    private func registerCollectionViewCell() {
-//        let AddPostFooterCellNib = UINib(nibName: "\(AddPostFooterViewViewController.self)", bundle: nil)
-//        footerCollectionView.register(AddPostFooterCellNib, forCellWithReuseIdentifier: "\(footerCollectionView.self )")
-//
-//        let addPostFooterView  = UINib(nibName: "\(footerCollectionView.self)", bundle: nil)
-//        footerCollectionView.register(addPostFooterView, forCellWithReuseIdentifier: "\(footerCollectionView.self)")
-//    }
-//
-//    private func setupCollectionViewLayout() {
-//        let layout = UICollectionViewFlowLayout()
-//        layout.minimumLineSpacing = 6
-//        layout.minimumInteritemSpacing = 6
-//        layout.scrollDirection = .horizontal
-//        layout.sectionInset = UIEdgeInsets(top: 0, left: 19, bottom: 0, right: 0)
-//        layout.itemSize = UICollectionViewFlowLayout.automaticSize
-//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-//        collectionView.setCollectionViewLayout(layout, animated: false)
-//    }
-//}
-//
-//extension HomeHeaderView: UICollectionViewDataSource, UICollectionViewDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return section == 0 ? 1 : delegate?.headerDatasource.count ?? 0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if indexPath.section == 0 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(HomeHeaderViewEditCell.self)", for: indexPath) as? HomeHeaderViewEditCell ?? HomeHeaderViewEditCell()
-//            return cell
-//        } else {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(HomeHeaderViewCell.self)", for: indexPath) as? HomeHeaderViewCell ?? HomeHeaderViewCell()
-//            if let item = delegate?.headerDatasource[indexPath.row] {
-//                cell.setupUI(model: item)
-//            }
-//            return cell
-//        }
-//    }
-//
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return delegate?.numberOfSectionsInHeader ?? 0
-//    }
-//}
+    private func registerCollectionViewCell() {
+        let AddPostFooterCellNib = UINib(nibName: "\(AddPostFooterViewCell.self)", bundle: nil)
+        footerCollectionView.register(AddPostFooterCellNib, forCellWithReuseIdentifier: "\(AddPostFooterViewCell.self )")
 
-extension HomeHeaderView {
-//    func notifyDatasourceChanged() {
-//        collectionView.reloadData()
-//    }
+        let addPostFooterView  = UINib(nibName: "\(AddPostFooterViewEditCell.self)", bundle: nil)
+        footerCollectionView.register(addPostFooterView, forCellWithReuseIdentifier: "\(AddPostFooterViewEditCell.self)")
+    }
+
+    private func setupCollectionViewLayout() {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 13
+        layout.minimumInteritemSpacing = 13
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        layout.itemSize = UICollectionViewFlowLayout.automaticSize
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        footerCollectionView.setCollectionViewLayout(layout, animated: false)
+    }
+}
+
+extension AddPostFooterViewViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return section == 0 ? 1 : delegate?.footerDatasource.count ?? 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(AddPostFooterViewEditCell.self)", for: indexPath) as? AddPostFooterViewEditCell ?? AddPostFooterViewEditCell()
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(AddPostFooterViewCell.self)", for: indexPath) as? AddPostFooterViewCell ?? AddPostFooterViewCell()
+            if let item = delegate?.footerDatasource[indexPath.row] {
+                cell.setupUI(model: item)
+            }
+            return cell
+        }
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return delegate?.numberOfSectionsInHeader ?? 0
+    }
+}
+
+extension AddPostFooterViewViewController {
+    func notifyDatasourceChanged() {
+        footerCollectionView.reloadData()
+    }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class AddPostViewController: UIViewController {
     
+    @IBOutlet var addPostFooterView: AddPostFooterViewViewController!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addPostButton: UIButton!
     

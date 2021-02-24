@@ -22,3 +22,5 @@ struct AddPostDescription {
     var title:String = ""
     var text:String = ""
 }
+
+

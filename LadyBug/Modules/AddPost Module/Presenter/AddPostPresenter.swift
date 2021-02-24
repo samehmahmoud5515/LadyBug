@@ -8,7 +8,6 @@
 import Foundation
 
 class AddPostPresenter: AddPostPresenterProtocol {
-    var numberOfSectionsInHeader: Int
     
     weak var view: AddPostViewProtocol?
     var footerDatasource: [FooterViewUIModel] = []
@@ -37,12 +36,12 @@ class AddPostPresenter: AddPostPresenterProtocol {
         return datasource[index]
     }
     
-    private func setupHeaderViewDatasource() {
+    private func setupFooterViewDatasource() {
         footerDatasource = [
             
         ]
     
-        view?.notifyHeaderViewDatasourceChanged()
+        //view?.notifyHeaderViewDatasourceChanged()
     }
     
 }

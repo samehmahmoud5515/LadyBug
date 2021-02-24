@@ -28,15 +28,15 @@ class HomePresenter: HomePresenterProtocol {
     
     private func setupHeaderViewDatasource() {
         headerDatasource = [
-            HeaderViewUIModel(title: localizer.avocado, image: images.avocado),
-            HeaderViewUIModel(title: localizer.banana, image: images.banana),
-            HeaderViewUIModel(title: localizer.grape, image: images.grape),
-            HeaderViewUIModel(title: localizer.guava, image: images.guava),
-            HeaderViewUIModel(title: localizer.kiwi, image: images.kiwi),
-            HeaderViewUIModel(title: localizer.lemon, image: images.lemon),
-            HeaderViewUIModel(title: localizer.orange, image: images.orange),
-            HeaderViewUIModel(title: localizer.pineapple, image: images.pineapple),
-            HeaderViewUIModel(title: localizer.watermelon, image: images.waterMelon)
+            HeaderViewUIModel(image: images.avocado, title: localizer.avocado),
+            HeaderViewUIModel(image: images.banana, title: localizer.banana),
+            HeaderViewUIModel(image: images.grape, title: localizer.grape),
+            HeaderViewUIModel(image: images.guava, title: localizer.guava),
+            HeaderViewUIModel(image: images.kiwi, title: localizer.kiwi),
+            HeaderViewUIModel(image: images.lemon, title: localizer.lemon),
+            HeaderViewUIModel(image: images.orange, title: localizer.orange),
+            HeaderViewUIModel(image: images.pineapple, title: localizer.pineapple),
+            HeaderViewUIModel(image: images.waterMelon, title: localizer.watermelon)
         ]
     
         view?.notifyHeaderViewDatasourceChanged()
