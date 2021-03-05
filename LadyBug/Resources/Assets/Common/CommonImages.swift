@@ -33,4 +33,5 @@ class CommonImages: CommonFruitsAndVegetablesImages {
     var like = "common_like_ic"
     var dislike = "common_dislike_ic"
     var back = "back"
+    var filter = "common_filter_ic"
 }

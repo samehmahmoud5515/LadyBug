@@ -29,6 +29,12 @@ class MoreMenuViewController: UIViewController {
         presnter.attach()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage = nil
+    }
+    
 }
 
 // MARK:- UI Setup
@@ -155,13 +161,16 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
 extension MoreMenuViewController: MoreMenuViewProtocol {
     func naviageteTo(model: MoreMenuUIModel) {
         switch model {
+        case .interests:
+            let myCropsViewController = MyCropsViewController()
+            navigationController?.pushViewController(myCropsViewController, animated: true)
         case .profile:
             break
         case .notification:
             break
         case .language :
             break
-        case.tasks,.products,.posts,.followers,.interests,.usageAgreement,.help,.logOut :
+        case.tasks,.products,.posts,.followers,.usageAgreement,.help,.logOut :
             break
         default:
             break

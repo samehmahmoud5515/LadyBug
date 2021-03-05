@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="361" height="110"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RlN-Vd-b9X" customClass="DynamicHeightCollectionView" customModule="LadyBug" customModuleProvider="target">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RlN-Vd-b9X" customClass="DynamicHeightCollectionView" customModule="LadyBug" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="361" height="110"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aZm-Ma-s9e">

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyFarmDetailsPostsCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="189"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="345" height="189"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iyE-pS-KbT">
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="189"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTn-MJ-vUo">
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الأشخاص القائمين على المزرعة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o78-aN-YDe">
+                                        <rect key="frame" x="16" y="10" width="287" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWZ-Jf-F3N">
+                                        <rect key="frame" x="307" y="6.5" width="22" height="22"/>
+                                        <state key="normal" image="my_farm_add_people_ic"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.91372549020000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="o78-aN-YDe" firstAttribute="top" secondItem="qTn-MJ-vUo" secondAttribute="top" constant="10" id="45i-H4-0lw"/>
+                                    <constraint firstItem="sWZ-Jf-F3N" firstAttribute="top" secondItem="qTn-MJ-vUo" secondAttribute="top" constant="6.5" id="6cT-ut-BdH"/>
+                                    <constraint firstAttribute="trailing" secondItem="sWZ-Jf-F3N" secondAttribute="trailing" constant="16" id="7Rb-0w-sVC"/>
+                                    <constraint firstAttribute="bottom" secondItem="o78-aN-YDe" secondAttribute="bottom" constant="10" id="Jz6-0n-zgC"/>
+                                    <constraint firstAttribute="height" constant="35" id="Skq-aq-FTJ"/>
+                                    <constraint firstItem="o78-aN-YDe" firstAttribute="leading" secondItem="qTn-MJ-vUo" secondAttribute="leading" constant="16" id="V2M-Hf-OFU"/>
+                                    <constraint firstAttribute="bottom" secondItem="sWZ-Jf-F3N" secondAttribute="bottom" constant="6.5" id="aC7-eT-O8c"/>
+                                    <constraint firstItem="sWZ-Jf-F3N" firstAttribute="leading" secondItem="o78-aN-YDe" secondAttribute="trailing" constant="4" id="fNO-J3-F1Y"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4CU-Zm-K0h">
+                                <rect key="frame" x="0.0" y="35" width="345" height="154"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="VeU-Uy-a21"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bhF-g9-Is7">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="345" height="116"/>
+            <connections>
+                <outlet property="addTitleButton" destination="sWZ-Jf-F3N" id="Kdr-D8-kpE"/>
+                <outlet property="addTitleLabel" destination="o78-aN-YDe" id="d5G-CX-Pb4"/>
+                <outlet property="collectionView" destination="4CU-Zm-K0h" id="Vkp-0R-gb3"/>
+            </connections>
+            <point key="canvasLocation" x="187.68115942028987" y="95.424107142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="my_farm_add_people_ic" width="22" height="22"/>
+    </resources>
+</document>

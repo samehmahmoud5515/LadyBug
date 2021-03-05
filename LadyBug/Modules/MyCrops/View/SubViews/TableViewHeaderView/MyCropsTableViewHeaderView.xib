@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyCropsTableViewHeaderView" customModule="LadyBug" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="xGT-58-k0O" id="me8-VA-eqU"/>
+                <outlet property="contentView" destination="i5M-Pr-FkT" id="f0n-ym-DUV"/>
+                <outlet property="dateLabel" destination="VCp-ad-zYI" id="OBM-k2-Mya"/>
+                <outlet property="noteDescriptionLabel" destination="ty8-sy-Hy4" id="6NV-hO-rqd"/>
+                <outlet property="noteTitleContainerView" destination="aB0-5R-Ybl" id="Zl9-Bo-uVI"/>
+                <outlet property="noteTitleLabel" destination="bap-ma-lb4" id="aMd-oy-9hS"/>
+                <outlet property="sunImageView" destination="Tao-Xz-8Xo" id="OYU-Qo-prU"/>
+                <outlet property="tempratureLabel" destination="dk1-FH-48F" id="aEo-ks-0EV"/>
+                <outlet property="timeLabel" destination="7BV-y8-aQ7" id="yy6-OB-YSt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="225"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGT-58-k0O">
+                    <rect key="frame" x="15" y="10" width="368" height="215"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeJ-xF-3uV">
+                            <rect key="frame" x="0.0" y="0.0" width="368" height="215"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93f-iu-oPS">
+                                    <rect key="frame" x="0.0" y="0.0" width="318" height="215"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="rae-cI-Ity">
+                                            <rect key="frame" x="11" y="7" width="116" height="81"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4RT-gP-O3G">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="34"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="my_farm_weather_sun_ic" translatesAutoresizingMaskIntoConstraints="NO" id="Tao-Xz-8Xo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.4 C " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-FH-48F">
+                                                            <rect key="frame" x="36" y="0.0" width="80" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 20 يناير , القاهرة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCp-ad-zYI">
+                                                    <rect key="frame" x="0.0" y="37" width="116" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="غروب الشمس" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BV-y8-aQ7">
+                                                    <rect key="frame" x="0.0" y="60.5" width="116" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB0-5R-Ybl">
+                                            <rect key="frame" x="33" y="106" width="166.5" height="24.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا تنسى تفقد الملاحظات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bap-ma-lb4">
+                                                    <rect key="frame" x="2" y="2" width="162.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bap-ma-lb4" secondAttribute="trailing" constant="2" id="Ann-Ju-4tj"/>
+                                                <constraint firstAttribute="bottom" secondItem="bap-ma-lb4" secondAttribute="bottom" constant="2" id="DNV-Hq-1c8"/>
+                                                <constraint firstItem="bap-ma-lb4" firstAttribute="top" secondItem="aB0-5R-Ybl" secondAttribute="top" constant="2" id="FIG-OD-D7t"/>
+                                                <constraint firstItem="bap-ma-lb4" firstAttribute="leading" secondItem="aB0-5R-Ybl" secondAttribute="leading" constant="2" id="Vc2-FF-rwt"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty8-sy-Hy4">
+                                            <rect key="frame" x="11" y="132.5" width="307" height="41"/>
+                                            <string key="text">غائم جزئيا خلال اليوم
+اليوم هو يوم سئ للقيام برش المبيدات الحشرية</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="rae-cI-Ity" firstAttribute="top" secondItem="93f-iu-oPS" secondAttribute="top" constant="7" id="1rg-Cz-Xd1"/>
+                                        <constraint firstItem="ty8-sy-Hy4" firstAttribute="top" secondItem="aB0-5R-Ybl" secondAttribute="bottom" constant="2" id="208-Ln-Wrx"/>
+                                        <constraint firstItem="rae-cI-Ity" firstAttribute="leading" secondItem="93f-iu-oPS" secondAttribute="leading" constant="11" id="Apv-MN-FwW"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ty8-sy-Hy4" secondAttribute="bottom" constant="7" id="Jaz-mg-yoa"/>
+                                        <constraint firstItem="ty8-sy-Hy4" firstAttribute="leading" secondItem="93f-iu-oPS" secondAttribute="leading" constant="11" id="X5a-rY-ZsU"/>
+                                        <constraint firstItem="aB0-5R-Ybl" firstAttribute="top" secondItem="rae-cI-Ity" secondAttribute="bottom" constant="18" id="ckg-dD-cU0"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ty8-sy-Hy4" secondAttribute="trailing" id="dgp-At-cJY"/>
+                                        <constraint firstItem="aB0-5R-Ybl" firstAttribute="leading" secondItem="93f-iu-oPS" secondAttribute="leading" constant="33" id="qEx-n1-ru6"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rae-cI-Ity" secondAttribute="trailing" id="sIO-cF-3gj"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_farm_weather_tree_ic" translatesAutoresizingMaskIntoConstraints="NO" id="3Zz-Js-pre">
+                                    <rect key="frame" x="318" y="0.0" width="50" height="215"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zeJ-xF-3uV" secondAttribute="trailing" id="9hN-yt-3Fw"/>
+                        <constraint firstItem="zeJ-xF-3uV" firstAttribute="top" secondItem="xGT-58-k0O" secondAttribute="top" id="ZPd-lc-eRc"/>
+                        <constraint firstAttribute="bottom" secondItem="zeJ-xF-3uV" secondAttribute="bottom" id="qZ4-zS-HHg"/>
+                        <constraint firstItem="zeJ-xF-3uV" firstAttribute="leading" secondItem="xGT-58-k0O" secondAttribute="leading" id="sqe-dk-rZ6"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xGT-58-k0O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="2a4-UJ-OAD"/>
+                <constraint firstAttribute="trailing" secondItem="xGT-58-k0O" secondAttribute="trailing" constant="15" id="OLz-V8-feV"/>
+                <constraint firstAttribute="bottom" secondItem="xGT-58-k0O" secondAttribute="bottom" id="dyd-Bx-kTR"/>
+                <constraint firstItem="xGT-58-k0O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="io6-57-LYx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-47.826086956521742" y="-151.00446428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="my_farm_weather_sun_ic" width="34" height="34"/>
+        <image name="my_farm_weather_tree_ic" width="137" height="162"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

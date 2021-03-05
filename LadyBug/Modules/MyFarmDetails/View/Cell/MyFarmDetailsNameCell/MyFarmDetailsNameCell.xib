@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="MyFarmDetailsNameCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVh-pe-FsB">
+                        <rect key="frame" x="17" y="10" width="303" height="34"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzz-ra-bSx">
+                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_apple_ic" translatesAutoresizingMaskIntoConstraints="NO" id="5Kb-ts-3xO">
+                                        <rect key="frame" x="6" y="6" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="RLz-Ey-3mT"/>
+                                            <constraint firstAttribute="width" constant="22" id="kBa-Y1-l7y"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="94a-Os-A6b"/>
+                                    <constraint firstAttribute="height" constant="34" id="Iht-2N-Vat"/>
+                                    <constraint firstItem="5Kb-ts-3xO" firstAttribute="centerX" secondItem="dzz-ra-bSx" secondAttribute="centerX" id="P36-c8-ysR"/>
+                                    <constraint firstItem="5Kb-ts-3xO" firstAttribute="centerY" secondItem="dzz-ra-bSx" secondAttribute="centerY" id="s6x-24-MQd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مزرعة طماطم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn6-lu-R5a">
+                                <rect key="frame" x="43" y="5" width="91.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حقيقية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-Ay-oua">
+                                <rect key="frame" x="137.5" y="5" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L0A-w0-WgR">
+                                <rect key="frame" x="43" y="30" width="98" height="4"/>
+                                <color key="tintColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="5Zq-Xh-sCZ"/>
+                                </constraints>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_farm_detail_info_ic" translatesAutoresizingMaskIntoConstraints="NO" id="4Om-hH-aXZ">
+                                <rect key="frame" x="145.5" y="30" width="4" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="4" id="2cS-IX-K2J"/>
+                                    <constraint firstAttribute="height" constant="4" id="Cps-Jc-WpW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Om-hH-aXZ" firstAttribute="centerY" secondItem="L0A-w0-WgR" secondAttribute="centerY" id="6cc-8u-TSQ"/>
+                            <constraint firstItem="fn6-lu-R5a" firstAttribute="leading" secondItem="dzz-ra-bSx" secondAttribute="trailing" constant="9" id="8ZV-2k-2bd"/>
+                            <constraint firstItem="dzz-ra-bSx" firstAttribute="leading" secondItem="BVh-pe-FsB" secondAttribute="leading" id="8dN-cm-CVS"/>
+                            <constraint firstItem="Eag-Ay-oua" firstAttribute="leading" secondItem="fn6-lu-R5a" secondAttribute="trailing" constant="3" id="Ecy-zV-JQz"/>
+                            <constraint firstItem="L0A-w0-WgR" firstAttribute="leading" secondItem="fn6-lu-R5a" secondAttribute="leading" id="GxA-aW-mqt"/>
+                            <constraint firstItem="dzz-ra-bSx" firstAttribute="top" secondItem="BVh-pe-FsB" secondAttribute="top" id="K6g-iS-Zgd"/>
+                            <constraint firstItem="4Om-hH-aXZ" firstAttribute="leading" secondItem="L0A-w0-WgR" secondAttribute="trailing" constant="4.5" id="OXQ-td-734"/>
+                            <constraint firstItem="L0A-w0-WgR" firstAttribute="top" secondItem="fn6-lu-R5a" secondAttribute="bottom" constant="4" id="RbP-qc-BJB"/>
+                            <constraint firstAttribute="bottom" secondItem="dzz-ra-bSx" secondAttribute="bottom" id="Wvn-8U-TLr"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Eag-Ay-oua" secondAttribute="trailing" constant="4" id="bNm-Xm-Y9P"/>
+                            <constraint firstItem="fn6-lu-R5a" firstAttribute="top" secondItem="BVh-pe-FsB" secondAttribute="top" constant="5" id="jF7-or-yzv"/>
+                            <constraint firstItem="Eag-Ay-oua" firstAttribute="bottom" secondItem="fn6-lu-R5a" secondAttribute="bottom" id="rXW-Kk-MZX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="BVh-pe-FsB" secondAttribute="bottom" constant="15" id="Lgo-q4-rh5"/>
+                    <constraint firstAttribute="trailing" secondItem="BVh-pe-FsB" secondAttribute="trailing" id="RkS-Lr-dog"/>
+                    <constraint firstItem="BVh-pe-FsB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="UPH-O8-rrY"/>
+                    <constraint firstItem="BVh-pe-FsB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rDO-5e-eeQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="titleLabel" destination="fn6-lu-R5a" id="1bR-XX-gN5"/>
+                <outlet property="typeLabel" destination="Eag-Ay-oua" id="eO8-4T-1Tm"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="81.026785714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="my_farm_detail_info_ic" width="8" height="8"/>
+        <image name="small_apple_ic" width="21.5" height="22.5"/>
+    </resources>
+</document>

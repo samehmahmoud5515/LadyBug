@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="KGk-i7-Jjw" customClass="MyFarmDetailsPostsTableViewCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCf-Nw-e6I">
+                        <rect key="frame" x="0.0" y="0.0" width="322" height="189"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CJP-4s-XWj">
+                                <rect key="frame" x="0.0" y="0.0" width="322" height="189"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faP-fp-EQq">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الأشخاص القائمين على المزرعة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoS-Nh-htC">
+                                                <rect key="frame" x="16" y="10" width="264" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za5-OA-2gg">
+                                                <rect key="frame" x="284" y="6.5" width="22" height="22"/>
+                                                <state key="normal" image="my_farm_add_people_ic"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.91372549020000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="za5-OA-2gg" secondAttribute="trailing" constant="16" id="0io-kR-8qO"/>
+                                            <constraint firstAttribute="height" constant="35" id="RU8-ms-1AO"/>
+                                            <constraint firstAttribute="bottom" secondItem="za5-OA-2gg" secondAttribute="bottom" constant="6.5" id="ksJ-0T-aFS"/>
+                                            <constraint firstItem="EoS-Nh-htC" firstAttribute="leading" secondItem="faP-fp-EQq" secondAttribute="leading" constant="16" id="kvi-jS-c2S"/>
+                                            <constraint firstItem="EoS-Nh-htC" firstAttribute="top" secondItem="faP-fp-EQq" secondAttribute="top" constant="10" id="nbQ-v1-rRo"/>
+                                            <constraint firstItem="za5-OA-2gg" firstAttribute="top" secondItem="faP-fp-EQq" secondAttribute="top" constant="6.5" id="qvr-5f-e5H"/>
+                                            <constraint firstAttribute="bottom" secondItem="EoS-Nh-htC" secondAttribute="bottom" constant="10" id="r7j-cc-NFx"/>
+                                            <constraint firstItem="za5-OA-2gg" firstAttribute="leading" secondItem="EoS-Nh-htC" secondAttribute="trailing" constant="4" id="vc0-TC-am6"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SC0-ZC-qeF">
+                                        <rect key="frame" x="0.0" y="35" width="322" height="154"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="154" id="C5n-t5-Gno"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vyg-sd-9WT">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CJP-4s-XWj" secondAttribute="trailing" id="9RS-bc-kKV"/>
+                            <constraint firstAttribute="bottom" secondItem="CJP-4s-XWj" secondAttribute="bottom" id="KxY-Pd-SSq"/>
+                            <constraint firstItem="CJP-4s-XWj" firstAttribute="leading" secondItem="WCf-Nw-e6I" secondAttribute="leading" id="QZj-Eq-foU"/>
+                            <constraint firstItem="CJP-4s-XWj" firstAttribute="top" secondItem="WCf-Nw-e6I" secondAttribute="top" id="Un5-AA-Cp4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WCf-Nw-e6I" secondAttribute="bottom" id="3NM-Nh-J3O"/>
+                    <constraint firstAttribute="trailing" secondItem="WCf-Nw-e6I" secondAttribute="trailing" id="SKy-Z1-wcW"/>
+                    <constraint firstItem="WCf-Nw-e6I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oL6-6O-w3t"/>
+                    <constraint firstItem="WCf-Nw-e6I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vch-1V-mbB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addTitleButton" destination="za5-OA-2gg" id="U5S-XZ-UrQ"/>
+                <outlet property="addTitleLabel" destination="EoS-Nh-htC" id="OdG-SJ-qF0"/>
+                <outlet property="collectionView" destination="SC0-ZC-qeF" id="gYm-w9-duB"/>
+            </connections>
+            <point key="canvasLocation" x="-24.637681159420293" y="80.691964285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="my_farm_add_people_ic" width="22" height="22"/>
+    </resources>
+</document>
