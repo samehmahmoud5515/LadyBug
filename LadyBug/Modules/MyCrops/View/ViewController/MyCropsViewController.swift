@@ -117,10 +117,6 @@ extension MyCropsViewController: UITableViewDelegate, UITableViewDataSource {
         return presnter.cropsDatasource.count
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return presnter.cropsDatasource.count
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch presnter.cropsDatasource[indexPath.row] {
@@ -132,23 +128,5 @@ extension MyCropsViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = MyCropsTableViewSectionHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 52))
-//        headerView.setupUI()
-//        return headerView
-//    }
-//
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        if let view = view as? MyCropsTableViewSectionHeaderView {
-//            view.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 52)
-//            view.setupUI()
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 52
-//    }
-    
     
 }

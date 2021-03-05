@@ -68,6 +68,8 @@
 		503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503F7A1725DAA69F00EBD730 /* HomeViewController.xib */; };
 		503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F7A1E25DAAFD400EBD730 /* HomeImages.swift */; };
 		503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503F7A2325DAB05000EBD730 /* HomeLocalizer.swift */; };
+		5061EC1125F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5061EC0F25F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.swift */; };
+		5061EC1225F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5061EC1025F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.xib */; };
 		506A5A2725E5671A0014D59A /* MoreMenuProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506A5A1C25E5671A0014D59A /* MoreMenuProfileCell.xib */; };
 		506A5A2825E5671A0014D59A /* MoreMenuProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A5A1D25E5671A0014D59A /* MoreMenuProfileCell.swift */; };
 		506A5A2925E5671A0014D59A /* MoreMenuNotificationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506A5A1F25E5671A0014D59A /* MoreMenuNotificationsCell.xib */; };
@@ -95,6 +97,10 @@
 		5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5072D39825DAD2D8005363CB /* HomeHeaderView.xib */; };
 		5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39D25DAD485005363CB /* HomePresenter.swift */; };
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
+		507621E125F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507621DF25F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.swift */; };
+		507621E225F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507621E025F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.xib */; };
+		507621EE25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507621EC25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.swift */; };
+		507621EF25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507621ED25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.xib */; };
 		508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */; };
 		508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */; };
 		508FDADA25F049B500686ECE /* MyCropsParentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */; };
@@ -102,6 +108,14 @@
 		508FDAE025F04A1800686ECE /* MyCropsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDADE25F04A1800686ECE /* MyCropsCell.swift */; };
 		508FDAE125F04A1800686ECE /* MyCropsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDADF25F04A1800686ECE /* MyCropsCell.xib */; };
 		508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAE425F04D1800686ECE /* MyCropsUIModel.swift */; };
+		508FDAEE25F07D1E00686ECE /* MyFarmDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAEC25F07D1E00686ECE /* MyFarmDetailsViewController.swift */; };
+		508FDAEF25F07D1E00686ECE /* MyFarmDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDAED25F07D1E00686ECE /* MyFarmDetailsViewController.xib */; };
+		508FDAF325F07D9A00686ECE /* MyFarmDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAF225F07D9A00686ECE /* MyFarmDetailsPresenter.swift */; };
+		508FDAF725F07DB500686ECE /* MyFarmDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAF625F07DB500686ECE /* MyFarmDetailsProtocols.swift */; };
+		508FDAFD25F07DEF00686ECE /* MyFarmDetailsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAFC25F07DEF00686ECE /* MyFarmDetailsImages.swift */; };
+		508FDB0125F07E0900686ECE /* MyFarmDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDB0025F07E0900686ECE /* MyFarmDetailsLocalizer.swift */; };
+		508FDB0625F0846500686ECE /* MyFarmDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDB0425F0846500686ECE /* MyFarmDetailsView.swift */; };
+		508FDB0725F0846500686ECE /* MyFarmDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDB0525F0846500686ECE /* MyFarmDetailsView.xib */; };
 		5090FBEC25E44CDE008D5B06 /* InterestedSelectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090FBEB25E44CDE008D5B06 /* InterestedSelectionProtocols.swift */; };
 		5090FBF125E44D39008D5B06 /* InterestedSelectionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090FBF025E44D39008D5B06 /* InterestedSelectionImages.swift */; };
 		5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090FBF525E44D4C008D5B06 /* InterestedSelectionLocalizer.swift */; };
@@ -122,6 +136,15 @@
 		5099491A25E4642D0085CFBF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099491325E4642D0085CFBF /* ForgotPasswordViewController.swift */; };
 		5099491B25E4642D0085CFBF /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5099491425E4642D0085CFBF /* ForgotPasswordViewController.xib */; };
 		5099491C25E4642D0085CFBF /* ForgotProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099491625E4642D0085CFBF /* ForgotProtocols.swift */; };
+		509F9EDC25F1905B00A6E96A /* MyFarmDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F9EDA25F1905B00A6E96A /* MyFarmDetailsCell.swift */; };
+		509F9EDD25F1905B00A6E96A /* MyFarmDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509F9EDB25F1905B00A6E96A /* MyFarmDetailsCell.xib */; };
+		509F9EE325F1922000A6E96A /* MyFarmDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F9EE225F1922000A6E96A /* MyFarmDetailsUIModel.swift */; };
+		509F9EE825F1925E00A6E96A /* MyFarmDetailsNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F9EE625F1925E00A6E96A /* MyFarmDetailsNameCell.swift */; };
+		509F9EE925F1925E00A6E96A /* MyFarmDetailsNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509F9EE725F1925E00A6E96A /* MyFarmDetailsNameCell.xib */; };
+		509F9EF025F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F9EEE25F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.swift */; };
+		509F9EF125F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509F9EEF25F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.xib */; };
+		509F9EF725F19D7B00A6E96A /* MyFarmDetailsPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F9EF525F19D7B00A6E96A /* MyFarmDetailsPeopleCell.swift */; };
+		509F9EF825F19D7B00A6E96A /* MyFarmDetailsPeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509F9EF625F19D7B00A6E96A /* MyFarmDetailsPeopleCell.xib */; };
 		50A54C0C25E3FF190052F701 /* InterestedSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A54C0A25E3FF180052F701 /* InterestedSelectionViewController.xib */; };
 		50A54C0D25E3FF190052F701 /* InterestedSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A54C0B25E3FF180052F701 /* InterestedSelectionViewController.swift */; };
 		50A54C1325E3FF5C0052F701 /* InterestedSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A54C1125E3FF5C0052F701 /* InterestedSelectionCell.swift */; };
@@ -235,6 +258,8 @@
 		503F7A1725DAA69F00EBD730 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		503F7A1E25DAAFD400EBD730 /* HomeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImages.swift; sourceTree = "<group>"; };
 		503F7A2325DAB05000EBD730 /* HomeLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalizer.swift; sourceTree = "<group>"; };
+		5061EC0F25F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPostsTableViewCell.swift; sourceTree = "<group>"; };
+		5061EC1025F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsPostsTableViewCell.xib; sourceTree = "<group>"; };
 		506A5A1C25E5671A0014D59A /* MoreMenuProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreMenuProfileCell.xib; sourceTree = "<group>"; };
 		506A5A1D25E5671A0014D59A /* MoreMenuProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuProfileCell.swift; sourceTree = "<group>"; };
 		506A5A1F25E5671A0014D59A /* MoreMenuNotificationsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreMenuNotificationsCell.xib; sourceTree = "<group>"; };
@@ -262,6 +287,10 @@
 		5072D39825DAD2D8005363CB /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		5072D39D25DAD485005363CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		507621DF25F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPeopleChildCell.swift; sourceTree = "<group>"; };
+		507621E025F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsPeopleChildCell.xib; sourceTree = "<group>"; };
+		507621EC25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPostsChildCell.swift; sourceTree = "<group>"; };
+		507621ED25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsPostsChildCell.xib; sourceTree = "<group>"; };
 		508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCell.swift; sourceTree = "<group>"; };
 		508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsParentCell.xib; sourceTree = "<group>"; };
 		508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCellView.swift; sourceTree = "<group>"; };
@@ -269,6 +298,14 @@
 		508FDADE25F04A1800686ECE /* MyCropsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsCell.swift; sourceTree = "<group>"; };
 		508FDADF25F04A1800686ECE /* MyCropsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsCell.xib; sourceTree = "<group>"; };
 		508FDAE425F04D1800686ECE /* MyCropsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsUIModel.swift; sourceTree = "<group>"; };
+		508FDAEC25F07D1E00686ECE /* MyFarmDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsViewController.swift; sourceTree = "<group>"; };
+		508FDAED25F07D1E00686ECE /* MyFarmDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsViewController.xib; sourceTree = "<group>"; };
+		508FDAF225F07D9A00686ECE /* MyFarmDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPresenter.swift; sourceTree = "<group>"; };
+		508FDAF625F07DB500686ECE /* MyFarmDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsProtocols.swift; sourceTree = "<group>"; };
+		508FDAFC25F07DEF00686ECE /* MyFarmDetailsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsImages.swift; sourceTree = "<group>"; };
+		508FDB0025F07E0900686ECE /* MyFarmDetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsLocalizer.swift; sourceTree = "<group>"; };
+		508FDB0425F0846500686ECE /* MyFarmDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsView.swift; sourceTree = "<group>"; };
+		508FDB0525F0846500686ECE /* MyFarmDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsView.xib; sourceTree = "<group>"; };
 		5090FBEB25E44CDE008D5B06 /* InterestedSelectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedSelectionProtocols.swift; sourceTree = "<group>"; };
 		5090FBF025E44D39008D5B06 /* InterestedSelectionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedSelectionImages.swift; sourceTree = "<group>"; };
 		5090FBF525E44D4C008D5B06 /* InterestedSelectionLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedSelectionLocalizer.swift; sourceTree = "<group>"; };
@@ -289,6 +326,15 @@
 		5099491325E4642D0085CFBF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5099491425E4642D0085CFBF /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		5099491625E4642D0085CFBF /* ForgotProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotProtocols.swift; sourceTree = "<group>"; };
+		509F9EDA25F1905B00A6E96A /* MyFarmDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsCell.swift; sourceTree = "<group>"; };
+		509F9EDB25F1905B00A6E96A /* MyFarmDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsCell.xib; sourceTree = "<group>"; };
+		509F9EE225F1922000A6E96A /* MyFarmDetailsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsUIModel.swift; sourceTree = "<group>"; };
+		509F9EE625F1925E00A6E96A /* MyFarmDetailsNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsNameCell.swift; sourceTree = "<group>"; };
+		509F9EE725F1925E00A6E96A /* MyFarmDetailsNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsNameCell.xib; sourceTree = "<group>"; };
+		509F9EEE25F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsSuitabilityCell.swift; sourceTree = "<group>"; };
+		509F9EEF25F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsSuitabilityCell.xib; sourceTree = "<group>"; };
+		509F9EF525F19D7B00A6E96A /* MyFarmDetailsPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPeopleCell.swift; sourceTree = "<group>"; };
+		509F9EF625F19D7B00A6E96A /* MyFarmDetailsPeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFarmDetailsPeopleCell.xib; sourceTree = "<group>"; };
 		50A54C0A25E3FF180052F701 /* InterestedSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestedSelectionViewController.xib; sourceTree = "<group>"; };
 		50A54C0B25E3FF180052F701 /* InterestedSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestedSelectionViewController.swift; sourceTree = "<group>"; };
 		50A54C1125E3FF5C0052F701 /* InterestedSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedSelectionCell.swift; sourceTree = "<group>"; };
@@ -1122,6 +1168,34 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		507621DE25F1AFFE0061DF51 /* MyFarmDetailsPeopleChildCell */ = {
+			isa = PBXGroup;
+			children = (
+				507621DF25F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.swift */,
+				507621E025F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.xib */,
+			);
+			path = MyFarmDetailsPeopleChildCell;
+			sourceTree = "<group>";
+		};
+		507621E425F1BB400061DF51 /* MyFarmDetailsPostsCell */ = {
+			isa = PBXGroup;
+			children = (
+				507621EB25F1BC350061DF51 /* MyFarmDetailsPostsChildCell */,
+				5061EC0F25F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.swift */,
+				5061EC1025F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.xib */,
+			);
+			path = MyFarmDetailsPostsCell;
+			sourceTree = "<group>";
+		};
+		507621EB25F1BC350061DF51 /* MyFarmDetailsPostsChildCell */ = {
+			isa = PBXGroup;
+			children = (
+				507621EC25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.swift */,
+				507621ED25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.xib */,
+			);
+			path = MyFarmDetailsPostsChildCell;
+			sourceTree = "<group>";
+		};
 		508FDACF25F046F600686ECE /* MyCropsParentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1149,6 +1223,86 @@
 				508FDADF25F04A1800686ECE /* MyCropsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		508FDAE925F07CED00686ECE /* MyFarmDetails */ = {
+			isa = PBXGroup;
+			children = (
+				509F9EE125F1920A00A6E96A /* UIModels */,
+				508FDAFA25F07DD300686ECE /* Resources */,
+				508FDAF525F07DA200686ECE /* Protocols */,
+				508FDAF125F07D8600686ECE /* Presenter */,
+				508FDAEA25F07CF800686ECE /* View */,
+			);
+			path = MyFarmDetails;
+			sourceTree = "<group>";
+		};
+		508FDAEA25F07CF800686ECE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				509F9ED825F1902800A6E96A /* Cell */,
+				508FDAEB25F07CFC00686ECE /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		508FDAEB25F07CFC00686ECE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				508FDAEC25F07D1E00686ECE /* MyFarmDetailsViewController.swift */,
+				508FDAED25F07D1E00686ECE /* MyFarmDetailsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		508FDAF125F07D8600686ECE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				508FDAF225F07D9A00686ECE /* MyFarmDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		508FDAF525F07DA200686ECE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				508FDAF625F07DB500686ECE /* MyFarmDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		508FDAFA25F07DD300686ECE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				508FDAFF25F07DFB00686ECE /* Localizer */,
+				508FDAFB25F07DDD00686ECE /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		508FDAFB25F07DDD00686ECE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				508FDAFC25F07DEF00686ECE /* MyFarmDetailsImages.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		508FDAFF25F07DFB00686ECE /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				508FDB0025F07E0900686ECE /* MyFarmDetailsLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		508FDB0325F0844200686ECE /* MyFarmDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				508FDB0425F0846500686ECE /* MyFarmDetailsView.swift */,
+				508FDB0525F0846500686ECE /* MyFarmDetailsView.xib */,
+			);
+			path = MyFarmDetailsView;
 			sourceTree = "<group>";
 		};
 		5090FBEA25E44CAA008D5B06 /* Protocols */ = {
@@ -1363,6 +1517,64 @@
 				5099491625E4642D0085CFBF /* ForgotProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		509F9ED825F1902800A6E96A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				507621E425F1BB400061DF51 /* MyFarmDetailsPostsCell */,
+				509F9EF425F19D3300A6E96A /* MyFarmDetailsPeopleCell */,
+				509F9EED25F199E300A6E96A /* MyFarmDetailsSuitabilityCell */,
+				509F9EE525F1924100A6E96A /* MyFarmDetailsNameCell */,
+				509F9ED925F1903400A6E96A /* MyFarmDetailsCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		509F9ED925F1903400A6E96A /* MyFarmDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				508FDB0325F0844200686ECE /* MyFarmDetailsView */,
+				509F9EDA25F1905B00A6E96A /* MyFarmDetailsCell.swift */,
+				509F9EDB25F1905B00A6E96A /* MyFarmDetailsCell.xib */,
+			);
+			path = MyFarmDetailsCell;
+			sourceTree = "<group>";
+		};
+		509F9EE125F1920A00A6E96A /* UIModels */ = {
+			isa = PBXGroup;
+			children = (
+				509F9EE225F1922000A6E96A /* MyFarmDetailsUIModel.swift */,
+			);
+			path = UIModels;
+			sourceTree = "<group>";
+		};
+		509F9EE525F1924100A6E96A /* MyFarmDetailsNameCell */ = {
+			isa = PBXGroup;
+			children = (
+				509F9EE625F1925E00A6E96A /* MyFarmDetailsNameCell.swift */,
+				509F9EE725F1925E00A6E96A /* MyFarmDetailsNameCell.xib */,
+			);
+			path = MyFarmDetailsNameCell;
+			sourceTree = "<group>";
+		};
+		509F9EED25F199E300A6E96A /* MyFarmDetailsSuitabilityCell */ = {
+			isa = PBXGroup;
+			children = (
+				509F9EEE25F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.swift */,
+				509F9EEF25F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.xib */,
+			);
+			path = MyFarmDetailsSuitabilityCell;
+			sourceTree = "<group>";
+		};
+		509F9EF425F19D3300A6E96A /* MyFarmDetailsPeopleCell */ = {
+			isa = PBXGroup;
+			children = (
+				507621DE25F1AFFE0061DF51 /* MyFarmDetailsPeopleChildCell */,
+				509F9EF525F19D7B00A6E96A /* MyFarmDetailsPeopleCell.swift */,
+				509F9EF625F19D7B00A6E96A /* MyFarmDetailsPeopleCell.xib */,
+			);
+			path = MyFarmDetailsPeopleCell;
 			sourceTree = "<group>";
 		};
 		50A54C0725E3FF180052F701 /* InterestedSelection Module */ = {
@@ -1649,6 +1861,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				508FDAE925F07CED00686ECE /* MyFarmDetails */,
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
 				5099490925E4642D0085CFBF /* ForgotPassword */,
@@ -1910,6 +2123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */,
+				509F9EE925F1925E00A6E96A /* MyFarmDetailsNameCell.xib in Resources */,
 				506A5A2725E5671A0014D59A /* MoreMenuProfileCell.xib in Resources */,
 				503CB5C525E0A15F00B7A393 /* VideosViewController.xib in Resources */,
 				503DFC5925DB1F990093CAF2 /* HomeHeaderViewCell.xib in Resources */,
@@ -1917,15 +2131,20 @@
 				506E4D0B25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib in Resources */,
 				50E01ED825E5C9A30016DEAB /* MyCropsHeaderView.xib in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
+				509F9EDD25F1905B00A6E96A /* MyFarmDetailsCell.xib in Resources */,
 				50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */,
 				509643AD25E2EF860000FB60 /* AddPostViewController.xib in Resources */,
 				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
 				506E4D1325EDC3B9003BD749 /* MyCropsTableViewHeaderView.xib in Resources */,
+				507621EF25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.xib in Resources */,
+				508FDB0725F0846500686ECE /* MyFarmDetailsView.xib in Resources */,
 				2166B8A625E081C8008FE0A0 /* RegistrationViewController.xib in Resources */,
+				509F9EF125F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.xib in Resources */,
 				2166B89425E081BC008FE0A0 /* LoginViewController.xib in Resources */,
 				506A5A2925E5671A0014D59A /* MoreMenuNotificationsCell.xib in Resources */,
 				5099491B25E4642D0085CFBF /* ForgotPasswordViewController.xib in Resources */,
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
+				508FDAEF25F07D1E00686ECE /* MyFarmDetailsViewController.xib in Resources */,
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
 				50A54C0C25E3FF190052F701 /* InterestedSelectionViewController.xib in Resources */,
@@ -1938,6 +2157,8 @@
 				50068C7425E48A650097A870 /* MoreMenuViewController.xib in Resources */,
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
 				506E4D1A25EDC8E2003BD749 /* MyCropsStretchedParentCell.xib in Resources */,
+				507621E225F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.xib in Resources */,
+				5061EC1225F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.xib in Resources */,
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
 				506E4D2125EDC95F003BD749 /* MyCropsStretchedParentCellView.xib in Resources */,
@@ -1954,6 +2175,7 @@
 				506A5A2B25E5671A0014D59A /* MoreMenuTaskesCell.xib in Resources */,
 				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
 				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
+				509F9EF825F19D7B00A6E96A /* MyFarmDetailsPeopleCell.xib in Resources */,
 				508FDAE125F04A1800686ECE /* MyCropsCell.xib in Resources */,
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
 			);
@@ -1997,6 +2219,7 @@
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
 				503CB5AF25E07BCB00B7A393 /* ProductsPresenter.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
+				508FDAF725F07DB500686ECE /* MyFarmDetailsProtocols.swift in Sources */,
 				506E4D0425EDA9CF003BD749 /* MyCropsHeaderViewCropCell.swift in Sources */,
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
@@ -2010,6 +2233,7 @@
 				506A5A2E25E5671A0014D59A /* MoreMenuLanguageCell.swift in Sources */,
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
 				506E4D2025EDC95F003BD749 /* MyCropsStretchedParentCellView.swift in Sources */,
+				509F9EDC25F1905B00A6E96A /* MyFarmDetailsCell.swift in Sources */,
 				503CB5B325E07BE100B7A393 /* ProductsProtocols.swift in Sources */,
 				503CB5E425E0A23300B7A393 /* VideosCell.swift in Sources */,
 				5099491A25E4642D0085CFBF /* ForgotPasswordViewController.swift in Sources */,
@@ -2020,6 +2244,7 @@
 				50068C6F25E48A650097A870 /* MoreMenuPresenter.swift in Sources */,
 				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
 				509643CE25E2F6A20000FB60 /* AddPostUIModel.swift in Sources */,
+				509F9EE825F1925E00A6E96A /* MyFarmDetailsNameCell.swift in Sources */,
 				50E01ED725E5C9A30016DEAB /* MyCropsHeaderView.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
 				50A54C1325E3FF5C0052F701 /* InterestedSelectionCell.swift in Sources */,
@@ -2031,12 +2256,15 @@
 				50068C7125E48A650097A870 /* MoreMenuUIModel.swift in Sources */,
 				50BC0A7F25E5C0FB006653FD /* MyCropsPresenter.swift in Sources */,
 				2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */,
+				508FDB0625F0846500686ECE /* MyFarmDetailsView.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
+				508FDAF325F07D9A00686ECE /* MyFarmDetailsPresenter.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
 				509643AC25E2EF860000FB60 /* AddPostViewController.swift in Sources */,
+				508FDB0125F07E0900686ECE /* MyFarmDetailsLocalizer.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
 				506E4D3325EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.swift in Sources */,
 				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
@@ -2046,6 +2274,7 @@
 				50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */,
 				2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */,
 				2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */,
+				508FDAEE25F07D1E00686ECE /* MyFarmDetailsViewController.swift in Sources */,
 				503CB5CA25E0A18100B7A393 /* VideosPresenter.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				508FDAE025F04A1800686ECE /* MyCropsCell.swift in Sources */,
@@ -2053,6 +2282,7 @@
 				503CB5BA25E07DD900B7A393 /* ProductCell.swift in Sources */,
 				508FDADA25F049B500686ECE /* MyCropsParentCellView.swift in Sources */,
 				509643DD25E303180000FB60 /* ToolbarPickerView.swift in Sources */,
+				507621E125F1B0310061DF51 /* MyFarmDetailsPeopleChildCell.swift in Sources */,
 				503CB5A625E07B8100B7A393 /* ProductsLocalizer.swift in Sources */,
 				50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */,
 				506E4D0A25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.swift in Sources */,
@@ -2080,7 +2310,9 @@
 				509643BE25E2F1420000FB60 /* AddPostLocalizer.swift in Sources */,
 				503CB5D425E0A1B200B7A393 /* VideosImages.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
+				509F9EF025F19A3200A6E96A /* MyFarmDetailsSuitabilityCell.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
+				509F9EE325F1922000A6E96A /* MyFarmDetailsUIModel.swift in Sources */,
 				50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */,
 				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
 				5099491C25E4642D0085CFBF /* ForgotProtocols.swift in Sources */,
@@ -2088,10 +2320,13 @@
 				50068C7625E48A650097A870 /* MoreMenuProtocols.swift in Sources */,
 				50E6652225E40CDE00D48EA8 /* InterestedSelectionPresenter.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
+				508FDAFD25F07DEF00686ECE /* MyFarmDetailsImages.swift in Sources */,
 				2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */,
+				5061EC1125F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */,
+				507621EE25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
 				503CB5C425E0A15F00B7A393 /* VideosViewController.swift in Sources */,
 				2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */,
@@ -2100,6 +2335,7 @@
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
 				5090FBFB25E4515E008D5B06 /* InterestedSelectionUIModel.swift in Sources */,
 				506A5A2A25E5671A0014D59A /* MoreMenuNotificationsCell.swift in Sources */,
+				509F9EF725F19D7B00A6E96A /* MyFarmDetailsPeopleCell.swift in Sources */,
 				5090FBF125E44D39008D5B06 /* InterestedSelectionImages.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,

@@ -114,4 +114,9 @@ extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setupUI()
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = MyFarmDetailsViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
