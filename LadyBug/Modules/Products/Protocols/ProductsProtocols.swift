@@ -13,7 +13,6 @@ protocol ProductsPresenterProtocol {
     func attach()
     func getProductsCount() -> Int
 }
-
 protocol ProductsViewProtocol: class {
     
 }

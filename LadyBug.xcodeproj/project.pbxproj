@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2101D8F925F2E46D00FB0DB9 /* NotificationLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8E825F2E46C00FB0DB9 /* NotificationLocalizer.swift */; };
+		2101D8FA25F2E46D00FB0DB9 /* NotificationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8EA25F2E46C00FB0DB9 /* NotificationImage.swift */; };
+		2101D8FB25F2E46D00FB0DB9 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8EC25F2E46C00FB0DB9 /* NotificationPresenter.swift */; };
+		2101D8FC25F2E46D00FB0DB9 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8EE25F2E46C00FB0DB9 /* NotificationModel.swift */; };
+		2101D8FD25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8F225F2E46C00FB0DB9 /* NotificationsCellTableViewCell.swift */; };
+		2101D8FE25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D8F325F2E46C00FB0DB9 /* NotificationsCellTableViewCell.xib */; };
+		2101D8FF25F2E46D00FB0DB9 /* NotificationTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D8F525F2E46C00FB0DB9 /* NotificationTabelViewController.xib */; };
+		2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8F625F2E46C00FB0DB9 /* NotificationTabelViewController.swift */; };
+		2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8F825F2E46C00FB0DB9 /* NotificationProtocols.swift */; };
 		2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88625E081BC008FE0A0 /* LoginImages.swift */; };
 		2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */; };
 		2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* loginPresenter.swift */; };
@@ -195,6 +204,15 @@
 
 /* Begin PBXFileReference section */
 		18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.debug.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
+		2101D8E825F2E46C00FB0DB9 /* NotificationLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationLocalizer.swift; sourceTree = "<group>"; };
+		2101D8EA25F2E46C00FB0DB9 /* NotificationImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationImage.swift; sourceTree = "<group>"; };
+		2101D8EC25F2E46C00FB0DB9 /* NotificationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
+		2101D8EE25F2E46C00FB0DB9 /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		2101D8F225F2E46C00FB0DB9 /* NotificationsCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCellTableViewCell.swift; sourceTree = "<group>"; };
+		2101D8F325F2E46C00FB0DB9 /* NotificationsCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsCellTableViewCell.xib; sourceTree = "<group>"; };
+		2101D8F525F2E46C00FB0DB9 /* NotificationTabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTabelViewController.xib; sourceTree = "<group>"; };
+		2101D8F625F2E46C00FB0DB9 /* NotificationTabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTabelViewController.swift; sourceTree = "<group>"; };
+		2101D8F825F2E46C00FB0DB9 /* NotificationProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationProtocols.swift; sourceTree = "<group>"; };
 		2166B88625E081BC008FE0A0 /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
 		2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
 		2166B88A25E081BC008FE0A0 /* loginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
@@ -397,6 +415,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2101D8E525F2E46C00FB0DB9 /* Notification Module */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8E625F2E46C00FB0DB9 /* Resources */,
+				2101D8EB25F2E46C00FB0DB9 /* Presenter */,
+				2101D8ED25F2E46C00FB0DB9 /* Models */,
+				2101D8EF25F2E46C00FB0DB9 /* View */,
+				2101D8F725F2E46C00FB0DB9 /* Protocols */,
+			);
+			path = "Notification Module";
+			sourceTree = "<group>";
+		};
+		2101D8E625F2E46C00FB0DB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8E725F2E46C00FB0DB9 /* NotificationLocalizer */,
+				2101D8E925F2E46C00FB0DB9 /* NotificationImage */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2101D8E725F2E46C00FB0DB9 /* NotificationLocalizer */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8E825F2E46C00FB0DB9 /* NotificationLocalizer.swift */,
+			);
+			path = NotificationLocalizer;
+			sourceTree = "<group>";
+		};
+		2101D8E925F2E46C00FB0DB9 /* NotificationImage */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8EA25F2E46C00FB0DB9 /* NotificationImage.swift */,
+			);
+			path = NotificationImage;
+			sourceTree = "<group>";
+		};
+		2101D8EB25F2E46C00FB0DB9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8EC25F2E46C00FB0DB9 /* NotificationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2101D8ED25F2E46C00FB0DB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8EE25F2E46C00FB0DB9 /* NotificationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2101D8EF25F2E46C00FB0DB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8F025F2E46C00FB0DB9 /* SubViews */,
+				2101D8F425F2E46C00FB0DB9 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2101D8F025F2E46C00FB0DB9 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8F125F2E46C00FB0DB9 /* Cell */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		2101D8F125F2E46C00FB0DB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8F225F2E46C00FB0DB9 /* NotificationsCellTableViewCell.swift */,
+				2101D8F325F2E46C00FB0DB9 /* NotificationsCellTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2101D8F425F2E46C00FB0DB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8F525F2E46C00FB0DB9 /* NotificationTabelViewController.xib */,
+				2101D8F625F2E46C00FB0DB9 /* NotificationTabelViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2101D8F725F2E46C00FB0DB9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8F825F2E46C00FB0DB9 /* NotificationProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -1861,6 +1975,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
 				508FDAE925F07CED00686ECE /* MyFarmDetails */,
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
@@ -2148,6 +2263,7 @@
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
 				50A54C0C25E3FF190052F701 /* InterestedSelectionViewController.xib in Resources */,
+				2101D8FF25F2E46D00FB0DB9 /* NotificationTabelViewController.xib in Resources */,
 				508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */,
 				503CB5BB25E07DD900B7A393 /* ProductCell.xib in Resources */,
 				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
@@ -2170,6 +2286,7 @@
 				50D6138025DC206400228385 /* MyFarmWeatherHeaderView.xib in Resources */,
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				506E4D2D25EDCC25003BD749 /* MyCropsStretchedCell.xib in Resources */,
+				2101D8FE25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
 				506E4D3425EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.xib in Resources */,
 				506A5A2B25E5671A0014D59A /* MoreMenuTaskesCell.xib in Resources */,
@@ -2215,6 +2332,7 @@
 			files = (
 				2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */,
 				501F740C25DAB59200333F16 /* UIViewController+Keyboard.swift in Sources */,
+				2101D8F925F2E46D00FB0DB9 /* NotificationLocalizer.swift in Sources */,
 				50BC0A7025E5C076006653FD /* MyCropsViewController.swift in Sources */,
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
 				503CB5AF25E07BCB00B7A393 /* ProductsPresenter.swift in Sources */,
@@ -2243,6 +2361,7 @@
 				50BC0A8325E5C114006653FD /* MyCropsProtocol.swift in Sources */,
 				50068C6F25E48A650097A870 /* MoreMenuPresenter.swift in Sources */,
 				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
+				2101D8FA25F2E46D00FB0DB9 /* NotificationImage.swift in Sources */,
 				509643CE25E2F6A20000FB60 /* AddPostUIModel.swift in Sources */,
 				509F9EE825F1925E00A6E96A /* MyFarmDetailsNameCell.swift in Sources */,
 				50E01ED725E5C9A30016DEAB /* MyCropsHeaderView.swift in Sources */,
@@ -2256,6 +2375,7 @@
 				50068C7125E48A650097A870 /* MoreMenuUIModel.swift in Sources */,
 				50BC0A7F25E5C0FB006653FD /* MyCropsPresenter.swift in Sources */,
 				2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */,
+				2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */,
 				508FDB0625F0846500686ECE /* MyFarmDetailsView.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
@@ -2266,6 +2386,7 @@
 				509643AC25E2EF860000FB60 /* AddPostViewController.swift in Sources */,
 				508FDB0125F07E0900686ECE /* MyFarmDetailsLocalizer.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
+				2101D8FC25F2E46D00FB0DB9 /* NotificationModel.swift in Sources */,
 				506E4D3325EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.swift in Sources */,
 				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
 				5099491725E4642D0085CFBF /* ForgotImages.swift in Sources */,
@@ -2274,6 +2395,7 @@
 				50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */,
 				2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */,
 				2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */,
+				2101D8FD25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */,
 				508FDAEE25F07D1E00686ECE /* MyFarmDetailsViewController.swift in Sources */,
 				503CB5CA25E0A18100B7A393 /* VideosPresenter.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
@@ -2324,10 +2446,12 @@
 				2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */,
 				5061EC1125F1CAAD000ED556 /* MyFarmDetailsPostsTableViewCell.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
+				2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */,
 				507621EE25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
+				2101D8FB25F2E46D00FB0DB9 /* NotificationPresenter.swift in Sources */,
 				503CB5C425E0A15F00B7A393 /* VideosViewController.swift in Sources */,
 				2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */,
 				5099491825E4642D0085CFBF /* ForgotLocalizer.swift in Sources */,
