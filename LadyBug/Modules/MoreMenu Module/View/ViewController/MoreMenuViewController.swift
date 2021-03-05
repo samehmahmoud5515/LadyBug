@@ -41,11 +41,11 @@ extension MoreMenuViewController {
     }
     
     private func setupNaviagtionBarUI() {
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.largeTitleDisplayMode = .never
-    }
+          navigationController?.setNavigationBarHidden(false, animated: false)
+          navigationController?.navigationBar.barTintColor = .white
+          navigationController?.navigationBar.prefersLargeTitles = false
+          navigationItem.largeTitleDisplayMode = .never
+      }
     
     private func addBarButtonsToNavigationBar() {
         navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]

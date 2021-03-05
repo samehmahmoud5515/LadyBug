@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2101D8CB25E6F9CD00FB0DB9 /* NotificationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8CA25E6F9CD00FB0DB9 /* NotificationProtocols.swift */; };
+		2101D8D525E6FB1100FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8D325E6FB1100FB0DB9 /* NotificationsCellTableViewCell.swift */; };
+		2101D8D625E6FB1100FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D8D425E6FB1100FB0DB9 /* NotificationsCellTableViewCell.xib */; };
+		2101D8D825E6FD3E00FB0DB9 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8D725E6FD3E00FB0DB9 /* NotificationModel.swift */; };
+		2101D8DC25E6FF9900FB0DB9 /* NotificationLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8DB25E6FF9900FB0DB9 /* NotificationLocalizer.swift */; };
+		2101D8DE25E6FFB700FB0DB9 /* NotificationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8DD25E6FFB700FB0DB9 /* NotificationImage.swift */; };
+		2101D8E025E719DA00FB0DB9 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8DF25E719DA00FB0DB9 /* NotificationPresenter.swift */; };
+		2101D8E325E8DB5300FB0DB9 /* NotificationTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8E125E8DB5300FB0DB9 /* NotificationTabelViewController.swift */; };
+		2101D8E425E8DB5300FB0DB9 /* NotificationTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D8E225E8DB5300FB0DB9 /* NotificationTabelViewController.xib */; };
 		2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88625E081BC008FE0A0 /* LoginImages.swift */; };
 		2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */; };
 		2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* loginPresenter.swift */; };
@@ -142,6 +151,15 @@
 
 /* Begin PBXFileReference section */
 		18D5F9EFE1E8196E8B75D545 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBug.debug.xcconfig"; path = "Target Support Files/Pods-LadyBug/Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
+		2101D8CA25E6F9CD00FB0DB9 /* NotificationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProtocols.swift; sourceTree = "<group>"; };
+		2101D8D325E6FB1100FB0DB9 /* NotificationsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCellTableViewCell.swift; sourceTree = "<group>"; };
+		2101D8D425E6FB1100FB0DB9 /* NotificationsCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsCellTableViewCell.xib; sourceTree = "<group>"; };
+		2101D8D725E6FD3E00FB0DB9 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		2101D8DB25E6FF9900FB0DB9 /* NotificationLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLocalizer.swift; sourceTree = "<group>"; };
+		2101D8DD25E6FFB700FB0DB9 /* NotificationImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationImage.swift; sourceTree = "<group>"; };
+		2101D8DF25E719DA00FB0DB9 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
+		2101D8E125E8DB5300FB0DB9 /* NotificationTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTabelViewController.swift; sourceTree = "<group>"; };
+		2101D8E225E8DB5300FB0DB9 /* NotificationTabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTabelViewController.xib; sourceTree = "<group>"; };
 		2166B88625E081BC008FE0A0 /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
 		2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
 		2166B88A25E081BC008FE0A0 /* loginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
@@ -291,6 +309,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2101D8C425E6F47200FB0DB9 /* Notification Modyle */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8C925E6F91100FB0DB9 /* Protocols */,
+				2101D8C625E6F6CB00FB0DB9 /* Presenter */,
+				2101D8C825E6F90400FB0DB9 /* View */,
+				2101D8C725E6F87500FB0DB9 /* Models */,
+				2101D8C525E6F6BD00FB0DB9 /* Resources */,
+			);
+			path = "Notification Modyle";
+			sourceTree = "<group>";
+		};
+		2101D8C525E6F6BD00FB0DB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8DA25E6FF6C00FB0DB9 /* NotificationImage */,
+				2101D8D925E6FF2D00FB0DB9 /* NotificationLocalizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2101D8C625E6F6CB00FB0DB9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8DF25E719DA00FB0DB9 /* NotificationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2101D8C725E6F87500FB0DB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8D725E6FD3E00FB0DB9 /* NotificationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2101D8C825E6F90400FB0DB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8CC25E6FA2700FB0DB9 /* SubViews */,
+				2101D8CD25E6FA3B00FB0DB9 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2101D8C925E6F91100FB0DB9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8CA25E6F9CD00FB0DB9 /* NotificationProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2101D8CC25E6FA2700FB0DB9 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8CE25E6FA5400FB0DB9 /* Cell */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		2101D8CD25E6FA3B00FB0DB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8E125E8DB5300FB0DB9 /* NotificationTabelViewController.swift */,
+				2101D8E225E8DB5300FB0DB9 /* NotificationTabelViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2101D8CE25E6FA5400FB0DB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8D325E6FB1100FB0DB9 /* NotificationsCellTableViewCell.swift */,
+				2101D8D425E6FB1100FB0DB9 /* NotificationsCellTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2101D8D925E6FF2D00FB0DB9 /* NotificationLocalizer */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8DB25E6FF9900FB0DB9 /* NotificationLocalizer.swift */,
+			);
+			path = NotificationLocalizer;
+			sourceTree = "<group>";
+		};
+		2101D8DA25E6FF6C00FB0DB9 /* NotificationImage */ = {
+			isa = PBXGroup;
+			children = (
+				2101D8DD25E6FFB700FB0DB9 /* NotificationImage.swift */,
+			);
+			path = NotificationImage;
+			sourceTree = "<group>";
+		};
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -1376,6 +1490,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2101D8C425E6F47200FB0DB9 /* Notification Modyle */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
 				5099490925E4642D0085CFBF /* ForgotPassword */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
@@ -1652,6 +1767,7 @@
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
 				50A54C0C25E3FF190052F701 /* InterestedSelectionViewController.xib in Resources */,
 				503CB5BB25E07DD900B7A393 /* ProductCell.xib in Resources */,
+				2101D8D625E6FB1100FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */,
 				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
 				509643C925E2F1C40000FB60 /* AddPostCell.xib in Resources */,
 				50068C7425E48A650097A870 /* MoreMenuViewController.xib in Resources */,
@@ -1667,6 +1783,7 @@
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
 				506A5A2B25E5671A0014D59A /* MoreMenuTaskesCell.xib in Resources */,
+				2101D8E425E8DB5300FB0DB9 /* NotificationTabelViewController.xib in Resources */,
 				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
 				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
@@ -1707,12 +1824,14 @@
 			files = (
 				2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */,
 				501F740C25DAB59200333F16 /* UIViewController+Keyboard.swift in Sources */,
+				2101D8D525E6FB1100FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */,
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
 				503CB5AF25E07BCB00B7A393 /* ProductsPresenter.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				2166B89625E081BC008FE0A0 /* Protocols.swift in Sources */,
+				2101D8D825E6FD3E00FB0DB9 /* NotificationModel.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
 				506A5A2825E5671A0014D59A /* MoreMenuProfileCell.swift in Sources */,
 				21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */,
@@ -1738,10 +1857,13 @@
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
+				2101D8DE25E6FFB700FB0DB9 /* NotificationImage.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
+				2101D8CB25E6F9CD00FB0DB9 /* NotificationProtocols.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
 				509643AC25E2EF860000FB60 /* AddPostViewController.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
+				2101D8E025E719DA00FB0DB9 /* NotificationPresenter.swift in Sources */,
 				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
 				5099491725E4642D0085CFBF /* ForgotImages.swift in Sources */,
 				5090FBEC25E44CDE008D5B06 /* InterestedSelectionProtocols.swift in Sources */,
@@ -1758,8 +1880,10 @@
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
 				5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
+				2101D8E325E8DB5300FB0DB9 /* NotificationTabelViewController.swift in Sources */,
 				501F73FE25DAB54300333F16 /* UIView+FromNib.swift in Sources */,
 				50A54C0D25E3FF190052F701 /* InterestedSelectionViewController.swift in Sources */,
+				2101D8DC25E6FF9900FB0DB9 /* NotificationLocalizer.swift in Sources */,
 				503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */,
 				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
 				506A5A2C25E5671A0014D59A /* MoreMenuTaskesCell.swift in Sources */,
