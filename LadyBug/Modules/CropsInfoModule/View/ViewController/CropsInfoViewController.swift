@@ -78,5 +78,8 @@ extension CropsInfoViewController {
         cropsInfoHeadLabelTitle.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
         cropsInfoSubjecLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         cropsInfoContentTextView.font = UIFont.get(enFont: .light(12), arFont: .light(12))
+        cropsInfoImage.layer.maskedCorners = [.layerMaxXMaxYCorner   , .layerMinXMaxYCorner  ]
+        cropsInfoImage.layer.cornerRadius = CGFloat(8.0)
+        cropsInfoImage.clipsToBounds = true
     }
 }
