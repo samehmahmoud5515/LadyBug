@@ -36,7 +36,7 @@ class YourProductsTabelViewController: UIViewController, YourProductsViewProtoco
 extension YourProductsTabelViewController{
     
     private func setupUI() {
-         setupNaviagtionBarUI()
+        setupNaviagtionBarUI()
         addBarButtonsToNavigationBar()
         registerTableViewCell()
         setupTableViewRowHeight()
