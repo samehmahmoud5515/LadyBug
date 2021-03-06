@@ -603,8 +603,6 @@
 			isa = PBXGroup;
 			children = (
 				2101D91625F3575F00FB0DB9 /* Cell */,
-				2101D91825F357D900FB0DB9 /* YourProductsCellTableViewCell.swift */,
-				2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -612,6 +610,8 @@
 		2101D91625F3575F00FB0DB9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2101D91825F357D900FB0DB9 /* YourProductsCellTableViewCell.swift */,
+				2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";

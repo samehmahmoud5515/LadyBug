@@ -137,7 +137,7 @@
                 <outlet property="productImageView" destination="Icl-kW-56c" id="6AJ-4w-lHZ"/>
                 <outlet property="productTitleLabel" destination="8J1-vy-WMb" id="GAA-En-kce"/>
             </connections>
-            <point key="canvasLocation" x="-165" y="-87"/>
+            <point key="canvasLocation" x="-681" y="-54"/>
         </tableViewCell>
     </objects>
     <resources>
