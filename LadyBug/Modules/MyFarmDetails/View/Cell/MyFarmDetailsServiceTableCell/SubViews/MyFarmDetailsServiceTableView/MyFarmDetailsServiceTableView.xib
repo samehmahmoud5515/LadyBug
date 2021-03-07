@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyFarmDetailsServiceTableView" customModule="LadyBug" customModuleProvider="target">
+            <connections>
+                <outlet property="addTaskButton" destination="s5C-sy-J6L" id="FCh-MC-Lka"/>
+                <outlet property="addTaskTitleLabel" destination="ThI-Cs-6HH" id="LY2-Aa-eIh"/>
+                <outlet property="contentView" destination="i5M-Pr-FkT" id="wmB-XS-44I"/>
+                <outlet property="serviceTableCollectionView" destination="i0y-uc-tNU" id="As7-Hl-IoN"/>
+                <outlet property="tasksTableView" destination="EFc-yw-ZvT" id="eDr-8T-Igf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="549" height="443"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="i0y-uc-tNU">
+                    <rect key="frame" x="0.0" y="16" width="549" height="20"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="oxY-g3-aRJ"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G3Y-XT-MJw">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HWo-iQ-dfg"/>
+                        <outlet property="delegate" destination="-1" id="Qgs-iM-bUo"/>
+                    </connections>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="اضف مهمات الي الجدول الخاص بك" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThI-Cs-6HH">
+                    <rect key="frame" x="23" y="54" width="240.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5C-sy-J6L">
+                    <rect key="frame" x="417" y="50" width="109" height="34"/>
+                    <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    <state key="normal" title="اضف مهمة" image="plus" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-yw-ZvT" customClass="DynamicHeightTableView" customModule="LadyBug" customModuleProvider="target">
+                    <rect key="frame" x="16" y="102" width="517" height="341"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ywd-kZ-EDb"/>
+                        <outlet property="delegate" destination="-1" id="aNB-kl-haf"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EFc-yw-ZvT" secondAttribute="trailing" constant="16" id="Dvb-S5-ynx"/>
+                <constraint firstAttribute="bottom" secondItem="EFc-yw-ZvT" secondAttribute="bottom" id="HiR-LG-mVj"/>
+                <constraint firstItem="i0y-uc-tNU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IEV-1K-jz1"/>
+                <constraint firstItem="s5C-sy-J6L" firstAttribute="top" secondItem="i0y-uc-tNU" secondAttribute="bottom" constant="14" id="ItF-zj-JeK"/>
+                <constraint firstItem="EFc-yw-ZvT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="OUa-pM-Y87"/>
+                <constraint firstItem="ThI-Cs-6HH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="Pwg-X2-1oz"/>
+                <constraint firstItem="ThI-Cs-6HH" firstAttribute="top" secondItem="i0y-uc-tNU" secondAttribute="bottom" constant="18" id="aPM-4C-aVm"/>
+                <constraint firstItem="i0y-uc-tNU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="eFC-5t-MSp"/>
+                <constraint firstAttribute="trailing" secondItem="i0y-uc-tNU" secondAttribute="trailing" id="k2t-xG-fMD"/>
+                <constraint firstAttribute="trailing" secondItem="s5C-sy-J6L" secondAttribute="trailing" constant="23" id="mbH-RK-epm"/>
+                <constraint firstItem="EFc-yw-ZvT" firstAttribute="top" secondItem="ThI-Cs-6HH" secondAttribute="bottom" constant="27" id="mzW-6n-Xhe"/>
+                <constraint firstItem="s5C-sy-J6L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ThI-Cs-6HH" secondAttribute="trailing" constant="4" id="ztr-tn-ViR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="71.739130434782609" y="304.35267857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyFarmServiceTableCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="37"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="37"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ED-gP-GzF">
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="37"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3.5" translatesAutoresizingMaskIntoConstraints="NO" id="rzc-KO-7qb">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جدول 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-ce-Ki6">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-ki-i4A">
+                                        <rect key="frame" x="0.0" y="36.5" width="338" height="0.5"/>
+                                        <color key="backgroundColor" red="0.29411764705882354" green="0.68235294117647061" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.69999999999999996" id="euF-RU-Dhe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rzc-KO-7qb" firstAttribute="leading" secondItem="4ED-gP-GzF" secondAttribute="leading" id="23K-7B-Pdo"/>
+                            <constraint firstAttribute="bottom" secondItem="rzc-KO-7qb" secondAttribute="bottom" id="Gev-vO-jSX"/>
+                            <constraint firstAttribute="trailing" secondItem="rzc-KO-7qb" secondAttribute="trailing" id="IEJ-wB-1ci"/>
+                            <constraint firstItem="rzc-KO-7qb" firstAttribute="top" secondItem="4ED-gP-GzF" secondAttribute="top" id="bJq-ER-1f2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="4ED-gP-GzF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IPg-0Z-utr"/>
+                <constraint firstAttribute="bottom" secondItem="4ED-gP-GzF" secondAttribute="bottom" id="Mrv-ev-j4z"/>
+                <constraint firstItem="4ED-gP-GzF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YbG-kB-mag"/>
+                <constraint firstAttribute="trailing" secondItem="4ED-gP-GzF" secondAttribute="trailing" id="wfS-35-OYy"/>
+            </constraints>
+            <size key="customSize" width="338" height="37"/>
+            <connections>
+                <outlet property="selectionView" destination="fsd-ki-i4A" id="jbr-sh-ehQ"/>
+                <outlet property="titleLabel" destination="eaN-ce-Ki6" id="vVb-4i-uRx"/>
+            </connections>
+            <point key="canvasLocation" x="182.60869565217394" y="73.995535714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

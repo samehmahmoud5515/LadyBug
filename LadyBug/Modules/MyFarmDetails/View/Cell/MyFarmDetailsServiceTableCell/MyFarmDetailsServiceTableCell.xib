@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="MyFarmDetailsServiceTableCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jef-Hw-eoi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IMt-xC-gpk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJu-ep-d8u">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الأشخاص القائمين على المزرعة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvE-Hf-e7C">
+                                                <rect key="frame" x="16" y="10" width="262" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBK-2i-7eA">
+                                                <rect key="frame" x="282" y="6.5" width="22" height="22"/>
+                                                <state key="normal" image="my_farm_add_people_ic"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.91372549020000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="26M-DF-L4W"/>
+                                            <constraint firstAttribute="trailing" secondItem="yBK-2i-7eA" secondAttribute="trailing" constant="16" id="6VC-Or-pRc"/>
+                                            <constraint firstItem="yBK-2i-7eA" firstAttribute="leading" secondItem="PvE-Hf-e7C" secondAttribute="trailing" constant="4" id="G3c-AL-UKd"/>
+                                            <constraint firstItem="yBK-2i-7eA" firstAttribute="top" secondItem="bJu-ep-d8u" secondAttribute="top" constant="6.5" id="Ivi-Sq-Fe3"/>
+                                            <constraint firstAttribute="bottom" secondItem="yBK-2i-7eA" secondAttribute="bottom" constant="6.5" id="YGU-Qf-L2L"/>
+                                            <constraint firstItem="PvE-Hf-e7C" firstAttribute="top" secondItem="bJu-ep-d8u" secondAttribute="top" constant="10" id="mPP-Aq-3Y3"/>
+                                            <constraint firstItem="PvE-Hf-e7C" firstAttribute="leading" secondItem="bJu-ep-d8u" secondAttribute="leading" constant="16" id="myi-Lv-icE"/>
+                                            <constraint firstAttribute="bottom" secondItem="PvE-Hf-e7C" secondAttribute="bottom" constant="10" id="p8U-ue-eCb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-r0-dZ9" customClass="MyFarmDetailsServiceTableView" customModule="LadyBug" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="86"/>
+                                        <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="80" id="e0q-uL-kml"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IMt-xC-gpk" firstAttribute="top" secondItem="jef-Hw-eoi" secondAttribute="top" id="Uix-On-uQR"/>
+                            <constraint firstAttribute="bottom" secondItem="IMt-xC-gpk" secondAttribute="bottom" id="kG3-N3-dp1"/>
+                            <constraint firstAttribute="trailing" secondItem="IMt-xC-gpk" secondAttribute="trailing" id="o5F-lA-ROn"/>
+                            <constraint firstItem="IMt-xC-gpk" firstAttribute="leading" secondItem="jef-Hw-eoi" secondAttribute="leading" id="vT9-Bj-Rnh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="jef-Hw-eoi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Sk-r5-Io4"/>
+                    <constraint firstAttribute="bottom" secondItem="jef-Hw-eoi" secondAttribute="bottom" id="Uyv-Kv-a6Y"/>
+                    <constraint firstItem="jef-Hw-eoi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kpX-sK-dIM"/>
+                    <constraint firstAttribute="trailing" secondItem="jef-Hw-eoi" secondAttribute="trailing" id="xK9-iU-HGj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addTitleButton" destination="yBK-2i-7eA" id="p11-6s-rLd"/>
+                <outlet property="addTitleLabel" destination="PvE-Hf-e7C" id="Fxl-xx-V9X"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="104.12946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="my_farm_add_people_ic" width="22" height="22"/>
+    </resources>
+</document>
