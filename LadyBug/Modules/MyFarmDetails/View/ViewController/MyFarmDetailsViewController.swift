@@ -112,6 +112,9 @@ extension MyFarmDetailsViewController {
         
         let nib5 = UINib(nibName: "\(MyFarmDetailsPostsTableViewCell.self)", bundle: nil)
         tableView.register(nib5, forCellReuseIdentifier: "\(MyFarmDetailsPostsTableViewCell.self)")
+
+        let nib6 = UINib(nibName: "\(MyFarmDetailsServiceTableCell.self)", bundle: nil)
+        tableView.register(nib6, forCellReuseIdentifier: "\(MyFarmDetailsServiceTableCell.self)")
     }
     
     private func setupTableViewRowHeight() {
@@ -160,6 +163,11 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
             return cell
         case .posts:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsPostsTableViewCell.self)", for: indexPath) as? MyFarmDetailsPostsTableViewCell ?? MyFarmDetailsPostsTableViewCell()
+            cell.setupUI()
+            cell.layoutSubviews()
+            return cell
+        case .tasks:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsServiceTableCell.self)", for: indexPath) as? MyFarmDetailsServiceTableCell ?? MyFarmDetailsServiceTableCell()
             cell.setupUI()
             cell.layoutSubviews()
             return cell

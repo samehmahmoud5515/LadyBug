@@ -11,7 +11,7 @@ class MyFarmDetailsPresenter: MyFarmDetailsPresenterProtocol {
     
     var images = MyFarmDetailsImages()
     var localizer = MyFarmDetailsLocalizer()
-    var datasource: [MyFarmDetailsUIModel] = [.name, .details, .suitability, .people, .posts]
+    var datasource: [MyFarmDetailsUIModel] = [.name, .details, .suitability, .people, .posts, .tasks]
     weak var view: MyFarmDetailsViewProtocol?
     
     init(view: MyFarmDetailsViewProtocol) {

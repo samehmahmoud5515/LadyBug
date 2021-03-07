@@ -13,4 +13,5 @@ enum MyFarmDetailsUIModel {
     case suitability
     case people
     case posts
+    case tasks
 }
