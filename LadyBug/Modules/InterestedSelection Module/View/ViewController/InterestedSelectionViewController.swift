@@ -127,6 +127,13 @@ extension InterestedSelectionViewController {
         
     }
 }
+extension InterestedSelectionViewController{
+
+  @objc func didTappedBackButton() {
+      navigationController?.popViewController(animated: true)
+      }
+
+  }
 
 extension InterestedSelectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -170,8 +177,3 @@ extension InterestedSelectionViewController: InterestedSelectionViewProtocol {
     }
 }
 
-extension InterestedSelectionViewController {
-    @objc func didTappedBackButton() {
-        
-    }
-}

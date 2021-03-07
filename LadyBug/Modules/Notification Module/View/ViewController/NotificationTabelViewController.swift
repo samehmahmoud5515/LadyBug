@@ -56,6 +56,8 @@ extension NotificationTabelViewController{
          button.backgroundColor = .paleGreyThree
          button.layer.masksToBounds = true
          button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
+
          return UIBarButtonItem(customView: button)
      }
      
@@ -65,6 +67,7 @@ extension NotificationTabelViewController{
         titleLabel.textColor = .purplishBrown
          titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
          titleLabel.sizeToFit()
+        
          
          return UIBarButtonItem(customView: titleLabel)
      }
@@ -73,10 +76,17 @@ extension NotificationTabelViewController{
         tableView.register(nib, forCellReuseIdentifier: "\(NotificationsCellTableViewCell.self)")
     }
     
-    private func setupTableViewRowHeight() {
+    @objc private func setupTableViewRowHeight() {
         tableView.rowHeight = 95
 
     }
+}
+extension NotificationTabelViewController{
+    @objc func didTappedBackButton(){
+        navigationController?.popViewController(animated: true)
+    }
+  
+
 }
 extension NotificationTabelViewController :UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

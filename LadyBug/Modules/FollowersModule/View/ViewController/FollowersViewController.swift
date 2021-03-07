@@ -41,35 +41,36 @@ extension FollowersViewController {
         setupTableViewRowHeight()
     }
     
-   private func setupNaviagtionBarUI() {
-             navigationController?.setNavigationBarHidden(false, animated: false)
-             navigationController?.navigationBar.barTintColor = .white
-             navigationController?.navigationBar.prefersLargeTitles = false
-             navigationItem.largeTitleDisplayMode = .never
-         }
-       
+    private func setupNaviagtionBarUI() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
     private func addBarButtonsToNavigationBar() {
-         navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
-     }
-     
-     private func getLeftButton() -> UIBarButtonItem {
-         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
+    }
+    
+    private func getLeftButton() -> UIBarButtonItem {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
         button.setImage(UIImage(named: presnter.images.back), for: .normal)
-         button.backgroundColor = .paleGreyThree
-         button.layer.masksToBounds = true
-         button.layer.cornerRadius = 17
-         return UIBarButtonItem(customView: button)
-     }
-     
-     private func getTitleBarButton() -> UIBarButtonItem {
-         let titleLabel = UILabel()
+        button.backgroundColor = .paleGreyThree
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
+        return UIBarButtonItem(customView: button)
+    }
+    
+    private func getTitleBarButton() -> UIBarButtonItem {
+        let titleLabel = UILabel()
         titleLabel.text = presnter.localizer.navigationitleFollowers
         titleLabel.textColor = .purplishBrown
-         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
-         titleLabel.sizeToFit()
-         
-         return UIBarButtonItem(customView: titleLabel)
-     }
+        titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+        titleLabel.sizeToFit()
+        
+        return UIBarButtonItem(customView: titleLabel)
+    }
     private func registerTableViewCell() {
         let nib = UINib(nibName: "\(FollowersTableViewCell.self)", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "\(FollowersTableViewCell.self)")
@@ -77,8 +78,12 @@ extension FollowersViewController {
     
     private func setupTableViewRowHeight() {
         tableView.rowHeight = 74
+    }
     
-
+}
+extension FollowersViewController {
+    @objc func didTappedBackButton() {
+        navigationController?.popViewController(animated: true)
     }
 }
 extension FollowersViewController :UITableViewDataSource,UITableViewDelegate{
