@@ -16,6 +16,7 @@ class MyFarmDetailsTaskCell: UITableViewCell {
     @IBOutlet weak var taskValueLabel: UILabel!
     @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var taskDateLabel: UILabel!
+    @IBOutlet weak var taskDescCompletedLine: UIView!
     
     func setupUI(isSelected: Bool) {
         taskTitleLabel.textColor = !isSelected ? .purplishBrownTwo : .blueyGreyTwo
@@ -31,5 +32,6 @@ class MyFarmDetailsTaskCell: UITableViewCell {
         selectionView.layer.borderWidth = isSelected ? 0 : 1.5
         selectionView.layer.borderColor = UIColor.lightBlueGreyTwo.cgColor
         selectionImageView.isHidden = !isSelected
+        taskDescCompletedLine.isHidden = !isSelected
     }
 }
