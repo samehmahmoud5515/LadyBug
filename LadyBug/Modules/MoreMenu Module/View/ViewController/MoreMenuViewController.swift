@@ -178,7 +178,8 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             let yourProductsTabelViewController = YourProductsTabelViewController()
                      navigationController?.pushViewController(yourProductsTabelViewController, animated: true)
         case .posts:
-         break
+            let myPostsViewController = MyPostsViewController()
+            navigationController?.pushViewController(myPostsViewController, animated: true)
         case .followers :
             let followersViewController = FollowersViewController()
             navigationController?.pushViewController(followersViewController, animated: true)

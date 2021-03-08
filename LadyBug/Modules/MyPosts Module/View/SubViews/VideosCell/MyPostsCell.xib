@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="469" id="KGk-i7-Jjw" customClass="VideosCell" customModule="LadyBug" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="469" id="KGk-i7-Jjw" userLabel="MyPosts Cell" customClass="MyPostsCell" customModule="LadyBug" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="399" height="469"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -71,12 +71,12 @@
                                                 <color key="textColor" red="0.67450980390000004" green="0.69411764710000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3l-dA-kqt">
-                                                <rect key="frame" x="297" y="25" width="88" height="24"/>
-                                                <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3l-dA-kqt">
+                                                <rect key="frame" x="347" y="27.5" width="24" height="19"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.67450980392156867" green="0.69411764705882351" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                                 <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
-                                                <state key="normal" title="عرض مشكلة">
+                                                <state key="normal" backgroundImage="ellipsis.circle" catalog="system">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -95,7 +95,7 @@
                                             <constraint firstItem="q3l-dA-kqt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uyO-Yb-lkB" secondAttribute="trailing" id="iO1-Y7-FcV"/>
                                             <constraint firstItem="W5U-d2-bxQ" firstAttribute="leading" secondItem="ODD-i5-PDa" secondAttribute="trailing" constant="12.5" id="qmm-F8-2A9"/>
                                             <constraint firstItem="ODD-i5-PDa" firstAttribute="leading" secondItem="faP-QJ-n33" secondAttribute="leading" id="sbN-wI-4Gv"/>
-                                            <constraint firstAttribute="trailing" secondItem="q3l-dA-kqt" secondAttribute="trailing" constant="-14" id="udG-8g-Dye"/>
+                                            <constraint firstAttribute="trailing" secondItem="q3l-dA-kqt" secondAttribute="trailing" id="udG-8g-Dye"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YO-lQ-BlA">
@@ -219,13 +219,14 @@
                 <outlet property="shareButton" destination="f2u-kJ-ovG" id="fOe-Yp-On9"/>
                 <outlet property="timeLabel" destination="47c-C5-Ueq" id="B1Q-vD-4LJ"/>
             </connections>
-            <point key="canvasLocation" x="194.92753623188406" y="217.96875"/>
+            <point key="canvasLocation" x="-127" y="45"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="common_dislike_ic" width="16" height="15"/>
         <image name="common_like_ic" width="17" height="16"/>
         <image name="common_share_ic" width="17" height="17"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
         <image name="garden2" width="275" height="183"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="tabBar_profile_ic" width="21" height="21"/>

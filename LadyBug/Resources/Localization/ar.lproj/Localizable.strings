@@ -169,4 +169,6 @@
 "followers_occupation_title" = "طبيب بيطري" ;
 "followers_email_title" = "mathewnguyen@gmail" ;
 "followers_following_button_title" = "متابع" ;
+//MARK: - MyPost Selection
 
+"my_posts_navigationitle_head_title" = "منشوراتي";
