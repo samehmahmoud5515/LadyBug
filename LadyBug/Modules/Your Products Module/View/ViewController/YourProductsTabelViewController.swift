@@ -59,6 +59,7 @@ extension YourProductsTabelViewController{
          button.backgroundColor = .paleGreyThree
          button.layer.masksToBounds = true
          button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
          return UIBarButtonItem(customView: button)
      }
      
@@ -81,6 +82,14 @@ extension YourProductsTabelViewController{
 
     }
 }
+extension YourProductsTabelViewController{
+
+@objc func didTappedBackButton() {
+    navigationController?.popViewController(animated: true)
+    }
+    
+}
+
 extension YourProductsTabelViewController :UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10

@@ -169,3 +169,14 @@
 
 "done_title" = "تم";
 "cancel_title" = "الغاء";
+
+//MARK: - Followers Selection
+
+"followers_navigationitle_head_title" = "متابعون" ;
+"followers_profile_name_title" = "مهندس اشرف" ;
+"followers_occupation_title" = "طبيب بيطري" ;
+"followers_email_title" = "mathewnguyen@gmail" ;
+"followers_following_button_title" = "متابع" ;
+//MARK: - MyPost Selection
+
+"my_posts_navigationitle_head_title" = "منشوراتي";

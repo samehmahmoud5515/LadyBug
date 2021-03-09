@@ -47,11 +47,11 @@ extension MoreMenuViewController {
     }
     
     private func setupNaviagtionBarUI() {
-          navigationController?.setNavigationBarHidden(false, animated: false)
-          navigationController?.navigationBar.barTintColor = .white
-          navigationController?.navigationBar.prefersLargeTitles = false
-          navigationItem.largeTitleDisplayMode = .never
-      }
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+    }
     
     private func addBarButtonsToNavigationBar() {
         navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
@@ -162,15 +162,34 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
     func naviageteTo(model: MoreMenuUIModel) {
         switch model {
         case .interests:
-            let myCropsViewController = MyCropsViewController()
-            navigationController?.pushViewController(myCropsViewController, animated: true)
+            let interestedSelectionViewController = InterestedSelectionViewController()
+            navigationController?.pushViewController(interestedSelectionViewController, animated: true)
         case .profile:
             break
         case .notification:
-            break
+               let notificationTabelViewController = NotificationTabelViewController()
+                     navigationController?.pushViewController(notificationTabelViewController, animated: true)
         case .language :
             break
-        case.tasks,.products,.posts,.followers,.usageAgreement,.help,.logOut :
+        case.tasks :
+            
+            break
+        case.products :
+            let yourProductsTabelViewController = YourProductsTabelViewController()
+                     navigationController?.pushViewController(yourProductsTabelViewController, animated: true)
+        case .posts:
+            let myPostsViewController = MyPostsViewController()
+            navigationController?.pushViewController(myPostsViewController, animated: true)
+        case .followers :
+            let followersViewController = FollowersViewController()
+            navigationController?.pushViewController(followersViewController, animated: true)
+        case .usageAgreement :
+            
+            break
+        case.help :
+            
+            break
+        case.logOut :
             break
         default:
             break

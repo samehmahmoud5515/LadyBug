@@ -9,6 +9,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var userNameField: StandardTextFieldView!
+    @IBOutlet weak var passwordField: StandardTextFieldView!
     @IBOutlet weak var loginImageView: UIImageView!
     @IBOutlet weak var loginTitleLabel: UILabel!
     @IBOutlet weak var loginTitleDescriptionlabel: UILabel!
@@ -33,7 +36,18 @@ class LoginViewController: UIViewController {
         setColor()
         setLabelFonts()
         setButtonFonts()
-//        presenter.viewDidLoad()
+
+        userNameField.addMaxCharToTextField(20)
+        userNameField.delegate = self
+        userNameField.setupUI(isPasswordField: false, placeholder: "user name", nextButton: true)
+        
+        passwordField.addMaxCharToTextField(20)
+        passwordField.delegate = self
+        passwordField.setupUI(isPasswordField: true, placeholder: "password", nextButton: false)
+        
+        observeOnKeyboard()
+        hideKeyboardWhenTappedAround()
+        
     }
     
     
@@ -47,7 +61,7 @@ extension LoginViewController{
         loginRegistrationLabel.textColor = UIColor.purplishBrown
         loginNewUserButtontitle.setTitleColor(.midGreenTwo, for: .normal)
         loginForgetPasswordTitle.setTitleColor(.midGreenTwo, for: .normal)
-        loginSignInButtonTitle.setTitleColor(.blueGrey, for: .normal)
+        loginSignInButtonTitle.setTitleColor(.white, for: .normal)
         loginSignByLabel.textColor = UIColor.black
         loginFaceBookButtonTitle.setTitleColor(.white, for: .normal)
         loginGoogleButtonTitle.setTitleColor(.white, for: .normal)
@@ -75,9 +89,84 @@ extension LoginViewController{
         loginGoogleButtonTitle.titleLabel?.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
         loginAppleButtonTitle.titleLabel?.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
     }
+    
+    private func enableLoginButton() {
+        loginSignInButtonTitle.isUserInteractionEnabled = true
+        loginSignInButtonTitle.backgroundColor = UIColor.midGreenTwo
+    }
+    
+    private func disableLoginButton() {
+        loginSignInButtonTitle.isUserInteractionEnabled = false
+        loginSignInButtonTitle.backgroundColor = UIColor.lightBlueGrey
+    }
 }
-extension LoginViewController:loginViewProtocol{
+extension LoginViewController:loginViewProtocol {
     
     
     
+}
+
+extension LoginViewController: StandardTextFieldViewProtocol {
+    func didBeginEditing(_ textField: StandardTextFieldView) {
+        if textField == userNameField {
+            let point = userNameField.frame.origin
+            //scrollView.setContentOffset(point, animated: true)
+        } else {
+            let point = passwordField.frame.origin
+            //scrollView.setContentOffset(point, animated: true)
+        }
+    }
+    
+    func didEndEditing(_ textField: StandardTextFieldView) {
+        if textField == userNameField {
+            if !textField.inputText.isValidUserName {
+                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+            }
+        } else if textField == passwordField {
+            if !textField.inputText.isValidPassword {
+                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: StandardTextFieldView) {
+        if textField == userNameField {
+            passwordField.requestFocus()
+        } else if textField == passwordField {
+            passwordField.releaseFocus()
+        }
+    }
+    
+    func didChangeText(text: String, _ textField: StandardTextFieldView) {
+        if passwordField.inputText.isValidPassword && userNameField.inputText.isValidUserName {
+            enableLoginButton()
+        } else {
+            disableLoginButton()
+        }
+        
+        if textField == userNameField {
+            userNameField.removeErrorView()
+        } else if textField == passwordField {
+            passwordField.removeErrorView()
+        }
+    }
+    
+}
+
+extension LoginViewController {
+    func observeOnKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+
+        let userInfo = notification.userInfo
+        let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
+        scrollView.contentInset.bottom = keyboardFrame.size.height
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        scrollView.contentInset = .zero
+    }
 }
