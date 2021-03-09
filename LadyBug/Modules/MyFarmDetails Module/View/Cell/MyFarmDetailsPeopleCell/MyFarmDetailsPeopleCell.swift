@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol MyFarmDetailsPeopleCellDelegate: class {
+    func addPeopleButtonDidTapped(_ cell: MyFarmDetailsPeopleCell)
+}
+
 class MyFarmDetailsPeopleCell: UITableViewCell {
     @IBOutlet weak var addTitleLabel: UILabel!
     @IBOutlet weak var addTitleButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    weak var delegate: MyFarmDetailsPeopleCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +30,11 @@ class MyFarmDetailsPeopleCell: UITableViewCell {
         addTitleLabel.font = UIFont.get(enFont: .bold(12), arFont: .bold(12))
         collectionView.reloadData()
     }
+    
+    @IBAction func addButtonDidTapped(_ sender: Any) {
+        delegate?.addPeopleButtonDidTapped(self)
+    }
+    
 }
 
 extension MyFarmDetailsPeopleCell {

@@ -34,6 +34,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAE-D1-c9j">
                                                 <rect key="frame" x="365" y="6.5" width="22" height="22"/>
                                                 <state key="normal" image="my_farm_add_people_ic"/>
+                                                <connections>
+                                                    <action selector="addButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hl6-Ee-Era"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90588235294117647" green="0.9137254901960784" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -28,12 +28,6 @@ class MyFarmDetailsViewController: UIViewController {
         setupUI()
         presnter.attach()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setupTableViewHeaderView()
-    }
-
 
 }
 
@@ -121,10 +115,6 @@ extension MyFarmDetailsViewController {
         tableView.estimatedRowHeight = 210
         tableView.rowHeight = UITableView.automaticDimension
     }
-    
-    private func setupTableViewHeaderView() {
-        
-    }
 
 }
 
@@ -160,6 +150,7 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
         case .people:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsPeopleCell.self)", for: indexPath) as? MyFarmDetailsPeopleCell ?? MyFarmDetailsPeopleCell()
             cell.setupUI()
+            cell.delegate = self
             return cell
         case .posts:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsPostsTableViewCell.self)", for: indexPath) as? MyFarmDetailsPostsTableViewCell ?? MyFarmDetailsPostsTableViewCell()
@@ -177,4 +168,14 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     
+}
+
+extension MyFarmDetailsViewController: MyFarmDetailsPeopleCellDelegate {
+    func addPeopleButtonDidTapped(_ cell: MyFarmDetailsPeopleCell) {
+        if let index = tableView.indexPath(for: cell), presnter.datasource[index.row] == .people {
+            let vc = AddPeopleToYourFarmViewController()
+            vc.modalPresentationStyle = .overCurrentContext
+            present(vc, animated: false, completion: nil)
+        }
+    }
 }
