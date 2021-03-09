@@ -51,7 +51,15 @@
 		2166B8A625E081C8008FE0A0 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */; };
 		2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B8A125E081C8008FE0A0 /* RegistrationViewController.swift */; };
 		2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B8A325E081C8008FE0A0 /* RegistrationProtocols.swift */; };
+		21767A2525F58F4E0039E2B8 /* MyPosts Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A2425F58F4E0039E2B8 /* MyPosts Localizer.swift */; };
+		21767A2725F58F570039E2B8 /* MyPosts Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A2625F58F570039E2B8 /* MyPosts Images.swift */; };
+		21767A2B25F58FD20039E2B8 /* MyPosts Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A2A25F58FD20039E2B8 /* MyPosts Protocols.swift */; };
+		21767A3625F592810039E2B8 /* MyPostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A3425F592810039E2B8 /* MyPostsCell.swift */; };
+		21767A3725F592810039E2B8 /* MyPostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21767A3525F592810039E2B8 /* MyPostsCell.xib */; };
+		21767A3A25F592D00039E2B8 /* MyPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A3825F592D00039E2B8 /* MyPostsViewController.swift */; };
+		21767A3B25F592D00039E2B8 /* MyPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21767A3925F592D00039E2B8 /* MyPostsViewController.xib */; };
 		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
+		21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE318825F597D30015467B /* MyPostsPresenter.swift */; };
 		50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50068C5A25E48A650097A870 /* MoreMenuImages.swift */; };
 		50068C6E25E48A650097A870 /* MoreMenuLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50068C5C25E48A650097A870 /* MoreMenuLocalizer.swift */; };
 		50068C6F25E48A650097A870 /* MoreMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50068C5E25E48A650097A870 /* MoreMenuPresenter.swift */; };
@@ -281,7 +289,15 @@
 		2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		2166B8A125E081C8008FE0A0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2166B8A325E081C8008FE0A0 /* RegistrationProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationProtocols.swift; sourceTree = "<group>"; };
+		21767A2425F58F4E0039E2B8 /* MyPosts Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPosts Localizer.swift"; sourceTree = "<group>"; };
+		21767A2625F58F570039E2B8 /* MyPosts Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPosts Images.swift"; sourceTree = "<group>"; };
+		21767A2A25F58FD20039E2B8 /* MyPosts Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPosts Protocols.swift"; sourceTree = "<group>"; };
+		21767A3425F592810039E2B8 /* MyPostsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsCell.swift; sourceTree = "<group>"; };
+		21767A3525F592810039E2B8 /* MyPostsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsCell.xib; sourceTree = "<group>"; };
+		21767A3825F592D00039E2B8 /* MyPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsViewController.swift; sourceTree = "<group>"; };
+		21767A3925F592D00039E2B8 /* MyPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsViewController.xib; sourceTree = "<group>"; };
 		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
+		21CE318825F597D30015467B /* MyPostsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsPresenter.swift; sourceTree = "<group>"; };
 		50068C5A25E48A650097A870 /* MoreMenuImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuImages.swift; sourceTree = "<group>"; };
 		50068C5C25E48A650097A870 /* MoreMenuLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuLocalizer.swift; sourceTree = "<group>"; };
 		50068C5E25E48A650097A870 /* MoreMenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuPresenter.swift; sourceTree = "<group>"; };
@@ -844,6 +860,93 @@
 				213751F325F4341F00E342EF /* FollowersImage.swift */,
 			);
 			path = FollowersImage;
+			sourceTree = "<group>";
+		};
+		2137520425F58DFC00E342EF /* MyPosts Module */ = {
+			isa = PBXGroup;
+			children = (
+				2137520525F58DFC00E342EF /* Resources */,
+				2137520A25F58DFC00E342EF /* Presenter */,
+				2137520C25F58DFC00E342EF /* View */,
+				2137521425F58DFD00E342EF /* Protocols */,
+			);
+			path = "MyPosts Module";
+			sourceTree = "<group>";
+		};
+		2137520525F58DFC00E342EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2137520625F58DFC00E342EF /* Images */,
+				2137520825F58DFC00E342EF /* Localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2137520625F58DFC00E342EF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				21767A2625F58F570039E2B8 /* MyPosts Images.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2137520825F58DFC00E342EF /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				21767A2425F58F4E0039E2B8 /* MyPosts Localizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		2137520A25F58DFC00E342EF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				21CE318825F597D30015467B /* MyPostsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2137520C25F58DFC00E342EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2137520D25F58DFC00E342EF /* SubViews */,
+				2137521125F58DFC00E342EF /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2137520D25F58DFC00E342EF /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				2137520E25F58DFC00E342EF /* VideosCell */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		2137520E25F58DFC00E342EF /* VideosCell */ = {
+			isa = PBXGroup;
+			children = (
+				21767A3425F592810039E2B8 /* MyPostsCell.swift */,
+				21767A3525F592810039E2B8 /* MyPostsCell.xib */,
+			);
+			path = VideosCell;
+			sourceTree = "<group>";
+		};
+		2137521125F58DFC00E342EF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				21767A3825F592D00039E2B8 /* MyPostsViewController.swift */,
+				21767A3925F592D00039E2B8 /* MyPostsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2137521425F58DFD00E342EF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21767A2A25F58FD20039E2B8 /* MyPosts Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
@@ -2374,6 +2477,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2137520425F58DFC00E342EF /* MyPosts Module */,
 				213751E725F4309600E342EF /* FollowersModule */,
 				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
 				213751CC25F3FC4F00E342EF /* CropsInfoModule */,
@@ -2656,6 +2760,7 @@
 				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
 				506E4D1325EDC3B9003BD749 /* MyCropsTableViewHeaderView.xib in Resources */,
 				507621EF25F1BC420061DF51 /* MyFarmDetailsPostsChildCell.xib in Resources */,
+				21767A3B25F592D00039E2B8 /* MyPostsViewController.xib in Resources */,
 				2101D91B25F357D900FB0DB9 /* YourProductsCellTableViewCell.xib in Resources */,
 				502F197D25F437B500B4AA4B /* MyFarmServiceTableCell.xib in Resources */,
 				508FDB0725F0846500686ECE /* MyFarmDetailsView.xib in Resources */,
@@ -2686,6 +2791,7 @@
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
 				2137520325F436CD00E342EF /* FollowersViewController.xib in Resources */,
 				506E4D2125EDC95F003BD749 /* MyCropsStretchedParentCellView.xib in Resources */,
+				21767A3725F592810039E2B8 /* MyPostsCell.xib in Resources */,
 				50590AD725F4329200F44248 /* MyFarmDetailsServiceTableView.xib in Resources */,
 				50A54C1425E3FF5C0052F701 /* InterestedSelectionCell.xib in Resources */,
 				506A5A2D25E5671A0014D59A /* MoreMenuLanguageCell.xib in Resources */,
@@ -2754,12 +2860,14 @@
 				506E4D0425EDA9CF003BD749 /* MyCropsHeaderViewCropCell.swift in Sources */,
 				502F198325F43E3900B4AA4B /* MyFarmDetailsTaskCell.swift in Sources */,
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
+				21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				2166B89625E081BC008FE0A0 /* Protocols.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
 				506A5A2825E5671A0014D59A /* MoreMenuProfileCell.swift in Sources */,
 				213751FB25F4355900E342EF /* FollowersPresenter.swift in Sources */,
 				21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */,
+				21767A2525F58F4E0039E2B8 /* MyPosts Localizer.swift in Sources */,
 				502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				2166B8A525E081C8008FE0A0 /* Registration Presenter.swift in Sources */,
@@ -2807,12 +2915,14 @@
 				508FDB0125F07E0900686ECE /* MyFarmDetailsLocalizer.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
 				2101D8FC25F2E46D00FB0DB9 /* NotificationModel.swift in Sources */,
+				21767A3625F592810039E2B8 /* MyPostsCell.swift in Sources */,
 				506E4D3325EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.swift in Sources */,
 				503DFC6B25DB385D0093CAF2 /* HomePostsCell.swift in Sources */,
 				5099491725E4642D0085CFBF /* ForgotImages.swift in Sources */,
 				5090FBEC25E44CDE008D5B06 /* InterestedSelectionProtocols.swift in Sources */,
 				509643C825E2F1C40000FB60 /* AddPostCell.swift in Sources */,
 				50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */,
+				21767A2B25F58FD20039E2B8 /* MyPosts Protocols.swift in Sources */,
 				2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */,
 				2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */,
 				2101D8FD25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */,
@@ -2839,6 +2949,7 @@
 				50A54C0D25E3FF190052F701 /* InterestedSelectionViewController.swift in Sources */,
 				503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */,
 				50A77D4525D9F2A10054E80D /* String.swift in Sources */,
+				21767A2725F58F570039E2B8 /* MyPosts Images.swift in Sources */,
 				213751F425F4341F00E342EF /* FollowersImage.swift in Sources */,
 				506A5A2C25E5671A0014D59A /* MoreMenuTaskesCell.swift in Sources */,
 				2101D90B25F2F9E300FB0DB9 /* ProductsImage.swift in Sources */,
@@ -2897,6 +3008,7 @@
 				5090FBF125E44D39008D5B06 /* InterestedSelectionImages.swift in Sources */,
 				2101D91425F3571E00FB0DB9 /* YourProductsModel.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
+				21767A3A25F592D00039E2B8 /* MyPostsViewController.swift in Sources */,
 				213751D925F3FD9500E342EF /* CropsInfoImage.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,
 				50068C7525E48A650097A870 /* MoreMenuViewController.swift in Sources */,
