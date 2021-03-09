@@ -100,7 +100,7 @@ extension LoginViewController{
         loginSignInButtonTitle.backgroundColor = UIColor.lightBlueGrey
     }
 }
-extension LoginViewController:loginViewProtocol {
+extension LoginViewController: loginViewProtocol {
     
     
     
@@ -108,13 +108,12 @@ extension LoginViewController:loginViewProtocol {
 
 extension LoginViewController: StandardTextFieldViewProtocol {
     func didBeginEditing(_ textField: StandardTextFieldView) {
-        if textField == userNameField {
-            let point = userNameField.frame.origin
-            //scrollView.setContentOffset(point, animated: true)
-        } else {
-            let point = passwordField.frame.origin
-            //scrollView.setContentOffset(point, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            let point = self?.loginWelcomeLabel.frame.origin
+            let updatedPoint = CGPoint(x: 0, y: point?.y ?? 0)
+            self?.scrollView.setContentOffset(updatedPoint, animated: true)
         }
+        
     }
     
     func didEndEditing(_ textField: StandardTextFieldView) {

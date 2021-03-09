@@ -36,7 +36,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYL-SM-aGc">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="oYL-SM-aGc">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHZ-pL-Cjk">
@@ -208,8 +208,6 @@
                         <constraint firstItem="IHZ-pL-Cjk" firstAttribute="top" secondItem="oYL-SM-aGc" secondAttribute="top" id="kr5-Wi-EGA"/>
                         <constraint firstAttribute="trailing" secondItem="IHZ-pL-Cjk" secondAttribute="trailing" id="ltT-eD-mJU"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="A1y-8D-Mqs"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="um0-ff-TLw"/>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
