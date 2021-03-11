@@ -60,6 +60,18 @@
 		21767A3B25F592D00039E2B8 /* MyPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21767A3925F592D00039E2B8 /* MyPostsViewController.xib */; };
 		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
 		21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE318825F597D30015467B /* MyPostsPresenter.swift */; };
+		5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432325F99A9300D1630E /* MyTasksViewController.swift */; };
+		5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001432425F99A9300D1630E /* MyTasksViewController.xib */; };
+		5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432925F99AD500D1630E /* MyTasksPresenter.swift */; };
+		5001432F25F99B0700D1630E /* MyTasksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432E25F99B0700D1630E /* MyTasksProtocol.swift */; };
+		5001433425F99B2000D1630E /* MyTasksImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001433325F99B2000D1630E /* MyTasksImages.swift */; };
+		5001433825F99B3D00D1630E /* MyTasksLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001433725F99B3D00D1630E /* MyTasksLocalizer.swift */; };
+		5001433F25F9A43600D1630E /* MyTasksHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001433D25F9A43600D1630E /* MyTasksHeaderView.swift */; };
+		5001434025F9A43600D1630E /* MyTasksHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001433E25F9A43600D1630E /* MyTasksHeaderView.xib */; };
+		5001434625F9A75400D1630E /* MyTasksSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001434425F9A75400D1630E /* MyTasksSectionHeaderView.swift */; };
+		5001434725F9A75400D1630E /* MyTasksSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001434525F9A75400D1630E /* MyTasksSectionHeaderView.xib */; };
+		5001434C25F9A84500D1630E /* MyTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001434A25F9A84500D1630E /* MyTasksCell.swift */; };
+		5001434D25F9A84500D1630E /* MyTasksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001434B25F9A84500D1630E /* MyTasksCell.xib */; };
 		50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50068C5A25E48A650097A870 /* MoreMenuImages.swift */; };
 		50068C6E25E48A650097A870 /* MoreMenuLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50068C5C25E48A650097A870 /* MoreMenuLocalizer.swift */; };
 		50068C6F25E48A650097A870 /* MoreMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50068C5E25E48A650097A870 /* MoreMenuPresenter.swift */; };
@@ -307,6 +319,18 @@
 		21767A3925F592D00039E2B8 /* MyPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsViewController.xib; sourceTree = "<group>"; };
 		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
 		21CE318825F597D30015467B /* MyPostsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsPresenter.swift; sourceTree = "<group>"; };
+		5001432325F99A9300D1630E /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
+		5001432425F99A9300D1630E /* MyTasksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksViewController.xib; sourceTree = "<group>"; };
+		5001432925F99AD500D1630E /* MyTasksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksPresenter.swift; sourceTree = "<group>"; };
+		5001432E25F99B0700D1630E /* MyTasksProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksProtocol.swift; sourceTree = "<group>"; };
+		5001433325F99B2000D1630E /* MyTasksImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksImages.swift; sourceTree = "<group>"; };
+		5001433725F99B3D00D1630E /* MyTasksLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksLocalizer.swift; sourceTree = "<group>"; };
+		5001433D25F9A43600D1630E /* MyTasksHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksHeaderView.swift; sourceTree = "<group>"; };
+		5001433E25F9A43600D1630E /* MyTasksHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksHeaderView.xib; sourceTree = "<group>"; };
+		5001434425F9A75400D1630E /* MyTasksSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksSectionHeaderView.swift; sourceTree = "<group>"; };
+		5001434525F9A75400D1630E /* MyTasksSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksSectionHeaderView.xib; sourceTree = "<group>"; };
+		5001434A25F9A84500D1630E /* MyTasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksCell.swift; sourceTree = "<group>"; };
+		5001434B25F9A84500D1630E /* MyTasksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksCell.xib; sourceTree = "<group>"; };
 		50068C5A25E48A650097A870 /* MoreMenuImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuImages.swift; sourceTree = "<group>"; };
 		50068C5C25E48A650097A870 /* MoreMenuLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuLocalizer.swift; sourceTree = "<group>"; };
 		50068C5E25E48A650097A870 /* MoreMenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuPresenter.swift; sourceTree = "<group>"; };
@@ -1118,6 +1142,113 @@
 				21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */,
 			);
 			path = Localizer;
+			sourceTree = "<group>";
+		};
+		5001432025F99A6600D1630E /* MyTasks Module */ = {
+			isa = PBXGroup;
+			children = (
+				5001433125F99B0D00D1630E /* Resources */,
+				5001432D25F99AE400D1630E /* Contract */,
+				5001432825F99ABF00D1630E /* Presenter */,
+				5001432125F99A7500D1630E /* View */,
+			);
+			path = "MyTasks Module";
+			sourceTree = "<group>";
+		};
+		5001432125F99A7500D1630E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5001433B25F9A40400D1630E /* SubViews */,
+				5001432225F99A7A00D1630E /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5001432225F99A7A00D1630E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5001432325F99A9300D1630E /* MyTasksViewController.swift */,
+				5001432425F99A9300D1630E /* MyTasksViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5001432825F99ABF00D1630E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5001432925F99AD500D1630E /* MyTasksPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5001432D25F99AE400D1630E /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				5001432E25F99B0700D1630E /* MyTasksProtocol.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		5001433125F99B0D00D1630E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5001433625F99B2F00D1630E /* Localizer */,
+				5001433225F99B1400D1630E /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5001433225F99B1400D1630E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5001433325F99B2000D1630E /* MyTasksImages.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5001433625F99B2F00D1630E /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				5001433725F99B3D00D1630E /* MyTasksLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		5001433B25F9A40400D1630E /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				5001434925F9A82F00D1630E /* Cell */,
+				5001434325F9A72B00D1630E /* SectionHeader */,
+				5001433C25F9A40B00D1630E /* HeaderView */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		5001433C25F9A40B00D1630E /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				5001433D25F9A43600D1630E /* MyTasksHeaderView.swift */,
+				5001433E25F9A43600D1630E /* MyTasksHeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		5001434325F9A72B00D1630E /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				5001434425F9A75400D1630E /* MyTasksSectionHeaderView.swift */,
+				5001434525F9A75400D1630E /* MyTasksSectionHeaderView.xib */,
+			);
+			path = SectionHeader;
+			sourceTree = "<group>";
+		};
+		5001434925F9A82F00D1630E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5001434A25F9A84500D1630E /* MyTasksCell.swift */,
+				5001434B25F9A84500D1630E /* MyTasksCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		50068C5725E48A650097A870 /* MoreMenu Module */ = {
@@ -2533,6 +2664,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5001432025F99A6600D1630E /* MyTasks Module */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
 				2137520425F58DFC00E342EF /* MyPosts Module */,
@@ -2804,6 +2936,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */,
+				5001434D25F9A84500D1630E /* MyTasksCell.xib in Resources */,
 				504969C725F81E23002C3E40 /* MyFarmDetailsPeopleChildCell.xib in Resources */,
 				506A5A2725E5671A0014D59A /* MoreMenuProfileCell.xib in Resources */,
 				503CB5C525E0A15F00B7A393 /* VideosViewController.xib in Resources */,
@@ -2813,6 +2946,7 @@
 				504969B725F81E23002C3E40 /* MyFarmDetailsView.xib in Resources */,
 				506E4D0B25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib in Resources */,
 				504969C825F81E23002C3E40 /* MyFarmDetailsViewController.xib in Resources */,
+				5001434725F9A75400D1630E /* MyTasksSectionHeaderView.xib in Resources */,
 				50E01ED825E5C9A30016DEAB /* MyCropsHeaderView.xib in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
 				50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */,
@@ -2863,6 +2997,7 @@
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				506E4D2D25EDCC25003BD749 /* MyCropsStretchedCell.xib in Resources */,
 				2101D8FE25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */,
+				5001434025F9A43600D1630E /* MyTasksHeaderView.xib in Resources */,
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
 				506E4D3425EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.xib in Resources */,
 				506A5A2B25E5671A0014D59A /* MoreMenuTaskesCell.xib in Resources */,
@@ -2874,6 +3009,7 @@
 				504969C425F81E23002C3E40 /* MyFarmDetailsPeopleCell.xib in Resources */,
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
 				504969B425F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib in Resources */,
+				5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */,
 				504969C025F81E23002C3E40 /* MyFarmDetailsServiceTableView.xib in Resources */,
 				213751FF25F436A300E342EF /* FollowersTableViewCell.xib in Resources */,
 			);
@@ -2912,6 +3048,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */,
+				5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */,
 				213751F625F4344600E342EF /* FollowersLocalizer.swift in Sources */,
 				501F740C25DAB59200333F16 /* UIViewController+Keyboard.swift in Sources */,
 				2101D8F925F2E46D00FB0DB9 /* NotificationLocalizer.swift in Sources */,
@@ -2940,6 +3077,7 @@
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
 				506E4D2025EDC95F003BD749 /* MyCropsStretchedParentCellView.swift in Sources */,
 				503CB5B325E07BE100B7A393 /* ProductsProtocols.swift in Sources */,
+				5001432F25F99B0700D1630E /* MyTasksProtocol.swift in Sources */,
 				503CB5E425E0A23300B7A393 /* VideosCell.swift in Sources */,
 				504969B625F81E23002C3E40 /* MyFarmDetailsView.swift in Sources */,
 				5099491A25E4642D0085CFBF /* ForgotPasswordViewController.swift in Sources */,
@@ -2971,6 +3109,7 @@
 				506E4D2C25EDCC25003BD749 /* MyCropsStretchedCell.swift in Sources */,
 				50068C7125E48A650097A870 /* MoreMenuUIModel.swift in Sources */,
 				50BC0A7F25E5C0FB006653FD /* MyCropsPresenter.swift in Sources */,
+				5001434625F9A75400D1630E /* MyTasksSectionHeaderView.swift in Sources */,
 				2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */,
 				504969AC25F81E23002C3E40 /* MyFarmDetailsLocalizer.swift in Sources */,
 				2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */,
@@ -2996,10 +3135,12 @@
 				2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */,
 				2101D8FD25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */,
 				503CB5CA25E0A18100B7A393 /* VideosPresenter.swift in Sources */,
+				5001433F25F9A43600D1630E /* MyTasksHeaderView.swift in Sources */,
 				2101D91025F2FB0200FB0DB9 /* YourProductsProtocols.swift in Sources */,
 				504969B525F81E23002C3E40 /* MyFarmDetailsPostsCell.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				508FDAE025F04A1800686ECE /* MyCropsCell.swift in Sources */,
+				5001434C25F9A84500D1630E /* MyTasksCell.swift in Sources */,
 				504969AF25F81E23002C3E40 /* MyFarmDetailsNameCell.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
 				503CB5BA25E07DD900B7A393 /* ProductCell.swift in Sources */,
@@ -3028,6 +3169,7 @@
 				503CB5CF25E0A19800B7A393 /* VideosProtocols.swift in Sources */,
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				503CB5DA25E0A1C400B7A393 /* VideosLocalizer.swift in Sources */,
+				5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */,
 				50068C6E25E48A650097A870 /* MoreMenuLocalizer.swift in Sources */,
 				509643BA25E2F1260000FB60 /* AddPostImages.swift in Sources */,
 				2166B8A425E081C8008FE0A0 /* RegistrationLocalizer.swift in Sources */,
@@ -3069,6 +3211,7 @@
 				5099491825E4642D0085CFBF /* ForgotLocalizer.swift in Sources */,
 				50FA84A925DC6414008A9216 /* FarmDetailsCell.swift in Sources */,
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
+				5001433425F99B2000D1630E /* MyTasksImages.swift in Sources */,
 				5090FBFB25E4515E008D5B06 /* InterestedSelectionUIModel.swift in Sources */,
 				213751E525F4013A00E342EF /* CropsInfoViewController.swift in Sources */,
 				2137520225F436CD00E342EF /* FollowersViewController.swift in Sources */,
@@ -3077,6 +3220,7 @@
 				2101D91425F3571E00FB0DB9 /* YourProductsModel.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
 				21767A3A25F592D00039E2B8 /* MyPostsViewController.swift in Sources */,
+				5001433825F99B3D00D1630E /* MyTasksLocalizer.swift in Sources */,
 				213751D925F3FD9500E342EF /* CropsInfoImage.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,
 				50068C7525E48A650097A870 /* MoreMenuViewController.swift in Sources */,

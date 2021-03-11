@@ -167,13 +167,13 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
         case .profile:
             break
         case .notification:
-               let notificationTabelViewController = NotificationTabelViewController()
+            let notificationTabelViewController = NotificationTabelViewController()
                      navigationController?.pushViewController(notificationTabelViewController, animated: true)
         case .language :
             break
         case.tasks :
-            
-            break
+            let vc = MyTasksViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case.products :
             let yourProductsTabelViewController = YourProductsTabelViewController()
                      navigationController?.pushViewController(yourProductsTabelViewController, animated: true)

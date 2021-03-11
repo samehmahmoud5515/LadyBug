@@ -180,3 +180,6 @@
 //MARK: - MyPost Selection
 
 "my_posts_navigationitle_head_title" = "منشوراتي";
+
+"weather_title" = "الطقس";
+"weather_your_tasks_title" = "مهامك اليوم";
