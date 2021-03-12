@@ -7,9 +7,9 @@
 
 import Foundation
 
-class CropsInfoPresenter:CropsInfoPresenterProtocol{
-    var localizer = CropsInfoLocalizer()
-    var images = CropsInfoImages()
+class CropsInfoDetailsPresenter:CropsInfoDetailsPresenterProtocol{
+    var localizer = CropsInfoDetailsLocalizer()
+    var images = CropsInfoDetailsImages()
     weak var view : CropsInfoViewProtocol?
     init(view : CropsInfoViewProtocol) {
         self.view = view 

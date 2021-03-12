@@ -1,5 +1,5 @@
 //
-//  CropsInfoViewController.swift
+//  CropsInfoDetailsViewController.swift
 //  LadyBug
 //
 //  Created by Mohamed Abdelhamed Ahmed on 3/6/21.
@@ -7,18 +7,18 @@
 
 import UIKit
 
-class CropsInfoViewController: UIViewController, CropsInfoViewProtocol {
+class CropsInfoDetailsViewController: UIViewController, CropsInfoViewProtocol {
     @IBOutlet weak var cropsInfoImage: UIImageView!
     @IBOutlet weak var cropsInfoImageLabelTitle: UILabel!
     @IBOutlet weak var cropsInfoHeadImage: UIImageView!
     @IBOutlet weak var cropsInfoHeadLabelTitle: UILabel!
     @IBOutlet weak var cropsInfoSubjecLabel: UILabel!
     @IBOutlet weak var cropsInfoContentTextView: UITextView!
-    private var presnter: CropsInfoPresenterProtocol!
+    private var presnter: CropsInfoDetailsPresenterProtocol!
     
     init() {
-        super.init(nibName: "\(CropsInfoViewController.self)", bundle: nil)
-        presnter = CropsInfoPresenter(view : self)
+        super.init(nibName: "\(CropsInfoDetailsViewController.self)", bundle: nil)
+        presnter = CropsInfoDetailsPresenter(view : self)
     }
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class CropsInfoViewController: UIViewController, CropsInfoViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
 }
-extension CropsInfoViewController {
+extension CropsInfoDetailsViewController {
     private func setupUI() {
         setupNaviagtionBarUI()
         addBarButtonsToNavigationBar()
@@ -72,7 +72,7 @@ extension CropsInfoViewController {
         return UIBarButtonItem(customView: button)
     }
 }
-extension CropsInfoViewController {
+extension CropsInfoDetailsViewController {
     private func setupfont(){
         cropsInfoImageLabelTitle.font = UIFont.get(enFont: .regular(38), arFont: .regular(38))
         cropsInfoHeadLabelTitle.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))

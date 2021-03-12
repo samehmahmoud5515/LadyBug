@@ -25,13 +25,13 @@
 		2101D91B25F357D900FB0DB9 /* YourProductsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */; };
 		2101D91E25F3589400FB0DB9 /* YourProductsTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */; };
 		2101D91F25F3589400FB0DB9 /* YourProductsTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */; };
-		213751D525F3FCF100E342EF /* CropsInfoLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751D425F3FCF100E342EF /* CropsInfoLocalizer.swift */; };
+		213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751D425F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift */; };
 		213751D925F3FD9500E342EF /* CropsInfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751D825F3FD9500E342EF /* CropsInfoImage.swift */; };
-		213751DB25F3FE0500E342EF /* CropsInfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DA25F3FE0500E342EF /* CropsInfoProtocols.swift */; };
-		213751DD25F3FEBD00E342EF /* CropsInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DC25F3FEBD00E342EF /* CropsInfoPresenter.swift */; };
-		213751DF25F4003A00E342EF /* CropsInfoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DE25F4003A00E342EF /* CropsInfoModels.swift */; };
-		213751E525F4013A00E342EF /* CropsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751E325F4013A00E342EF /* CropsInfoViewController.swift */; };
-		213751E625F4013A00E342EF /* CropsInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213751E425F4013A00E342EF /* CropsInfoViewController.xib */; };
+		213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DA25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift */; };
+		213751DD25F3FEBD00E342EF /* CropsInfoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DC25F3FEBD00E342EF /* CropsInfoDetailsPresenter.swift */; };
+		213751DF25F4003A00E342EF /* CropsInfoDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DE25F4003A00E342EF /* CropsInfoDetailsModels.swift */; };
+		213751E525F4013A00E342EF /* CropsInfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751E325F4013A00E342EF /* CropsInfoDetailsViewController.swift */; };
+		213751E625F4013A00E342EF /* CropsInfoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213751E425F4013A00E342EF /* CropsInfoDetailsViewController.xib */; };
 		213751F425F4341F00E342EF /* FollowersImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751F325F4341F00E342EF /* FollowersImage.swift */; };
 		213751F625F4344600E342EF /* FollowersLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751F525F4344600E342EF /* FollowersLocalizer.swift */; };
 		213751F825F4348000E342EF /* FollowersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751F725F4348000E342EF /* FollowersProtocols.swift */; };
@@ -284,13 +284,13 @@
 		2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsCellTableViewCell.xib; sourceTree = "<group>"; };
 		2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProductsTabelViewController.swift; sourceTree = "<group>"; };
 		2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsTabelViewController.xib; sourceTree = "<group>"; };
-		213751D425F3FCF100E342EF /* CropsInfoLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoLocalizer.swift; sourceTree = "<group>"; };
+		213751D425F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsLocalizer.swift; sourceTree = "<group>"; };
 		213751D825F3FD9500E342EF /* CropsInfoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoImage.swift; sourceTree = "<group>"; };
-		213751DA25F3FE0500E342EF /* CropsInfoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoProtocols.swift; sourceTree = "<group>"; };
-		213751DC25F3FEBD00E342EF /* CropsInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoPresenter.swift; sourceTree = "<group>"; };
-		213751DE25F4003A00E342EF /* CropsInfoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoModels.swift; sourceTree = "<group>"; };
-		213751E325F4013A00E342EF /* CropsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoViewController.swift; sourceTree = "<group>"; };
-		213751E425F4013A00E342EF /* CropsInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CropsInfoViewController.xib; sourceTree = "<group>"; };
+		213751DA25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsProtocols.swift; sourceTree = "<group>"; };
+		213751DC25F3FEBD00E342EF /* CropsInfoDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsPresenter.swift; sourceTree = "<group>"; };
+		213751DE25F4003A00E342EF /* CropsInfoDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsModels.swift; sourceTree = "<group>"; };
+		213751E325F4013A00E342EF /* CropsInfoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsViewController.swift; sourceTree = "<group>"; };
+		213751E425F4013A00E342EF /* CropsInfoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CropsInfoDetailsViewController.xib; sourceTree = "<group>"; };
 		213751F325F4341F00E342EF /* FollowersImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersImage.swift; sourceTree = "<group>"; };
 		213751F525F4344600E342EF /* FollowersLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersLocalizer.swift; sourceTree = "<group>"; };
 		213751F725F4348000E342EF /* FollowersProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersProtocols.swift; sourceTree = "<group>"; };
@@ -754,7 +754,7 @@
 		213751CE25F3FC8000E342EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				213751DE25F4003A00E342EF /* CropsInfoModels.swift */,
+				213751DE25F4003A00E342EF /* CropsInfoDetailsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -762,7 +762,7 @@
 		213751CF25F3FC8300E342EF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				213751DC25F3FEBD00E342EF /* CropsInfoPresenter.swift */,
+				213751DC25F3FEBD00E342EF /* CropsInfoDetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -770,7 +770,7 @@
 		213751D025F3FC8800E342EF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				213751DA25F3FE0500E342EF /* CropsInfoProtocols.swift */,
+				213751DA25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -795,7 +795,7 @@
 		213751D325F3FC9600E342EF /* CropsInfoLocalizer */ = {
 			isa = PBXGroup;
 			children = (
-				213751D425F3FCF100E342EF /* CropsInfoLocalizer.swift */,
+				213751D425F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift */,
 			);
 			path = CropsInfoLocalizer;
 			sourceTree = "<group>";
@@ -803,8 +803,8 @@
 		213751E025F4008E00E342EF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				213751E325F4013A00E342EF /* CropsInfoViewController.swift */,
-				213751E425F4013A00E342EF /* CropsInfoViewController.xib */,
+				213751E325F4013A00E342EF /* CropsInfoDetailsViewController.swift */,
+				213751E425F4013A00E342EF /* CropsInfoDetailsViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3005,7 +3005,7 @@
 				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
 				504969C325F81E23002C3E40 /* MyFarmDetailsSuitabilityCell.xib in Resources */,
 				508FDAE125F04A1800686ECE /* MyCropsCell.xib in Resources */,
-				213751E625F4013A00E342EF /* CropsInfoViewController.xib in Resources */,
+				213751E625F4013A00E342EF /* CropsInfoDetailsViewController.xib in Resources */,
 				504969C425F81E23002C3E40 /* MyFarmDetailsPeopleCell.xib in Resources */,
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
 				504969B425F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib in Resources */,
@@ -3087,7 +3087,7 @@
 				50BC0A8325E5C114006653FD /* MyCropsProtocol.swift in Sources */,
 				504969DF25F81F4B002C3E40 /* StandardTextFieldView.swift in Sources */,
 				50068C6F25E48A650097A870 /* MoreMenuPresenter.swift in Sources */,
-				213751DD25F3FEBD00E342EF /* CropsInfoPresenter.swift in Sources */,
+				213751DD25F3FEBD00E342EF /* CropsInfoDetailsPresenter.swift in Sources */,
 				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
 				2101D8FA25F2E46D00FB0DB9 /* NotificationImage.swift in Sources */,
 				504969B025F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.swift in Sources */,
@@ -3183,10 +3183,10 @@
 				503CB5D425E0A1B200B7A393 /* VideosImages.swift in Sources */,
 				504969AB25F81E23002C3E40 /* MyFarmDetailsImages.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
-				213751DB25F3FE0500E342EF /* CropsInfoProtocols.swift in Sources */,
-				213751DF25F4003A00E342EF /* CropsInfoModels.swift in Sources */,
+				213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */,
+				213751DF25F4003A00E342EF /* CropsInfoDetailsModels.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
-				213751D525F3FCF100E342EF /* CropsInfoLocalizer.swift in Sources */,
+				213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */,
 				50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */,
 				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
 				504969B225F81E23002C3E40 /* MyFarmDetailsPostsChildCell.swift in Sources */,
@@ -3213,7 +3213,7 @@
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
 				5001433425F99B2000D1630E /* MyTasksImages.swift in Sources */,
 				5090FBFB25E4515E008D5B06 /* InterestedSelectionUIModel.swift in Sources */,
-				213751E525F4013A00E342EF /* CropsInfoViewController.swift in Sources */,
+				213751E525F4013A00E342EF /* CropsInfoDetailsViewController.swift in Sources */,
 				2137520225F436CD00E342EF /* FollowersViewController.swift in Sources */,
 				506A5A2A25E5671A0014D59A /* MoreMenuNotificationsCell.swift in Sources */,
 				5090FBF125E44D39008D5B06 /* InterestedSelectionImages.swift in Sources */,

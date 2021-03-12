@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CropsInfoImages:CommonImages{
+class CropsInfoDetailsImages:CommonImages{
     
     
     

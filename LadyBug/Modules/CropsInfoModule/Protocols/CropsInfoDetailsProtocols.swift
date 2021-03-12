@@ -7,9 +7,9 @@
 
 import Foundation
 
-protocol CropsInfoPresenterProtocol {
-      var localizer: CropsInfoLocalizer { get }
-      var images: CropsInfoImages { get }
+protocol CropsInfoDetailsPresenterProtocol {
+      var localizer: CropsInfoDetailsLocalizer { get }
+      var images: CropsInfoDetailsImages { get }
       func attach()
   }
   protocol CropsInfoViewProtocol: class {

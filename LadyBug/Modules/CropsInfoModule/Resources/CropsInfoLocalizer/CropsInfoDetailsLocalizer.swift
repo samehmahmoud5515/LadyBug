@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CropsInfoLocalizer:CommonLocalizer{
+class CropsInfoDetailsLocalizer:CommonLocalizer{
     
     
     
