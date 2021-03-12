@@ -12,6 +12,6 @@ protocol CropsInfoDetailsPresenterProtocol {
       var images: CropsInfoDetailsImages { get }
       func attach()
   }
-  protocol CropsInfoViewProtocol: class {
+  protocol CropsInfoDetailsViewProtocol: class {
       
   }

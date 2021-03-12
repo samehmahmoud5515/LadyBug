@@ -8,5 +8,5 @@
 import Foundation
 
 class CropsInfoImages: CommonImages {
-    
+    var smallApple = "small_apple_ic"
 }

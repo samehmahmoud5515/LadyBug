@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CropsInfoDetailsViewController: UIViewController, CropsInfoViewProtocol {
+class CropsInfoDetailsViewController: UIViewController, CropsInfoDetailsViewProtocol {
     @IBOutlet weak var cropsInfoImage: UIImageView!
     @IBOutlet weak var cropsInfoImageLabelTitle: UILabel!
     @IBOutlet weak var cropsInfoHeadImage: UIImageView!

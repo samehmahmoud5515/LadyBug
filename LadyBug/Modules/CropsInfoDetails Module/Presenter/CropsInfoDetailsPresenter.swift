@@ -7,11 +7,11 @@
 
 import Foundation
 
-class CropsInfoDetailsPresenter:CropsInfoDetailsPresenterProtocol{
+class CropsInfoDetailsPresenter: CropsInfoDetailsPresenterProtocol{
     var localizer = CropsInfoDetailsLocalizer()
     var images = CropsInfoDetailsImages()
-    weak var view : CropsInfoViewProtocol?
-    init(view : CropsInfoViewProtocol) {
+    weak var view : CropsInfoDetailsViewProtocol?
+    init(view : CropsInfoDetailsViewProtocol) {
         self.view = view 
     }
     func attach() {
