@@ -248,6 +248,14 @@
 		50BC0A7B25E5C0D2006653FD /* MyCropsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A7A25E5C0D2006653FD /* MyCropsImages.swift */; };
 		50BC0A7F25E5C0FB006653FD /* MyCropsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A7E25E5C0FB006653FD /* MyCropsPresenter.swift */; };
 		50BC0A8325E5C114006653FD /* MyCropsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A8225E5C114006653FD /* MyCropsProtocol.swift */; };
+		50D4ACC225FBF8C900880E55 /* MapLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB625FBF8C900880E55 /* MapLocalizer.swift */; };
+		50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB725FBF8C900880E55 /* MapImages.swift */; };
+		50D4ACC425FBF8C900880E55 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB925FBF8C900880E55 /* Coordinate.swift */; };
+		50D4ACC525FBF8C900880E55 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACBB25FBF8C900880E55 /* MapViewController.swift */; };
+		50D4ACC625FBF8C900880E55 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D4ACBC25FBF8C900880E55 /* MapViewController.xib */; };
+		50D4ACC725FBF8C900880E55 /* MapPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D4ACBE25FBF8C900880E55 /* MapPinView.xib */; };
+		50D4ACC825FBF8C900880E55 /* MapPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACBF25FBF8C900880E55 /* MapPinView.swift */; };
+		50D4ACC925FBF8C900880E55 /* ReverseGeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACC125FBF8C900880E55 /* ReverseGeocodeService.swift */; };
 		50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6136725DC195100228385 /* CommonLocalizer.swift */; };
 		50D6136D25DC198900228385 /* CommonImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6136C25DC198900228385 /* CommonImages.swift */; };
 		50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D6137325DC1CEC00228385 /* MyFarmViewController.swift */; };
@@ -521,6 +529,14 @@
 		50BC0A7A25E5C0D2006653FD /* MyCropsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsImages.swift; sourceTree = "<group>"; };
 		50BC0A7E25E5C0FB006653FD /* MyCropsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsPresenter.swift; sourceTree = "<group>"; };
 		50BC0A8225E5C114006653FD /* MyCropsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsProtocol.swift; sourceTree = "<group>"; };
+		50D4ACB625FBF8C900880E55 /* MapLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocalizer.swift; sourceTree = "<group>"; };
+		50D4ACB725FBF8C900880E55 /* MapImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapImages.swift; sourceTree = "<group>"; };
+		50D4ACB925FBF8C900880E55 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		50D4ACBB25FBF8C900880E55 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		50D4ACBC25FBF8C900880E55 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		50D4ACBE25FBF8C900880E55 /* MapPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapPinView.xib; sourceTree = "<group>"; };
+		50D4ACBF25FBF8C900880E55 /* MapPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPinView.swift; sourceTree = "<group>"; };
+		50D4ACC125FBF8C900880E55 /* ReverseGeocodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeService.swift; sourceTree = "<group>"; };
 		50D6136725DC195100228385 /* CommonLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLocalizer.swift; sourceTree = "<group>"; };
 		50D6136C25DC198900228385 /* CommonImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImages.swift; sourceTree = "<group>"; };
 		50D6137325DC1CEC00228385 /* MyFarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmViewController.swift; sourceTree = "<group>"; };
@@ -2706,6 +2722,61 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		50D4ACB425FBF8C900880E55 /* Map Module */ = {
+			isa = PBXGroup;
+			children = (
+				50D4ACB525FBF8C900880E55 /* Resources */,
+				50D4ACB825FBF8C900880E55 /* Models */,
+				50D4ACBA25FBF8C900880E55 /* ViewController */,
+				50D4ACBD25FBF8C900880E55 /* MapPinView */,
+				50D4ACC025FBF8C900880E55 /* Services */,
+			);
+			path = "Map Module";
+			sourceTree = "<group>";
+		};
+		50D4ACB525FBF8C900880E55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50D4ACB625FBF8C900880E55 /* MapLocalizer.swift */,
+				50D4ACB725FBF8C900880E55 /* MapImages.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		50D4ACB825FBF8C900880E55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50D4ACB925FBF8C900880E55 /* Coordinate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50D4ACBA25FBF8C900880E55 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50D4ACBB25FBF8C900880E55 /* MapViewController.swift */,
+				50D4ACBC25FBF8C900880E55 /* MapViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		50D4ACBD25FBF8C900880E55 /* MapPinView */ = {
+			isa = PBXGroup;
+			children = (
+				50D4ACBE25FBF8C900880E55 /* MapPinView.xib */,
+				50D4ACBF25FBF8C900880E55 /* MapPinView.swift */,
+			);
+			path = MapPinView;
+			sourceTree = "<group>";
+		};
+		50D4ACC025FBF8C900880E55 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				50D4ACC125FBF8C900880E55 /* ReverseGeocodeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		50D6136625DC192F00228385 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -2795,6 +2866,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50D4ACB425FBF8C900880E55 /* Map Module */,
 				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
 				5001432025F99A6600D1630E /* MyTasks Module */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
@@ -3098,6 +3170,7 @@
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
+				50D4ACC625FBF8C900880E55 /* MapViewController.xib in Resources */,
 				2101D91F25F3589400FB0DB9 /* YourProductsTabelViewController.xib in Resources */,
 				50A54C0C25E3FF190052F701 /* InterestedSelectionViewController.xib in Resources */,
 				2101D8FF25F2E46D00FB0DB9 /* NotificationTabelViewController.xib in Resources */,
@@ -3138,6 +3211,7 @@
 				506A5A2B25E5671A0014D59A /* MoreMenuTaskesCell.xib in Resources */,
 				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
 				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
+				50D4ACC725FBF8C900880E55 /* MapPinView.xib in Resources */,
 				5097F50425FBAE47000E14C4 /* CropsInfoHeaderViewCell.xib in Resources */,
 				504969C325F81E23002C3E40 /* MyFarmDetailsSuitabilityCell.xib in Resources */,
 				508FDAE125F04A1800686ECE /* MyCropsCell.xib in Resources */,
@@ -3229,6 +3303,7 @@
 				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
 				2101D8FA25F2E46D00FB0DB9 /* NotificationImage.swift in Sources */,
 				504969B025F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.swift in Sources */,
+				50D4ACC925FBF8C900880E55 /* ReverseGeocodeService.swift in Sources */,
 				5062E7BF25FB26A5000398AA /* CropsInfoViewController.swift in Sources */,
 				504969BB25F81E23002C3E40 /* MyFarmServiceTableCell.swift in Sources */,
 				509643CE25E2F6A20000FB60 /* AddPostUIModel.swift in Sources */,
@@ -3259,6 +3334,7 @@
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
 				509643AC25E2EF860000FB60 /* AddPostViewController.swift in Sources */,
+				50D4ACC525FBF8C900880E55 /* MapViewController.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
 				2101D8FC25F2E46D00FB0DB9 /* NotificationModel.swift in Sources */,
 				21767A3625F592810039E2B8 /* MyPostsCell.swift in Sources */,
@@ -3282,6 +3358,7 @@
 				508FDAE025F04A1800686ECE /* MyCropsCell.swift in Sources */,
 				5001434C25F9A84500D1630E /* MyTasksCell.swift in Sources */,
 				504969AF25F81E23002C3E40 /* MyFarmDetailsNameCell.swift in Sources */,
+				50D4ACC425FBF8C900880E55 /* Coordinate.swift in Sources */,
 				5062E7BC25FB26A5000398AA /* CropsInfoLocalizer.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
 				503CB5BA25E07DD900B7A393 /* ProductCell.swift in Sources */,
@@ -3292,6 +3369,7 @@
 				50D6137A25DC1D2700228385 /* MyFarmImages.swift in Sources */,
 				504969C525F81E23002C3E40 /* MyFarmDetailsPeopleCell.swift in Sources */,
 				2101D91225F354C100FB0DB9 /* YourProductsPresenter.swift in Sources */,
+				50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */,
 				506E4D0A25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.swift in Sources */,
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
 				5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */,
@@ -3329,6 +3407,7 @@
 				213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */,
 				213751DF25F4003A00E342EF /* CropsInfoDetailsModels.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
+				50D4ACC825FBF8C900880E55 /* MapPinView.swift in Sources */,
 				213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */,
 				50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */,
 				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
@@ -3365,6 +3444,7 @@
 				21767A3A25F592D00039E2B8 /* MyPostsViewController.swift in Sources */,
 				5001433825F99B3D00D1630E /* MyTasksLocalizer.swift in Sources */,
 				213751D925F3FD9500E342EF /* CropsInfoDetailsImages.swift in Sources */,
+				50D4ACC225FBF8C900880E55 /* MapLocalizer.swift in Sources */,
 				5062E7BB25FB26A5000398AA /* CropsInfoImages.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,
 				50068C7525E48A650097A870 /* MoreMenuViewController.swift in Sources */,
