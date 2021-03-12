@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,15 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        configureGoogleMaps()
         LanguageManager.shared.setDefaultlanguage(language: .ar)
         configureRootViewController()
 
         return true
     }
     
+    private func configureGoogleMaps() {
+        GMSServices.provideAPIKey("AIzaSyBr3c-6QjeizszKa59wNfx5GiZYZd26UGA")
+    }
+    
     func configureRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = TabBarViewController()
+        let rootViewController = MapViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navigationController
