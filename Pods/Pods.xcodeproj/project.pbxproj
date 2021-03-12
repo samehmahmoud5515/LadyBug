@@ -3,55 +3,121 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleMaps;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		16837052DE84B371DCC0CCBF0AA5583C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C9D13D302A898F967CF7DF5E3C6AD0BE /* Pods-LadyBug-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2878D1A854C5ECC8674B4973C52DD8A0 /* Pods-LadyBug-dummy.m */; };
-		F7C5DCCF182B6D32271D2D9AC5E7F5B2 /* Pods-LadyBug-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87BD443674E32EE517FCF4238508CB23 /* Pods-LadyBug-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8058E0D0E36F1D2C307E5700FAB2C380 /* Pods-LadyBug-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59EA9FC89EB78901F63CD3CA3A40990B /* Pods-LadyBug-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		994284F38748B3E79AE2E90920929486 /* Pods-LadyBug-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 760FB68FCECDD192E64D23D26066DE16 /* Pods-LadyBug-dummy.m */; };
+		9BAFFB82A1CDAA44FA99FF6FE8E77E71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FB96E720162DC61A6691E26B50E8F2A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		2237F3A2AAF65A50D9FC98A2BFEE5ED1 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
-		2878D1A854C5ECC8674B4973C52DD8A0 /* Pods-LadyBug-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LadyBug-dummy.m"; sourceTree = "<group>"; };
-		31873539B8E39F0E6F762AD1FFFFFE07 /* Pods-LadyBug-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LadyBug-acknowledgements.markdown"; sourceTree = "<group>"; };
-		52F2870FC89B4A4792C9E1919B23F1F7 /* Pods-LadyBug-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-Info.plist"; sourceTree = "<group>"; };
+		01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		1C68391F9579082EFFF5D01C32B55D6F /* Pods-LadyBug-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LadyBug-acknowledgements.markdown"; sourceTree = "<group>"; };
+		59EA9FC89EB78901F63CD3CA3A40990B /* Pods-LadyBug-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LadyBug-umbrella.h"; sourceTree = "<group>"; };
 		5AB8C2B2730BBCBDC257BB0CF14EA0B0 /* Pods_LadyBug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LadyBug.framework; path = "Pods-LadyBug.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6743AF4BAB8725601C1FA4367E21451C /* Pods-LadyBug.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LadyBug.modulemap"; sourceTree = "<group>"; };
+		6C21ADAB8FE346644A8C7C6C031776C4 /* Pods-LadyBug-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		82FEC20D3771AC94F2E4D4FFE80BCB0F /* Pods-LadyBug-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-acknowledgements.plist"; sourceTree = "<group>"; };
-		87BD443674E32EE517FCF4238508CB23 /* Pods-LadyBug-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LadyBug-umbrella.h"; sourceTree = "<group>"; };
+		760FB68FCECDD192E64D23D26066DE16 /* Pods-LadyBug-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LadyBug-dummy.m"; sourceTree = "<group>"; };
+		82370EC5FEE074CECA76A8733C61A231 /* Pods-LadyBug-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LadyBug-resources.sh"; sourceTree = "<group>"; };
+		8D633058B3640059E5F5DC5EA0D313E8 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4DDF2E86611EF17F1166E04D603B3CE /* Pods-LadyBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.release.xcconfig"; sourceTree = "<group>"; };
+		AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		CB2E9359F3D4D9434DBA1F9BDB7FF284 /* Pods-LadyBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.release.xcconfig"; sourceTree = "<group>"; };
+		CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		D5E8F0D5076A7C16E19D9E4FC7464B2E /* Pods-LadyBug.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LadyBug.modulemap"; sourceTree = "<group>"; };
+		E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		F2B07C52D130AD06A46BB597130AEAE9 /* Pods-LadyBug-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1CCC73D83D3F236DD29333E9882EE442 /* Frameworks */ = {
+		5AD37EF36DD5A6811678CD63A0DA8B6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16837052DE84B371DCC0CCBF0AA5583C /* Foundation.framework in Frameworks */,
+				9BAFFB82A1CDAA44FA99FF6FE8E77E71 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4EE080E70659893D497559198A78C86B /* Pods-LadyBug */ = {
+		16BDFBF3278A3A315F3DB921A41AD149 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6743AF4BAB8725601C1FA4367E21451C /* Pods-LadyBug.modulemap */,
-				31873539B8E39F0E6F762AD1FFFFFE07 /* Pods-LadyBug-acknowledgements.markdown */,
-				82FEC20D3771AC94F2E4D4FFE80BCB0F /* Pods-LadyBug-acknowledgements.plist */,
-				2878D1A854C5ECC8674B4973C52DD8A0 /* Pods-LadyBug-dummy.m */,
-				52F2870FC89B4A4792C9E1919B23F1F7 /* Pods-LadyBug-Info.plist */,
-				87BD443674E32EE517FCF4238508CB23 /* Pods-LadyBug-umbrella.h */,
-				2237F3A2AAF65A50D9FC98A2BFEE5ED1 /* Pods-LadyBug.debug.xcconfig */,
-				A4DDF2E86611EF17F1166E04D603B3CE /* Pods-LadyBug.release.xcconfig */,
+				1A7ED73031E8F18A0744ADFB9ADEDF45 /* Pods-LadyBug */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1A7ED73031E8F18A0744ADFB9ADEDF45 /* Pods-LadyBug */ = {
+			isa = PBXGroup;
+			children = (
+				D5E8F0D5076A7C16E19D9E4FC7464B2E /* Pods-LadyBug.modulemap */,
+				1C68391F9579082EFFF5D01C32B55D6F /* Pods-LadyBug-acknowledgements.markdown */,
+				F2B07C52D130AD06A46BB597130AEAE9 /* Pods-LadyBug-acknowledgements.plist */,
+				760FB68FCECDD192E64D23D26066DE16 /* Pods-LadyBug-dummy.m */,
+				6C21ADAB8FE346644A8C7C6C031776C4 /* Pods-LadyBug-Info.plist */,
+				82370EC5FEE074CECA76A8733C61A231 /* Pods-LadyBug-resources.sh */,
+				59EA9FC89EB78901F63CD3CA3A40990B /* Pods-LadyBug-umbrella.h */,
+				8D633058B3640059E5F5DC5EA0D313E8 /* Pods-LadyBug.debug.xcconfig */,
+				CB2E9359F3D4D9434DBA1F9BDB7FF284 /* Pods-LadyBug.release.xcconfig */,
 			);
 			name = "Pods-LadyBug";
 			path = "Target Support Files/Pods-LadyBug";
+			sourceTree = "<group>";
+		};
+		1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				5FCC553E82707BA26B1F6EDC00161B0D /* Base */,
+				387015716759109261086A8C0CA736F5 /* Maps */,
+				9601491F11C5653D98D1EB5DF2155DFE /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		387015716759109261086A8C0CA736F5 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */,
+				E48211C21EA696EBC32B31525F5FFA67 /* Resources */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -62,12 +128,22 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		A175DF9594954335801B872C3240D887 /* Targets Support Files */ = {
+		5FCC553E82707BA26B1F6EDC00161B0D /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4EE080E70659893D497559198A78C86B /* Pods-LadyBug */,
+				1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */,
 			);
-			name = "Targets Support Files";
+			name = Base;
+			sourceTree = "<group>";
+		};
+		9601491F11C5653D98D1EB5DF2155DFE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */,
+				C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
 			sourceTree = "<group>";
 		};
 		C56B234B675CA8F00BB2B1B5DA07A24C /* Products */ = {
@@ -83,8 +159,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				DF3634087891871FA7B65CC4A8E6DB71 /* Pods */,
 				C56B234B675CA8F00BB2B1B5DA07A24C /* Products */,
-				A175DF9594954335801B872C3240D887 /* Targets Support Files */,
+				16BDFBF3278A3A315F3DB921A41AD149 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,14 +173,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF3634087891871FA7B65CC4A8E6DB71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E48211C21EA696EBC32B31525F5FFA67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */,
+				E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1BD73908615F1B843E64AF6607B76C25 /* Headers */ = {
+		45B7246EF0F90BB9BFD3B6803F3EE776 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C5DCCF182B6D32271D2D9AC5E7F5B2 /* Pods-LadyBug-umbrella.h in Headers */,
+				8058E0D0E36F1D2C307E5700FAB2C380 /* Pods-LadyBug-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,16 +214,17 @@
 /* Begin PBXNativeTarget section */
 		76A4E6F7AB5DB7FB9C91DE59AA59B58D /* Pods-LadyBug */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD223E04260D66DBF14663310A3F769C /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */;
+			buildConfigurationList = 1B5DF82364D753856016C4AC2EE77262 /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */;
 			buildPhases = (
-				1BD73908615F1B843E64AF6607B76C25 /* Headers */,
-				0CD18FD1995F6FC46CAABE4C1504F8EF /* Sources */,
-				1CCC73D83D3F236DD29333E9882EE442 /* Frameworks */,
-				BB24E0C53A6F4C75B987AEFD756A986A /* Resources */,
+				45B7246EF0F90BB9BFD3B6803F3EE776 /* Headers */,
+				94FDD40FFE2F6531C1DF379978757D8B /* Sources */,
+				5AD37EF36DD5A6811678CD63A0DA8B6A /* Frameworks */,
+				6CA8EB2839F9B15E521041E27E701F5F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7D28B6A5FDA235429BAB19ED7DA8B67A /* PBXTargetDependency */,
 			);
 			name = "Pods-LadyBug";
 			productName = "Pods-LadyBug";
@@ -138,7 +241,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -150,13 +253,14 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
 				76A4E6F7AB5DB7FB9C91DE59AA59B58D /* Pods-LadyBug */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB24E0C53A6F4C75B987AEFD756A986A /* Resources */ = {
+		6CA8EB2839F9B15E521041E27E701F5F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,17 +270,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0CD18FD1995F6FC46CAABE4C1504F8EF /* Sources */ = {
+		94FDD40FFE2F6531C1DF379978757D8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9D13D302A898F967CF7DF5E3C6AD0BE /* Pods-LadyBug-dummy.m in Sources */,
+				994284F38748B3E79AE2E90920929486 /* Pods-LadyBug-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7D28B6A5FDA235429BAB19ED7DA8B67A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = FB96E720162DC61A6691E26B50E8F2A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0E5E63ECA743FDEB21217F03FA926957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2E9359F3D4D9434DBA1F9BDB7FF284 /* Pods-LadyBug.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -243,6 +393,75 @@
 			};
 			name = Debug;
 		};
+		6CCBCE52FD46D89565DEB676446DB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B52AED984E5F96408001A1A7FFB4B3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9038ABDCED5E686BB873C0CFE646C1D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D633058B3640059E5F5DC5EA0D313E8 /* Pods-LadyBug.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,96 +524,32 @@
 			};
 			name = Release;
 		};
-		E54A823716F51BAFA99A890208BDDABB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2237F3A2AAF65A50D9FC98A2BFEE5ED1 /* Pods-LadyBug.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FA859C1BEFDD4C33F4A3D99ACDB71786 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4DDF2E86611EF17F1166E04D603B3CE /* Pods-LadyBug.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LadyBug/Pods-LadyBug.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B5DF82364D753856016C4AC2EE77262 /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9038ABDCED5E686BB873C0CFE646C1D1 /* Debug */,
+				0E5E63ECA743FDEB21217F03FA926957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CCBCE52FD46D89565DEB676446DB083 /* Debug */,
+				7B52AED984E5F96408001A1A7FFB4B3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
 				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CD223E04260D66DBF14663310A3F769C /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E54A823716F51BAFA99A890208BDDABB /* Debug */,
-				FA859C1BEFDD4C33F4A3D99ACDB71786 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

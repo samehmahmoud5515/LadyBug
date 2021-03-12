@@ -6,5 +6,5 @@ target 'LadyBug' do
   use_frameworks!
 
   #pod 'IBAnimatable'
-
+  pod 'GoogleMaps'
 end
