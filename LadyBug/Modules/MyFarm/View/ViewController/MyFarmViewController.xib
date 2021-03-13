@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyFarmViewController" customModule="LadyBug" customModuleProvider="target">
             <connections>
+                <outlet property="addFarmButton" destination="XPV-PA-jco" id="kCn-JV-cqV"/>
                 <outlet property="tableView" destination="WQQ-Dv-jfY" id="KH5-Ds-zcX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,27 +21,54 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_farm_background" translatesAutoresizingMaskIntoConstraints="NO" id="CbJ-fG-s8q">
+                    <rect key="frame" x="0.0" y="229" width="414" height="667"/>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="always" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQQ-Dv-jfY">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="fRd-fU-jcX"/>
                         <outlet property="delegate" destination="-1" id="WEl-Wf-0L1"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPV-PA-jco">
+                    <rect key="frame" x="13" y="773" width="134" height="48"/>
+                    <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="contentEdgeInsets" minX="9" minY="13" maxX="9" maxY="13"/>
+                    <state key="normal" title="اضف مزرعتك" image="add_farm_ic">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addFarmButtonDidTapped:" destination="-1" eventType="touchUpInside" id="YYu-sk-Ecr"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="CbJ-fG-s8q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Ar-VS-OMA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XPV-PA-jco" secondAttribute="bottom" constant="41" id="DvZ-w8-I3b"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WQQ-Dv-jfY" secondAttribute="bottom" id="Olg-NB-yS9"/>
+                <constraint firstItem="XPV-PA-jco" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="13" id="Pkf-Uh-BCj"/>
                 <constraint firstItem="WQQ-Dv-jfY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="U2l-uC-t3i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CbJ-fG-s8q" secondAttribute="trailing" id="bbd-pO-gUd"/>
                 <constraint firstItem="WQQ-Dv-jfY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jdd-YZ-gZj"/>
+                <constraint firstAttribute="bottom" secondItem="CbJ-fG-s8q" secondAttribute="bottom" id="sAS-WD-FQQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WQQ-Dv-jfY" secondAttribute="trailing" id="z4S-QZ-kjS"/>
             </constraints>
             <point key="canvasLocation" x="139" y="81"/>
         </view>
     </objects>
     <resources>
+        <image name="add_farm_ic" width="19.5" height="16.5"/>
+        <image name="my_farm_background" width="375" height="667"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

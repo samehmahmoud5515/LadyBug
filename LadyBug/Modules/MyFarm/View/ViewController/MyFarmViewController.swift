@@ -11,6 +11,7 @@ class MyFarmViewController: UIViewController {
     
     //Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addFarmButton: UIButton!
     
     private var presnter: MyFarmPresenterProtocol!
     
@@ -30,7 +31,6 @@ class MyFarmViewController: UIViewController {
         presnter.attach()
     }
     
-    
 }
 
 extension MyFarmViewController {
@@ -41,6 +41,8 @@ extension MyFarmViewController {
         registerTableViewCell()
         setupTableViewRowHeight()
         setupTableViewHeaderView()
+        setupTableViewFooter()
+        setupAddFarmButtonFont()
     }
     
     private func setupNaviagtionBarUI() {
@@ -85,16 +87,15 @@ extension MyFarmViewController {
     
     private func setupTableViewHeaderView() {
         let headerView = MyFarmWeatherHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 182))
-        headerView.translatesAutoresizingMaskIntoConstraints = false
         tableView.tableHeaderView = headerView
-        
-        headerView.leadingAnchor.constraint(equalTo: tableView.leadingAnchor, constant: 0).isActive = true
-        headerView.trailingAnchor.constraint(equalTo: tableView.trailingAnchor, constant: 0).isActive = true
-        headerView.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
-        headerView.topAnchor.constraint(equalTo: tableView.topAnchor, constant: 0).isActive = true
-        let constraint = headerView.heightAnchor.constraint(equalToConstant: 50)
-            constraint.priority = UILayoutPriority(250)
-            constraint.isActive = true
+    }
+    
+    private func setupTableViewFooter() {
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: addFarmButton.bounds.height + 41))
+    }
+    
+    private func setupAddFarmButtonFont() {
+        addFarmButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
     }
 
 }
@@ -118,5 +119,10 @@ extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = MyFarmDetailsViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension MyFarmViewController {
+    @IBAction func addFarmButtonDidTapped(_ sender: Any) {
     }
 }

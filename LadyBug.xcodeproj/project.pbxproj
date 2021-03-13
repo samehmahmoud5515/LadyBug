@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1481,13 +1481,6 @@
 			path = DynamicHeightTableView;
 			sourceTree = "<group>";
 		};
-		503CB59925E06D5C00B7A393 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		503CB59B25E07AD100B7A393 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -2796,7 +2789,6 @@
 		50D6137025DC1CA900228385 /* MyFarm */ = {
 			isa = PBXGroup;
 			children = (
-				503CB59925E06D5C00B7A393 /* Models */,
 				21A5A12E25DB2C54001A2F64 /* Resources */,
 				50FA842125DC465B008A9216 /* Protocols */,
 				50FA841D25DC461A008A9216 /* Presenter */,
