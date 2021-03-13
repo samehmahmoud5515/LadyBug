@@ -42,10 +42,10 @@
 		2137520325F436CD00E342EF /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2137520125F436CD00E342EF /* FollowersViewController.xib */; };
 		2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88625E081BC008FE0A0 /* LoginImages.swift */; };
 		2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */; };
-		2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* loginPresenter.swift */; };
+		2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */; };
 		2166B89425E081BC008FE0A0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166B88D25E081BC008FE0A0 /* LoginViewController.xib */; };
 		2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88E25E081BC008FE0A0 /* LoginViewController.swift */; };
-		2166B89625E081BC008FE0A0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89025E081BC008FE0A0 /* Protocols.swift */; };
+		2166B89625E081BC008FE0A0 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89025E081BC008FE0A0 /* LoginProtocols.swift */; };
 		2166B8A425E081C8008FE0A0 /* RegistrationLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89B25E081C8008FE0A0 /* RegistrationLocalizer.swift */; };
 		2166B8A525E081C8008FE0A0 /* Registration Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B89D25E081C8008FE0A0 /* Registration Presenter.swift */; };
 		2166B8A625E081C8008FE0A0 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */; };
@@ -321,10 +321,10 @@
 		2137520125F436CD00E342EF /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
 		2166B88625E081BC008FE0A0 /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
 		2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
-		2166B88A25E081BC008FE0A0 /* loginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
+		2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		2166B88D25E081BC008FE0A0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		2166B88E25E081BC008FE0A0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2166B89025E081BC008FE0A0 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		2166B89025E081BC008FE0A0 /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		2166B89B25E081C8008FE0A0 /* RegistrationLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationLocalizer.swift; sourceTree = "<group>"; };
 		2166B89D25E081C8008FE0A0 /* Registration Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Registration Presenter.swift"; sourceTree = "<group>"; };
 		2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
@@ -1070,7 +1070,7 @@
 		2166B88925E081BC008FE0A0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				2166B88A25E081BC008FE0A0 /* loginPresenter.swift */,
+				2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1095,7 +1095,7 @@
 		2166B88F25E081BC008FE0A0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				2166B89025E081BC008FE0A0 /* Protocols.swift */,
+				2166B89025E081BC008FE0A0 /* LoginProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1114,17 +1114,9 @@
 		2166B89825E081C8008FE0A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2166B89925E081C8008FE0A0 /* Images */,
 				2166B89A25E081C8008FE0A0 /* Localizer */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		2166B89925E081C8008FE0A0 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		2166B89A25E081C8008FE0A0 /* Localizer */ = {
@@ -3283,7 +3275,7 @@
 				21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */,
 				504969BE25F81E23002C3E40 /* MyFarmDetailsTaskCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
-				2166B89625E081BC008FE0A0 /* Protocols.swift in Sources */,
+				2166B89625E081BC008FE0A0 /* LoginProtocols.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
 				506A5A2825E5671A0014D59A /* MoreMenuProfileCell.swift in Sources */,
 				213751FB25F4355900E342EF /* FollowersPresenter.swift in Sources */,
@@ -3427,7 +3419,7 @@
 				50068C7625E48A650097A870 /* MoreMenuProtocols.swift in Sources */,
 				50E6652225E40CDE00D48EA8 /* InterestedSelectionPresenter.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
-				2166B89325E081BC008FE0A0 /* loginPresenter.swift in Sources */,
+				2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */,
 				504969CA25F81E23002C3E40 /* MyFarmDetailsUIModel.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */,

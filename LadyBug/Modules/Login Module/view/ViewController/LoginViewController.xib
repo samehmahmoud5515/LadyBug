@@ -97,6 +97,9 @@
                                             <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="loginButtonDidTapped:" destination="-1" eventType="touchUpInside" id="l1j-pG-o98"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="او سجل بواسطة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0R-jG-I9S" userLabel="registration">
                                     <rect key="frame" x="24" y="674.66666666666663" width="366" height="20.333333333333371"/>

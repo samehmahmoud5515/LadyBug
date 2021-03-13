@@ -27,8 +27,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginGoogleButtonTitle: UIButton!
     @IBOutlet weak var loginAppleButtonTitle: UIButton!
     
-    private var presenter: loginPresenter!
+    private var presenter: LoginPresenterProtocol!
     
+    init() {
+        super.init(nibName: "\(LoginViewController.self)", bundle: nil)
+        presenter = LoginPresenter(view: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     override func viewDidLoad() {
@@ -49,8 +57,6 @@ class LoginViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         
     }
-    
-    
 }
 extension LoginViewController{
     
@@ -100,10 +106,11 @@ extension LoginViewController{
         loginSignInButtonTitle.backgroundColor = UIColor.lightBlueGrey
     }
 }
-extension LoginViewController: loginViewProtocol {
-    
-    
-    
+extension LoginViewController: LoginViewProtocol {
+    func navigateToTabBarController() {
+        let vc = TabBarViewController()
+        navigationController?.viewControllers = [vc]
+    }
 }
 
 extension LoginViewController: StandardTextFieldViewProtocol {
@@ -167,5 +174,11 @@ extension LoginViewController {
 
     @objc func keyboardWillHide(notification: NSNotification) {
         scrollView.contentInset = .zero
+    }
+}
+
+extension LoginViewController {
+    @IBAction func loginButtonDidTapped(_ sender: Any) {
+        presenter.login(with: userNameField.inputText, password: passwordField.inputText)
     }
 }

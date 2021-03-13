@@ -37,13 +37,13 @@ class LanguageManager {
     // MARK: - Methods
     func setup() {
         if LanguageManager.currentLanguage == .ar {
-            setLanguage(language: .ar)
+            changeLanguage(language: .ar)
         } else {
-            setLanguage(language: .en)
+            changeLanguage(language: .en)
         }
     }
     
-    func setLanguage(language: Language) {
+    func changeLanguage(language: Language) {
         UserDefaults.standard.setValue([language.rawValue], forKey: APPLE_LANGUAGE_KEY)
         setSemanticContentAttribute(semantic: viewDirection)
         LocalizerService.shared.doSwizzling()

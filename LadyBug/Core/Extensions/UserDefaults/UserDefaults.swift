@@ -46,5 +46,7 @@ extension UserDefaults {
 
 // Usage
 extension DefaultsKeys {
-    
+    static let username = DefaultsKey<String>("username")
+    static let password = DefaultsKey<String>("password")
+    static let isUserLogged = DefaultsKey<Bool>("isUserLogged")
 }

@@ -6,6 +6,11 @@
 //
 
 import Foundation
+
 protocol RegistrationViewProtocol: class {
+   
+}
+
+protocol RegistrationPresenterProtocol: class {
    
 }

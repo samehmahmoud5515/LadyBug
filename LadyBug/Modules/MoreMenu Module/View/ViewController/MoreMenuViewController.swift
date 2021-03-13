@@ -170,7 +170,7 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             let notificationTabelViewController = NotificationTabelViewController()
                      navigationController?.pushViewController(notificationTabelViewController, animated: true)
         case .language :
-            break
+            showLanguageAlert()
         case.tasks :
             let vc = MyTasksViewController()
             navigationController?.pushViewController(vc, animated: true)
@@ -190,7 +190,8 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             
             break
         case.logOut :
-            break
+            let vc = LoginViewController()
+            navigationController?.navigationController?.viewControllers = [vc]
         default:
             break
         }
@@ -198,5 +199,13 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
     
     func notifiyDataChange() {
         tableView.reloadData()
+    }
+    
+    private func showLanguageAlert() {
+        showTwoButtonsAlert(title: "Change Language", message: "", firstActionTitle: "English", firstAction: { () -> () in
+            LanguageManager.shared.changeLanguage(language: Language.en)
+        }, secondActionTitle: "Arabic") {
+            LanguageManager.shared.changeLanguage(language: Language.ar)
+        }
     }
 }

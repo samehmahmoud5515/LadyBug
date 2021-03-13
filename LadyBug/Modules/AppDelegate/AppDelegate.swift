@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureGoogleMaps()
         LanguageManager.shared.setDefaultlanguage(language: .ar)
         configureRootViewController()
+        Defaults[.username] = "admin@google.com"
+        Defaults[.password] = "12345678"
 
         return true
     }
@@ -28,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = TabBarViewController()
+        let rootViewController = (Defaults[.isUserLogged] ?? false) ? TabBarViewController() : LoginViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navigationController

@@ -22,4 +22,24 @@ extension UIViewController {
             self?.present(alertController, animated: true)
         }
     }
+    
+    func showTwoButtonsAlert(title: String?, message: String?, firstActionTitle: String?, firstAction: (() -> Void)? = nil, secondActionTitle: String?, secondAction: (() -> Void)? = nil) {
+        DispatchQueue.main.async { [weak self] in
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+            let firstAlertAction = UIAlertAction(title: firstActionTitle, style: .default) { _ in
+                alertController.dismiss(animated: true)
+                firstAction?()
+            }
+            
+            let secondAlertAction = UIAlertAction(title: secondActionTitle, style: .default) { _ in
+                alertController.dismiss(animated: true)
+                secondAction?()
+            }
+
+            alertController.addAction(firstAlertAction)
+            alertController.addAction(secondAlertAction)
+            self?.present(alertController, animated: true)
+        }
+    }
 }
