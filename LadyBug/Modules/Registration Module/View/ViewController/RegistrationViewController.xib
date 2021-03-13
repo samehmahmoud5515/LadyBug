@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="LadyBug" customModuleProvider="target">
             <connections>
-                <outlet property="PhoneNumerView" destination="sbD-xM-Bd4" id="Xz4-ur-Iei"/>
                 <outlet property="attachAPictureButton" destination="fWS-ry-dOo" id="Qbv-jW-dMm"/>
-                <outlet property="chooseYourProfessionView" destination="IN1-OY-iPz" id="HrZ-IV-9co"/>
                 <outlet property="createAccountButton" destination="00O-pK-LlO" id="GE0-8g-vL9"/>
-                <outlet property="emailView" destination="UKn-ql-xcx" id="eOQ-aU-T1d"/>
-                <outlet property="passwordConfirmationView" destination="LBx-GD-uaY" id="LAu-Ng-BUf"/>
-                <outlet property="passwordView" destination="gNr-Ku-IuZ" id="HnZ-lL-XW2"/>
+                <outlet property="emailField" destination="UKn-ql-xcx" id="eOQ-aU-T1d"/>
+                <outlet property="mobileField" destination="sbD-xM-Bd4" id="Xz4-ur-Iei"/>
+                <outlet property="passwordField" destination="gNr-Ku-IuZ" id="HnZ-lL-XW2"/>
                 <outlet property="registrationImageVew" destination="iHg-yD-2cA" id="MYz-Ao-KfW"/>
+                <outlet property="retypePasswordField" destination="LBx-GD-uaY" id="LAu-Ng-BUf"/>
+                <outlet property="scrollView" destination="ujn-qa-0bK" id="sqv-Ui-gpc"/>
+                <outlet property="selectProfessionSelectionView" destination="IN1-OY-iPz" id="HrZ-IV-9co"/>
                 <outlet property="termsAndConditionsButton" destination="0dD-jq-r4k" id="HsK-8U-I0c"/>
-                <outlet property="userNameView" destination="FZI-Bi-kXI" id="CdP-O9-lRs"/>
+                <outlet property="userNameField" destination="FZI-Bi-kXI" id="CdP-O9-lRs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,11 +30,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujn-qa-0bK">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="ujn-qa-0bK">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpF-OX-Xji">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="881"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="869"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Diw-ff-dzv">
                                     <rect key="frame" x="160" y="81" width="94" height="94"/>
@@ -65,7 +67,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWS-ry-dOo">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWS-ry-dOo">
                                     <rect key="frame" x="153.66666666666666" y="191" width="106.99999999999997" height="37"/>
                                     <inset key="contentEdgeInsets" minX="16" minY="9" maxX="18" maxY="10"/>
                                     <state key="normal" title="ارفق صورتك">
@@ -83,46 +85,57 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </button>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-mc-4if">
-                                    <rect key="frame" x="24" y="249" width="366" height="472"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-mc-4if">
+                                    <rect key="frame" x="24" y="249" width="366" height="460"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZI-Bi-kXI">
-                                            <rect key="frame" x="23" y="0.0" width="320" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZI-Bi-kXI" customClass="StandardTextFieldView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="LyX-i6-tBE"/>
+                                                <constraint firstAttribute="height" priority="250" constant="40" id="LyX-i6-tBE"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKn-ql-xcx">
-                                            <rect key="frame" x="23" y="72" width="320" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKn-ql-xcx" customClass="StandardTextFieldView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="82" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="50" id="akN-4L-OHS"/>
+                                            </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IN1-OY-iPz">
-                                            <rect key="frame" x="23" y="144" width="320" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IN1-OY-iPz" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="164" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="50" id="Dvx-BH-9p4"/>
+                                            </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbD-xM-Bd4">
-                                            <rect key="frame" x="23" y="216" width="320" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbD-xM-Bd4" customClass="StandardTextFieldView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="246" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="50" id="gXs-tQ-Rt3"/>
+                                            </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNr-Ku-IuZ">
-                                            <rect key="frame" x="23" y="288" width="320" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNr-Ku-IuZ" customClass="StandardTextFieldView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="328" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="50" id="kej-Vz-ajX"/>
+                                            </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBx-GD-uaY">
-                                            <rect key="frame" x="23" y="360" width="320" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOl-xP-vjI">
-                                            <rect key="frame" x="23" y="432" width="320" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBx-GD-uaY" customClass="StandardTextFieldView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="410" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="50" id="oQK-wb-pOL"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-dM-cCk">
-                                    <rect key="frame" x="24" y="754" width="366" height="101"/>
+                                    <rect key="frame" x="24" y="742" width="366" height="101"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00O-pK-LlO">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00O-pK-LlO">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
                                             <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -137,7 +150,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dD-jq-r4k">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dD-jq-r4k">
                                             <rect key="frame" x="0.0" y="61" width="366" height="40"/>
                                             <state key="normal" title="بالنقر فوق تسجيل ، فإنك توافق على الشروط والأحكام التالية بدون تحفظ">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -160,7 +173,7 @@
                                     </state>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="sdr-dM-cCk" firstAttribute="leading" secondItem="uOn-mc-4if" secondAttribute="leading" id="2hh-nr-ATu"/>
                                 <constraint firstItem="sdr-dM-cCk" firstAttribute="trailing" secondItem="uOn-mc-4if" secondAttribute="trailing" id="79g-EL-WaK"/>
@@ -190,11 +203,10 @@
                         <constraint firstItem="gpF-OX-Xji" firstAttribute="leading" secondItem="ujn-qa-0bK" secondAttribute="leading" id="yHc-iH-Mir"/>
                         <constraint firstItem="gpF-OX-Xji" firstAttribute="top" secondItem="ujn-qa-0bK" secondAttribute="top" id="zD3-rv-it6"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="hCl-GN-e4e"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="2Kw-LD-nG7"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ujn-qa-0bK" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="0WJ-SF-YSn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ujn-qa-0bK" secondAttribute="trailing" id="FZR-qH-dAX"/>
@@ -202,12 +214,14 @@
                 <constraint firstItem="ujn-qa-0bK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="etS-QY-AZB"/>
                 <constraint firstItem="ujn-qa-0bK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="h85-mL-Fsi"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="130.43478260869566" y="136.14130434782609"/>
         </view>
     </objects>
     <resources>
         <image name="Components-Badges-Icon " width="144" height="144"/>
         <image name="registration_load_image" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

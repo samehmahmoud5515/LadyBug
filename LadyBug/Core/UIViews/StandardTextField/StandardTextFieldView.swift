@@ -190,7 +190,7 @@ extension StandardTextFieldView {
     @IBAction func clearTextField(_ sender: Any) {
         if !isSecureEntry {
             textField.text = ""
-            showHidePasswordButton.isHidden = true
+            clearButton.isHidden = true
         }
     }
 }
@@ -214,6 +214,6 @@ extension StandardTextFieldView {
 extension StandardTextFieldView {
     struct Images {
         let normalEye = "common_open_eye_ic"
-        let dashedEye = "common_open_eye_ic"
+        let dashedEye = "common_dashed_eye_ic"
     }
 }

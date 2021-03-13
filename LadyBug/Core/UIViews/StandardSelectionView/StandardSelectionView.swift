@@ -41,7 +41,8 @@ class StandardSelectionView: UIView {
 }
 
 extension StandardSelectionView {
-    func setupUI(title: String, selectionTitle: String) {
+    func setupUI(title: String? = nil, selectionTitle: String) {
+        titleLabel.isHidden = title == nil
         titleLabel.text = title
         selectionTextField.text = ""
         setupPlaceholder(placeholder: selectionTitle)
