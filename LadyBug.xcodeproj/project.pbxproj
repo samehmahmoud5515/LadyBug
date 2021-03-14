@@ -1042,6 +1042,29 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		216647F725FEA7E40028E335 /* CreateNewPassword */ = {
+			isa = PBXGroup;
+			children = (
+				216647F825FEA8780028E335 /* Resources */,
+			);
+			path = CreateNewPassword;
+			sourceTree = "<group>";
+		};
+		216647F825FEA8780028E335 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				216647F925FEA8A80028E335 /* Localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		216647F925FEA8A80028E335 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -2862,6 +2885,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				216647F725FEA7E40028E335 /* CreateNewPassword */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
 				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
 				5001432025F99A6600D1630E /* MyTasks Module */,
