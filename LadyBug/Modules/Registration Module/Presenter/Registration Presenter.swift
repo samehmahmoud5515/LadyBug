@@ -9,9 +9,9 @@ import Foundation
 
 class RegistrationPresenter: RegistrationPresenterProtocol {
     
-    
-     weak var view: RegistrationViewProtocol?
-
+    weak var view: RegistrationViewProtocol?
+    var images = ImageLocalizer()
+    var localizer = RegistrationLocalizer()
      init(view: RegistrationViewProtocol) {
         self.view = view
      }

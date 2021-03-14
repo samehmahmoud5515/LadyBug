@@ -12,5 +12,7 @@ protocol LoginViewProtocol: class {
 }
 
 protocol LoginPresenterProtocol: class {
+    var localizer: loginLocalizer { get }
+    var images: LoginImages { get }
     func login(with username: String, password: String)
 }

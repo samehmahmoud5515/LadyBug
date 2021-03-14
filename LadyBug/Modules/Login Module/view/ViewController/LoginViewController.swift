@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginGoogleButtonTitle: UIButton!
     @IBOutlet weak var loginAppleButtonTitle: UIButton!
     
-    private var presenter: LoginPresenter!
+    private var presenter: LoginPresenterProtocol!
     
     init() {
         super.init(nibName: "\(LoginViewController.self)", bundle: nil)
@@ -37,8 +37,6 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setColor()
@@ -48,10 +46,25 @@ class LoginViewController: UIViewController {
         passwordFieldView()
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
-        
+    }
+    
+    @IBAction func forGetPasswordActionButton(_ sender: UIButton) {
+        self.navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
+    }
+    @IBAction func newUserActionButton(_ sender: UIButton) {
+        self.navigationController?.pushViewController(RegistrationViewController(), animated: true)
+    }
+    @IBAction func singInActionButton(_ sender: UIButton) {
+    }
+    @IBAction func appleRegistrationActionButton(_ sender: UIButton) {
+    }
+    @IBAction func googleRegistrationActionButton(_ sender: UIButton) {
+    }
+    @IBAction func facebookRegistrationActionButton(_ sender: UIButton) {
     }
 }
 extension LoginViewController{
+    
     private func setColor(){
         loginTitleLabel.textColor = UIColor.darkishGreen
         loginTitleDescriptionlabel.textColor = UIColor.darkishGreen
@@ -118,13 +131,11 @@ extension LoginViewController: StandardTextFieldViewProtocol {
     func didEndEditing(_ textField: StandardTextFieldView) {
         if textField == userNameField {
             if !textField.inputText.isValidUserName {
-                textField.displayError(presenter.localizer.loginScreenRegistrationAlertTitle
-)
+                textField.displayError(presenter.localizer.loginScreenRegistrationAlertTitle)
             }
         } else if textField == passwordField {
             if !textField.inputText.isValidPassword {
-                textField.displayError(presenter.localizer.loginScreenRegistrationAlertTitle
-)
+                textField.displayError(presenter.localizer.loginScreenRegistrationAlertPasswordTitle)
             }
         }
     }
@@ -152,7 +163,6 @@ extension LoginViewController: StandardTextFieldViewProtocol {
     }
     
 }
-
 extension LoginViewController {
     func observeOnKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)

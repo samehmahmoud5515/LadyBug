@@ -40,6 +40,9 @@ class loginLocalizer: CommonLocalizer {
     var logScreenForgetPasswordTitle: String {
         "log_screen_forget_password_title".localized
     }
+    var loginScreenRegistrationAlertPasswordTitle: String {
+           "login_screen_registration_alert_password_title".localized
+       }
     var loginScreenRegistration: String {
         "login_screen_registration".localized
     }
@@ -61,5 +64,4 @@ class loginLocalizer: CommonLocalizer {
     var loginScreenAppleTitle: String {
         "login_screen_apple_title".localized
     }
-    
 }

@@ -12,5 +12,6 @@ protocol RegistrationViewProtocol: class {
 }
 
 protocol RegistrationPresenterProtocol: class {
-   
+   var localizer: RegistrationLocalizer { get }
+    var images : ImageLocalizer{get}
 }

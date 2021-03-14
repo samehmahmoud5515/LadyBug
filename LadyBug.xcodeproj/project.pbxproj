@@ -40,6 +40,7 @@
 		213751FF25F436A300E342EF /* FollowersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213751FD25F436A300E342EF /* FollowersTableViewCell.xib */; };
 		2137520225F436CD00E342EF /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137520025F436CD00E342EF /* FollowersViewController.swift */; };
 		2137520325F436CD00E342EF /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2137520125F436CD00E342EF /* FollowersViewController.xib */; };
+		216647F525FE88920028E335 /* ImageLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216647F425FE88920028E335 /* ImageLocalizer.swift */; };
 		2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88625E081BC008FE0A0 /* LoginImages.swift */; };
 		2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */; };
 		2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */; };
@@ -319,6 +320,7 @@
 		213751FD25F436A300E342EF /* FollowersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersTableViewCell.xib; sourceTree = "<group>"; };
 		2137520025F436CD00E342EF /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		2137520125F436CD00E342EF /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
+		216647F425FE88920028E335 /* ImageLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLocalizer.swift; sourceTree = "<group>"; };
 		2166B88625E081BC008FE0A0 /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
 		2166B88825E081BC008FE0A0 /* LoginLoclizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoclizer.swift; sourceTree = "<group>"; };
 		2166B88A25E081BC008FE0A0 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -852,6 +854,7 @@
 		213751E725F4309600E342EF /* FollowersModule */ = {
 			isa = PBXGroup;
 			children = (
+				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
 				213751E925F430AF00E342EF /* Models */,
 				213751EC25F430BC00E342EF /* Resources */,
 				213751EB25F430B900E342EF /* Protocols */,
@@ -1031,13 +1034,21 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		216647F325FE88530028E335 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				216647F425FE88920028E335 /* ImageLocalizer.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
+				2166B88F25E081BC008FE0A0 /* Protocols */,
 				2166B88425E081BC008FE0A0 /* Resources */,
 				2166B88925E081BC008FE0A0 /* Presenter */,
 				2166B88B25E081BC008FE0A0 /* view */,
-				2166B88F25E081BC008FE0A0 /* Protocols */,
 			);
 			path = "Login Module";
 			sourceTree = "<group>";
@@ -1104,9 +1115,9 @@
 			isa = PBXGroup;
 			children = (
 				2166B89825E081C8008FE0A0 /* Resources */,
+				2166B8A225E081C8008FE0A0 /* Protocols */,
 				2166B89C25E081C8008FE0A0 /* Presenter */,
 				2166B89E25E081C8008FE0A0 /* View */,
-				2166B8A225E081C8008FE0A0 /* Protocols */,
 			);
 			path = "Registration Module";
 			sourceTree = "<group>";
@@ -1114,6 +1125,7 @@
 		2166B89825E081C8008FE0A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				216647F325FE88530028E335 /* Images */,
 				2166B89A25E081C8008FE0A0 /* Localizer */,
 			);
 			path = Resources;
@@ -2857,7 +2869,6 @@
 				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
 				2137520425F58DFC00E342EF /* MyPosts Module */,
 				213751E725F4309600E342EF /* FollowersModule */,
-				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
 				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
 				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
@@ -3314,6 +3325,7 @@
 				50E01ED725E5C9A30016DEAB /* MyCropsHeaderView.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
 				2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */,
+				216647F525FE88920028E335 /* ImageLocalizer.swift in Sources */,
 				504969D325F81E37002C3E40 /* AddPeopleToYourFarmViewController.swift in Sources */,
 				213751F825F4348000E342EF /* FollowersProtocols.swift in Sources */,
 				50A54C1325E3FF5C0052F701 /* InterestedSelectionCell.swift in Sources */,

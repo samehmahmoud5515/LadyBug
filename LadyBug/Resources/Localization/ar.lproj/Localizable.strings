@@ -21,6 +21,7 @@
 "login_screen_registration_by_email_or_phone_title" = "البريد الإلكتروني أو رقم الهاتف";
 "login_screen_password_title" = "كلمه السر";
 "login_screen_registration_alert_title" = "الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح";
+"login_screen_registration_alert_password_title" = "الرجاء كتابة كلمة المرور بطريقة صحيحة ";
 "log_screen_new_user_title" = "مستخدم جديد؟";
 "log_screen_forget_password_title" = "هل نسيت كلمة المرور؟";
 "login_screen_registration" = "تسجيل الدخول";
@@ -30,6 +31,7 @@
 "login_screen_google_title"= "جوجل";
 "login_screen_facebook_title"= "فيسبوك";
 "login_screen_apple_title"= "ابل";
+"login_screen_navigationitle_head_title"= "تسجيل حساب جديد";
 
 "home_screen_beafollower" = "كن متابع";
 "home_screen_post_details" = "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من صورة حقيقية لتصميم الموقع.";
@@ -54,12 +56,17 @@
 
 "registration_screen_create_new_account_title" = "تسجيل حساب جديد";
 "registration_screen_add_pic_title" = "ارفق صورتك";
-"registration_screen_user_name_title" = "حسن علي محم";
+"registration_screen_user_name_title" = "اسم المستخدم";
+"registration_screen_user_name_alert_title" = "يرجى كتابة الاسم بطريقة صحيحة";
 "registration_screen_email_title" = "البريد الإلكتروني";
+"registration_screen_email_alert_title" = "يرجى كتابة البريد الالكترونى بطريقة صحيحة";
 "registration_screen_choose_your_profession_title" = "اختر مهنتك";
 "registration_screen_phone_numer_title" = "رقم الهاتف";
+"registration_screen_phone_numer_alert_title" = "يرجى كتابة رقم الهاتف بطريقة صحيحة";
 "registration_screen_password_title" = "كلمه السر";
+"registration_screen_password_alert_title" = "يرجى كتابة كلمة السر بطريقة صحيحة";
 "registration_screen_password_confirmation_title" = "تأكيد كلمة السر";
+"registration_screen_password_confirmation_alert_title" = "كلمة السر غير متطابقة";
 "registration_screen_create_account_title" = "إنشاء حساب";
 "registration_screen_terms_and_conditions_title" = "بالنقر فوق تسجيل ، فإنك توافق على الشروط والأحكام التالية بدون تحفظ";
 //MARk: -  my_farm_localizer
@@ -79,7 +86,6 @@
 "my_farm_localizer_seedling_source_title"="مصدر الشتلة";
 "my_farm_localizer_widget_code_title"="كود القطعة";
 "my_farm_localizer_the_farm_location_title"="موقع المزرعة";
-
 "my_farm_localizer_the_number_of_acres_value_title"="فدان5";
 "my_farm_localizer_chemical_source_value_title"="شوري";
 "my_farm_localizer_history_of_cultivation_value_title" = "15-2-2020";
@@ -183,7 +189,9 @@
 //MARK: - MyPost Selection
 
 "my_posts_navigationitle_head_title" = "منشوراتي";
-
 "weather_title" = "الطقس";
 "weather_your_tasks_title" = "مهامك اليوم";
 "map_view_title" = "موقع المزرعة";
+//MARK: - ForgetPassword
+"forgot_screen_alert_wrong_title" = "الرجاء كتابة رقم هاتف او بريدك الالكتروني صحيح";
+"forgot_screen_placeholder_title" = "البريد الإلكتروني أو رقم الهاتف";
