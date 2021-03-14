@@ -68,7 +68,6 @@ extension FollowersViewController {
         titleLabel.textColor = .purplishBrown
         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         titleLabel.sizeToFit()
-        
         return UIBarButtonItem(customView: titleLabel)
     }
     private func registerTableViewCell() {

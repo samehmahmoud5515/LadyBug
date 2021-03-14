@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -86,7 +85,7 @@
                                         <constraint firstAttribute="height" priority="250" constant="40" id="M7a-Re-NB1"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mv-yR-eTH" userLabel="signIn">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mv-yR-eTH" userLabel="signIn">
                                     <rect key="frame" x="24" y="591.66666666666663" width="366" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="aAr-s4-8ov"/>
@@ -99,6 +98,7 @@
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="loginButtonDidTapped:" destination="-1" eventType="touchUpInside" id="l1j-pG-o98"/>
+                                        <action selector="singInActionButton:" destination="-1" eventType="touchUpInside" id="T6e-fL-q8K"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="او سجل بواسطة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0R-jG-I9S" userLabel="registration">
@@ -119,12 +119,15 @@
                                             <state key="normal" title="ابل" image="login_apple_btn"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" systemColor="linkColor"/>
+                                                    <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="appleRegistrationActionButton:" destination="-1" eventType="touchUpInside" id="SMW-hU-XIf"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH7-a3-GSJ" userLabel="google">
                                             <rect key="frame" x="123.66666666666666" y="0.0" width="118.66666666666666" height="40"/>
@@ -137,6 +140,9 @@
                                                     <real key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="googleRegistrationActionButton:" destination="-1" eventType="touchUpInside" id="aYi-pa-w1d"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ku8-LO-wYe" userLabel="faceBook">
                                             <rect key="frame" x="247.33333333333329" y="0.0" width="118.66666666666666" height="40"/>
@@ -149,24 +155,33 @@
                                                     <real key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="facebookRegistrationActionButton:" destination="-1" eventType="touchUpInside" id="HFo-db-xHN"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="Z2j-YO-1VK">
                                     <rect key="frame" x="24" y="530.66666666666663" width="366" height="30"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-cM-s6O" userLabel="forGetPassword">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-cM-s6O" userLabel="forGetPassword">
                                             <rect key="frame" x="0.0" y="0.0" width="134" height="30"/>
                                             <state key="normal" title="هل نسيت كلمة المرور؟"/>
+                                            <connections>
+                                                <action selector="forGetPasswordActionButton:" destination="-1" eventType="touchUpInside" id="Z7x-r9-QgG"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYP-ra-28G" userLabel="newUser">
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYP-ra-28G" userLabel="newUser">
                                             <rect key="frame" x="272" y="0.0" width="94" height="30"/>
                                             <state key="normal" title="مستخدم جديد؟"/>
+                                            <connections>
+                                                <action selector="newUserActionButton:" destination="-1" eventType="touchUpInside" id="FHX-AD-9Q0"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="Z2j-YO-1VK" firstAttribute="leading" secondItem="GI4-Fb-jA3" secondAttribute="leading" id="3Y2-Zb-q6j"/>
                                 <constraint firstItem="GI4-Fb-jA3" firstAttribute="leading" secondItem="GJG-bk-gYb" secondAttribute="leading" id="3kc-L5-zZk"/>
@@ -213,8 +228,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="oYL-SM-aGc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CXy-Gk-9CL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oYL-SM-aGc" secondAttribute="trailing" id="PP3-3C-cRK"/>
@@ -222,7 +236,8 @@
                 <constraint firstItem="IHZ-pL-Cjk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="edM-4P-hxo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oYL-SM-aGc" secondAttribute="bottom" id="gJv-HC-reU"/>
             </constraints>
-            <point key="canvasLocation" x="21.739130434782609" y="-8.1521739130434785"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-239" y="-11"/>
         </view>
     </objects>
     <resources>
@@ -230,11 +245,5 @@
         <image name="login_apple_btn" width="17" height="21"/>
         <image name="login_google_btn" width="15" height="15"/>
         <image name="logo_facebook_btn" width="16" height="16"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class ForgotImages{
+class ForgotImages: CommonImages {
     
     
     

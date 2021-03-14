@@ -25,13 +25,24 @@ class loginLocalizer: CommonLocalizer {
     var loginScreenRegistrationtitle: String {
         "login_screen_registrationtitle".localized
     }
-    
-    var logScreenNewUserTitle: String {
-        "log_screen_new_user_title".localized
-    }
+     var logScreenNewUserTitle: String {
+           "log_screen_new_user_title".localized
+       }
+    var loginScreenRegistrationByEmailOrPhoneTitle: String {
+           "login_screen_registration_by_email_or_phone_title".localized
+       }
+    var loginScreenPasswordTitle: String {
+           "login_screen_password_title".localized
+       }
+    var loginScreenRegistrationAlertTitle: String {
+           "login_screen_registration_alert_title".localized
+       }
     var logScreenForgetPasswordTitle: String {
         "log_screen_forget_password_title".localized
     }
+    var loginScreenRegistrationAlertPasswordTitle: String {
+           "login_screen_registration_alert_password_title".localized
+       }
     var loginScreenRegistration: String {
         "login_screen_registration".localized
     }
@@ -53,5 +64,4 @@ class loginLocalizer: CommonLocalizer {
     var loginScreenAppleTitle: String {
         "login_screen_apple_title".localized
     }
-    
 }

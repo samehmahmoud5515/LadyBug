@@ -9,7 +9,7 @@ import Foundation
 class RegistrationLocalizer{
     
     var CreateNewAccount: String {
-        "registration_screen_create_new_title".localized
+        "registration_screen_create_new_account_title".localized
     }
     
     var AddPic: String {
@@ -42,6 +42,22 @@ class RegistrationLocalizer{
     var termsAndConditions: String {
         "registration_screen_terms_and_conditions_title".localized
     }
-    
-}
+    //MARK: -
+    //Alert localizer
+    var userNameAlert: String {
+           "registration_screen_user_name_alert_title".localized
+       }
+    var emailAlert: String {
+           "registration_screen_email_alert_title".localized
+       }
+    var phoneNumerAlert: String {
+           "registration_screen_phone_numer_alert_title".localized
+       }
+    var passwordAlert: String {
+           "registration_screen_password_alert_title".localized
+       }
+    var passwordConfirmationAlert: String {
+           "registration_screen_password_confirmation_alert_title".localized
+       }
+    }
 

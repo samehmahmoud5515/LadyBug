@@ -22,5 +22,10 @@ class ForgotLocalizer{
     var tryAgain: String {
            "forgot_screen_try_again_title".localized
        }
-  
+  var wrongEmail: String {
+            "forgot_screen_alert_wrong_title".localized
+        }
+    var placeholder : String {
+               "forgot_screen_placeholder_title".localized
+           }
 }

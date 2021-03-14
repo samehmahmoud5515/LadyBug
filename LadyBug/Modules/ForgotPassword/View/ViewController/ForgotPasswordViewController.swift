@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController, ForgotViewProtocol {
     
     @IBOutlet weak var submitButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -18,14 +18,23 @@ class ForgotPasswordViewController: UIViewController {
     
     private var presnter: ForgotPresenterProtocol!
 
+    init() {
+        super.init(nibName: "\(ForgotPasswordViewController.self)", bundle: nil)
+        presnter = ForgotPresenter(view: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setFonts()
-        
+        setupUI()
         phoneEmailField.requestFocus()
         phoneEmailField.addMaxCharToTextField(20)
         phoneEmailField.delegate = self
-        phoneEmailField.setupUI(isPasswordField: false, placeholder: "user name", nextButton: true)
+        phoneEmailField.setupUI(isPasswordField: false, placeholder: presnter.localizer.placeholder, nextButton: true)
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
     }
@@ -59,7 +68,7 @@ extension ForgotPasswordViewController: StandardTextFieldViewProtocol {
     func didEndEditing(_ textField: StandardTextFieldView) {
         if textField == phoneEmailField {
             if !textField.inputText.isValidUserName {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presnter.localizer.wrongEmail)
             }
         }
     }
@@ -103,4 +112,36 @@ extension ForgotPasswordViewController {
         submitButtonBottomConstraint.constant = 24
         view.layoutIfNeeded()
     }
+}
+extension ForgotPasswordViewController{
+    
+    private func setupUI() {
+           setupNaviagtionBarUI()
+           addBarButtonsToNavigationBar()
+       }
+       
+       private func setupNaviagtionBarUI() {
+           navigationController?.setNavigationBarHidden(false, animated: false)
+           navigationController?.navigationBar.barTintColor = .white
+           navigationController?.navigationBar.prefersLargeTitles = false
+           navigationItem.largeTitleDisplayMode = .never
+       }
+       
+       private func addBarButtonsToNavigationBar() {
+           navigationItem.leftBarButtonItems = [getLeftButton()]
+       }
+       
+       private func getLeftButton() -> UIBarButtonItem {
+           let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        button.setImage(UIImage(named: presnter.images.back), for: .normal)
+           button.backgroundColor = .paleGreyThree
+           button.layer.masksToBounds = true
+           button.layer.cornerRadius = 17
+           button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
+           return UIBarButtonItem(customView: button)
+       }
+       
+       @objc func didTappedBackButton() {
+           navigationController?.popViewController(animated: true)
+       }
 }

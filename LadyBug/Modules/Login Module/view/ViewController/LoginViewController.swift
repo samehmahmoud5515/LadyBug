@@ -37,25 +37,30 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setColor()
         setLabelFonts()
         setButtonFonts()
-
-        userNameField.addMaxCharToTextField(20)
-        userNameField.delegate = self
-        userNameField.setupUI(isPasswordField: false, placeholder: "user name", nextButton: true)
-        
-        passwordField.addMaxCharToTextField(20)
-        passwordField.delegate = self
-        passwordField.setupUI(isPasswordField: true, placeholder: "password", nextButton: false)
-        
+        userNameFieldView()
+        passwordFieldView()
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
-        
+    }
+    
+    @IBAction func forGetPasswordActionButton(_ sender: UIButton) {
+        self.navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
+    }
+    @IBAction func newUserActionButton(_ sender: UIButton) {
+        self.navigationController?.pushViewController(RegistrationViewController(), animated: true)
+    }
+    @IBAction func singInActionButton(_ sender: UIButton) {
+    }
+    @IBAction func appleRegistrationActionButton(_ sender: UIButton) {
+    }
+    @IBAction func googleRegistrationActionButton(_ sender: UIButton) {
+    }
+    @IBAction func facebookRegistrationActionButton(_ sender: UIButton) {
     }
 }
 extension LoginViewController{
@@ -126,11 +131,11 @@ extension LoginViewController: StandardTextFieldViewProtocol {
     func didEndEditing(_ textField: StandardTextFieldView) {
         if textField == userNameField {
             if !textField.inputText.isValidUserName {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.loginScreenRegistrationAlertTitle)
             }
         } else if textField == passwordField {
             if !textField.inputText.isValidPassword {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.loginScreenRegistrationAlertPasswordTitle)
             }
         }
     }
@@ -158,7 +163,6 @@ extension LoginViewController: StandardTextFieldViewProtocol {
     }
     
 }
-
 extension LoginViewController {
     func observeOnKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -180,5 +184,22 @@ extension LoginViewController {
 extension LoginViewController {
     @IBAction func loginButtonDidTapped(_ sender: Any) {
         presenter.login(with: userNameField.inputText, password: passwordField.inputText)
+    }
+}
+extension LoginViewController {
+    
+    private func userNameFieldView(){
+        userNameField.addMaxCharToTextField(20)
+              userNameField.delegate = self
+        userNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.loginScreenRegistrationByEmailOrPhoneTitle, nextButton: true)
+    }
+}
+extension LoginViewController {
+    
+    private func passwordFieldView(){
+          passwordField.addMaxCharToTextField(20)
+              passwordField.delegate = self
+        passwordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.loginScreenPasswordTitle, nextButton: false)
+              
     }
 }

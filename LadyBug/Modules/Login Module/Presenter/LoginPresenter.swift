@@ -8,9 +8,9 @@
 import Foundation
 
 class LoginPresenter: LoginPresenterProtocol {
-    
     weak var view: LoginViewProtocol?
-
+    var localizer = loginLocalizer()
+    var images = LoginImages()
     init(view: LoginViewProtocol) {
        self.view = view
     }

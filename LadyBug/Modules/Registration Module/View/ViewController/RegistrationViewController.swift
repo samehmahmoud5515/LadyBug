@@ -27,67 +27,35 @@ class RegistrationViewController: UIViewController {
         super.init(nibName: "\(RegistrationViewController.self)", bundle: nil)
         presenter = RegistrationPresenter(view: self)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonFonts()
-       
+        setupUI()
+        viewSetup()
         termsAndConditionsButton.titleLabel?.numberOfLines = 0
-        
-        userNameField.addMaxCharToTextField(20)
-        userNameField.delegate = self
-        userNameField.setupUI(isPasswordField: false, placeholder: "user name", nextButton: true)
-        
-        emailField.addMaxCharToTextField(20)
-        emailField.delegate = self
-        emailField.setupUI(isPasswordField: false, placeholder: "email", nextButton: true)
-        
-        mobileField.addMaxCharToTextField(20)
-        mobileField.delegate = self
-        mobileField.setupUI(isPasswordField: false, placeholder: "PhoneNumer", nextButton: true)
-        
-        passwordField.addMaxCharToTextField(20)
-        passwordField.delegate = self
-        passwordField.setupUI(isPasswordField: true, placeholder: "password", nextButton: true)
-        
-        retypePasswordField.addMaxCharToTextField(20)
-        retypePasswordField.delegate = self
-        retypePasswordField.setupUI(isPasswordField: true, placeholder: "password", nextButton: false)
-        
-        selectProfessionSelectionView.setupUI(selectionTitle: "اختر مهنتك")
-        
+        selectProfessionSelectionView.setupUI(selectionTitle: presenter.localizer.chooseYourProfession)
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
     }
-    
-    
     private func enableCreateAccountButton() {
         createAccountButton.isUserInteractionEnabled = true
         createAccountButton.backgroundColor = UIColor.midGreenTwo
     }
-    
     private func disableCreateAccountButton() {
         createAccountButton.isUserInteractionEnabled = false
         createAccountButton.backgroundColor = UIColor.lightBlueGrey
     }
-    
-    
-    
 }
 extension RegistrationViewController {
-    
     private func setButtonFonts() {
         attachAPictureButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         createAccountButton.titleLabel?.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         termsAndConditionsButton.titleLabel?.font = UIFont.get(enFont: .bold(13), arFont: .bold(13))
     }
-    
 }
-
 extension RegistrationViewController: StandardTextFieldViewProtocol {
     func didBeginEditing(_ textField: StandardTextFieldView) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
@@ -97,31 +65,29 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
         }
         
     }
-    
     func didEndEditing(_ textField: StandardTextFieldView) {
         if textField == userNameField {
             if !textField.inputText.isValidUserName {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.userNameAlert)
             }
         } else if textField == emailField {
             if !textField.inputText.isValidEmail {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.emailAlert)
             }
         } else if textField == mobileField {
             if !textField.inputText.isValidEmail {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.phoneNumerAlert)
             }
         } else if textField == passwordField {
             if !textField.inputText.isValidPassword {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.passwordAlert)
             }
         } else if textField == retypePasswordField {
             if textField.inputText != passwordField.inputText || passwordField.inputText.isEmpty {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.passwordConfirmationAlert)
             }
         }
     }
-    
     func textFieldShouldReturn(_ textField: StandardTextFieldView) {
         if textField == userNameField {
             emailField.requestFocus()
@@ -135,7 +101,6 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
             retypePasswordField.releaseFocus()
         }
     }
-    
     func didChangeText(text: String, _ textField: StandardTextFieldView) {
         if passwordField.inputText.isValidPassword && userNameField.inputText.isValidUserName &&
             !mobileField.inputText.isEmpty &&
@@ -145,7 +110,6 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
         } else {
             disableCreateAccountButton()
         }
-        
         if textField == userNameField {
             userNameField.removeErrorView()
         } else if textField == passwordField {
@@ -158,27 +122,99 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
             retypePasswordField.removeErrorView()
         }
     }
-    
 }
-
 extension RegistrationViewController {
     func observeOnKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
     @objc func keyboardWillShow(notification: NSNotification) {
-
+        
         let userInfo = notification.userInfo
         let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
         scrollView.contentInset.bottom = keyboardFrame.size.height
     }
-
     @objc func keyboardWillHide(notification: NSNotification) {
         scrollView.contentInset = .zero
+    }
+    private func setupUI() {
+        setupNaviagtionBarUI()
+        addBarButtonsToNavigationBar()
+    }
+    
+    private func setupNaviagtionBarUI() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    private func addBarButtonsToNavigationBar() {
+        navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
+    }
+    
+    private func getLeftButton() -> UIBarButtonItem {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        button.setImage(UIImage(named: presenter.images.back), for: .normal)
+        button.backgroundColor = .paleGreyThree
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
+        return UIBarButtonItem(customView: button)
+    }
+    
+    private func getTitleBarButton() -> UIBarButtonItem {
+        let titleLabel = UILabel()
+        titleLabel.text = presenter.localizer.CreateNewAccount
+        titleLabel.textColor = .purplishBrown
+        titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+        titleLabel.sizeToFit()
+        return UIBarButtonItem(customView: titleLabel)
+    }
+    
+    @objc func didTappedBackButton() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
 extension RegistrationViewController: RegistrationViewProtocol {
+    
+}
+extension RegistrationViewController{
+    private func viewSetup(){
+        userNameFieldView()
+        emailFieldView()
+        mobileFieldView()
+        passwordFieldView()
+        retypePasswordFieldView()
+    }
+    private func userNameFieldView(){
+        userNameField.addMaxCharToTextField(20)
+        userNameField.delegate = self
+        userNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.userName, nextButton: true)
+    }
+    private func emailFieldView(){
+        emailField.addMaxCharToTextField(20)
+        emailField.delegate = self
+        emailField.setupUI(isPasswordField: false, placeholder: presenter.localizer.email, nextButton: true)
+    }
+    private func mobileFieldView(){
+        mobileField.addMaxCharToTextField(20)
+        mobileField.delegate = self
+        mobileField.setupUI(isPasswordField: false, placeholder: presenter.localizer.phoneNumer, nextButton: true)
+    }
+    private func passwordFieldView(){
+        passwordField.addMaxCharToTextField(20)
+        passwordField.delegate = self
+        passwordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.password, nextButton: true)
+    }
+    private func retypePasswordFieldView(){
+        retypePasswordField.addMaxCharToTextField(20)
+        retypePasswordField.delegate = self
+        retypePasswordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.passwordConfirmation, nextButton: false)
+    }
+    
+    
+    
     
 }
