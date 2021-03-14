@@ -18,6 +18,9 @@
 "login_screen_description" = "طبيب محاصيلك" ;
 "login_screen_welcome" = "مرحبا";
 "login_screen_registrationtitle" = "يرجى تسجيل الدخول إلى حسابك";
+"login_screen_registration_by_email_or_phone_title" = "البريد الإلكتروني أو رقم الهاتف";
+"login_screen_password_title" = "كلمه السر";
+"login_screen_registration_alert_title" = "الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح";
 "log_screen_new_user_title" = "مستخدم جديد؟";
 "log_screen_forget_password_title" = "هل نسيت كلمة المرور؟";
 "login_screen_registration" = "تسجيل الدخول";

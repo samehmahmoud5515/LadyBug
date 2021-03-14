@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginGoogleButtonTitle: UIButton!
     @IBOutlet weak var loginAppleButtonTitle: UIButton!
     
-    private var presenter: LoginPresenterProtocol!
+    private var presenter: LoginPresenter!
     
     init() {
         super.init(nibName: "\(LoginViewController.self)", bundle: nil)
@@ -44,22 +44,14 @@ class LoginViewController: UIViewController {
         setColor()
         setLabelFonts()
         setButtonFonts()
-
-        userNameField.addMaxCharToTextField(20)
-        userNameField.delegate = self
-        userNameField.setupUI(isPasswordField: false, placeholder: "user name", nextButton: true)
-        
-        passwordField.addMaxCharToTextField(20)
-        passwordField.delegate = self
-        passwordField.setupUI(isPasswordField: true, placeholder: "password", nextButton: false)
-        
+        userNameFieldView()
+        passwordFieldView()
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
         
     }
 }
 extension LoginViewController{
-    
     private func setColor(){
         loginTitleLabel.textColor = UIColor.darkishGreen
         loginTitleDescriptionlabel.textColor = UIColor.darkishGreen
@@ -126,11 +118,13 @@ extension LoginViewController: StandardTextFieldViewProtocol {
     func didEndEditing(_ textField: StandardTextFieldView) {
         if textField == userNameField {
             if !textField.inputText.isValidUserName {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.loginScreenRegistrationAlertTitle
+)
             }
         } else if textField == passwordField {
             if !textField.inputText.isValidPassword {
-                textField.displayError("الرجاء كتابة بريد إلكتروني أو رقم هاتف صحيح")
+                textField.displayError(presenter.localizer.loginScreenRegistrationAlertTitle
+)
             }
         }
     }
@@ -180,5 +174,22 @@ extension LoginViewController {
 extension LoginViewController {
     @IBAction func loginButtonDidTapped(_ sender: Any) {
         presenter.login(with: userNameField.inputText, password: passwordField.inputText)
+    }
+}
+extension LoginViewController {
+    
+    private func userNameFieldView(){
+        userNameField.addMaxCharToTextField(20)
+              userNameField.delegate = self
+        userNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.loginScreenRegistrationByEmailOrPhoneTitle, nextButton: true)
+    }
+}
+extension LoginViewController {
+    
+    private func passwordFieldView(){
+          passwordField.addMaxCharToTextField(20)
+              passwordField.delegate = self
+        passwordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.loginScreenPasswordTitle, nextButton: false)
+              
     }
 }
