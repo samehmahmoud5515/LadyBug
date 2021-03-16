@@ -49,13 +49,7 @@ class RegistrationViewController: UIViewController {
         createAccountButton.backgroundColor = UIColor.lightBlueGrey
     }
 }
-extension RegistrationViewController {
-    private func setButtonFonts() {
-        attachAPictureButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
-        createAccountButton.titleLabel?.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
-        termsAndConditionsButton.titleLabel?.font = UIFont.get(enFont: .bold(13), arFont: .bold(13))
-    }
-}
+
 extension RegistrationViewController: StandardTextFieldViewProtocol {
     func didBeginEditing(_ textField: StandardTextFieldView) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
@@ -187,33 +181,56 @@ extension RegistrationViewController{
         mobileFieldView()
         passwordFieldView()
         retypePasswordFieldView()
+        setButtonFonts()
+        setupTermsAndCondtionsButton()
     }
+    
     private func userNameFieldView(){
         userNameField.addMaxCharToTextField(20)
         userNameField.delegate = self
         userNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.userName, nextButton: true)
     }
+    
     private func emailFieldView(){
         emailField.addMaxCharToTextField(20)
         emailField.delegate = self
         emailField.setupUI(isPasswordField: false, placeholder: presenter.localizer.email, nextButton: true)
     }
+    
     private func mobileFieldView(){
         mobileField.addMaxCharToTextField(20)
         mobileField.delegate = self
         mobileField.setupUI(isPasswordField: false, placeholder: presenter.localizer.phoneNumer, nextButton: true)
     }
+    
     private func passwordFieldView(){
         passwordField.addMaxCharToTextField(20)
         passwordField.delegate = self
         passwordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.password, nextButton: true)
     }
+    
     private func retypePasswordFieldView(){
         retypePasswordField.addMaxCharToTextField(20)
         retypePasswordField.delegate = self
         retypePasswordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.passwordConfirmation, nextButton: false)
     }
     
+    private func setButtonFonts() {
+        attachAPictureButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
+        createAccountButton.titleLabel?.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+        termsAndConditionsButton.titleLabel?.font = UIFont.get(enFont: .bold(13), arFont: .bold(13))
+    }
+    
+    private func setupTermsAndCondtionsButton() {
+        let mutableStrings = NSMutableAttributedString()
+        mutableStrings.append(NSAttributedString(string: "بالنقر فوق تسجيل ، فإنك توافق على", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
+        
+        mutableStrings.append(NSAttributedString(string: " الشروط والأحكام", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.midGreenTwo]))
+        
+        mutableStrings.append(NSAttributedString(string: " التالية بدون تحفظ", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
+        termsAndConditionsButton.setAttributedTitle(mutableStrings, for: .normal)
+        termsAndConditionsButton.titleLabel?.textAlignment = .center
+    }
     
     
     
