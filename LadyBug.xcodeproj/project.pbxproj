@@ -198,6 +198,10 @@
 		5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5072D39825DAD2D8005363CB /* HomeHeaderView.xib */; };
 		5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39D25DAD485005363CB /* HomePresenter.swift */; };
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
+		50838512260516D4009FFC6A /* StandardAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50838510260516D4009FFC6A /* StandardAlertViewController.swift */; };
+		50838513260516D4009FFC6A /* StandardAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50838511260516D4009FFC6A /* StandardAlertViewController.xib */; };
+		5083851C26052383009FFC6A /* StarsAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5083851A26052383009FFC6A /* StarsAlertViewController.swift */; };
+		5083851D26052383009FFC6A /* StarsAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5083851B26052383009FFC6A /* StarsAlertViewController.xib */; };
 		508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */; };
 		508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */; };
 		508FDADA25F049B500686ECE /* MyCropsParentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */; };
@@ -480,6 +484,10 @@
 		5072D39825DAD2D8005363CB /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		5072D39D25DAD485005363CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		50838510260516D4009FFC6A /* StandardAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAlertViewController.swift; sourceTree = "<group>"; };
+		50838511260516D4009FFC6A /* StandardAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardAlertViewController.xib; sourceTree = "<group>"; };
+		5083851A26052383009FFC6A /* StarsAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsAlertViewController.swift; sourceTree = "<group>"; };
+		5083851B26052383009FFC6A /* StarsAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarsAlertViewController.xib; sourceTree = "<group>"; };
 		508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCell.swift; sourceTree = "<group>"; };
 		508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsParentCell.xib; sourceTree = "<group>"; };
 		508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCellView.swift; sourceTree = "<group>"; };
@@ -2285,6 +2293,33 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		5083850E260516A7009FFC6A /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5083851926052362009FFC6A /* StarsAlertViewController */,
+				5083850F260516B6009FFC6A /* StandardAlertViewController */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		5083850F260516B6009FFC6A /* StandardAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50838510260516D4009FFC6A /* StandardAlertViewController.swift */,
+				50838511260516D4009FFC6A /* StandardAlertViewController.xib */,
+			);
+			path = StandardAlertViewController;
+			sourceTree = "<group>";
+		};
+		5083851926052362009FFC6A /* StarsAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5083851A26052383009FFC6A /* StarsAlertViewController.swift */,
+				5083851B26052383009FFC6A /* StarsAlertViewController.xib */,
+			);
+			path = StarsAlertViewController;
+			sourceTree = "<group>";
+		};
 		508FDACF25F046F600686ECE /* MyCropsParentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2976,6 +3011,7 @@
 		50E3015725D8A31D008271B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5083850E260516A7009FFC6A /* UIViewControllers */,
 				50FA849925DC60D1008A9216 /* UIViews */,
 				50A77D4325D9F2890054E80D /* Extensions */,
 				50E3015F25D8A42B008271B6 /* LocalizationService */,
@@ -3111,6 +3147,7 @@
 				5019068C25D8913E002D55F1 /* Frameworks */,
 				5019068D25D8913E002D55F1 /* Resources */,
 				5DC3ECF17A3D8368F18333E7 /* [CP] Copy Pods Resources */,
+				66909C6FBC6252E4E57DB323 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3171,6 +3208,7 @@
 				504969B725F81E23002C3E40 /* MyFarmDetailsView.xib in Resources */,
 				506E4D0B25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib in Resources */,
 				504969C825F81E23002C3E40 /* MyFarmDetailsViewController.xib in Resources */,
+				50838513260516D4009FFC6A /* StandardAlertViewController.xib in Resources */,
 				5001434725F9A75400D1630E /* MyTasksSectionHeaderView.xib in Resources */,
 				50E01ED825E5C9A30016DEAB /* MyCropsHeaderView.xib in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
@@ -3180,6 +3218,7 @@
 				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
 				5062E7BE25FB26A5000398AA /* CropsInfoViewController.xib in Resources */,
 				506E4D1325EDC3B9003BD749 /* MyCropsTableViewHeaderView.xib in Resources */,
+				5083851D26052383009FFC6A /* StarsAlertViewController.xib in Resources */,
 				504969B825F81E23002C3E40 /* MyFarmDetailsCell.xib in Resources */,
 				21767A3B25F592D00039E2B8 /* MyPostsViewController.xib in Resources */,
 				2101D91B25F357D900FB0DB9 /* YourProductsCellTableViewCell.xib in Resources */,
@@ -3263,6 +3302,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LadyBug/Pods-LadyBug-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66909C6FBC6252E4E57DB323 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LadyBug/Pods-LadyBug-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LadyBug/Pods-LadyBug-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LadyBug/Pods-LadyBug-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD22FB7EE768D38E5E87D2D8 /* [CP] Check Pods Manifest.lock */ = {
@@ -3383,6 +3439,7 @@
 				509643C825E2F1C40000FB60 /* AddPostCell.swift in Sources */,
 				50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */,
 				21767A2B25F58FD20039E2B8 /* MyPosts Protocols.swift in Sources */,
+				50838512260516D4009FFC6A /* StandardAlertViewController.swift in Sources */,
 				2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */,
 				504969BF25F81E23002C3E40 /* MyFarmDetailsServiceTableView.swift in Sources */,
 				2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */,
@@ -3436,6 +3493,7 @@
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
 				509643B125E2F0710000FB60 /* AddPostPresenter.swift in Sources */,
+				5083851C26052383009FFC6A /* StarsAlertViewController.swift in Sources */,
 				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
 				5099491925E4642D0085CFBF /* ForgotPresenter.swift in Sources */,
 				509643BE25E2F1420000FB60 /* AddPostLocalizer.swift in Sources */,
