@@ -14,13 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         configureGoogleMaps()
         LanguageManager.shared.setDefaultlanguage(language: .ar)
         configureRootViewController()
         Defaults[.username] = "admin@google.com"
         Defaults[.password] = "12345678"
-
         return true
     }
     
@@ -36,6 +34,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
-
 }
 
