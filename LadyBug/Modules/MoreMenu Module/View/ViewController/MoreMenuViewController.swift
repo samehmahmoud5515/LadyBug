@@ -187,7 +187,8 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             
             break
         case.help :
-            
+            let helpViewController = HelpViewController()
+                       navigationController?.pushViewController(helpViewController, animated: true)
             break
         case.logOut :
             let vc = LoginViewController()

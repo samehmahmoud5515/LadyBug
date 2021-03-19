@@ -25,6 +25,12 @@
 		2101D91B25F357D900FB0DB9 /* YourProductsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */; };
 		2101D91E25F3589400FB0DB9 /* YourProductsTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */; };
 		2101D91F25F3589400FB0DB9 /* YourProductsTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */; };
+		2121AC1B26052027001A2EDD /* HelpImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC0F26052026001A2EDD /* HelpImage.swift */; };
+		2121AC1C26052027001A2EDD /* HelpLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1126052026001A2EDD /* HelpLocalizer.swift */; };
+		2121AC1E26052027001A2EDD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1426052026001A2EDD /* HelpPresenter.swift */; };
+		2121AC1F26052027001A2EDD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1726052026001A2EDD /* HelpViewController.swift */; };
+		2121AC2026052027001A2EDD /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2121AC1826052026001A2EDD /* HelpViewController.xib */; };
+		2121AC2126052027001A2EDD /* HelpProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1A26052026001A2EDD /* HelpProtocols.swift */; };
 		213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751D425F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift */; };
 		213751D925F3FD9500E342EF /* CropsInfoDetailsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751D825F3FD9500E342EF /* CropsInfoDetailsImages.swift */; };
 		213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DA25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift */; };
@@ -311,6 +317,12 @@
 		2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsCellTableViewCell.xib; sourceTree = "<group>"; };
 		2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProductsTabelViewController.swift; sourceTree = "<group>"; };
 		2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsTabelViewController.xib; sourceTree = "<group>"; };
+		2121AC0F26052026001A2EDD /* HelpImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpImage.swift; sourceTree = "<group>"; };
+		2121AC1126052026001A2EDD /* HelpLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpLocalizer.swift; sourceTree = "<group>"; };
+		2121AC1426052026001A2EDD /* HelpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPresenter.swift; sourceTree = "<group>"; };
+		2121AC1726052026001A2EDD /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		2121AC1826052026001A2EDD /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		2121AC1A26052026001A2EDD /* HelpProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpProtocols.swift; sourceTree = "<group>"; };
 		213751D425F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsLocalizer.swift; sourceTree = "<group>"; };
 		213751D825F3FD9500E342EF /* CropsInfoDetailsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsImages.swift; sourceTree = "<group>"; };
 		213751DA25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsProtocols.swift; sourceTree = "<group>"; };
@@ -783,6 +795,75 @@
 				2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2121AC0C26052026001A2EDD /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC0D26052026001A2EDD /* Resources */,
+				2121AC1326052026001A2EDD /* Presenter */,
+				2121AC1526052026001A2EDD /* View */,
+				2121AC1926052026001A2EDD /* Protocols */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		2121AC0D26052026001A2EDD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC0E26052026001A2EDD /* Image */,
+				2121AC1026052026001A2EDD /* localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2121AC0E26052026001A2EDD /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC0F26052026001A2EDD /* HelpImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		2121AC1026052026001A2EDD /* localizer */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC1126052026001A2EDD /* HelpLocalizer.swift */,
+			);
+			path = localizer;
+			sourceTree = "<group>";
+		};
+		2121AC1326052026001A2EDD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC1426052026001A2EDD /* HelpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2121AC1526052026001A2EDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC1626052026001A2EDD /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2121AC1626052026001A2EDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC1726052026001A2EDD /* HelpViewController.swift */,
+				2121AC1826052026001A2EDD /* HelpViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2121AC1926052026001A2EDD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2121AC1A26052026001A2EDD /* HelpProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */ = {
@@ -2943,6 +3024,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2121AC0C26052026001A2EDD /* Help */,
 				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
 				216647F725FEA7E40028E335 /* CreateNewPassword */,
@@ -3258,6 +3340,7 @@
 				504969C125F81E23002C3E40 /* MyFarmDetailsServiceTableCell.xib in Resources */,
 				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
 				509643C925E2F1C40000FB60 /* AddPostCell.xib in Resources */,
+				2121AC2026052027001A2EDD /* HelpViewController.xib in Resources */,
 				508FDADB25F049B500686ECE /* MyCropsParentCellView.xib in Resources */,
 				506E4D0525EDA9CF003BD749 /* MyCropsHeaderViewCropCell.xib in Resources */,
 				50068C7425E48A650097A870 /* MoreMenuViewController.xib in Resources */,
@@ -3389,6 +3472,7 @@
 				5001432F25F99B0700D1630E /* MyTasksProtocol.swift in Sources */,
 				503CB5E425E0A23300B7A393 /* VideosCell.swift in Sources */,
 				504969B625F81E23002C3E40 /* MyFarmDetailsView.swift in Sources */,
+				2121AC1C26052027001A2EDD /* HelpLocalizer.swift in Sources */,
 				5099491A25E4642D0085CFBF /* ForgotPasswordViewController.swift in Sources */,
 				509643B525E2F0990000FB60 /* AddPostProtocols.swift in Sources */,
 				50D6136D25DC198900228385 /* CommonImages.swift in Sources */,
@@ -3406,6 +3490,7 @@
 				509643CE25E2F6A20000FB60 /* AddPostUIModel.swift in Sources */,
 				504969CB25F81E23002C3E40 /* MyFarmDetailsProtocols.swift in Sources */,
 				504969AD25F81E23002C3E40 /* MyFarmDetailsPresenter.swift in Sources */,
+				2121AC2126052027001A2EDD /* HelpProtocols.swift in Sources */,
 				50E01ED725E5C9A30016DEAB /* MyCropsHeaderView.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
 				2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */,
@@ -3418,6 +3503,7 @@
 				50A54C1925E400950052F701 /* InterestedSelectionHeaderView.swift in Sources */,
 				50BC0A7B25E5C0D2006653FD /* MyCropsImages.swift in Sources */,
 				506E4D1925EDC8E2003BD749 /* MyCropsStretchedParentCell.swift in Sources */,
+				2121AC1E26052027001A2EDD /* HelpPresenter.swift in Sources */,
 				506E4D2C25EDCC25003BD749 /* MyCropsStretchedCell.swift in Sources */,
 				50068C7125E48A650097A870 /* MoreMenuUIModel.swift in Sources */,
 				50BC0A7F25E5C0FB006653FD /* MyCropsPresenter.swift in Sources */,
@@ -3489,6 +3575,7 @@
 				503CB5CF25E0A19800B7A393 /* VideosProtocols.swift in Sources */,
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				503CB5DA25E0A1C400B7A393 /* VideosLocalizer.swift in Sources */,
+				2121AC1F26052027001A2EDD /* HelpViewController.swift in Sources */,
 				5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */,
 				50068C6E25E48A650097A870 /* MoreMenuLocalizer.swift in Sources */,
 				509643BA25E2F1260000FB60 /* AddPostImages.swift in Sources */,
@@ -3501,6 +3588,7 @@
 				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
 				5099491925E4642D0085CFBF /* ForgotPresenter.swift in Sources */,
 				509643BE25E2F1420000FB60 /* AddPostLocalizer.swift in Sources */,
+				2121AC1B26052027001A2EDD /* HelpImage.swift in Sources */,
 				503CB5D425E0A1B200B7A393 /* VideosImages.swift in Sources */,
 				504969AB25F81E23002C3E40 /* MyFarmDetailsImages.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
