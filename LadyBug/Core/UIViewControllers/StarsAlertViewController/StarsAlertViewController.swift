@@ -15,6 +15,7 @@ protocol StarsAlertViewControllerDelegate: class {
 
 class StarsAlertViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var starsView: CosmosView!
     @IBOutlet weak var confirmButton: UIButton!
@@ -64,5 +65,14 @@ extension StarsAlertViewController {
         let localizer = CommonLocalizer()
         confirmButton.setTitle(localizer.done, for: .normal)
         cancelButton.setTitle(localizer.cancel, for: .normal)
+        
+        // corner radius
+        containerView.layer.cornerRadius = 15
+
+        // shadow
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        containerView.layer.shadowOpacity = 0.4
+        containerView.layer.shadowRadius = 4.0
     }
 }

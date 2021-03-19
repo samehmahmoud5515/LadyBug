@@ -163,8 +163,14 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
             cell.layoutSubviews()
             return cell
         }
-        
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if presnter.datasource[indexPath.row] == .tasks {
+            let vc = StandardAlertViewController(title: "هل تريد ارشفة المزرعة ؟", message: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديدصورة حقيقية لتصميم الموقع.", delegate: self)
+            vc.modalPresentationStyle = .overCurrentContext
+            present(vc, animated: false, completion: nil)
+        }
     }
     
     
@@ -177,5 +183,15 @@ extension MyFarmDetailsViewController: MyFarmDetailsPeopleCellDelegate {
             vc.modalPresentationStyle = .overCurrentContext
             present(vc, animated: false, completion: nil)
         }
+    }
+}
+
+extension MyFarmDetailsViewController: StandardAlertViewControllerDelegate {
+    func confirmButtonDidTapped(for alert: StandardAlertViewController) {
+        dismiss(animated: false, completion: nil)
+    }
+    
+    func cancelButtonDidTapped(for alert: StandardAlertViewController) {
+        dismiss(animated: false, completion: nil)
     }
 }

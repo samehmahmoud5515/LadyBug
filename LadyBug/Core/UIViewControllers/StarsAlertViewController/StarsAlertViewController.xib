@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="cancelButton" destination="hJo-BZ-qKZ" id="vaA-iY-xXw"/>
                 <outlet property="confirmButton" destination="1Mv-4j-a1n" id="V0M-kx-Cr1"/>
+                <outlet property="containerView" destination="DV6-ar-e3l" id="eEc-jN-Sse"/>
                 <outlet property="starsView" destination="TwW-SO-WMg" id="jy0-Ko-Jbb"/>
                 <outlet property="titleLabel" destination="BVt-W7-HmZ" id="cfT-Ds-5Cp"/>
                 <outlet property="view" destination="mt5-M5-97N" id="Mmc-oY-RRi"/>
