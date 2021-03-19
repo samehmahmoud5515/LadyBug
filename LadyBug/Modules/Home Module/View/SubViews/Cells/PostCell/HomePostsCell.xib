@@ -190,12 +190,22 @@
                                     <constraint firstItem="cNx-Hc-rmR" firstAttribute="leading" secondItem="cda-hW-tte" secondAttribute="leading" id="TNY-Vn-DHi"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLa-rD-APO">
+                                <rect key="frame" x="14" y="17" width="169.5" height="46"/>
+                                <connections>
+                                    <action selector="postOwnerDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MwN-us-xmG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GLa-rD-APO" firstAttribute="leading" secondItem="Bgm-TK-aLc" secondAttribute="leading" id="4mq-6H-RKL"/>
                             <constraint firstAttribute="bottom" secondItem="ksS-ZM-yLt" secondAttribute="bottom" id="GiG-Wq-gYE"/>
                             <constraint firstItem="ksS-ZM-yLt" firstAttribute="top" secondItem="BdU-fs-4ey" secondAttribute="top" id="Yjh-vk-v0T"/>
                             <constraint firstItem="ksS-ZM-yLt" firstAttribute="leading" secondItem="BdU-fs-4ey" secondAttribute="leading" constant="14" id="ax2-QB-s6T"/>
+                            <constraint firstItem="GLa-rD-APO" firstAttribute="bottom" secondItem="Bgm-TK-aLc" secondAttribute="bottom" id="eJo-7I-UfB"/>
+                            <constraint firstItem="GLa-rD-APO" firstAttribute="top" secondItem="Bgm-TK-aLc" secondAttribute="top" id="myq-Qj-VaH"/>
+                            <constraint firstItem="GLa-rD-APO" firstAttribute="trailing" secondItem="FXk-Gy-IkA" secondAttribute="trailing" id="rzK-T4-sPh"/>
                             <constraint firstAttribute="trailing" secondItem="ksS-ZM-yLt" secondAttribute="trailing" constant="14" id="uen-ou-zck"/>
                         </constraints>
                     </view>

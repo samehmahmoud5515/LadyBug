@@ -21,13 +21,11 @@ class StarsAlertViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     private var alertTitle: String?
-    private var alertMessage: String?
     weak var delegate: StarsAlertViewControllerDelegate?
     
-    init(title: String?, message: String?, delegate: StarsAlertViewControllerDelegate) {
+    init(title: String?, delegate: StarsAlertViewControllerDelegate) {
         super.init(nibName: "\(StandardAlertViewController.self)", bundle: nil)
         self.alertTitle = title
-        self.alertMessage = message
         self.delegate = delegate
     }
     
@@ -62,5 +60,9 @@ extension StarsAlertViewController {
         
         cancelButton.titleLabel?.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         cancelButton.setTitleColor(.tomatoRed, for: .normal)
+        
+        let localizer = CommonLocalizer()
+        confirmButton.setTitle(localizer.done, for: .normal)
+        cancelButton.setTitle(localizer.cancel, for: .normal)
     }
 }

@@ -35,4 +35,5 @@ protocol HomePostsCellDelegate: class {
     func shareButtonDidTapped(_ cell: HomePostsCell)
     func playButtonDidTapped(_ cell: HomePostsCell)
     func openProblemButtonDidTapped(_ cell: HomePostsCell)
+    func postOwnerDidTapped(_ cell: HomePostsCell)
 }

@@ -195,3 +195,6 @@
 //MARK: - ForgetPassword
 "forgot_screen_alert_wrong_title" = "الرجاء كتابة رقم هاتف او بريدك الالكتروني صحيح";
 "forgot_screen_placeholder_title" = "البريد الإلكتروني أو رقم الهاتف";
+
+"home_rate_dialog_title" = "هل تريد تقييم هذه العضو";
+

@@ -61,4 +61,7 @@ class CommonLocalizer: CommonFruitsAndVegetablesLocalizer {
     var searchPlaceHolder: String {
         "search_placeholder_ic".localized
     }
+    
+    var done = "done_title".localized
+    var cancel = "cancel_title".localized
 }

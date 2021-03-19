@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,9 +12,9 @@
             <connections>
                 <outlet property="cancelButton" destination="hJo-BZ-qKZ" id="wEb-ju-Nkl"/>
                 <outlet property="confirmButton" destination="1Mv-4j-a1n" id="CA4-2u-ol6"/>
-                <outlet property="starsView" destination="TwW-SO-WMg" id="BYb-bO-lYd"/>
-                <outlet property="titleLabel" destination="BVt-W7-HmZ" id="Uv5-WC-vvi"/>
-                <outlet property="view" destination="mt5-M5-97N" id="fff-NW-IwB"/>
+                <outlet property="starsView" destination="TwW-SO-WMg" id="b8t-j3-Y62"/>
+                <outlet property="titleLabel" destination="BVt-W7-HmZ" id="XSD-dc-VAr"/>
+                <outlet property="view" destination="mt5-M5-97N" id="DgT-E7-NQs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -125,7 +124,6 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="zQF-OM-4ay"/>
             <color key="backgroundColor" red="0.52941176469999995" green="0.60784313729999995" blue="0.69411764710000001" alpha="0.37" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="DV6-ar-e3l" firstAttribute="centerY" secondItem="mt5-M5-97N" secondAttribute="centerY" id="9hd-op-1oc"/>
