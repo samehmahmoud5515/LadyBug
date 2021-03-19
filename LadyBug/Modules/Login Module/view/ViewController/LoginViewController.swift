@@ -47,7 +47,10 @@ class LoginViewController: UIViewController {
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
     }
-    
+   override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: true)
+    }
     @IBAction func forGetPasswordActionButton(_ sender: UIButton) {
         self.navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
     }
