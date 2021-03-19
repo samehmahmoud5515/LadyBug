@@ -24,7 +24,7 @@ class StarsAlertViewController: UIViewController {
     weak var delegate: StarsAlertViewControllerDelegate?
     
     init(title: String?, delegate: StarsAlertViewControllerDelegate) {
-        super.init(nibName: "\(StandardAlertViewController.self)", bundle: nil)
+        super.init(nibName: "\(StarsAlertViewController.self)", bundle: nil)
         self.alertTitle = title
         self.delegate = delegate
     }
