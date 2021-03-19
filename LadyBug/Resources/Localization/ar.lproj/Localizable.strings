@@ -195,3 +195,12 @@
 //MARK: - ForgetPassword
 "forgot_screen_alert_wrong_title" = "الرجاء كتابة رقم هاتف او بريدك الالكتروني صحيح";
 "forgot_screen_placeholder_title" = "البريد الإلكتروني أو رقم الهاتف";
+
+
+//MARK: - CreateNewPassword
+"createn_new_password_head_title" = "أنشئ كلمة مرور جديدة";
+"createn_new_password_send_code_to_title" = "أرسلنا رمز التحقق إلى";
+"createn_new_password_email_title" = "mathewnguyen@gmail";
+"createn_new_password_new_password_title" = "كلمة مرور جديدة";
+"createn_new_password_confirm" = "اعد كتابة كلمة المرور الجديدة";
+"createn_new_password_done_button" = "تم";
