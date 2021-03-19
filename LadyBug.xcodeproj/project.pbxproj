@@ -59,6 +59,12 @@
 		21767A3725F592810039E2B8 /* MyPostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21767A3525F592810039E2B8 /* MyPostsCell.xib */; };
 		21767A3A25F592D00039E2B8 /* MyPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A3825F592D00039E2B8 /* MyPostsViewController.swift */; };
 		21767A3B25F592D00039E2B8 /* MyPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21767A3925F592D00039E2B8 /* MyPostsViewController.xib */; };
+		219ABCAC2604153100F53E43 /* ProductDetailsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ABCAB2604153100F53E43 /* ProductDetailsImages.swift */; };
+		219ABCAE260415B100F53E43 /* ProductDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ABCAD260415B100F53E43 /* ProductDetailsLocalizer.swift */; };
+		219ABCB0260415FA00F53E43 /* ProductDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ABCAF260415FA00F53E43 /* ProductDetailsProtocols.swift */; };
+		219ABCB22604173500F53E43 /* ProductDetailsPresenter .swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ABCB12604173500F53E43 /* ProductDetailsPresenter .swift */; };
+		219ABCB52604187800F53E43 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ABCB32604187800F53E43 /* ProductDetailsViewController.swift */; };
+		219ABCB62604187800F53E43 /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219ABCB42604187800F53E43 /* ProductDetailsViewController.xib */; };
 		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
 		21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE318825F597D30015467B /* MyPostsPresenter.swift */; };
 		5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432325F99A9300D1630E /* MyTasksViewController.swift */; };
@@ -339,6 +345,12 @@
 		21767A3525F592810039E2B8 /* MyPostsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsCell.xib; sourceTree = "<group>"; };
 		21767A3825F592D00039E2B8 /* MyPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsViewController.swift; sourceTree = "<group>"; };
 		21767A3925F592D00039E2B8 /* MyPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsViewController.xib; sourceTree = "<group>"; };
+		219ABCAB2604153100F53E43 /* ProductDetailsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsImages.swift; sourceTree = "<group>"; };
+		219ABCAD260415B100F53E43 /* ProductDetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsLocalizer.swift; sourceTree = "<group>"; };
+		219ABCAF260415FA00F53E43 /* ProductDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsProtocols.swift; sourceTree = "<group>"; };
+		219ABCB12604173500F53E43 /* ProductDetailsPresenter .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetailsPresenter .swift"; sourceTree = "<group>"; };
+		219ABCB32604187800F53E43 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		219ABCB42604187800F53E43 /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
 		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
 		21CE318825F597D30015467B /* MyPostsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsPresenter.swift; sourceTree = "<group>"; };
 		5001432325F99A9300D1630E /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
@@ -854,7 +866,6 @@
 		213751E725F4309600E342EF /* FollowersModule */ = {
 			isa = PBXGroup;
 			children = (
-				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
 				213751E925F430AF00E342EF /* Models */,
 				213751EC25F430BC00E342EF /* Resources */,
 				213751EB25F430B900E342EF /* Protocols */,
@@ -1193,6 +1204,75 @@
 				2166B8A325E081C8008FE0A0 /* RegistrationProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		219ABCA0260413BB00F53E43 /* Product Details */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCA5260413EA00F53E43 /* Resources */,
+				219ABCA62604142F00F53E43 /* Protocols */,
+				219ABCA2260413E100F53E43 /* Presenter */,
+				219ABCA1260413DE00F53E43 /* View */,
+			);
+			path = "Product Details";
+			sourceTree = "<group>";
+		};
+		219ABCA1260413DE00F53E43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCA3260413E300F53E43 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		219ABCA2260413E100F53E43 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCB12604173500F53E43 /* ProductDetailsPresenter .swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		219ABCA3260413E300F53E43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCB32604187800F53E43 /* ProductDetailsViewController.swift */,
+				219ABCB42604187800F53E43 /* ProductDetailsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		219ABCA5260413EA00F53E43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCAA260414D900F53E43 /* Images */,
+				219ABCA9260414D000F53E43 /* Localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		219ABCA62604142F00F53E43 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCAF260415FA00F53E43 /* ProductDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		219ABCA9260414D000F53E43 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCAD260415B100F53E43 /* ProductDetailsLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		219ABCAA260414D900F53E43 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				219ABCAB2604153100F53E43 /* ProductDetailsImages.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		21A5A12E25DB2C54001A2F64 /* Resources */ = {
@@ -2885,6 +2965,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				219ABCA0260413BB00F53E43 /* Product Details */,
 				216647F725FEA7E40028E335 /* CreateNewPassword */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
 				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
@@ -2892,6 +2973,7 @@
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
 				2137520425F58DFC00E342EF /* MyPosts Module */,
+				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
 				213751E725F4309600E342EF /* FollowersModule */,
 				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
 				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
@@ -3229,6 +3311,7 @@
 				5019069C25D89140002D55F1 /* Assets.xcassets in Resources */,
 				506E4D3425EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.xib in Resources */,
 				506A5A2B25E5671A0014D59A /* MoreMenuTaskesCell.xib in Resources */,
+				219ABCB62604187800F53E43 /* ProductDetailsViewController.xib in Resources */,
 				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
 				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
 				50D4ACC725FBF8C900880E55 /* MapPinView.xib in Resources */,
@@ -3317,6 +3400,7 @@
 				5062E7CD25FB2AB4000398AA /* CropsInfoCell.swift in Sources */,
 				21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */,
 				21767A2525F58F4E0039E2B8 /* MyPosts Localizer.swift in Sources */,
+				219ABCAC2604153100F53E43 /* ProductDetailsImages.swift in Sources */,
 				502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				2166B8A525E081C8008FE0A0 /* Registration Presenter.swift in Sources */,
@@ -3363,10 +3447,12 @@
 				50BC0A7F25E5C0FB006653FD /* MyCropsPresenter.swift in Sources */,
 				5001434625F9A75400D1630E /* MyTasksSectionHeaderView.swift in Sources */,
 				2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */,
+				219ABCB52604187800F53E43 /* ProductDetailsViewController.swift in Sources */,
 				504969AC25F81E23002C3E40 /* MyFarmDetailsLocalizer.swift in Sources */,
 				2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
+				219ABCAE260415B100F53E43 /* ProductDetailsLocalizer.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				2101D91A25F357D900FB0DB9 /* YourProductsCellTableViewCell.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
@@ -3384,6 +3470,7 @@
 				50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */,
 				21767A2B25F58FD20039E2B8 /* MyPosts Protocols.swift in Sources */,
 				2166B89225E081BC008FE0A0 /* LoginLoclizer.swift in Sources */,
+				219ABCB22604173500F53E43 /* ProductDetailsPresenter .swift in Sources */,
 				504969BF25F81E23002C3E40 /* MyFarmDetailsServiceTableView.swift in Sources */,
 				2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */,
 				2101D8FD25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */,
@@ -3391,6 +3478,7 @@
 				5062E7C425FB26FB000398AA /* CropsInfoProtocol.swift in Sources */,
 				5001433F25F9A43600D1630E /* MyTasksHeaderView.swift in Sources */,
 				2101D91025F2FB0200FB0DB9 /* YourProductsProtocols.swift in Sources */,
+				219ABCB0260415FA00F53E43 /* ProductDetailsProtocols.swift in Sources */,
 				504969B525F81E23002C3E40 /* MyFarmDetailsPostsCell.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				508FDAE025F04A1800686ECE /* MyCropsCell.swift in Sources */,

@@ -14,6 +14,7 @@ class ProductsViewController: UIViewController {
     
     //Attribuites
     private var presnter: ProductsPresenterProtocol!
+    var mainMenu = ["ProductDetailsViewController"]
     
     init() {
         super.init(nibName: "\(ProductsViewController.self)", bundle: nil)
@@ -24,13 +25,13 @@ class ProductsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         presnter.attach()
     }
-
+    
 }
 
 
@@ -65,8 +66,8 @@ extension ProductsViewController {
         if #available(iOS 13.0, *) {
             searchBar.searchTextField.attributedPlaceholder = attributes
         } else {
-           let searchField = searchBar.value(forKey: "searchField") as? UITextField
-           searchField?.attributedPlaceholder = attributes
+            let searchField = searchBar.value(forKey: "searchField") as? UITextField
+            searchField?.attributedPlaceholder = attributes
         }
     }
     
@@ -109,5 +110,11 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(ProductCell.self)", for: indexPath) as? ProductCell ?? ProductCell()
         cell.setupUI()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let subView = ProductDetailsViewController()
+        self.navigationController?.pushViewController(subView, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
