@@ -81,7 +81,7 @@ extension FollowersViewController {
     
 }
 extension FollowersViewController {
-    @objc func didTappedBackButton() {
+    @objc func didTappedBackButton(){
         navigationController?.popViewController(animated: true)
     }
 }
