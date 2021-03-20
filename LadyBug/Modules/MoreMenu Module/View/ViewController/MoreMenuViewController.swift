@@ -165,7 +165,8 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             let interestedSelectionViewController = InterestedSelectionViewController()
             navigationController?.pushViewController(interestedSelectionViewController, animated: true)
         case .profile:
-            break
+            let profileVc = ProfileViewController()
+            navigationController?.pushViewController(profileVc, animated: true)
         case .notification:
             let notificationTabelViewController = NotificationTabelViewController()
                      navigationController?.pushViewController(notificationTabelViewController, animated: true)

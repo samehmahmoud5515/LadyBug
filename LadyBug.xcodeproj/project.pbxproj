@@ -265,6 +265,12 @@
 		50BC86DD260534890065D8FE /* StandardAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC86D9260534890065D8FE /* StandardAlertViewController.swift */; };
 		50BC86F3260538240065D8FE /* StarsAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC86F1260538240065D8FE /* StarsAlertViewController.xib */; };
 		50BC86F4260538240065D8FE /* StarsAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC86F2260538240065D8FE /* StarsAlertViewController.swift */; };
+		50BC87002605437D0065D8FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC86FE2605437D0065D8FE /* ProfileViewController.swift */; };
+		50BC87012605437D0065D8FE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC86FF2605437D0065D8FE /* ProfileViewController.xib */; };
+		50BC8706260543970065D8FE /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC8705260543970065D8FE /* ProfilePresenter.swift */; };
+		50BC870B260543A60065D8FE /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC870A260543A60065D8FE /* ProfileProtocols.swift */; };
+		50BC8710260543ED0065D8FE /* ProfileImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC870F260543ED0065D8FE /* ProfileImages.swift */; };
+		50BC8714260543F90065D8FE /* ProfileLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC8713260543F90065D8FE /* ProfileLocalizer.swift */; };
 		50D4ACC225FBF8C900880E55 /* MapLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB625FBF8C900880E55 /* MapLocalizer.swift */; };
 		50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB725FBF8C900880E55 /* MapImages.swift */; };
 		50D4ACC425FBF8C900880E55 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB925FBF8C900880E55 /* Coordinate.swift */; };
@@ -563,6 +569,12 @@
 		50BC86D9260534890065D8FE /* StandardAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardAlertViewController.swift; sourceTree = "<group>"; };
 		50BC86F1260538240065D8FE /* StarsAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarsAlertViewController.xib; sourceTree = "<group>"; };
 		50BC86F2260538240065D8FE /* StarsAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsAlertViewController.swift; sourceTree = "<group>"; };
+		50BC86FE2605437D0065D8FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		50BC86FF2605437D0065D8FE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		50BC8705260543970065D8FE /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		50BC870A260543A60065D8FE /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		50BC870F260543ED0065D8FE /* ProfileImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImages.swift; sourceTree = "<group>"; };
+		50BC8713260543F90065D8FE /* ProfileLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalizer.swift; sourceTree = "<group>"; };
 		50D4ACB625FBF8C900880E55 /* MapLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocalizer.swift; sourceTree = "<group>"; };
 		50D4ACB725FBF8C900880E55 /* MapImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapImages.swift; sourceTree = "<group>"; };
 		50D4ACB925FBF8C900880E55 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -2916,6 +2928,51 @@
 			path = StarsAlertViewController;
 			sourceTree = "<group>";
 		};
+		50BC86FC260543520065D8FE /* Profile Module */ = {
+			isa = PBXGroup;
+			children = (
+				50BC870E260543E20065D8FE /* Resources */,
+				50BC8708260543990065D8FE /* Protocols */,
+				50BC8704260543880065D8FE /* Presenter */,
+				50BC86FD2605436C0065D8FE /* ViewController */,
+			);
+			path = "Profile Module";
+			sourceTree = "<group>";
+		};
+		50BC86FD2605436C0065D8FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50BC86FE2605437D0065D8FE /* ProfileViewController.swift */,
+				50BC86FF2605437D0065D8FE /* ProfileViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		50BC8704260543880065D8FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50BC8705260543970065D8FE /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		50BC8708260543990065D8FE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				50BC870A260543A60065D8FE /* ProfileProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		50BC870E260543E20065D8FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50BC870F260543ED0065D8FE /* ProfileImages.swift */,
+				50BC8713260543F90065D8FE /* ProfileLocalizer.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		50D4ACB425FBF8C900880E55 /* Map Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -3059,6 +3116,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50BC86FC260543520065D8FE /* Profile Module */,
 				2121AC0C26052026001A2EDD /* Help */,
 				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
@@ -3418,6 +3476,7 @@
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
 				50BC86DC260534890065D8FE /* StandardAlertViewController.xib in Resources */,
 				504969B425F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib in Resources */,
+				50BC87012605437D0065D8FE /* ProfileViewController.xib in Resources */,
 				2166480F25FEB0B20028E335 /* CreateNewPasswordViewController.xib in Resources */,
 				5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */,
 				50BC86F3260538240065D8FE /* StarsAlertViewController.xib in Resources */,
@@ -3569,6 +3628,7 @@
 				2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
+				50BC87002605437D0065D8FE /* ProfileViewController.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				2101D91A25F357D900FB0DB9 /* YourProductsCellTableViewCell.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
@@ -3576,6 +3636,7 @@
 				509643AC25E2EF860000FB60 /* AddPostViewController.swift in Sources */,
 				50D4ACC525FBF8C900880E55 /* MapViewController.swift in Sources */,
 				503DFC5E25DB2D5B0093CAF2 /* HeaderViewUIModel.swift in Sources */,
+				50BC870B260543A60065D8FE /* ProfileProtocols.swift in Sources */,
 				2101D8FC25F2E46D00FB0DB9 /* NotificationModel.swift in Sources */,
 				21767A3625F592810039E2B8 /* MyPostsCell.swift in Sources */,
 				506E4D3325EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.swift in Sources */,
@@ -3591,6 +3652,7 @@
 				2166B89525E081BC008FE0A0 /* LoginViewController.swift in Sources */,
 				2101D8FD25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */,
 				503CB5CA25E0A18100B7A393 /* VideosPresenter.swift in Sources */,
+				50BC8710260543ED0065D8FE /* ProfileImages.swift in Sources */,
 				5062E7C425FB26FB000398AA /* CropsInfoProtocol.swift in Sources */,
 				5001433F25F9A43600D1630E /* MyTasksHeaderView.swift in Sources */,
 				2101D91025F2FB0200FB0DB9 /* YourProductsProtocols.swift in Sources */,
@@ -3637,11 +3699,13 @@
 				5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */,
 				50068C6E25E48A650097A870 /* MoreMenuLocalizer.swift in Sources */,
 				509643BA25E2F1260000FB60 /* AddPostImages.swift in Sources */,
+				50BC8706260543970065D8FE /* ProfilePresenter.swift in Sources */,
 				2166B8A425E081C8008FE0A0 /* RegistrationLocalizer.swift in Sources */,
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
 				509643B125E2F0710000FB60 /* AddPostPresenter.swift in Sources */,
+				50BC8714260543F90065D8FE /* ProfileLocalizer.swift in Sources */,
 				216647FE25FEAE590028E335 /* Localizer.swift in Sources */,
 				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
 				5099491925E4642D0085CFBF /* ForgotPresenter.swift in Sources */,

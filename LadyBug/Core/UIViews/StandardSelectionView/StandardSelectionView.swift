@@ -67,6 +67,14 @@ extension StandardSelectionView {
         selectionTextField.attributedPlaceholder = NSAttributedString(string: placeholder,
                                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.blueyGreyTwo])
     }
+    
+    func requestFocus() {
+        selectionTextField.becomeFirstResponder()
+    }
+    
+    func releaseFocus() {
+        selectionTextField.resignFirstResponder()
+    }
 }
 
 extension StandardSelectionView: ToolbarPickerViewDelegate {
