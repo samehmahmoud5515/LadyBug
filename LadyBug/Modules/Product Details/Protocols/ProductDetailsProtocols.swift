@@ -1,17 +1,18 @@
 //
-//  ProductDetailsProtocols.swift
+//  Protocols.swift
 //  LadyBug
 //
-//  Created by Mohamed Abdelhamed Ahmed on 3/18/21.
+//  Created by Mohamed Abdelhamed Ahmed on 3/21/21.
 //
 
 import Foundation
-protocol  ProductDetailsViewProtocol: class {
+protocol ProductDetailsPresenterProtocols {
+    var localizer:ProductDetailsLocalizer { get }
+    var images: ProductDetailsImages { get }
+    var datasource: [ProductDetailsUIModel] { get }
+    func attach()
     
 }
-protocol ProductDetailsPresenterProtocol: class  {
-    var Localizer: ProductDetailsLocalizer  { get }
-    var images: ProductDetailsImages {get}
-    func attach()
+protocol ProductDetailsViewProtocol : class {
     
 }
