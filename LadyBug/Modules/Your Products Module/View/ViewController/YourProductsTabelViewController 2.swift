@@ -1,20 +1,23 @@
 //
-//  NotificationTabelViewController.swift
+//  YourProductsTabelViewController.swift
 //  LadyBug
 //
-//  Created by Mohamed Abdelhamed Ahmed on 2/25/21.
+//  Created by Mohamed Abdelhamed Ahmed on 3/5/21.
 //
+
 import UIKit
 
-class NotificationTabelViewController: UIViewController, NotificationViewProtocol {
+import UIKit
+
+class YourProductsTabelViewController: UIViewController, YourProductsViewProtocol {
     
     @IBOutlet weak var tableView: UITableView!
     //Attribuites
-    private var presnter: NotificationPresenterProtocol!
+    private var presnter: YourProductsPresenterProtocol!
     
     init() {
-        super.init(nibName: "\(NotificationTabelViewController.self)", bundle: nil)
-        presnter = NotificationPresenter(view : self )
+        super.init(nibName: "\(YourProductsTabelViewController.self)", bundle: nil)
+        presnter = YourProductsPresenter(view : self )
     }
     
     @available(*, unavailable)
@@ -30,10 +33,10 @@ class NotificationTabelViewController: UIViewController, NotificationViewProtoco
         tableView.dataSource = self
     }
 }
-extension NotificationTabelViewController{
+extension YourProductsTabelViewController{
     
     private func setupUI() {
-         setupNaviagtionBarUI()
+        setupNaviagtionBarUI()
         addBarButtonsToNavigationBar()
         registerTableViewCell()
         setupTableViewRowHeight()
@@ -57,43 +60,43 @@ extension NotificationTabelViewController{
          button.layer.masksToBounds = true
          button.layer.cornerRadius = 17
         button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
-
          return UIBarButtonItem(customView: button)
      }
      
      private func getTitleBarButton() -> UIBarButtonItem {
          let titleLabel = UILabel()
-        titleLabel.text = presnter.localizer.notification
+        titleLabel.text = presnter.localizer.navigationitle
         titleLabel.textColor = .purplishBrown
          titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
          titleLabel.sizeToFit()
-        
          
          return UIBarButtonItem(customView: titleLabel)
      }
     private func registerTableViewCell() {
-        let nib = UINib(nibName: "\(NotificationsCellTableViewCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "\(NotificationsCellTableViewCell.self)")
+        let nib = UINib(nibName: "\(YourProductsCellTableViewCell.self)", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "\(YourProductsCellTableViewCell.self)")
     }
     
-    @objc private func setupTableViewRowHeight() {
-        tableView.rowHeight = 15
-    }
-}
-extension NotificationTabelViewController{
-    @objc func didTappedBackButton(){
-        navigationController?.popViewController(animated: true)
-    }
-  
+    private func setupTableViewRowHeight() {
+        tableView.rowHeight = 106
 
+    }
 }
-extension NotificationTabelViewController :UITableViewDataSource,UITableViewDelegate{
+extension YourProductsTabelViewController{
+
+@objc func didTappedBackButton() {
+    navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+extension YourProductsTabelViewController :UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(NotificationsCellTableViewCell.self)", for: indexPath) as? NotificationsCellTableViewCell ?? NotificationsCellTableViewCell()
-        cell.setupCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(YourProductsCellTableViewCell.self)", for: indexPath) as? YourProductsCellTableViewCell ?? YourProductsCellTableViewCell()
+        cell.setupUI()
         return cell
         
     }

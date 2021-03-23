@@ -62,7 +62,7 @@ extension HelpViewController {
     
     private func getTitleBarButton() -> UIBarButtonItem {
         let titleLabel = UILabel()
-        titleLabel.text = presnter.localizer.navigationitlesHelp
+        titleLabel.text = presnter.localizer.notificationsHelp
         titleLabel.textColor = .purplishBrown
         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         titleLabel.sizeToFit()
