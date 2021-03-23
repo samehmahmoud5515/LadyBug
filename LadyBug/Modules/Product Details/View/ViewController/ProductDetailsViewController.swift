@@ -24,7 +24,7 @@ class ProductDetailsViewController: UIViewController, ProductDetailsViewProtocol
     @IBOutlet weak var productDetailsButtonLabelTile: UILabel!
     @IBOutlet weak var productDetailsButtonNumberLabelTitle: UILabel!
     @IBOutlet weak var productDetailsButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: DynamicHeightTableView!
     
     private var presnter: ProductDetailsPresenterProtocols!
     
@@ -41,7 +41,9 @@ class ProductDetailsViewController: UIViewController, ProductDetailsViewProtocol
         super.viewDidLoad()
         setupUI()
         setFont()
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        presnter.attach()
     }
     
     @IBAction func productDetailesButtonAction(_ sender: UIButton) {
@@ -61,10 +63,12 @@ extension ProductDetailsViewController {
         tableView.register(productDetailsTableViewCell, forCellReuseIdentifier: "\(ProductDetailsTableViewCell.self)")
         
         let moreLinks = UINib(nibName: "\(WebsiteLinkTableViewCell.self)", bundle: nil)
-               tableView.register(moreLinks, forCellReuseIdentifier: "\(WebsiteLinkTableViewCell.self)")
+        tableView.register(moreLinks, forCellReuseIdentifier: "\(WebsiteLinkTableViewCell.self)")
     }
     private func setupTableViewRowHeight() {
-        tableView.estimatedRowHeight = 20
+        tableView.estimatedRowHeight = 30
+        tableView.rowHeight = UITableView.automaticDimension
+
     }
     private func setupNaviagtionBarUI() {
         navigationController?.setNavigationBarHidden(false, animated: false)
@@ -154,5 +158,6 @@ extension ProductDetailsViewController: UITableViewDelegate,UITableViewDataSourc
         }
         
     }
+    
 }
 

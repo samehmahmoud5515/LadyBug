@@ -15,6 +15,8 @@ class MyFarmDetailsServiceTableView: UIView {
     @IBOutlet weak var addTaskTitleLabel: UILabel!
     @IBOutlet weak var addTaskButton: UIButton!
     
+    var datasource = [true, false, false, false, false]
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         nibSetup()
@@ -105,14 +107,20 @@ extension MyFarmDetailsServiceTableView: UICollectionViewDataSource, UICollectio
 
 extension MyFarmDetailsServiceTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return datasource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsTaskCell.self)", for: indexPath) as? MyFarmDetailsTaskCell ?? MyFarmDetailsTaskCell()
-        cell.setupUI(isSelected: true)
+        cell.setupUI(isSelected: datasource[indexPath.row])
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selection = !datasource[indexPath.row]
+        datasource[indexPath.row] = selection
+        if let cell = tableView.cellForRow(at: indexPath) as? MyFarmDetailsTaskCell {
+            cell.setupUI(isSelected: selection)
+        }
+    }
 }

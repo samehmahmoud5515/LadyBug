@@ -28,5 +28,8 @@ class HomeLocalizer: CommonLocalizer {
     var postDetails: String {
         "home_screen_post_details".localized
     }
+    
+    var rateTitle = "home_rate_dialog_title".localized
+    
 }
 

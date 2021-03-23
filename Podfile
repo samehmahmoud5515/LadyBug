@@ -7,4 +7,5 @@ target 'LadyBug' do
 
   #pod 'IBAnimatable'
   pod 'GoogleMaps'
+  pod 'Cosmos', '~> 23.0'
 end

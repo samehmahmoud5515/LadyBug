@@ -127,6 +127,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeViewController: HomePostsCellDelegate {
+    func postOwnerDidTapped(_ cell: HomePostsCell) {
+        let vc = StarsAlertViewController(title: presnter.localizer.rateTitle, delegate: self)
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false, completion: nil)
+    }
+    
     func openProblemButtonDidTapped(_ cell: HomePostsCell) {
         if let index = tableView.indexPath(for: cell) {
             print(index)
@@ -163,5 +169,15 @@ extension HomeViewController {
     @IBAction func didTappedAddPost(_ sender: Any) {
         let addPostViewController = AddPostViewController()
         navigationController?.pushViewController(addPostViewController, animated: true)
+    }
+}
+
+extension HomeViewController: StarsAlertViewControllerDelegate {
+    func confirmButtonDidTapped(for alert: StarsAlertViewController, with rate: Double) {
+        dismiss(animated: false, completion: nil)
+    }
+    
+    func cancelButtonDidTapped(for alert: StarsAlertViewController) {
+        dismiss(animated: false, completion: nil)
     }
 }

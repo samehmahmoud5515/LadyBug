@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StandardAlertViewController" customModule="LadyBug" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="8Wp-uv-eWC" id="4Dk-u8-Gzk"/>
+                <outlet property="confirmButton" destination="S2O-9l-4v7" id="LfV-7K-JlZ"/>
+                <outlet property="containerView" destination="rPi-ua-zgk" id="A7v-gY-VV3"/>
+                <outlet property="messageLabel" destination="MHO-ym-L71" id="cMD-T5-m4r"/>
+                <outlet property="titleLabel" destination="bWB-om-kQy" id="ab7-vQ-w1I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPi-ua-zgk">
+                    <rect key="frame" x="18.5" y="335.5" width="377" height="225"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="il1-3E-JNZ">
+                            <rect key="frame" x="14" y="17" width="349" height="146"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم بيع المنتج ؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-om-kQy">
+                                    <rect key="frame" x="0.0" y="0.0" width="349" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHO-ym-L71">
+                                    <rect key="frame" x="0.0" y="44.5" width="349" height="101.5"/>
+                                    <string key="text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديدصورة حقيقية لتصميم الموقع.
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyL-rm-Nq1">
+                            <rect key="frame" x="0.0" y="182.5" width="377" height="1"/>
+                            <color key="backgroundColor" red="0.83137254901960778" green="0.8784313725490196" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ZKQ-9F-tKN"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cV6-To-dDy">
+                            <rect key="frame" x="0.0" y="183.5" width="377" height="41.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-9l-4v7">
+                                    <rect key="frame" x="0.0" y="0.0" width="188.5" height="41.5"/>
+                                    <state key="normal" title="Yes"/>
+                                    <connections>
+                                        <action selector="confirmButtonDidTapped:" destination="-1" eventType="touchUpInside" id="7mB-aX-MEJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wp-uv-eWC">
+                                    <rect key="frame" x="188.5" y="0.0" width="188.5" height="41.5"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="12.5" maxX="0.0" maxY="11"/>
+                                    <state key="normal" title="No"/>
+                                    <connections>
+                                        <action selector="cancelButtonDidTapped:" destination="-1" eventType="touchUpInside" id="8Hw-j0-gsb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kux-kU-h9z">
+                            <rect key="frame" x="188" y="183.5" width="1" height="41.5"/>
+                            <color key="backgroundColor" red="0.83137254901960778" green="0.8784313725490196" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="mig-Rj-Uth"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Kux-kU-h9z" firstAttribute="centerX" secondItem="cV6-To-dDy" secondAttribute="centerX" id="5oo-TL-BMP"/>
+                        <constraint firstItem="hyL-rm-Nq1" firstAttribute="top" secondItem="il1-3E-JNZ" secondAttribute="bottom" constant="19.5" id="8uW-fx-j2N"/>
+                        <constraint firstItem="Kux-kU-h9z" firstAttribute="top" secondItem="cV6-To-dDy" secondAttribute="top" id="Ac6-6O-4Ww"/>
+                        <constraint firstItem="cV6-To-dDy" firstAttribute="leading" secondItem="rPi-ua-zgk" secondAttribute="leading" id="Gyg-Da-Z8F"/>
+                        <constraint firstItem="il1-3E-JNZ" firstAttribute="leading" secondItem="rPi-ua-zgk" secondAttribute="leading" constant="14" id="ICV-ZH-bp8"/>
+                        <constraint firstItem="hyL-rm-Nq1" firstAttribute="leading" secondItem="rPi-ua-zgk" secondAttribute="leading" id="K80-wG-ypx"/>
+                        <constraint firstAttribute="trailing" secondItem="il1-3E-JNZ" secondAttribute="trailing" constant="14" id="KNy-KO-dDI"/>
+                        <constraint firstItem="Kux-kU-h9z" firstAttribute="bottom" secondItem="cV6-To-dDy" secondAttribute="bottom" id="MmK-rJ-bju"/>
+                        <constraint firstAttribute="trailing" secondItem="cV6-To-dDy" secondAttribute="trailing" id="Y9h-y6-Gr0"/>
+                        <constraint firstAttribute="trailing" secondItem="hyL-rm-Nq1" secondAttribute="trailing" id="ax9-uT-Zit"/>
+                        <constraint firstItem="il1-3E-JNZ" firstAttribute="top" secondItem="rPi-ua-zgk" secondAttribute="top" constant="17" id="fYf-Bc-5Uy"/>
+                        <constraint firstItem="cV6-To-dDy" firstAttribute="top" secondItem="hyL-rm-Nq1" secondAttribute="bottom" id="jWR-Wp-JU4"/>
+                        <constraint firstAttribute="bottom" secondItem="cV6-To-dDy" secondAttribute="bottom" id="sSM-yt-N9e"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.52941176470588236" green="0.60784313725490191" blue="0.69411764705882351" alpha="0.37" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rPi-ua-zgk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7qM-ZI-Dgb"/>
+                <constraint firstItem="rPi-ua-zgk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.91" id="bhW-1I-ruv"/>
+                <constraint firstItem="rPi-ua-zgk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mCd-Ik-y9o"/>
+            </constraints>
+            <point key="canvasLocation" x="-12" y="78"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

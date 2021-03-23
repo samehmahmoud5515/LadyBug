@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -19,13 +19,38 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		8058E0D0E36F1D2C307E5700FAB2C380 /* Pods-LadyBug-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59EA9FC89EB78901F63CD3CA3A40990B /* Pods-LadyBug-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		994284F38748B3E79AE2E90920929486 /* Pods-LadyBug-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 760FB68FCECDD192E64D23D26066DE16 /* Pods-LadyBug-dummy.m */; };
-		9BAFFB82A1CDAA44FA99FF6FE8E77E71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		049FC8D781A7ECAED15F25718502D54E /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD0BAE92FF4C5EFDDCBE295737BD43 /* CosmosAccessibility.swift */; };
+		05DFD786F217BD0DFBFB5F57D80236A5 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45319CF9D0B42485A81789DD3DEB88A9 /* CosmosTouch.swift */; };
+		10A44B18B300E2B0BF5BF88F6F2E585F /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D247FDF5582D8411656A030861703BD /* CosmosRating.swift */; };
+		13A479E80CA1E053697013B3190AD299 /* Pods-LadyBug-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D04409FF7CB7E9EC4931FCAB7860ED04 /* Pods-LadyBug-dummy.m */; };
+		2EC54CD6397A9BDB92ADF025809C8882 /* Pods-LadyBug-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F43B8B609E429E59555AF8F7B4982A65 /* Pods-LadyBug-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FADA7115AEFDCC59593DD4201572539 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC8DA1E2DAFE1E8EB9849AFB49B612E /* CosmosLayers.swift */; };
+		41E5B21F4758B2411A95A7C72523536D /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE77D98FDCAE36F11B72CAD40A13AB /* CosmosView.swift */; };
+		4221AB8F56B1444AE176F2B13F81C557 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F184818E1EC791735B4AF4935CD0A /* StarLayer.swift */; };
+		4404A9C8152865C62A5B59B88640811C /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC83DD40B6C16F4A41C6D705ACAA949 /* CosmosSize.swift */; };
+		5C7B76FBAD8574062F60041B012FE052 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F8276D73C897DA1D628064BA7565E8 /* CosmosTouchTarget.swift */; };
+		61857850A19756A357AD6696D42E69A4 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C0855390C1149EBACB87679172C51C /* RightToLeft.swift */; };
+		83B18442C5A1CB4C14167EA3FB20A60A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9D60235277EEB2A0A45939E8F09A7D71 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C05AA571718AD027759EFE819E82E66 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC7DAE5B261F8CDE268794A1B7B06F56 /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C7B00F6ED29D6091A663E97C237D6C /* CosmosText.swift */; };
+		B594E04185C4C7522C612C631B8AD97A /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 021D93E643C629D28520B33F8C76D8D4 /* Cosmos-dummy.m */; };
+		BD11644704411365AF68FCAB0111D9D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C0D5F472F17B5A0F9824C362F35A7132 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF6352EEA325F2E41571FBA9F95030 /* CosmosLocalizedRating.swift */; };
+		E0FD27E2F7F5C05D3390126C7DF35EA6 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84082012AA14D541DCD0D63A5EBA31 /* CosmosSettings.swift */; };
+		E189E12EEDDD9A1484602416282A19F9 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D565045E7F0F56F5B785BAD91785631 /* CosmosLayerHelper.swift */; };
+		E776F53E707AD1ACF7223305E9EEDBFC /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2233A5AB39CD91E7B6342161EC473C /* CosmosDefaultSettings.swift */; };
+		E9A920FE6E5FC6F5F58B6F3AA9B3FDAF /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D49B68E2DDAF94FC4362B41D2D4634 /* StarFillMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FB96E720162DC61A6691E26B50E8F2A3 /* PBXContainerItemProxy */ = {
+		0EC877EADF0E2151F232CD031B2A2E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00F31BD5217A20974B5E9AAC6256D98E;
+			remoteInfo = Cosmos;
+		};
+		A137FF92C80663ABD7FE36408A36BDD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -35,89 +60,164 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		1C68391F9579082EFFF5D01C32B55D6F /* Pods-LadyBug-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LadyBug-acknowledgements.markdown"; sourceTree = "<group>"; };
-		59EA9FC89EB78901F63CD3CA3A40990B /* Pods-LadyBug-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LadyBug-umbrella.h"; sourceTree = "<group>"; };
+		021D93E643C629D28520B33F8C76D8D4 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
+		05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BCE77D98FDCAE36F11B72CAD40A13AB /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		0C05AA571718AD027759EFE819E82E66 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		263A49BC1043520AE65F37A7A8D5300C /* Pods-LadyBug-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-acknowledgements.plist"; sourceTree = "<group>"; };
+		2A84082012AA14D541DCD0D63A5EBA31 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
+		37F55A6E593E1A8525E3EAA36C7E8AE6 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		3D247FDF5582D8411656A030861703BD /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
+		3DC8DA1E2DAFE1E8EB9849AFB49B612E /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
+		4133ED6117E36D1E4115B06FD790D396 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		4210ADE9B1450A72B8686EFD26E2C4AF /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		4223E0F7593DF3634803B5E72F3A92FD /* Cosmos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cosmos-Info.plist"; sourceTree = "<group>"; };
+		42E3E154BFAC3D99A01F84078A40D2BD /* Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.release.xcconfig; sourceTree = "<group>"; };
+		45319CF9D0B42485A81789DD3DEB88A9 /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
+		47663E443DEAFACF2849F1D141875A1C /* Cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.debug.xcconfig; sourceTree = "<group>"; };
+		53F8276D73C897DA1D628064BA7565E8 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
 		5AB8C2B2730BBCBDC257BB0CF14EA0B0 /* Pods_LadyBug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LadyBug.framework; path = "Pods-LadyBug.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C21ADAB8FE346644A8C7C6C031776C4 /* Pods-LadyBug-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-Info.plist"; sourceTree = "<group>"; };
+		5D565045E7F0F56F5B785BAD91785631 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		5D6254BC2CC996823B4A0D8EFE89BAB9 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cosmos.modulemap; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		760FB68FCECDD192E64D23D26066DE16 /* Pods-LadyBug-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LadyBug-dummy.m"; sourceTree = "<group>"; };
-		82370EC5FEE074CECA76A8733C61A231 /* Pods-LadyBug-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LadyBug-resources.sh"; sourceTree = "<group>"; };
-		8D633058B3640059E5F5DC5EA0D313E8 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
+		75C7B00F6ED29D6091A663E97C237D6C /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		78B39BEE027316C54616CEA6420A495D /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		837F184818E1EC791735B4AF4935CD0A /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		8FC83DD40B6C16F4A41C6D705ACAA949 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
+		9A2233A5AB39CD91E7B6342161EC473C /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		9B890963F047FD5D64D7D23B499303AA /* Pods-LadyBug-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LadyBug-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
-		C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
-		CB2E9359F3D4D9434DBA1F9BDB7FF284 /* Pods-LadyBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.release.xcconfig"; sourceTree = "<group>"; };
-		CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		D5E8F0D5076A7C16E19D9E4FC7464B2E /* Pods-LadyBug.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LadyBug.modulemap"; sourceTree = "<group>"; };
-		E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		F2B07C52D130AD06A46BB597130AEAE9 /* Pods-LadyBug-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-acknowledgements.plist"; sourceTree = "<group>"; };
+		B1D616DC848CD7E27373AFEA8E40ACF6 /* Pods-LadyBug-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LadyBug-resources.sh"; sourceTree = "<group>"; };
+		B5C0855390C1149EBACB87679172C51C /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
+		B6AC3EAF6D90C78FEE0C9EB9DF60C68F /* Pods-LadyBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.release.xcconfig"; sourceTree = "<group>"; };
+		BAE0F0C43228F7BBFE9D74802F3BB4CD /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		C3D49B68E2DDAF94FC4362B41D2D4634 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
+		C5BC95992336BCB34EC3F9A9D9662051 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		C7745C9954E7559AC186C517DF3C7B06 /* Pods-LadyBug.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LadyBug.modulemap"; sourceTree = "<group>"; };
+		D04409FF7CB7E9EC4931FCAB7860ED04 /* Pods-LadyBug-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LadyBug-dummy.m"; sourceTree = "<group>"; };
+		D1BF6352EEA325F2E41571FBA9F95030 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		E8FF0E8682051DB914AEAB1C50292DA6 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		E9C3CB23143931FAB69449DCC80FA9A8 /* Pods-LadyBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LadyBug.debug.xcconfig"; sourceTree = "<group>"; };
+		EFAD0BAE92FF4C5EFDDCBE295737BD43 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		F43B8B609E429E59555AF8F7B4982A65 /* Pods-LadyBug-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LadyBug-umbrella.h"; sourceTree = "<group>"; };
+		F97EF2CC38B2059AC1E4D288AC1B8D26 /* Pods-LadyBug-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LadyBug-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FED7E36A6CC73DE436EDC804E4558E76 /* Pods-LadyBug-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LadyBug-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5AD37EF36DD5A6811678CD63A0DA8B6A /* Frameworks */ = {
+		2A8DE091CF1C1E978F2E5CB35E262E73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BAFFB82A1CDAA44FA99FF6FE8E77E71 /* Foundation.framework in Frameworks */,
+				83B18442C5A1CB4C14167EA3FB20A60A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE1AF85FC1246D05E670ED0CE453B016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD11644704411365AF68FCAB0111D9D9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16BDFBF3278A3A315F3DB921A41AD149 /* Targets Support Files */ = {
+		162FEF371E7CF97E4D6019427AAB7D24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A7ED73031E8F18A0744ADFB9ADEDF45 /* Pods-LadyBug */,
+				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */,
+				5AB8C2B2730BBCBDC257BB0CF14EA0B0 /* Pods_LadyBug.framework */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		1A7ED73031E8F18A0744ADFB9ADEDF45 /* Pods-LadyBug */ = {
+		1BC8DB3192E495D57EA34AAFA300D5A4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D5E8F0D5076A7C16E19D9E4FC7464B2E /* Pods-LadyBug.modulemap */,
-				1C68391F9579082EFFF5D01C32B55D6F /* Pods-LadyBug-acknowledgements.markdown */,
-				F2B07C52D130AD06A46BB597130AEAE9 /* Pods-LadyBug-acknowledgements.plist */,
-				760FB68FCECDD192E64D23D26066DE16 /* Pods-LadyBug-dummy.m */,
-				6C21ADAB8FE346644A8C7C6C031776C4 /* Pods-LadyBug-Info.plist */,
-				82370EC5FEE074CECA76A8733C61A231 /* Pods-LadyBug-resources.sh */,
-				59EA9FC89EB78901F63CD3CA3A40990B /* Pods-LadyBug-umbrella.h */,
-				8D633058B3640059E5F5DC5EA0D313E8 /* Pods-LadyBug.debug.xcconfig */,
-				CB2E9359F3D4D9434DBA1F9BDB7FF284 /* Pods-LadyBug.release.xcconfig */,
+				5D6254BC2CC996823B4A0D8EFE89BAB9 /* Cosmos.modulemap */,
+				021D93E643C629D28520B33F8C76D8D4 /* Cosmos-dummy.m */,
+				4223E0F7593DF3634803B5E72F3A92FD /* Cosmos-Info.plist */,
+				78B39BEE027316C54616CEA6420A495D /* Cosmos-prefix.pch */,
+				0C05AA571718AD027759EFE819E82E66 /* Cosmos-umbrella.h */,
+				47663E443DEAFACF2849F1D141875A1C /* Cosmos.debug.xcconfig */,
+				42E3E154BFAC3D99A01F84078A40D2BD /* Cosmos.release.xcconfig */,
 			);
-			name = "Pods-LadyBug";
-			path = "Target Support Files/Pods-LadyBug";
+			name = "Support Files";
+			path = "../Target Support Files/Cosmos";
 			sourceTree = "<group>";
 		};
-		1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */ = {
+		20C6F26A286B7F6A82F980DF5C97CE27 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				5FCC553E82707BA26B1F6EDC00161B0D /* Base */,
-				387015716759109261086A8C0CA736F5 /* Maps */,
-				9601491F11C5653D98D1EB5DF2155DFE /* Support Files */,
+				26CA02175CFCF5259A88CAC78BFFE21E /* Base */,
+				722A70004F9ACC24E532CC41909DFA8F /* Maps */,
+				32C234367ADC7E04495EEFC69B96C114 /* Support Files */,
 			);
 			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
-		387015716759109261086A8C0CA736F5 /* Maps */ = {
+		22D104C7B596B4FE0BAC3D02FE7D1F79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */,
-				E48211C21EA696EBC32B31525F5FFA67 /* Resources */,
+				4210ADE9B1450A72B8686EFD26E2C4AF /* GoogleMaps.bundle */,
 			);
-			name = Maps;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		26CA02175CFCF5259A88CAC78BFFE21E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				561A79BFD72E92BA8E83D1AF5C2AFAC8 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		2A17177648B88CCA7ABC52714C0599B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4133ED6117E36D1E4115B06FD790D396 /* GoogleMaps.framework */,
+				E8FF0E8682051DB914AEAB1C50292DA6 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C234367ADC7E04495EEFC69B96C114 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE0F0C43228F7BBFE9D74802F3BB4CD /* GoogleMaps.debug.xcconfig */,
+				C5BC95992336BCB34EC3F9A9D9662051 /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		4E4F6C6974008192581E464D73C06A84 /* Pods-LadyBug */ = {
+			isa = PBXGroup;
+			children = (
+				C7745C9954E7559AC186C517DF3C7B06 /* Pods-LadyBug.modulemap */,
+				F97EF2CC38B2059AC1E4D288AC1B8D26 /* Pods-LadyBug-acknowledgements.markdown */,
+				263A49BC1043520AE65F37A7A8D5300C /* Pods-LadyBug-acknowledgements.plist */,
+				D04409FF7CB7E9EC4931FCAB7860ED04 /* Pods-LadyBug-dummy.m */,
+				9B890963F047FD5D64D7D23B499303AA /* Pods-LadyBug-frameworks.sh */,
+				FED7E36A6CC73DE436EDC804E4558E76 /* Pods-LadyBug-Info.plist */,
+				B1D616DC848CD7E27373AFEA8E40ACF6 /* Pods-LadyBug-resources.sh */,
+				F43B8B609E429E59555AF8F7B4982A65 /* Pods-LadyBug-umbrella.h */,
+				E9C3CB23143931FAB69449DCC80FA9A8 /* Pods-LadyBug.debug.xcconfig */,
+				B6AC3EAF6D90C78FEE0C9EB9DF60C68F /* Pods-LadyBug.release.xcconfig */,
+			);
+			name = "Pods-LadyBug";
+			path = "Target Support Files/Pods-LadyBug";
+			sourceTree = "<group>";
+		};
+		561A79BFD72E92BA8E83D1AF5C2AFAC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37F55A6E593E1A8525E3EAA36C7E8AE6 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -128,30 +228,30 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5FCC553E82707BA26B1F6EDC00161B0D /* Base */ = {
+		722A70004F9ACC24E532CC41909DFA8F /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */,
+				2A17177648B88CCA7ABC52714C0599B0 /* Frameworks */,
+				22D104C7B596B4FE0BAC3D02FE7D1F79 /* Resources */,
 			);
-			name = Base;
+			name = Maps;
 			sourceTree = "<group>";
 		};
-		9601491F11C5653D98D1EB5DF2155DFE /* Support Files */ = {
+		9901F5BC1566C62B661F1FCFA0A54ED9 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */,
-				C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */,
+				4E4F6C6974008192581E464D73C06A84 /* Pods-LadyBug */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleMaps";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C56B234B675CA8F00BB2B1B5DA07A24C /* Products */ = {
+		B4B127FFBEC235B4DDC8E0476607FD32 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5AB8C2B2730BBCBDC257BB0CF14EA0B0 /* Pods_LadyBug.framework */,
+				E0B38E6299F3A7009DF9D70B8C453C39 /* Cosmos */,
+				20C6F26A286B7F6A82F980DF5C97CE27 /* GoogleMaps */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -159,9 +259,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				DF3634087891871FA7B65CC4A8E6DB71 /* Pods */,
-				C56B234B675CA8F00BB2B1B5DA07A24C /* Products */,
-				16BDFBF3278A3A315F3DB921A41AD149 /* Targets Support Files */,
+				B4B127FFBEC235B4DDC8E0476607FD32 /* Pods */,
+				162FEF371E7CF97E4D6019427AAB7D24 /* Products */,
+				9901F5BC1566C62B661F1FCFA0A54ED9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,58 +273,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DF3634087891871FA7B65CC4A8E6DB71 /* Pods */ = {
+		E0B38E6299F3A7009DF9D70B8C453C39 /* Cosmos */ = {
 			isa = PBXGroup;
 			children = (
-				23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */,
+				EFAD0BAE92FF4C5EFDDCBE295737BD43 /* CosmosAccessibility.swift */,
+				9A2233A5AB39CD91E7B6342161EC473C /* CosmosDefaultSettings.swift */,
+				5D565045E7F0F56F5B785BAD91785631 /* CosmosLayerHelper.swift */,
+				3DC8DA1E2DAFE1E8EB9849AFB49B612E /* CosmosLayers.swift */,
+				D1BF6352EEA325F2E41571FBA9F95030 /* CosmosLocalizedRating.swift */,
+				3D247FDF5582D8411656A030861703BD /* CosmosRating.swift */,
+				2A84082012AA14D541DCD0D63A5EBA31 /* CosmosSettings.swift */,
+				8FC83DD40B6C16F4A41C6D705ACAA949 /* CosmosSize.swift */,
+				75C7B00F6ED29D6091A663E97C237D6C /* CosmosText.swift */,
+				45319CF9D0B42485A81789DD3DEB88A9 /* CosmosTouch.swift */,
+				53F8276D73C897DA1D628064BA7565E8 /* CosmosTouchTarget.swift */,
+				0BCE77D98FDCAE36F11B72CAD40A13AB /* CosmosView.swift */,
+				B5C0855390C1149EBACB87679172C51C /* RightToLeft.swift */,
+				C3D49B68E2DDAF94FC4362B41D2D4634 /* StarFillMode.swift */,
+				837F184818E1EC791735B4AF4935CD0A /* StarLayer.swift */,
+				1BC8DB3192E495D57EA34AAFA300D5A4 /* Support Files */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E48211C21EA696EBC32B31525F5FFA67 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */,
-				E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */,
-			);
-			name = Frameworks;
+			name = Cosmos;
+			path = Cosmos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		45B7246EF0F90BB9BFD3B6803F3EE776 /* Headers */ = {
+		1C5803392F5B7D0723FCCE2DDF1470C2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8058E0D0E36F1D2C307E5700FAB2C380 /* Pods-LadyBug-umbrella.h in Headers */,
+				2EC54CD6397A9BDB92ADF025809C8882 /* Pods-LadyBug-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B322FEDA9FF4BA8B0BEC872F3EE3F648 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D60235277EEB2A0A45939E8F09A7D71 /* Cosmos-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		76A4E6F7AB5DB7FB9C91DE59AA59B58D /* Pods-LadyBug */ = {
+		00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B5DF82364D753856016C4AC2EE77262 /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */;
+			buildConfigurationList = 9C4761D1E5276039F76D9BA8BF0272D7 /* Build configuration list for PBXNativeTarget "Cosmos" */;
 			buildPhases = (
-				45B7246EF0F90BB9BFD3B6803F3EE776 /* Headers */,
-				94FDD40FFE2F6531C1DF379978757D8B /* Sources */,
-				5AD37EF36DD5A6811678CD63A0DA8B6A /* Frameworks */,
-				6CA8EB2839F9B15E521041E27E701F5F /* Resources */,
+				B322FEDA9FF4BA8B0BEC872F3EE3F648 /* Headers */,
+				53D2AD99A3C2BFB2E1448B62E35F78AB /* Sources */,
+				FE1AF85FC1246D05E670ED0CE453B016 /* Frameworks */,
+				6571FF59854C9ED976246EA41FEA37C1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D28B6A5FDA235429BAB19ED7DA8B67A /* PBXTargetDependency */,
+			);
+			name = Cosmos;
+			productName = Cosmos;
+			productReference = 05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		76A4E6F7AB5DB7FB9C91DE59AA59B58D /* Pods-LadyBug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA0E0932FEC4286A9C09B8E323C1E7F8 /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */;
+			buildPhases = (
+				1C5803392F5B7D0723FCCE2DDF1470C2 /* Headers */,
+				780753FA078085A6B301459E359E75E1 /* Sources */,
+				2A8DE091CF1C1E978F2E5CB35E262E73 /* Frameworks */,
+				BB96A129FCA86284FB867B79D02A59F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				755B3040B5A3AA2CF6F832016E8F498F /* PBXTargetDependency */,
+				3E30466D4C8AD14A3653DAF97CAD4E36 /* PBXTargetDependency */,
 			);
 			name = "Pods-LadyBug";
 			productName = "Pods-LadyBug";
@@ -241,7 +367,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -249,10 +375,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = C56B234B675CA8F00BB2B1B5DA07A24C /* Products */;
+			productRefGroup = 162FEF371E7CF97E4D6019427AAB7D24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */,
 				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
 				76A4E6F7AB5DB7FB9C91DE59AA59B58D /* Pods-LadyBug */,
 			);
@@ -260,7 +387,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6CA8EB2839F9B15E521041E27E701F5F /* Resources */ = {
+		6571FF59854C9ED976246EA41FEA37C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB96A129FCA86284FB867B79D02A59F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,29 +404,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		94FDD40FFE2F6531C1DF379978757D8B /* Sources */ = {
+		53D2AD99A3C2BFB2E1448B62E35F78AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				994284F38748B3E79AE2E90920929486 /* Pods-LadyBug-dummy.m in Sources */,
+				B594E04185C4C7522C612C631B8AD97A /* Cosmos-dummy.m in Sources */,
+				049FC8D781A7ECAED15F25718502D54E /* CosmosAccessibility.swift in Sources */,
+				E776F53E707AD1ACF7223305E9EEDBFC /* CosmosDefaultSettings.swift in Sources */,
+				E189E12EEDDD9A1484602416282A19F9 /* CosmosLayerHelper.swift in Sources */,
+				2FADA7115AEFDCC59593DD4201572539 /* CosmosLayers.swift in Sources */,
+				C0D5F472F17B5A0F9824C362F35A7132 /* CosmosLocalizedRating.swift in Sources */,
+				10A44B18B300E2B0BF5BF88F6F2E585F /* CosmosRating.swift in Sources */,
+				E0FD27E2F7F5C05D3390126C7DF35EA6 /* CosmosSettings.swift in Sources */,
+				4404A9C8152865C62A5B59B88640811C /* CosmosSize.swift in Sources */,
+				AC7DAE5B261F8CDE268794A1B7B06F56 /* CosmosText.swift in Sources */,
+				05DFD786F217BD0DFBFB5F57D80236A5 /* CosmosTouch.swift in Sources */,
+				5C7B76FBAD8574062F60041B012FE052 /* CosmosTouchTarget.swift in Sources */,
+				41E5B21F4758B2411A95A7C72523536D /* CosmosView.swift in Sources */,
+				61857850A19756A357AD6696D42E69A4 /* RightToLeft.swift in Sources */,
+				E9A920FE6E5FC6F5F58B6F3AA9B3FDAF /* StarFillMode.swift in Sources */,
+				4221AB8F56B1444AE176F2B13F81C557 /* StarLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780753FA078085A6B301459E359E75E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A479E80CA1E053697013B3190AD299 /* Pods-LadyBug-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D28B6A5FDA235429BAB19ED7DA8B67A /* PBXTargetDependency */ = {
+		3E30466D4C8AD14A3653DAF97CAD4E36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleMaps;
 			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = FB96E720162DC61A6691E26B50E8F2A3 /* PBXContainerItemProxy */;
+			targetProxy = A137FF92C80663ABD7FE36408A36BDD1 /* PBXContainerItemProxy */;
+		};
+		755B3040B5A3AA2CF6F832016E8F498F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cosmos;
+			target = 00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */;
+			targetProxy = 0EC877EADF0E2151F232CD031B2A2E33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0E5E63ECA743FDEB21217F03FA926957 /* Release */ = {
+		0868A8188E4151592703F6514F35A32B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB2E9359F3D4D9434DBA1F9BDB7FF284 /* Pods-LadyBug.release.xcconfig */;
+			baseConfigurationReference = B6AC3EAF6D90C78FEE0C9EB9DF60C68F /* Pods-LadyBug.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -393,42 +556,9 @@
 			};
 			name = Debug;
 		};
-		6CCBCE52FD46D89565DEB676446DB083 /* Debug */ = {
+		5B5D3DC8A429A93B1C15770449811C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7B52AED984E5F96408001A1A7FFB4B3F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9038ABDCED5E686BB873C0CFE646C1D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D633058B3640059E5F5DC5EA0D313E8 /* Pods-LadyBug.debug.xcconfig */;
+			baseConfigurationReference = E9C3CB23143931FAB69449DCC80FA9A8 /* Pods-LadyBug.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -461,6 +591,108 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		6CCBCE52FD46D89565DEB676446DB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAE0F0C43228F7BBFE9D74802F3BB4CD /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B52AED984E5F96408001A1A7FFB4B3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5BC95992336BCB34EC3F9A9D9662051 /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D92B77E78DC81B40AE4DC7C571D5743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47663E443DEAFACF2849F1D141875A1C /* Cosmos.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BFCFB527EDF553C841F5075E065B7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E3E154BFAC3D99A01F84078A40D2BD /* Cosmos.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -527,15 +759,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B5DF82364D753856016C4AC2EE77262 /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9038ABDCED5E686BB873C0CFE646C1D1 /* Debug */,
-				0E5E63ECA743FDEB21217F03FA926957 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -550,6 +773,24 @@
 			buildConfigurations = (
 				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
 				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C4761D1E5276039F76D9BA8BF0272D7 /* Build configuration list for PBXNativeTarget "Cosmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D92B77E78DC81B40AE4DC7C571D5743 /* Debug */,
+				9BFCFB527EDF553C841F5075E065B7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA0E0932FEC4286A9C09B8E323C1E7F8 /* Build configuration list for PBXNativeTarget "Pods-LadyBug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B5D3DC8A429A93B1C15770449811C60 /* Debug */,
+				0868A8188E4151592703F6514F35A32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

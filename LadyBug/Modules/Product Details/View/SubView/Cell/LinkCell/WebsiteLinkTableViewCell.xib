@@ -18,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4B-L1-oPR">
-                        <rect key="frame" x="0.0" y="5" width="359" height="34"/>
+                        <rect key="frame" x="0.0" y="8" width="359" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رابط المنتج على مواقع اخرى" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKa-PO-0kU">
-                                <rect key="frame" x="18" y="0.0" width="189" height="34"/>
+                                <rect key="frame" x="18" y="0.0" width="189" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vN-93-hGU">
-                                <rect key="frame" x="282" y="2" width="59" height="30"/>
+                                <rect key="frame" x="282" y="2" width="59" height="24"/>
                                 <state key="normal" title="اضغط هنا">
                                     <color key="titleColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -49,8 +49,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="J4B-L1-oPR" secondAttribute="trailing" id="33S-0e-Sjm"/>
-                    <constraint firstAttribute="bottom" secondItem="J4B-L1-oPR" secondAttribute="bottom" constant="5" id="L6E-qc-R1F"/>
-                    <constraint firstItem="J4B-L1-oPR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="PmB-f7-HRH"/>
+                    <constraint firstAttribute="bottom" secondItem="J4B-L1-oPR" secondAttribute="bottom" constant="8" id="L6E-qc-R1F"/>
+                    <constraint firstItem="J4B-L1-oPR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="PmB-f7-HRH"/>
                     <constraint firstItem="J4B-L1-oPR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YVl-8r-BDq"/>
                 </constraints>
             </tableViewCellContentView>

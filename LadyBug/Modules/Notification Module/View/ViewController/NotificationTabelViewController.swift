@@ -77,8 +77,7 @@ extension NotificationTabelViewController{
     }
     
     @objc private func setupTableViewRowHeight() {
-        tableView.rowHeight = 95
-
+        tableView.rowHeight = 15
     }
 }
 extension NotificationTabelViewController{

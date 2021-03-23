@@ -62,4 +62,9 @@ class HomePostsCell: UITableViewCell, HomePostsCellProtocol {
         delegate?.playButtonDidTapped(self)
     }
     
+    @IBAction func postOwnerDidTapped(_ sender: Any) {
+        delegate?.postOwnerDidTapped(self)
+    }
+    
+    
 }

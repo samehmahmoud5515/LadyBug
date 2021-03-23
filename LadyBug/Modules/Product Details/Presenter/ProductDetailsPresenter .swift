@@ -15,6 +15,7 @@ class ProductDetailsPresenter : ProductDetailsPresenterProtocols{
         self.view = view
     }
     func attach() {
+        prepareDatasource() 
     }
     func prepareDatasource() {
         

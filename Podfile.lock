@@ -1,4 +1,5 @@
 PODS:
+  - Cosmos (23.0.0)
   - GoogleMaps (4.1.0):
     - GoogleMaps/Maps (= 4.1.0)
   - GoogleMaps/Base (4.1.0)
@@ -6,15 +7,18 @@ PODS:
     - GoogleMaps/Base
 
 DEPENDENCIES:
+  - Cosmos (~> 23.0)
   - GoogleMaps
 
 SPEC REPOS:
   trunk:
+    - Cosmos
     - GoogleMaps
 
 SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
 
-PODFILE CHECKSUM: 8a63720746346ba292268b35cb9d8d64194df6bc
+PODFILE CHECKSUM: df242c1e430fdacb1958ded464444ef442698ac4
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.0
