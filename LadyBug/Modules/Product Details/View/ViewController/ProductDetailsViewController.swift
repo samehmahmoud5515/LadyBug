@@ -47,6 +47,7 @@ class ProductDetailsViewController: UIViewController, ProductDetailsViewProtocol
     }
     
     @IBAction func productDetailesButtonAction(_ sender: UIButton) {
+        
     }
 }
 extension ProductDetailsViewController {
@@ -68,7 +69,7 @@ extension ProductDetailsViewController {
     private func setupTableViewRowHeight() {
         tableView.estimatedRowHeight = 30
         tableView.rowHeight = UITableView.automaticDimension
-
+        
     }
     private func setupNaviagtionBarUI() {
         navigationController?.setNavigationBarHidden(false, animated: false)
@@ -97,6 +98,7 @@ extension ProductDetailsViewController {
         button.backgroundColor = .paleGreyThree
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(presentDialogue), for: .touchUpInside)
         return UIBarButtonItem(customView: button)
     }
     
@@ -113,6 +115,20 @@ extension ProductDetailsViewController {
 extension ProductDetailsViewController {
     @objc func didTappedBackButton() {
         navigationController?.popViewController(animated: true)
+    }
+    @objc func presentDialogue() {
+           let vc = StandardAlertViewController(title: "هل تريد ارشفة المزرعة ؟", message: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديدصورة حقيقية لتصميم الموقع.", delegate: self)
+                vc.modalPresentationStyle = .overCurrentContext
+                present(vc, animated: false, completion: nil)
+    }
+}
+extension ProductDetailsViewController: StandardAlertViewControllerDelegate {
+    func confirmButtonDidTapped(for alert: StandardAlertViewController) {
+        dismiss(animated: false, completion: nil)
+    }
+    
+    func cancelButtonDidTapped(for alert: StandardAlertViewController) {
+        dismiss(animated: false, completion: nil)
     }
 }
 extension ProductDetailsViewController {
