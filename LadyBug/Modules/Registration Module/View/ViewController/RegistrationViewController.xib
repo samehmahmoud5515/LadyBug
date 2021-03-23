@@ -157,10 +157,6 @@
                                         </button>
                                     </subviews>
                                 </stackView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Components-Badges-Icon " translatesAutoresizingMaskIntoConstraints="NO" id="at2-Q5-096">
-                                    <rect key="frame" x="160" y="125" width="35" height="35"/>
-                                    <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </imageView>
                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-MT-xMg">
                                     <rect key="frame" x="160" y="125" width="35" height="35"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,7 +164,7 @@
                                         <constraint firstAttribute="width" constant="35" id="j8V-Hy-OmA"/>
                                         <constraint firstAttribute="height" constant="35" id="ktP-1l-DXD"/>
                                     </constraints>
-                                    <state key="normal" image="comman_upload_ic">
+                                    <state key="normal" backgroundImage="comman_upload_ic">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </state>
                                 </button>
@@ -179,17 +175,13 @@
                                 <constraint firstItem="sdr-dM-cCk" firstAttribute="trailing" secondItem="uOn-mc-4if" secondAttribute="trailing" id="79g-EL-WaK"/>
                                 <constraint firstItem="fWS-ry-dOo" firstAttribute="centerX" secondItem="gpF-OX-Xji" secondAttribute="centerX" id="8dd-Qk-ZV1"/>
                                 <constraint firstAttribute="bottom" secondItem="sdr-dM-cCk" secondAttribute="bottom" constant="26" id="Cce-Cd-gx0"/>
-                                <constraint firstItem="at2-Q5-096" firstAttribute="bottom" secondItem="BVN-MT-xMg" secondAttribute="bottom" id="Dmj-nZ-j5j"/>
                                 <constraint firstItem="fWS-ry-dOo" firstAttribute="top" secondItem="Diw-ff-dzv" secondAttribute="bottom" constant="16" id="F8C-xv-kw7"/>
-                                <constraint firstItem="at2-Q5-096" firstAttribute="trailing" secondItem="BVN-MT-xMg" secondAttribute="trailing" id="Fqu-WL-Igg"/>
                                 <constraint firstItem="uOn-mc-4if" firstAttribute="leading" secondItem="gpF-OX-Xji" secondAttribute="leading" constant="24" id="Y8f-dC-jVS"/>
                                 <constraint firstItem="Diw-ff-dzv" firstAttribute="centerX" secondItem="gpF-OX-Xji" secondAttribute="centerX" id="cde-nR-ed9"/>
                                 <constraint firstItem="BVN-MT-xMg" firstAttribute="bottom" secondItem="fWS-ry-dOo" secondAttribute="top" constant="9" id="egS-cL-F67"/>
                                 <constraint firstAttribute="trailing" secondItem="uOn-mc-4if" secondAttribute="trailing" constant="24" id="iSw-nC-hfM"/>
-                                <constraint firstItem="at2-Q5-096" firstAttribute="leading" secondItem="BVN-MT-xMg" secondAttribute="leading" id="mgU-k5-HLu"/>
                                 <constraint firstItem="uOn-mc-4if" firstAttribute="top" secondItem="fWS-ry-dOo" secondAttribute="bottom" constant="21" id="nCR-HT-ZOA"/>
                                 <constraint firstItem="sdr-dM-cCk" firstAttribute="top" secondItem="uOn-mc-4if" secondAttribute="bottom" constant="33" id="nfv-dF-myd"/>
-                                <constraint firstItem="at2-Q5-096" firstAttribute="top" secondItem="BVN-MT-xMg" secondAttribute="top" id="ogM-L9-L9p"/>
                                 <constraint firstAttribute="bottom" secondItem="0dD-jq-r4k" secondAttribute="bottom" constant="26" id="ucm-y5-67B"/>
                                 <constraint firstItem="Diw-ff-dzv" firstAttribute="top" secondItem="gpF-OX-Xji" secondAttribute="top" constant="41" id="xpY-VE-X4R"/>
                                 <constraint firstItem="BVN-MT-xMg" firstAttribute="leading" secondItem="Diw-ff-dzv" secondAttribute="leading" id="zIa-Qb-2q6"/>
@@ -218,7 +210,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Components-Badges-Icon " width="144" height="144"/>
         <image name="comman_upload_ic" width="155" height="155"/>
         <image name="registration_load_image" width="40" height="40"/>
     </resources>
