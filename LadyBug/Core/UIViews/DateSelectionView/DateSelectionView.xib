@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateSelectionView" customModule="LadyBug" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="i5M-Pr-FkT" id="a2c-h1-aHx"/>
+                <outlet property="daySelection" destination="bKR-at-y11" id="pDF-n4-etv"/>
+                <outlet property="monthSelection" destination="xvR-1w-bH1" id="Oav-4R-Jmg"/>
+                <outlet property="titleLabel" destination="b9R-8M-XTn" id="O81-bl-bye"/>
+                <outlet property="yearSelection" destination="fB0-bM-idF" id="aWH-xV-5MS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="639" height="231"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Xq5-Vj-u8l">
+                    <rect key="frame" x="0.0" y="0.0" width="639" height="231"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9R-8M-XTn">
+                            <rect key="frame" x="0.0" y="0.0" width="639" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYB-AQ-z2m">
+                            <rect key="frame" x="0.0" y="29.5" width="639" height="201.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKR-at-y11" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="88" height="201.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" priority="250" constant="88" id="LeN-MN-YaI"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zk-tN-N8a">
+                                    <rect key="frame" x="88" y="0.0" width="187.5" height="201.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="oxo-Ia-kSb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvR-1w-bH1" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
+                                    <rect key="frame" x="275.5" y="0.0" width="88" height="201.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWD-B5-vQq">
+                                    <rect key="frame" x="363.5" y="0.0" width="187.5" height="201.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="v83-Ua-d8K"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB0-bM-idF" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
+                                    <rect key="frame" x="551" y="0.0" width="88" height="201.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="aWD-B5-vQq" firstAttribute="width" secondItem="3Zk-tN-N8a" secondAttribute="width" id="16i-1I-7bK"/>
+                                <constraint firstItem="xvR-1w-bH1" firstAttribute="width" secondItem="bKR-at-y11" secondAttribute="width" priority="250" id="cuf-CU-8Oj"/>
+                                <constraint firstItem="fB0-bM-idF" firstAttribute="width" secondItem="bKR-at-y11" secondAttribute="width" priority="250" id="yeS-1f-qCe"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xq5-Vj-u8l" secondAttribute="trailing" id="R1r-3a-D2F"/>
+                <constraint firstItem="Xq5-Vj-u8l" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="T4v-37-Bv1"/>
+                <constraint firstItem="Xq5-Vj-u8l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VJP-Iy-Ng7"/>
+                <constraint firstAttribute="bottom" secondItem="Xq5-Vj-u8l" secondAttribute="bottom" id="xcp-91-Dew"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="148.55072463768118" y="72.65625"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

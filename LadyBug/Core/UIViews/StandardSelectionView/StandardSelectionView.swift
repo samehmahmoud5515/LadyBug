@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StandardSelectionViewDelegate: class {
+    func didSelectItem(item: String)
+}
+
 class StandardSelectionView: UIView {
     
     @IBOutlet weak var contentView: UIView!
@@ -14,6 +18,9 @@ class StandardSelectionView: UIView {
     @IBOutlet weak var selectionTextField: UITextField!
     
     fileprivate let pickerView = ToolbarPickerView()
+    var datasource = [String]()
+    var selectedItem = ""
+    weak var delegate: StandardSelectionViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,17 +48,17 @@ class StandardSelectionView: UIView {
 }
 
 extension StandardSelectionView {
-    func setupUI(title: String? = nil, selectionTitle: String) {
+    func setupUI(title: String? = nil, selectionTitle: String, placeholderColor: UIColor = .blueyGreyTwo) {
         titleLabel.isHidden = title == nil
         titleLabel.text = title
         selectionTextField.text = ""
-        setupPlaceholder(placeholder: selectionTitle)
+        setupPlaceholder(placeholder: selectionTitle, color: placeholderColor)
         
         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         titleLabel.textColor = .purplishBrown
         
         selectionTextField.font = UIFont.get(enFont: .regular(15), arFont: .regular(15))
-        selectionTextField.textColor = .blueyGreyTwo
+        selectionTextField.textColor = .purplishBrown
     }
     
     private func setupPickerView() {
@@ -63,9 +70,9 @@ extension StandardSelectionView {
         selectionTextField.inputAccessoryView = pickerView.toolbar
     }
     
-    private func setupPlaceholder(placeholder: String) {
+    private func setupPlaceholder(placeholder: String, color: UIColor) {
         selectionTextField.attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.blueyGreyTwo])
+                                                             attributes: [NSAttributedString.Key.foregroundColor: color])
     }
     
     func requestFocus() {
@@ -81,8 +88,9 @@ extension StandardSelectionView: ToolbarPickerViewDelegate {
     func didTapDone() {
         let row = self.pickerView.selectedRow(inComponent: 0)
         pickerView.selectRow(row, inComponent: 0, animated: false)
-        selectionTextField.text = "more_menu_profile_user_name_title".localized
+        selectionTextField.text = selectedItem
         selectionTextField.resignFirstResponder()
+        delegate?.didSelectItem(item: selectedItem)
     }
     
     func didTapCancel() {
@@ -97,14 +105,16 @@ extension StandardSelectionView: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
+        return datasource.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "more_menu_profile_user_name_title".localized
+        return datasource[row]
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        if datasource.count > row {
+            selectedItem = datasource[row]
+        }
     }
 }

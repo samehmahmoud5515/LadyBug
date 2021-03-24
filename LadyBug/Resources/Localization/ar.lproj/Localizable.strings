@@ -275,3 +275,20 @@
 "profile_title" = "تعديل بياناتك";
 
 "my_post_details_title" = "تفاصيل المنشور";
+
+"create_farm_title" = "أنشئ مزرعتك";
+"create_fram_number_of_plants_title" = "عدد النباتات";
+"create_farm_plant_type_title" = "نوع النبات";
+"create_farm_plant_name_title" = "اسم النبات";
+"create_farm_number_of_package_title" = "حجم الاصيص";
+"create_farm_location_title" = "موقع المنزل";
+"create_farm_location_placeholder" = "اضغط لاختيار موقع المزرعة";
+"day" = "اليوم";
+"month" = "الشهر";
+"year" = "السنة";
+"agriculture_date_title" = "تاريخ الزراعة";
+"light_title" = "مصدر الاضائة";
+"seeding_title" = "مصدر الشتلات";
+"create_farm" = "انشاء المزرعة";
+"create_farm_hint1" = "يفضل إدخال كل البيانات للحصول على نتائج ";
+"create_farm_hint2" = "أكثر دقة";

@@ -25,6 +25,12 @@ class StandardTextFieldView: UIView {
     @IBOutlet weak var errorViewContainer: UIView!
     @IBOutlet weak var showHidePasswordButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var floatingTitleLabel: UILabel!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
     
     weak var delegate: StandardTextFieldViewProtocol?
     private var maxChars: Int?
@@ -71,6 +77,21 @@ extension StandardTextFieldView {
         setupTextField(placeholder: placeholder)
     }
     
+    func setupSpacing(insets: UIEdgeInsets) {
+        leadingConstraint.constant = insets.left
+        trailingConstraint.constant = insets.right
+        topConstraint.constant = insets.top
+        bottomConstraint.constant = insets.bottom
+        layoutIfNeeded()
+    }
+    
+    func setupFloatingTitle(with text: String) {
+        floatingTitleLabel.text = text
+        floatingTitleLabel.isHidden = false
+        floatingTitleLabel.textColor = .purplishBrown
+        floatingTitleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+    }
+    
     private func setupPasswordField() {
         isSecureEntry = true
         showHidePasswordButton.isHidden = false
@@ -83,7 +104,6 @@ extension StandardTextFieldView {
         showHidePasswordButton.isHidden = true
         showHidePasswordButton.isHidden = true
         clearButton.isHidden = true
-
     }
     
     private func setupTextField(placeholder: String) {

@@ -53,6 +53,7 @@ extension MapViewController {
         setupNaviagtionBarUI()
         addBarButtonsToNavigationBar()
         setupLabels()
+        navigateToSelectedLocation()
     }
 
     private func setupMapViewStyle() {
@@ -117,6 +118,12 @@ extension MapViewController {
         addressLablel.textColor = .purplishBrown
         selectLocationButton.titleLabel?.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
     }
+    
+    private func navigateToSelectedLocation() {
+        if let location = selectedCoordinate {
+            mapView.moveCamera(GMSCameraUpdate.setTarget(location.toCoordinate, zoom: 15))
+        }
+    }
 }
 
 extension MapViewController: GMSMapViewDelegate {
@@ -149,6 +156,7 @@ extension MapViewController {
     @IBAction func selectLocationButtonDidTapped(_ sender: Any) {
         guard let coord = selectedCoordinate else { return }
         delegate?.didSelectLocationFromMap(coordinate: coord)
+        navigationController?.popViewController(animated: false)
     }
 }
 

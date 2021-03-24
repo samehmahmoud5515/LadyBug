@@ -34,9 +34,10 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPV-PA-jco">
-                    <rect key="frame" x="13" y="773" width="134" height="48"/>
+                    <rect key="frame" x="13" y="773" width="145.5" height="48"/>
                     <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <inset key="contentEdgeInsets" minX="9" minY="13" maxX="9" maxY="13"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="13" maxX="15" maxY="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-4.5" maxY="0.0"/>
                     <state key="normal" title="اضف مزرعتك" image="add_farm_ic">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>

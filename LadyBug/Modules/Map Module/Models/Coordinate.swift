@@ -5,7 +5,7 @@
 //  Created by SAMEH on 12/03/2021.
 //
 
-import Foundation
+import GoogleMaps
 
 class Coordinate {
     let longitude: Double
@@ -17,5 +17,11 @@ class Coordinate {
         self.longitude = longitude
         self.latitude = latitude
         self.address = address
+    }
+}
+
+extension Coordinate {
+    var toCoordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }

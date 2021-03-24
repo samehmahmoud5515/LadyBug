@@ -64,4 +64,7 @@ class CommonLocalizer: CommonFruitsAndVegetablesLocalizer {
     
     var done = "done_title".localized
     var cancel = "cancel_title".localized
+    var day = "day".localized
+    var month = "month".localized
+    var year = "year".localized
 }

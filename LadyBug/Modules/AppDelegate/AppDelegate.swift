@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configureGoogleMaps() {
-        GMSServices.provideAPIKey("")
+        GMSServices.provideAPIKey("AIzaSyBr3c-6QjeizszKa59wNfx5GiZYZd26UGA")
     }
     
     func configureRootViewController() {

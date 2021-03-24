@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Polygon 105.pdf",
+      "filename" : "flower.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "flower@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "flower@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
