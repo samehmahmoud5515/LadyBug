@@ -123,6 +123,10 @@
 		50212E08260BC84600589DAE /* CustomSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50212E06260BC84600589DAE /* CustomSelectionView.xib */; };
 		50212E0E260BD45E00589DAE /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50212E0C260BD45E00589DAE /* DateSelectionView.swift */; };
 		50212E0F260BD45E00589DAE /* DateSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50212E0D260BD45E00589DAE /* DateSelectionView.xib */; };
+		50212E16260BF97B00589DAE /* ChemicalSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50212E14260BF97B00589DAE /* ChemicalSourceView.swift */; };
+		50212E17260BF97B00589DAE /* ChemicalSourceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50212E15260BF97B00589DAE /* ChemicalSourceView.xib */; };
+		50212E1F260BFC7200589DAE /* ChemicalSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50212E1D260BFC7200589DAE /* ChemicalSourceCell.swift */; };
+		50212E20260BFC7200589DAE /* ChemicalSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50212E1E260BFC7200589DAE /* ChemicalSourceCell.xib */; };
 		502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */; };
 		503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CB59E25E07AF700B7A393 /* ProductsViewController.swift */; };
 		503CB5A125E07AF700B7A393 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503CB59F25E07AF700B7A393 /* ProductsViewController.xib */; };
@@ -461,6 +465,10 @@
 		50212E06260BC84600589DAE /* CustomSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSelectionView.xib; sourceTree = "<group>"; };
 		50212E0C260BD45E00589DAE /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
 		50212E0D260BD45E00589DAE /* DateSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectionView.xib; sourceTree = "<group>"; };
+		50212E14260BF97B00589DAE /* ChemicalSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalSourceView.swift; sourceTree = "<group>"; };
+		50212E15260BF97B00589DAE /* ChemicalSourceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemicalSourceView.xib; sourceTree = "<group>"; };
+		50212E1D260BFC7200589DAE /* ChemicalSourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalSourceCell.swift; sourceTree = "<group>"; };
+		50212E1E260BFC7200589DAE /* ChemicalSourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemicalSourceCell.xib; sourceTree = "<group>"; };
 		502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		503CB59E25E07AF700B7A393 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		503CB59F25E07AF700B7A393 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
@@ -1860,6 +1868,33 @@
 			path = DateSelectionView;
 			sourceTree = "<group>";
 		};
+		50212E12260BF95000589DAE /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				50212E13260BF96800589DAE /* ChemicalSourceView */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		50212E13260BF96800589DAE /* ChemicalSourceView */ = {
+			isa = PBXGroup;
+			children = (
+				50212E1C260BFC5300589DAE /* Cell */,
+				50212E14260BF97B00589DAE /* ChemicalSourceView.swift */,
+				50212E15260BF97B00589DAE /* ChemicalSourceView.xib */,
+			);
+			path = ChemicalSourceView;
+			sourceTree = "<group>";
+		};
+		50212E1C260BFC5300589DAE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50212E1D260BFC7200589DAE /* ChemicalSourceCell.swift */,
+				50212E1E260BFC7200589DAE /* ChemicalSourceCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		502ACE8225F455B80031D3CE /* DynamicHeightTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3128,6 +3163,7 @@
 		50AF3EC3260AD17B00CBCD0C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50212E12260BF95000589DAE /* SubViews */,
 				50AF3EC4260AD18000CBCD0C /* ViewController */,
 			);
 			path = View;
@@ -3738,6 +3774,7 @@
 			files = (
 				503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */,
 				5001434D25F9A84500D1630E /* MyTasksCell.xib in Resources */,
+				50212E20260BFC7200589DAE /* ChemicalSourceCell.xib in Resources */,
 				504969C725F81E23002C3E40 /* MyFarmDetailsPeopleChildCell.xib in Resources */,
 				506A5A2725E5671A0014D59A /* MoreMenuProfileCell.xib in Resources */,
 				503CB5C525E0A15F00B7A393 /* VideosViewController.xib in Resources */,
@@ -3803,6 +3840,7 @@
 				503CB5E525E0A23300B7A393 /* VideosCell.xib in Resources */,
 				503CB5A125E07AF700B7A393 /* ProductsViewController.xib in Resources */,
 				50D6138025DC206400228385 /* MyFarmWeatherHeaderView.xib in Resources */,
+				50212E17260BF97B00589DAE /* ChemicalSourceView.xib in Resources */,
 				50AF3EAD260AC64C00CBCD0C /* PostDetailsCell.xib in Resources */,
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				506E4D2D25EDCC25003BD749 /* MyCropsStretchedCell.xib in Resources */,
@@ -3989,6 +4027,7 @@
 				2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */,
 				504969AC25F81E23002C3E40 /* MyFarmDetailsLocalizer.swift in Sources */,
 				2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */,
+				50212E1F260BFC7200589DAE /* ChemicalSourceCell.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
 				50BC87002605437D0065D8FE /* ProfileViewController.swift in Sources */,
@@ -4102,6 +4141,7 @@
 				50E6652225E40CDE00D48EA8 /* InterestedSelectionPresenter.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
 				2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */,
+				50212E16260BF97B00589DAE /* ChemicalSourceView.swift in Sources */,
 				50AF3E8E260ABEBF00CBCD0C /* PostDetailsViewController.swift in Sources */,
 				504969CA25F81E23002C3E40 /* MyFarmDetailsUIModel.swift in Sources */,
 				2166480125FEAF3B0028E335 /* Protocols.swift in Sources */,

@@ -93,7 +93,9 @@ extension CreateFarmViewController {
     private func getCheckButton() -> UIBarButtonItem {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 51, height: 34))
         button.setTitle("Y123", for: .normal)
+        button.titleLabel?.textColor = .purplishBrown
         button.backgroundColor = .paleGreyThree
+        button.tintColor = .purplishBrown
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 17
         return UIBarButtonItem(customView: button)
@@ -128,6 +130,7 @@ extension CreateFarmViewController {
     
     private func setupLightSelection() {
         lightSelection.setupUI(title: presnter.localizer.lightTitle, selectionTitle: "إضائة ضعيفة", placeholderColor: .purplishBrown)
+        lightSelection.showHintButton()
     }
     
     private func setupSeedingSelection() {

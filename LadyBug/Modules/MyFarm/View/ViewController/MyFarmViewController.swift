@@ -125,6 +125,6 @@ extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
 extension MyFarmViewController {
     @IBAction func addFarmButtonDidTapped(_ sender: Any) {
         let vc = CreateFarmViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

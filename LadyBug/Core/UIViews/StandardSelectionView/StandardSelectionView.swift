@@ -16,6 +16,8 @@ class StandardSelectionView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var selectionTextField: UITextField!
+    @IBOutlet weak var titleContainerView: UIView!
+    @IBOutlet weak var hintButton: UIButton!
     
     fileprivate let pickerView = ToolbarPickerView()
     var datasource = [String]()
@@ -50,6 +52,7 @@ class StandardSelectionView: UIView {
 extension StandardSelectionView {
     func setupUI(title: String? = nil, selectionTitle: String, placeholderColor: UIColor = .blueyGreyTwo) {
         titleLabel.isHidden = title == nil
+        titleContainerView.isHidden = title == nil
         titleLabel.text = title
         selectionTextField.text = ""
         setupPlaceholder(placeholder: selectionTitle, color: placeholderColor)
@@ -59,6 +62,10 @@ extension StandardSelectionView {
         
         selectionTextField.font = UIFont.get(enFont: .regular(15), arFont: .regular(15))
         selectionTextField.textColor = .purplishBrown
+    }
+    
+    func showHintButton() {
+        hintButton.isHidden = false
     }
     
     private func setupPickerView() {
