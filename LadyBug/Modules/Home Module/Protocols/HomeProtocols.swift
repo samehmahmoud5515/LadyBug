@@ -23,6 +23,7 @@ protocol HomeHeaderDelegate: class {
 
 protocol HomeViewProtocol: class {
     func notifyHeaderViewDatasourceChanged()
+    func navigateToPostDetails()
 }
 
 protocol HomePostsCellProtocol {

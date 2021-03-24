@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="187" id="KGk-i7-Jjw" customClass="CommentCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="409" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyH-VV-cVx">
+                        <rect key="frame" x="0.0" y="0.0" width="409" height="187"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_details_commenter_ic" translatesAutoresizingMaskIntoConstraints="NO" id="QBD-Wv-Vkf">
+                                <rect key="frame" x="11" y="13" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="CVa-lu-jwL"/>
+                                    <constraint firstAttribute="height" constant="36" id="cY3-CW-ycG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="محمد سعد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JO-qU-b23">
+                                <rect key="frame" x="62" y="12" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مهندس زراعي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-AG-9F1">
+                                <rect key="frame" x="140" y="12" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="منذ ساعة" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFz-I1-Wud">
+                                <rect key="frame" x="62" y="33" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-G6-adQ">
+                                <rect key="frame" x="62" y="63.5" width="330" height="81.5"/>
+                                <string key="text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من صورة حقيقية لتصميم الموقع.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bc-Zt-fem">
+                                <rect key="frame" x="157" y="153" width="72" height="24"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="-12" maxY="0.0"/>
+                                <state key="normal" title="اعجبني" image="common_dislike_ic">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.63921568630000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elI-8a-1Wu">
+                                <rect key="frame" x="62" y="153" width="73" height="24"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-12" maxY="0.0"/>
+                                <state key="normal" title="اعجبني" image="common_like_ic">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-9G-r4F">
+                                <rect key="frame" x="0.0" y="186" width="409" height="1"/>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.90000000000000002" id="ILc-rx-8x6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="elI-8a-1Wu" firstAttribute="leading" secondItem="tLi-G6-adQ" secondAttribute="leading" id="29F-Jb-lPn"/>
+                            <constraint firstItem="QBD-Wv-Vkf" firstAttribute="leading" secondItem="gyH-VV-cVx" secondAttribute="leading" constant="11" id="2QX-mh-V1X"/>
+                            <constraint firstItem="QBD-Wv-Vkf" firstAttribute="top" secondItem="gyH-VV-cVx" secondAttribute="top" constant="13" id="50E-tn-3SM"/>
+                            <constraint firstItem="0JO-qU-b23" firstAttribute="leading" secondItem="QBD-Wv-Vkf" secondAttribute="trailing" constant="15" id="7Of-xP-K4Z"/>
+                            <constraint firstItem="8bc-Zt-fem" firstAttribute="leading" secondItem="elI-8a-1Wu" secondAttribute="trailing" constant="22" id="8YC-mu-eLr"/>
+                            <constraint firstItem="8bc-Zt-fem" firstAttribute="bottom" secondItem="elI-8a-1Wu" secondAttribute="bottom" id="99q-Or-JNv"/>
+                            <constraint firstAttribute="bottom" secondItem="KMR-9G-r4F" secondAttribute="bottom" id="Pu4-mB-Be3"/>
+                            <constraint firstItem="fFz-I1-Wud" firstAttribute="leading" secondItem="0JO-qU-b23" secondAttribute="leading" id="SYN-Fl-l9U"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mlt-AG-9F1" secondAttribute="trailing" constant="8" id="Ufz-Yv-UaI"/>
+                            <constraint firstAttribute="trailing" secondItem="tLi-G6-adQ" secondAttribute="trailing" constant="17" id="UiY-8z-Szu"/>
+                            <constraint firstAttribute="trailing" secondItem="KMR-9G-r4F" secondAttribute="trailing" id="Uq7-eJ-vJ9"/>
+                            <constraint firstAttribute="bottom" secondItem="elI-8a-1Wu" secondAttribute="bottom" constant="10" id="YZz-hh-ahu"/>
+                            <constraint firstItem="8bc-Zt-fem" firstAttribute="top" secondItem="elI-8a-1Wu" secondAttribute="top" id="Zs5-xb-ODy"/>
+                            <constraint firstItem="mlt-AG-9F1" firstAttribute="leading" secondItem="0JO-qU-b23" secondAttribute="trailing" constant="3" id="ZsH-Gx-016"/>
+                            <constraint firstItem="mlt-AG-9F1" firstAttribute="bottom" secondItem="0JO-qU-b23" secondAttribute="bottom" id="bpO-Fu-dvw"/>
+                            <constraint firstItem="KMR-9G-r4F" firstAttribute="leading" secondItem="gyH-VV-cVx" secondAttribute="leading" id="bqw-Sd-9Rc"/>
+                            <constraint firstItem="tLi-G6-adQ" firstAttribute="top" secondItem="fFz-I1-Wud" secondAttribute="bottom" constant="9.6999999999999993" id="c2y-cw-hgz"/>
+                            <constraint firstItem="8bc-Zt-fem" firstAttribute="top" secondItem="tLi-G6-adQ" secondAttribute="bottom" constant="8" id="c4P-wl-pCv"/>
+                            <constraint firstItem="fFz-I1-Wud" firstAttribute="top" secondItem="0JO-qU-b23" secondAttribute="bottom" id="pPI-tm-UKk"/>
+                            <constraint firstItem="0JO-qU-b23" firstAttribute="top" secondItem="gyH-VV-cVx" secondAttribute="top" constant="12" id="xM3-Wd-AyN"/>
+                            <constraint firstItem="tLi-G6-adQ" firstAttribute="leading" secondItem="fFz-I1-Wud" secondAttribute="leading" id="xhG-KN-af6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gyH-VV-cVx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7vp-V1-MWh"/>
+                    <constraint firstItem="gyH-VV-cVx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="a2V-Rg-tDL"/>
+                    <constraint firstAttribute="bottom" secondItem="gyH-VV-cVx" secondAttribute="bottom" id="dk3-W0-8cw"/>
+                    <constraint firstAttribute="trailing" secondItem="gyH-VV-cVx" secondAttribute="trailing" id="va7-OV-MQe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="commentLabel" destination="tLi-G6-adQ" id="af1-YI-aqF"/>
+                <outlet property="commenterJobLabel" destination="mlt-AG-9F1" id="e7Y-j7-8FR"/>
+                <outlet property="commenterNameLabel" destination="0JO-qU-b23" id="qQb-Ry-tS7"/>
+                <outlet property="dislikeButton" destination="8bc-Zt-fem" id="RqX-LO-ySh"/>
+                <outlet property="likeButton" destination="elI-8a-1Wu" id="tf5-CB-GSV"/>
+                <outlet property="timeLabel" destination="fFz-I1-Wud" id="C5J-nc-C05"/>
+            </connections>
+            <point key="canvasLocation" x="99.275362318840592" y="123.54910714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="common_dislike_ic" width="16" height="15"/>
+        <image name="common_like_ic" width="17" height="16"/>
+        <image name="post_details_commenter_ic" width="36.5" height="36.5"/>
+    </resources>
+</document>

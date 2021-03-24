@@ -47,6 +47,6 @@ class HomePresenter: HomePresenterProtocol {
     }
     
     func didTappedCell(with index: Int) {
-        
+        view?.navigateToPostDetails()
     }
 }

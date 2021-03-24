@@ -267,6 +267,18 @@
 		50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A77D3825D9EEE10054E80D /* TSRotger-Bold.ttf */; };
 		50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D3F25D9F2640054E80D /* TabBarLoclizer.swift */; };
 		50A77D4525D9F2A10054E80D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A77D4425D9F2A10054E80D /* String.swift */; };
+		50AF3E8E260ABEBF00CBCD0C /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3E8C260ABEBF00CBCD0C /* PostDetailsViewController.swift */; };
+		50AF3E8F260ABEBF00CBCD0C /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AF3E8D260ABEBF00CBCD0C /* PostDetailsViewController.xib */; };
+		50AF3E94260ABED900CBCD0C /* PostDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3E93260ABED900CBCD0C /* PostDetailsPresenter.swift */; };
+		50AF3E98260ABEF100CBCD0C /* PostDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3E97260ABEF100CBCD0C /* PostDetailsProtocols.swift */; };
+		50AF3E9D260ABF0200CBCD0C /* PostDetailsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3E9C260ABF0200CBCD0C /* PostDetailsImages.swift */; };
+		50AF3EA0260ABF1300CBCD0C /* PostDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3E9F260ABF1300CBCD0C /* PostDetailsLocalizer.swift */; };
+		50AF3EAC260AC64C00CBCD0C /* PostDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3EAA260AC64C00CBCD0C /* PostDetailsCell.swift */; };
+		50AF3EAD260AC64C00CBCD0C /* PostDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AF3EAB260AC64C00CBCD0C /* PostDetailsCell.xib */; };
+		50AF3EB4260AC75D00CBCD0C /* PostDetailsSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3EB2260AC75D00CBCD0C /* PostDetailsSectionHeaderView.swift */; };
+		50AF3EB5260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AF3EB3260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib */; };
+		50AF3EBA260AC9D300CBCD0C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3EB8260AC9D200CBCD0C /* CommentCell.swift */; };
+		50AF3EBB260AC9D300CBCD0C /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AF3EB9260AC9D200CBCD0C /* CommentCell.xib */; };
 		50BC0A7025E5C076006653FD /* MyCropsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A6E25E5C076006653FD /* MyCropsViewController.swift */; };
 		50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC0A6F25E5C076006653FD /* MyCropsViewController.xib */; };
 		50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A7625E5C0BD006653FD /* MyCropsLocalizer.swift */; };
@@ -583,6 +595,18 @@
 		50A77D3825D9EEE10054E80D /* TSRotger-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TSRotger-Bold.ttf"; sourceTree = "<group>"; };
 		50A77D3F25D9F2640054E80D /* TabBarLoclizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLoclizer.swift; sourceTree = "<group>"; };
 		50A77D4425D9F2A10054E80D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		50AF3E8C260ABEBF00CBCD0C /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		50AF3E8D260ABEBF00CBCD0C /* PostDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
+		50AF3E93260ABED900CBCD0C /* PostDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenter.swift; sourceTree = "<group>"; };
+		50AF3E97260ABEF100CBCD0C /* PostDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsProtocols.swift; sourceTree = "<group>"; };
+		50AF3E9C260ABF0200CBCD0C /* PostDetailsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsImages.swift; sourceTree = "<group>"; };
+		50AF3E9F260ABF1300CBCD0C /* PostDetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsLocalizer.swift; sourceTree = "<group>"; };
+		50AF3EAA260AC64C00CBCD0C /* PostDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsCell.swift; sourceTree = "<group>"; };
+		50AF3EAB260AC64C00CBCD0C /* PostDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsCell.xib; sourceTree = "<group>"; };
+		50AF3EB2260AC75D00CBCD0C /* PostDetailsSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsSectionHeaderView.swift; sourceTree = "<group>"; };
+		50AF3EB3260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsSectionHeaderView.xib; sourceTree = "<group>"; };
+		50AF3EB8260AC9D200CBCD0C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		50AF3EB9260AC9D200CBCD0C /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		50BC0A6E25E5C076006653FD /* MyCropsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsViewController.swift; sourceTree = "<group>"; };
 		50BC0A6F25E5C076006653FD /* MyCropsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsViewController.xib; sourceTree = "<group>"; };
 		50BC0A7625E5C0BD006653FD /* MyCropsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsLocalizer.swift; sourceTree = "<group>"; };
@@ -2969,6 +2993,89 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		50AF3E89260ABE9700CBCD0C /* PostDetails */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3E9B260ABEF400CBCD0C /* Resources */,
+				50AF3E96260ABEDD00CBCD0C /* Protocols */,
+				50AF3E92260ABEC600CBCD0C /* Presenter */,
+				50AF3E8A260ABE9F00CBCD0C /* View */,
+			);
+			path = PostDetails;
+			sourceTree = "<group>";
+		};
+		50AF3E8A260ABE9F00CBCD0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3EB7260AC9B700CBCD0C /* CommentCell */,
+				50AF3EB1260AC72A00CBCD0C /* PostDetailsSectionHeaderView */,
+				50AF3EA9260AC62200CBCD0C /* PostDetailsCell */,
+				50AF3E8B260ABEAB00CBCD0C /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50AF3E8B260ABEAB00CBCD0C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3E8C260ABEBF00CBCD0C /* PostDetailsViewController.swift */,
+				50AF3E8D260ABEBF00CBCD0C /* PostDetailsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		50AF3E92260ABEC600CBCD0C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3E93260ABED900CBCD0C /* PostDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		50AF3E96260ABEDD00CBCD0C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3E97260ABEF100CBCD0C /* PostDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		50AF3E9B260ABEF400CBCD0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3E9C260ABF0200CBCD0C /* PostDetailsImages.swift */,
+				50AF3E9F260ABF1300CBCD0C /* PostDetailsLocalizer.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		50AF3EA9260AC62200CBCD0C /* PostDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3EAA260AC64C00CBCD0C /* PostDetailsCell.swift */,
+				50AF3EAB260AC64C00CBCD0C /* PostDetailsCell.xib */,
+			);
+			path = PostDetailsCell;
+			sourceTree = "<group>";
+		};
+		50AF3EB1260AC72A00CBCD0C /* PostDetailsSectionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3EB2260AC75D00CBCD0C /* PostDetailsSectionHeaderView.swift */,
+				50AF3EB3260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib */,
+			);
+			path = PostDetailsSectionHeaderView;
+			sourceTree = "<group>";
+		};
+		50AF3EB7260AC9B700CBCD0C /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				50AF3EB8260AC9D200CBCD0C /* CommentCell.swift */,
+				50AF3EB9260AC9D200CBCD0C /* CommentCell.xib */,
+			);
+			path = CommentCell;
+			sourceTree = "<group>";
+		};
 		50BC0A6B25E5C03F006653FD /* MyCrops */ = {
 			isa = PBXGroup;
 			children = (
@@ -3255,6 +3362,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50AF3E89260ABE9700CBCD0C /* PostDetails */,
 				217D1E8E2608293C0025462F /* Product Details */,
 				50BC86FC260543520065D8FE /* Profile Module */,
 				2121AC0C26052026001A2EDD /* Help */,
@@ -3539,6 +3647,7 @@
 				504969C725F81E23002C3E40 /* MyFarmDetailsPeopleChildCell.xib in Resources */,
 				506A5A2725E5671A0014D59A /* MoreMenuProfileCell.xib in Resources */,
 				503CB5C525E0A15F00B7A393 /* VideosViewController.xib in Resources */,
+				50AF3E8F260ABEBF00CBCD0C /* PostDetailsViewController.xib in Resources */,
 				504969B125F81E23002C3E40 /* MyFarmDetailsPostsChildCell.xib in Resources */,
 				503DFC5925DB1F990093CAF2 /* HomeHeaderViewCell.xib in Resources */,
 				5062E7CE25FB2AB4000398AA /* CropsInfoCell.xib in Resources */,
@@ -3573,6 +3682,7 @@
 				508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */,
 				503CB5BB25E07DD900B7A393 /* ProductCell.xib in Resources */,
 				504969B325F81E23002C3E40 /* MyFarmDetailsPostsCell.xib in Resources */,
+				50AF3EB5260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib in Resources */,
 				504969C125F81E23002C3E40 /* MyFarmDetailsServiceTableCell.xib in Resources */,
 				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
 				509643C925E2F1C40000FB60 /* AddPostCell.xib in Resources */,
@@ -3598,6 +3708,7 @@
 				503CB5E525E0A23300B7A393 /* VideosCell.xib in Resources */,
 				503CB5A125E07AF700B7A393 /* ProductsViewController.xib in Resources */,
 				50D6138025DC206400228385 /* MyFarmWeatherHeaderView.xib in Resources */,
+				50AF3EAD260AC64C00CBCD0C /* PostDetailsCell.xib in Resources */,
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				506E4D2D25EDCC25003BD749 /* MyCropsStretchedCell.xib in Resources */,
 				5097F4FE25FBAC49000E14C4 /* CropsInfoHeaderView.xib in Resources */,
@@ -3621,6 +3732,7 @@
 				217D1EAF2608293C0025462F /* WebsiteLinkTableViewCell.xib in Resources */,
 				50BC87012605437D0065D8FE /* ProfileViewController.xib in Resources */,
 				2166480F25FEB0B20028E335 /* CreateNewPasswordViewController.xib in Resources */,
+				50AF3EBB260AC9D300CBCD0C /* CommentCell.xib in Resources */,
 				5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */,
 				50BC86F3260538240065D8FE /* StarsAlertViewController.xib in Resources */,
 				504969C025F81E23002C3E40 /* MyFarmDetailsServiceTableView.xib in Resources */,
@@ -3711,6 +3823,7 @@
 				503DFC5825DB1F990093CAF2 /* HomeHeaderViewCell.swift in Sources */,
 				21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */,
 				504969BE25F81E23002C3E40 /* MyFarmDetailsTaskCell.swift in Sources */,
+				50AF3EAC260AC64C00CBCD0C /* PostDetailsCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				2166B89625E081BC008FE0A0 /* LoginProtocols.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
@@ -3722,6 +3835,7 @@
 				502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				2166B8A525E081C8008FE0A0 /* Registration Presenter.swift in Sources */,
+				50AF3EA0260ABF1300CBCD0C /* PostDetailsLocalizer.swift in Sources */,
 				506E4D1225EDC3B9003BD749 /* MyCropsTableViewHeaderView.swift in Sources */,
 				504969C925F81E23002C3E40 /* MyFarmDetailsViewController.swift in Sources */,
 				506A5A2E25E5671A0014D59A /* MoreMenuLanguageCell.swift in Sources */,
@@ -3737,6 +3851,7 @@
 				50D6136D25DC198900228385 /* CommonImages.swift in Sources */,
 				503CB5AA25E07BA300B7A393 /* ProductsImages.swift in Sources */,
 				50BC0A8325E5C114006653FD /* MyCropsProtocol.swift in Sources */,
+				50AF3EBA260AC9D300CBCD0C /* CommentCell.swift in Sources */,
 				504969DF25F81F4B002C3E40 /* StandardTextFieldView.swift in Sources */,
 				50068C6F25E48A650097A870 /* MoreMenuPresenter.swift in Sources */,
 				213751DD25F3FEBD00E342EF /* CropsInfoDetailsPresenter.swift in Sources */,
@@ -3747,6 +3862,7 @@
 				50D4ACC925FBF8C900880E55 /* ReverseGeocodeService.swift in Sources */,
 				5062E7BF25FB26A5000398AA /* CropsInfoViewController.swift in Sources */,
 				504969BB25F81E23002C3E40 /* MyFarmServiceTableCell.swift in Sources */,
+				50AF3EB4260AC75D00CBCD0C /* PostDetailsSectionHeaderView.swift in Sources */,
 				509643CE25E2F6A20000FB60 /* AddPostUIModel.swift in Sources */,
 				504969CB25F81E23002C3E40 /* MyFarmDetailsProtocols.swift in Sources */,
 				504969AD25F81E23002C3E40 /* MyFarmDetailsPresenter.swift in Sources */,
@@ -3823,6 +3939,7 @@
 				2101D91225F354C100FB0DB9 /* YourProductsPresenter.swift in Sources */,
 				50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */,
 				506E4D0A25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.swift in Sources */,
+				50AF3E98260ABEF100CBCD0C /* PostDetailsProtocols.swift in Sources */,
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
 				5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
@@ -3873,6 +3990,7 @@
 				213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */,
 				50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */,
 				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
+				50AF3E9D260ABF0200CBCD0C /* PostDetailsImages.swift in Sources */,
 				504969B225F81E23002C3E40 /* MyFarmDetailsPostsChildCell.swift in Sources */,
 				5099491C25E4642D0085CFBF /* ForgotProtocols.swift in Sources */,
 				508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */,
@@ -3880,12 +3998,14 @@
 				50E6652225E40CDE00D48EA8 /* InterestedSelectionPresenter.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
 				2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */,
+				50AF3E8E260ABEBF00CBCD0C /* PostDetailsViewController.swift in Sources */,
 				504969CA25F81E23002C3E40 /* MyFarmDetailsUIModel.swift in Sources */,
 				2166480125FEAF3B0028E335 /* Protocols.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				504969C225F81E23002C3E40 /* MyFarmDetailsSuitabilityCell.swift in Sources */,
+				50AF3E94260ABED900CBCD0C /* PostDetailsPresenter.swift in Sources */,
 				2101D91E25F3589400FB0DB9 /* YourProductsTabelViewController.swift in Sources */,
 				508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
