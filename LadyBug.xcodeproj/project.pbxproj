@@ -84,6 +84,8 @@
 		217D1EB12608293C0025462F /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1EA42608293C0025462F /* ProductDetailsViewController.swift */; };
 		217D1EB22608293C0025462F /* ProductDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */; };
 		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
+		21A706CA260B87E30094EC56 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706C8260B87E30094EC56 /* AddProductViewController.swift */; };
+		21A706CB260B87E30094EC56 /* AddProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A706C9260B87E30094EC56 /* AddProductViewController.xib */; };
 		21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE318825F597D30015467B /* MyPostsPresenter.swift */; };
 		5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432325F99A9300D1630E /* MyTasksViewController.swift */; };
 		5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001432425F99A9300D1630E /* MyTasksViewController.xib */; };
@@ -410,6 +412,8 @@
 		217D1EA42608293C0025462F /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsProtocols.swift; sourceTree = "<group>"; };
 		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
+		21A706C8260B87E30094EC56 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		21A706C9260B87E30094EC56 /* AddProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProductViewController.xib; sourceTree = "<group>"; };
 		21CE318825F597D30015467B /* MyPostsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsPresenter.swift; sourceTree = "<group>"; };
 		5001432325F99A9300D1630E /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
 		5001432425F99A9300D1630E /* MyTasksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksViewController.xib; sourceTree = "<group>"; };
@@ -1531,6 +1535,71 @@
 				21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */,
 			);
 			path = Localizer;
+			sourceTree = "<group>";
+		};
+		21A706BF260B86610094EC56 /* Add Product */ = {
+			isa = PBXGroup;
+			children = (
+				21A706C6260B86A10094EC56 /* New Group5 */,
+				21A706C5260B869D0094EC56 /* New Group3 */,
+				21A706C4260B86900094EC56 /* New Group4 */,
+				21A706C2260B867C0094EC56 /* New Group2 */,
+				21A706C1260B86790094EC56 /* New Group1 */,
+				21A706C0260B86760094EC56 /* view  */,
+			);
+			path = "Add Product";
+			sourceTree = "<group>";
+		};
+		21A706C0260B86760094EC56 /* view  */ = {
+			isa = PBXGroup;
+			children = (
+				21A706C7260B86B00094EC56 /* View controller */,
+			);
+			path = "view ";
+			sourceTree = "<group>";
+		};
+		21A706C1260B86790094EC56 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		21A706C2260B867C0094EC56 /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		21A706C4260B86900094EC56 /* New Group4 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group4";
+			sourceTree = "<group>";
+		};
+		21A706C5260B869D0094EC56 /* New Group3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group3";
+			sourceTree = "<group>";
+		};
+		21A706C6260B86A10094EC56 /* New Group5 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group5";
+			sourceTree = "<group>";
+		};
+		21A706C7260B86B00094EC56 /* View controller */ = {
+			isa = PBXGroup;
+			children = (
+				21A706C8260B87E30094EC56 /* AddProductViewController.swift */,
+				21A706C9260B87E30094EC56 /* AddProductViewController.xib */,
+			);
+			path = "View controller";
 			sourceTree = "<group>";
 		};
 		5001432025F99A6600D1630E /* MyTasks Module */ = {
@@ -3362,6 +3431,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				21A706BF260B86610094EC56 /* Add Product */,
 				50AF3E89260ABE9700CBCD0C /* PostDetails */,
 				217D1E8E2608293C0025462F /* Product Details */,
 				50BC86FC260543520065D8FE /* Profile Module */,
@@ -3728,6 +3798,7 @@
 				217D1EAD2608293C0025462F /* ProductDetailsTableViewCell.xib in Resources */,
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
 				50BC86DC260534890065D8FE /* StandardAlertViewController.xib in Resources */,
+				21A706CB260B87E30094EC56 /* AddProductViewController.xib in Resources */,
 				504969B425F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib in Resources */,
 				217D1EAF2608293C0025462F /* WebsiteLinkTableViewCell.xib in Resources */,
 				50BC87012605437D0065D8FE /* ProfileViewController.xib in Resources */,
@@ -3894,6 +3965,7 @@
 				50BC87002605437D0065D8FE /* ProfileViewController.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				2101D91A25F357D900FB0DB9 /* YourProductsCellTableViewCell.swift in Sources */,
+				21A706CA260B87E30094EC56 /* AddProductViewController.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
 				509643AC25E2EF860000FB60 /* AddPostViewController.swift in Sources */,
