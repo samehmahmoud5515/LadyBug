@@ -158,33 +158,40 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-MT-xMg">
-                                    <rect key="frame" x="160" y="125" width="35" height="35"/>
+                                    <rect key="frame" x="152" y="118" width="24" height="24"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="35" id="j8V-Hy-OmA"/>
-                                        <constraint firstAttribute="height" constant="35" id="ktP-1l-DXD"/>
+                                        <constraint firstAttribute="width" constant="24" id="jbw-ke-Fh9"/>
+                                        <constraint firstAttribute="height" constant="24" id="ju3-Rr-IEF"/>
                                     </constraints>
-                                    <state key="normal" backgroundImage="comman_upload_ic">
+                                    <state key="normal">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </state>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_upload_ic" translatesAutoresizingMaskIntoConstraints="NO" id="hbu-kz-Hyf">
+                                    <rect key="frame" x="152" y="118" width="24" height="24"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="sdr-dM-cCk" firstAttribute="leading" secondItem="uOn-mc-4if" secondAttribute="leading" id="2hh-nr-ATu"/>
                                 <constraint firstItem="sdr-dM-cCk" firstAttribute="trailing" secondItem="uOn-mc-4if" secondAttribute="trailing" id="79g-EL-WaK"/>
                                 <constraint firstItem="fWS-ry-dOo" firstAttribute="centerX" secondItem="gpF-OX-Xji" secondAttribute="centerX" id="8dd-Qk-ZV1"/>
+                                <constraint firstItem="hbu-kz-Hyf" firstAttribute="width" secondItem="BVN-MT-xMg" secondAttribute="width" id="B7C-co-aOx"/>
                                 <constraint firstAttribute="bottom" secondItem="sdr-dM-cCk" secondAttribute="bottom" constant="26" id="Cce-Cd-gx0"/>
                                 <constraint firstItem="fWS-ry-dOo" firstAttribute="top" secondItem="Diw-ff-dzv" secondAttribute="bottom" constant="16" id="F8C-xv-kw7"/>
+                                <constraint firstItem="hbu-kz-Hyf" firstAttribute="height" secondItem="BVN-MT-xMg" secondAttribute="height" id="X5y-9V-dZQ"/>
                                 <constraint firstItem="uOn-mc-4if" firstAttribute="leading" secondItem="gpF-OX-Xji" secondAttribute="leading" constant="24" id="Y8f-dC-jVS"/>
+                                <constraint firstItem="hbu-kz-Hyf" firstAttribute="centerY" secondItem="BVN-MT-xMg" secondAttribute="centerY" id="bRP-on-Ge0"/>
                                 <constraint firstItem="Diw-ff-dzv" firstAttribute="centerX" secondItem="gpF-OX-Xji" secondAttribute="centerX" id="cde-nR-ed9"/>
-                                <constraint firstItem="BVN-MT-xMg" firstAttribute="bottom" secondItem="fWS-ry-dOo" secondAttribute="top" constant="9" id="egS-cL-F67"/>
                                 <constraint firstAttribute="trailing" secondItem="uOn-mc-4if" secondAttribute="trailing" constant="24" id="iSw-nC-hfM"/>
                                 <constraint firstItem="uOn-mc-4if" firstAttribute="top" secondItem="fWS-ry-dOo" secondAttribute="bottom" constant="21" id="nCR-HT-ZOA"/>
                                 <constraint firstItem="sdr-dM-cCk" firstAttribute="top" secondItem="uOn-mc-4if" secondAttribute="bottom" constant="33" id="nfv-dF-myd"/>
+                                <constraint firstItem="BVN-MT-xMg" firstAttribute="top" secondItem="Diw-ff-dzv" secondAttribute="top" constant="77" id="s2K-UT-udp"/>
+                                <constraint firstItem="BVN-MT-xMg" firstAttribute="trailing" secondItem="Diw-ff-dzv" secondAttribute="trailing" constant="-78" id="tXg-aV-wYM"/>
+                                <constraint firstItem="hbu-kz-Hyf" firstAttribute="centerX" secondItem="BVN-MT-xMg" secondAttribute="centerX" id="tyR-yJ-HTC"/>
                                 <constraint firstAttribute="bottom" secondItem="0dD-jq-r4k" secondAttribute="bottom" constant="26" id="ucm-y5-67B"/>
                                 <constraint firstItem="Diw-ff-dzv" firstAttribute="top" secondItem="gpF-OX-Xji" secondAttribute="top" constant="41" id="xpY-VE-X4R"/>
-                                <constraint firstItem="BVN-MT-xMg" firstAttribute="leading" secondItem="Diw-ff-dzv" secondAttribute="leading" id="zIa-Qb-2q6"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -210,7 +217,7 @@
         </view>
     </objects>
     <resources>
-        <image name="comman_upload_ic" width="155" height="155"/>
+        <image name="common_upload_ic" width="139" height="142"/>
         <image name="registration_load_image" width="40" height="40"/>
     </resources>
 </document>
