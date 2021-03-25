@@ -57,6 +57,7 @@ extension MyFarmViewController {
         searchBar.setImage(UIImage(named: presnter.images.search), for: .search, state: .normal)
         searchBar.barTintColor = .paleGrey
         searchBar.tintColor = .black
+        searchBar.delegate = self
         navigationItem.titleView = searchBar
         
         let attributes = NSAttributedString(string: presnter.localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
@@ -127,4 +128,8 @@ extension MyFarmViewController {
         let vc = CreateFarmViewController()
         navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension MyFarmViewController: UISearchBarDelegate {
+    
 }

@@ -261,6 +261,8 @@
 		5099491A25E4642D0085CFBF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099491325E4642D0085CFBF /* ForgotPasswordViewController.swift */; };
 		5099491B25E4642D0085CFBF /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5099491425E4642D0085CFBF /* ForgotPasswordViewController.xib */; };
 		5099491C25E4642D0085CFBF /* ForgotProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099491625E4642D0085CFBF /* ForgotProtocols.swift */; };
+		509C147B260D3597004CECA2 /* FarmActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509C1479260D3597004CECA2 /* FarmActivityView.swift */; };
+		509C147C260D3597004CECA2 /* FarmActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509C147A260D3597004CECA2 /* FarmActivityView.xib */; };
 		50A54C0C25E3FF190052F701 /* InterestedSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A54C0A25E3FF180052F701 /* InterestedSelectionViewController.xib */; };
 		50A54C0D25E3FF190052F701 /* InterestedSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A54C0B25E3FF180052F701 /* InterestedSelectionViewController.swift */; };
 		50A54C1325E3FF5C0052F701 /* InterestedSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A54C1125E3FF5C0052F701 /* InterestedSelectionCell.swift */; };
@@ -309,6 +311,10 @@
 		50BC870B260543A60065D8FE /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC870A260543A60065D8FE /* ProfileProtocols.swift */; };
 		50BC8710260543ED0065D8FE /* ProfileImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC870F260543ED0065D8FE /* ProfileImages.swift */; };
 		50BC8714260543F90065D8FE /* ProfileLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC8713260543F90065D8FE /* ProfileLocalizer.swift */; };
+		50D083E9260C063200518ED5 /* FarmTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D083E7260C063200518ED5 /* FarmTypeView.swift */; };
+		50D083EA260C063200518ED5 /* FarmTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D083E8260C063200518ED5 /* FarmTypeView.xib */; };
+		50D083F0260C0BCD00518ED5 /* FarmTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D083EE260C0BCD00518ED5 /* FarmTypeCell.swift */; };
+		50D083F1260C0BCD00518ED5 /* FarmTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D083EF260C0BCD00518ED5 /* FarmTypeCell.xib */; };
 		50D4ACC225FBF8C900880E55 /* MapLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB625FBF8C900880E55 /* MapLocalizer.swift */; };
 		50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB725FBF8C900880E55 /* MapImages.swift */; };
 		50D4ACC425FBF8C900880E55 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4ACB925FBF8C900880E55 /* Coordinate.swift */; };
@@ -603,6 +609,8 @@
 		5099491325E4642D0085CFBF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5099491425E4642D0085CFBF /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		5099491625E4642D0085CFBF /* ForgotProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotProtocols.swift; sourceTree = "<group>"; };
+		509C1479260D3597004CECA2 /* FarmActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmActivityView.swift; sourceTree = "<group>"; };
+		509C147A260D3597004CECA2 /* FarmActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmActivityView.xib; sourceTree = "<group>"; };
 		50A54C0A25E3FF180052F701 /* InterestedSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestedSelectionViewController.xib; sourceTree = "<group>"; };
 		50A54C0B25E3FF180052F701 /* InterestedSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestedSelectionViewController.swift; sourceTree = "<group>"; };
 		50A54C1125E3FF5C0052F701 /* InterestedSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedSelectionCell.swift; sourceTree = "<group>"; };
@@ -651,6 +659,10 @@
 		50BC870A260543A60065D8FE /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		50BC870F260543ED0065D8FE /* ProfileImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImages.swift; sourceTree = "<group>"; };
 		50BC8713260543F90065D8FE /* ProfileLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalizer.swift; sourceTree = "<group>"; };
+		50D083E7260C063200518ED5 /* FarmTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTypeView.swift; sourceTree = "<group>"; };
+		50D083E8260C063200518ED5 /* FarmTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmTypeView.xib; sourceTree = "<group>"; };
+		50D083EE260C0BCD00518ED5 /* FarmTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTypeCell.swift; sourceTree = "<group>"; };
+		50D083EF260C0BCD00518ED5 /* FarmTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmTypeCell.xib; sourceTree = "<group>"; };
 		50D4ACB625FBF8C900880E55 /* MapLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocalizer.swift; sourceTree = "<group>"; };
 		50D4ACB725FBF8C900880E55 /* MapImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapImages.swift; sourceTree = "<group>"; };
 		50D4ACB925FBF8C900880E55 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -1871,6 +1883,8 @@
 		50212E12260BF95000589DAE /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				509C1478260D356E004CECA2 /* FarmActivityView */,
+				50D083E6260C060F00518ED5 /* FarmTypeView */,
 				50212E13260BF96800589DAE /* ChemicalSourceView */,
 			);
 			path = SubViews;
@@ -2942,6 +2956,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		509C1478260D356E004CECA2 /* FarmActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				509C1479260D3597004CECA2 /* FarmActivityView.swift */,
+				509C147A260D3597004CECA2 /* FarmActivityView.xib */,
+			);
+			path = FarmActivityView;
+			sourceTree = "<group>";
+		};
 		50A54C0725E3FF180052F701 /* InterestedSelection Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -3346,6 +3369,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		50D083E6260C060F00518ED5 /* FarmTypeView */ = {
+			isa = PBXGroup;
+			children = (
+				50D083ED260C0BB500518ED5 /* Cell */,
+				50D083E7260C063200518ED5 /* FarmTypeView.swift */,
+				50D083E8260C063200518ED5 /* FarmTypeView.xib */,
+			);
+			path = FarmTypeView;
+			sourceTree = "<group>";
+		};
+		50D083ED260C0BB500518ED5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50D083EE260C0BCD00518ED5 /* FarmTypeCell.swift */,
+				50D083EF260C0BCD00518ED5 /* FarmTypeCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		50D4ACB425FBF8C900880E55 /* Map Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -3489,34 +3531,34 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
+				509643A725E2EF3E0000FB60 /* AddPost Module */,
+				50E3012025D89956008271B6 /* AppDelegate */,
 				50AF3EC2260AD16A00CBCD0C /* CreateFarm */,
-				50AF3E89260ABE9700CBCD0C /* PostDetails Module */,
-				217D1E8E2608293C0025462F /* Product Details */,
-				50BC86FC260543520065D8FE /* Profile Module */,
-				2121AC0C26052026001A2EDD /* Help */,
-				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
-				50D4ACB425FBF8C900880E55 /* Map Module */,
 				216647F725FEA7E40028E335 /* CreateNewPassword */,
 				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
-				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
+				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
+				213751E725F4309600E342EF /* FollowersModule */,
+				5099490925E4642D0085CFBF /* ForgotPassword */,
+				2121AC0C26052026001A2EDD /* Help */,
+				503F7A1325DAA63100EBD730 /* Home Module */,
+				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
+				2166B88325E081BC008FE0A0 /* Login Module */,
+				50D4ACB425FBF8C900880E55 /* Map Module */,
+				50068C5725E48A650097A870 /* MoreMenu Module */,
+				50BC0A6B25E5C03F006653FD /* MyCrops */,
+				50D6137025DC1CA900228385 /* MyFarm */,
 				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
 				2137520425F58DFC00E342EF /* MyPosts Module */,
-				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
-				213751E725F4309600E342EF /* FollowersModule */,
-				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
-				50BC0A6B25E5C03F006653FD /* MyCrops */,
-				50068C5725E48A650097A870 /* MoreMenu Module */,
-				5099490925E4642D0085CFBF /* ForgotPassword */,
-				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
-				509643A725E2EF3E0000FB60 /* AddPost Module */,
-				503CB5BF25E0A11200B7A393 /* Videos Module */,
-				2166B89725E081C8008FE0A0 /* Registration Module */,
-				2166B88325E081BC008FE0A0 /* Login Module */,
+				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
+				50AF3E89260ABE9700CBCD0C /* PostDetails Module */,
+				217D1E8E2608293C0025462F /* Product Details */,
 				503CB59B25E07AD100B7A393 /* Products */,
-				50D6137025DC1CA900228385 /* MyFarm */,
-				503F7A1325DAA63100EBD730 /* Home Module */,
+				50BC86FC260543520065D8FE /* Profile Module */,
+				2166B89725E081C8008FE0A0 /* Registration Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
-				50E3012025D89956008271B6 /* AppDelegate */,
+				503CB5BF25E0A11200B7A393 /* Videos Module */,
+				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -3785,14 +3827,17 @@
 				50A77D3A25D9EEE10054E80D /* TSRotger-Regular.ttf in Resources */,
 				504969B725F81E23002C3E40 /* MyFarmDetailsView.xib in Resources */,
 				506E4D0B25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib in Resources */,
+				50D083F1260C0BCD00518ED5 /* FarmTypeCell.xib in Resources */,
 				504969C825F81E23002C3E40 /* MyFarmDetailsViewController.xib in Resources */,
 				5001434725F9A75400D1630E /* MyTasksSectionHeaderView.xib in Resources */,
 				50E01ED825E5C9A30016DEAB /* MyCropsHeaderView.xib in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
 				50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */,
 				509643AD25E2EF860000FB60 /* AddPostViewController.xib in Resources */,
+				50D083EA260C063200518ED5 /* FarmTypeView.xib in Resources */,
 				504969BC25F81E23002C3E40 /* MyFarmServiceTableCell.xib in Resources */,
 				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
+				509C147C260D3597004CECA2 /* FarmActivityView.xib in Resources */,
 				5062E7BE25FB26A5000398AA /* CropsInfoViewController.xib in Resources */,
 				506E4D1325EDC3B9003BD749 /* MyCropsTableViewHeaderView.xib in Resources */,
 				217D1EB02608293C0025462F /* ProductDetailsViewController.xib in Resources */,
@@ -3942,6 +3987,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50AF3EC7260AD19A00CBCD0C /* CreateFarmViewController.swift in Sources */,
+				50D083F0260C0BCD00518ED5 /* FarmTypeCell.swift in Sources */,
 				2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */,
 				5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */,
 				213751F625F4344600E342EF /* FollowersLocalizer.swift in Sources */,
@@ -4081,6 +4127,7 @@
 				50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */,
 				506E4D0A25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.swift in Sources */,
 				50AF3E98260ABEF100CBCD0C /* PostDetailsProtocols.swift in Sources */,
+				50D083E9260C063200518ED5 /* FarmTypeView.swift in Sources */,
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
 				5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
@@ -4104,6 +4151,7 @@
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				503CB5DA25E0A1C400B7A393 /* VideosLocalizer.swift in Sources */,
 				2121AC1F26052027001A2EDD /* HelpViewController.swift in Sources */,
+				509C147B260D3597004CECA2 /* FarmActivityView.swift in Sources */,
 				50212E0E260BD45E00589DAE /* DateSelectionView.swift in Sources */,
 				50BC86DD260534890065D8FE /* StandardAlertViewController.swift in Sources */,
 				5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */,

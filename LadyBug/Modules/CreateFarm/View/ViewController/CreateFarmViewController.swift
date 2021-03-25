@@ -38,6 +38,16 @@ class CreateFarmViewController: UIViewController {
         presnter.attach()
        
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 
 }
 
@@ -93,11 +103,11 @@ extension CreateFarmViewController {
     private func getCheckButton() -> UIBarButtonItem {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 51, height: 34))
         button.setTitle("Y123", for: .normal)
-        button.titleLabel?.textColor = .purplishBrown
+        button.setTitleColor(.purplishBrown, for: .normal)
         button.backgroundColor = .paleGreyThree
-        button.tintColor = .purplishBrown
+        button.titleLabel?.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = 17
+        button.layer.cornerRadius = 28
         return UIBarButtonItem(customView: button)
     }
     
