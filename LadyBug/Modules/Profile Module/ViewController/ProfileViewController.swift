@@ -45,6 +45,11 @@ class ProfileViewController: UIViewController {
         jobSelection.setupUI(selectionTitle: "اختر مهنتك")
         
     }
+    @IBAction func createNewPasswordButton(_ sender: UIButton) {
+        let createNewPasswordViewController = CreateNewPasswordViewController()
+        navigationController?.pushViewController(createNewPasswordViewController, animated: true)
+    }
+    
 }
 
 extension ProfileViewController: ProfileViewProtocol {

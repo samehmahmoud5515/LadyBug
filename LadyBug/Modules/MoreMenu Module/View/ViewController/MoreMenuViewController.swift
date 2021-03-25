@@ -162,7 +162,7 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
     func naviageteTo(model: MoreMenuUIModel) {
         switch model {
         case .interests:
-            let interestedSelectionViewController = InterestedSelectionViewController()
+            let interestedSelectionViewController = MyCropsViewController()
             navigationController?.pushViewController(interestedSelectionViewController, animated: true)
         case .profile:
             let profileVc = ProfileViewController()
@@ -173,8 +173,8 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
         case .language :
             showLanguageAlert()
         case.tasks :
-            let vc = MyTasksViewController()
-            navigationController?.pushViewController(vc, animated: true)
+            let myTasks = MyTasksViewController()
+            navigationController?.pushViewController(myTasks, animated: true)
         case.products :
             let yourProductsTabelViewController = YourProductsTabelViewController()
                      navigationController?.pushViewController(yourProductsTabelViewController, animated: true)
