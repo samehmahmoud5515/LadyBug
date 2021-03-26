@@ -28,7 +28,7 @@ class CropsInfoViewController: UIViewController {
         presenter.attach()
 
     }
-
+   
 
 }
 
@@ -121,6 +121,9 @@ extension CropsInfoViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setupUI()
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(CropsInfoDetailsViewController(), animated: true)
+    }
     
 }
+

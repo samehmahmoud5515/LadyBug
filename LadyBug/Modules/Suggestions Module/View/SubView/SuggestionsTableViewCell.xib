@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="SuggestionsTableViewCell" customModule="LadyBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mek-sK-lbb">
+                        <rect key="frame" x="15" y="9.5" width="319" height="76.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lzk-I2-XGr">
+                                <rect key="frame" x="297" y="33.5" width="10" height="9.5"/>
+                                <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="eEz-BQ-8l4"/>
+                                    <constraint firstAttribute="height" constant="14" id="owZ-8f-2Bm"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="zYF-EU-ziC">
+                                <rect key="frame" x="17" y="8.5" width="172.5" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyQ-9z-LRL">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_apple" translatesAutoresizingMaskIntoConstraints="NO" id="aV3-SS-4t1">
+                                                <rect key="frame" x="9" y="9" width="42" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="nc3-HK-aYW"/>
+                                                    <constraint firstAttribute="width" constant="42" id="uSi-u5-fhO"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95686274509803915" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="aV3-SS-4t1" firstAttribute="centerY" secondItem="fyQ-9z-LRL" secondAttribute="centerY" id="0AT-NQ-D3T"/>
+                                            <constraint firstAttribute="height" constant="60" id="D6h-qE-NvY"/>
+                                            <constraint firstItem="aV3-SS-4t1" firstAttribute="centerX" secondItem="fyQ-9z-LRL" secondAttribute="centerX" id="Iph-k6-URd"/>
+                                            <constraint firstAttribute="width" constant="60" id="VlY-DU-EhL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="محصول البطيخ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-Nz-8aI">
+                                        <rect key="frame" x="67" y="0.0" width="105.5" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.21176470588235294" green="0.20392156862745098" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lzk-I2-XGr" firstAttribute="centerY" secondItem="Mek-sK-lbb" secondAttribute="centerY" id="J4h-90-i22"/>
+                            <constraint firstAttribute="trailing" secondItem="lzk-I2-XGr" secondAttribute="trailing" constant="12" id="UoI-RC-Whv"/>
+                            <constraint firstItem="zYF-EU-ziC" firstAttribute="centerY" secondItem="Mek-sK-lbb" secondAttribute="centerY" id="VY9-Wg-6QZ"/>
+                            <constraint firstItem="zYF-EU-ziC" firstAttribute="leading" secondItem="Mek-sK-lbb" secondAttribute="leading" constant="17" id="tWy-D9-7yr"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="8"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.95686274509803915" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="Mek-sK-lbb" secondAttribute="bottom" constant="11" id="NTb-2L-I8s"/>
+                <constraint firstItem="Mek-sK-lbb" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="15" id="YKS-WF-JtH"/>
+                <constraint firstItem="Mek-sK-lbb" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="9.5" id="biq-J8-ENU"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="Mek-sK-lbb" secondAttribute="trailing" constant="15" id="lZ5-th-sTK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="suggestionCropsLabel" destination="TYK-Nz-8aI" id="7N9-3H-Pxk"/>
+                <outlet property="suggestionsArrow" destination="lzk-I2-XGr" id="xWt-N2-kr5"/>
+                <outlet property="suggestionsCropsImage" destination="aV3-SS-4t1" id="UeO-Y6-ehh"/>
+            </connections>
+            <point key="canvasLocation" x="-294.92753623188406" y="101.45089285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="common_apple" width="48" height="50"/>
+    </resources>
+</document>

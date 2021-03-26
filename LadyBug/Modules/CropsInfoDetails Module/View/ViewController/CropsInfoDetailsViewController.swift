@@ -52,6 +52,7 @@ extension CropsInfoDetailsViewController {
         button.backgroundColor = .paleGreyThree
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
         return UIBarButtonItem(customView: button)
     }
     
@@ -81,5 +82,10 @@ extension CropsInfoDetailsViewController {
         cropsInfoImage.layer.maskedCorners = [.layerMaxXMaxYCorner   , .layerMinXMaxYCorner  ]
         cropsInfoImage.layer.cornerRadius = CGFloat(8.0)
         cropsInfoImage.clipsToBounds = true
+    }
+}
+extension CropsInfoDetailsViewController {
+    @objc func didTappedBackButton(){
+        navigationController?.popViewController(animated: true)
     }
 }

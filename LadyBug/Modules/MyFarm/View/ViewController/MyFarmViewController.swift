@@ -132,8 +132,14 @@ extension MyFarmViewController {
 
 extension MyFarmViewController: UISearchBarDelegate {
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        let vc = MyFarmViewController()
+        let vc = SuggestionsViewController()
         navigationController?.navigationController?.pushViewController(vc, animated: true)
         return false
     }
+}
+extension MyFarmViewController{
+    private func hideNavigationController(){
+    navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
 }
