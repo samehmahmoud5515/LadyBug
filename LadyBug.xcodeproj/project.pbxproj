@@ -132,6 +132,8 @@
 		50206EC2260E6C110095E995 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50206EC0260E6C110095E995 /* AddTaskViewController.swift */; };
 		50206EC3260E6C110095E995 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50206EC1260E6C110095E995 /* AddTaskViewController.xib */; };
 		50206EC6260E8F660095E995 /* UIView+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50206EC5260E8F660095E995 /* UIView+ParentViewController.swift */; };
+		50206ECC260E9D8E0095E995 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50206ECA260E9D8E0095E995 /* ArchiveViewController.swift */; };
+		50206ECD260E9D8E0095E995 /* ArchiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50206ECB260E9D8E0095E995 /* ArchiveViewController.xib */; };
 		50212E07260BC84600589DAE /* CustomSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50212E05260BC84600589DAE /* CustomSelectionView.swift */; };
 		50212E08260BC84600589DAE /* CustomSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50212E06260BC84600589DAE /* CustomSelectionView.xib */; };
 		50212E0E260BD45E00589DAE /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50212E0C260BD45E00589DAE /* DateSelectionView.swift */; };
@@ -503,6 +505,8 @@
 		50206EC0260E6C110095E995 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		50206EC1260E6C110095E995 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
 		50206EC5260E8F660095E995 /* UIView+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParentViewController.swift"; sourceTree = "<group>"; };
+		50206ECA260E9D8E0095E995 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		50206ECB260E9D8E0095E995 /* ArchiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveViewController.xib; sourceTree = "<group>"; };
 		50212E05260BC84600589DAE /* CustomSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSelectionView.swift; sourceTree = "<group>"; };
 		50212E06260BC84600589DAE /* CustomSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSelectionView.xib; sourceTree = "<group>"; };
 		50212E0C260BD45E00589DAE /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
@@ -2014,6 +2018,23 @@
 			);
 			name = View;
 			path = "../New Group/View";
+			sourceTree = "<group>";
+		};
+		50206EC8260E9C900095E995 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				50206EC9260E9D790095E995 /* ViewController */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		50206EC9260E9D790095E995 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50206ECA260E9D8E0095E995 /* ArchiveViewController.swift */,
+				50206ECB260E9D8E0095E995 /* ArchiveViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		50212E04260BC7E200589DAE /* CustomSelectionView */ = {
@@ -3734,6 +3755,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50206EC8260E9C900095E995 /* Archive */,
 				50206EBD260E6BEA0095E995 /* AddTask */,
 				21A706ED260DECD50094EC56 /* Suggestions Module */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
@@ -4127,6 +4149,7 @@
 				2166480F25FEB0B20028E335 /* CreateNewPasswordViewController.xib in Resources */,
 				50AF3EBB260AC9D300CBCD0C /* CommentCell.xib in Resources */,
 				50212E0F260BD45E00589DAE /* DateSelectionView.xib in Resources */,
+				50206ECD260E9D8E0095E995 /* ArchiveViewController.xib in Resources */,
 				5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */,
 				50BC86F3260538240065D8FE /* StarsAlertViewController.xib in Resources */,
 				504969C025F81E23002C3E40 /* MyFarmDetailsServiceTableView.xib in Resources */,
@@ -4225,6 +4248,7 @@
 				2166B89625E081BC008FE0A0 /* LoginProtocols.swift in Sources */,
 				501F73FD25DAB54300333F16 /* UIView+Gradient.swift in Sources */,
 				506A5A2825E5671A0014D59A /* MoreMenuProfileCell.swift in Sources */,
+				50206ECC260E9D8E0095E995 /* ArchiveViewController.swift in Sources */,
 				213751FB25F4355900E342EF /* FollowersPresenter.swift in Sources */,
 				5062E7CD25FB2AB4000398AA /* CropsInfoCell.swift in Sources */,
 				21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */,

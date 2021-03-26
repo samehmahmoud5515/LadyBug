@@ -73,7 +73,7 @@ extension MyFarmViewController  {
     private func addBarButtonsToNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.ladyBug), style: .plain, target: nil, action: nil)
         
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: nil, action: nil), UIBarButtonItem(image: UIImage(named: presnter.images.tasks), style: .plain, target: nil, action: nil)]
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: self, action: #selector(notificationButtonDidTapped)), UIBarButtonItem(image: UIImage(named: presnter.images.tasks), style: .plain, target: self, action: #selector(archiveButtonDidTapped))]
     }
     
     private func registerTableViewCell() {
@@ -133,6 +133,14 @@ extension MyFarmViewController {
 extension MyFarmViewController {
     @objc func didTappedBackButton() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func archiveButtonDidTapped() {
+        navigationController?.navigationController?.pushViewController(ArchiveViewController(), animated: true)
+    }
+    
+    @objc func notificationButtonDidTapped() {
+        navigationController?.navigationController?.pushViewController(NotificationTabelViewController(), animated: true)
     }
 }
 

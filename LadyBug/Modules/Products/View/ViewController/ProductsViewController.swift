@@ -74,7 +74,7 @@ extension ProductsViewController {
     private func addBarButtonsToNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.ladyBug), style: .plain, target: nil, action: nil)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: self, action: #selector(notificationButtonDidTapped))
     }
     
     private func registerTableViewCell() {
@@ -116,5 +116,11 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         let subView = ProductDetailsViewController()
         self.navigationController?.navigationController?.pushViewController(subView, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension ProductsViewController {
+    @objc func notificationButtonDidTapped() {
+        navigationController?.navigationController?.pushViewController(NotificationTabelViewController(), animated: true)
     }
 }

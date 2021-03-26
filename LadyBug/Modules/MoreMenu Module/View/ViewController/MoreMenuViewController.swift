@@ -169,7 +169,7 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             navigationController?.navigationController?.pushViewController(profileVc, animated: true)
         case .notification:
             let notificationTabelViewController = NotificationTabelViewController()
-                     navigationController?.pushViewController(notificationTabelViewController, animated: true)
+            navigationController?.navigationController?.pushViewController(notificationTabelViewController, animated: true)
         case .language :
             showLanguageAlert()
         case.tasks :

@@ -75,7 +75,7 @@ extension HomeViewController {
     private func addBarButtonsToNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.ladyBug), style: .plain, target: nil, action: nil)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: self, action: #selector(notificationButtonDidTapped))
     }
     
     private func setupHeaderView() {
@@ -174,6 +174,10 @@ extension HomeViewController {
     @IBAction func didTappedAddPost(_ sender: Any) {
         let addPostViewController = AddPostViewController()
         navigationController?.navigationController?.pushViewController(addPostViewController, animated: true)
+    }
+    
+    @objc func notificationButtonDidTapped() {
+        navigationController?.navigationController?.pushViewController(NotificationTabelViewController(), animated: true)
     }
 }
 

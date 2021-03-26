@@ -70,7 +70,7 @@ extension VideosViewController {
     private func addBarButtonsToNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.ladyBug), style: .plain, target: nil, action: nil)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presnter.images.nofication), style: .plain, target: self, action: #selector(notificationButtonDidTapped))
     }
     
     private func registerTableViewCell() {
@@ -138,5 +138,9 @@ extension VideosViewController: VideosViewProtocol {
     func navigateToPostDetails() {
         let vc = ProductDetailsViewController()
         navigationController?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func notificationButtonDidTapped() {
+        navigationController?.navigationController?.pushViewController(NotificationTabelViewController(), animated: true)
     }
 }
