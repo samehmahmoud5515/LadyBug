@@ -67,4 +67,18 @@ class CommonLocalizer: CommonFruitsAndVegetablesLocalizer {
     var day = "day".localized
     var month = "month".localized
     var year = "year".localized
+    
+ //MARK:- PASSWORD LOCAILZER
+    var passwordAlert: String {
+           "registration_screen_password_alert_title".localized
+       }
+    var passwordConfirmationAlert: String {
+           "registration_screen_password_confirmation_alert_title".localized
+       }
+    var password: String {
+           "registration_screen_password_title".localized
+       }
+    var passwordConfirmation: String {
+           "registration_screen_password_confirmation_title".localized
+       }
 }

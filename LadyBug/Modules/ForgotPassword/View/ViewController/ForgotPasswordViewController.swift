@@ -17,7 +17,7 @@ class ForgotPasswordViewController: UIViewController, ForgotViewProtocol {
     @IBOutlet weak var tryAgainButton: UIButton!
     
     private var presnter: ForgotPresenterProtocol!
-
+    
     init() {
         super.init(nibName: "\(ForgotPasswordViewController.self)", bundle: nil)
         presnter = ForgotPresenter(view: self)
@@ -49,6 +49,10 @@ class ForgotPasswordViewController: UIViewController, ForgotViewProtocol {
         tryAgainButton.backgroundColor = UIColor.lightBlueGrey
     }
     
+    @IBAction func tryAgainActionButton(_ sender: UIButton) {
+        let vc = CreateNewPasswordViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 extension ForgotPasswordViewController{
@@ -100,48 +104,49 @@ extension ForgotPasswordViewController {
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-
+        
         let userInfo = notification.userInfo
         let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
         submitButtonBottomConstraint.constant = keyboardFrame.size.height
         view.layoutIfNeeded()
     }
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         scrollView.contentInset = .zero
-        submitButtonBottomConstraint.constant = 24
+        submitButtonBottomConstraint.constant = 30
         view.layoutIfNeeded()
     }
 }
 extension ForgotPasswordViewController{
-    
     private func setupUI() {
-           setupNaviagtionBarUI()
-           addBarButtonsToNavigationBar()
-       }
-       
-       private func setupNaviagtionBarUI() {
-           navigationController?.setNavigationBarHidden(false, animated: false)
-           navigationController?.navigationBar.barTintColor = .white
-           navigationController?.navigationBar.prefersLargeTitles = false
-           navigationItem.largeTitleDisplayMode = .never
-       }
-       
-       private func addBarButtonsToNavigationBar() {
-           navigationItem.leftBarButtonItems = [getLeftButton()]
-       }
-       
-       private func getLeftButton() -> UIBarButtonItem {
-           let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        setupNaviagtionBarUI()
+        addBarButtonsToNavigationBar()
+    }
+    
+    private func setupNaviagtionBarUI() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    private func addBarButtonsToNavigationBar() {
+        navigationItem.leftBarButtonItems = [getLeftButton()]
+    }
+    
+    private func getLeftButton() -> UIBarButtonItem {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
         button.setImage(UIImage(named: presnter.images.back), for: .normal)
-           button.backgroundColor = .paleGreyThree
-           button.layer.masksToBounds = true
-           button.layer.cornerRadius = 17
-           button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
-           return UIBarButtonItem(customView: button)
-       }
-       
-       @objc func didTappedBackButton() {
-           navigationController?.popViewController(animated: true)
-       }
+        button.backgroundColor = .paleGreyThree
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 17
+        button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
+        return UIBarButtonItem(customView: button)
+    }
+    
+    @objc func didTappedBackButton() {
+        navigationController?.popViewController(animated: true)
+    }
 }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class RegistrationLocalizer{
+class RegistrationLocalizer : CommonLocalizer{
     
     var CreateNewAccount: String {
         "registration_screen_create_new_account_title".localized
@@ -30,12 +30,6 @@ class RegistrationLocalizer{
     var phoneNumer: String {
         "registration_screen_phone_numer_title".localized
     }
-    var password: String {
-        "registration_screen_password_title".localized
-    }
-    var passwordConfirmation: String {
-        "registration_screen_password_confirmation_title".localized
-    }
     var createAccount: String {
         "registration_screen_create_account_title".localized
     }
@@ -53,11 +47,6 @@ class RegistrationLocalizer{
     var phoneNumerAlert: String {
            "registration_screen_phone_numer_alert_title".localized
        }
-    var passwordAlert: String {
-           "registration_screen_password_alert_title".localized
-       }
-    var passwordConfirmationAlert: String {
-           "registration_screen_password_confirmation_alert_title".localized
-       }
+    
     }
 
