@@ -119,7 +119,7 @@ extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = MyFarmDetailsViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
