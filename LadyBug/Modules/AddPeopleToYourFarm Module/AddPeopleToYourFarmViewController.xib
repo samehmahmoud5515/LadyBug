@@ -25,7 +25,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1C-4o-Of0">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="520.5"/>
-                    <color key="backgroundColor" red="0.52941176470588236" green="0.60784313725490191" blue="0.69411764705882351" alpha="0.37" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1YN-Ii-dhB">
                     <rect key="frame" x="0.0" y="520.5" width="414" height="375.5"/>
@@ -85,26 +85,14 @@
                         <constraint firstItem="RQf-Py-7KV" firstAttribute="trailing" secondItem="dh4-TU-0TA" secondAttribute="trailing" constant="24" id="yir-Sw-bXm"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                            <color key="value" red="0.25882352941176467" green="0.2627450980392157" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                            <size key="value" width="0.0" height="-10"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                            <real key="value" value="4"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="0.0"/>
+                            <real key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="lSN-05-l5c"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.52941176470588236" green="0.60784313725490191" blue="0.69411764705882351" alpha="0.37" colorSpace="custom" customColorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="1YN-Ii-dhB" secondAttribute="bottom" id="9lc-jl-has"/>
                 <constraint firstItem="W1C-4o-Of0" firstAttribute="leading" secondItem="lSN-05-l5c" secondAttribute="leading" id="AxH-aY-Sad"/>
