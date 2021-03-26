@@ -292,3 +292,11 @@
 "create_farm" = "انشاء المزرعة";
 "create_farm_hint1" = "يفضل إدخال كل البيانات للحصول على نتائج ";
 "create_farm_hint2" = "أكثر دقة";
+//MARK: - Suggestions
+
+"suggestions_label" = "اقتراحات";
+"suggestions_water_melon_title" = "محصول البطيخ";
+"suggestions_lemon_title" = "محصول الليمون";
+"suggestions_orang_title" = "محصول البرتقال";
+"suggestions_apple_title" = "محصول التفاح";
+"suggestions_apple_searchbar_title" = "ابحث عن المحصول الذي تهتم بة";

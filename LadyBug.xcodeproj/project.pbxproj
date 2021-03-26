@@ -84,6 +84,16 @@
 		217D1EB12608293C0025462F /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1EA42608293C0025462F /* ProductDetailsViewController.swift */; };
 		217D1EB22608293C0025462F /* ProductDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */; };
 		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
+		21A706D7260D2D200094EC56 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706D5260D2D200094EC56 /* SuggestionsViewController.swift */; };
+		21A706D8260D2D200094EC56 /* SuggestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A706D6260D2D200094EC56 /* SuggestionsViewController.xib */; };
+		21A706DB260D2D670094EC56 /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706D9260D2D670094EC56 /* SuggestionsTableViewCell.swift */; };
+		21A706DC260D2D670094EC56 /* SuggestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A706DA260D2D670094EC56 /* SuggestionsTableViewCell.xib */; };
+		21A706E0260DB5BE0094EC56 /* SuggestionsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706DF260DB5BE0094EC56 /* SuggestionsImages.swift */; };
+		21A706E2260DB5E20094EC56 /* SuggestionsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706E1260DB5E20094EC56 /* SuggestionsLocalizer.swift */; };
+		21A706E4260DB6420094EC56 /* SuggestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706E3260DB6420094EC56 /* SuggestionsPresenter.swift */; };
+		21A706E6260DB68E0094EC56 /* SuggestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706E5260DB68E0094EC56 /* SuggestionsModel.swift */; };
+		21A706E8260DB6CA0094EC56 /* SuggestionsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706E7260DB6CA0094EC56 /* SuggestionsProtocols.swift */; };
+		21A706EC260DDFF80094EC56 /* SuggestionUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706EB260DDFF70094EC56 /* SuggestionUIModel.swift */; };
 		21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE318825F597D30015467B /* MyPostsPresenter.swift */; };
 		5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432325F99A9300D1630E /* MyTasksViewController.swift */; };
 		5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001432425F99A9300D1630E /* MyTasksViewController.xib */; };
@@ -424,6 +434,16 @@
 		217D1EA42608293C0025462F /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsProtocols.swift; sourceTree = "<group>"; };
 		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
+		21A706D5260D2D200094EC56 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
+		21A706D6260D2D200094EC56 /* SuggestionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsViewController.xib; sourceTree = "<group>"; };
+		21A706D9260D2D670094EC56 /* SuggestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewCell.swift; sourceTree = "<group>"; };
+		21A706DA260D2D670094EC56 /* SuggestionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsTableViewCell.xib; sourceTree = "<group>"; };
+		21A706DF260DB5BE0094EC56 /* SuggestionsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsImages.swift; sourceTree = "<group>"; };
+		21A706E1260DB5E20094EC56 /* SuggestionsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsLocalizer.swift; sourceTree = "<group>"; };
+		21A706E3260DB6420094EC56 /* SuggestionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenter.swift; sourceTree = "<group>"; };
+		21A706E5260DB68E0094EC56 /* SuggestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsModel.swift; sourceTree = "<group>"; };
+		21A706E7260DB6CA0094EC56 /* SuggestionsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsProtocols.swift; sourceTree = "<group>"; };
+		21A706EB260DDFF70094EC56 /* SuggestionUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionUIModel.swift; sourceTree = "<group>"; };
 		21CE318825F597D30015467B /* MyPostsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsPresenter.swift; sourceTree = "<group>"; };
 		5001432325F99A9300D1630E /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
 		5001432425F99A9300D1630E /* MyTasksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksViewController.xib; sourceTree = "<group>"; };
@@ -1561,6 +1581,95 @@
 			path = Localizer;
 			sourceTree = "<group>";
 		};
+		21A706CC260D2C7A0094EC56 /* Suggestions Module */ = {
+			isa = PBXGroup;
+			children = (
+				21A706D2260D2CA00094EC56 /* Resources */,
+				21A706D0260D2C950094EC56 /* Models */,
+				21A706CF260D2C900094EC56 /* Protocols */,
+				21A706D1260D2C9A0094EC56 /* Presenter */,
+				21A706CD260D2C830094EC56 /* View */,
+			);
+			path = "Suggestions Module";
+			sourceTree = "<group>";
+		};
+		21A706CD260D2C830094EC56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21A706D4260D2CFA0094EC56 /* SubView */,
+				21A706D3260D2CCA0094EC56 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21A706CF260D2C900094EC56 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21A706E7260DB6CA0094EC56 /* SuggestionsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		21A706D0260D2C950094EC56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21A706E5260DB68E0094EC56 /* SuggestionsModel.swift */,
+				21A706EB260DDFF70094EC56 /* SuggestionUIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21A706D1260D2C9A0094EC56 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				21A706E3260DB6420094EC56 /* SuggestionsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		21A706D2260D2CA00094EC56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21A706DE260DB5570094EC56 /* Images */,
+				21A706DD260DB5520094EC56 /* Localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21A706D3260D2CCA0094EC56 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				21A706D5260D2D200094EC56 /* SuggestionsViewController.swift */,
+				21A706D6260D2D200094EC56 /* SuggestionsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		21A706D4260D2CFA0094EC56 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				21A706D9260D2D670094EC56 /* SuggestionsTableViewCell.swift */,
+				21A706DA260D2D670094EC56 /* SuggestionsTableViewCell.xib */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		21A706DD260DB5520094EC56 /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				21A706E1260DB5E20094EC56 /* SuggestionsLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		21A706DE260DB5570094EC56 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				21A706DF260DB5BE0094EC56 /* SuggestionsImages.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		5001432025F99A6600D1630E /* MyTasks Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -1672,10 +1781,10 @@
 			isa = PBXGroup;
 			children = (
 				50068C5825E48A650097A870 /* Resources */,
-				50068C5D25E48A650097A870 /* Presenter */,
 				50068C5F25E48A650097A870 /* Models */,
-				50068C6325E48A650097A870 /* View */,
 				50068C6B25E48A650097A870 /* Protocols */,
+				50068C5D25E48A650097A870 /* Presenter */,
+				50068C6325E48A650097A870 /* View */,
 			);
 			path = "MoreMenu Module";
 			sourceTree = "<group>";
@@ -3489,6 +3598,9 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				21A706CC260D2C7A0094EC56 /* Suggestions Module */,
+				213751E725F4309600E342EF /* FollowersModule */,
+				50068C5725E48A650097A870 /* MoreMenu Module */,
 				50AF3EC2260AD16A00CBCD0C /* CreateFarm */,
 				50AF3E89260ABE9700CBCD0C /* PostDetails Module */,
 				217D1E8E2608293C0025462F /* Product Details */,
@@ -3502,10 +3614,8 @@
 				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
 				2137520425F58DFC00E342EF /* MyPosts Module */,
 				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
-				213751E725F4309600E342EF /* FollowersModule */,
 				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
-				50068C5725E48A650097A870 /* MoreMenu Module */,
 				5099490925E4642D0085CFBF /* ForgotPassword */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
 				509643A725E2EF3E0000FB60 /* AddPost Module */,
@@ -3833,6 +3943,7 @@
 				506E4D2125EDC95F003BD749 /* MyCropsStretchedParentCellView.xib in Resources */,
 				21767A3725F592810039E2B8 /* MyPostsCell.xib in Resources */,
 				50A54C1425E3FF5C0052F701 /* InterestedSelectionCell.xib in Resources */,
+				21A706DC260D2D670094EC56 /* SuggestionsTableViewCell.xib in Resources */,
 				506A5A2D25E5671A0014D59A /* MoreMenuLanguageCell.xib in Resources */,
 				504969AE25F81E23002C3E40 /* MyFarmDetailsNameCell.xib in Resources */,
 				50FA84AA25DC6414008A9216 /* FarmDetailsCell.xib in Resources */,
@@ -3867,6 +3978,7 @@
 				50BC87012605437D0065D8FE /* ProfileViewController.xib in Resources */,
 				2166480F25FEB0B20028E335 /* CreateNewPasswordViewController.xib in Resources */,
 				50AF3EBB260AC9D300CBCD0C /* CommentCell.xib in Resources */,
+				21A706D8260D2D200094EC56 /* SuggestionsViewController.xib in Resources */,
 				50212E0F260BD45E00589DAE /* DateSelectionView.xib in Resources */,
 				5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */,
 				50BC86F3260538240065D8FE /* StarsAlertViewController.xib in Resources */,
@@ -3948,6 +4060,8 @@
 				5097F4FD25FBAC49000E14C4 /* CropsInfoHeaderView.swift in Sources */,
 				501F740C25DAB59200333F16 /* UIViewController+Keyboard.swift in Sources */,
 				217D1EAE2608293C0025462F /* WebsiteLinkTableViewCell.swift in Sources */,
+				21A706DB260D2D670094EC56 /* SuggestionsTableViewCell.swift in Sources */,
+				21A706E4260DB6420094EC56 /* SuggestionsPresenter.swift in Sources */,
 				2101D8F925F2E46D00FB0DB9 /* NotificationLocalizer.swift in Sources */,
 				50BC0A7025E5C076006653FD /* MyCropsViewController.swift in Sources */,
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
@@ -3977,6 +4091,7 @@
 				504969C925F81E23002C3E40 /* MyFarmDetailsViewController.swift in Sources */,
 				506A5A2E25E5671A0014D59A /* MoreMenuLanguageCell.swift in Sources */,
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
+				21A706E2260DB5E20094EC56 /* SuggestionsLocalizer.swift in Sources */,
 				506E4D2025EDC95F003BD749 /* MyCropsStretchedParentCellView.swift in Sources */,
 				503CB5B325E07BE100B7A393 /* ProductsProtocols.swift in Sources */,
 				5001432F25F99B0700D1630E /* MyTasksProtocol.swift in Sources */,
@@ -4030,6 +4145,7 @@
 				50212E1F260BFC7200589DAE /* ChemicalSourceCell.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
+				21A706EC260DDFF80094EC56 /* SuggestionUIModel.swift in Sources */,
 				50BC87002605437D0065D8FE /* ProfileViewController.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				2101D91A25F357D900FB0DB9 /* YourProductsCellTableViewCell.swift in Sources */,
@@ -4116,6 +4232,7 @@
 				217D1EAA2608293C0025462F /* ProductDetailsModel.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
 				509643B125E2F0710000FB60 /* AddPostPresenter.swift in Sources */,
+				21A706E6260DB68E0094EC56 /* SuggestionsModel.swift in Sources */,
 				50BC8714260543F90065D8FE /* ProfileLocalizer.swift in Sources */,
 				216647FE25FEAE590028E335 /* Localizer.swift in Sources */,
 				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
@@ -4160,11 +4277,14 @@
 				5099491825E4642D0085CFBF /* ForgotLocalizer.swift in Sources */,
 				50FA84A925DC6414008A9216 /* FarmDetailsCell.swift in Sources */,
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
+				21A706E8260DB6CA0094EC56 /* SuggestionsProtocols.swift in Sources */,
 				2166480425FEAFB10028E335 /* CreateNewPasswordPresenter.swift in Sources */,
 				5001433425F99B2000D1630E /* MyTasksImages.swift in Sources */,
 				5090FBFB25E4515E008D5B06 /* InterestedSelectionUIModel.swift in Sources */,
+				21A706E0260DB5BE0094EC56 /* SuggestionsImages.swift in Sources */,
 				213751E525F4013A00E342EF /* CropsInfoDetailsViewController.swift in Sources */,
 				2137520225F436CD00E342EF /* FollowersViewController.swift in Sources */,
+				21A706D7260D2D200094EC56 /* SuggestionsViewController.swift in Sources */,
 				506A5A2A25E5671A0014D59A /* MoreMenuNotificationsCell.swift in Sources */,
 				5090FBF125E44D39008D5B06 /* InterestedSelectionImages.swift in Sources */,
 				2101D91425F3571E00FB0DB9 /* YourProductsModel.swift in Sources */,
