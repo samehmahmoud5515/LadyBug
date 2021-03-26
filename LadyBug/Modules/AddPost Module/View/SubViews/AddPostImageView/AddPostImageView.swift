@@ -1,18 +1,20 @@
 //
-//  ChemicalSourceView.swift
+//  AddPostImageView.swift
 //  LadyBug
 //
-//  Created by SAMEH on 25/03/2021.
+//  Created by SAMEH on 26/03/2021.
 //
 
 import UIKit
 
-class ChemicalSourceView: UIView {
+class AddPostImageView: UIView {
 
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    weak var textViewUpdateDelegate: TextViewUpdateProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +27,7 @@ class ChemicalSourceView: UIView {
     }
         
     private func nibSetup() {
-        Bundle.main.loadNibNamed("\(ChemicalSourceView.self)",
+        Bundle.main.loadNibNamed("\(AddPostImageView.self)",
                                  owner: self, options: nil)
         guard let contentView = contentView else { return }
         contentView.frame = bounds
@@ -36,44 +38,42 @@ class ChemicalSourceView: UIView {
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         setupUI()
     }
-
 }
 
-extension ChemicalSourceView {
+extension AddPostImageView {
+    
     private func setupUI() {
-        registerCollectionViewCell()
-        setupCollectionViewLayout()
         titleLabel.textColor = .purplishBrown
-        titleLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        registerCell()
+        setupCollectionViewLayout()
     }
     
-    private func registerCollectionViewCell() {
-        let nib = UINib(nibName: "\(ChemicalSourceCell.self)", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "\(ChemicalSourceCell.self)")
+    private func registerCell() {
+        let nib1 = UINib(nibName: "\(AddPostImageViewCell.self)", bundle: nil)
+        collectionView.register(nib1, forCellWithReuseIdentifier: "\(AddPostImageViewCell.self)")
     }
     
     private func setupCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 11
-        layout.minimumInteritemSpacing = 11
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 4, left: 6, bottom: 4, right: 0)
-        layout.itemSize = UICollectionViewFlowLayout.automaticSize
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.itemSize = CGSize(width: 120, height: collectionView.bounds.height)
+        layout.minimumInteritemSpacing = 13
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.setCollectionViewLayout(layout, animated: false)
     }
 }
 
-extension ChemicalSourceView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension AddPostImageView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ChemicalSourceCell.self)", for: indexPath) as? ChemicalSourceCell ?? ChemicalSourceCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(AddPostImageViewCell.self)", for: indexPath) as? AddPostImageViewCell ?? AddPostImageViewCell()
         cell.setupUI()
         return cell
     }
-    
-    
 }

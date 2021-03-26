@@ -173,7 +173,7 @@ extension HomeViewController: HomePostsCellDelegate {
 extension HomeViewController {
     @IBAction func didTappedAddPost(_ sender: Any) {
         let addPostViewController = AddPostViewController()
-        navigationController?.pushViewController(addPostViewController, animated: true)
+        navigationController?.navigationController?.pushViewController(addPostViewController, animated: true)
     }
 }
 

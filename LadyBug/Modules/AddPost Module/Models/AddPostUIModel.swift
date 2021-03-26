@@ -10,6 +10,8 @@ import Foundation
 enum AddPostUIModel {
     case postType(AddPostModel)
     case cropType(AddPostModel)
+    case description(AddPostModel)
+    case image(AddPostModel)
 }
 
 struct AddPostModel {

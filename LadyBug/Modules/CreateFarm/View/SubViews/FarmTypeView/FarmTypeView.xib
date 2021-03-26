@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FarmTypeView" customModule="LadyBug" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="B2x-mV-hvV" id="maV-ig-t6g"/>
+                <outlet property="contentView" destination="i5M-Pr-FkT" id="dvC-Ga-lS2"/>
+                <outlet property="titleLabel" destination="epd-dG-Tfm" id="Mja-Ub-CRi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="57"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B2x-mV-hvV">
+                    <rect key="frame" x="118.5" y="18" width="218.5" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="1Up-LA-KFw"/>
+                        <constraint firstAttribute="height" constant="21" id="pmP-nS-Spx"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="erI-x5-86Y">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="اختر نوع مزرعتك" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epd-dG-Tfm">
+                    <rect key="frame" x="7" y="18" width="111.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="epd-dG-Tfm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="7" id="FsP-lA-ZMZ"/>
+                <constraint firstAttribute="bottom" secondItem="B2x-mV-hvV" secondAttribute="bottom" constant="18" id="LaE-pV-zn0"/>
+                <constraint firstAttribute="bottom" secondItem="epd-dG-Tfm" secondAttribute="bottom" constant="18" id="MKX-w2-uaS"/>
+                <constraint firstAttribute="trailing" secondItem="B2x-mV-hvV" secondAttribute="trailing" constant="7" id="dzW-VW-FFb"/>
+                <constraint firstItem="epd-dG-Tfm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="fsA-Vz-QK6"/>
+                <constraint firstItem="B2x-mV-hvV" firstAttribute="leading" secondItem="epd-dG-Tfm" secondAttribute="trailing" id="w6A-ud-eg0"/>
+                <constraint firstItem="B2x-mV-hvV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="zrL-Al-YCk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-31.884057971014496" y="-25.78125"/>
+        </view>
+    </objects>
+</document>

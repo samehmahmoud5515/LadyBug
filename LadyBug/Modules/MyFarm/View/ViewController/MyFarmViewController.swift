@@ -57,7 +57,6 @@ extension MyFarmViewController  {
         searchBar.setImage(UIImage(named: presnter.images.search), for: .search, state: .normal)
         searchBar.barTintColor = .paleGrey
         searchBar.tintColor = .black
-        searchBar.delegate = self
         navigationItem.titleView = searchBar
         let attributes = NSAttributedString(string: presnter.localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
         
@@ -119,7 +118,7 @@ extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = MyFarmDetailsViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -136,6 +135,11 @@ extension MyFarmViewController {
     }
 }
 
-extension MyFarmViewController : UISearchBarDelegate {
-  
+
+extension MyFarmViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        let vc = MyFarmViewController()
+        navigationController?.navigationController?.pushViewController(vc, animated: true)
+        return false
+    }
 }

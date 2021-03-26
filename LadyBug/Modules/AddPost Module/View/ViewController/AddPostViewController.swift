@@ -31,7 +31,15 @@ class AddPostViewController: UIViewController {
         presnter.attach()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
 }
 
@@ -46,7 +54,6 @@ extension AddPostViewController {
     }
     
     private func setupNaviagtionBarUI() {
-        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
@@ -88,8 +95,15 @@ extension AddPostViewController {
     }
     
     private func registerTableViewCell() {
-        let nib = UINib(nibName: "\(AddPostCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "\(AddPostCell.self)")
+        let nib1 = UINib(nibName: "\(AddPostCell.self)", bundle: nil)
+        tableView.register(nib1, forCellReuseIdentifier: "\(AddPostCell.self)")
+        
+        let nib2 = UINib(nibName: "\(AddPostTextViewCell.self)", bundle: nil)
+        tableView.register(nib2, forCellReuseIdentifier: "\(AddPostTextViewCell.self)")
+        
+        let nib3 = UINib(nibName: "\(AddPostImageCell.self)", bundle: nil)
+        tableView.register(nib3, forCellReuseIdentifier: "\(AddPostImageCell.self)")
+        
     }
     
     private func setupTableViewRowHeight() {
@@ -117,12 +131,25 @@ extension AddPostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostCell.self)", for: indexPath) as? AddPostCell ?? AddPostCell()
+        var cell: UITableViewCell
         switch presnter.getItemFor(index: indexPath.row) {
         case let .postType(model):
-            cell.setupUI(model: model)
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostCell.self)", for: indexPath)
+            if let postCell = cell as? AddPostCell {
+                postCell.setupUI(model: model)
+            }
         case let .cropType(model):
-            cell.setupUI(model: model)
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostCell.self)", for: indexPath)
+            if let postCell = cell as? AddPostCell {
+                postCell.setupUI(model: model)
+            }
+        case let .description(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostTextViewCell.self)", for: indexPath)
+            if let textViewCell = cell as? AddPostTextViewCell {
+                textViewCell.setupUI(textViewUpdateDelegate: self)
+            }
+        case let .image(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddPostImageCell.self)", for: indexPath)
         }
         return cell
     }
@@ -133,4 +160,11 @@ extension AddPostViewController {
     @objc func didTappedBackButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+}
+
+extension AddPostViewController: TextViewUpdateProtocol {
+    func textViewChanged() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }    
 }
