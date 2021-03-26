@@ -114,7 +114,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let subView = ProductDetailsViewController()
-        self.navigationController?.pushViewController(subView, animated: true)
+        self.navigationController?.navigationController?.pushViewController(subView, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

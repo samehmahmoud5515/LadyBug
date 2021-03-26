@@ -17,7 +17,7 @@ protocol VideosPresenterProtocol {
 }
 
 protocol VideosViewProtocol: class {
-
+    func navigateToPostDetails()
 }
 
 protocol VideosCellProtocol {

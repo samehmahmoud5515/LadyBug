@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VideosViewController: UIViewController, VideosViewProtocol {
+class VideosViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -131,5 +131,12 @@ extension VideosViewController: VideosCellDelegate {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }
+    }
+}
+
+extension VideosViewController: VideosViewProtocol {
+    func navigateToPostDetails() {
+        let vc = ProductDetailsViewController()
+        navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

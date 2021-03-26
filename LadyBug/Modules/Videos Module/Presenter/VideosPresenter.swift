@@ -30,6 +30,6 @@ class VideosPresenter: VideosPresenterProtocol {
     }
     
     func didTappedCell(with index: Int) {
-        
+        view?.navigateToPostDetails()
     }
 }
