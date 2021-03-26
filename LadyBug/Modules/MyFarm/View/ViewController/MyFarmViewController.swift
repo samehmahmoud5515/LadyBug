@@ -7,14 +7,12 @@
 
 import UIKit
 
-class MyFarmViewController: UIViewController {
+class MyFarmViewController: UIViewController{
     
     //Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addFarmButton: UIButton!
-    
     private var presnter: MyFarmPresenterProtocol!
-    
     init() {
         super.init(nibName: "\(MyFarmViewController.self)", bundle: nil)
         presnter = MyFarmPresenter(view: self)
@@ -33,7 +31,8 @@ class MyFarmViewController: UIViewController {
     
 }
 
-extension MyFarmViewController {
+
+extension MyFarmViewController  {
     private func setupUI() {
         setupNaviagtionBarUI()
         addSearchBarToNaviagtionBar()
@@ -51,15 +50,14 @@ extension MyFarmViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
     }
+  
     
     private func addSearchBarToNaviagtionBar() {
         let searchBar = UISearchBar()
         searchBar.setImage(UIImage(named: presnter.images.search), for: .search, state: .normal)
         searchBar.barTintColor = .paleGrey
         searchBar.tintColor = .black
-        searchBar.delegate = self
         navigationItem.titleView = searchBar
-        
         let attributes = NSAttributedString(string: presnter.localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
         
         if #available(iOS 13.0, *) {
@@ -68,6 +66,7 @@ extension MyFarmViewController {
            let searchField = searchBar.value(forKey: "searchField") as? UITextField
            searchField?.attributedPlaceholder = attributes
         }
+
     }
     
     private func addBarButtonsToNavigationBar() {
@@ -129,6 +128,13 @@ extension MyFarmViewController {
         navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+extension MyFarmViewController {
+    @objc func didTappedBackButton() {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
 
 extension MyFarmViewController: UISearchBarDelegate {
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {

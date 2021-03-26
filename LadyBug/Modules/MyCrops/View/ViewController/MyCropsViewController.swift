@@ -40,6 +40,7 @@ extension MyCropsViewController {
         registerTableViewCell()
         setupTableViewRowHeight()
         setupTableViewHeaderView()
+        addSearchBarToNaviagtionBar()
     }
     
     private func setupNaviagtionBarUI() {
@@ -52,7 +53,7 @@ extension MyCropsViewController {
     }
     
     private func addBarButtonsToNavigationBar() {
-        navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
+        navigationItem.leftBarButtonItems = [getLeftButton()]
     }
     
     private func getLeftButton() -> UIBarButtonItem {
@@ -65,16 +66,22 @@ extension MyCropsViewController {
         return UIBarButtonItem(customView: button)
     }
     
-    private func getTitleBarButton() -> UIBarButtonItem {
-        let titleLabel = UILabel()
-        titleLabel.text = presnter.localizer.title
-        titleLabel.textColor = .purplishBrown
-        titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
-        titleLabel.sizeToFit()
-
-        return UIBarButtonItem(customView: titleLabel)
-    }
-    
+    private func addSearchBarToNaviagtionBar() {
+         let searchBar = UISearchBar()
+         searchBar.setImage(UIImage(named: presnter.images.search), for: .search, state: .normal)
+         searchBar.barTintColor = .paleGrey
+         searchBar.tintColor = .black
+         navigationItem.titleView = searchBar
+         
+         let attributes = NSAttributedString(string: presnter.localizer.searchPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.cloudyBlue, NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13))])
+         
+         if #available(iOS 13.0, *) {
+             searchBar.searchTextField.attributedPlaceholder = attributes
+         } else {
+            let searchField = searchBar.value(forKey: "searchField") as? UITextField
+            searchField?.attributedPlaceholder = attributes
+         }
+     }
     private func registerTableViewCell() {
         let strechedNib = UINib(nibName: "\(MyCropsStretchedParentCell.self)", bundle: nil)
         tableView.register(strechedNib, forCellReuseIdentifier: "\(MyCropsStretchedParentCell.self)")

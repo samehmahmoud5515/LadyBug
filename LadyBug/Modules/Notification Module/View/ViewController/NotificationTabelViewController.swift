@@ -77,7 +77,7 @@ extension NotificationTabelViewController{
     }
     
     @objc private func setupTableViewRowHeight() {
-        tableView.rowHeight = 15
+        tableView.rowHeight = 82
     }
 }
 extension NotificationTabelViewController{
@@ -89,7 +89,7 @@ extension NotificationTabelViewController{
 }
 extension NotificationTabelViewController :UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(NotificationsCellTableViewCell.self)", for: indexPath) as? NotificationsCellTableViewCell ?? NotificationsCellTableViewCell()
