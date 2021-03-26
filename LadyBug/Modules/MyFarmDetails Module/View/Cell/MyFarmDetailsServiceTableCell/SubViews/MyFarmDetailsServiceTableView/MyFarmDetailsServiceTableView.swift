@@ -124,3 +124,11 @@ extension MyFarmDetailsServiceTableView: UITableViewDelegate, UITableViewDataSou
         }
     }
 }
+
+extension MyFarmDetailsServiceTableView {
+    @IBAction func addTaskDidTapped(_ sender: Any) {
+        let vc = AddTaskViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        self.parentViewController?.present(vc, animated: false, completion: nil)
+    }
+}

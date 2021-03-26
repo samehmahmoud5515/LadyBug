@@ -55,6 +55,9 @@
                             <real key="value" value="12"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addTaskDidTapped:" destination="-1" eventType="touchUpInside" id="jtJ-x7-PCX"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-yw-ZvT" customClass="DynamicHeightTableView" customModule="LadyBug" customModuleProvider="target">
                     <rect key="frame" x="16" y="102" width="517" height="341"/>
