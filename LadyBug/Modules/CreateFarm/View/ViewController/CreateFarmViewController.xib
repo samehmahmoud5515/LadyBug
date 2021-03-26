@@ -29,51 +29,65 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_farm_bg" translatesAutoresizingMaskIntoConstraints="NO" id="RPb-VG-M3j">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u32-zR-MhL">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-o0-Vcl">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1035.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1938"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="hlZ-Lx-Me0">
-                                    <rect key="frame" x="24" y="0.0" width="366" height="1010.5"/>
+                                    <rect key="frame" x="24" y="31" width="366" height="1882"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-03-24 at 8.07.31 PM" translatesAutoresizingMaskIntoConstraints="NO" id="lab-LT-J9Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="122"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i8-UT-p3a" customClass="FarmTypeView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="21" id="30p-6T-JIv"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNY-9u-wxo" customClass="FarmActivityView" customModule="LadyBug" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="81" width="366" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="21" id="cyX-7f-MtZ"/>
+                                            </constraints>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ll2-Hs-oER" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="153" width="366" height="50"/>
+                                            <rect key="frame" x="0.0" y="162" width="366" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" priority="250" constant="50" id="uAj-HY-irB"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apr-TG-YY4" customClass="CustomSelectionView" customModule="LadyBug" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="234" width="366" height="50"/>
+                                            <rect key="frame" x="0.0" y="243" width="366" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" priority="250" constant="50" id="hAF-yz-fnU"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QO-ZQ-OsA" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="315" width="366" height="50"/>
+                                            <rect key="frame" x="0.0" y="324" width="366" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" priority="250" constant="50" id="Sni-ZL-3yY"/>
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="EC3-n9-cpQ">
-                                            <rect key="frame" x="0.0" y="396" width="366" height="336"/>
+                                            <rect key="frame" x="0.0" y="405" width="366" height="1198.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3d-sB-0PF" customClass="CustomSelectionView" customModule="LadyBug" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="912.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" priority="250" constant="50" id="oNJ-fr-L2l"/>
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-Ca-Syo">
-                                                    <rect key="frame" x="0.0" y="97" width="366" height="239"/>
+                                                    <rect key="frame" x="0.0" y="959.5" width="366" height="239"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anV-Pf-JTQ" customClass="StandardTextFieldView" customModule="LadyBug" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
@@ -106,14 +120,14 @@
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyl-Mt-tev" customClass="ChemicalSourceView" customModule="LadyBug" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="763" width="366" height="50"/>
+                                            <rect key="frame" x="0.0" y="1634.5" width="366" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" priority="250" constant="50" id="RdB-KN-n3j"/>
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Gcv-AN-9La">
-                                            <rect key="frame" x="0.0" y="844" width="366" height="166.5"/>
+                                            <rect key="frame" x="0.0" y="1715.5" width="366" height="166.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-Sq-6cH" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
@@ -153,15 +167,16 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="hlZ-Lx-Me0" firstAttribute="top" secondItem="K6c-o0-Vcl" secondAttribute="top" id="2DG-wA-ICj"/>
+                                <constraint firstItem="hlZ-Lx-Me0" firstAttribute="top" secondItem="K6c-o0-Vcl" secondAttribute="top" constant="31" id="2DG-wA-ICj"/>
                                 <constraint firstAttribute="bottom" secondItem="hlZ-Lx-Me0" secondAttribute="bottom" constant="25" id="DDS-Dd-bMa"/>
                                 <constraint firstAttribute="trailing" secondItem="hlZ-Lx-Me0" secondAttribute="trailing" constant="24" id="asM-Wg-t31"/>
                                 <constraint firstItem="hlZ-Lx-Me0" firstAttribute="leading" secondItem="K6c-o0-Vcl" secondAttribute="leading" constant="24" id="gAg-2Z-bGL"/>
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="K6c-o0-Vcl" secondAttribute="bottom" id="KdL-QR-WL3"/>
                         <constraint firstItem="K6c-o0-Vcl" firstAttribute="top" secondItem="u32-zR-MhL" secondAttribute="top" id="bMd-gr-gH2"/>
@@ -174,17 +189,21 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="RPb-VG-M3j" secondAttribute="bottom" id="3jP-SX-Qg2"/>
+                <constraint firstItem="RPb-VG-M3j" firstAttribute="top" secondItem="i6B-ZV-2DY" secondAttribute="top" id="9lY-Dl-qOf"/>
                 <constraint firstItem="i6B-ZV-2DY" firstAttribute="bottom" secondItem="u32-zR-MhL" secondAttribute="bottom" id="Faa-KQ-cRc"/>
                 <constraint firstItem="i6B-ZV-2DY" firstAttribute="trailing" secondItem="u32-zR-MhL" secondAttribute="trailing" id="HIH-zp-X2O"/>
                 <constraint firstItem="K6c-o0-Vcl" firstAttribute="width" secondItem="i6B-ZV-2DY" secondAttribute="width" id="LkW-NL-I92"/>
+                <constraint firstItem="RPb-VG-M3j" firstAttribute="leading" secondItem="i6B-ZV-2DY" secondAttribute="leading" id="P2B-ZK-TmY"/>
                 <constraint firstItem="u32-zR-MhL" firstAttribute="top" secondItem="i6B-ZV-2DY" secondAttribute="top" id="gE9-J7-rQh"/>
+                <constraint firstItem="RPb-VG-M3j" firstAttribute="trailing" secondItem="i6B-ZV-2DY" secondAttribute="trailing" id="kVt-Tv-dJx"/>
                 <constraint firstItem="u32-zR-MhL" firstAttribute="leading" secondItem="i6B-ZV-2DY" secondAttribute="leading" id="wKc-sH-yv9"/>
             </constraints>
-            <point key="canvasLocation" x="36" y="73"/>
+            <point key="canvasLocation" x="34.782608695652179" y="72.991071428571431"/>
         </view>
     </objects>
     <resources>
-        <image name="Screen Shot 2021-03-24 at 8.07.31 PM" width="708" height="122"/>
+        <image name="create_farm_bg" width="614" height="1857"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

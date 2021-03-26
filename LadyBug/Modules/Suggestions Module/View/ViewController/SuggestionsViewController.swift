@@ -110,6 +110,9 @@ extension SuggestionsViewController :UITableViewDataSource,UITableViewDelegate{
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(CropsInfoViewController(), animated: true)
+    }
     func notifiyDataChange() {
         tableView.reloadData()
     }

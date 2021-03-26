@@ -28,6 +28,16 @@ class MyFarmDetailsViewController: UIViewController {
         setupUI()
         presnter.attach()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
 }
 
@@ -41,7 +51,6 @@ extension MyFarmDetailsViewController {
     }
     
     private func setupNaviagtionBarUI() {
-        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never

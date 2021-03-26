@@ -30,7 +30,7 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-AW-NqT">
-                    <rect key="frame" x="0.0" y="779" width="414" height="56"/>
+                    <rect key="frame" x="24" y="779" width="366" height="56"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="88P-33-QqP"/>
                     </constraints>
@@ -50,8 +50,8 @@
                 <constraint firstAttribute="trailing" secondItem="WG6-Hf-o3O" secondAttribute="trailing" id="WEH-CR-bgu"/>
                 <constraint firstItem="b6v-AW-NqT" firstAttribute="top" secondItem="WG6-Hf-o3O" secondAttribute="bottom" id="kXa-Ay-9Ht"/>
                 <constraint firstItem="WG6-Hf-o3O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oTt-a3-FTZ"/>
-                <constraint firstItem="b6v-AW-NqT" firstAttribute="trailing" secondItem="WG6-Hf-o3O" secondAttribute="trailing" id="px8-ML-TON"/>
-                <constraint firstItem="b6v-AW-NqT" firstAttribute="leading" secondItem="WG6-Hf-o3O" secondAttribute="leading" id="yaC-UG-4jM"/>
+                <constraint firstItem="b6v-AW-NqT" firstAttribute="trailing" secondItem="WG6-Hf-o3O" secondAttribute="trailing" constant="-24" id="px8-ML-TON"/>
+                <constraint firstItem="b6v-AW-NqT" firstAttribute="leading" secondItem="WG6-Hf-o3O" secondAttribute="leading" constant="24" id="yaC-UG-4jM"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
         </view>
