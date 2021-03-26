@@ -43,8 +43,18 @@ class ProfileViewController: UIViewController {
         emailNameField.delegate = self
         
         jobSelection.setupUI(selectionTitle: "اختر مهنتك")
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func createNewPasswordButton(_ sender: UIButton) {
         let createNewPasswordViewController = CreateNewPasswordViewController()
         navigationController?.pushViewController(createNewPasswordViewController, animated: true)
@@ -93,7 +103,6 @@ extension ProfileViewController {
     }
     
     private func setupNaviagtionBarUI() {
-        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never

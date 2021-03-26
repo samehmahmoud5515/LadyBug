@@ -34,6 +34,17 @@ class CreateNewPasswordViewController: UIViewController, CreateNewPasswordViewPr
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     private func enableCreateAccountButton() {
            doneButton.isUserInteractionEnabled = true
            doneButton.backgroundColor = UIColor.midGreenTwo
@@ -116,12 +127,7 @@ extension CreateNewPasswordViewController {
 
 extension CreateNewPasswordViewController: StandardTextFieldViewProtocol {
     func didBeginEditing(_ textField: StandardTextFieldView) {
-           DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-               let point = textField.frame.origin
-               let updatedPoint = CGPoint(x: 0, y: point.y)
-               self?.scrollView.setContentOffset(updatedPoint, animated: true)
-           }
-           
+
        }
        func didEndEditing(_ textField: StandardTextFieldView) {
          

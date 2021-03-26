@@ -31,6 +31,16 @@ class SuggestionsViewController: UIViewController, SuggestionsViewProtocol {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 }
 extension SuggestionsViewController {
     
@@ -46,7 +56,6 @@ extension SuggestionsViewController {
         suggestionsHeaderLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
     }
     private func setupNaviagtionBarUI() {
-        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
