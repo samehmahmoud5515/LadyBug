@@ -26,6 +26,8 @@ class AddPostPresenter: AddPostPresenterProtocol {
     private func setupDataSource() {
         datasource += [.postType(AddPostModel(title: localizer.questionType, selectionTitle: localizer.problemDisplay))]
         datasource += [.cropType(AddPostModel(title: localizer.cropTitle, selectionTitle: localizer.selectFarm))]
+        datasource += [.description(AddPostModel())]
+        datasource += [.image(AddPostModel())]
     }
     
     func getItemFor(index: Int) -> AddPostUIModel {
