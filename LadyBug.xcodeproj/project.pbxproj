@@ -129,8 +129,6 @@
 		501F740C25DAB59200333F16 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F740825DAB59200333F16 /* UIViewController+Keyboard.swift */; };
 		501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F740925DAB59200333F16 /* UIViewController+Alert.swift */; };
 		501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F741125DAB5DB00333F16 /* UILabel+LineSpacing.swift */; };
-		50206EC2260E6C110095E995 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50206EC0260E6C110095E995 /* AddTaskViewController.swift */; };
-		50206EC3260E6C110095E995 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50206EC1260E6C110095E995 /* AddTaskViewController.xib */; };
 		50206EC6260E8F660095E995 /* UIView+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50206EC5260E8F660095E995 /* UIView+ParentViewController.swift */; };
 		50206ECC260E9D8E0095E995 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50206ECA260E9D8E0095E995 /* ArchiveViewController.swift */; };
 		50206ECD260E9D8E0095E995 /* ArchiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50206ECB260E9D8E0095E995 /* ArchiveViewController.xib */; };
@@ -251,6 +249,8 @@
 		5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5072D39825DAD2D8005363CB /* HomeHeaderView.xib */; };
 		5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39D25DAD485005363CB /* HomePresenter.swift */; };
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
+		508537E22617F76C00CCFEA7 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */; };
+		508537E32617F76C00CCFEA7 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */; };
 		508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */; };
 		508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */; };
 		508FDADA25F049B500686ECE /* MyCropsParentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */; };
@@ -502,8 +502,6 @@
 		501F740825DAB59200333F16 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		501F740925DAB59200333F16 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		501F741125DAB5DB00333F16 /* UILabel+LineSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+LineSpacing.swift"; sourceTree = "<group>"; };
-		50206EC0260E6C110095E995 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		50206EC1260E6C110095E995 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
 		50206EC5260E8F660095E995 /* UIView+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParentViewController.swift"; sourceTree = "<group>"; };
 		50206ECA260E9D8E0095E995 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		50206ECB260E9D8E0095E995 /* ArchiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveViewController.xib; sourceTree = "<group>"; };
@@ -624,6 +622,8 @@
 		5072D39825DAD2D8005363CB /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		5072D39D25DAD485005363CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = LadyBug/Modules/AddTask/View/AddTaskViewController.swift; sourceTree = SOURCE_ROOT; };
+		508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddTaskViewController.xib; path = LadyBug/Modules/AddTask/View/AddTaskViewController.xib; sourceTree = SOURCE_ROOT; };
 		508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCell.swift; sourceTree = "<group>"; };
 		508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsParentCell.xib; sourceTree = "<group>"; };
 		508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCellView.swift; sourceTree = "<group>"; };
@@ -2013,8 +2013,8 @@
 		50206EBE260E6BF50095E995 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				50206EC0260E6C110095E995 /* AddTaskViewController.swift */,
-				50206EC1260E6C110095E995 /* AddTaskViewController.xib */,
+				508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */,
+				508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */,
 			);
 			name = View;
 			path = "../New Group/View";
@@ -4094,6 +4094,7 @@
 				504969B325F81E23002C3E40 /* MyFarmDetailsPostsCell.xib in Resources */,
 				50AF3EB5260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib in Resources */,
 				504969C125F81E23002C3E40 /* MyFarmDetailsServiceTableCell.xib in Resources */,
+				508537E32617F76C00CCFEA7 /* AddTaskViewController.xib in Resources */,
 				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
 				509643C925E2F1C40000FB60 /* AddPostCell.xib in Resources */,
 				2121AC2026052027001A2EDD /* HelpViewController.xib in Resources */,
@@ -4139,7 +4140,6 @@
 				213751E625F4013A00E342EF /* CropsInfoDetailsViewController.xib in Resources */,
 				504969C425F81E23002C3E40 /* MyFarmDetailsPeopleCell.xib in Resources */,
 				217D1EAD2608293C0025462F /* ProductDetailsTableViewCell.xib in Resources */,
-				50206EC3260E6C110095E995 /* AddTaskViewController.xib in Resources */,
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
 				50BC86DC260534890065D8FE /* StandardAlertViewController.xib in Resources */,
 				504969B425F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib in Resources */,
@@ -4322,7 +4322,6 @@
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				2101D91A25F357D900FB0DB9 /* YourProductsCellTableViewCell.swift in Sources */,
 				50A77D4025D9F2640054E80D /* TabBarLoclizer.swift in Sources */,
-				50206EC2260E6C110095E995 /* AddTaskViewController.swift in Sources */,
 				5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */,
 				509643AC25E2EF860000FB60 /* AddPostViewController.swift in Sources */,
 				50D4ACC525FBF8C900880E55 /* MapViewController.swift in Sources */,
@@ -4422,6 +4421,7 @@
 				503CB5D425E0A1B200B7A393 /* VideosImages.swift in Sources */,
 				217D1EB12608293C0025462F /* ProductDetailsViewController.swift in Sources */,
 				504969AB25F81E23002C3E40 /* MyFarmDetailsImages.swift in Sources */,
+				508537E22617F76C00CCFEA7 /* AddTaskViewController.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */,
 				21A70703260DECD60094EC56 /* SuggestionsPresenter.swift in Sources */,
