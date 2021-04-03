@@ -55,11 +55,6 @@ class ProfileViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    @IBAction func createNewPasswordButton(_ sender: UIButton) {
-        let createNewPasswordViewController = CreateNewPasswordViewController()
-        navigationController?.pushViewController(createNewPasswordViewController, animated: true)
-    }
-    
 }
 
 extension ProfileViewController: ProfileViewProtocol {
@@ -145,6 +140,11 @@ extension ProfileViewController {
 extension ProfileViewController {
     @objc func didTappedBackButton() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func createNewPasswordButton(_ sender: UIButton) {
+        let createNewPasswordViewController = CreateNewPasswordViewController()
+        navigationController?.pushViewController(createNewPasswordViewController, animated: true)
     }
 }
 

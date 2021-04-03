@@ -29,6 +29,18 @@ class CropsInfoViewController: UIViewController {
 
     }
    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.setBackgroundImage(nil, for:.default)
+        navigationController?.navigationBar.shadowImage = nil
+    }
 
 }
 
@@ -121,7 +133,8 @@ extension CropsInfoViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setupUI()
         return cell
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.pushViewController(CropsInfoDetailsViewController(), animated: true)
     }
     

@@ -39,6 +39,11 @@ class ForgotPasswordViewController: UIViewController, ForgotViewProtocol {
         hideKeyboardWhenTappedAround()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     private func enableLoginButton() {
         tryAgainButton.isUserInteractionEnabled = true
         tryAgainButton.backgroundColor = UIColor.midGreenTwo

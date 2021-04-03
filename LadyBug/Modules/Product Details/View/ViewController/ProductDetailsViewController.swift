@@ -113,7 +113,7 @@ extension ProductDetailsViewController {
     
     private func getTitleBarButton() -> UIBarButtonItem {
         let titleLabel = UILabel()
-        titleLabel.text = presnter.localizer.navigationitleHeadTitle
+        titleLabel.text = "تفاصيل المنتج"
         titleLabel.textColor = .purplishBrown
         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         titleLabel.sizeToFit()

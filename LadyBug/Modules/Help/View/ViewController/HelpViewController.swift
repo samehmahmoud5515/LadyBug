@@ -28,6 +28,16 @@ class HelpViewController: UIViewController, HelpviewProtocol {
         fontSetup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     private func fontSetup(){
         helpTextViewContent.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
     }

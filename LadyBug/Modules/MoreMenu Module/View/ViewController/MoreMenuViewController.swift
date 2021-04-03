@@ -163,7 +163,7 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
         switch model {
         case .interests:
             let interestedSelectionViewController = MyCropsViewController()
-            navigationController?.pushViewController(interestedSelectionViewController, animated: true)
+            navigationController?.navigationController?.pushViewController(interestedSelectionViewController, animated: true)
         case .profile:
             let profileVc = ProfileViewController()
             navigationController?.navigationController?.pushViewController(profileVc, animated: true)
@@ -174,22 +174,22 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             showLanguageAlert()
         case.tasks :
             let myTasks = MyTasksViewController()
-            navigationController?.pushViewController(myTasks, animated: true)
+            navigationController?.navigationController?.pushViewController(myTasks, animated: true)
         case.products :
             let yourProductsTabelViewController = YourProductsTabelViewController()
-                     navigationController?.pushViewController(yourProductsTabelViewController, animated: true)
+            navigationController?.navigationController?.pushViewController(yourProductsTabelViewController, animated: true)
         case .posts:
             let myPostsViewController = MyPostsViewController()
-            navigationController?.pushViewController(myPostsViewController, animated: true)
+            navigationController?.navigationController?.pushViewController(myPostsViewController, animated: true)
         case .followers :
             let followersViewController = FollowersViewController()
-            navigationController?.pushViewController(followersViewController, animated: true)
+            navigationController?.navigationController?.pushViewController(followersViewController, animated: true)
         case .usageAgreement :
             
             break
         case.help :
             let helpViewController = HelpViewController()
-                       navigationController?.pushViewController(helpViewController, animated: true)
+            navigationController?.navigationController?.pushViewController(helpViewController, animated: true)
             break
         case.logOut :
             let vc = LoginViewController()

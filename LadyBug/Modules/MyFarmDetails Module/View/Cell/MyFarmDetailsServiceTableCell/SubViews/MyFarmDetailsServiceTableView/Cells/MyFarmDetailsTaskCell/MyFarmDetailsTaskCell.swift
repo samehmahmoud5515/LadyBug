@@ -30,7 +30,7 @@ class MyFarmDetailsTaskCell: UITableViewCell {
         notificationButton.titleLabel?.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         selectionView.backgroundColor = isSelected ? .midGreenTwo : .paleGrey
         selectionView.layer.borderWidth = isSelected ? 0 : 1.5
-        selectionView.layer.borderColor = UIColor.lightBlueGreyTwo.cgColor
+        selectionView.layer.borderColor = UIColor.blueyGreyTwo.cgColor
         selectionImageView.isHidden = !isSelected
         taskDescCompletedLine.isHidden = !isSelected
     }

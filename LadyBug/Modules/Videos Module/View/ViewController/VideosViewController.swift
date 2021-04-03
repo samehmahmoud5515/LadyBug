@@ -136,7 +136,7 @@ extension VideosViewController: VideosCellDelegate {
 
 extension VideosViewController: VideosViewProtocol {
     func navigateToPostDetails() {
-        let vc = ProductDetailsViewController()
+        let vc = PostDetailsViewController()
         navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
     
