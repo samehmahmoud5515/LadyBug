@@ -8,21 +8,29 @@
 import UIKit
 
 class AddPeopleToYourFarmViewController: UIViewController {
-
-    @IBOutlet weak var personSelectionView: StandardSelectionView!
-    @IBOutlet weak var privilegeSelectionView: StandardSelectionView!
+    
+    @IBOutlet weak var personSelectionView: CustomSelectionView!
+    @IBOutlet weak var privilegeSelectionView: CustomSelectionView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dismissView: UIView!
         
     var localizer = AddPeopleToYourFarmLocalizer()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         addGestureToView()
     }
-
+    
+    func didSelectItem(item: String) {
+       }
+       
+    func target() {
+        let Vc = FarmPersonSelectionViewController()
+           self.navigationController?.pushViewController(Vc, animated: true)
+       }
 }
 
 extension AddPeopleToYourFarmViewController {
@@ -38,11 +46,10 @@ extension AddPeopleToYourFarmViewController {
     }
     
     private func setupSelectionViews() {
-        personSelectionView.setupUI(title: localizer.selectPeopleTitle, selectionTitle: localizer.selectionPeopleTitle)
-        privilegeSelectionView.setupUI(title: localizer.previlageTitle, selectionTitle: localizer.previlageSelectionTitle)
+        personSelectionView.addPepoleSetUP(title: localizer.selectPeopleTitle, selectionTitle: localizer.selectionPeopleTitle, arrowImage: "common_arrow_left_ic")
+        privilegeSelectionView.addPepoleSetUP(title: localizer.previlageTitle, selectionTitle: localizer.previlageSelectionTitle, arrowImage: "common_arrow_left_ic")
+        personSelectionView.delegate = self
     }
-    
-    
 }
 
 extension AddPeopleToYourFarmViewController {
@@ -55,4 +62,11 @@ extension AddPeopleToYourFarmViewController {
         dismiss(animated: false, completion: nil)
     }
 
+}
+extension AddPeopleToYourFarmViewController : CustomSelectionViewDelegate {
+    func selectionDidTapped(_ selection: CustomSelectionView) {
+        let vc = FarmPersonSelectionViewController()
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)    }
 }
