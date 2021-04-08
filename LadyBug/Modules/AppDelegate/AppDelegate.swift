@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = (Defaults[.isUserLogged] ?? false) ? TabBarViewController() : LoginViewController()
+        let rootViewController = (Defaults[.isUserLogged] ?? false) ? AddProdeuctSuperViewController() : LoginViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navigationController
