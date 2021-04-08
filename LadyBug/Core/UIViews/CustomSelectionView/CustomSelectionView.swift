@@ -65,6 +65,21 @@ extension CustomSelectionView {
     func updateSelectionValue(text: String) {
         placeholderLabel.text = text
     }
+    
+    func addPepoleSetUP(title: String? = nil, selectionTitle: String,  image: String? = nil, arrowImage: String) {
+        titleLabel.isHidden = title == nil
+        contentView.isHidden = title == nil
+        titleLabel.text = title
+        placeholderLabel.text = selectionTitle
+        
+        titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+        titleLabel.textColor = .purplishBrown
+        
+        arrowImageView.image = UIImage(named: arrowImage)
+        
+        placeholderLabel.font = UIFont.get(enFont: .regular(15), arFont: .regular(15))
+        placeholderLabel.textColor = .blueyGreyTwo
+    }
 }
 
 // MARK: - Action
