@@ -61,7 +61,6 @@ extension AddProdeuctSuperViewController {
     
     private func addBarButtonsToNavigationBar() {
         navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
-        
         navigationItem.rightBarButtonItem = getRightButton()
     }
     
@@ -118,8 +117,8 @@ extension AddProdeuctSuperViewController{
     
     private func setupTableViewRowHeight() {
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 80
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 147
     }
 }
 
@@ -143,47 +142,56 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
             cell.selectionStyle = .none
             if let postCell = cell as? AddImageTableViewCell {
                 postCell.setupFontUI()
+                setupTableViewRowHeight()
             }
         case let .productTitle(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductDescribationTableViewCell {
                 postCell.setUI(model: model)
+                setupTableViewRowHeight()
             }
         case let .appropriateCrop(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             
             if let postCell = cell as? AddProductSelectionTableViewCell {
                 postCell.setupUI(model: model)
+                 self.tableView.rowHeight = 84
             }
         case let .city(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
                 postCell.setupUI(model: model)
+                 self.tableView.rowHeight = 84
             }
         case let .region(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
                 postCell.setupUI(model: model)
+                 self.tableView.rowHeight = 84
             }
         case let .otherSites(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
                 postCell.setupUI(model: model)
+                self.tableView.rowHeight = 84
             }
         case let .description(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductTextViewTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductTextViewTableViewCell {
                 postCell.setupUI(textViewUpdateDelegate: self)
+                setupTableViewRowHeight()
             }
         case let .phoneNumber(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductDescribationTableViewCell {
                 postCell.setUI(model: model)
+                setupTableViewRowHeight()
             }
         case let .price(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductDescribationTableViewCell {
                 postCell.setUI(model: model)
+                setupTableViewRowHeight()
             }
         }
         return cell

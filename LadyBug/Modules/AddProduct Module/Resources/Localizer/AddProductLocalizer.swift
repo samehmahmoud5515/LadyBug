@@ -50,7 +50,7 @@ class AddProductLocalizer: CommonLocalizer{
            "addproduct_Link_to_the_product_on_other_sites_title".localized
        }
     var moreLinksContent:String {
-        ""
+        "addproduct_Link_to_the_product_on_other_sites_content_title".localized
     }
     var optional:String {
            "addproduct_optional_title".localized
