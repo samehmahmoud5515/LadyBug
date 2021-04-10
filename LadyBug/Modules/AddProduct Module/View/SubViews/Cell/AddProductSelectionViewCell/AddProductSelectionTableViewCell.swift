@@ -9,9 +9,9 @@ import UIKit
 
 class AddProductSelectionTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var selectionView: StandardSelectionView!
+  @IBOutlet weak var selectionView: CustomSelectionView!
     
     func setupUI(model: AddProductModel) {
-        selectionView.setupUI(title: model.titile, selectionTitle: model.header)
+        selectionView.setupUI(title: model.header, placeholder: model.titile, arrowImage: "common_arrow_left_ic")
     }
 }

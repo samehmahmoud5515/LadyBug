@@ -36,4 +36,5 @@ class CommonImages: CommonFruitsAndVegetablesImages {
     var filter = "common_filter_ic"
     var close = "common_close_ic"
     var dropDownImage = "common_drop_down_arrow"
+    var optional = "common_optional"
 }

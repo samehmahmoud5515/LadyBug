@@ -12,7 +12,7 @@ protocol TextViewUpdateProtocol: class {
 }
 
 class StandardTextView: UIView {
-
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var placeholderLabel: UILabel!
@@ -24,15 +24,15 @@ class StandardTextView: UIView {
         super.init(frame: frame)
         nibSetup()
     }
-        
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         nibSetup()
     }
-        
+    
     private func nibSetup() {
         Bundle.main.loadNibNamed("\(StandardTextView.self)",
-                                 owner: self, options: nil)
+            owner: self, options: nil)
         guard let contentView = contentView else { return }
         contentView.frame = bounds
         addSubview(contentView)
@@ -42,7 +42,7 @@ class StandardTextView: UIView {
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         setupUI()
     }
-
+    
 }
 
 extension StandardTextView {
@@ -73,3 +73,4 @@ extension StandardTextView: UITextViewDelegate {
         placeholderLabel.isHidden = textView.text.count != 0
     }
 }
+

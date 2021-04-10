@@ -7,73 +7,73 @@
 
 import Foundation
 class AddProductPresenter: AddProductPresenterProtocol {
-   
     
-   
+    
+    
     weak var view: AddProductViewProtocol?
     var localizer = AddProductLocalizer()
     var images = AddProductImage()
     var datasource = [AddProductUIModel]()
-
+    
     init(view: AddProductViewProtocol) {
         self.view = view
     }
-
+    
     func attach() {
         prepareDatasource()
     }
-        
+    
     func prepareDatasource() {
         
         let addImage = AddProductModel()
-        datasource += [.AddImage(addImage)]
+        datasource += [.addImage(addImage)]
         
         let productTitle = AddProductModel()
-        productTitle.header = localizer.ProductHead
-        productTitle.titile = localizer.ProductHeadcontent
+        productTitle.header = localizer.productHeadcontent
+        productTitle.titile = localizer.productHead
         datasource += [.productTitle(productTitle)]
         
         let appropriateCrop = AddProductModel()
         appropriateCrop.header = localizer.appropriateCrop
-        appropriateCrop.titile = localizer.appropriateCropContent
-        datasource += [.AppropriateCrop(appropriateCrop)]
+        appropriateCrop.titile = localizer.appropriateCropContent 
+        datasource += [.appropriateCrop(appropriateCrop)]
         
         let city = AddProductModel()
         city.header = localizer.choiceCity
         city.titile = localizer.cityContent
-        datasource += [.City(city)]
+        datasource += [.city(city)]
         
-       let region = AddProductModel()
+        let region = AddProductModel()
         region.header = localizer.region
         region.titile = localizer.regionContent
-        datasource += [.Region(region)]
+        datasource += [.region(region)]
         
         let moreLinks = AddProductModel()
         moreLinks.header = localizer.moreLinks
         moreLinks.titile = localizer.moreLinksContent
-        datasource += [.OtherSites(moreLinks)]
+        datasource += [.otherSites(moreLinks)]
         
         let descriptions = AddProductModel()
         descriptions.header = localizer.description
         descriptions.titile = localizer.descriptionsContent
-        datasource += [.Description(descriptions)]
+        datasource += [.description(descriptions)]
         
         let phoneNumber = AddProductModel()
-        phoneNumber.header = localizer.phoneNumberLabel
-        phoneNumber.titile = localizer.phoneNumberContent
-        datasource += [.PhoneNumber(phoneNumber)]
+        phoneNumber.header = localizer.phoneNumberContent
+        phoneNumber.titile = localizer.phoneNumberLabel
+        datasource += [.phoneNumber(phoneNumber)]
         
         let price = AddProductModel()
-        price.header = localizer.price
-        price.titile = localizer.priceContent
-        datasource += [.Price(price)]
+        price.header = localizer.priceContent
+        price.titile = localizer.price
+        datasource += [.price(price)]
         
         view?.notifiyDataChange()
-      }
+    }
     func handleCellDidTapped(index: Int) {
-           
-       }
+        
+    }
     func getItemFor(index: Int) -> AddProductUIModel {
-           return datasource[index]
-       }
+        return datasource[index]
+    }
 }

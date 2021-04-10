@@ -32,6 +32,7 @@ class ProductsViewController: UIViewController {
         presnter.attach()
     }
     
+    
 }
 
 
@@ -92,7 +93,7 @@ extension ProductsViewController {
     }
     
     private func setupAddProductButton() {
-        addProductButton.setTitle(presnter.localizer.addPost, for: .normal)
+        addProductButton.setTitle(presnter.localizer.navigationitleAddProduct, for: .normal)
         addProductButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
     }
 }
@@ -122,5 +123,16 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
 extension ProductsViewController {
     @objc func notificationButtonDidTapped() {
         navigationController?.navigationController?.pushViewController(NotificationTabelViewController(), animated: true)
+    }
+}
+
+extension ProductsViewController {
+    @IBAction func addProductButton(_ sender: UIButton) {
+        navigateToAddProductViewController()
+    }
+    
+    private func navigateToAddProductViewController(){
+            let Vc = AddProdeuctSuperViewController()
+        navigationController?.navigationController?.pushViewController(Vc, animated: true)
     }
 }

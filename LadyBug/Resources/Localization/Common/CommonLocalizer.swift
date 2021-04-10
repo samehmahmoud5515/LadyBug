@@ -81,4 +81,7 @@ class CommonLocalizer: CommonFruitsAndVegetablesLocalizer {
     var passwordConfirmation: String {
            "registration_screen_password_confirmation_title".localized
        }
+    var navigationitleAddProduct:String {
+        "addproduct_navigation_title".localized
+    }
 }

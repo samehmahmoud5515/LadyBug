@@ -18,10 +18,12 @@ class AddImageTableViewCell: UITableViewCell {
     @IBOutlet weak var addProductInteriorPictureImageView: UIImageView!
     @IBOutlet weak var addProductInteriorPicturetitle: UILabel!
     
+    
     func setupFontUI() {
         addProductMainPictureViewTitle.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         addProductMainPicturetitle.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         addProductInteriorPictureViewTitle.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         addProductInteriorPicturetitle.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
      }
+  
 }

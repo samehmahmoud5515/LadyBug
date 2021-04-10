@@ -9,9 +9,7 @@ import Foundation
     
 class AddProductLocalizer: CommonLocalizer{
     
-    var navigationitle:String {
-        "addproduct_navigation_title".localized
-    }
+    
     var mainPicture:String {
            "addproduct_main_picture_title".localized
        }
@@ -24,10 +22,10 @@ class AddProductLocalizer: CommonLocalizer{
     var addInternalImage:String {
            "addproduct_add_the_internal_image_title".localized
        }
-    var ProductHead:String {
+    var productHead:String {
            "addproduct_Product_head_title".localized
        }
-    var ProductHeadcontent:String {
+    var productHeadcontent:String {
            "addproduct_Product_head_content_title".localized
        }
     var appropriateCrop:String {
@@ -71,7 +69,7 @@ class AddProductLocalizer: CommonLocalizer{
     }
     
     var price:String {
-        "addproduct_price_content_title".localized
+        "addproduct_price_title".localized
     }
     
     var priceContent:String {

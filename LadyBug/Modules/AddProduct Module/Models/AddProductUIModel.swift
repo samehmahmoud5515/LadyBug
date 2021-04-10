@@ -8,13 +8,13 @@
 import Foundation
 
     enum AddProductUIModel {
-        case AddImage(AddProductModel)
+        case addImage(AddProductModel)
         case productTitle(AddProductModel)
-        case AppropriateCrop(AddProductModel)
-        case City(AddProductModel)
-        case Region(AddProductModel)
-        case OtherSites(AddProductModel)
-        case Description(AddProductModel)
-        case PhoneNumber(AddProductModel)
-        case Price(AddProductModel)
+        case appropriateCrop(AddProductModel)
+        case city(AddProductModel)
+        case region(AddProductModel)
+        case otherSites(AddProductModel)
+        case description(AddProductModel)
+        case phoneNumber(AddProductModel)
+        case price(AddProductModel)
     }

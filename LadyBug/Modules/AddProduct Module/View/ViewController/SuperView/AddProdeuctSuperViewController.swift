@@ -7,37 +7,38 @@
 
 import UIKit
 
-class AddProdeuctSuperViewController: UIViewController, AddProductViewProtocol {
-    
+class AddProdeuctSuperViewController: UIViewController {
+   
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addProductButton: UIButton!
     
     private var presnter: AddProductPresenterProtocol!
     
     init() {
-           super.init(nibName: "\(AddProdeuctSuperViewController.self)", bundle: nil)
-           presnter = AddProductPresenter(view: self)
-       }
-       
-       @available(*, unavailable)
-       required init?(coder: NSCoder) {
-           fatalError("init(coder:) has not been implemented")
-       }
+        super.init(nibName: "\(AddProdeuctSuperViewController.self)", bundle: nil)
+        presnter = AddProductPresenter(view: self)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         presnter.attach()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
-          navigationController?.setNavigationBarHidden(false, animated: false)
-      }
-      
-      override func viewWillDisappear(_ animated: Bool) {
-          super.viewWillDisappear(animated)
-          navigationController?.setNavigationBarHidden(true, animated: false)
-      }
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 }
 
 // MARK:- UI Setup
@@ -47,6 +48,9 @@ extension AddProdeuctSuperViewController {
         addBarButtonsToNavigationBar()
         registerTableViewCell()
         setupTableViewRowHeight()
+        setupButtonUI()
+        hideKeyboardWhenTappedAround()
+        tabelDelegateAndDataSourceSet()
     }
     
     private func setupNaviagtionBarUI() {
@@ -73,32 +77,55 @@ extension AddProdeuctSuperViewController {
     
     private func getRightButton() -> UIBarButtonItem {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
-        button.setImage(UIImage(named: presnter.images.share), for: .normal)
+        button.setImage(UIImage(named: presnter.images.optional), for: .normal)
         button.backgroundColor = .paleGreyThree
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 17
         return UIBarButtonItem(customView: button)
     }
+}
+extension AddProdeuctSuperViewController{
+    
+    private func tabelDelegateAndDataSourceSet(){
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
     
     private func getTitleBarButton() -> UIBarButtonItem {
         let titleLabel = UILabel()
-        titleLabel.text = "اضف منتج"
+        titleLabel.text = presnter.localizer.navigationitleAddProduct
         titleLabel.textColor = .purplishBrown
         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         titleLabel.sizeToFit()
-
+        
         return UIBarButtonItem(customView: titleLabel)
     }
     
     private func registerTableViewCell() {
-        let nib1 = UINib(nibName: "\(AddImageTableViewCell.self)", bundle: nil)
-        tableView.register(nib1, forCellReuseIdentifier: "\(AddImageTableViewCell.self)")
+        let AddImage = UINib(nibName: "\(AddImageTableViewCell.self)", bundle: nil)
+        tableView.register(AddImage, forCellReuseIdentifier: "\(AddImageTableViewCell.self)")
+        
+        let Describation = UINib(nibName: "\(AddProductDescribationTableViewCell.self)", bundle: nil)
+        tableView.register(Describation, forCellReuseIdentifier: "\(AddProductDescribationTableViewCell.self)")
+        
+        let Selection = UINib(nibName: "\(AddProductSelectionTableViewCell.self)", bundle: nil)
+        tableView.register(Selection, forCellReuseIdentifier: "\(AddProductSelectionTableViewCell.self)")
+        
+        let TextView = UINib(nibName: "\(AddProductTextViewTableViewCell.self)", bundle: nil)
+        tableView.register(TextView, forCellReuseIdentifier: "\(AddProductTextViewTableViewCell.self)")
         
     }
     
     private func setupTableViewRowHeight() {
-        tableView.estimatedRowHeight = 147
+        
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 80
+    }
+}
+
+extension AddProdeuctSuperViewController: AddProductViewProtocol {
+    func notifiyDataChange() {
+        tableView.reloadData()
     }
 }
 
@@ -106,27 +133,67 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presnter.datasource.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell
-       cell = tableView.dequeueReusableCell(withIdentifier: "\(AddImageTableViewCell.self)", for: indexPath)
-       if let postCell = cell as? AddImageTableViewCell {
-           postCell.setupFontUI()
-       }
+        switch presnter.getItemFor(index: indexPath.row) {
+            
+        case .addImage(_):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddImageTableViewCell.self)", for: indexPath)
+            cell.selectionStyle = .none
+            if let postCell = cell as? AddImageTableViewCell {
+                postCell.setupFontUI()
+            }
+        case let .productTitle(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductDescribationTableViewCell {
+                postCell.setUI(model: model)
+            }
+        case let .appropriateCrop(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
+            
+            if let postCell = cell as? AddProductSelectionTableViewCell {
+                postCell.setupUI(model: model)
+            }
+        case let .city(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductSelectionTableViewCell {
+                postCell.setupUI(model: model)
+            }
+        case let .region(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductSelectionTableViewCell {
+                postCell.setupUI(model: model)
+            }
+        case let .otherSites(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductSelectionTableViewCell {
+                postCell.setupUI(model: model)
+            }
+        case let .description(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductTextViewTableViewCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductTextViewTableViewCell {
+                postCell.setupUI(textViewUpdateDelegate: self)
+            }
+        case let .phoneNumber(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductDescribationTableViewCell {
+                postCell.setUI(model: model)
+            }
+        case let .price(model):
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductDescribationTableViewCell {
+                postCell.setUI(model: model)
+            }
+        }
         return cell
-    
-}
-}
-
-extension AddProdeuctSuperViewController {
-    func notifiyDataChange(){
-        tableView.reloadData()
     }
 }
 
 extension AddProdeuctSuperViewController{
-       func naviageteTo(model: AddProductUIModel) {
-       }
+    func naviageteTo(model: AddProductUIModel) {
+        
+    }
 }
 //MARK:- Actions
 extension AddProdeuctSuperViewController {
@@ -136,5 +203,23 @@ extension AddProdeuctSuperViewController {
 }
 extension AddProdeuctSuperViewController {
     @IBAction func AddProductActionButton(_ sender: UIButton) {
-       }
+        setupNavigationButton()
+    }
+    
+    private func setupNavigationButton(){
+        let Vc = ProductDetailsViewController()
+        navigationController?.pushViewController(Vc, animated: true)
+    }
+    
+    private func setupButtonUI(){
+        addProductButton.titleLabel?.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+        addProductButton.titleLabel?.text = presnter.localizer.addProductButton
+    }
+}
+
+extension AddProdeuctSuperViewController: TextViewUpdateProtocol {
+    func textViewChanged() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
 }
