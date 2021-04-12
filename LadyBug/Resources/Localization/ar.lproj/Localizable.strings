@@ -301,3 +301,18 @@
 "suggestions_apple_title" = "محصول التفاح";
 "suggestions_apple_searchbar_title" = "ابحث عن المحصول الذي تهتم بة";
 "farmpersonselectionsearchplaceholdertitle" = "ابحث عن شخص";
+
+//MARK: - AdjustThePeopleOnYourFarmLocalizer
+
+"adjust_the_people_on_your_farm_view_name_title" = "عدل الاشخاص في مزرعتك" ;
+"adjust_the_people_on_your_farm_select_person_head_title" = "اختر الشخص" ;
+"adjust_the_people_on_your_farm_person_name_title" = "مهندس اشرف" ;
+"adjust_the_people_on_your_farm_email_title" = "mathewnguyen@gmail" ;
+"adjust_the_people_on_your_farm_choose_its_permissions_title" = "اختر صلاحياتة" ;
+"adjust_the_people_on_your_farm_edit_title" = "تعديل" ;
+"adjust_the_people_on_your_farm_delete_person_title" = "حذف الشخص" ;
+
+
+
+
+

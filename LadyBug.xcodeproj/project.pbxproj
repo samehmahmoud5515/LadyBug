@@ -25,6 +25,10 @@
 		2101D91B25F357D900FB0DB9 /* YourProductsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */; };
 		2101D91E25F3589400FB0DB9 /* YourProductsTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */; };
 		2101D91F25F3589400FB0DB9 /* YourProductsTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */; };
+		2104FBEC26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2104FBEB26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift */; };
+		2104FBEE26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2104FBED26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift */; };
+		2104FBF126225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2104FBEF26225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift */; };
+		2104FBF226225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2104FBF026225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib */; };
 		21112D1226191F650037B8AE /* FarmPersonSelectionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21112D0226191F650037B8AE /* FarmPersonSelectionImage.swift */; };
 		21112D1326191F650037B8AE /* FarmPersonSelectionLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21112D0426191F650037B8AE /* FarmPersonSelectionLocalizer.swift */; };
 		21112D1426191F650037B8AE /* FarmPersonSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21112D0626191F650037B8AE /* FarmPersonSelectionPresenter.swift */; };
@@ -404,6 +408,10 @@
 		2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsCellTableViewCell.xib; sourceTree = "<group>"; };
 		2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProductsTabelViewController.swift; sourceTree = "<group>"; };
 		2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsTabelViewController.xib; sourceTree = "<group>"; };
+		2104FBEB26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustThePeopleOnYourFarmLocalizer.swift; sourceTree = "<group>"; };
+		2104FBED26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustThePeopleOnYourFarmImage.swift; sourceTree = "<group>"; };
+		2104FBEF26225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustThePeopleOnYourFarmModuleViewController.swift; sourceTree = "<group>"; };
+		2104FBF026225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdjustThePeopleOnYourFarmModuleViewController.xib; sourceTree = "<group>"; };
 		21112D0226191F650037B8AE /* FarmPersonSelectionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmPersonSelectionImage.swift; sourceTree = "<group>"; };
 		21112D0426191F650037B8AE /* FarmPersonSelectionLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmPersonSelectionLocalizer.swift; sourceTree = "<group>"; };
 		21112D0626191F650037B8AE /* FarmPersonSelectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmPersonSelectionPresenter.swift; sourceTree = "<group>"; };
@@ -969,6 +977,33 @@
 				2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */ = {
+			isa = PBXGroup;
+			children = (
+				2104FBE8262258E30014E584 /* AdjustThePeopleOnYourFarmLocalizer */,
+				2104FBE9262259980014E584 /* AdjustThePeopleOnYourFarmModuleViewController */,
+			);
+			path = "AdjustThePeopleOnYourFarm Module";
+			sourceTree = "<group>";
+		};
+		2104FBE8262258E30014E584 /* AdjustThePeopleOnYourFarmLocalizer */ = {
+			isa = PBXGroup;
+			children = (
+				2104FBEB26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift */,
+				2104FBED26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift */,
+			);
+			path = AdjustThePeopleOnYourFarmLocalizer;
+			sourceTree = "<group>";
+		};
+		2104FBE9262259980014E584 /* AdjustThePeopleOnYourFarmModuleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2104FBEF26225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift */,
+				2104FBF026225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib */,
+			);
+			path = AdjustThePeopleOnYourFarmModuleViewController;
 			sourceTree = "<group>";
 		};
 		21112CFF26191F650037B8AE /* FarmPersonSelectionModule */ = {
@@ -3866,11 +3901,12 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
+				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
 				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
 				50206EC8260E9C900095E995 /* Archive */,
 				50206EBD260E6BEA0095E995 /* AddTask */,
 				21A706ED260DECD50094EC56 /* Suggestions Module */,
-				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				509643A725E2EF3E0000FB60 /* AddPost Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 				50AF3EC2260AD16A00CBCD0C /* CreateFarm */,
@@ -4177,6 +4213,7 @@
 				5001434725F9A75400D1630E /* MyTasksSectionHeaderView.xib in Resources */,
 				50E01ED825E5C9A30016DEAB /* MyCropsHeaderView.xib in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
+				2104FBF226225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib in Resources */,
 				50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */,
 				509643AD25E2EF860000FB60 /* AddPostViewController.xib in Resources */,
 				50D083EA260C063200518ED5 /* FarmTypeView.xib in Resources */,
@@ -4407,6 +4444,7 @@
 				2121AC2126052027001A2EDD /* HelpProtocols.swift in Sources */,
 				50E01ED725E5C9A30016DEAB /* MyCropsHeaderView.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
+				2104FBF126225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift in Sources */,
 				2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */,
 				509C1487260D4DD1004CECA2 /* AddPostTextViewCell.swift in Sources */,
 				216647F525FE88920028E335 /* ImageLocalizer.swift in Sources */,
@@ -4574,6 +4612,7 @@
 				508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
 				213751FE25F436A300E342EF /* FollowersTableViewCell.swift in Sources */,
+				2104FBEE26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift in Sources */,
 				2101D8FB25F2E46D00FB0DB9 /* NotificationPresenter.swift in Sources */,
 				21112D1226191F650037B8AE /* FarmPersonSelectionImage.swift in Sources */,
 				503CB5C425E0A15F00B7A393 /* VideosViewController.swift in Sources */,
@@ -4593,6 +4632,7 @@
 				21767A3A25F592D00039E2B8 /* MyPostsViewController.swift in Sources */,
 				5001433825F99B3D00D1630E /* MyTasksLocalizer.swift in Sources */,
 				213751D925F3FD9500E342EF /* CropsInfoDetailsImages.swift in Sources */,
+				2104FBEC26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift in Sources */,
 				50D4ACC225FBF8C900880E55 /* MapLocalizer.swift in Sources */,
 				5062E7BB25FB26A5000398AA /* CropsInfoImages.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,
