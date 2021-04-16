@@ -9,6 +9,7 @@ import UIKit
 
 protocol MyFarmDetailsPeopleCellDelegate: class {
     func addPeopleButtonDidTapped(_ cell: MyFarmDetailsPeopleCell)
+    func editPeopleButtonDidTapped(_ cell: MyFarmDetailsPeopleCell)
 }
 
 class MyFarmDetailsPeopleCell: UITableViewCell {
@@ -34,7 +35,6 @@ class MyFarmDetailsPeopleCell: UITableViewCell {
     @IBAction func addButtonDidTapped(_ sender: Any) {
         delegate?.addPeopleButtonDidTapped(self)
     }
-    
 }
 
 extension MyFarmDetailsPeopleCell {
@@ -65,5 +65,9 @@ extension MyFarmDetailsPeopleCell: UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.editPeopleButtonDidTapped(self)
+    }
 }
+
+

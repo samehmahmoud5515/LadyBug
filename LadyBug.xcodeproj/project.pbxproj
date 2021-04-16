@@ -25,6 +25,10 @@
 		2101D91B25F357D900FB0DB9 /* YourProductsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */; };
 		2101D91E25F3589400FB0DB9 /* YourProductsTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */; };
 		2101D91F25F3589400FB0DB9 /* YourProductsTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */; };
+		2104FBEC26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2104FBEB26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift */; };
+		2104FBEE26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2104FBED26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift */; };
+		2104FBF126225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2104FBEF26225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift */; };
+		2104FBF226225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2104FBF026225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib */; };
 		21112D1226191F650037B8AE /* FarmPersonSelectionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21112D0226191F650037B8AE /* FarmPersonSelectionImage.swift */; };
 		21112D1326191F650037B8AE /* FarmPersonSelectionLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21112D0426191F650037B8AE /* FarmPersonSelectionLocalizer.swift */; };
 		21112D1426191F650037B8AE /* FarmPersonSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21112D0626191F650037B8AE /* FarmPersonSelectionPresenter.swift */; };
@@ -91,6 +95,24 @@
 		217D1EB02608293C0025462F /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217D1EA32608293C0025462F /* ProductDetailsViewController.xib */; };
 		217D1EB12608293C0025462F /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1EA42608293C0025462F /* ProductDetailsViewController.swift */; };
 		217D1EB22608293C0025462F /* ProductDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */; };
+		218C78552629E72C00DA440A /* AddProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78352629E72B00DA440A /* AddProductImage.swift */; };
+		218C78562629E72C00DA440A /* AddProductLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78372629E72B00DA440A /* AddProductLocalizer.swift */; };
+		218C78572629E72C00DA440A /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78392629E72B00DA440A /* AddProductPresenter.swift */; };
+		218C78582629E72C00DA440A /* AddProductUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C783B2629E72B00DA440A /* AddProductUIModel.swift */; };
+		218C78592629E72C00DA440A /* AddProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C783C2629E72B00DA440A /* AddProductModel.swift */; };
+		218C785A2629E72C00DA440A /* AddProductPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218C78412629E72B00DA440A /* AddProductPriceTableViewCell.xib */; };
+		218C785B2629E72C00DA440A /* AddProductPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78422629E72B00DA440A /* AddProductPriceTableViewCell.swift */; };
+		218C785C2629E72C00DA440A /* AddProductDescribationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78442629E72B00DA440A /* AddProductDescribationTableViewCell.swift */; };
+		218C785D2629E72C00DA440A /* AddProductDescribationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218C78452629E72B00DA440A /* AddProductDescribationTableViewCell.xib */; };
+		218C785E2629E72C00DA440A /* AddProductSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78472629E72B00DA440A /* AddProductSelectionTableViewCell.swift */; };
+		218C785F2629E72C00DA440A /* AddProductSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218C78482629E72B00DA440A /* AddProductSelectionTableViewCell.xib */; };
+		218C78602629E72C00DA440A /* AddImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218C784A2629E72B00DA440A /* AddImageTableViewCell.xib */; };
+		218C78612629E72C00DA440A /* AddImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C784B2629E72B00DA440A /* AddImageTableViewCell.swift */; };
+		218C78622629E72C00DA440A /* AddProductTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C784D2629E72B00DA440A /* AddProductTextViewTableViewCell.swift */; };
+		218C78632629E72C00DA440A /* AddProductTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218C784E2629E72B00DA440A /* AddProductTextViewTableViewCell.xib */; };
+		218C78642629E72C00DA440A /* AddProdeuctSuperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218C78512629E72B00DA440A /* AddProdeuctSuperViewController.xib */; };
+		218C78652629E72C00DA440A /* AddProdeuctSuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78522629E72B00DA440A /* AddProdeuctSuperViewController.swift */; };
+		218C78662629E72C00DA440A /* AddProductProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78542629E72B00DA440A /* AddProductProtocols.swift */; };
 		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
 		21A70701260DECD60094EC56 /* SuggestionsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706F0260DECD50094EC56 /* SuggestionsImages.swift */; };
 		21A70702260DECD60094EC56 /* SuggestionsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706F2260DECD50094EC56 /* SuggestionsLocalizer.swift */; };
@@ -103,22 +125,6 @@
 		21A70709260DECD60094EC56 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706FE260DECD50094EC56 /* SuggestionsViewController.swift */; };
 		21A7070A260DECD60094EC56 /* SuggestionsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A70700260DECD50094EC56 /* SuggestionsProtocols.swift */; };
 		21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE318825F597D30015467B /* MyPostsPresenter.swift */; };
-		21E9CC94261E871F009E930A /* AddProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC77261E871E009E930A /* AddProductImage.swift */; };
-		21E9CC95261E871F009E930A /* AddProductLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC79261E871E009E930A /* AddProductLocalizer.swift */; };
-		21E9CC96261E871F009E930A /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC7B261E871E009E930A /* AddProductPresenter.swift */; };
-		21E9CC97261E871F009E930A /* AddProductUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC7D261E871E009E930A /* AddProductUIModel.swift */; };
-		21E9CC98261E871F009E930A /* AddProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC7E261E871E009E930A /* AddProductModel.swift */; };
-		21E9CC99261E871F009E930A /* AddProductDescribationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC83261E871E009E930A /* AddProductDescribationTableViewCell.swift */; };
-		21E9CC9A261E871F009E930A /* AddProductDescribationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E9CC84261E871E009E930A /* AddProductDescribationTableViewCell.xib */; };
-		21E9CC9B261E871F009E930A /* AddProductSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC86261E871E009E930A /* AddProductSelectionTableViewCell.swift */; };
-		21E9CC9C261E871F009E930A /* AddProductSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E9CC87261E871E009E930A /* AddProductSelectionTableViewCell.xib */; };
-		21E9CC9D261E871F009E930A /* AddImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E9CC89261E871E009E930A /* AddImageTableViewCell.xib */; };
-		21E9CC9E261E871F009E930A /* AddImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC8A261E871E009E930A /* AddImageTableViewCell.swift */; };
-		21E9CC9F261E871F009E930A /* AddProductTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC8C261E871E009E930A /* AddProductTextViewTableViewCell.swift */; };
-		21E9CCA0261E871F009E930A /* AddProductTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E9CC8D261E871E009E930A /* AddProductTextViewTableViewCell.xib */; };
-		21E9CCA1261E871F009E930A /* AddProdeuctSuperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E9CC90261E871E009E930A /* AddProdeuctSuperViewController.xib */; };
-		21E9CCA2261E871F009E930A /* AddProdeuctSuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC91261E871E009E930A /* AddProdeuctSuperViewController.swift */; };
-		21E9CCA3261E871F009E930A /* AddProductProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9CC93261E871E009E930A /* AddProductProtocols.swift */; };
 		5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432325F99A9300D1630E /* MyTasksViewController.swift */; };
 		5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001432425F99A9300D1630E /* MyTasksViewController.xib */; };
 		5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432925F99AD500D1630E /* MyTasksPresenter.swift */; };
@@ -275,6 +281,8 @@
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
 		508537E22617F76C00CCFEA7 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */; };
 		508537E32617F76C00CCFEA7 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */; };
+		508D16EF262915AD004ED2D4 /* LoginEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */; };
+		508D16F32629161D004ED2D4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D16F22629161D004ED2D4 /* Environment.swift */; };
 		508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */; };
 		508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */; };
 		508FDADA25F049B500686ECE /* MyCropsParentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */; };
@@ -420,6 +428,10 @@
 		2101D91925F357D900FB0DB9 /* YourProductsCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsCellTableViewCell.xib; sourceTree = "<group>"; };
 		2101D91C25F3589400FB0DB9 /* YourProductsTabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProductsTabelViewController.swift; sourceTree = "<group>"; };
 		2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProductsTabelViewController.xib; sourceTree = "<group>"; };
+		2104FBEB26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustThePeopleOnYourFarmLocalizer.swift; sourceTree = "<group>"; };
+		2104FBED26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustThePeopleOnYourFarmImage.swift; sourceTree = "<group>"; };
+		2104FBEF26225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustThePeopleOnYourFarmModuleViewController.swift; sourceTree = "<group>"; };
+		2104FBF026225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdjustThePeopleOnYourFarmModuleViewController.xib; sourceTree = "<group>"; };
 		21112D0226191F650037B8AE /* FarmPersonSelectionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmPersonSelectionImage.swift; sourceTree = "<group>"; };
 		21112D0426191F650037B8AE /* FarmPersonSelectionLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmPersonSelectionLocalizer.swift; sourceTree = "<group>"; };
 		21112D0626191F650037B8AE /* FarmPersonSelectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmPersonSelectionPresenter.swift; sourceTree = "<group>"; };
@@ -486,6 +498,24 @@
 		217D1EA32608293C0025462F /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
 		217D1EA42608293C0025462F /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsProtocols.swift; sourceTree = "<group>"; };
+		218C78352629E72B00DA440A /* AddProductImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductImage.swift; sourceTree = "<group>"; };
+		218C78372629E72B00DA440A /* AddProductLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductLocalizer.swift; sourceTree = "<group>"; };
+		218C78392629E72B00DA440A /* AddProductPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
+		218C783B2629E72B00DA440A /* AddProductUIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductUIModel.swift; sourceTree = "<group>"; };
+		218C783C2629E72B00DA440A /* AddProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductModel.swift; sourceTree = "<group>"; };
+		218C78412629E72B00DA440A /* AddProductPriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductPriceTableViewCell.xib; sourceTree = "<group>"; };
+		218C78422629E72B00DA440A /* AddProductPriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductPriceTableViewCell.swift; sourceTree = "<group>"; };
+		218C78442629E72B00DA440A /* AddProductDescribationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductDescribationTableViewCell.swift; sourceTree = "<group>"; };
+		218C78452629E72B00DA440A /* AddProductDescribationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductDescribationTableViewCell.xib; sourceTree = "<group>"; };
+		218C78472629E72B00DA440A /* AddProductSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		218C78482629E72B00DA440A /* AddProductSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		218C784A2629E72B00DA440A /* AddImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageTableViewCell.xib; sourceTree = "<group>"; };
+		218C784B2629E72B00DA440A /* AddImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageTableViewCell.swift; sourceTree = "<group>"; };
+		218C784D2629E72B00DA440A /* AddProductTextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductTextViewTableViewCell.swift; sourceTree = "<group>"; };
+		218C784E2629E72B00DA440A /* AddProductTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductTextViewTableViewCell.xib; sourceTree = "<group>"; };
+		218C78512629E72B00DA440A /* AddProdeuctSuperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProdeuctSuperViewController.xib; sourceTree = "<group>"; };
+		218C78522629E72B00DA440A /* AddProdeuctSuperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProdeuctSuperViewController.swift; sourceTree = "<group>"; };
+		218C78542629E72B00DA440A /* AddProductProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductProtocols.swift; sourceTree = "<group>"; };
 		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
 		21A706F0260DECD50094EC56 /* SuggestionsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsImages.swift; sourceTree = "<group>"; };
 		21A706F2260DECD50094EC56 /* SuggestionsLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsLocalizer.swift; sourceTree = "<group>"; };
@@ -498,22 +528,6 @@
 		21A706FE260DECD50094EC56 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
 		21A70700260DECD50094EC56 /* SuggestionsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsProtocols.swift; sourceTree = "<group>"; };
 		21CE318825F597D30015467B /* MyPostsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsPresenter.swift; sourceTree = "<group>"; };
-		21E9CC77261E871E009E930A /* AddProductImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductImage.swift; sourceTree = "<group>"; };
-		21E9CC79261E871E009E930A /* AddProductLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductLocalizer.swift; sourceTree = "<group>"; };
-		21E9CC7B261E871E009E930A /* AddProductPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
-		21E9CC7D261E871E009E930A /* AddProductUIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductUIModel.swift; sourceTree = "<group>"; };
-		21E9CC7E261E871E009E930A /* AddProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductModel.swift; sourceTree = "<group>"; };
-		21E9CC83261E871E009E930A /* AddProductDescribationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductDescribationTableViewCell.swift; sourceTree = "<group>"; };
-		21E9CC84261E871E009E930A /* AddProductDescribationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductDescribationTableViewCell.xib; sourceTree = "<group>"; };
-		21E9CC86261E871E009E930A /* AddProductSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductSelectionTableViewCell.swift; sourceTree = "<group>"; };
-		21E9CC87261E871E009E930A /* AddProductSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductSelectionTableViewCell.xib; sourceTree = "<group>"; };
-		21E9CC89261E871E009E930A /* AddImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageTableViewCell.xib; sourceTree = "<group>"; };
-		21E9CC8A261E871E009E930A /* AddImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageTableViewCell.swift; sourceTree = "<group>"; };
-		21E9CC8C261E871E009E930A /* AddProductTextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductTextViewTableViewCell.swift; sourceTree = "<group>"; };
-		21E9CC8D261E871E009E930A /* AddProductTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductTextViewTableViewCell.xib; sourceTree = "<group>"; };
-		21E9CC90261E871E009E930A /* AddProdeuctSuperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProdeuctSuperViewController.xib; sourceTree = "<group>"; };
-		21E9CC91261E871E009E930A /* AddProdeuctSuperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProdeuctSuperViewController.swift; sourceTree = "<group>"; };
-		21E9CC93261E871E009E930A /* AddProductProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductProtocols.swift; sourceTree = "<group>"; };
 		5001432325F99A9300D1630E /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
 		5001432425F99A9300D1630E /* MyTasksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksViewController.xib; sourceTree = "<group>"; };
 		5001432925F99AD500D1630E /* MyTasksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksPresenter.swift; sourceTree = "<group>"; };
@@ -672,6 +686,8 @@
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = LadyBug/Modules/AddTask/View/AddTaskViewController.swift; sourceTree = SOURCE_ROOT; };
 		508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddTaskViewController.xib; path = LadyBug/Modules/AddTask/View/AddTaskViewController.xib; sourceTree = SOURCE_ROOT; };
+		508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPoint.swift; sourceTree = "<group>"; };
+		508D16F22629161D004ED2D4 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCell.swift; sourceTree = "<group>"; };
 		508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsParentCell.xib; sourceTree = "<group>"; };
 		508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCellView.swift; sourceTree = "<group>"; };
@@ -1001,6 +1017,33 @@
 				2101D91D25F3589400FB0DB9 /* YourProductsTabelViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */ = {
+			isa = PBXGroup;
+			children = (
+				2104FBE8262258E30014E584 /* AdjustThePeopleOnYourFarmLocalizer */,
+				2104FBE9262259980014E584 /* AdjustThePeopleOnYourFarmModuleViewController */,
+			);
+			path = "AdjustThePeopleOnYourFarm Module";
+			sourceTree = "<group>";
+		};
+		2104FBE8262258E30014E584 /* AdjustThePeopleOnYourFarmLocalizer */ = {
+			isa = PBXGroup;
+			children = (
+				2104FBEB26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift */,
+				2104FBED26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift */,
+			);
+			path = AdjustThePeopleOnYourFarmLocalizer;
+			sourceTree = "<group>";
+		};
+		2104FBE9262259980014E584 /* AdjustThePeopleOnYourFarmModuleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2104FBEF26225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift */,
+				2104FBF026225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib */,
+			);
+			path = AdjustThePeopleOnYourFarmModuleViewController;
 			sourceTree = "<group>";
 		};
 		21112CFF26191F650037B8AE /* FarmPersonSelectionModule */ = {
@@ -1508,6 +1551,7 @@
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
+				508D16ED26291595004ED2D4 /* Endpoint */,
 				2166B88F25E081BC008FE0A0 /* Protocols */,
 				2166B88425E081BC008FE0A0 /* Resources */,
 				2166B88925E081BC008FE0A0 /* Presenter */,
@@ -1750,6 +1794,159 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		218C78322629E72B00DA440A /* AddProduct Module */ = {
+			isa = PBXGroup;
+			children = (
+				218C78332629E72B00DA440A /* Resources */,
+				218C78382629E72B00DA440A /* Presenter */,
+				218C783A2629E72B00DA440A /* Models */,
+				218C783D2629E72B00DA440A /* View */,
+				218C78532629E72B00DA440A /* Protocols */,
+			);
+			path = "AddProduct Module";
+			sourceTree = "<group>";
+		};
+		218C78332629E72B00DA440A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				218C78342629E72B00DA440A /* Images */,
+				218C78362629E72B00DA440A /* Localizer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		218C78342629E72B00DA440A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				218C78352629E72B00DA440A /* AddProductImage.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		218C78362629E72B00DA440A /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				218C78372629E72B00DA440A /* AddProductLocalizer.swift */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
+		218C78382629E72B00DA440A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				218C78392629E72B00DA440A /* AddProductPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		218C783A2629E72B00DA440A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				218C783B2629E72B00DA440A /* AddProductUIModel.swift */,
+				218C783C2629E72B00DA440A /* AddProductModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		218C783D2629E72B00DA440A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				218C783E2629E72B00DA440A /* SubViews */,
+				218C784F2629E72B00DA440A /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		218C783E2629E72B00DA440A /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				218C783F2629E72B00DA440A /* Cell */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		218C783F2629E72B00DA440A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				218C78402629E72B00DA440A /* AddProductPriceViewCell  */,
+				218C78432629E72B00DA440A /* AddProductDescribationViewCell */,
+				218C78462629E72B00DA440A /* AddProductSelectionViewCell */,
+				218C78492629E72B00DA440A /* Add Image */,
+				218C784C2629E72B00DA440A /* AddProductTextViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		218C78402629E72B00DA440A /* AddProductPriceViewCell  */ = {
+			isa = PBXGroup;
+			children = (
+				218C78412629E72B00DA440A /* AddProductPriceTableViewCell.xib */,
+				218C78422629E72B00DA440A /* AddProductPriceTableViewCell.swift */,
+			);
+			path = "AddProductPriceViewCell ";
+			sourceTree = "<group>";
+		};
+		218C78432629E72B00DA440A /* AddProductDescribationViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				218C78442629E72B00DA440A /* AddProductDescribationTableViewCell.swift */,
+				218C78452629E72B00DA440A /* AddProductDescribationTableViewCell.xib */,
+			);
+			path = AddProductDescribationViewCell;
+			sourceTree = "<group>";
+		};
+		218C78462629E72B00DA440A /* AddProductSelectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				218C78472629E72B00DA440A /* AddProductSelectionTableViewCell.swift */,
+				218C78482629E72B00DA440A /* AddProductSelectionTableViewCell.xib */,
+			);
+			path = AddProductSelectionViewCell;
+			sourceTree = "<group>";
+		};
+		218C78492629E72B00DA440A /* Add Image */ = {
+			isa = PBXGroup;
+			children = (
+				218C784A2629E72B00DA440A /* AddImageTableViewCell.xib */,
+				218C784B2629E72B00DA440A /* AddImageTableViewCell.swift */,
+			);
+			path = "Add Image";
+			sourceTree = "<group>";
+		};
+		218C784C2629E72B00DA440A /* AddProductTextViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				218C784D2629E72B00DA440A /* AddProductTextViewTableViewCell.swift */,
+				218C784E2629E72B00DA440A /* AddProductTextViewTableViewCell.xib */,
+			);
+			path = AddProductTextViewCell;
+			sourceTree = "<group>";
+		};
+		218C784F2629E72B00DA440A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				218C78502629E72B00DA440A /* SuperView */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		218C78502629E72B00DA440A /* SuperView */ = {
+			isa = PBXGroup;
+			children = (
+				218C78512629E72B00DA440A /* AddProdeuctSuperViewController.xib */,
+				218C78522629E72B00DA440A /* AddProdeuctSuperViewController.swift */,
+			);
+			path = SuperView;
+			sourceTree = "<group>";
+		};
+		218C78532629E72B00DA440A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				218C78542629E72B00DA440A /* AddProductProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		21A5A12E25DB2C54001A2F64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1851,149 +2048,6 @@
 			isa = PBXGroup;
 			children = (
 				21A70700260DECD50094EC56 /* SuggestionsProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		21E9CC74261E871E009E930A /* AddProduct Module */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC75261E871E009E930A /* Resources */,
-				21E9CC7A261E871E009E930A /* Presenter */,
-				21E9CC7C261E871E009E930A /* Models */,
-				21E9CC7F261E871E009E930A /* View */,
-				21E9CC92261E871E009E930A /* Protocols */,
-			);
-			path = "AddProduct Module";
-			sourceTree = "<group>";
-		};
-		21E9CC75261E871E009E930A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC76261E871E009E930A /* Images */,
-				21E9CC78261E871E009E930A /* Localizer */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		21E9CC76261E871E009E930A /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC77261E871E009E930A /* AddProductImage.swift */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		21E9CC78261E871E009E930A /* Localizer */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC79261E871E009E930A /* AddProductLocalizer.swift */,
-			);
-			path = Localizer;
-			sourceTree = "<group>";
-		};
-		21E9CC7A261E871E009E930A /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC7B261E871E009E930A /* AddProductPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		21E9CC7C261E871E009E930A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC7D261E871E009E930A /* AddProductUIModel.swift */,
-				21E9CC7E261E871E009E930A /* AddProductModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		21E9CC7F261E871E009E930A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC80261E871E009E930A /* SubViews */,
-				21E9CC8E261E871E009E930A /* ViewController */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		21E9CC80261E871E009E930A /* SubViews */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC81261E871E009E930A /* Cell */,
-			);
-			path = SubViews;
-			sourceTree = "<group>";
-		};
-		21E9CC81261E871E009E930A /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC82261E871E009E930A /* AddProductDescribationViewCell */,
-				21E9CC85261E871E009E930A /* AddProductSelectionViewCell */,
-				21E9CC88261E871E009E930A /* Add Image */,
-				21E9CC8B261E871E009E930A /* AddProductTextViewCell */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		21E9CC82261E871E009E930A /* AddProductDescribationViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC83261E871E009E930A /* AddProductDescribationTableViewCell.swift */,
-				21E9CC84261E871E009E930A /* AddProductDescribationTableViewCell.xib */,
-			);
-			path = AddProductDescribationViewCell;
-			sourceTree = "<group>";
-		};
-		21E9CC85261E871E009E930A /* AddProductSelectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC86261E871E009E930A /* AddProductSelectionTableViewCell.swift */,
-				21E9CC87261E871E009E930A /* AddProductSelectionTableViewCell.xib */,
-			);
-			path = AddProductSelectionViewCell;
-			sourceTree = "<group>";
-		};
-		21E9CC88261E871E009E930A /* Add Image */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC89261E871E009E930A /* AddImageTableViewCell.xib */,
-				21E9CC8A261E871E009E930A /* AddImageTableViewCell.swift */,
-			);
-			path = "Add Image";
-			sourceTree = "<group>";
-		};
-		21E9CC8B261E871E009E930A /* AddProductTextViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC8C261E871E009E930A /* AddProductTextViewTableViewCell.swift */,
-				21E9CC8D261E871E009E930A /* AddProductTextViewTableViewCell.xib */,
-			);
-			path = AddProductTextViewCell;
-			sourceTree = "<group>";
-		};
-		21E9CC8E261E871E009E930A /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC8F261E871E009E930A /* SuperView */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		21E9CC8F261E871E009E930A /* SuperView */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC90261E871E009E930A /* AddProdeuctSuperViewController.xib */,
-				21E9CC91261E871E009E930A /* AddProdeuctSuperViewController.swift */,
-			);
-			path = SuperView;
-			sourceTree = "<group>";
-		};
-		21E9CC92261E871E009E930A /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				21E9CC93261E871E009E930A /* AddProductProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -3174,6 +3228,33 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		508D16EC26291548004ED2D4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				216647F725FEA7E40028E335 /* CreateNewPassword */,
+				2166B89725E081C8008FE0A0 /* Registration Module */,
+				2166B88325E081BC008FE0A0 /* Login Module */,
+				5099490925E4642D0085CFBF /* ForgotPassword */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		508D16ED26291595004ED2D4 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		508D16F126291605004ED2D4 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				508D16F22629161D004ED2D4 /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		508FDACF25F046F600686ECE /* MyCropsParentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4041,24 +4122,23 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				21E9CC74261E871E009E930A /* AddProduct Module */,
+				508D16EC26291548004ED2D4 /* Auth */,
+				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
+				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
 				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
 				50206EC8260E9C900095E995 /* Archive */,
 				50206EBD260E6BEA0095E995 /* AddTask */,
 				21A706ED260DECD50094EC56 /* Suggestions Module */,
-				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				509643A725E2EF3E0000FB60 /* AddPost Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 				50AF3EC2260AD16A00CBCD0C /* CreateFarm */,
-				216647F725FEA7E40028E335 /* CreateNewPassword */,
 				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
 				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
+				218C78322629E72B00DA440A /* AddProduct Module */,
 				213751E725F4309600E342EF /* FollowersModule */,
-				5099490925E4642D0085CFBF /* ForgotPassword */,
 				2121AC0C26052026001A2EDD /* Help */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
-				2166B88325E081BC008FE0A0 /* Login Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
@@ -4070,7 +4150,6 @@
 				217D1E8E2608293C0025462F /* Product Details */,
 				503CB59B25E07AD100B7A393 /* Products */,
 				50BC86FC260543520065D8FE /* Profile Module */,
-				2166B89725E081C8008FE0A0 /* Registration Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
 				503CB5BF25E0A11200B7A393 /* Videos Module */,
 				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
@@ -4142,6 +4221,7 @@
 		50E3015725D8A31D008271B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				508D16F126291605004ED2D4 /* Environment */,
 				50BC86D3260534890065D8FE /* UIViewControllers */,
 				50FA849925DC60D1008A9216 /* UIViews */,
 				50A77D4325D9F2890054E80D /* Extensions */,
@@ -4330,8 +4410,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21E9CC9C261E871F009E930A /* AddProductSelectionTableViewCell.xib in Resources */,
 				21A70706260DECD60094EC56 /* SuggestionsTableViewCell.xib in Resources */,
+				218C78632629E72C00DA440A /* AddProductTextViewTableViewCell.xib in Resources */,
 				503DFC6C25DB385D0093CAF2 /* HomePostsCell.xib in Resources */,
 				509C1488260D4DD1004CECA2 /* AddPostTextViewCell.xib in Resources */,
 				5001434D25F9A84500D1630E /* MyTasksCell.xib in Resources */,
@@ -4347,7 +4427,6 @@
 				503DFC5925DB1F990093CAF2 /* HomeHeaderViewCell.xib in Resources */,
 				5062E7CE25FB2AB4000398AA /* CropsInfoCell.xib in Resources */,
 				50A77D3A25D9EEE10054E80D /* TSRotger-Regular.ttf in Resources */,
-				21E9CC9D261E871F009E930A /* AddImageTableViewCell.xib in Resources */,
 				504969B725F81E23002C3E40 /* MyFarmDetailsView.xib in Resources */,
 				506E4D0B25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib in Resources */,
 				50D083F1260C0BCD00518ED5 /* FarmTypeCell.xib in Resources */,
@@ -4355,10 +4434,11 @@
 				5001434725F9A75400D1630E /* MyTasksSectionHeaderView.xib in Resources */,
 				50E01ED825E5C9A30016DEAB /* MyCropsHeaderView.xib in Resources */,
 				50A77D3225D9EA550054E80D /* TabBarViewController.xib in Resources */,
+				2104FBF226225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib in Resources */,
 				50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */,
+				218C78642629E72C00DA440A /* AddProdeuctSuperViewController.xib in Resources */,
 				509643AD25E2EF860000FB60 /* AddPostViewController.xib in Resources */,
 				50D083EA260C063200518ED5 /* FarmTypeView.xib in Resources */,
-				21E9CC9A261E871F009E930A /* AddProductDescribationTableViewCell.xib in Resources */,
 				504969BC25F81E23002C3E40 /* MyFarmServiceTableCell.xib in Resources */,
 				503DFC6525DB34840093CAF2 /* HomeHeaderViewEditCell.xib in Resources */,
 				509C147C260D3597004CECA2 /* FarmActivityView.xib in Resources */,
@@ -4370,6 +4450,7 @@
 				2101D91B25F357D900FB0DB9 /* YourProductsCellTableViewCell.xib in Resources */,
 				2166B8A625E081C8008FE0A0 /* RegistrationViewController.xib in Resources */,
 				2166B89425E081BC008FE0A0 /* LoginViewController.xib in Resources */,
+				218C78602629E72C00DA440A /* AddImageTableViewCell.xib in Resources */,
 				506A5A2925E5671A0014D59A /* MoreMenuNotificationsCell.xib in Resources */,
 				5099491B25E4642D0085CFBF /* ForgotPasswordViewController.xib in Resources */,
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
@@ -4392,6 +4473,7 @@
 				509643C925E2F1C40000FB60 /* AddPostCell.xib in Resources */,
 				2121AC2026052027001A2EDD /* HelpViewController.xib in Resources */,
 				508FDADB25F049B500686ECE /* MyCropsParentCellView.xib in Resources */,
+				218C785D2629E72C00DA440A /* AddProductDescribationTableViewCell.xib in Resources */,
 				506E4D0525EDA9CF003BD749 /* MyCropsHeaderViewCropCell.xib in Resources */,
 				50068C7425E48A650097A870 /* MoreMenuViewController.xib in Resources */,
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
@@ -4402,7 +4484,6 @@
 				504969DA25F81E52002C3E40 /* StandardSelectionView.xib in Resources */,
 				504969E025F81F4B002C3E40 /* StandardTextFieldView.xib in Resources */,
 				2137520325F436CD00E342EF /* FollowersViewController.xib in Resources */,
-				21E9CCA1261E871F009E930A /* AddProdeuctSuperViewController.xib in Resources */,
 				506E4D2125EDC95F003BD749 /* MyCropsStretchedParentCellView.xib in Resources */,
 				21767A3725F592810039E2B8 /* MyPostsCell.xib in Resources */,
 				50A54C1425E3FF5C0052F701 /* InterestedSelectionCell.xib in Resources */,
@@ -4419,6 +4500,7 @@
 				50AF3EAD260AC64C00CBCD0C /* PostDetailsCell.xib in Resources */,
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
 				506E4D2D25EDCC25003BD749 /* MyCropsStretchedCell.xib in Resources */,
+				218C785A2629E72C00DA440A /* AddProductPriceTableViewCell.xib in Resources */,
 				5097F4FE25FBAC49000E14C4 /* CropsInfoHeaderView.xib in Resources */,
 				2101D8FE25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */,
 				5001434025F9A43600D1630E /* MyTasksHeaderView.xib in Resources */,
@@ -4426,7 +4508,6 @@
 				506E4D3425EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.xib in Resources */,
 				506A5A2B25E5671A0014D59A /* MoreMenuTaskesCell.xib in Resources */,
 				5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */,
-				21E9CCA0261E871F009E930A /* AddProductTextViewTableViewCell.xib in Resources */,
 				50FA843325DC49DA008A9216 /* FarmCell.xib in Resources */,
 				50D4ACC725FBF8C900880E55 /* MapPinView.xib in Resources */,
 				5097F50425FBAE47000E14C4 /* CropsInfoHeaderViewCell.xib in Resources */,
@@ -4436,6 +4517,7 @@
 				504969C425F81E23002C3E40 /* MyFarmDetailsPeopleCell.xib in Resources */,
 				217D1EAD2608293C0025462F /* ProductDetailsTableViewCell.xib in Resources */,
 				50A54C1A25E400950052F701 /* InterestedSelectionHeaderView.xib in Resources */,
+				218C785F2629E72C00DA440A /* AddProductSelectionTableViewCell.xib in Resources */,
 				50BC86DC260534890065D8FE /* StandardAlertViewController.xib in Resources */,
 				504969B425F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib in Resources */,
 				50212E08260BC84600589DAE /* CustomSelectionView.xib in Resources */,
@@ -4520,6 +4602,7 @@
 			files = (
 				50AF3EC7260AD19A00CBCD0C /* CreateFarmViewController.swift in Sources */,
 				50D083F0260C0BCD00518ED5 /* FarmTypeCell.swift in Sources */,
+				218C78572629E72C00DA440A /* AddProductPresenter.swift in Sources */,
 				2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */,
 				5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */,
 				213751F625F4344600E342EF /* FollowersLocalizer.swift in Sources */,
@@ -4551,6 +4634,7 @@
 				502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
 				2166B8A525E081C8008FE0A0 /* Registration Presenter.swift in Sources */,
+				218C785B2629E72C00DA440A /* AddProductPriceTableViewCell.swift in Sources */,
 				50AF3ECD260AD27700CBCD0C /* CreateFramPresenter.swift in Sources */,
 				50AF3EA0260ABF1300CBCD0C /* PostDetailsLocalizer.swift in Sources */,
 				506E4D1225EDC3B9003BD749 /* MyCropsTableViewHeaderView.swift in Sources */,
@@ -4588,9 +4672,9 @@
 				2121AC2126052027001A2EDD /* HelpProtocols.swift in Sources */,
 				50E01ED725E5C9A30016DEAB /* MyCropsHeaderView.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
+				2104FBF126225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift in Sources */,
 				2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */,
 				509C1487260D4DD1004CECA2 /* AddPostTextViewCell.swift in Sources */,
-				21E9CC94261E871F009E930A /* AddProductImage.swift in Sources */,
 				216647F525FE88920028E335 /* ImageLocalizer.swift in Sources */,
 				217D1EA92608293C0025462F /* ProductDetailsPresenter .swift in Sources */,
 				217D1EB22608293C0025462F /* ProductDetailsProtocols.swift in Sources */,
@@ -4599,6 +4683,7 @@
 				50A54C1325E3FF5C0052F701 /* InterestedSelectionCell.swift in Sources */,
 				504969B925F81E23002C3E40 /* MyFarmDetailsCell.swift in Sources */,
 				5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */,
+				218C78562629E72C00DA440A /* AddProductLocalizer.swift in Sources */,
 				50A54C1925E400950052F701 /* InterestedSelectionHeaderView.swift in Sources */,
 				50BC0A7B25E5C0D2006653FD /* MyCropsImages.swift in Sources */,
 				506E4D1925EDC8E2003BD749 /* MyCropsStretchedParentCell.swift in Sources */,
@@ -4646,10 +4731,12 @@
 				50BC8710260543ED0065D8FE /* ProfileImages.swift in Sources */,
 				5062E7C425FB26FB000398AA /* CropsInfoProtocol.swift in Sources */,
 				5001433F25F9A43600D1630E /* MyTasksHeaderView.swift in Sources */,
+				218C78582629E72C00DA440A /* AddProductUIModel.swift in Sources */,
 				217D1EAB2608293C0025462F /* UIModel.swift in Sources */,
 				2101D91025F2FB0200FB0DB9 /* YourProductsProtocols.swift in Sources */,
 				504969B525F81E23002C3E40 /* MyFarmDetailsPostsCell.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
+				218C78652629E72C00DA440A /* AddProdeuctSuperViewController.swift in Sources */,
 				508FDAE025F04A1800686ECE /* MyCropsCell.swift in Sources */,
 				5001434C25F9A84500D1630E /* MyTasksCell.swift in Sources */,
 				504969AF25F81E23002C3E40 /* MyFarmDetailsNameCell.swift in Sources */,
@@ -4657,7 +4744,6 @@
 				5062E7BC25FB26A5000398AA /* CropsInfoLocalizer.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
 				503CB5BA25E07DD900B7A393 /* ProductCell.swift in Sources */,
-				21E9CC97261E871F009E930A /* AddProductUIModel.swift in Sources */,
 				508FDADA25F049B500686ECE /* MyCropsParentCellView.swift in Sources */,
 				504969BA25F81E23002C3E40 /* MyFarmDetailsServiceTableCell.swift in Sources */,
 				509643DD25E303180000FB60 /* ToolbarPickerView.swift in Sources */,
@@ -4671,6 +4757,7 @@
 				50D083E9260C063200518ED5 /* FarmTypeView.swift in Sources */,
 				21112D1926191F650037B8AE /* FarmPersonSelectionProtocols.swift in Sources */,
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
+				218C78592629E72C00DA440A /* AddProductModel.swift in Sources */,
 				5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */,
 				504FCF7A260D5E9D000FFD0A /* AddPostImageCell.swift in Sources */,
 				5054F0A0260D5B4D00675FE7 /* AddPostImageViewCell.swift in Sources */,
@@ -4695,7 +4782,6 @@
 				5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */,
 				21112D1726191F650037B8AE /* FarmPersonSelectionViewController.swift in Sources */,
 				503CB5DA25E0A1C400B7A393 /* VideosLocalizer.swift in Sources */,
-				21E9CC9F261E871F009E930A /* AddProductTextViewTableViewCell.swift in Sources */,
 				21A70701260DECD60094EC56 /* SuggestionsImages.swift in Sources */,
 				21112D1426191F650037B8AE /* FarmPersonSelectionPresenter.swift in Sources */,
 				2121AC1F26052027001A2EDD /* HelpViewController.swift in Sources */,
@@ -4704,19 +4790,21 @@
 				50212E0E260BD45E00589DAE /* DateSelectionView.swift in Sources */,
 				50BC86DD260534890065D8FE /* StandardAlertViewController.swift in Sources */,
 				5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */,
+				218C78612629E72C00DA440A /* AddImageTableViewCell.swift in Sources */,
 				50068C6E25E48A650097A870 /* MoreMenuLocalizer.swift in Sources */,
 				509643BA25E2F1260000FB60 /* AddPostImages.swift in Sources */,
+				218C78622629E72C00DA440A /* AddProductTextViewTableViewCell.swift in Sources */,
 				50BC8706260543970065D8FE /* ProfilePresenter.swift in Sources */,
 				2166B8A425E081C8008FE0A0 /* RegistrationLocalizer.swift in Sources */,
 				501F740D25DAB59200333F16 /* UIViewController+Alert.swift in Sources */,
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				217D1EAA2608293C0025462F /* ProductDetailsModel.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
+				508D16EF262915AD004ED2D4 /* LoginEndPoint.swift in Sources */,
 				509643B125E2F0710000FB60 /* AddPostPresenter.swift in Sources */,
 				50BC8714260543F90065D8FE /* ProfileLocalizer.swift in Sources */,
 				216647FE25FEAE590028E335 /* Localizer.swift in Sources */,
 				509C1481260D4685004CECA2 /* StandardTextView.swift in Sources */,
-				21E9CC9E261E871F009E930A /* AddImageTableViewCell.swift in Sources */,
 				50FA84A225DC6325008A9216 /* FarmDetailsView.swift in Sources */,
 				5099491925E4642D0085CFBF /* ForgotPresenter.swift in Sources */,
 				509643BE25E2F1420000FB60 /* AddPostLocalizer.swift in Sources */,
@@ -4731,21 +4819,19 @@
 				213751DF25F4003A00E342EF /* CropsInfoDetailsModels.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
 				21A70702260DECD60094EC56 /* SuggestionsLocalizer.swift in Sources */,
-				21E9CC9B261E871F009E930A /* AddProductSelectionTableViewCell.swift in Sources */,
 				50D4ACC825FBF8C900880E55 /* MapPinView.swift in Sources */,
-				21E9CC99261E871F009E930A /* AddProductDescribationTableViewCell.swift in Sources */,
 				213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */,
 				50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */,
+				218C78662629E72C00DA440A /* AddProductProtocols.swift in Sources */,
 				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
 				50AF3E9D260ABF0200CBCD0C /* PostDetailsImages.swift in Sources */,
-				21E9CCA2261E871F009E930A /* AddProdeuctSuperViewController.swift in Sources */,
 				504969B225F81E23002C3E40 /* MyFarmDetailsPostsChildCell.swift in Sources */,
 				5099491C25E4642D0085CFBF /* ForgotProtocols.swift in Sources */,
 				508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */,
 				50068C7625E48A650097A870 /* MoreMenuProtocols.swift in Sources */,
 				50E6652225E40CDE00D48EA8 /* InterestedSelectionPresenter.swift in Sources */,
+				218C785E2629E72C00DA440A /* AddProductSelectionTableViewCell.swift in Sources */,
 				50F0F35C25DA04F400F0517E /* UIFont.swift in Sources */,
-				21E9CC95261E871F009E930A /* AddProductLocalizer.swift in Sources */,
 				2166B89325E081BC008FE0A0 /* LoginPresenter.swift in Sources */,
 				21112D1326191F650037B8AE /* FarmPersonSelectionLocalizer.swift in Sources */,
 				50212E16260BF97B00589DAE /* ChemicalSourceView.swift in Sources */,
@@ -4753,22 +4839,23 @@
 				50AF3E8E260ABEBF00CBCD0C /* PostDetailsViewController.swift in Sources */,
 				504969CA25F81E23002C3E40 /* MyFarmDetailsUIModel.swift in Sources */,
 				2166480125FEAF3B0028E335 /* Protocols.swift in Sources */,
+				508D16F32629161D004ED2D4 /* Environment.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
 				5054F09A260D59CA00675FE7 /* AddPostImageView.swift in Sources */,
 				504969C225F81E23002C3E40 /* MyFarmDetailsSuitabilityCell.swift in Sources */,
 				50AF3E94260ABED900CBCD0C /* PostDetailsPresenter.swift in Sources */,
-				21E9CC96261E871F009E930A /* AddProductPresenter.swift in Sources */,
 				2101D91E25F3589400FB0DB9 /* YourProductsTabelViewController.swift in Sources */,
 				508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */,
-				21E9CCA3261E871F009E930A /* AddProductProtocols.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
 				213751FE25F436A300E342EF /* FollowersTableViewCell.swift in Sources */,
+				2104FBEE26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift in Sources */,
 				2101D8FB25F2E46D00FB0DB9 /* NotificationPresenter.swift in Sources */,
 				21112D1226191F650037B8AE /* FarmPersonSelectionImage.swift in Sources */,
 				503CB5C425E0A15F00B7A393 /* VideosViewController.swift in Sources */,
 				2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */,
+				218C78552629E72C00DA440A /* AddProductImage.swift in Sources */,
 				5099491825E4642D0085CFBF /* ForgotLocalizer.swift in Sources */,
 				50FA84A925DC6414008A9216 /* FarmDetailsCell.swift in Sources */,
 				50D6136825DC195100228385 /* CommonLocalizer.swift in Sources */,
@@ -4779,12 +4866,13 @@
 				2137520225F436CD00E342EF /* FollowersViewController.swift in Sources */,
 				506A5A2A25E5671A0014D59A /* MoreMenuNotificationsCell.swift in Sources */,
 				5090FBF125E44D39008D5B06 /* InterestedSelectionImages.swift in Sources */,
-				21E9CC98261E871F009E930A /* AddProductModel.swift in Sources */,
 				2101D91425F3571E00FB0DB9 /* YourProductsModel.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,
 				21767A3A25F592D00039E2B8 /* MyPostsViewController.swift in Sources */,
+				218C785C2629E72C00DA440A /* AddProductDescribationTableViewCell.swift in Sources */,
 				5001433825F99B3D00D1630E /* MyTasksLocalizer.swift in Sources */,
 				213751D925F3FD9500E342EF /* CropsInfoDetailsImages.swift in Sources */,
+				2104FBEC26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift in Sources */,
 				50D4ACC225FBF8C900880E55 /* MapLocalizer.swift in Sources */,
 				5062E7BB25FB26A5000398AA /* CropsInfoImages.swift in Sources */,
 				50FA841F25DC4636008A9216 /* MyFarmPresenter.swift in Sources */,

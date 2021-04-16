@@ -186,6 +186,14 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
 }
 
 extension MyFarmDetailsViewController: MyFarmDetailsPeopleCellDelegate {
+    func editPeopleButtonDidTapped(_ cell: MyFarmDetailsPeopleCell) {
+        if let index = tableView.indexPath(for: cell), presnter.datasource[index.row] == .people {
+        let vc = AdjustThePeopleOnYourFarmModuleViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false, completion: nil)
+        }
+    }
+    
     func addPeopleButtonDidTapped(_ cell: MyFarmDetailsPeopleCell) {
         if let index = tableView.indexPath(for: cell), presnter.datasource[index.row] == .people {
             let vc = AddPeopleToYourFarmViewController()
