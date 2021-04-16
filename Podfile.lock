@@ -1,24 +1,38 @@
 PODS:
+  - Alamofire (4.9.1)
   - Cosmos (23.0.0)
   - GoogleMaps (4.1.0):
     - GoogleMaps/Maps (= 4.1.0)
   - GoogleMaps/Base (4.1.0)
   - GoogleMaps/Maps (4.1.0):
     - GoogleMaps/Base
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Result (4.1.0)
 
 DEPENDENCIES:
   - Cosmos (~> 23.0)
   - GoogleMaps
+  - Moya
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Cosmos
     - GoogleMaps
+    - Moya
+    - Result
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: df242c1e430fdacb1958ded464444ef442698ac4
+PODFILE CHECKSUM: f77176da1ff8aed42d086697b6e03a6b8697d065
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

@@ -263,6 +263,8 @@
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
 		508537E22617F76C00CCFEA7 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */; };
 		508537E32617F76C00CCFEA7 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */; };
+		508D16EF262915AD004ED2D4 /* LoginEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */; };
+		508D16F32629161D004ED2D4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D16F22629161D004ED2D4 /* Environment.swift */; };
 		508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */; };
 		508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */; };
 		508FDADA25F049B500686ECE /* MyCropsParentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */; };
@@ -648,6 +650,8 @@
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = LadyBug/Modules/AddTask/View/AddTaskViewController.swift; sourceTree = SOURCE_ROOT; };
 		508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddTaskViewController.xib; path = LadyBug/Modules/AddTask/View/AddTaskViewController.xib; sourceTree = SOURCE_ROOT; };
+		508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPoint.swift; sourceTree = "<group>"; };
+		508D16F22629161D004ED2D4 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCell.swift; sourceTree = "<group>"; };
 		508FDAD125F0471B00686ECE /* MyCropsParentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsParentCell.xib; sourceTree = "<group>"; };
 		508FDAD825F049B500686ECE /* MyCropsParentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCellView.swift; sourceTree = "<group>"; };
@@ -1511,6 +1515,7 @@
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
+				508D16ED26291595004ED2D4 /* Endpoint */,
 				2166B88F25E081BC008FE0A0 /* Protocols */,
 				2166B88425E081BC008FE0A0 /* Resources */,
 				2166B88925E081BC008FE0A0 /* Presenter */,
@@ -3034,6 +3039,33 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		508D16EC26291548004ED2D4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				216647F725FEA7E40028E335 /* CreateNewPassword */,
+				2166B89725E081C8008FE0A0 /* Registration Module */,
+				2166B88325E081BC008FE0A0 /* Login Module */,
+				5099490925E4642D0085CFBF /* ForgotPassword */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		508D16ED26291595004ED2D4 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		508D16F126291605004ED2D4 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				508D16F22629161D004ED2D4 /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		508FDACF25F046F600686ECE /* MyCropsParentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3901,6 +3933,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				508D16EC26291548004ED2D4 /* Auth */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
 				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
@@ -3910,15 +3943,12 @@
 				509643A725E2EF3E0000FB60 /* AddPost Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 				50AF3EC2260AD16A00CBCD0C /* CreateFarm */,
-				216647F725FEA7E40028E335 /* CreateNewPassword */,
 				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
 				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
 				213751E725F4309600E342EF /* FollowersModule */,
-				5099490925E4642D0085CFBF /* ForgotPassword */,
 				2121AC0C26052026001A2EDD /* Help */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
-				2166B88325E081BC008FE0A0 /* Login Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
@@ -3930,7 +3960,6 @@
 				217D1E8E2608293C0025462F /* Product Details */,
 				503CB59B25E07AD100B7A393 /* Products */,
 				50BC86FC260543520065D8FE /* Profile Module */,
-				2166B89725E081C8008FE0A0 /* Registration Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
 				503CB5BF25E0A11200B7A393 /* Videos Module */,
 				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
@@ -4002,6 +4031,7 @@
 		50E3015725D8A31D008271B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				508D16F126291605004ED2D4 /* Environment */,
 				50BC86D3260534890065D8FE /* UIViewControllers */,
 				50FA849925DC60D1008A9216 /* UIViews */,
 				50A77D4325D9F2890054E80D /* Extensions */,
@@ -4566,6 +4596,7 @@
 				503F7A1825DAA69F00EBD730 /* HomeViewController.swift in Sources */,
 				217D1EAA2608293C0025462F /* ProductDetailsModel.swift in Sources */,
 				50FA843225DC49DA008A9216 /* FarmCell.swift in Sources */,
+				508D16EF262915AD004ED2D4 /* LoginEndPoint.swift in Sources */,
 				509643B125E2F0710000FB60 /* AddPostPresenter.swift in Sources */,
 				50BC8714260543F90065D8FE /* ProfileLocalizer.swift in Sources */,
 				216647FE25FEAE590028E335 /* Localizer.swift in Sources */,
@@ -4602,6 +4633,7 @@
 				50AF3E8E260ABEBF00CBCD0C /* PostDetailsViewController.swift in Sources */,
 				504969CA25F81E23002C3E40 /* MyFarmDetailsUIModel.swift in Sources */,
 				2166480125FEAF3B0028E335 /* Protocols.swift in Sources */,
+				508D16F32629161D004ED2D4 /* Environment.swift in Sources */,
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
