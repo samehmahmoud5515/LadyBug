@@ -113,6 +113,7 @@
 		218C78642629E72C00DA440A /* AddProdeuctSuperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218C78512629E72B00DA440A /* AddProdeuctSuperViewController.xib */; };
 		218C78652629E72C00DA440A /* AddProdeuctSuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78522629E72B00DA440A /* AddProdeuctSuperViewController.swift */; };
 		218C78662629E72C00DA440A /* AddProductProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78542629E72B00DA440A /* AddProductProtocols.swift */; };
+		218C7869262B543E00DA440A /* RegistrationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C7868262B543E00DA440A /* RegistrationEndpoint.swift */; };
 		21A5A13525DB2D8A001A2F64 /* MyFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */; };
 		21A70701260DECD60094EC56 /* SuggestionsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706F0260DECD50094EC56 /* SuggestionsImages.swift */; };
 		21A70702260DECD60094EC56 /* SuggestionsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706F2260DECD50094EC56 /* SuggestionsLocalizer.swift */; };
@@ -516,6 +517,7 @@
 		218C78512629E72B00DA440A /* AddProdeuctSuperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProdeuctSuperViewController.xib; sourceTree = "<group>"; };
 		218C78522629E72B00DA440A /* AddProdeuctSuperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProdeuctSuperViewController.swift; sourceTree = "<group>"; };
 		218C78542629E72B00DA440A /* AddProductProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductProtocols.swift; sourceTree = "<group>"; };
+		218C7868262B543E00DA440A /* RegistrationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationEndpoint.swift; sourceTree = "<group>"; };
 		21A5A13425DB2D8A001A2F64 /* MyFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFarmLocalizer.swift; sourceTree = "<group>"; };
 		21A706F0260DECD50094EC56 /* SuggestionsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsImages.swift; sourceTree = "<group>"; };
 		21A706F2260DECD50094EC56 /* SuggestionsLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsLocalizer.swift; sourceTree = "<group>"; };
@@ -1621,6 +1623,7 @@
 		2166B89725E081C8008FE0A0 /* Registration Module */ = {
 			isa = PBXGroup;
 			children = (
+				218C7867262B53F600DA440A /* Endpoint */,
 				2166B89825E081C8008FE0A0 /* Resources */,
 				2166B8A225E081C8008FE0A0 /* Protocols */,
 				2166B89C25E081C8008FE0A0 /* Presenter */,
@@ -1945,6 +1948,14 @@
 				218C78542629E72B00DA440A /* AddProductProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		218C7867262B53F600DA440A /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				218C7868262B543E00DA440A /* RegistrationEndpoint.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 		21A5A12E25DB2C54001A2F64 /* Resources */ = {
@@ -4123,6 +4134,7 @@
 			isa = PBXGroup;
 			children = (
 				508D16EC26291548004ED2D4 /* Auth */,
+				50068C5725E48A650097A870 /* MoreMenu Module */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
 				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
@@ -4140,7 +4152,6 @@
 				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
-				50068C5725E48A650097A870 /* MoreMenu Module */,
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
 				50D6137025DC1CA900228385 /* MyFarm */,
 				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
@@ -4843,6 +4854,7 @@
 				501F740125DAB54300333F16 /* UIView+Shadow.swift in Sources */,
 				2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */,
 				50D6137F25DC206400228385 /* MyFarmWeatherHeaderView.swift in Sources */,
+				218C7869262B543E00DA440A /* RegistrationEndpoint.swift in Sources */,
 				5054F09A260D59CA00675FE7 /* AddPostImageView.swift in Sources */,
 				504969C225F81E23002C3E40 /* MyFarmDetailsSuitabilityCell.swift in Sources */,
 				50AF3E94260ABED900CBCD0C /* PostDetailsPresenter.swift in Sources */,

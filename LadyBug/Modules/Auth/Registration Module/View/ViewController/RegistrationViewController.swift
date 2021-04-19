@@ -116,6 +116,8 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
             retypePasswordField.removeErrorView()
         }
     }
+    
+  
 }
 extension RegistrationViewController {
     func observeOnKeyboard() {
@@ -231,7 +233,10 @@ extension RegistrationViewController{
         termsAndConditionsButton.setAttributedTitle(mutableStrings, for: .normal)
         termsAndConditionsButton.titleLabel?.textAlignment = .center
     }
-    
-    
-    
+}
+
+extension RegistrationViewController {
+    @IBAction func createAccount(_ sender: UIButton) {
+        presenter.registration(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "", photo: "")
+       }
 }

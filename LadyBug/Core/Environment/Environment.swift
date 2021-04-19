@@ -8,5 +8,5 @@
 import Foundation
 
 class Environment {
-    static let baseUrl = URL(string: "http://3.141.204.5/coreui/public/")!
+    static let baseUrl = URL(string: "http://3.141.204.5/coreui/public")!
 }
