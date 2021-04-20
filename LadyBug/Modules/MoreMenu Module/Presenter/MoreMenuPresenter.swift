@@ -5,7 +5,7 @@
 //  Created by Sameh on 2/20/21.
 //
 
-import Foundation
+import Moya
 
 class MoreMenuPresenter: MoreMenuPresenterProtocol {
     
@@ -13,7 +13,8 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     var localizer = MoreMenuLocalizer()
     var images = MoreMenuImages()
     var datasource = [MoreMenuUIModel]()
-    
+    let provider = MoyaProvider<MoreMenuEndpoint>()
+
     init(view: MoreMenuViewProtocol) {
         self.view = view
     }
@@ -93,5 +94,16 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     private func logout() {
         Defaults[.isUserLogged] = false
         view?.naviageteTo(model: MoreMenuUIModel.logOut(MoreMenuModel()))
+    }
+    func moreMenu(token: String) {
+        provider.request(.moreMenu(token: token)) { result in
+                 switch result {
+                 case let .success(moyaResponse):
+                     let data = moyaResponse.data
+                     let statusCode = moyaResponse.statusCode
+                 case let .failure(error):
+                     break
+                 }
+             }
     }
 }

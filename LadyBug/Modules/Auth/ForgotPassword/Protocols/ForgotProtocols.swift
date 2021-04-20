@@ -11,6 +11,7 @@ protocol ForgotPresenterProtocol {
     var localizer: ForgotLocalizer { get }
     var images: ForgotImages{ get }
     func attach()
+    func forgotPassword( email: String)
 }
 
 protocol ForgotViewProtocol: class {

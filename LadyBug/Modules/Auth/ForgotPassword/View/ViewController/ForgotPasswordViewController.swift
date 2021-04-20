@@ -54,10 +54,7 @@ class ForgotPasswordViewController: UIViewController, ForgotViewProtocol {
         tryAgainButton.backgroundColor = UIColor.lightBlueGrey
     }
     
-    @IBAction func tryAgainActionButton(_ sender: UIButton) {
-        let vc = CreateNewPasswordViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
+   
     
 }
 extension ForgotPasswordViewController{
@@ -154,4 +151,12 @@ extension ForgotPasswordViewController{
     @objc func didTappedBackButton() {
         navigationController?.popViewController(animated: true)
     }
+}
+extension ForgotPasswordViewController{
+    
+    @IBAction func tryAgainActionButton(_ sender: UIButton) {
+        presnter.forgotPassword(email: phoneEmailField.inputText)
+           let vc = CreateNewPasswordViewController()
+           navigationController?.pushViewController(vc, animated: true)
+       }
 }

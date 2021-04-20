@@ -53,10 +53,7 @@ class CreateNewPasswordViewController: UIViewController, CreateNewPasswordViewPr
            doneButton.isUserInteractionEnabled = false
            doneButton.backgroundColor = UIColor.lightBlueGrey
        }
-    @IBAction func doneButton(_ sender: UIButton) {
-       let vc = LoginViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
+
     func navigateToTabBarController() {
            
     }
@@ -198,4 +195,13 @@ private func passwordFieldView(){
        retypePasswordField.delegate = self
     retypePasswordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.passwordConfirmation, nextButton: false)
    }
+}
+
+extension CreateNewPasswordViewController{
+    
+    @IBAction func doneButton(_ sender: UIButton) {
+        presenter.CreateNewPassword(password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText)
+       let vc = LoginViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

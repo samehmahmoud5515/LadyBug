@@ -10,7 +10,7 @@ protocol CreateNewPasswordPresenterPrototocol {
     var localizer: CreateNewPasswordLocalizer { get }
     var image: CreateNewPasswordImages{ get }
     func attach()
-    func login(with newPassword: String, confirmNewpassword: String)
+    func CreateNewPassword( password: String, passwordConfirmation: String)
 }
 protocol CreateNewPasswordViewProtocol: class{
         func navigateToTabBarController()
