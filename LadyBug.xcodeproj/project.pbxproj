@@ -170,7 +170,12 @@
 		50212E17260BF97B00589DAE /* ChemicalSourceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50212E15260BF97B00589DAE /* ChemicalSourceView.xib */; };
 		50212E1F260BFC7200589DAE /* ChemicalSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50212E1D260BFC7200589DAE /* ChemicalSourceCell.swift */; };
 		50212E20260BFC7200589DAE /* ChemicalSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50212E1E260BFC7200589DAE /* ChemicalSourceCell.xib */; };
+		5028D07D26333A4500C7EAA9 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5028D07C26333A4500C7EAA9 /* LoginResponse.swift */; };
+		5028D08026333AB300C7EAA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5028D07F26333AB300C7EAA9 /* User.swift */; };
+		5028D08426333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5028D08326333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift */; };
 		502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */; };
+		5031C2E9263348E10027CFB4 /* CommonHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */; };
+		5031C2EF26334D6D0027CFB4 /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */; };
 		503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CB59E25E07AF700B7A393 /* ProductsViewController.swift */; };
 		503CB5A125E07AF700B7A393 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503CB59F25E07AF700B7A393 /* ProductsViewController.xib */; };
 		503CB5A625E07B8100B7A393 /* ProductsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CB5A525E07B8100B7A393 /* ProductsLocalizer.swift */; };
@@ -575,7 +580,12 @@
 		50212E15260BF97B00589DAE /* ChemicalSourceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemicalSourceView.xib; sourceTree = "<group>"; };
 		50212E1D260BFC7200589DAE /* ChemicalSourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalSourceCell.swift; sourceTree = "<group>"; };
 		50212E1E260BFC7200589DAE /* ChemicalSourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemicalSourceCell.xib; sourceTree = "<group>"; };
+		5028D07C26333A4500C7EAA9 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		5028D07F26333AB300C7EAA9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5028D08326333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizableTokenPlugin.swift; sourceTree = "<group>"; };
 		502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
+		5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeaderProtocol.swift; sourceTree = "<group>"; };
+		5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
 		503CB59E25E07AF700B7A393 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		503CB59F25E07AF700B7A393 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
 		503CB5A525E07B8100B7A393 /* ProductsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsLocalizer.swift; sourceTree = "<group>"; };
@@ -1551,6 +1561,7 @@
 		2166B88325E081BC008FE0A0 /* Login Module */ = {
 			isa = PBXGroup;
 			children = (
+				5028D07B26333A3A00C7EAA9 /* Models */,
 				508D16ED26291595004ED2D4 /* Endpoint */,
 				2166B88F25E081BC008FE0A0 /* Protocols */,
 				2166B88425E081BC008FE0A0 /* Resources */,
@@ -2424,12 +2435,38 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		5028D07B26333A3A00C7EAA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5028D07C26333A4500C7EAA9 /* LoginResponse.swift */,
+				5028D07F26333AB300C7EAA9 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5028D08226333AF300C7EAA9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5028D08326333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift */,
+				5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		502ACE8225F455B80031D3CE /* DynamicHeightTableView */ = {
 			isa = PBXGroup;
 			children = (
 				502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */,
 			);
 			path = DynamicHeightTableView;
+			sourceTree = "<group>";
+		};
+		5031C2ED26334D4C0027CFB4 /* AccessTokenManager */ = {
+			isa = PBXGroup;
+			children = (
+				5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */,
+			);
+			path = AccessTokenManager;
 			sourceTree = "<group>";
 		};
 		503CB59B25E07AD100B7A393 /* Products */ = {
@@ -4221,6 +4258,8 @@
 		50E3015725D8A31D008271B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5031C2ED26334D4C0027CFB4 /* AccessTokenManager */,
+				5028D08226333AF300C7EAA9 /* Network */,
 				508D16F126291605004ED2D4 /* Environment */,
 				50BC86D3260534890065D8FE /* UIViewControllers */,
 				50FA849925DC60D1008A9216 /* UIViews */,
@@ -4665,6 +4704,7 @@
 				5062E7BF25FB26A5000398AA /* CropsInfoViewController.swift in Sources */,
 				504969BB25F81E23002C3E40 /* MyFarmServiceTableCell.swift in Sources */,
 				50AF3EB4260AC75D00CBCD0C /* PostDetailsSectionHeaderView.swift in Sources */,
+				5028D08426333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift in Sources */,
 				509643CE25E2F6A20000FB60 /* AddPostUIModel.swift in Sources */,
 				21A70705260DECD60094EC56 /* SuggestionsModel.swift in Sources */,
 				504969CB25F81E23002C3E40 /* MyFarmDetailsProtocols.swift in Sources */,
@@ -4716,6 +4756,7 @@
 				5099491725E4642D0085CFBF /* ForgotImages.swift in Sources */,
 				50AF3ED1260AD2B100CBCD0C /* CreateFarmProtcol.swift in Sources */,
 				5090FBEC25E44CDE008D5B06 /* InterestedSelectionProtocols.swift in Sources */,
+				5031C2EF26334D6D0027CFB4 /* AccessTokenManager.swift in Sources */,
 				509643C825E2F1C40000FB60 /* AddPostCell.swift in Sources */,
 				50AF3ED8260AD2F300CBCD0C /* CreateFarmLocalizer.swift in Sources */,
 				50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */,
@@ -4758,6 +4799,7 @@
 				21112D1926191F650037B8AE /* FarmPersonSelectionProtocols.swift in Sources */,
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
 				218C78592629E72C00DA440A /* AddProductModel.swift in Sources */,
+				5031C2E9263348E10027CFB4 /* CommonHeaderProtocol.swift in Sources */,
 				5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */,
 				504FCF7A260D5E9D000FFD0A /* AddPostImageCell.swift in Sources */,
 				5054F0A0260D5B4D00675FE7 /* AddPostImageViewCell.swift in Sources */,
@@ -4816,10 +4858,12 @@
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */,
 				21A70703260DECD60094EC56 /* SuggestionsPresenter.swift in Sources */,
+				5028D07D26333A4500C7EAA9 /* LoginResponse.swift in Sources */,
 				213751DF25F4003A00E342EF /* CropsInfoDetailsModels.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
 				21A70702260DECD60094EC56 /* SuggestionsLocalizer.swift in Sources */,
 				50D4ACC825FBF8C900880E55 /* MapPinView.swift in Sources */,
+				5028D08026333AB300C7EAA9 /* User.swift in Sources */,
 				213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */,
 				50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */,
 				218C78662629E72C00DA440A /* AddProductProtocols.swift in Sources */,

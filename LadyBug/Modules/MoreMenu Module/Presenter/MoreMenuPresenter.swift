@@ -91,7 +91,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     }
     
     private func logout() {
-        Defaults[.isUserLogged] = false
+       // AccessTokenManager.removeAccessToken()
         view?.naviageteTo(model: MoreMenuUIModel.logOut(MoreMenuModel()))
     }
 }

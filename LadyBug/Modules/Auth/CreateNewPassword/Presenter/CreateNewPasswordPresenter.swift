@@ -6,25 +6,23 @@
 //
 
 import Foundation
-class CreateNewPasswordPresenter : CreateNewPasswordPresenterPrototocol{
+
+class CreateNewPasswordPresenter : CreateNewPasswordPresenterPrototocol {
     var localizer = CreateNewPasswordLocalizer()
     var image =  CreateNewPasswordImages()
     
     weak var view : CreateNewPasswordViewProtocol?
-
+    
     init(view : CreateNewPasswordViewProtocol ){
-           self.view = view
-       }
+        self.view = view
+    }
     
     func attach() {
-    }
-    func login(with newPassword: String, confirmNewpassword: String){
-        if newPassword == Defaults[.username] && Defaults[.password] == confirmNewpassword {
-        Defaults[.isUserLogged] = true
-        view?.navigateToTabBarController()
         
     }
-
-    }
     
+    func login(with newPassword: String, confirmNewpassword: String) {
+        view?.navigateToTabBarController()
+        
+    }    
 }
