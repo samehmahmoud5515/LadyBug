@@ -22,12 +22,17 @@ class LoginPresenter: LoginPresenterProtocol {
 //            Defaults[.isUserLogged] = true
 //            view?.navigateToTabBarController()
 //        }
-        
         provider.request(.login(username: username, password: password)) { result in
             switch result {
             case let .success(moyaResponse):
-                let data = moyaResponse.data
-                let statusCode = moyaResponse.statusCode
+                do {
+                    let loginResponse = try? moyaResponse.map(LoginResponse.self)
+                    print(loginResponse)
+                    guard let accessToken = loginResponse?.data?.accessToken else { return }
+                    AccessTokenManager.saveAccessToken(token: accessToken)
+                } catch {
+                    print("Parsing Error")
+                }
             case let .failure(error):
                 break
             }

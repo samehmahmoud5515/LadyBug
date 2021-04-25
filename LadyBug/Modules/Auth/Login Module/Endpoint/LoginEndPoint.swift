@@ -11,7 +11,8 @@ enum LoginEndPoint {
     case login(username: String, password: String)
 }
 
-extension LoginEndPoint: TargetType {
+extension LoginEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
+    
     var baseURL: URL {
         Environment.baseUrl
     }
@@ -40,5 +41,7 @@ extension LoginEndPoint: TargetType {
         ["Accept" : "application/json" , "x-api-key": "20LAdyx%ano@0o!#vXLZBUg65" ]
     }
     
-    
+    var authorizationType: AuthorizationType {
+        return .bearer
+    }    
 }

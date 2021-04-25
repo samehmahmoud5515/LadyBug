@@ -5,18 +5,18 @@
 //  Created by Mohamed Abdelhamed Ahmed on 3/14/21.
 //
 
-import Moya
 
-class CreateNewPasswordPresenter : CreateNewPasswordPresenterPrototocol{
+import Moya
+class CreateNewPasswordPresenter : CreateNewPasswordPresenterPrototocol {
     var localizer = CreateNewPasswordLocalizer()
     var image =  CreateNewPasswordImages()
     let provider = MoyaProvider<CreateNewPasswordEndpoint>()
 
     weak var view : CreateNewPasswordViewProtocol?
-
+    
     init(view : CreateNewPasswordViewProtocol ){
-           self.view = view
-       }
+        self.view = view
+    }
     
     func attach() {
     }
@@ -34,8 +34,11 @@ class CreateNewPasswordPresenter : CreateNewPasswordPresenterPrototocol{
                               break
                           }
                       }
-        
-
     }
     
+    func login(with newPassword: String, confirmNewpassword: String) {
+        view?.navigateToTabBarController()
+        
+    }    
+
 }
