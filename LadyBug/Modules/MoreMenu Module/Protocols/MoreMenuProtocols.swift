@@ -14,7 +14,6 @@ protocol MoreMenuPresenterProtocol {
     func handleCellDidTapped(index: Int)
     func attach()
     func moreMenu(token : String )
-    
 }
 
 protocol MoreMenuViewProtocol: class {

@@ -69,7 +69,7 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
                 textField.displayError(presenter.localizer.emailAlert)
             }
         } else if textField == mobileField {
-            if !textField.inputText.isValidEmail {
+            if !textField.inputText.isValidPhone {
                 textField.displayError(presenter.localizer.phoneNumerAlert)
             }
         } else if textField == passwordField {
@@ -237,6 +237,6 @@ extension RegistrationViewController{
 
 extension RegistrationViewController {
     @IBAction func createAccount(_ sender: UIButton) {
-        presenter.registration(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "", photo: "")
+        presenter.registration(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "1" , photo: "")
        }
 }

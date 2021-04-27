@@ -38,7 +38,7 @@ extension LoginEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtoc
     }
     
     var headers: [String : String]? {
-        ["Accept" : "application/json" , "x-api-key": "20LAdyx%ano@0o!#vXLZBUg65" ]
+        return commonHeader
     }
     
     var authorizationType: AuthorizationType {

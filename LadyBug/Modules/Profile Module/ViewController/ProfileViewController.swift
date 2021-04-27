@@ -55,6 +55,7 @@ class ProfileViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    
 }
 
 extension ProfileViewController: ProfileViewProtocol {
@@ -166,5 +167,10 @@ extension ProfileViewController {
         scrollView.contentInset = .zero
         editButtonBottomConstraint.constant = 20
         view.layoutIfNeeded()
+    }
+}
+extension ProfileViewController {
+    @IBAction func editeActionButton(_ sender: UIButton) {
+        presenter.updateUser(name: userNameField.inputText, email: emailNameField.inputText, humanJobId: "1", photo: "")
     }
 }

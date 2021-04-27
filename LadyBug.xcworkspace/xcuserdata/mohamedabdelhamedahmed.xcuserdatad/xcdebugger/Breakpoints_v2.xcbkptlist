@@ -23,16 +23,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "449D0448-0D11-4541-8A47-44DD3FDB33E9"
+            uuid = "6C6028E3-F2DA-4CD5-BC9E-D811A20EDFE9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LadyBug/Modules/Auth/Registration Module/Presenter/Registration Presenter.swift"
+            filePath = "LadyBug/Modules/Auth/Login Module/Presenter/LoginPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "registration(name:email:mobile:password:passwordConfirmation:humanJobId:photo:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "login(with:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8AA6636-8CCC-4B67-9A88-F89F9B799649"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LadyBug/Modules/Profile Module/Presenter/ProfilePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "updateUser(name:email:humanJobId:photo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

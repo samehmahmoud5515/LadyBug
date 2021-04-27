@@ -11,7 +11,7 @@ enum RegistrationEndpoint {
     case registration(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
 }
 
-extension RegistrationEndpoint: TargetType {
+extension RegistrationEndpoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
     var baseURL: URL {
         Environment.baseUrl
     }
@@ -37,8 +37,11 @@ extension RegistrationEndpoint: TargetType {
     }
 
     var headers: [String : String]? {
-        ["Accept" : "application/json" , "x-api-key": "20LAdyx%ano@0o!#vXLZBUg65" ]
+        return commonHeader
     }
-
-
+    
+    var authorizationType: AuthorizationType {
+        return .none
+       }
+    
 }
