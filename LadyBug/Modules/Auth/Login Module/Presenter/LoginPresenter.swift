@@ -30,7 +30,7 @@ class LoginPresenter: LoginPresenterProtocol {
                     print(loginResponse)
                     guard let accessToken = loginResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
-                    //self.view?.navigateToTabBarController()
+                    self.view?.navigateToTabBarController()
                 } catch {
                     print("Parsing Error")
                 }

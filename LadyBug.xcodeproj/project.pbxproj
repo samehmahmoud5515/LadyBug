@@ -40,6 +40,9 @@
 		2116A56A2638983100C56301 /* UpdateUserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5692638983100C56301 /* UpdateUserEndPoint.swift */; };
 		2116A56E2638AC7500C56301 /* UpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A56D2638AC7500C56301 /* UpdateResponse.swift */; };
 		2116A5702638AC8E00C56301 /* UpdateResponseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A56F2638AC8E00C56301 /* UpdateResponseUser.swift */; };
+		2116A5762638D6B600C56301 /* UnreadNotificationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5752638D6B600C56301 /* UnreadNotificationEndpoint.swift */; };
+		2116A5782638D6CE00C56301 /* GetUserNotificationsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5772638D6CE00C56301 /* GetUserNotificationsEndpoint.swift */; };
+		2116A57A2638D6EC00C56301 /* ReadNotificationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5792638D6EC00C56301 /* ReadNotificationEndpoint.swift */; };
 		2121AC1B26052027001A2EDD /* HelpImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC0F26052026001A2EDD /* HelpImage.swift */; };
 		2121AC1C26052027001A2EDD /* HelpLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1126052026001A2EDD /* HelpLocalizer.swift */; };
 		2121AC1E26052027001A2EDD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1426052026001A2EDD /* HelpPresenter.swift */; };
@@ -457,6 +460,9 @@
 		2116A5692638983100C56301 /* UpdateUserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserEndPoint.swift; sourceTree = "<group>"; };
 		2116A56D2638AC7500C56301 /* UpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponse.swift; sourceTree = "<group>"; };
 		2116A56F2638AC8E00C56301 /* UpdateResponseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponseUser.swift; sourceTree = "<group>"; };
+		2116A5752638D6B600C56301 /* UnreadNotificationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnreadNotificationEndpoint.swift; sourceTree = "<group>"; };
+		2116A5772638D6CE00C56301 /* GetUserNotificationsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserNotificationsEndpoint.swift; sourceTree = "<group>"; };
+		2116A5792638D6EC00C56301 /* ReadNotificationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNotificationEndpoint.swift; sourceTree = "<group>"; };
 		2121AC0F26052026001A2EDD /* HelpImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpImage.swift; sourceTree = "<group>"; };
 		2121AC1126052026001A2EDD /* HelpLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpLocalizer.swift; sourceTree = "<group>"; };
 		2121AC1426052026001A2EDD /* HelpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPresenter.swift; sourceTree = "<group>"; };
@@ -858,6 +864,9 @@
 		2101D8E525F2E46C00FB0DB9 /* Notification Module */ = {
 			isa = PBXGroup;
 			children = (
+				2116A5742638D50E00C56301 /* UnreadNotificationEndpoint */,
+				2116A5732638D4C900C56301 /* GetUserNotificationsEndpoint */,
+				2116A5722638D4C600C56301 /* ReadNotificationEndpoint */,
 				2101D8E625F2E46C00FB0DB9 /* Resources */,
 				2101D8F725F2E46C00FB0DB9 /* Protocols */,
 				2101D8EB25F2E46C00FB0DB9 /* Presenter */,
@@ -1184,6 +1193,30 @@
 				2116A56F2638AC8E00C56301 /* UpdateResponseUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2116A5722638D4C600C56301 /* ReadNotificationEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				2116A5792638D6EC00C56301 /* ReadNotificationEndpoint.swift */,
+			);
+			path = ReadNotificationEndpoint;
+			sourceTree = "<group>";
+		};
+		2116A5732638D4C900C56301 /* GetUserNotificationsEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				2116A5772638D6CE00C56301 /* GetUserNotificationsEndpoint.swift */,
+			);
+			path = GetUserNotificationsEndpoint;
+			sourceTree = "<group>";
+		};
+		2116A5742638D50E00C56301 /* UnreadNotificationEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				2116A5752638D6B600C56301 /* UnreadNotificationEndpoint.swift */,
+			);
+			path = UnreadNotificationEndpoint;
 			sourceTree = "<group>";
 		};
 		2121AC0C26052026001A2EDD /* Help */ = {
@@ -4245,6 +4278,7 @@
 				508D16EC26291548004ED2D4 /* Auth */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
 				50BC86FC260543520065D8FE /* Profile Module */,
+				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
 				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
@@ -4266,7 +4300,6 @@
 				50D6137025DC1CA900228385 /* MyFarm */,
 				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
 				2137520425F58DFC00E342EF /* MyPosts Module */,
-				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
 				50AF3E89260ABE9700CBCD0C /* PostDetails Module */,
 				217D1E8E2608293C0025462F /* Product Details */,
 				503CB59B25E07AD100B7A393 /* Products */,
@@ -4881,8 +4914,11 @@
 				50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */,
 				506E4D0A25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.swift in Sources */,
 				50AF3E98260ABEF100CBCD0C /* PostDetailsProtocols.swift in Sources */,
+				2116A5782638D6CE00C56301 /* GetUserNotificationsEndpoint.swift in Sources */,
 				50D083E9260C063200518ED5 /* FarmTypeView.swift in Sources */,
+				2116A5762638D6B600C56301 /* UnreadNotificationEndpoint.swift in Sources */,
 				21112D1926191F650037B8AE /* FarmPersonSelectionProtocols.swift in Sources */,
+				2116A57A2638D6EC00C56301 /* ReadNotificationEndpoint.swift in Sources */,
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
 				218C78592629E72C00DA440A /* AddProductModel.swift in Sources */,
 				5031C2E9263348E10027CFB4 /* CommonHeaderProtocol.swift in Sources */,

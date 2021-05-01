@@ -26,6 +26,7 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
                     print(registrationResponse)
                     guard let accessToken = registrationResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
+                    print(accessToken)
                 } catch {
                     print("Parsing Error")
                 }

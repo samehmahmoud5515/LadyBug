@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = (!(AccessTokenManager.isAccessTokenEmpty)) ? TabBarViewController() : ProfileViewController()
+        let rootViewController = (!(AccessTokenManager.isAccessTokenEmpty)) ? TabBarViewController() : LoginViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navigationController
