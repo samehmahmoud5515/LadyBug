@@ -13,3 +13,5 @@ struct NotificationModel {
     var notificationSubjectCell: String
     var notificationContentCell: String
 }
+
+

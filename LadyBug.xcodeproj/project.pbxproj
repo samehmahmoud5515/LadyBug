@@ -40,15 +40,14 @@
 		2116A56A2638983100C56301 /* UpdateUserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5692638983100C56301 /* UpdateUserEndPoint.swift */; };
 		2116A56E2638AC7500C56301 /* UpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A56D2638AC7500C56301 /* UpdateResponse.swift */; };
 		2116A5702638AC8E00C56301 /* UpdateResponseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A56F2638AC8E00C56301 /* UpdateResponseUser.swift */; };
-		2116A5762638D6B600C56301 /* UnreadNotificationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5752638D6B600C56301 /* UnreadNotificationEndpoint.swift */; };
-		2116A5782638D6CE00C56301 /* GetUserNotificationsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5772638D6CE00C56301 /* GetUserNotificationsEndpoint.swift */; };
-		2116A57A2638D6EC00C56301 /* ReadNotificationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5792638D6EC00C56301 /* ReadNotificationEndpoint.swift */; };
 		2121AC1B26052027001A2EDD /* HelpImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC0F26052026001A2EDD /* HelpImage.swift */; };
 		2121AC1C26052027001A2EDD /* HelpLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1126052026001A2EDD /* HelpLocalizer.swift */; };
 		2121AC1E26052027001A2EDD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1426052026001A2EDD /* HelpPresenter.swift */; };
 		2121AC1F26052027001A2EDD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1726052026001A2EDD /* HelpViewController.swift */; };
 		2121AC2026052027001A2EDD /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2121AC1826052026001A2EDD /* HelpViewController.xib */; };
 		2121AC2126052027001A2EDD /* HelpProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1A26052026001A2EDD /* HelpProtocols.swift */; };
+		21328BF1263E368900742AFD /* JobsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21328BF0263E368800742AFD /* JobsEndPoint.swift */; };
+		21328BF3263E36C200742AFD /* JobsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21328BF2263E36C200742AFD /* JobsResponse.swift */; };
 		213751D525F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751D425F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift */; };
 		213751D925F3FD9500E342EF /* CropsInfoDetailsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751D825F3FD9500E342EF /* CropsInfoDetailsImages.swift */; };
 		213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213751DA25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift */; };
@@ -67,6 +66,8 @@
 		213FB5E6262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FB5E5262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift */; };
 		213FB5E9262E3726006DAF1C /* ForgotPasswordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FB5E8262E3726006DAF1C /* ForgotPasswordEndpoint.swift */; };
 		213FB5EC262F36C5006DAF1C /* MoreMenuEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FB5EB262F36C5006DAF1C /* MoreMenuEndpoint.swift */; };
+		21600126263E4C9800874B4E /* NotificationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21600125263E4C9700874B4E /* NotificationEndpoint.swift */; };
+		21600129263E4CAE00874B4E /* GetNotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21600128263E4CAE00874B4E /* GetNotificationResponse.swift */; };
 		216647F525FE88920028E335 /* ImageLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216647F425FE88920028E335 /* ImageLocalizer.swift */; };
 		216647FC25FEADEF0028E335 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216647FB25FEADEF0028E335 /* Images.swift */; };
 		216647FE25FEAE590028E335 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216647FD25FEAE590028E335 /* Localizer.swift */; };
@@ -460,15 +461,14 @@
 		2116A5692638983100C56301 /* UpdateUserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserEndPoint.swift; sourceTree = "<group>"; };
 		2116A56D2638AC7500C56301 /* UpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponse.swift; sourceTree = "<group>"; };
 		2116A56F2638AC8E00C56301 /* UpdateResponseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponseUser.swift; sourceTree = "<group>"; };
-		2116A5752638D6B600C56301 /* UnreadNotificationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnreadNotificationEndpoint.swift; sourceTree = "<group>"; };
-		2116A5772638D6CE00C56301 /* GetUserNotificationsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserNotificationsEndpoint.swift; sourceTree = "<group>"; };
-		2116A5792638D6EC00C56301 /* ReadNotificationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNotificationEndpoint.swift; sourceTree = "<group>"; };
 		2121AC0F26052026001A2EDD /* HelpImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpImage.swift; sourceTree = "<group>"; };
 		2121AC1126052026001A2EDD /* HelpLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpLocalizer.swift; sourceTree = "<group>"; };
 		2121AC1426052026001A2EDD /* HelpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPresenter.swift; sourceTree = "<group>"; };
 		2121AC1726052026001A2EDD /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		2121AC1826052026001A2EDD /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		2121AC1A26052026001A2EDD /* HelpProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpProtocols.swift; sourceTree = "<group>"; };
+		21328BF0263E368800742AFD /* JobsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsEndPoint.swift; path = "LadyBug/Modules/Auth/Registration Module/Endpoint/JobsEndPoint.swift"; sourceTree = SOURCE_ROOT; };
+		21328BF2263E36C200742AFD /* JobsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsResponse.swift; sourceTree = "<group>"; };
 		213751D425F3FCF100E342EF /* CropsInfoDetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsLocalizer.swift; sourceTree = "<group>"; };
 		213751D825F3FD9500E342EF /* CropsInfoDetailsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsImages.swift; sourceTree = "<group>"; };
 		213751DA25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropsInfoDetailsProtocols.swift; sourceTree = "<group>"; };
@@ -487,6 +487,8 @@
 		213FB5E5262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordEndpoint.swift; sourceTree = "<group>"; };
 		213FB5E8262E3726006DAF1C /* ForgotPasswordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordEndpoint.swift; sourceTree = "<group>"; };
 		213FB5EB262F36C5006DAF1C /* MoreMenuEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuEndpoint.swift; sourceTree = "<group>"; };
+		21600125263E4C9700874B4E /* NotificationEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationEndpoint.swift; sourceTree = "<group>"; };
+		21600128263E4CAE00874B4E /* GetNotificationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNotificationResponse.swift; sourceTree = "<group>"; };
 		216647F425FE88920028E335 /* ImageLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLocalizer.swift; sourceTree = "<group>"; };
 		216647FB25FEADEF0028E335 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		216647FD25FEAE590028E335 /* Localizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
@@ -864,9 +866,7 @@
 		2101D8E525F2E46C00FB0DB9 /* Notification Module */ = {
 			isa = PBXGroup;
 			children = (
-				2116A5742638D50E00C56301 /* UnreadNotificationEndpoint */,
-				2116A5732638D4C900C56301 /* GetUserNotificationsEndpoint */,
-				2116A5722638D4C600C56301 /* ReadNotificationEndpoint */,
+				21600124263E4C9700874B4E /* NotificationEndpoint */,
 				2101D8E625F2E46C00FB0DB9 /* Resources */,
 				2101D8F725F2E46C00FB0DB9 /* Protocols */,
 				2101D8EB25F2E46C00FB0DB9 /* Presenter */,
@@ -912,6 +912,7 @@
 		2101D8ED25F2E46C00FB0DB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				21600127263E4CAE00874B4E /* GetNotificationModel */,
 				2101D8EE25F2E46C00FB0DB9 /* NotificationModel.swift */,
 			);
 			path = Models;
@@ -1193,30 +1194,6 @@
 				2116A56F2638AC8E00C56301 /* UpdateResponseUser.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		2116A5722638D4C600C56301 /* ReadNotificationEndpoint */ = {
-			isa = PBXGroup;
-			children = (
-				2116A5792638D6EC00C56301 /* ReadNotificationEndpoint.swift */,
-			);
-			path = ReadNotificationEndpoint;
-			sourceTree = "<group>";
-		};
-		2116A5732638D4C900C56301 /* GetUserNotificationsEndpoint */ = {
-			isa = PBXGroup;
-			children = (
-				2116A5772638D6CE00C56301 /* GetUserNotificationsEndpoint.swift */,
-			);
-			path = GetUserNotificationsEndpoint;
-			sourceTree = "<group>";
-		};
-		2116A5742638D50E00C56301 /* UnreadNotificationEndpoint */ = {
-			isa = PBXGroup;
-			children = (
-				2116A5752638D6B600C56301 /* UnreadNotificationEndpoint.swift */,
-			);
-			path = UnreadNotificationEndpoint;
 			sourceTree = "<group>";
 		};
 		2121AC0C26052026001A2EDD /* Help */ = {
@@ -1570,6 +1547,22 @@
 				213FB5EB262F36C5006DAF1C /* MoreMenuEndpoint.swift */,
 			);
 			path = MoreMenuEndpoint;
+			sourceTree = "<group>";
+		};
+		21600124263E4C9700874B4E /* NotificationEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				21600125263E4C9700874B4E /* NotificationEndpoint.swift */,
+			);
+			path = NotificationEndpoint;
+			sourceTree = "<group>";
+		};
+		21600127263E4CAE00874B4E /* GetNotificationModel */ = {
+			isa = PBXGroup;
+			children = (
+				21600128263E4CAE00874B4E /* GetNotificationResponse.swift */,
+			);
+			path = GetNotificationModel;
 			sourceTree = "<group>";
 		};
 		216647F325FE88530028E335 /* Images */ = {
@@ -2057,6 +2050,7 @@
 			isa = PBXGroup;
 			children = (
 				218C7868262B543E00DA440A /* RegistrationEndpoint.swift */,
+				21328BF0263E368800742AFD /* JobsEndPoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -2064,6 +2058,7 @@
 		21A4116E2637499400C91AAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				21328BF2263E36C200742AFD /* JobsResponse.swift */,
 				21A4116F263749F000C91AAF /* RegistrationResponse.swift */,
 				21A4117126374B6400C91AAF /* RegistrationResponseUser.swift */,
 			);
@@ -4277,8 +4272,8 @@
 			children = (
 				508D16EC26291548004ED2D4 /* Auth */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
-				50BC86FC260543520065D8FE /* Profile Module */,
 				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
+				50BC86FC260543520065D8FE /* Profile Module */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
 				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
@@ -4758,6 +4753,7 @@
 				50AF3EC7260AD19A00CBCD0C /* CreateFarmViewController.swift in Sources */,
 				50D083F0260C0BCD00518ED5 /* FarmTypeCell.swift in Sources */,
 				218C78572629E72C00DA440A /* AddProductPresenter.swift in Sources */,
+				21328BF3263E36C200742AFD /* JobsResponse.swift in Sources */,
 				2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */,
 				5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */,
 				2116A56E2638AC7500C56301 /* UpdateResponse.swift in Sources */,
@@ -4859,6 +4855,7 @@
 				21112D1626191F650037B8AE /* FarmPersonSelectionTableViewCell.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
 				50E3015B25D8A33E008271B6 /* LocalizerService.swift in Sources */,
+				21328BF1263E368900742AFD /* JobsEndPoint.swift in Sources */,
 				50BC87002605437D0065D8FE /* ProfileViewController.swift in Sources */,
 				501F741225DAB5DB00333F16 /* UILabel+LineSpacing.swift in Sources */,
 				2101D91A25F357D900FB0DB9 /* YourProductsCellTableViewCell.swift in Sources */,
@@ -4914,11 +4911,9 @@
 				50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */,
 				506E4D0A25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.swift in Sources */,
 				50AF3E98260ABEF100CBCD0C /* PostDetailsProtocols.swift in Sources */,
-				2116A5782638D6CE00C56301 /* GetUserNotificationsEndpoint.swift in Sources */,
 				50D083E9260C063200518ED5 /* FarmTypeView.swift in Sources */,
-				2116A5762638D6B600C56301 /* UnreadNotificationEndpoint.swift in Sources */,
 				21112D1926191F650037B8AE /* FarmPersonSelectionProtocols.swift in Sources */,
-				2116A57A2638D6EC00C56301 /* ReadNotificationEndpoint.swift in Sources */,
+				21600129263E4CAE00874B4E /* GetNotificationResponse.swift in Sources */,
 				50068C7025E48A650097A870 /* MoreMenuModel.swift in Sources */,
 				218C78592629E72C00DA440A /* AddProductModel.swift in Sources */,
 				5031C2E9263348E10027CFB4 /* CommonHeaderProtocol.swift in Sources */,
@@ -5037,6 +5032,7 @@
 				2137520225F436CD00E342EF /* FollowersViewController.swift in Sources */,
 				2116A5702638AC8E00C56301 /* UpdateResponseUser.swift in Sources */,
 				506A5A2A25E5671A0014D59A /* MoreMenuNotificationsCell.swift in Sources */,
+				21600126263E4C9800874B4E /* NotificationEndpoint.swift in Sources */,
 				5090FBF125E44D39008D5B06 /* InterestedSelectionImages.swift in Sources */,
 				2101D91425F3571E00FB0DB9 /* YourProductsModel.swift in Sources */,
 				50F0F30B25D9FA5E00F0517E /* UIColors.swift in Sources */,

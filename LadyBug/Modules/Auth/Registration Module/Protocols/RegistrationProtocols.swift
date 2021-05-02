@@ -8,11 +8,14 @@
 import Foundation
 
 protocol RegistrationViewProtocol: class {
-   
+    func navigateToTabBarController()
 }
 
 protocol RegistrationPresenterProtocol: class {
-   var localizer: RegistrationLocalizer { get }
+    var localizer: RegistrationLocalizer { get }
     var images : ImageLocalizer{get}
-    func registration(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
+    var jobId : [Int] {get}
+    var jobName : [String] {get}
+    func registering(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
+    func setJobs()
 }

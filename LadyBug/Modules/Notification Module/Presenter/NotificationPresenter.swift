@@ -8,73 +8,78 @@
 import Moya
 
 class NotificationPresenter: NotificationPresenterProtocol {
-  
+    
     var localizer = NotificationLocalizer()
     var images = NotificationImages()
-    let providerUnreadNotification = MoyaProvider<UnreadNotificationEndpoint>(plugins: [AuthorizableTokenPlugin()])
-    let providerGetNotification = MoyaProvider<GetUserNotificationsEndpoint>(plugins: [AuthorizableTokenPlugin()])
-    let providerReadNotification = MoyaProvider<ReadNotificationEndpoint>(plugins: [AuthorizableTokenPlugin()])
-
+    let provider = MoyaProvider<NotificationEndpoint>(plugins: [AuthorizableTokenPlugin()])
     weak var view: NotificationViewProtocol?
+    
     init(view: NotificationViewProtocol) {
         self.view = view
     }
+    
     func attach() {
     }
+    
     func getNotificationCount() -> Int {
-         return 10
-    }
-    func unreadNotification() {
-        providerUnreadNotification.request(.unreadNotification) { result in
-                   switch result {
-                   case let .success(moyaResponse):
-                       do {
-                           let registrationResponse = try? moyaResponse.map(UpdateResponse.self)
-                           print(registrationResponse)
-                           guard let accessToken = registrationResponse?.data?.accessToken else { return }
-                           AccessTokenManager.saveAccessToken(token: accessToken)
-                       } catch {
-                           print("Parsing Error")
-                       }
-                   case let .failure(error):
-                       break
-                   }
-               }
+        return 10
     }
     
-    func getUserNotifications() {
-        providerUnreadNotification.request(.unreadNotification) { result in
-                   switch result {
-                   case let .success(moyaResponse):
-                       do {
-                           let registrationResponse = try? moyaResponse.map(UpdateResponse.self)
-                           print(registrationResponse)
-                           guard let accessToken = registrationResponse?.data?.accessToken else { return }
-                           AccessTokenManager.saveAccessToken(token: accessToken)
-                       } catch {
-                           print("Parsing Error")
-                       }
-                   case let .failure(error):
-                       break
-                   }
-               }
+    func getNotification() {
+        provider.request(.getUserNotifications) { result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let getNotificationResponse = try? moyaResponse.map(NotificationResponse.self)
+                    print(getNotificationResponse)
+                    guard let getNotification = getNotificationResponse?.data else { return }
+                    print(getNotification)
+                } catch {
+                    print("Parsing Error")
+                }
+            case let .failure(error):
+                break
+            }
+        }
     }
+    
+    func unreadNotification() {
+        provider.request(.unreadNotification) { result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let unreadNotificationResponse = try? moyaResponse.map(NotificationResponse.self)
+                    print(unreadNotificationResponse)
+                    guard let unreadNotification = unreadNotificationResponse?.data else { return }
+                    print(unreadNotification)
+                } catch {
+                    print("Parsing Error")
+                }
+            case let .failure(error):
+                break
+            }
+        }
+    }
+    
+    
     
     func readNotification() {
-               providerReadNotification.request(.readNotification) { result in
-                   switch result {
-                   case let .success(moyaResponse):
-                       do {
-                           let registrationResponse = try? moyaResponse.map(UpdateResponse.self)
-                           print(registrationResponse)
-                           guard let accessToken = registrationResponse?.data?.accessToken else { return }
-                           AccessTokenManager.saveAccessToken(token: accessToken)
-                       } catch {
-                           print("Parsing Error")
-                       }
-                   case let .failure(error):
-                       break
-                   }
-               }
-           }
+        provider.request(.readNotification) { result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let readNotificationResponse = try? moyaResponse.map(NotificationResponse.self)
+                    print(readNotificationResponse)
+                    guard let readNotification = readNotificationResponse?.data else { return }
+                    print(readNotification)
+                } catch {
+                    print("Parsing Error")
+                }
+            case let .failure(error):
+                break
+            }
+        }
+    }
+    
+    
 }

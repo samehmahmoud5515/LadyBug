@@ -33,9 +33,15 @@ class RegistrationLocalizer : CommonLocalizer{
     var createAccount: String {
         "registration_screen_create_account_title".localized
     }
-    var termsAndConditions: String {
-        "registration_screen_terms_and_conditions_title".localized
+    var termsAndConditionsPartOne: String {
+        "registration_screen_terms_and_conditions_part_one_title".localized
     }
+    var termsAndConditionsPartTwo: String {
+           "registration_screen_terms_and_conditions_part_two_title".localized
+       }
+    var termsAndConditionsPartThree: String {
+           "registration_screen_terms_and_conditions_part_three_title".localized
+       }
     //MARK: -
     //Alert localizer
     var userNameAlert: String {

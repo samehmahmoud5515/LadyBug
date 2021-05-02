@@ -32,11 +32,12 @@ class RegistrationViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.setJobs()
         setButtonFonts()
         setupUI()
         viewSetup()
         termsAndConditionsButton.titleLabel?.numberOfLines = 0
-        selectProfessionSelectionView.setupUI(selectionTitle: presenter.localizer.chooseYourProfession)
+        setselectProfessionSelectionView()
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
     }
@@ -117,7 +118,7 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
         }
     }
     
-  
+    
 }
 extension RegistrationViewController {
     func observeOnKeyboard() {
@@ -174,7 +175,10 @@ extension RegistrationViewController {
 }
 
 extension RegistrationViewController: RegistrationViewProtocol {
-    
+    func navigateToTabBarController() {
+        let vc = TabBarViewController()
+        navigationController?.viewControllers = [vc]
+    }
 }
 extension RegistrationViewController{
     private func viewSetup(){
@@ -225,11 +229,11 @@ extension RegistrationViewController{
     
     private func setupTermsAndCondtionsButton() {
         let mutableStrings = NSMutableAttributedString()
-        mutableStrings.append(NSAttributedString(string: "بالنقر فوق تسجيل ، فإنك توافق على", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
+        mutableStrings.append(NSAttributedString(string: presenter.localizer.termsAndConditionsPartOne, attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
         
-        mutableStrings.append(NSAttributedString(string: " الشروط والأحكام", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.midGreenTwo]))
+        mutableStrings.append(NSAttributedString(string: presenter.localizer.termsAndConditionsPartTwo, attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.midGreenTwo]))
         
-        mutableStrings.append(NSAttributedString(string: " التالية بدون تحفظ", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
+        mutableStrings.append(NSAttributedString(string: presenter.localizer.termsAndConditionsPartThree, attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
         termsAndConditionsButton.setAttributedTitle(mutableStrings, for: .normal)
         termsAndConditionsButton.titleLabel?.textAlignment = .center
     }
@@ -237,6 +241,14 @@ extension RegistrationViewController{
 
 extension RegistrationViewController {
     @IBAction func createAccount(_ sender: UIButton) {
-        presenter.registration(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "1" , photo: "")
-       }
+        presenter.registering(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "1" , photo: "")
+    }
+}
+
+extension RegistrationViewController {
+    func setselectProfessionSelectionView(){
+        print(presenter.jobName)
+        selectProfessionSelectionView.setupUI(selectionTitle: presenter.localizer.chooseYourProfession)
+        selectProfessionSelectionView.datasource = presenter.jobName
+    }
 }

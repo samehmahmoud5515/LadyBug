@@ -69,6 +69,9 @@
 "registration_screen_password_confirmation_alert_title" = "كلمة السر غير متطابقة";
 "registration_screen_create_account_title" = "إنشاء حساب";
 "registration_screen_terms_and_conditions_title" = "بالنقر فوق تسجيل ، فإنك توافق على الشروط والأحكام التالية بدون تحفظ";
+"registration_screen_terms_and_conditions_part_one_title" = "بالنقر فوق تسجيل ، فإنك توافق على" ;
+"registration_screen_terms_and_conditions_part_two_title" = " الشروط والأحكام" ;
+"registration_screen_terms_and_conditions_part_three_title" = " التالية بدون تحفظ" ; 
 //MARk: -  my_farm_localizer
 "my_farm_localizer_search_placeholder_ic" = "ابحث عن محصولك";
 "my_farm_localizer_temperature_title" = "17.4C";
