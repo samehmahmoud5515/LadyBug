@@ -8,7 +8,7 @@
 import Moya
 
 enum RegistrationEndpoint {
-    case registration(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
+    case setNewUser(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
 }
 
 extension RegistrationEndpoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
@@ -30,7 +30,7 @@ extension RegistrationEndpoint: TargetType, AccessTokenAuthorizable, CommonHeade
 
     var task: Task {
         switch self {
-        case let .registration(name , email , mobile , password , passwordConfirmation ,humanJobId , photo  ):
+        case let .setNewUser(name , email , mobile , password , passwordConfirmation ,humanJobId , photo  ):
             let paramters = ["name": name, "email": email, "mobile": mobile, "password": password, "password_confirmation": passwordConfirmation, "human_job_id": humanJobId, "photo": photo]
             return .requestParameters(parameters: paramters, encoding: JSONEncoding.default)
         }

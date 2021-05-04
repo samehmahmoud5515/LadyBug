@@ -32,7 +32,7 @@ class RegistrationViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.setJobs()
+        presenter.fetchJobs()
         setButtonFonts()
         setupUI()
         viewSetup()
@@ -241,7 +241,7 @@ extension RegistrationViewController{
 
 extension RegistrationViewController {
     @IBAction func createAccount(_ sender: UIButton) {
-        presenter.registering(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "1" , photo: "")
+        presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "1" , photo: "")
     }
 }
 

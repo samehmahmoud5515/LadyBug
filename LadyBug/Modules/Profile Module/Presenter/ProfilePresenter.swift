@@ -31,8 +31,6 @@ class ProfilePresenter: ProfilePresenterProtocol {
                 do {
                     let registrationResponse = try? moyaResponse.map(UpdateResponse.self)
                     print(registrationResponse)
-                    guard let accessToken = registrationResponse?.data?.accessToken else { return }
-                    AccessTokenManager.saveAccessToken(token: accessToken)
                 } catch {
                     print("Parsing Error")
                 }

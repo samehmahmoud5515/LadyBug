@@ -1,5 +1,5 @@
 //
-//  ForgotPasswordEndpoint.swift
+//  ForgetPasswordEndpoint.swift
 //  LadyBug
 //
 //  Created by Mohamed Abdelhamed Ahmed on 4/19/21.
@@ -7,13 +7,13 @@
 
 import Moya
 
-
-
-enum ForgotPasswordEndpoint {
-    case forgotPassword(email: String)
+enum ForgetPasswordEndPoint {
+    case forgetPassword(email: String)
 }
 
-extension ForgotPasswordEndpoint: TargetType {
+extension ForgetPasswordEndPoint: TargetType , AccessTokenAuthorizable, CommonHeaderProtocol{
+   
+    
     var baseURL: URL {
         Environment.baseUrl
     }
@@ -32,14 +32,17 @@ extension ForgotPasswordEndpoint: TargetType {
 
     var task: Task {
         switch self {
-        case let .forgotPassword(email):
+        case let .forgetPassword(email):
             let paramters = ["":""]
             return .requestParameters(parameters: paramters, encoding: JSONEncoding.default)
         }
     }
 
     var headers: [String : String]? {
-        ["Accept" : "application/json" , "x-api-key": "20LAdyx%ano@0o!#vXLZBUg65" ]
+        return commonHeader
     }
+    var authorizationType: AuthorizationType {
+        .none
+       }
 }
 

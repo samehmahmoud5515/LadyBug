@@ -15,13 +15,13 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
     var jobId = [Int] ()
     var jobName = [String] ()
     let provider = MoyaProvider<RegistrationEndpoint>()
-    let jobsProvider = MoyaProvider<JobsEndPoint>()
+    let jobsProvider = MoyaProvider<GetJobsEndPoint>()
     init(view: RegistrationViewProtocol) {
         self.view = view
     }
     
-    func registering(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String) {
-        provider.request(.registration(name: name, email: email, mobile: mobile, password: password, passwordConfirmation: passwordConfirmation, humanJobId: humanJobId, photo: photo)) { result in
+    func setNewUser(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String) {
+        provider.request(.setNewUser(name: name, email: email, mobile: mobile, password: password, passwordConfirmation: passwordConfirmation, humanJobId: humanJobId, photo: photo)) { result in
             switch result {
             case let .success(moyaResponse):
                 do {
@@ -40,7 +40,7 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
         }
     }
         
-        func setJobs() {
+        func fetchJobs() {
             jobsProvider.request(.jobs) { result in
                 switch result {
                 case let .success(moyaResponse):
@@ -51,9 +51,10 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
                         for job in jobs{
                             print(job.name)
                             self.jobName.append(job.name!)
+                            print(self.jobName)
                             print(job.id)
                             self.jobId.append(job.id!)
-                            
+                            print(self.jobId)
                         }
                         print(jobs)
                     } catch {

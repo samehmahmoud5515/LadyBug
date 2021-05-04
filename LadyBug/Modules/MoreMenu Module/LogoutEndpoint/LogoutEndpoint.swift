@@ -1,50 +1,52 @@
 //
-//  JobsEndPoint.swift
+//  LogoutEndpoint.swift
 //  LadyBug
 //
-//  Created by Mohamed Abdelhamed Ahmed on 5/1/21.
+//  Created by Mohamed Abdelhamed Ahmed on 4/20/21.
 //
 
 import Moya
 
-enum JobsEndPoint {
-    case jobs
+enum LogoutEndpoint {
+    case logout
 }
 
-extension JobsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
+extension LogoutEndpoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
+    
     
     var baseURL: URL {
         Environment.baseUrl
     }
-    
+
     var path: String {
-        "/api/v1/human_jobs"
+        "/api/v1/auth/logout"
     }
-    
+
     var method: Method {
-        .get
+        .post
     }
-    
+
     var sampleData: Data {
         Data()
     }
-    
+
     var task: Task {
         switch self {
-        case .jobs:
+        case .logout :
              return .requestPlain
         }
-       
     }
-    
+
     var headers: [String : String]? {
-        
         return commonHeader
     }
     
     var authorizationType: AuthorizationType {
         .bearer
     }
-    
+
 }
+
+
+
 

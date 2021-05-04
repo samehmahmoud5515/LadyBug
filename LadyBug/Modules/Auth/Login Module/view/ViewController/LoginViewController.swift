@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     navigationController?.setNavigationBarHidden(true, animated: true)
     }
     @IBAction func forGetPasswordActionButton(_ sender: UIButton) {
-        self.navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
+        self.navigationController?.pushViewController(ForgetPasswordViewController(), animated: true)
     }
     @IBAction func newUserActionButton(_ sender: UIButton) {
         self.navigationController?.pushViewController(RegistrationViewController(), animated: true)

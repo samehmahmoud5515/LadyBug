@@ -16,7 +16,7 @@ struct RegisterResponse : Codable {
 
 // MARK: - DataClass
 struct RegisterResult: Codable {
-    let user: RegistrationUser?
+    let user: User?
     let accessToken, tokenType: String?
     let expiresInMinutes: Int?
 

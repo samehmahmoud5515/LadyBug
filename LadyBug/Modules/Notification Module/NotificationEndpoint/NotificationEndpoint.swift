@@ -8,8 +8,8 @@
 import Moya
 
 enum NotificationEndpoint {
-    case unreadNotification
     case getUserNotifications
+    case unreadNotification
     case readNotification
     
 }
@@ -43,11 +43,10 @@ extension NotificationEndpoint: TargetType, AccessTokenAuthorizable, CommonHeade
     
     var task: Task {
         switch self {
-        case let .unreadNotification:
+        case  .unreadNotification:
             return .requestPlain
         case .getUserNotifications:
             return .requestPlain
-            
         case .readNotification :
             return .requestPlain
         }

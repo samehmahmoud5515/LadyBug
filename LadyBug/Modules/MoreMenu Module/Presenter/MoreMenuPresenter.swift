@@ -13,8 +13,8 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     var localizer = MoreMenuLocalizer()
     var images = MoreMenuImages()
     var datasource = [MoreMenuUIModel]()
-    let provider = MoyaProvider<MoreMenuEndpoint>()
-
+    let provider = MoyaProvider<LogoutEndpoint>()
+    
     init(view: MoreMenuViewProtocol) {
         self.view = view
     }
@@ -91,19 +91,20 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
         }
     }
     
-    private func logout() {
-       // AccessTokenManager.removeAccessToken()
-        view?.naviageteTo(model: MoreMenuUIModel.logOut(MoreMenuModel()))
-    }
-    func moreMenu(token: String) {
-        provider.request(.moreMenu(token: token)) { result in
-                 switch result {
-                 case let .success(moyaResponse):
-                     let data = moyaResponse.data
-                     let statusCode = moyaResponse.statusCode
-                 case let .failure(error):
-                     break
-                 }
-             }
+    //     func logout() {
+    //       //
+    //        view?.naviageteTo(model: MoreMenuUIModel.logOut(MoreMenuModel()))
+    //    }
+    func logout() {
+        provider.request(.logout) { result in
+            switch result {
+            case let .success(moyaResponse):
+                let data = moyaResponse.data
+                let statusCode = moyaResponse.statusCode
+                AccessTokenManager.removeAccessToken()
+            case let .failure(error):
+                break
+            }
+        }
     }
 }

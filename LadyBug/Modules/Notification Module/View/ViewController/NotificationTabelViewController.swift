@@ -24,6 +24,7 @@ class NotificationTabelViewController: UIViewController, NotificationViewProtoco
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presnter.getNotificationCount()
         setupUI()
         presnter.attach()
         tableView.delegate = self

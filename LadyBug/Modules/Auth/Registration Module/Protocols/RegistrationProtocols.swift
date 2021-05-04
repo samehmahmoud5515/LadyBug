@@ -16,6 +16,6 @@ protocol RegistrationPresenterProtocol: class {
     var images : ImageLocalizer{get}
     var jobId : [Int] {get}
     var jobName : [String] {get}
-    func registering(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
-    func setJobs()
+    func setNewUser(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
+    func fetchJobs()
 }

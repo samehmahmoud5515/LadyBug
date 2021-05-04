@@ -192,6 +192,7 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             navigationController?.navigationController?.pushViewController(helpViewController, animated: true)
             break
         case.logOut :
+            presnter.logout()
             let vc = LoginViewController()
             navigationController?.navigationController?.viewControllers = [vc]
         default:

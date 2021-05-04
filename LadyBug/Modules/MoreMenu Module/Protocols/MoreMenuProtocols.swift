@@ -13,7 +13,7 @@ protocol MoreMenuPresenterProtocol {
     var datasource: [MoreMenuUIModel] { get }
     func handleCellDidTapped(index: Int)
     func attach()
-    func moreMenu(token : String )
+    func logout()
 }
 
 protocol MoreMenuViewProtocol: class {

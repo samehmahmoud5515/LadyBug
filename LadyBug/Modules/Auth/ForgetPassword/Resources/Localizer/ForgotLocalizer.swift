@@ -1,14 +1,14 @@
 //
-//  forgotLocalizer.swift
+//  forgetLocalizer.swift
 //  LadyBug
 //
 //  Created by Mohamed Abdelhamed Ahmed on 2/19/21.
 //
 
 import Foundation
-class ForgotLocalizer{
+class ForgetPasswordLocalizer{
     
-    var didForgotPassword: String {
+    var didForgetPassword: String {
         "forgot_screen_did_you_forget_your_password_title".localized
     }
     

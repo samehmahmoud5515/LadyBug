@@ -8,10 +8,12 @@
 import Moya
 
 enum CreateNewPasswordEndpoint {
-    case createNewPassword( password: String, passwordConfirmation: String)
+    case createNewPassword( password: String)
 }
 
-extension CreateNewPasswordEndpoint: TargetType {
+extension CreateNewPasswordEndpoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
+    
+    
     var baseURL: URL {
         Environment.baseUrl
     }
@@ -30,15 +32,18 @@ extension CreateNewPasswordEndpoint: TargetType {
 
     var task: Task {
         switch self {
-        case let .createNewPassword( password , passwordConfirmation ):
-            let paramters = ["password": password, "password_confirmation": passwordConfirmation]
+        case let .createNewPassword( password ):
+            let paramters = ["password": password]
             return .requestParameters(parameters: paramters, encoding: JSONEncoding.default)
         }
     }
 
     var headers: [String : String]? {
-        ["Authorization":"","Accept" : "application/json" , "x-api-key": "20LAdyx%ano@0o!#vXLZBUg65" ]
+        return commonHeader
     }
 
+    var authorizationType: AuthorizationType {
+        return .bearer
+    }
 
 }

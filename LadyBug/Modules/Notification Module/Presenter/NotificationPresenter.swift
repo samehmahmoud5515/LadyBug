@@ -44,7 +44,7 @@ class NotificationPresenter: NotificationPresenterProtocol {
     }
     
     func unreadNotification() {
-        provider.request(.unreadNotification) { result in
+        provider.request(.readNotification) { result in
             switch result {
             case let .success(moyaResponse):
                 do {

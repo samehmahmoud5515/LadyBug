@@ -6,12 +6,12 @@
 //
 
 import Foundation
-protocol CreateNewPasswordPresenterPrototocol {
+protocol CreateNewPasswordPresenterprotocol  {
     var localizer: CreateNewPasswordLocalizer { get }
     var image: CreateNewPasswordImages{ get }
     func attach()
-    func CreateNewPassword( password: String, passwordConfirmation: String)
+    func createNewPassword( password: String)
 }
 protocol CreateNewPasswordViewProtocol: class{
-        func navigateToTabBarController()
+        func navigateToLoginController()
 }

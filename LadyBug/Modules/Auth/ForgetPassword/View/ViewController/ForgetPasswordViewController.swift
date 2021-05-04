@@ -1,5 +1,5 @@
 //
-//  ForgotPasswordViewController.swift
+//  ForgetPasswordViewController.swift
 //  LadyBug
 //
 //  Created by Mohamed Abdelhamed Ahmed on 2/19/21.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController, ForgotViewProtocol {
+class ForgetPasswordViewController: UIViewController {
     
     @IBOutlet weak var submitButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var forgotPasswordLabel: UILabel!
+    @IBOutlet weak var forgetPasswordLabel: UILabel!
     @IBOutlet weak var addNumberLabel: UILabel!
     @IBOutlet weak var phoneEmailField: StandardTextFieldView!
     @IBOutlet weak var tryAgainButton: UIButton!
     
-    private var presnter: ForgotPresenterProtocol!
+    private var presnter: ForgetPasswordPresenterProtocol!
     
     init() {
-        super.init(nibName: "\(ForgotPasswordViewController.self)", bundle: nil)
-        presnter = ForgotPresenter(view: self)
+        super.init(nibName: "\(ForgetPasswordViewController.self)", bundle: nil)
+        presnter = ForgetPasswordPresenter(view: self)
     }
     
     required init?(coder: NSCoder) {
@@ -57,16 +57,16 @@ class ForgotPasswordViewController: UIViewController, ForgotViewProtocol {
    
     
 }
-extension ForgotPasswordViewController{
+extension ForgetPasswordViewController{
     
     private func setFonts(){
-        forgotPasswordLabel.font = UIFont.get(enFont: .bold(28), arFont: .bold(28))
+        forgetPasswordLabel.font = UIFont.get(enFont: .bold(28), arFont: .bold(28))
         addNumberLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         tryAgainButton.titleLabel?.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
     }
 }
 
-extension ForgotPasswordViewController: StandardTextFieldViewProtocol {
+extension ForgetPasswordViewController: StandardTextFieldViewProtocol {
     func didBeginEditing(_ textField: StandardTextFieldView) {
         
     }
@@ -99,7 +99,7 @@ extension ForgotPasswordViewController: StandardTextFieldViewProtocol {
     
 }
 
-extension ForgotPasswordViewController {
+extension ForgetPasswordViewController {
     func observeOnKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -119,7 +119,7 @@ extension ForgotPasswordViewController {
         view.layoutIfNeeded()
     }
 }
-extension ForgotPasswordViewController{
+extension ForgetPasswordViewController{
     private func setupUI() {
         setupNaviagtionBarUI()
         addBarButtonsToNavigationBar()
@@ -152,11 +152,16 @@ extension ForgotPasswordViewController{
         navigationController?.popViewController(animated: true)
     }
 }
-extension ForgotPasswordViewController{
+extension ForgetPasswordViewController{
     
     @IBAction func tryAgainActionButton(_ sender: UIButton) {
-        presnter.forgotPassword(email: phoneEmailField.inputText)
-           let vc = CreateNewPasswordViewController()
-           navigationController?.pushViewController(vc, animated: true)
+        presnter.forgetPassword(email: phoneEmailField.inputText)
        }
 }
+extension ForgetPasswordViewController : ForgetPasswordViewProtocol{
+    func navigateToCreateNewPassword() {
+        let vc = CreateNewPasswordViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+ 

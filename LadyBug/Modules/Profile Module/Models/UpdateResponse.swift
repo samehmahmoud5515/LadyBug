@@ -15,7 +15,7 @@ struct UpdateResponse : Codable {
 }
 // MARK: - DataClass
 struct UpdateResult: Codable {
-    let user: UpdateUser?
+    let user: User?
     let accessToken, tokenType: String?
     let expiresInMinutes: Int?
 
