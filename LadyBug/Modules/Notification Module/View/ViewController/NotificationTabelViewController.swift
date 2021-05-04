@@ -108,4 +108,8 @@ extension NotificationTabelViewController :UITableViewDataSource,UITableViewDele
         return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presnter.unreadNotification()
+    }
+    
 }

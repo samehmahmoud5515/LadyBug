@@ -12,9 +12,9 @@ import Foundation
         var images: NotificationImages { get }
         func attach()
         func getNotificationCount() -> Int
-//        func getNotification()
-//        func readNotification()
-//        func unreadNotification()
+        func getNotification()
+        func readNotification()
+        func unreadNotification()
     }
     protocol NotificationViewProtocol: class {
         

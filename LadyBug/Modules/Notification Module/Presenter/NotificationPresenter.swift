@@ -61,8 +61,6 @@ class NotificationPresenter: NotificationPresenterProtocol {
         }
     }
     
-    
-    
     func readNotification() {
         provider.request(.readNotification) { result in
             switch result {
@@ -80,6 +78,4 @@ class NotificationPresenter: NotificationPresenterProtocol {
             }
         }
     }
-    
-    
 }
