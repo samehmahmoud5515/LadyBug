@@ -13,8 +13,8 @@ import Foundation
         func attach()
         func getNotificationCount() -> Int
         func getNotification()
-        func readNotification()
-        func unreadNotification()
+        func readNotification(notificationId : String )
+        func unreadNotification(notificationId : String )
     }
     protocol NotificationViewProtocol: class {
         

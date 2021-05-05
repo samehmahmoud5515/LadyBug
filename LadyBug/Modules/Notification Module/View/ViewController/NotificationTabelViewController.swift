@@ -98,9 +98,9 @@ extension NotificationTabelViewController{
   
 
 }
-extension NotificationTabelViewController :UITableViewDataSource,UITableViewDelegate{
+extension NotificationTabelViewController :UITableViewDataSource,UITableViewDelegate , UIScrollViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return presnter.getNotificationCount()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(NotificationsCellTableViewCell.self)", for: indexPath) as? NotificationsCellTableViewCell ?? NotificationsCellTableViewCell()
@@ -109,7 +109,9 @@ extension NotificationTabelViewController :UITableViewDataSource,UITableViewDele
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presnter.unreadNotification()
+        presnter.unreadNotification(notificationId: "17a9c8a0-2660-4bf0-b562-f75b105d9df0")
     }
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        presnter.getNotification()
+    }
 }
