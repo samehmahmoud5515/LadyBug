@@ -12,6 +12,7 @@ class NotificationPresenter: NotificationPresenterProtocol {
     var localizer = NotificationLocalizer()
     var images = NotificationImages()
     let provider = MoyaProvider<NotificationEndpoint>(plugins: [AuthorizableTokenPlugin()])
+    var notificationCount = Int()
     weak var view: NotificationViewProtocol?
     
     init(view: NotificationViewProtocol) {
@@ -22,7 +23,7 @@ class NotificationPresenter: NotificationPresenterProtocol {
     }
     
     func getNotificationCount() -> Int {
-        return 10
+        return notificationCount
     }
     
     func getNotification() {
@@ -33,7 +34,8 @@ class NotificationPresenter: NotificationPresenterProtocol {
                     let getNotificationResponse = try? moyaResponse.map(NotificationResponse.self)
                     print(getNotificationResponse)
                     guard let getNotification = getNotificationResponse?.data else { return }
-                    print(getNotification)
+                    self.notificationCount = getNotification.count ?? 0
+                    print(self.notificationCount)
                 } catch {
                     print("Parsing Error")
                 }

@@ -10,6 +10,7 @@ import Foundation
     protocol NotificationPresenterProtocol {
         var localizer: NotificationLocalizer { get }
         var images: NotificationImages { get }
+        var notificationCount : Int { get }
         func attach()
         func getNotificationCount() -> Int
         func getNotification()
