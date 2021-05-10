@@ -8,8 +8,8 @@
 import UIKit
 
 
-class FollowersViewController: UIViewController, FollowersViewProtocol {
-    
+class FollowersViewController: UIViewController {
+   
     @IBOutlet weak var tableView: UITableView!
     //Attribuites
     private var presnter: FollowersPresenterProtocols!
@@ -97,12 +97,16 @@ extension FollowersViewController {
 }
 extension FollowersViewController :UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return presnter.user.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(FollowersTableViewCell.self)", for: indexPath) as? FollowersTableViewCell ?? FollowersTableViewCell()
-        cell.setupUI()
+        cell.setupUI(user: presnter.user[indexPath.row])
         return cell
-        
     }
+}
+extension FollowersViewController : FollowersViewProtocol {
+    func reloadData() {
+        tableView.reloadData()
+       }
 }

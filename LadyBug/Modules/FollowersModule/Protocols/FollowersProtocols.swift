@@ -9,9 +9,13 @@ import Foundation
 protocol FollowersPresenterProtocols {
     var localizer: FollowersLocalizer { get }
     var images: FollowersImage { get }
+    var user : [User]{get}
     func attach()
-    func getFollowersCount() -> Int
+    func getUserFollowers()
+    func getUserFollowings()
+    func toggleFollow(userId : Int )
+    
 }
 protocol FollowersViewProtocol : class {
-    
+    func reloadData()
 }

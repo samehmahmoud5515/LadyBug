@@ -18,8 +18,12 @@ struct FollowingsResponed: Codable {
 
 // MARK: - FollowingsResult
 struct FollowingsResult: Codable {
-    let count: Int?
-    let all: [User]?
+    var count: Int = 0
+    var Followers: [User] = []
+    enum CodingKeys: String, CodingKey {
+        case count
+        case Followers = "all"
+    }
 }
 
 

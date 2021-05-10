@@ -25,9 +25,9 @@ extension NotificationEndpoint: TargetType, AccessTokenAuthorizable, CommonHeade
         switch self {
         case .getUserNotifications:
             return  "/api/v1/users/notifications/index"
-        case .unreadNotification(notificationId: let notificationId):
+        case .unreadNotification(let notificationId):
             return "/api/v1/users/notifications/read/" + notificationId
-        case .readNotification(notificationId: let notificationId):
+        case .readNotification (let notificationId):
             return "/api/v1/users/notifications/read/" + notificationId
             
         }

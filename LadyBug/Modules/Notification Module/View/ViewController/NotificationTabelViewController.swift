@@ -6,8 +6,8 @@
 //
 import UIKit
 
-class NotificationTabelViewController: UIViewController, NotificationViewProtocol {
-    
+class NotificationTabelViewController: UIViewController {
+   
     @IBOutlet weak var tableView: UITableView!
     //Attribuites
     private var presnter: NotificationPresenterProtocol!
@@ -24,7 +24,7 @@ class NotificationTabelViewController: UIViewController, NotificationViewProtoco
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presnter.getNotificationCount()
+        presnter.getNotification()
         setupUI()
         presnter.attach()
         tableView.delegate = self
@@ -98,20 +98,28 @@ extension NotificationTabelViewController{
   
 
 }
-extension NotificationTabelViewController :UITableViewDataSource,UITableViewDelegate , UIScrollViewDelegate{
+extension NotificationTabelViewController :UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presnter.getNotificationCount()
+        return  presnter.notifications.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(NotificationsCellTableViewCell.self)", for: indexPath) as? NotificationsCellTableViewCell ?? NotificationsCellTableViewCell()
-        cell.setupCell()
+        cell.setupCell(notification: presnter.notifications[indexPath.row])
+        print(presnter.notifications[indexPath.row] )
         return cell
-        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presnter.unreadNotification(notificationId: "17a9c8a0-2660-4bf0-b562-f75b105d9df0")
+       guard let id = presnter.notifications[indexPath.row].id else { return }
+        presnter.readNotification(notificationId: id)
     }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        presnter.getNotification()
+   
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){
+        guard let id = presnter.notifications[indexPath.row].id else { return }
+               presnter.unreadNotification(notificationId: id)
+    }
+}
+extension NotificationTabelViewController: NotificationViewProtocol{
+    func reloadData() {
+        tableView.reloadData()
     }
 }

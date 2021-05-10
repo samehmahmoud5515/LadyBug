@@ -16,12 +16,16 @@ struct NotificationResponse: Codable {
 
 // MARK: - RegisterData
 struct NotificationData: Codable {
-    let count: Int?
-    let notificationResult: [NotificationResult]?
+    var count: Int = 0
+    var notifications: [Notification] = []
+    enum CodingKeys: String, CodingKey {
+           case count
+           case notifications = "notificationResult"
+       }
 }
 
 // MARK: - All
-struct NotificationResult: Codable {
+struct Notification: Codable {
     let id: String?
     let notifiableID: Int?
     let type, readAt: String?

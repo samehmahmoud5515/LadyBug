@@ -81,6 +81,9 @@
                                         <color key="value" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="followersFollowingActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7ke-wx-cfX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

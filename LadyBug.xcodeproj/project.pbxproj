@@ -62,8 +62,6 @@
 		213751FF25F436A300E342EF /* FollowersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213751FD25F436A300E342EF /* FollowersTableViewCell.xib */; };
 		2137520225F436CD00E342EF /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137520025F436CD00E342EF /* FollowersViewController.swift */; };
 		2137520325F436CD00E342EF /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2137520125F436CD00E342EF /* FollowersViewController.xib */; };
-		213FB5E6262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FB5E5262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift */; };
-		213FB5E9262E3726006DAF1C /* ForgetPasswordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FB5E8262E3726006DAF1C /* ForgetPasswordEndpoint.swift */; };
 		213FB5EC262F36C5006DAF1C /* LogoutEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FB5EB262F36C5006DAF1C /* LogoutEndpoint.swift */; };
 		21600126263E4C9800874B4E /* NotificationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21600125263E4C9700874B4E /* NotificationEndpoint.swift */; };
 		21600129263E4CAE00874B4E /* GetNotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21600128263E4CAE00874B4E /* GetNotificationResponse.swift */; };
@@ -106,6 +104,7 @@
 		217D1EB22608293C0025462F /* ProductDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */; };
 		217DB1D4263EC33800AE6B10 /* FollowersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DB1D3263EC33800AE6B10 /* FollowersModel.swift */; };
 		217DB1D7263EC43F00AE6B10 /* FollowersEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DB1D6263EC43F00AE6B10 /* FollowersEndPoint.swift */; };
+		2184238026488ED300FFF5BF /* PasswordEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184237F26488ED300FFF5BF /* PasswordEndPoint.swift */; };
 		218C78552629E72C00DA440A /* AddProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78352629E72B00DA440A /* AddProductImage.swift */; };
 		218C78562629E72C00DA440A /* AddProductLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78372629E72B00DA440A /* AddProductLocalizer.swift */; };
 		218C78572629E72C00DA440A /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C78392629E72B00DA440A /* AddProductPresenter.swift */; };
@@ -483,8 +482,6 @@
 		213751FD25F436A300E342EF /* FollowersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersTableViewCell.xib; sourceTree = "<group>"; };
 		2137520025F436CD00E342EF /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		2137520125F436CD00E342EF /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
-		213FB5E5262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordEndpoint.swift; sourceTree = "<group>"; };
-		213FB5E8262E3726006DAF1C /* ForgetPasswordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordEndpoint.swift; sourceTree = "<group>"; };
 		213FB5EB262F36C5006DAF1C /* LogoutEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutEndpoint.swift; sourceTree = "<group>"; };
 		21600125263E4C9700874B4E /* NotificationEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationEndpoint.swift; sourceTree = "<group>"; };
 		21600128263E4CAE00874B4E /* GetNotificationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNotificationResponse.swift; sourceTree = "<group>"; };
@@ -527,6 +524,7 @@
 		217D1EA62608293C0025462F /* ProductDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsProtocols.swift; sourceTree = "<group>"; };
 		217DB1D3263EC33800AE6B10 /* FollowersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersModel.swift; sourceTree = "<group>"; };
 		217DB1D6263EC43F00AE6B10 /* FollowersEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersEndPoint.swift; sourceTree = "<group>"; };
+		2184237F26488ED300FFF5BF /* PasswordEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEndPoint.swift; sourceTree = "<group>"; };
 		218C78352629E72B00DA440A /* AddProductImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductImage.swift; sourceTree = "<group>"; };
 		218C78372629E72B00DA440A /* AddProductLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductLocalizer.swift; sourceTree = "<group>"; };
 		218C78392629E72B00DA440A /* AddProductPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
@@ -1526,22 +1524,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		213FB5E4262E30B1006DAF1C /* Endpoint */ = {
-			isa = PBXGroup;
-			children = (
-				213FB5E5262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift */,
-			);
-			path = Endpoint;
-			sourceTree = "<group>";
-		};
-		213FB5E7262E36E4006DAF1C /* ForgetPasswordEndpoint */ = {
-			isa = PBXGroup;
-			children = (
-				213FB5E8262E3726006DAF1C /* ForgetPasswordEndpoint.swift */,
-			);
-			path = ForgetPasswordEndpoint;
-			sourceTree = "<group>";
-		};
 		213FB5EA262F367F006DAF1C /* LogoutEndpoint */ = {
 			isa = PBXGroup;
 			children = (
@@ -1577,7 +1559,6 @@
 		216647F725FEA7E40028E335 /* CreateNewPassword */ = {
 			isa = PBXGroup;
 			children = (
-				213FB5E4262E30B1006DAF1C /* Endpoint */,
 				216647F825FEA8780028E335 /* Resources */,
 				216647FF25FEAEBD0028E335 /* Protocols */,
 				2166480225FEAF4A0028E335 /* Presenter */,
@@ -2565,6 +2546,7 @@
 			children = (
 				5028D08326333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift */,
 				5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */,
+				2184237F26488ED300FFF5BF /* PasswordEndPoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3607,7 +3589,6 @@
 		5099490925E4642D0085CFBF /* ForgetPassword */ = {
 			isa = PBXGroup;
 			children = (
-				213FB5E7262E36E4006DAF1C /* ForgetPasswordEndpoint */,
 				5099490A25E4642D0085CFBF /* Resources */,
 				5099491525E4642D0085CFBF /* Protocols */,
 				5099490F25E4642D0085CFBF /* Presenter */,
@@ -4838,7 +4819,6 @@
 				2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */,
 				509C1487260D4DD1004CECA2 /* AddPostTextViewCell.swift in Sources */,
 				216647F525FE88920028E335 /* ImageLocalizer.swift in Sources */,
-				213FB5E9262E3726006DAF1C /* ForgetPasswordEndpoint.swift in Sources */,
 				217D1EA92608293C0025462F /* ProductDetailsPresenter .swift in Sources */,
 				217D1EB22608293C0025462F /* ProductDetailsProtocols.swift in Sources */,
 				504969D325F81E37002C3E40 /* AddPeopleToYourFarmViewController.swift in Sources */,
@@ -4907,6 +4887,7 @@
 				5001434C25F9A84500D1630E /* MyTasksCell.swift in Sources */,
 				504969AF25F81E23002C3E40 /* MyFarmDetailsNameCell.swift in Sources */,
 				50D4ACC425FBF8C900880E55 /* Coordinate.swift in Sources */,
+				2184238026488ED300FFF5BF /* PasswordEndPoint.swift in Sources */,
 				5062E7BC25FB26A5000398AA /* CropsInfoLocalizer.swift in Sources */,
 				503F7A1F25DAAFD400EBD730 /* HomeImages.swift in Sources */,
 				503CB5BA25E07DD900B7A393 /* ProductCell.swift in Sources */,
@@ -5029,7 +5010,6 @@
 				21112D1226191F650037B8AE /* FarmPersonSelectionImage.swift in Sources */,
 				503CB5C425E0A15F00B7A393 /* VideosViewController.swift in Sources */,
 				2166B89125E081BC008FE0A0 /* LoginImages.swift in Sources */,
-				213FB5E6262E30EA006DAF1C /* CreateNewPasswordEndpoint.swift in Sources */,
 				218C78552629E72C00DA440A /* AddProductImage.swift in Sources */,
 				5099491825E4642D0085CFBF /* ForgotLocalizer.swift in Sources */,
 				50FA84A925DC6414008A9216 /* FarmDetailsCell.swift in Sources */,

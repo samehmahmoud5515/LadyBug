@@ -12,7 +12,7 @@ class ForgetPasswordPresenter: ForgetPasswordPresenterProtocol {
     weak var view: ForgetPasswordViewProtocol?
     var images = ForgetPasswordImages()
     var localizer = ForgetPasswordLocalizer()
-    let provider = MoyaProvider<ForgetPasswordEndPoint>()
+    let provider = MoyaProvider<PasswordEndpoint>()
     
     
     init(view: ForgetPasswordViewProtocol) {

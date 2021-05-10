@@ -90,11 +90,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
             view?.naviageteTo(model: model)
         }
     }
-    
-    //     func logout() {
-    //       //
-    //        view?.naviageteTo(model: MoreMenuUIModel.logOut(MoreMenuModel()))
-    //    }
+
     func logout() {
         provider.request(.logout) { result in
             switch result {

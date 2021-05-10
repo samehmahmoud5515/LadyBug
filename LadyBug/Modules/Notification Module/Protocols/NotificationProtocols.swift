@@ -10,13 +10,14 @@ import Foundation
     protocol NotificationPresenterProtocol {
         var localizer: NotificationLocalizer { get }
         var images: NotificationImages { get }
-        var notificationCount : Int { get }
+        var notifications : [Notification] {get}
         func attach()
-        func getNotificationCount() -> Int
         func getNotification()
         func readNotification(notificationId : String )
         func unreadNotification(notificationId : String )
     }
     protocol NotificationViewProtocol: class {
+        
+        func reloadData()
         
     }

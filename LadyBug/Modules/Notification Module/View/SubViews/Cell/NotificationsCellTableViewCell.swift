@@ -8,14 +8,22 @@
 import UIKit
 
 class NotificationsCellTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var notificationCoranerView: UIView!
     @IBOutlet weak var notificationHeaderTitle: UILabel!
     @IBOutlet weak var notificationTimeTitle: UILabel!
     @IBOutlet weak var notificationContentTitle: UITextView!
     @IBOutlet weak var notificationSubjectTitle: UILabel!
     
-    func setupCell(){
+    func setupCell( notification : Notification){
+        notificationHeaderTitle.text = notification.title
+        notificationTimeTitle.text = notification.createdAt
+        notificationSubjectTitle.text = notification.body
+        setupUI()
+    }
+    
+    func  setupUI(){
+        
         notificationHeaderTitle.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         notificationTimeTitle.font = UIFont.get(enFont: .regular(11), arFont: .regular(11))
         notificationSubjectTitle.font  = UIFont.get(enFont: .regular(12), arFont: .regular(12))
@@ -23,7 +31,7 @@ class NotificationsCellTableViewCell: UITableViewCell {
         notificationCoranerView.layer.maskedCorners = [.layerMaxXMaxYCorner  , .layerMaxXMinYCorner ]
         notificationCoranerView.layer.cornerRadius = CGFloat(8.0)
         notificationCoranerView.clipsToBounds = true
+        
     }
-    
     
 }

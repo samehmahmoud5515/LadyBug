@@ -9,7 +9,7 @@ import Moya
 enum FollowersEndPoint {
     case getUserFollowers
     case getUserFollowings
-    case toggleFollow
+    case toggleFollow(userId : Int )
     
 }
 
@@ -26,9 +26,11 @@ extension FollowersEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderPr
             return "/api/v1/users/followers/index"
         case .getUserFollowings:
             return "/api/v1/users/followings/index"
-        case .toggleFollow :
-            return "/api/v1/users/toggle_follow/3"
+        case .toggleFollow(let userId) :
+            
+            return "/api/v1/users/toggle_follow/" + String(userId)
         }
+
     }
     
     var method: Method {

@@ -10,7 +10,7 @@ class CreateNewPasswordPresenter : CreateNewPasswordPresenterprotocol  {
     
     var localizer = CreateNewPasswordLocalizer()
     var image =  CreateNewPasswordImages()
-    let provider = MoyaProvider<CreateNewPasswordEndpoint>()
+    let provider = MoyaProvider<PasswordEndpoint>()
     weak var view : CreateNewPasswordViewProtocol?
     
     init(view : CreateNewPasswordViewProtocol ){
