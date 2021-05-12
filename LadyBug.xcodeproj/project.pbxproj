@@ -357,6 +357,7 @@
 		50AF3ED1260AD2B100CBCD0C /* CreateFarmProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3ED0260AD2B100CBCD0C /* CreateFarmProtcol.swift */; };
 		50AF3ED5260AD2E400CBCD0C /* CreateFramImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3ED4260AD2E400CBCD0C /* CreateFramImages.swift */; };
 		50AF3ED8260AD2F300CBCD0C /* CreateFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3ED7260AD2F200CBCD0C /* CreateFarmLocalizer.swift */; };
+		50BBB669264C879C005E709E /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBB668264C879C005E709E /* UIViewController+ActivityIndicator.swift */; };
 		50BC0A7025E5C076006653FD /* MyCropsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A6E25E5C076006653FD /* MyCropsViewController.swift */; };
 		50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC0A6F25E5C076006653FD /* MyCropsViewController.xib */; };
 		50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A7625E5C0BD006653FD /* MyCropsLocalizer.swift */; };
@@ -767,6 +768,7 @@
 		50AF3ED0260AD2B100CBCD0C /* CreateFarmProtcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFarmProtcol.swift; sourceTree = "<group>"; };
 		50AF3ED4260AD2E400CBCD0C /* CreateFramImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFramImages.swift; sourceTree = "<group>"; };
 		50AF3ED7260AD2F200CBCD0C /* CreateFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFarmLocalizer.swift; sourceTree = "<group>"; };
+		50BBB668264C879C005E709E /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		50BC0A6E25E5C076006653FD /* MyCropsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsViewController.swift; sourceTree = "<group>"; };
 		50BC0A6F25E5C076006653FD /* MyCropsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsViewController.xib; sourceTree = "<group>"; };
 		50BC0A7625E5C0BD006653FD /* MyCropsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsLocalizer.swift; sourceTree = "<group>"; };
@@ -2341,6 +2343,7 @@
 				501F740725DAB59200333F16 /* UIViewController+Present.swift */,
 				501F740825DAB59200333F16 /* UIViewController+Keyboard.swift */,
 				501F740925DAB59200333F16 /* UIViewController+Alert.swift */,
+				50BBB668264C879C005E709E /* UIViewController+ActivityIndicator.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -4809,6 +4812,7 @@
 				5062E7BD25FB26A5000398AA /* CropsInfoPresenter.swift in Sources */,
 				506E4CFE25EDA8D6003BD749 /* MyCropsHeaderViewUIModel.swift in Sources */,
 				501F73FE25DAB54300333F16 /* UIView+FromNib.swift in Sources */,
+				50BBB669264C879C005E709E /* UIViewController+ActivityIndicator.swift in Sources */,
 				50A54C0D25E3FF190052F701 /* InterestedSelectionViewController.swift in Sources */,
 				217D1EAC2608293C0025462F /* ProductDetailsTableViewCell.swift in Sources */,
 				504969D225F81E37002C3E40 /* AddPeopleToYourFarmLocalizer.swift in Sources */,
