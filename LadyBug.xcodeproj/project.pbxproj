@@ -3978,6 +3978,39 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		50BBB66E264DC713005E709E /* Farm */ = {
+			isa = PBXGroup;
+			children = (
+				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
+				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
+				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
+				50AF3EC2260AD16A00CBCD0C /* CreateFarm */,
+				50D6137025DC1CA900228385 /* MyFarm */,
+				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
+			);
+			path = Farm;
+			sourceTree = "<group>";
+		};
+		50BBB66F264DC75F005E709E /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				509643A725E2EF3E0000FB60 /* AddPost Module */,
+				2137520425F58DFC00E342EF /* MyPosts Module */,
+				50AF3E89260ABE9700CBCD0C /* PostDetails Module */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		50BBB670264DC854005E709E /* Crops */ = {
+			isa = PBXGroup;
+			children = (
+				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
+				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
+				50BC0A6B25E5C03F006653FD /* MyCrops */,
+			);
+			path = Crops;
+			sourceTree = "<group>";
+		};
 		50BC0A6B25E5C03F006653FD /* MyCrops */ = {
 			isa = PBXGroup;
 			children = (
@@ -4289,27 +4322,18 @@
 				217BAEBD264DB68C00EE10AF /* User */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
 				50BC86FC260543520065D8FE /* Profile Module */,
-				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
-				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
-				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
 				50206EC8260E9C900095E995 /* Archive */,
 				50206EBD260E6BEA0095E995 /* AddTask */,
 				21A706ED260DECD50094EC56 /* Suggestions Module */,
-				509643A725E2EF3E0000FB60 /* AddPost Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
-				50AF3EC2260AD16A00CBCD0C /* CreateFarm */,
-				5062E7AF25FB26A4000398AA /* CropsInfo Module */,
-				213751CC25F3FC4F00E342EF /* CropsInfoDetails Module */,
+				50BBB670264DC854005E709E /* Crops */,
 				218C78322629E72B00DA440A /* AddProduct Module */,
 				2121AC0C26052026001A2EDD /* Help */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
-				50BC0A6B25E5C03F006653FD /* MyCrops */,
-				50D6137025DC1CA900228385 /* MyFarm */,
-				5049697225F81E22002C3E40 /* MyFarmDetails Module */,
-				2137520425F58DFC00E342EF /* MyPosts Module */,
-				50AF3E89260ABE9700CBCD0C /* PostDetails Module */,
+				50BBB66E264DC713005E709E /* Farm */,
+				50BBB66F264DC75F005E709E /* Posts */,
 				217D1E8E2608293C0025462F /* Product Details */,
 				503CB59B25E07AD100B7A393 /* Products */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
