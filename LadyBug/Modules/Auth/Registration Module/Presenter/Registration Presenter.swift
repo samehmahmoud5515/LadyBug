@@ -7,15 +7,14 @@
 
 import Moya
 
-class RegistrationPresenter: RegistrationPresenterProtocol {
-    
+class RegistrationPresenter: RegistrationPresenterProtocol{
+
     weak var view: RegistrationViewProtocol?
     var images = ImageLocalizer()
     var localizer = RegistrationLocalizer()
-    var jobId = [Int] ()
-    var jobName = [String] ()
+    var jobs = [JobsInfo]()
     let provider = MoyaProvider<RegistrationEndpoint>()
-    let jobsProvider = MoyaProvider<GetJobsEndPoint>()
+    let jobsProvider = MoyaProvider<JobsEndPoint>()
     init(view: RegistrationViewProtocol) {
         self.view = view
     }
@@ -48,14 +47,8 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
                         let jobsResponse = try? moyaResponse.map(JobsResponse.self)
                         print(jobsResponse)
                         guard let jobs = jobsResponse?.data?.all else { return }
-                        for job in jobs{
-                            print(job.name)
-                            self.jobName.append(job.name!)
-                            print(self.jobName)
-                            print(job.id)
-                            self.jobId.append(job.id!)
-                            print(self.jobId)
-                        }
+                        self.jobs = jobs
+                        self.view?.setselectProfessionSelectionView()
                         print(jobs)
                     } catch {
                         print("Parsing Error")

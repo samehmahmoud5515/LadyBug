@@ -26,12 +26,9 @@ extension PasswordEndpoint: TargetType, AccessTokenAuthorizable, CommonHeaderPro
         case .createNewPassword:
             return  "/public/api/v1/users/12"
         case .forgetPassword:
-            return         "/api/v1/auth/me"
+            return  "/api/v1/auth/me"
             
         }
-        
-        
-        //"/public/api/v1/users/12"
     }
     
     var method: Method {

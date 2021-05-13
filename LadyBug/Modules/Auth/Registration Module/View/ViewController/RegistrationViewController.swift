@@ -23,6 +23,8 @@ class RegistrationViewController: UIViewController {
     
     var presenter: RegistrationPresenterProtocol!
     
+    var selectedJobId : String = ""
+
     init() {
         super.init(nibName: "\(RegistrationViewController.self)", bundle: nil)
         presenter = RegistrationPresenter(view: self)
@@ -37,7 +39,6 @@ class RegistrationViewController: UIViewController {
         setupUI()
         viewSetup()
         termsAndConditionsButton.titleLabel?.numberOfLines = 0
-        setselectProfessionSelectionView()
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
     }
@@ -239,16 +240,20 @@ extension RegistrationViewController{
     }
 }
 
-extension RegistrationViewController {
+extension RegistrationViewController  {
     @IBAction func createAccount(_ sender: UIButton) {
-        presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: "1" , photo: "")
+        presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: selectedJobId , photo: "")
     }
 }
 
-extension RegistrationViewController {
+extension RegistrationViewController : StandardSelectionViewDelegate {
+    func didSelectItem(item: String) {
+        selectedJobId = String(presenter.jobs.first(where: { $0.name == item })?.id ?? 1)
+    }
+    
     func setselectProfessionSelectionView(){
-        print(presenter.jobName)
+        selectProfessionSelectionView.delegate = self
         selectProfessionSelectionView.setupUI(selectionTitle: presenter.localizer.chooseYourProfession)
-        selectProfessionSelectionView.datasource = presenter.jobName
+        selectProfessionSelectionView.datasource = presenter.jobs.compactMap{$0.name}
     }
 }

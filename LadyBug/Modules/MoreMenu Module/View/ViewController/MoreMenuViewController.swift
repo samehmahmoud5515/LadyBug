@@ -10,9 +10,7 @@ import UIKit
 class MoreMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     var presnter: MoreMenuPresenterProtocol!
-    
     init() {
         super.init(nibName: "\(MoreMenuViewController.self)", bundle: nil)
         presnter = MoreMenuPresenter(view: self)
@@ -25,6 +23,7 @@ class MoreMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presnter.getProfile()
         setupUI()
         presnter.attach()
     }
@@ -105,7 +104,7 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
         switch presnter.datasource[indexPath.row] {
         case let .profile(MoreMenuProfileModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuProfileCell.self)", for: indexPath) as? MoreMenuProfileCell ?? MoreMenuProfileCell()
-            cell.setupUI(model: MoreMenuProfileModel)
+            cell.setupUI(model: MoreMenuProfileModel , data: presnter.user )
             return cell
         case let .notification(notificationModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuNotificationsCell.self)", for: indexPath) as? MoreMenuNotificationsCell ?? MoreMenuNotificationsCell()
@@ -209,6 +208,12 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             LanguageManager.shared.changeLanguage(language: Language.en)
         }, secondActionTitle: "Arabic") {
             LanguageManager.shared.changeLanguage(language: Language.ar)
+        }
+    }
+    
+    func updateJobName(jobName : String ){
+        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? MoreMenuProfileCell{
+            cell.updateJobName(jobName: jobName)
         }
     }
 }

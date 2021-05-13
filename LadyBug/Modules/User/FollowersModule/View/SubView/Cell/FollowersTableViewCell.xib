@@ -81,9 +81,6 @@
                                         <color key="value" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="followersFollowingActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7ke-wx-cfX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -97,6 +94,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="bT5-9w-BLs" secondAttribute="trailing" id="Ov8-Zz-lF3"/>
                     <constraint firstAttribute="bottom" secondItem="bT5-9w-BLs" secondAttribute="bottom" constant="7.5" id="ViP-ns-5Lg"/>

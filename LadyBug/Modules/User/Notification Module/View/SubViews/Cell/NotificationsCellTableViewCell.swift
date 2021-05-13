@@ -15,10 +15,18 @@ class NotificationsCellTableViewCell: UITableViewCell {
     @IBOutlet weak var notificationContentTitle: UITextView!
     @IBOutlet weak var notificationSubjectTitle: UILabel!
     
+    func setupSelecttion(isSelected: Bool){
+        notificationCoranerView.backgroundColor = isSelected ? .midGreenTwo : .paleGrey
+               notificationCoranerView.layer.borderWidth = isSelected ? 0 : 1.5
+               notificationCoranerView.layer.borderColor = UIColor.blueyGreyTwo.cgColor
+    }
+    
     func setupCell( notification : Notification){
         notificationHeaderTitle.text = notification.title
         notificationTimeTitle.text = notification.createdAt
-        notificationSubjectTitle.text = notification.body
+        notificationContentTitle.text = notification.body
+        notificationSubjectTitle.text = notification.type
+       
         setupUI()
     }
     

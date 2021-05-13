@@ -27,7 +27,6 @@ extension FollowersEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderPr
         case .getUserFollowings:
             return "/api/v1/users/followings/index"
         case .toggleFollow(let userId) :
-            
             return "/api/v1/users/toggle_follow/" + String(userId)
         }
 

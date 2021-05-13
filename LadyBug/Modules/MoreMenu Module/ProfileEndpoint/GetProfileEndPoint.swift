@@ -1,50 +1,47 @@
 //
-//  JobsEndPoint.swift
+//  GetProfileEndPoint.swift
 //  LadyBug
 //
-//  Created by Mohamed Abdelhamed Ahmed on 5/1/21.
+//  Created by Mohamed Abdelhamed Ahmed on 5/12/21.
 //
 
 import Moya
 
-enum GetJobsEndPoint {
-    case jobs
+enum GetProfileEndPoint {
+    case getProfile
 }
 
-extension GetJobsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
+extension GetProfileEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
     
     var baseURL: URL {
         Environment.baseUrl
     }
-    
+
     var path: String {
-        "/api/v1/human_jobs"
+        "/api/v1/auth/me"
     }
-    
+
     var method: Method {
         .get
     }
-    
+
     var sampleData: Data {
         Data()
     }
-    
+
     var task: Task {
         switch self {
-        case .jobs:
+        case .getProfile :
              return .requestPlain
         }
-       
     }
-    
+
     var headers: [String : String]? {
-        
         return commonHeader
     }
     
     var authorizationType: AuthorizationType {
         .bearer
     }
-    
-}
 
+}

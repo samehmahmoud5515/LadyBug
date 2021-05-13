@@ -29,9 +29,10 @@ class NotificationPresenter: NotificationPresenterProtocol {
             case let .success(moyaResponse):
                 do {
                     let getNotificationResponse = try? moyaResponse.map(NotificationResponse.self)
-                    guard let getNotification = getNotificationResponse?.data else { return }
-                    self.notifications = getNotification.notifications
+                    guard let getNotification = getNotificationResponse?.data?.all else { return }
+                    self.notifications = getNotification
                     self.view?.reloadData()
+                    
                 } catch {
                     print("Parsing Error")
                 }

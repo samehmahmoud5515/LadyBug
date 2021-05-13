@@ -26,6 +26,7 @@ class FollowersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presnter.getUserFollowings()
         setupUI()
         presnter.attach()
         tableView.delegate = self
@@ -110,3 +111,5 @@ extension FollowersViewController : FollowersViewProtocol {
         tableView.reloadData()
        }
 }
+
+

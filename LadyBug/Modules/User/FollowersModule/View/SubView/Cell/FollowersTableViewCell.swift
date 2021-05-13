@@ -63,11 +63,3 @@ extension FollowersTableViewCell{
     }
 }
 
-extension FollowersTableViewCell {
-  
-    @IBAction func followersFollowingActionButton(_ sender: UIButton) {
-        followersFollowingButton.backgroundColor = UIColor.green
-    }
-    
-    
-}
