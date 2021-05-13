@@ -20,7 +20,7 @@ class LoginPresenter: LoginPresenterProtocol {
     func login(with username: String, password: String) {
 //        if username == Defaults[.username] && Defaults[.password] == password {
 //            Defaults[.isUserLogged] = true
-//            view?.navigateToTabBarController()
+//
 //        }
         provider.request(.login(username: username, password: password)) { result in
             switch result {
@@ -30,6 +30,7 @@ class LoginPresenter: LoginPresenterProtocol {
                     print(loginResponse)
                     guard let accessToken = loginResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
+                    self.view?.navigateToTabBarController()
                 } catch {
                     print("Parsing Error")
                 }

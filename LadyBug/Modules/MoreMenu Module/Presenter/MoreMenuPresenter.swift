@@ -5,15 +5,18 @@
 //  Created by Sameh on 2/20/21.
 //
 
-import Foundation
+import Moya
 
-class MoreMenuPresenter: MoreMenuPresenterProtocol {
+class MoreMenuPresenter: MoreMenuPresenterProtocol{
     
     weak var view: MoreMenuViewProtocol?
     var localizer = MoreMenuLocalizer()
     var images = MoreMenuImages()
     var datasource = [MoreMenuUIModel]()
-    
+    var user = JObsUserInfo()
+    let logoutProvider = MoyaProvider<LogoutEndpoint>()
+    let profileProvider = MoyaProvider<GetProfileEndPoint>(plugins: [AuthorizableTokenPlugin()])
+    let jobsProvider = MoyaProvider<JobsEndPoint>()
     init(view: MoreMenuViewProtocol) {
         self.view = view
     }
@@ -83,15 +86,60 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     func handleCellDidTapped(index: Int) {
         let model = datasource[index]
         switch model {
-        case .logOut:
-            logout()
+            
         default:
             view?.naviageteTo(model: model)
         }
     }
     
-    private func logout() {
-       // AccessTokenManager.removeAccessToken()
-        view?.naviageteTo(model: MoreMenuUIModel.logOut(MoreMenuModel()))
+    func logout() {
+        logoutProvider.request(.logout) { result in
+            switch result {
+            case let .success(moyaResponse):
+                let data = moyaResponse.data
+                let statusCode = moyaResponse.statusCode
+                AccessTokenManager.removeAccessToken()
+            case let .failure(error):
+                break
+            }
+        }
+    }
+    func getProfile() {
+        profileProvider.request(.getProfile) { result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let getProfileResponed = try? moyaResponse.map(ProfileResponed.self)
+                    print(getProfileResponed)
+                    guard let getGetProfile = getProfileResponed?.data else { return }
+                    self.user = getGetProfile
+                    self.view?.notifiyDataChange()
+                    self.fetchJobs()
+                    print(self.user)
+                } catch {
+                    print("Parsing Error")
+                }
+            case let .failure(error):
+                break
+            }
+        }
+    }
+    func fetchJobs() {
+        jobsProvider.request(.jobs) { result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let jobsResponse = try? moyaResponse.map(JobsResponse.self)
+                    print(jobsResponse)
+                    guard let jobs = jobsResponse?.data?.all else { return }
+                    self.view?.updateJobName(jobName: jobs.first(where: { $0.id == self.user.humanJobID })?.name ?? "")
+                    print(jobs)
+                } catch {
+                    print("Parsing Error")
+                }
+            case let .failure(error):
+                break
+            }
+        }
     }
 }

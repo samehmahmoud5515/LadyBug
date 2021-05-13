@@ -38,7 +38,7 @@ extension LoginEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtoc
     }
     
     var headers: [String : String]? {
-        commonHeader
+        return commonHeader
     }
     
     var authorizationType: AuthorizationType {

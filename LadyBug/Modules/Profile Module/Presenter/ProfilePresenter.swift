@@ -5,7 +5,7 @@
 //  Created by SAMEH on 19/03/2021.
 //
 
-import Foundation
+import Moya
 
 class ProfilePresenter: ProfilePresenterProtocol {
     
@@ -15,6 +15,8 @@ class ProfilePresenter: ProfilePresenterProtocol {
     
     var images = ProfileImages()
     
+    let provider = MoyaProvider<UpdateUserEndPoint>(plugins: [AuthorizableTokenPlugin()])
+    
     init(view: ProfileViewProtocol) {
         self.view = view
     }
@@ -22,5 +24,19 @@ class ProfilePresenter: ProfilePresenterProtocol {
     func attach() {
         
     }
-    
+    func updateUser(name: String, email: String,humanJobId: String, photo: String) {
+        provider.request(.updateUser(name: name, email: email, humanJobId: humanJobId, photo: photo)) { result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let registrationResponse = try? moyaResponse.map(UpdateResponse.self)
+                    print(registrationResponse)
+                } catch {
+                    print("Parsing Error")
+                }
+            case let .failure(error):
+                break
+            }
+        }
+    }
 }

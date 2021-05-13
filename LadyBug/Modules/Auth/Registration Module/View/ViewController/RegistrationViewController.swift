@@ -23,6 +23,8 @@ class RegistrationViewController: UIViewController {
     
     var presenter: RegistrationPresenterProtocol!
     
+    var selectedJobId : String = ""
+
     init() {
         super.init(nibName: "\(RegistrationViewController.self)", bundle: nil)
         presenter = RegistrationPresenter(view: self)
@@ -32,11 +34,11 @@ class RegistrationViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.fetchJobs()
         setButtonFonts()
         setupUI()
         viewSetup()
         termsAndConditionsButton.titleLabel?.numberOfLines = 0
-        selectProfessionSelectionView.setupUI(selectionTitle: presenter.localizer.chooseYourProfession)
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
     }
@@ -69,7 +71,7 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
                 textField.displayError(presenter.localizer.emailAlert)
             }
         } else if textField == mobileField {
-            if !textField.inputText.isValidEmail {
+            if !textField.inputText.isValidPhone {
                 textField.displayError(presenter.localizer.phoneNumerAlert)
             }
         } else if textField == passwordField {
@@ -116,6 +118,8 @@ extension RegistrationViewController: StandardTextFieldViewProtocol {
             retypePasswordField.removeErrorView()
         }
     }
+    
+    
 }
 extension RegistrationViewController {
     func observeOnKeyboard() {
@@ -172,7 +176,10 @@ extension RegistrationViewController {
 }
 
 extension RegistrationViewController: RegistrationViewProtocol {
-    
+    func navigateToTabBarController() {
+        let vc = TabBarViewController()
+        navigationController?.viewControllers = [vc]
+    }
 }
 extension RegistrationViewController{
     private func viewSetup(){
@@ -223,15 +230,30 @@ extension RegistrationViewController{
     
     private func setupTermsAndCondtionsButton() {
         let mutableStrings = NSMutableAttributedString()
-        mutableStrings.append(NSAttributedString(string: "بالنقر فوق تسجيل ، فإنك توافق على", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
+        mutableStrings.append(NSAttributedString(string: presenter.localizer.termsAndConditionsPartOne, attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
         
-        mutableStrings.append(NSAttributedString(string: " الشروط والأحكام", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.midGreenTwo]))
+        mutableStrings.append(NSAttributedString(string: presenter.localizer.termsAndConditionsPartTwo, attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.midGreenTwo]))
         
-        mutableStrings.append(NSAttributedString(string: " التالية بدون تحفظ", attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
+        mutableStrings.append(NSAttributedString(string: presenter.localizer.termsAndConditionsPartThree, attributes: [NSAttributedString.Key.font: UIFont.get(enFont: .regular(13), arFont: .regular(13)), NSAttributedString.Key.foregroundColor: UIColor.black]))
         termsAndConditionsButton.setAttributedTitle(mutableStrings, for: .normal)
         termsAndConditionsButton.titleLabel?.textAlignment = .center
     }
+}
+
+extension RegistrationViewController  {
+    @IBAction func createAccount(_ sender: UIButton) {
+        presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: selectedJobId , photo: "")
+    }
+}
+
+extension RegistrationViewController : StandardSelectionViewDelegate {
+    func didSelectItem(item: String) {
+        selectedJobId = String(presenter.jobs.first(where: { $0.name == item })?.id ?? 1)
+    }
     
-    
-    
+    func setselectProfessionSelectionView(){
+        selectProfessionSelectionView.delegate = self
+        selectProfessionSelectionView.setupUI(selectionTitle: presenter.localizer.chooseYourProfession)
+        selectProfessionSelectionView.datasource = presenter.jobs.compactMap{$0.name}
+    }
 }

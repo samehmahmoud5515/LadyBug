@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateNewPasswordViewController: UIViewController, CreateNewPasswordViewProtocol {
+class CreateNewPasswordViewController: UIViewController {
     @IBOutlet weak var submitButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var makePassWordHeadLabeltitle: UILabel!
@@ -17,7 +17,7 @@ class CreateNewPasswordViewController: UIViewController, CreateNewPasswordViewPr
     @IBOutlet weak var passwordField: StandardTextFieldView!
     @IBOutlet weak var retypePasswordField: StandardTextFieldView!
     
-    private var presenter : CreateNewPasswordPresenterPrototocol!
+    private var presenter : CreateNewPasswordPresenterprotocol!
     
     init() {
         super.init(nibName: "\(CreateNewPasswordViewController.self)", bundle: nil)
@@ -46,19 +46,12 @@ class CreateNewPasswordViewController: UIViewController, CreateNewPasswordViewPr
     }
     
     private func enableCreateAccountButton() {
-           doneButton.isUserInteractionEnabled = true
-           doneButton.backgroundColor = UIColor.midGreenTwo
-       }
-       private func disableCreateAccountButton() {
-           doneButton.isUserInteractionEnabled = false
-           doneButton.backgroundColor = UIColor.lightBlueGrey
-       }
-    @IBAction func doneButton(_ sender: UIButton) {
-       let vc = LoginViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        doneButton.isUserInteractionEnabled = true
+        doneButton.backgroundColor = UIColor.midGreenTwo
     }
-    func navigateToTabBarController() {
-           
+    private func disableCreateAccountButton() {
+        doneButton.isUserInteractionEnabled = false
+        doneButton.backgroundColor = UIColor.lightBlueGrey
     }
 }
 
@@ -127,39 +120,39 @@ extension CreateNewPasswordViewController {
 
 extension CreateNewPasswordViewController: StandardTextFieldViewProtocol {
     func didBeginEditing(_ textField: StandardTextFieldView) {
-
-       }
-       func didEndEditing(_ textField: StandardTextFieldView) {
-         
-           if textField == passwordField {
-               if !textField.inputText.isValidPassword {
-                   textField.displayError(presenter.localizer.passwordAlert)
-               }
-           } else if textField == retypePasswordField {
-               if textField.inputText != passwordField.inputText || passwordField.inputText.isEmpty {
-                   textField.displayError(presenter.localizer.passwordConfirmationAlert)
-               }
-           }
-       }
-       func textFieldShouldReturn(_ textField: StandardTextFieldView) {
+        
+    }
+    func didEndEditing(_ textField: StandardTextFieldView) {
+        
         if textField == passwordField {
-               retypePasswordField.requestFocus()
-           } else if textField == retypePasswordField {
-               retypePasswordField.releaseFocus()
-           }
-       }
-       func didChangeText(text: String, _ textField: StandardTextFieldView) {
-           if passwordField.inputText.isValidPassword &&
-               passwordField.inputText == retypePasswordField.inputText 
-            {
-               enableCreateAccountButton()
-           }else {
-               disableCreateAccountButton()
-           }
-           if textField == retypePasswordField {
-               retypePasswordField.removeErrorView()
-           }
-       }
+            if !textField.inputText.isValidPassword {
+                textField.displayError(presenter.localizer.passwordAlert)
+            }
+        } else if textField == retypePasswordField {
+            if textField.inputText != passwordField.inputText || passwordField.inputText.isEmpty {
+                textField.displayError(presenter.localizer.passwordConfirmationAlert)
+            }
+        }
+    }
+    func textFieldShouldReturn(_ textField: StandardTextFieldView) {
+        if textField == passwordField {
+            retypePasswordField.requestFocus()
+        } else if textField == retypePasswordField {
+            retypePasswordField.releaseFocus()
+        }
+    }
+    func didChangeText(text: String, _ textField: StandardTextFieldView) {
+        if passwordField.inputText.isValidPassword &&
+            passwordField.inputText == retypePasswordField.inputText
+        {
+            enableCreateAccountButton()
+        }else {
+            disableCreateAccountButton()
+        }
+        if textField == retypePasswordField {
+            retypePasswordField.removeErrorView()
+        }
+    }
 }
 
 extension CreateNewPasswordViewController {
@@ -183,19 +176,33 @@ extension CreateNewPasswordViewController {
     }
 }
 extension CreateNewPasswordViewController{
-private func viewSetup(){
-    passwordFieldView()
-    retypePasswordFieldView()
+    private func viewSetup(){
+        passwordFieldView()
+        retypePasswordFieldView()
+    }
+    private func passwordFieldView(){
+        passwordField.addMaxCharToTextField(20)
+        passwordField.delegate = self
+        passwordField.setupUI(isPasswordField: true, placeholder:presenter.localizer.password, nextButton: true)
+    }
+    
+    private func retypePasswordFieldView(){
+        retypePasswordField.addMaxCharToTextField(20)
+        retypePasswordField.delegate = self
+        retypePasswordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.passwordConfirmation, nextButton: false)
+    }
 }
-private func passwordFieldView(){
-       passwordField.addMaxCharToTextField(20)
-       passwordField.delegate = self
-    passwordField.setupUI(isPasswordField: true, placeholder:presenter.localizer.password, nextButton: true)
-   }
-   
-   private func retypePasswordFieldView(){
-       retypePasswordField.addMaxCharToTextField(20)
-       retypePasswordField.delegate = self
-    retypePasswordField.setupUI(isPasswordField: true, placeholder: presenter.localizer.passwordConfirmation, nextButton: false)
-   }
+
+extension CreateNewPasswordViewController{
+    
+    @IBAction func doneButtondoneButtonDidTapped(_ sender: UIButton) {
+        presenter.createNewPassword(password: passwordField.inputText)
+    }
+}
+
+extension CreateNewPasswordViewController : CreateNewPasswordViewProtocol {
+     func navigateToLoginController() {
+           let vc = LoginViewController()
+           navigationController?.viewControllers = [vc]
+       }
 }
