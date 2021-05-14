@@ -30,10 +30,12 @@ class FollowersPresenter:FollowersPresenterProtocols{
                     guard let getFollowers = getFollowingsResponed?.data else { return }
                     self.user = getFollowers.Followers
                     self.view?.reloadData()
+                    self.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }
@@ -48,10 +50,12 @@ class FollowersPresenter:FollowersPresenterProtocols{
                     guard let getFollowers = getFollowingsResponed?.data else { return }
                     self.user = getFollowers.Followers
                     self.view?.reloadData()
+                    self.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }

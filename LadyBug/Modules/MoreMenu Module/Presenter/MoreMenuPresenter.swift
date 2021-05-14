@@ -115,11 +115,13 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
                     self.user = getGetProfile
                     self.view?.notifiyDataChange()
                     self.fetchJobs()
-                    print(self.user)
+                    self.view?.stopIndicator()
                 } catch {
+                    self.view?.stopIndicator()
                     print("Parsing Error")
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }
@@ -130,10 +132,8 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
             case let .success(moyaResponse):
                 do {
                     let jobsResponse = try? moyaResponse.map(JobsResponse.self)
-                    print(jobsResponse)
                     guard let jobs = jobsResponse?.data?.all else { return }
                     self.view?.updateJobName(jobName: jobs.first(where: { $0.id == self.user.humanJobID })?.name ?? "")
-                    print(jobs)
                 } catch {
                     print("Parsing Error")
                 }

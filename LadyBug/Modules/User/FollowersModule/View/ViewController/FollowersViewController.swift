@@ -26,6 +26,7 @@ class FollowersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.startLoadingIndicator()
         presnter.getUserFollowings()
         setupUI()
         presnter.attach()
@@ -107,6 +108,10 @@ extension FollowersViewController :UITableViewDataSource,UITableViewDelegate{
     }
 }
 extension FollowersViewController : FollowersViewProtocol {
+    func stopIndicator() {
+        self.stopLoadingIndicator()
+    }
+    
     func reloadData() {
         tableView.reloadData()
        }

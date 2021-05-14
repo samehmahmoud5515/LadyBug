@@ -9,10 +9,12 @@ import Foundation
 
 protocol LoginViewProtocol: class {
     func navigateToTabBarController()
+    func stopIndicator()
 }
 
 protocol LoginPresenterProtocol: class {
     var localizer: loginLocalizer { get }
     var images: LoginImages { get }
     func login(with username: String, password: String)
+    
 }

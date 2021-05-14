@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="6" width="487" height="102"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-CL-gJC">
-                                <rect key="frame" x="9" y="11" width="171" height="34"/>
+                                <rect key="frame" x="9" y="11" width="94" height="34"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-5I-ITu">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
@@ -43,10 +43,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7VZ-Nb-tRd">
-                                        <rect key="frame" x="44" y="0.0" width="127" height="34"/>
+                                        <rect key="frame" x="44" y="0.0" width="50" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="محمد خليفة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqj-9z-FE0">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqj-9z-FE0">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="xVJ-v7-u0c"/>
                                                 </constraints>
@@ -54,8 +54,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+201018685227" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-kR-FBw">
-                                                <rect key="frame" x="0.0" y="22" width="127" height="12"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-kR-FBw">
+                                                <rect key="frame" x="0.0" y="22" width="50" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -64,8 +64,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مهندس زراعي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEm-Gq-XfD">
-                                <rect key="frame" x="187" y="11" width="92" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEm-Gq-XfD">
+                                <rect key="frame" x="110" y="11" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                                 <color key="tintColor" red="0.52941176470588236" green="0.60784313725490191" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZW6-67-NRu">
-                                <rect key="frame" x="20.5" y="61" width="152.5" height="28"/>
+                                <rect key="frame" x="9" y="61" width="152.5" height="28"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more_menu_best_seller_Points" translatesAutoresizingMaskIntoConstraints="NO" id="0lk-O8-NWr">
                                         <rect key="frame" x="0.0" y="0.0" width="23" height="28"/>
@@ -132,7 +132,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ZW6-67-NRu" secondAttribute="bottom" constant="13" id="1vy-M7-caL"/>
                             <constraint firstItem="dUT-jc-65T" firstAttribute="top" secondItem="Cuk-CL-gJC" secondAttribute="bottom" constant="-15" id="2nF-oC-QBD"/>
-                            <constraint firstItem="ZW6-67-NRu" firstAttribute="centerX" secondItem="Cuk-CL-gJC" secondAttribute="centerX" constant="2" id="5tM-qG-Owc"/>
+                            <constraint firstItem="ZW6-67-NRu" firstAttribute="leading" secondItem="Cuk-CL-gJC" secondAttribute="leading" id="66B-c1-KUr"/>
                             <constraint firstItem="Cuk-CL-gJC" firstAttribute="leading" secondItem="Gcy-9b-EcV" secondAttribute="leading" constant="9" id="8kF-YP-hU7"/>
                             <constraint firstItem="OlI-U1-pk1" firstAttribute="bottom" secondItem="ZW6-67-NRu" secondAttribute="bottom" id="AwE-Vm-Ysx"/>
                             <constraint firstItem="OlI-U1-pk1" firstAttribute="top" secondItem="ZW6-67-NRu" secondAttribute="top" id="GGd-CE-fd1"/>

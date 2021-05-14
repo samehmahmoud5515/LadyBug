@@ -13,8 +13,8 @@
 		2101D8FC25F2E46D00FB0DB9 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8EE25F2E46C00FB0DB9 /* NotificationModel.swift */; };
 		2101D8FD25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8F225F2E46C00FB0DB9 /* NotificationsCellTableViewCell.swift */; };
 		2101D8FE25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D8F325F2E46C00FB0DB9 /* NotificationsCellTableViewCell.xib */; };
-		2101D8FF25F2E46D00FB0DB9 /* NotificationTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D8F525F2E46C00FB0DB9 /* NotificationTabelViewController.xib */; };
-		2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8F625F2E46C00FB0DB9 /* NotificationTabelViewController.swift */; };
+		2101D8FF25F2E46D00FB0DB9 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2101D8F525F2E46C00FB0DB9 /* NotificationViewController.xib */; };
+		2101D90025F2E46D00FB0DB9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8F625F2E46C00FB0DB9 /* NotificationViewController.swift */; };
 		2101D90125F2E46D00FB0DB9 /* NotificationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D8F825F2E46C00FB0DB9 /* NotificationProtocols.swift */; };
 		2101D90B25F2F9E300FB0DB9 /* ProductsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D90A25F2F9E300FB0DB9 /* ProductsImage.swift */; };
 		2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2101D90D25F2FA1900FB0DB9 /* Products Localizer.swift */; };
@@ -39,6 +39,7 @@
 		21112D1926191F650037B8AE /* FarmPersonSelectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21112D1126191F650037B8AE /* FarmPersonSelectionProtocols.swift */; };
 		2116A56A2638983100C56301 /* UpdateUserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A5692638983100C56301 /* UpdateUserEndPoint.swift */; };
 		2116A56E2638AC7500C56301 /* UpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2116A56D2638AC7500C56301 /* UpdateResponse.swift */; };
+		212046C7264E12330077D6F1 /* ProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212046C6264E12330077D6F1 /* ProductsResponse.swift */; };
 		2121AC1B26052027001A2EDD /* HelpImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC0F26052026001A2EDD /* HelpImage.swift */; };
 		2121AC1C26052027001A2EDD /* HelpLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1126052026001A2EDD /* HelpLocalizer.swift */; };
 		2121AC1E26052027001A2EDD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121AC1426052026001A2EDD /* HelpPresenter.swift */; };
@@ -138,7 +139,9 @@
 		21A70708260DECD60094EC56 /* SuggestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A706FD260DECD50094EC56 /* SuggestionsViewController.xib */; };
 		21A70709260DECD60094EC56 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A706FE260DECD50094EC56 /* SuggestionsViewController.swift */; };
 		21A7070A260DECD60094EC56 /* SuggestionsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A70700260DECD50094EC56 /* SuggestionsProtocols.swift */; };
+		21B24D90264DFEBC009724DF /* ProductsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B24D8F264DFEBB009724DF /* ProductsEndPoint.swift */; };
 		21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CE318825F597D30015467B /* MyPostsPresenter.swift */; };
+		21DCD341264F01DB00DBD11A /* CitesAndCropsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DCD340264F01DB00DBD11A /* CitesAndCropsModel.swift */; };
 		5001432525F99A9300D1630E /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432325F99A9300D1630E /* MyTasksViewController.swift */; };
 		5001432625F99A9300D1630E /* MyTasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5001432425F99A9300D1630E /* MyTasksViewController.xib */; };
 		5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001432925F99AD500D1630E /* MyTasksPresenter.swift */; };
@@ -436,8 +439,8 @@
 		2101D8EE25F2E46C00FB0DB9 /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		2101D8F225F2E46C00FB0DB9 /* NotificationsCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCellTableViewCell.swift; sourceTree = "<group>"; };
 		2101D8F325F2E46C00FB0DB9 /* NotificationsCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsCellTableViewCell.xib; sourceTree = "<group>"; };
-		2101D8F525F2E46C00FB0DB9 /* NotificationTabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTabelViewController.xib; sourceTree = "<group>"; };
-		2101D8F625F2E46C00FB0DB9 /* NotificationTabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTabelViewController.swift; sourceTree = "<group>"; };
+		2101D8F525F2E46C00FB0DB9 /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		2101D8F625F2E46C00FB0DB9 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		2101D8F825F2E46C00FB0DB9 /* NotificationProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationProtocols.swift; sourceTree = "<group>"; };
 		2101D90A25F2F9E300FB0DB9 /* ProductsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsImage.swift; sourceTree = "<group>"; };
 		2101D90D25F2FA1900FB0DB9 /* Products Localizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Products Localizer.swift"; sourceTree = "<group>"; };
@@ -462,6 +465,7 @@
 		21112D1126191F650037B8AE /* FarmPersonSelectionProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmPersonSelectionProtocols.swift; sourceTree = "<group>"; };
 		2116A5692638983100C56301 /* UpdateUserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserEndPoint.swift; sourceTree = "<group>"; };
 		2116A56D2638AC7500C56301 /* UpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponse.swift; sourceTree = "<group>"; };
+		212046C6264E12330077D6F1 /* ProductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResponse.swift; sourceTree = "<group>"; };
 		2121AC0F26052026001A2EDD /* HelpImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpImage.swift; sourceTree = "<group>"; };
 		2121AC1126052026001A2EDD /* HelpLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpLocalizer.swift; sourceTree = "<group>"; };
 		2121AC1426052026001A2EDD /* HelpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPresenter.swift; sourceTree = "<group>"; };
@@ -561,7 +565,9 @@
 		21A706FD260DECD50094EC56 /* SuggestionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionsViewController.xib; sourceTree = "<group>"; };
 		21A706FE260DECD50094EC56 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
 		21A70700260DECD50094EC56 /* SuggestionsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsProtocols.swift; sourceTree = "<group>"; };
+		21B24D8F264DFEBB009724DF /* ProductsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndPoint.swift; sourceTree = "<group>"; };
 		21CE318825F597D30015467B /* MyPostsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsPresenter.swift; sourceTree = "<group>"; };
+		21DCD340264F01DB00DBD11A /* CitesAndCropsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitesAndCropsModel.swift; sourceTree = "<group>"; };
 		5001432325F99A9300D1630E /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
 		5001432425F99A9300D1630E /* MyTasksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTasksViewController.xib; sourceTree = "<group>"; };
 		5001432925F99AD500D1630E /* MyTasksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksPresenter.swift; sourceTree = "<group>"; };
@@ -867,7 +873,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2101D8E525F2E46C00FB0DB9 /* Notification Module */ = {
+		2101D8E525F2E46C00FB0DB9 /* NotificationModule */ = {
 			isa = PBXGroup;
 			children = (
 				21600124263E4C9700874B4E /* NotificationEndpoint */,
@@ -877,7 +883,7 @@
 				2101D8ED25F2E46C00FB0DB9 /* Models */,
 				2101D8EF25F2E46C00FB0DB9 /* View */,
 			);
-			path = "Notification Module";
+			path = NotificationModule;
 			sourceTree = "<group>";
 		};
 		2101D8E625F2E46C00FB0DB9 /* Resources */ = {
@@ -951,8 +957,8 @@
 		2101D8F425F2E46C00FB0DB9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2101D8F525F2E46C00FB0DB9 /* NotificationTabelViewController.xib */,
-				2101D8F625F2E46C00FB0DB9 /* NotificationTabelViewController.swift */,
+				2101D8F525F2E46C00FB0DB9 /* NotificationViewController.xib */,
+				2101D8F625F2E46C00FB0DB9 /* NotificationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1197,6 +1203,14 @@
 				2116A56D2638AC7500C56301 /* UpdateResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		212046C5264E111E0077D6F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				212046C6264E12330077D6F1 /* ProductsResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2121AC0C26052026001A2EDD /* Help */ = {
@@ -1769,7 +1783,7 @@
 		217BAEBD264DB68C00EE10AF /* User */ = {
 			isa = PBXGroup;
 			children = (
-				2101D8E525F2E46C00FB0DB9 /* Notification Module */,
+				2101D8E525F2E46C00FB0DB9 /* NotificationModule */,
 				213751E725F4309600E342EF /* FollowersModule */,
 			);
 			path = User;
@@ -1910,10 +1924,10 @@
 			isa = PBXGroup;
 			children = (
 				218C78332629E72B00DA440A /* Resources */,
-				218C78382629E72B00DA440A /* Presenter */,
 				218C783A2629E72B00DA440A /* Models */,
-				218C783D2629E72B00DA440A /* View */,
 				218C78532629E72B00DA440A /* Protocols */,
+				218C78382629E72B00DA440A /* Presenter */,
+				218C783D2629E72B00DA440A /* View */,
 			);
 			path = "AddProduct Module";
 			sourceTree = "<group>";
@@ -1956,6 +1970,7 @@
 			children = (
 				218C783B2629E72B00DA440A /* AddProductUIModel.swift */,
 				218C783C2629E72B00DA440A /* AddProductModel.swift */,
+				21DCD340264F01DB00DBD11A /* CitesAndCropsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2180,6 +2195,26 @@
 				21A70700260DECD50094EC56 /* SuggestionsProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		21B24D8D264DFC6D009724DF /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				21B24D8E264DFE2F009724DF /* ProductsEndPoint */,
+				218C78322629E72B00DA440A /* AddProduct Module */,
+				503CB59B25E07AD100B7A393 /* Products */,
+				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
+				217D1E8E2608293C0025462F /* Product Details */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		21B24D8E264DFE2F009724DF /* ProductsEndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				21B24D8F264DFEBB009724DF /* ProductsEndPoint.swift */,
+			);
+			path = ProductsEndPoint;
 			sourceTree = "<group>";
 		};
 		5001432025F99A6600D1630E /* MyTasks Module */ = {
@@ -2596,6 +2631,7 @@
 		503CB59B25E07AD100B7A393 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				212046C5264E111E0077D6F1 /* Model */,
 				503CB5B125E07BD200B7A393 /* Protocols */,
 				503CB5AD25E07BBE00B7A393 /* Presenter */,
 				503CB5A325E07B6800B7A393 /* Resources */,
@@ -4320,6 +4356,7 @@
 			children = (
 				508D16EC26291548004ED2D4 /* Auth */,
 				217BAEBD264DB68C00EE10AF /* User */,
+				21B24D8D264DFC6D009724DF /* Product */,
 				50068C5725E48A650097A870 /* MoreMenu Module */,
 				50BC86FC260543520065D8FE /* Profile Module */,
 				50206EC8260E9C900095E995 /* Archive */,
@@ -4327,18 +4364,14 @@
 				21A706ED260DECD50094EC56 /* Suggestions Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 				50BBB670264DC854005E709E /* Crops */,
-				218C78322629E72B00DA440A /* AddProduct Module */,
 				2121AC0C26052026001A2EDD /* Help */,
 				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
 				50BBB66E264DC713005E709E /* Farm */,
 				50BBB66F264DC75F005E709E /* Posts */,
-				217D1E8E2608293C0025462F /* Product Details */,
-				503CB59B25E07AD100B7A393 /* Products */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
 				503CB5BF25E0A11200B7A393 /* Videos Module */,
-				2101D90225F2F8EB00FB0DB9 /* Your Products Module */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -4647,7 +4680,7 @@
 				50D4ACC625FBF8C900880E55 /* MapViewController.xib in Resources */,
 				2101D91F25F3589400FB0DB9 /* YourProductsTabelViewController.xib in Resources */,
 				50A54C0C25E3FF190052F701 /* InterestedSelectionViewController.xib in Resources */,
-				2101D8FF25F2E46D00FB0DB9 /* NotificationTabelViewController.xib in Resources */,
+				2101D8FF25F2E46D00FB0DB9 /* NotificationViewController.xib in Resources */,
 				21112D1826191F650037B8AE /* FarmPersonSelectionViewController.xib in Resources */,
 				508FDAD325F0471B00686ECE /* MyCropsParentCell.xib in Resources */,
 				50AF3EC8260AD19A00CBCD0C /* CreateFarmViewController.xib in Resources */,
@@ -4864,6 +4897,7 @@
 				504969AD25F81E23002C3E40 /* MyFarmDetailsPresenter.swift in Sources */,
 				2121AC2126052027001A2EDD /* HelpProtocols.swift in Sources */,
 				50E01ED725E5C9A30016DEAB /* MyCropsHeaderView.swift in Sources */,
+				21B24D90264DFEBC009724DF /* ProductsEndPoint.swift in Sources */,
 				5019069325D8913E002D55F1 /* AppDelegate.swift in Sources */,
 				2104FBF126225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift in Sources */,
 				2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */,
@@ -4888,7 +4922,7 @@
 				5001434625F9A75400D1630E /* MyTasksSectionHeaderView.swift in Sources */,
 				2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */,
 				504969AC25F81E23002C3E40 /* MyFarmDetailsLocalizer.swift in Sources */,
-				2101D90025F2E46D00FB0DB9 /* NotificationTabelViewController.swift in Sources */,
+				2101D90025F2E46D00FB0DB9 /* NotificationViewController.swift in Sources */,
 				50212E1F260BFC7200589DAE /* ChemicalSourceCell.swift in Sources */,
 				21112D1626191F650037B8AE /* FarmPersonSelectionTableViewCell.swift in Sources */,
 				50FA842325DC466D008A9216 /* MyFarmProtocols.swift in Sources */,
@@ -4985,6 +5019,7 @@
 				213FB5EC262F36C5006DAF1C /* LogoutEndpoint.swift in Sources */,
 				2116A56A2638983100C56301 /* UpdateUserEndPoint.swift in Sources */,
 				503CB5DA25E0A1C400B7A393 /* VideosLocalizer.swift in Sources */,
+				21DCD341264F01DB00DBD11A /* CitesAndCropsModel.swift in Sources */,
 				21A70701260DECD60094EC56 /* SuggestionsImages.swift in Sources */,
 				21112D1426191F650037B8AE /* FarmPersonSelectionPresenter.swift in Sources */,
 				2121AC1F26052027001A2EDD /* HelpViewController.swift in Sources */,
@@ -5030,6 +5065,7 @@
 				50068C6D25E48A650097A870 /* MoreMenuImages.swift in Sources */,
 				218C78662629E72C00DA440A /* AddProductProtocols.swift in Sources */,
 				50FA849C25DC60EC008A9216 /* DynamicHeightCollectionView.swift in Sources */,
+				212046C7264E12330077D6F1 /* ProductsResponse.swift in Sources */,
 				50AF3E9D260ABF0200CBCD0C /* PostDetailsImages.swift in Sources */,
 				504969B225F81E23002C3E40 /* MyFarmDetailsPostsChildCell.swift in Sources */,
 				5099491C25E4642D0085CFBF /* ForgetProtocols.swift in Sources */,
