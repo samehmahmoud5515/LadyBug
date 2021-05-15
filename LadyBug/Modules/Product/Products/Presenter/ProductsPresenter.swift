@@ -25,6 +25,7 @@ class ProductsPresenter: ProductsPresenterProtocol {
     func getProductsCount() -> Int {
         return 10
     }
+    
     func getproducts() {
         productsProvider.request(.products) { result in
                switch result {
@@ -45,4 +46,5 @@ class ProductsPresenter: ProductsPresenterProtocol {
                }
            }
        }
+    
 }

@@ -14,4 +14,5 @@ class AddProductSelectionTableViewCell: UITableViewCell {
     func setupUI(model: AddProductModel) {
         selectionView.setupUI(title: model.header, placeholder: model.titile, arrowImage: "common_arrow_left_ic")
     }
+    
 }

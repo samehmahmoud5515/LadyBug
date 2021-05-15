@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Foundation
-
 // MARK: - ProductsResponse
 struct ProductsResponse: Codable {
     var success: Bool?

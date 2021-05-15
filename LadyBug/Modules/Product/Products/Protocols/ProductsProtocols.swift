@@ -15,6 +15,7 @@ protocol ProductsPresenterProtocol {
     func getProductsCount() -> Int
     func getproducts()
 }
+
 protocol ProductsViewProtocol: class {
     func reloadData()
     func stopIndicator()

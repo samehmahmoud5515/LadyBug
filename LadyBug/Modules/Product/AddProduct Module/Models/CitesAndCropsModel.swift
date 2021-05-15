@@ -5,7 +5,6 @@
 //  Created by Mohamed Abdelhamed Ahmed on 5/14/21.
 //
 import Foundation
-
 // MARK: - ProductsRelationsResponse
 struct ProductsRelationsResponse: Codable {
     var success: Bool?
@@ -18,7 +17,7 @@ struct ProductsRelationsResponse: Codable {
 struct citesAndFarmedTypes: Codable {
     var cities: [City]?
     var farmedTypes: [FarmedType]?
-
+    
     enum CodingKeys: String, CodingKey {
         case cities
         case farmedTypes = "farmed_types"
@@ -36,7 +35,7 @@ struct City: Codable {
 struct District: Codable {
     var id, cityID: Int?
     var name: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case cityID = "city_id"
@@ -52,7 +51,7 @@ struct FarmedType: Codable {
     var photoURL: String?
     var selected: Int?
     var farmedTypeClasses: [FarmedTypeClass]?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case farmActivityTypeName = "farm_activity_type_name"
@@ -69,7 +68,7 @@ struct FarmedTypeClass: Codable {
     var name: String?
     var farmedTypeID: Int?
     var farmedTypeName: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case farmedTypeID = "farmed_type_id"
