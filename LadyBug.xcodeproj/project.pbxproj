@@ -1590,7 +1590,6 @@
 		216647F825FEA8780028E335 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5001432025F99A6600D1630E /* MyTasks Module */,
 				216647FA25FEADBF0028E335 /* Images */,
 				216647F925FEA8A80028E335 /* Localizer */,
 			);
@@ -4354,6 +4353,7 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5001432025F99A6600D1630E /* MyTasks Module */,
 				508D16EC26291548004ED2D4 /* Auth */,
 				217BAEBD264DB68C00EE10AF /* User */,
 				21B24D8D264DFC6D009724DF /* Product */,
