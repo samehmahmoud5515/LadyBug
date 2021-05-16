@@ -10,13 +10,13 @@ import Foundation
 protocol RegistrationViewProtocol: class {
     func navigateToTabBarController()
     func setselectProfessionSelectionView()
+    func stopIndicator()
 }
 
 protocol RegistrationPresenterProtocol: class {
     var localizer: RegistrationLocalizer { get }
     var images : ImageLocalizer{get}
     var jobs : [JobsInfo] {get}
-    
     func setNewUser(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String)
     func fetchJobs()
 }

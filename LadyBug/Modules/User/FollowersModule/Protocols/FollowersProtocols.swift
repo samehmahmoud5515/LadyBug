@@ -18,4 +18,5 @@ protocol FollowersPresenterProtocols {
 }
 protocol FollowersViewProtocol : class {
     func reloadData()
+    func stopIndicator()
 }

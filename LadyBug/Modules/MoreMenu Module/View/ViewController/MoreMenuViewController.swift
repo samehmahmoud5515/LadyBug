@@ -23,6 +23,7 @@ class MoreMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.startLoadingIndicator()
         presnter.getProfile()
         setupUI()
         presnter.attach()
@@ -158,6 +159,12 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension MoreMenuViewController: MoreMenuViewProtocol {
+    func stopIndicator() {
+        self.stopLoadingIndicator()
+        
+    }
+    
+    
     func naviageteTo(model: MoreMenuUIModel) {
         switch model {
         case .interests:
@@ -167,8 +174,8 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             let profileVc = ProfileViewController()
             navigationController?.navigationController?.pushViewController(profileVc, animated: true)
         case .notification:
-            let notificationTabelViewController = NotificationTabelViewController()
-            navigationController?.navigationController?.pushViewController(notificationTabelViewController, animated: true)
+            let notificationViewController = NotificationViewController()
+            navigationController?.navigationController?.pushViewController(notificationViewController, animated: true)
         case .language :
             showLanguageAlert()
         case.tasks :
@@ -184,7 +191,6 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             let followersViewController = FollowersViewController()
             navigationController?.navigationController?.pushViewController(followersViewController, animated: true)
         case .usageAgreement :
-            
             break
         case.help :
             let helpViewController = HelpViewController()
@@ -197,6 +203,7 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
         default:
             break
         }
+        
     }
     
     func notifiyDataChange() {

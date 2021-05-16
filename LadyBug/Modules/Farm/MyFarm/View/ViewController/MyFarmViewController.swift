@@ -140,7 +140,7 @@ extension MyFarmViewController {
     }
     
     @objc func notificationButtonDidTapped() {
-        navigationController?.navigationController?.pushViewController(NotificationTabelViewController(), animated: true)
+        navigationController?.navigationController?.pushViewController(NotificationViewController(), animated: true)
     }
 }
 

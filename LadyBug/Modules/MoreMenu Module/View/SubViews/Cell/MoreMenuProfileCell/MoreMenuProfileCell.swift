@@ -37,7 +37,7 @@ class MoreMenuProfileCell: UITableViewCell {
         profileEditeLabel.text = model.editTitle
         guard let activityPoints =  data.activityPoints  else{return}
         profilePointNumberLabel.text = String(activityPoints)
-        
+        setupFonts()
      }
     private func setupFonts(){
         profileUserNameLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))

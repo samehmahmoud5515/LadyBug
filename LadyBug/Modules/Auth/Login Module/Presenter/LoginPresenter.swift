@@ -8,6 +8,7 @@
 import Moya
 
 class LoginPresenter: LoginPresenterProtocol {
+    
     weak var view: LoginViewProtocol?
     var localizer = loginLocalizer()
     var images = LoginImages()
@@ -18,23 +19,21 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func login(with username: String, password: String) {
-//        if username == Defaults[.username] && Defaults[.password] == password {
-//            Defaults[.isUserLogged] = true
-//
-//        }
+        
         provider.request(.login(username: username, password: password)) { result in
             switch result {
             case let .success(moyaResponse):
                 do {
                     let loginResponse = try? moyaResponse.map(LoginResponse.self)
-                    print(loginResponse)
                     guard let accessToken = loginResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
                     self.view?.navigateToTabBarController()
+                    self.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }

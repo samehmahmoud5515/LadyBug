@@ -24,7 +24,7 @@ class RegistrationViewController: UIViewController {
     var presenter: RegistrationPresenterProtocol!
     
     var selectedJobId : String = ""
-
+    
     init() {
         super.init(nibName: "\(RegistrationViewController.self)", bundle: nil)
         presenter = RegistrationPresenter(view: self)
@@ -176,6 +176,10 @@ extension RegistrationViewController {
 }
 
 extension RegistrationViewController: RegistrationViewProtocol {
+    func stopIndicator() {
+        self.stopLoadingIndicator()
+    }
+    
     func navigateToTabBarController() {
         let vc = TabBarViewController()
         navigationController?.viewControllers = [vc]
@@ -242,6 +246,7 @@ extension RegistrationViewController{
 
 extension RegistrationViewController  {
     @IBAction func createAccount(_ sender: UIButton) {
+        self.startLoadingIndicator()
         presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: selectedJobId , photo: "")
     }
 }
