@@ -32,11 +32,12 @@ class NotificationPresenter: NotificationPresenterProtocol {
                     guard let getNotification = getNotificationResponse?.data?.all else { return }
                     self.notifications = getNotification
                     self.view?.reloadData()
-                    
+                    self.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }

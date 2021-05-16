@@ -1,22 +1,21 @@
 //
-//  FollowersViewController.swift
+//  NotificationTabelViewController.swift
 //  LadyBug
 //
-//  Created by Mohamed Abdelhamed Ahmed on 3/6/21.
+//  Created by Mohamed Abdelhamed Ahmed on 2/25/21.
 //
-
 import UIKit
 
-
-class FollowersViewController: UIViewController {
-   
+class NotificationViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     //Attribuites
-    private var presnter: FollowersPresenterProtocols!
+    var datasource = [true, false, false, false, false]
+    private var presnter: NotificationPresenterProtocol!
     
     init() {
-        super.init(nibName: "\(FollowersViewController.self)", bundle: nil)
-        presnter = FollowersPresenter(view : self )
+        super.init(nibName: "\(NotificationViewController.self)", bundle: nil)
+        presnter = NotificationPresenter(view : self )
     }
     
     @available(*, unavailable)
@@ -27,7 +26,7 @@ class FollowersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startLoadingIndicator()
-        presnter.getUserFollowings()
+        presnter.getNotification()
         setupUI()
         presnter.attach()
         tableView.delegate = self
@@ -44,7 +43,7 @@ class FollowersViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
-extension FollowersViewController {
+extension NotificationViewController{
     
     private func setupUI() {
         setupNaviagtionBarUI()
@@ -71,50 +70,72 @@ extension FollowersViewController {
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 17
         button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
+        
         return UIBarButtonItem(customView: button)
     }
     
     private func getTitleBarButton() -> UIBarButtonItem {
         let titleLabel = UILabel()
-        titleLabel.text = presnter.localizer.navigationitleFollowers
+        titleLabel.text = presnter.localizer.notification
         titleLabel.textColor = .purplishBrown
         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         titleLabel.sizeToFit()
+        
+        
         return UIBarButtonItem(customView: titleLabel)
     }
     private func registerTableViewCell() {
-        let nib = UINib(nibName: "\(FollowersTableViewCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "\(FollowersTableViewCell.self)")
+        let nib = UINib(nibName: "\(NotificationsCellTableViewCell.self)", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "\(NotificationsCellTableViewCell.self)")
     }
     
-    private func setupTableViewRowHeight() {
-        tableView.rowHeight = 74
+    @objc private func setupTableViewRowHeight() {
+        tableView.rowHeight = 100
     }
-    
 }
-extension FollowersViewController {
+extension NotificationViewController{
     @objc func didTappedBackButton(){
         navigationController?.popViewController(animated: true)
     }
+    
+    
 }
-extension FollowersViewController :UITableViewDataSource,UITableViewDelegate{
+extension NotificationViewController :UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presnter.user.count
+        return  presnter.notifications.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(FollowersTableViewCell.self)", for: indexPath) as? FollowersTableViewCell ?? FollowersTableViewCell()
-        cell.setupUI(user: presnter.user[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(NotificationsCellTableViewCell.self)", for: indexPath) as? NotificationsCellTableViewCell ?? NotificationsCellTableViewCell()
+        cell.setupCell(notification: presnter.notifications[indexPath.row])
+        cell.setupSelecttion(isSelected: datasource[indexPath.row])
+        print(presnter.notifications[indexPath.row] )
+        
         return cell
     }
-}
-extension FollowersViewController : FollowersViewProtocol {
-    func stopIndicator() {
-        self.stopLoadingIndicator()
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let id = presnter.notifications[indexPath.row].id else { return }
+        let selection = !datasource[indexPath.row]
+        datasource[indexPath.row] = selection
+        if let cell = tableView.cellForRow(at: indexPath) as? NotificationsCellTableViewCell {
+            cell.setupSelecttion(isSelected: selection)
+            presnter.readNotification(notificationId: id)
+        }
+        
+        func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){
+            guard let id = presnter.notifications[indexPath.row].id else { return }
+            presnter.unreadNotification(notificationId: id)
+        }
     }
-    
+}
+extension NotificationViewController: NotificationViewProtocol{
     func reloadData() {
         tableView.reloadData()
-       }
+    }
+    
+    func stopIndicator() {
+           self.stopLoadingIndicator()
+      }
+      
 }
 
 
