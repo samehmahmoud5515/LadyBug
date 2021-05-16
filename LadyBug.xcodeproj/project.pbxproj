@@ -60,7 +60,6 @@
 		215D35082650BACF000E4B0E /* YourProductsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34A12650BACE000E4B0E /* YourProductsCellTableViewCell.swift */; };
 		215D35092650BACF000E4B0E /* YourProductsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215D34A22650BACE000E4B0E /* YourProductsCellTableViewCell.xib */; };
 		215D350D2650BACF000E4B0E /* YourProductsTabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34A72650BACE000E4B0E /* YourProductsTabelViewController.swift */; };
-		215D350E2650BACF000E4B0E /* YourProductsTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215D34A82650BACE000E4B0E /* YourProductsTabelViewController.xib */; };
 		215D35112650BACF000E4B0E /* YourProductsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34AC2650BACE000E4B0E /* YourProductsProtocols.swift */; };
 		215D35122650BACF000E4B0E /* ProductsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34B02650BACE000E4B0E /* ProductsImages.swift */; };
 		215D35132650BACF000E4B0E /* ProductsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34B22650BACE000E4B0E /* ProductsLocalizer.swift */; };
@@ -87,8 +86,6 @@
 		215D35282650BACF000E4B0E /* AddProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34DF2650BACE000E4B0E /* AddProductImage.swift */; };
 		215D35292650BACF000E4B0E /* AddProductLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34E12650BACE000E4B0E /* AddProductLocalizer.swift */; };
 		215D352A2650BACF000E4B0E /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34E32650BACE000E4B0E /* AddProductPresenter.swift */; };
-		215D352B2650BACF000E4B0E /* AddProductUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34E52650BACE000E4B0E /* AddProductUIModel.swift */; };
-		215D352C2650BACF000E4B0E /* AddProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34E62650BACE000E4B0E /* AddProductModel.swift */; };
 		215D352D2650BACF000E4B0E /* CitesAndCropsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34E72650BACE000E4B0E /* CitesAndCropsModel.swift */; };
 		215D352E2650BACF000E4B0E /* AddProductPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215D34EC2650BACE000E4B0E /* AddProductPriceTableViewCell.xib */; };
 		215D352F2650BACF000E4B0E /* AddProductPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D34ED2650BACE000E4B0E /* AddProductPriceTableViewCell.swift */; };
@@ -143,6 +140,9 @@
 		215D35FC2650C36C000E4B0E /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215D35E82650C36B000E4B0E /* RegistrationViewController.xib */; };
 		215D35FD2650C36C000E4B0E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D35E92650C36B000E4B0E /* RegistrationViewController.swift */; };
 		215D35FE2650C36C000E4B0E /* RegistrationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D35EB2650C36B000E4B0E /* RegistrationProtocols.swift */; };
+		215D36002650CAF0000E4B0E /* YourProductsTabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215D35FF2650CAF0000E4B0E /* YourProductsTabelViewController.xib */; };
+		215D36032650CEA6000E4B0E /* AddProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D36012650CEA4000E4B0E /* AddProductModel.swift */; };
+		215D36042650CEA6000E4B0E /* AddProductUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D36022650CEA6000E4B0E /* AddProductUIModel.swift */; };
 		216647FC25FEADEF0028E335 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216647FB25FEADEF0028E335 /* Images.swift */; };
 		216647FE25FEAE590028E335 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216647FD25FEAE590028E335 /* Localizer.swift */; };
 		2166480125FEAF3B0028E335 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166480025FEAF3B0028E335 /* Protocols.swift */; };
@@ -486,7 +486,6 @@
 		215D34A12650BACE000E4B0E /* YourProductsCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourProductsCellTableViewCell.swift; sourceTree = "<group>"; };
 		215D34A22650BACE000E4B0E /* YourProductsCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YourProductsCellTableViewCell.xib; sourceTree = "<group>"; };
 		215D34A72650BACE000E4B0E /* YourProductsTabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourProductsTabelViewController.swift; sourceTree = "<group>"; };
-		215D34A82650BACE000E4B0E /* YourProductsTabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YourProductsTabelViewController.xib; sourceTree = "<group>"; };
 		215D34AC2650BACE000E4B0E /* YourProductsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourProductsProtocols.swift; sourceTree = "<group>"; };
 		215D34B02650BACE000E4B0E /* ProductsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsImages.swift; sourceTree = "<group>"; };
 		215D34B22650BACE000E4B0E /* ProductsLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsLocalizer.swift; sourceTree = "<group>"; };
@@ -513,8 +512,6 @@
 		215D34DF2650BACE000E4B0E /* AddProductImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductImage.swift; sourceTree = "<group>"; };
 		215D34E12650BACE000E4B0E /* AddProductLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductLocalizer.swift; sourceTree = "<group>"; };
 		215D34E32650BACE000E4B0E /* AddProductPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
-		215D34E52650BACE000E4B0E /* AddProductUIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductUIModel.swift; sourceTree = "<group>"; };
-		215D34E62650BACE000E4B0E /* AddProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductModel.swift; sourceTree = "<group>"; };
 		215D34E72650BACE000E4B0E /* CitesAndCropsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitesAndCropsModel.swift; sourceTree = "<group>"; };
 		215D34EC2650BACE000E4B0E /* AddProductPriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductPriceTableViewCell.xib; sourceTree = "<group>"; };
 		215D34ED2650BACE000E4B0E /* AddProductPriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductPriceTableViewCell.swift; sourceTree = "<group>"; };
@@ -569,6 +566,9 @@
 		215D35E82650C36B000E4B0E /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		215D35E92650C36B000E4B0E /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		215D35EB2650C36B000E4B0E /* RegistrationProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationProtocols.swift; sourceTree = "<group>"; };
+		215D35FF2650CAF0000E4B0E /* YourProductsTabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YourProductsTabelViewController.xib; sourceTree = "<group>"; };
+		215D36012650CEA4000E4B0E /* AddProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductModel.swift; sourceTree = "<group>"; };
+		215D36022650CEA6000E4B0E /* AddProductUIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductUIModel.swift; sourceTree = "<group>"; };
 		216647FB25FEADEF0028E335 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		216647FD25FEAE590028E335 /* Localizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		2166480025FEAF3B0028E335 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -1502,7 +1502,7 @@
 			isa = PBXGroup;
 			children = (
 				215D34A72650BACE000E4B0E /* YourProductsTabelViewController.swift */,
-				215D34A82650BACE000E4B0E /* YourProductsTabelViewController.xib */,
+				215D35FF2650CAF0000E4B0E /* YourProductsTabelViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1782,8 +1782,8 @@
 		215D34E42650BACE000E4B0E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				215D34E52650BACE000E4B0E /* AddProductUIModel.swift */,
-				215D34E62650BACE000E4B0E /* AddProductModel.swift */,
+				215D36012650CEA4000E4B0E /* AddProductModel.swift */,
+				215D36022650CEA6000E4B0E /* AddProductUIModel.swift */,
 				215D34E72650BACE000E4B0E /* CitesAndCropsModel.swift */,
 			);
 			path = Models;
@@ -4640,7 +4640,6 @@
 				504FCF79260D5E9D000FFD0A /* AddPostImageCell.xib in Resources */,
 				5054F0A1260D5B4D00675FE7 /* AddPostImageViewCell.xib in Resources */,
 				50212E20260BFC7200589DAE /* ChemicalSourceCell.xib in Resources */,
-				215D350E2650BACF000E4B0E /* YourProductsTabelViewController.xib in Resources */,
 				504969C725F81E23002C3E40 /* MyFarmDetailsPeopleChildCell.xib in Resources */,
 				503CB5C525E0A15F00B7A393 /* VideosViewController.xib in Resources */,
 				509C1482260D4685004CECA2 /* StandardTextView.xib in Resources */,
@@ -4696,6 +4695,7 @@
 				2121AC2026052027001A2EDD /* HelpViewController.xib in Resources */,
 				508FDADB25F049B500686ECE /* MyCropsParentCellView.xib in Resources */,
 				506E4D0525EDA9CF003BD749 /* MyCropsHeaderViewCropCell.xib in Resources */,
+				215D36002650CAF0000E4B0E /* YourProductsTabelViewController.xib in Resources */,
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
 				506E4D1A25EDC8E2003BD749 /* MyCropsStretchedParentCell.xib in Resources */,
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
@@ -4981,8 +4981,8 @@
 				50D4ACC325FBF8C900880E55 /* MapImages.swift in Sources */,
 				506E4D0A25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.swift in Sources */,
 				50AF3E98260ABEF100CBCD0C /* PostDetailsProtocols.swift in Sources */,
-				215D352C2650BACF000E4B0E /* AddProductModel.swift in Sources */,
 				50D083E9260C063200518ED5 /* FarmTypeView.swift in Sources */,
+				215D36032650CEA6000E4B0E /* AddProductModel.swift in Sources */,
 				215D35732650C109000E4B0E /* NotificationEndpoint.swift in Sources */,
 				21112D1926191F650037B8AE /* FarmPersonSelectionProtocols.swift in Sources */,
 				5031C2E9263348E10027CFB4 /* CommonHeaderProtocol.swift in Sources */,
@@ -4991,7 +4991,6 @@
 				5054F0A0260D5B4D00675FE7 /* AddPostImageViewCell.swift in Sources */,
 				215D35162650BACF000E4B0E /* ProductCell.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
-				215D352B2650BACF000E4B0E /* AddProductUIModel.swift in Sources */,
 				215D347F2650B366000E4B0E /* LogoutEndpoint.swift in Sources */,
 				5097F50325FBAE47000E14C4 /* CropsInfoHeaderViewCell.swift in Sources */,
 				215D356F2650C109000E4B0E /* NotificationsCellTableViewCell.swift in Sources */,
@@ -5093,6 +5092,7 @@
 				215D35112650BACF000E4B0E /* YourProductsProtocols.swift in Sources */,
 				508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
+				215D36042650CEA6000E4B0E /* AddProductUIModel.swift in Sources */,
 				2104FBEE26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift in Sources */,
 				21112D1226191F650037B8AE /* FarmPersonSelectionImage.swift in Sources */,
 				503CB5C425E0A15F00B7A393 /* VideosViewController.swift in Sources */,
