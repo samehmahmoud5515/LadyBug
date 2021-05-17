@@ -97,6 +97,9 @@ extension StandardSelectionView: ToolbarPickerViewDelegate {
     func didTapDone() {
         let row = self.pickerView.selectedRow(inComponent: 0)
         pickerView.selectRow(row, inComponent: 0, animated: false)
+        if datasource.count > row {
+            selectedItem = datasource[row]
+        }
         selectionTextField.text = selectedItem
         selectionTextField.resignFirstResponder()
         delegate?.didSelectItem(item: selectedItem)

@@ -86,20 +86,22 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
     func handleCellDidTapped(index: Int) {
         let model = datasource[index]
         switch model {
-            
+        case .logOut:
+            logout()
         default:
             view?.naviageteTo(model: model)
         }
     }
     
     func logout() {
-        logoutProvider.request(.logout) { result in
+        logoutProvider.request(.logout) { [weak self] result in
             switch result {
             case let .success(moyaResponse):
                 let data = moyaResponse.data
                 let statusCode = moyaResponse.statusCode
                 AccessTokenManager.removeAccessToken()
                 self.view?.stopIndicator()
+                self?.view?.navigateToLogin()
             case let .failure(error):
                 self.view?.stopIndicator()
                 break

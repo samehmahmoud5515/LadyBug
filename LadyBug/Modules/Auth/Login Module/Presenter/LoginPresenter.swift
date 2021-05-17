@@ -19,8 +19,8 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func login(with username: String, password: String) {
-        
-        provider.request(.login(username: username, password: password)) { result in
+        provider.request(.login(username: username, password: password)) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case let .success(moyaResponse):
                 do {

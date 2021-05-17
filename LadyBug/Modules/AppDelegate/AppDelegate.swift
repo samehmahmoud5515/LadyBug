@@ -12,13 +12,12 @@ import GoogleMaps
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var rootNavigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureGoogleMaps()
         LanguageManager.shared.setDefaultlanguage(language: .ar)
         configureRootViewController()
-        Defaults[.username] = "admin@google.com"
-        Defaults[.password] = "12345678"
         return true
     }
     
@@ -29,9 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configureRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
         let rootViewController = (!(AccessTokenManager.isAccessTokenEmpty)) ? TabBarViewController() : LoginViewController()
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.setNavigationBarHidden(true, animated: false)
-        window?.rootViewController = navigationController
+        rootNavigationController = UINavigationController(rootViewController: rootViewController)
+        rootNavigationController?.setNavigationBarHidden(true, animated: false)
+        window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
+    }
+    
+    func navigateToLogin() {
+        rootNavigationController?.setViewControllers([LoginViewController()], animated: false)
     }
 }

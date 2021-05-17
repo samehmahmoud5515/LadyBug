@@ -35,8 +35,8 @@ class MyFarmLocalizer: CommonLocalizer {
     var typeOfFarmTitle: String {
         "my_farm_localizer_type_of_farm_title".localized
     }
-    var theNumberOfAcresTitle: String {
-        "my_farm_localizer_the_number_of_acres_title".localized
+    var numberTitle: String {
+        "my_farm_number_title".localized
     }
     var chemicalSourceTitle: String {
         "my_farm_localizer_chemical_source_title".localized
@@ -89,4 +89,7 @@ class MyFarmLocalizer: CommonLocalizer {
     var addYourFarmTitle: String {
         "my_farm_localizer_add_your_farm_title".localized
     }
+    
+    var farmingDate = "my_farm_localizer_history_of_cultivation_title".localized
+    var seedingSource = "my_farm_localizer_seedling_source_title".localized
 }

@@ -23,4 +23,5 @@ protocol MoreMenuViewProtocol: class {
     func naviageteTo(model: MoreMenuUIModel)
     func updateJobName(jobName : String )
     func stopIndicator()
+    func navigateToLogin()
 }

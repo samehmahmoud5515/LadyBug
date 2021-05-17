@@ -9,4 +9,5 @@ target 'LadyBug' do
   pod 'GoogleMaps'
   pod 'Cosmos', '~> 23.0'
   pod 'Moya'
+  pod 'SDWebImage', '~> 5.0'
 end

@@ -193,10 +193,6 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             let helpViewController = HelpViewController()
             navigationController?.navigationController?.pushViewController(helpViewController, animated: true)
             break
-        case.logOut :
-            presnter.logout()
-            let vc = LoginViewController()
-            navigationController?.navigationController?.viewControllers = [vc]
         default:
             break
         }
@@ -219,5 +215,11 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
         if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? MoreMenuProfileCell{
             cell.updateJobName(jobName: jobName)
         }
+    }
+}
+
+extension MoreMenuViewController {
+    func navigateToLogin() {
+        (UIApplication.shared.delegate as? AppDelegate)?.navigateToLogin()
     }
 }

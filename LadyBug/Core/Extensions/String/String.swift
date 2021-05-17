@@ -52,3 +52,13 @@ extension String {
         trimLeadingSpaces.trimTrailingSpaces
     }
 }
+
+extension String {
+    var toDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Date.parsingFormat
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.date(from: self)
+    }
+}

@@ -12,9 +12,12 @@ protocol MyFarmPresenterProtocol: class {
     var localizer: MyFarmLocalizer { get }
     func attach()
     func getFarmsDatasourceCount() -> Int
-    func getFarms(for index: Int) 
+    func getFarms(for index: Int) -> Farm
+    func fetchUserFarms()
+    func getWeatherData() -> WeatherData?
 }
 
 protocol MyFarmViewProtocol: class {
-
+    func stopLoadingIndicatorView()
+    func reloadData()
 }

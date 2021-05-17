@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyFarmDetailsPeopleChildCell: UICollectionViewCell {
 
@@ -13,7 +14,11 @@ class MyFarmDetailsPeopleChildCell: UICollectionViewCell {
     @IBOutlet weak var jobTitleLabel: UILabel!
     @IBOutlet weak var logoImageView: UIImageView!
 
-    func setupUI() {
+    func setupUI(user: User) {
+        nameLabel.text = user.name
+        jobTitleLabel.text = user.jobName
+        logoImageView.sd_setImage(with: URL(string: user.photoURL ?? ""), completed: nil)
+        
         nameLabel.textColor = .purplishBrown
         jobTitleLabel.textColor = .blueGrey
         

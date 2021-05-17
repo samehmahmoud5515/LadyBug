@@ -12,6 +12,12 @@ class FarmDetailsView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: DynamicHeightCollectionView!
     
+    var datasource = [FarmUIModel]() {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         nibSetup()
@@ -76,12 +82,12 @@ extension FarmDetailsView {
 
 extension FarmDetailsView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return datasource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(FarmDetailsCell.self)", for: indexPath) as? FarmDetailsCell ?? FarmDetailsCell()
-        cell.updateUI()
+        cell.updateUI(info: datasource[indexPath.row])
         return cell
     }
     

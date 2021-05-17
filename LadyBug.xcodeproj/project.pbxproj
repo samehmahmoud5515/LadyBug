@@ -375,6 +375,8 @@
 		50AF3ED5260AD2E400CBCD0C /* CreateFramImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3ED4260AD2E400CBCD0C /* CreateFramImages.swift */; };
 		50AF3ED8260AD2F300CBCD0C /* CreateFarmLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3ED7260AD2F200CBCD0C /* CreateFarmLocalizer.swift */; };
 		50BBB669264C879C005E709E /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBB668264C879C005E709E /* UIViewController+ActivityIndicator.swift */; };
+		50BBB673264DC970005E709E /* FarmEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBB672264DC970005E709E /* FarmEndPoint.swift */; };
+		50BBB678264DCBA9005E709E /* FarmDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBB677264DCBA9005E709E /* FarmDetailsResponse.swift */; };
 		50BC0A7025E5C076006653FD /* MyCropsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A6E25E5C076006653FD /* MyCropsViewController.swift */; };
 		50BC0A7125E5C076006653FD /* MyCropsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BC0A6F25E5C076006653FD /* MyCropsViewController.xib */; };
 		50BC0A7725E5C0BD006653FD /* MyCropsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC0A7625E5C0BD006653FD /* MyCropsLocalizer.swift */; };
@@ -391,6 +393,10 @@
 		50BC870B260543A60065D8FE /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC870A260543A60065D8FE /* ProfileProtocols.swift */; };
 		50BC8710260543ED0065D8FE /* ProfileImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC870F260543ED0065D8FE /* ProfileImages.swift */; };
 		50BC8714260543F90065D8FE /* ProfileLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC8713260543F90065D8FE /* ProfileLocalizer.swift */; };
+		50CB34F526519B2D00EE871D /* FarmUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB34F426519B2D00EE871D /* FarmUIModel.swift */; };
+		50D07A6B264DD4040032D6F8 /* UserFarmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D07A6A264DD4040032D6F8 /* UserFarmsResponse.swift */; };
+		50D07A7C2650AAB10032D6F8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D07A7B2650AAB10032D6F8 /* Date.swift */; };
+		50D07A802650B1F50032D6F8 /* DateLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D07A7F2650B1F50032D6F8 /* DateLocalizer.swift */; };
 		50D083E9260C063200518ED5 /* FarmTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D083E7260C063200518ED5 /* FarmTypeView.swift */; };
 		50D083EA260C063200518ED5 /* FarmTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D083E8260C063200518ED5 /* FarmTypeView.xib */; };
 		50D083F0260C0BCD00518ED5 /* FarmTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D083EE260C0BCD00518ED5 /* FarmTypeCell.swift */; };
@@ -803,6 +809,8 @@
 		50AF3ED4260AD2E400CBCD0C /* CreateFramImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFramImages.swift; sourceTree = "<group>"; };
 		50AF3ED7260AD2F200CBCD0C /* CreateFarmLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFarmLocalizer.swift; sourceTree = "<group>"; };
 		50BBB668264C879C005E709E /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		50BBB672264DC970005E709E /* FarmEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmEndPoint.swift; sourceTree = "<group>"; };
+		50BBB677264DCBA9005E709E /* FarmDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDetailsResponse.swift; sourceTree = "<group>"; };
 		50BC0A6E25E5C076006653FD /* MyCropsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsViewController.swift; sourceTree = "<group>"; };
 		50BC0A6F25E5C076006653FD /* MyCropsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsViewController.xib; sourceTree = "<group>"; };
 		50BC0A7625E5C0BD006653FD /* MyCropsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsLocalizer.swift; sourceTree = "<group>"; };
@@ -819,6 +827,10 @@
 		50BC870A260543A60065D8FE /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		50BC870F260543ED0065D8FE /* ProfileImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImages.swift; sourceTree = "<group>"; };
 		50BC8713260543F90065D8FE /* ProfileLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalizer.swift; sourceTree = "<group>"; };
+		50CB34F426519B2D00EE871D /* FarmUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmUIModel.swift; sourceTree = "<group>"; };
+		50D07A6A264DD4040032D6F8 /* UserFarmsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFarmsResponse.swift; sourceTree = "<group>"; };
+		50D07A7B2650AAB10032D6F8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		50D07A7F2650B1F50032D6F8 /* DateLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLocalizer.swift; sourceTree = "<group>"; };
 		50D083E7260C063200518ED5 /* FarmTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTypeView.swift; sourceTree = "<group>"; };
 		50D083E8260C063200518ED5 /* FarmTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FarmTypeView.xib; sourceTree = "<group>"; };
 		50D083EE260C0BCD00518ED5 /* FarmTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTypeCell.swift; sourceTree = "<group>"; };
@@ -1070,28 +1082,28 @@
 		2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */ = {
 			isa = PBXGroup;
 			children = (
-				2104FBE8262258E30014E584 /* AdjustThePeopleOnYourFarmLocalizer */,
-				2104FBE9262259980014E584 /* AdjustThePeopleOnYourFarmModuleViewController */,
+				2104FBE8262258E30014E584 /* Resources */,
+				2104FBE9262259980014E584 /* ViewController */,
 			);
 			path = "AdjustThePeopleOnYourFarm Module";
 			sourceTree = "<group>";
 		};
-		2104FBE8262258E30014E584 /* AdjustThePeopleOnYourFarmLocalizer */ = {
+		2104FBE8262258E30014E584 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				2104FBEB26225BDD0014E584 /* AdjustThePeopleOnYourFarmLocalizer.swift */,
 				2104FBED26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift */,
 			);
-			path = AdjustThePeopleOnYourFarmLocalizer;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		2104FBE9262259980014E584 /* AdjustThePeopleOnYourFarmModuleViewController */ = {
+		2104FBE9262259980014E584 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2104FBEF26225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.swift */,
 				2104FBF026225ECC0014E584 /* AdjustThePeopleOnYourFarmModuleViewController.xib */,
 			);
-			path = AdjustThePeopleOnYourFarmModuleViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		21112CFF26191F650037B8AE /* FarmPersonSelectionModule */ = {
@@ -1099,7 +1111,6 @@
 			children = (
 				21112D0026191F650037B8AE /* Resources */,
 				21112D0526191F650037B8AE /* Presenter */,
-				21112D0726191F650037B8AE /* Models */,
 				21112D0826191F650037B8AE /* View */,
 				21112D1026191F650037B8AE /* Protocols */,
 			);
@@ -1137,13 +1148,6 @@
 				21112D0626191F650037B8AE /* FarmPersonSelectionPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		21112D0726191F650037B8AE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		21112D0826191F650037B8AE /* View */ = {
@@ -3858,6 +3862,7 @@
 		50A77D4325D9F2890054E80D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				50D07A792650A9960032D6F8 /* Date */,
 				501F741025DAB5DB00333F16 /* UILabel */,
 				501F740525DAB59200333F16 /* UIViewController */,
 				501F73F425DAB54300333F16 /* UIView */,
@@ -4017,6 +4022,8 @@
 		50BBB66E264DC713005E709E /* Farm */ = {
 			isa = PBXGroup;
 			children = (
+				50BBB676264DCB9F005E709E /* Responses */,
+				50BBB671264DC960005E709E /* Endpoints */,
 				504969CD25F81E37002C3E40 /* AddPeopleToYourFarm Module */,
 				2104FBE3262258970014E584 /* AdjustThePeopleOnYourFarm Module */,
 				21112CFF26191F650037B8AE /* FarmPersonSelectionModule */,
@@ -4045,6 +4052,23 @@
 				50BC0A6B25E5C03F006653FD /* MyCrops */,
 			);
 			path = Crops;
+			sourceTree = "<group>";
+		};
+		50BBB671264DC960005E709E /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				50BBB672264DC970005E709E /* FarmEndPoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		50BBB676264DCB9F005E709E /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				50BBB677264DCBA9005E709E /* FarmDetailsResponse.swift */,
+				50D07A6A264DD4040032D6F8 /* UserFarmsResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		50BC0A6B25E5C03F006653FD /* MyCrops */ = {
@@ -4192,6 +4216,30 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		50CB34F326519B1D00EE871D /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				50CB34F426519B2D00EE871D /* FarmUIModel.swift */,
+			);
+			path = UIModel;
+			sourceTree = "<group>";
+		};
+		50D07A792650A9960032D6F8 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				50D07A7B2650AAB10032D6F8 /* Date.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		50D07A7E2650B1E50032D6F8 /* DateLocalizer */ = {
+			isa = PBXGroup;
+			children = (
+				50D07A7F2650B1F50032D6F8 /* DateLocalizer.swift */,
+			);
+			path = DateLocalizer;
+			sourceTree = "<group>";
+		};
 		50D083E6260C060F00518ED5 /* FarmTypeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -4285,6 +4333,7 @@
 		50D6137025DC1CA900228385 /* MyFarm */ = {
 			isa = PBXGroup;
 			children = (
+				50CB34F326519B1D00EE871D /* UIModel */,
 				21A5A12E25DB2C54001A2F64 /* Resources */,
 				50FA842125DC465B008A9216 /* Protocols */,
 				50FA841D25DC461A008A9216 /* Presenter */,
@@ -4431,6 +4480,7 @@
 		50E3014E25D8A04C008271B6 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				50D07A7E2650B1E50032D6F8 /* DateLocalizer */,
 				50D6136625DC192F00228385 /* Common */,
 				50E3014B25D8A031008271B6 /* Localizable.strings */,
 			);
@@ -4836,6 +4886,7 @@
 				2101D8F925F2E46D00FB0DB9 /* NotificationLocalizer.swift in Sources */,
 				50BC0A7025E5C076006653FD /* MyCropsViewController.swift in Sources */,
 				501F73FF25DAB54300333F16 /* UIView+RoundCorners.swift in Sources */,
+				50CB34F526519B2D00EE871D /* FarmUIModel.swift in Sources */,
 				503CB5AF25E07BCB00B7A393 /* ProductsPresenter.swift in Sources */,
 				503F7A2425DAB05000EBD730 /* HomeLocalizer.swift in Sources */,
 				2166480E25FEB0B20028E335 /* CreateNewPasswordViewController.swift in Sources */,
@@ -4857,6 +4908,7 @@
 				21767A2525F58F4E0039E2B8 /* MyPosts Localizer.swift in Sources */,
 				502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */,
 				50E3015C25D8A33E008271B6 /* Language.swift in Sources */,
+				50BBB678264DCBA9005E709E /* FarmDetailsResponse.swift in Sources */,
 				2166B8A525E081C8008FE0A0 /* Registration Presenter.swift in Sources */,
 				218C785B2629E72C00DA440A /* AddProductPriceTableViewCell.swift in Sources */,
 				50AF3ECD260AD27700CBCD0C /* CreateFramPresenter.swift in Sources */,
@@ -4867,6 +4919,7 @@
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
 				506E4D2025EDC95F003BD749 /* MyCropsStretchedParentCellView.swift in Sources */,
 				503CB5B325E07BE100B7A393 /* ProductsProtocols.swift in Sources */,
+				50D07A802650B1F50032D6F8 /* DateLocalizer.swift in Sources */,
 				5001432F25F99B0700D1630E /* MyTasksProtocol.swift in Sources */,
 				503CB5E425E0A23300B7A393 /* VideosCell.swift in Sources */,
 				504969B625F81E23002C3E40 /* MyFarmDetailsView.swift in Sources */,
@@ -5028,6 +5081,7 @@
 				21A70704260DECD60094EC56 /* SuggestionUIModel.swift in Sources */,
 				50212E0E260BD45E00589DAE /* DateSelectionView.swift in Sources */,
 				50BC86DD260534890065D8FE /* StandardAlertViewController.swift in Sources */,
+				50D07A6B264DD4040032D6F8 /* UserFarmsResponse.swift in Sources */,
 				5001432A25F99AD500D1630E /* MyTasksPresenter.swift in Sources */,
 				218C78612629E72C00DA440A /* AddImageTableViewCell.swift in Sources */,
 				50068C6E25E48A650097A870 /* MoreMenuLocalizer.swift in Sources */,
@@ -5055,9 +5109,11 @@
 				508537E22617F76C00CCFEA7 /* AddTaskViewController.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */,
+				50D07A7C2650AAB10032D6F8 /* Date.swift in Sources */,
 				21A70703260DECD60094EC56 /* SuggestionsPresenter.swift in Sources */,
 				5028D07D26333A4500C7EAA9 /* UserResponse.swift in Sources */,
 				213751DF25F4003A00E342EF /* CropsInfoDetailsModels.swift in Sources */,
+				50BBB673264DC970005E709E /* FarmEndPoint.swift in Sources */,
 				50E3015D25D8A33E008271B6 /* LanguageManager.swift in Sources */,
 				21A70702260DECD60094EC56 /* SuggestionsLocalizer.swift in Sources */,
 				50D4ACC825FBF8C900880E55 /* MapPinView.swift in Sources */,
