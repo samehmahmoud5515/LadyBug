@@ -7,7 +7,7 @@
 
 import Moya
 
-class MoreMenuPresenter: MoreMenuPresenterProtocol{
+class MoreMenuPresenter: MoreMenuPresenterProtocol {
     
     weak var view: MoreMenuViewProtocol?
     var localizer = MoreMenuLocalizer()
@@ -17,6 +17,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
     let logoutProvider = MoyaProvider<LogoutEndpoint>(plugins: [AuthorizableTokenPlugin()])
     let profileProvider = MoyaProvider<GetProfileEndPoint>(plugins: [AuthorizableTokenPlugin()])
     let jobsProvider = MoyaProvider<JobsEndPoint>()
+    
     init(view: MoreMenuViewProtocol) {
         self.view = view
     }
@@ -109,41 +110,43 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
         }
     }
     func getProfile() {
-        profileProvider.request(.getProfile) { result in
+        profileProvider.request(.getProfile) { [weak self] result in
             switch result {
             case let .success(moyaResponse):
                 do {
                     let getProfileResponed = try? moyaResponse.map(ProfileResponed.self)
                     guard let getGetProfile = getProfileResponed?.data else { return }
-                    self.user = getGetProfile
-                    self.view?.notifiyDataChange()
-                    self.fetchJobs()
-                    self.view?.stopIndicator()
+                    self?.user = getGetProfile
+                    self?.view?.notifiyDataChange()
+                    self?.fetchJobs()
+                    self?.view?.stopIndicator()
                 } catch {
-                    self.view?.stopIndicator()
+                    self?.view?.stopIndicator()
                     print("Parsing Error")
                 }
             case let .failure(error):
-                self.view?.stopIndicator()
+                self?.view?.stopIndicator()
                 break
             }
         }
     }
+    
     func fetchJobs() {
-        jobsProvider.request(.jobs) { result in
+        jobsProvider.request(.jobs) { [weak self] result in
             switch result {
             case let .success(moyaResponse):
                 do {
                     let jobsResponse = try? moyaResponse.map(JobsResponse.self)
                     guard let jobs = jobsResponse?.data?.all else { return }
-                    self.view?.updateJobName(jobName: jobs.first(where: { $0.id == self.user.humanJobID })?.name ?? "")
-                    self.view?.stopIndicator()
+                    guard let humanJobID = self?.user.humanJobID else { return }
+                    self?.view?.updateJobName(jobName: jobs.first(where: { $0.id == humanJobID })?.name ?? "")
+                    self?.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")
-                    self.view?.stopIndicator()
+                    self?.view?.stopIndicator()
                 }
             case let .failure(error):
-                self.view?.stopIndicator()
+                self?.view?.stopIndicator()
                 break
             }
         }

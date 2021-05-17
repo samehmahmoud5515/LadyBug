@@ -23,10 +23,10 @@ class MoreMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.startLoadingIndicator()
-        presnter.getProfile()
         setupUI()
         presnter.attach()
+        startLoadingIndicator()
+        presnter.getProfile()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -27,8 +27,8 @@ class LoginPresenter: LoginPresenterProtocol {
                     let loginResponse = try? moyaResponse.map(LoginResponse.self)
                     guard let accessToken = loginResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
-                    self.view?.navigateToTabBarController()
                     self.view?.stopIndicator()
+                    self.view?.navigateToTabBarController()
                 } catch {
                     print("Parsing Error")
                 }
