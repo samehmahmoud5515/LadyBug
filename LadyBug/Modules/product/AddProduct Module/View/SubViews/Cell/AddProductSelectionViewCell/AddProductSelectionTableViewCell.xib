@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="334" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FrB-D2-XzI" customClass="CustomSelectionView" customModule="LadyBug" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FrB-D2-XzI" customClass="StandardSelectionView" customModule="LadyBug" customModuleProvider="target">
                         <rect key="frame" x="24" y="10" width="286" height="96"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>

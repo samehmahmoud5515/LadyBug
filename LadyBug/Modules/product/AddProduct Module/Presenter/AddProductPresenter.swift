@@ -81,16 +81,17 @@ class AddProductPresenter: AddProductPresenterProtocol {
     }
     
     func getCitysAndCrops() {
-        provider.request(.citesAndCrops) { result in
+        provider.request(.citesAndCrops) {[weak self] result in
             switch result {
             case let .success(moyaResponse):
                 do {
                     let productsRelationsResponse = try? moyaResponse.map(ProductsRelationsResponse.self)
                     guard let cities = productsRelationsResponse?.data?.cities else { return }
                     guard let farmedTypes = productsRelationsResponse?.data?.farmedTypes else { return }
-                    self.farmedTypes = farmedTypes
-                    self.cities = cities
-                    self.view?.getProductsRelations()
+                    self?.farmedTypes = farmedTypes
+                    self?.cities = cities
+                    self?.view?.getProductsRelations()
+                    self?.view?.notifiyDataChange()
                 } catch {
                     print("Parsing Error")
                 }

@@ -165,7 +165,6 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
             }
         case let .appropriateCrop(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
-            
             if let postCell = cell as? AddProductSelectionTableViewCell {
                 postCell.setupUI(model: model)
                  self.tableView.rowHeight = 84
@@ -174,12 +173,15 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
                 postCell.setupUI(model: model)
+                postCell.selectionView.datasource = presnter.cities.compactMap{$0.name}       //cities.compactMap{$0.self}
                  self.tableView.rowHeight = 84
             }
         case let .region(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
                 postCell.setupUI(model: model)
+                let region = presnter.cities.compactMap{$0.districts}
+                //postCell.selectionView.datasource = region.compactMap{$0.}
                  self.tableView.rowHeight = 84
             }
         case let .otherSites(model):
