@@ -35,6 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func navigateToLogin() {
-        rootNavigationController = UINavigationController(rootViewController: LoginViewController())
+        rootNavigationController?.setViewControllers([LoginViewController()], animated: false)
     }
 }

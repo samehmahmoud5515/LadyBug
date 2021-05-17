@@ -190,8 +190,6 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
             let helpViewController = HelpViewController()
             navigationController?.navigationController?.pushViewController(helpViewController, animated: true)
             break
-        case.logOut :
-            presnter.logout()
         default:
             break
         }

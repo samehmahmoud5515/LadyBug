@@ -86,7 +86,8 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
     func handleCellDidTapped(index: Int) {
         let model = datasource[index]
         switch model {
-            
+        case .logOut:
+            logout()
         default:
             view?.naviageteTo(model: model)
         }
