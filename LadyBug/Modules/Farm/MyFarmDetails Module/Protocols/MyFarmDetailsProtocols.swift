@@ -13,6 +13,7 @@ protocol MyFarmDetailsPresenterProtocol {
     var datasource: [MyFarmDetailsUIModel] { get }
     func attach()
     func getUserInFarm() -> [User]
+    func getFarmDetailsUIModel() -> [FarmUIModel]
 }
 
 protocol MyFarmDetailsViewProtocol: class {

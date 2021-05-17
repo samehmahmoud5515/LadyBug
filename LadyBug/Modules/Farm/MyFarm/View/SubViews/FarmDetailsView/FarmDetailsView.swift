@@ -51,7 +51,7 @@ class FarmDetailsView: UIView {
     }
     
     override func observeValue(forKeyPath _: String?, of _: Any?, change _: [NSKeyValueChangeKey: Any]?, context _: UnsafeMutableRawPointer?) {
-        self.layoutIfNeeded()
+        //self.layoutIfNeeded()
     }
 }
 

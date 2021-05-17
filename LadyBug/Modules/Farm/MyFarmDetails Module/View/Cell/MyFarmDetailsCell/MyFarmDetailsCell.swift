@@ -14,6 +14,7 @@ class MyFarmDetailsCell: UITableViewCell {
     var datasource = [FarmUIModel]() {
         didSet {
             detailsView.datasource = datasource
+            layoutIfNeeded()
         }
     }
     

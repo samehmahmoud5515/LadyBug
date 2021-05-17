@@ -150,7 +150,7 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
             return cell
         case .details:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsCell.self)", for: indexPath) as? MyFarmDetailsCell ?? MyFarmDetailsCell()
-            
+            cell.datasource = presnter.getFarmDetailsUIModel()
             return cell
         case .suitability:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsSuitabilityCell.self)", for: indexPath) as? MyFarmDetailsSuitabilityCell ?? MyFarmDetailsSuitabilityCell()
