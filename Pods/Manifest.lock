@@ -12,11 +12,15 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - Result (4.1.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
 
 DEPENDENCIES:
   - Cosmos (~> 23.0)
   - GoogleMaps
   - Moya
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -25,6 +29,7 @@ SPEC REPOS:
     - GoogleMaps
     - Moya
     - Result
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -32,7 +37,8 @@ SPEC CHECKSUMS:
   GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: f77176da1ff8aed42d086697b6e03a6b8697d065
+PODFILE CHECKSUM: 6df1a2edbfe17f9adf30960083d20348f788bbb9
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

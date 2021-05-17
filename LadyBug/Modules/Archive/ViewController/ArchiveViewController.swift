@@ -94,7 +94,7 @@ extension ArchiveViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(FarmCell.self)", for: indexPath) as? FarmCell ?? FarmCell()
-        cell.setupUI()
+        cell.setupUI(farm: Farm())
         return cell
     }
     

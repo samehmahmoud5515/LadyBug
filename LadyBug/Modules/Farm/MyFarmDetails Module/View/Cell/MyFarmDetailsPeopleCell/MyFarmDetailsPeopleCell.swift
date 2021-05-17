@@ -17,6 +17,17 @@ class MyFarmDetailsPeopleCell: UITableViewCell {
     @IBOutlet weak var addTitleButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     weak var delegate: MyFarmDetailsPeopleCellDelegate?
+    
+    var datasource = [User]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        datasource = []
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,12 +67,12 @@ extension MyFarmDetailsPeopleCell {
 
 extension MyFarmDetailsPeopleCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        datasource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MyFarmDetailsPeopleChildCell.self)", for: indexPath) as? MyFarmDetailsPeopleChildCell ?? MyFarmDetailsPeopleChildCell()
-        cell.setupUI()
+        cell.setupUI(user: datasource[indexPath.row])
         return cell
     }
     

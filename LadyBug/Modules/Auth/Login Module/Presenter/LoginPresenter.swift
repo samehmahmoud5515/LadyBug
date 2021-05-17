@@ -18,16 +18,12 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func login(with username: String, password: String) {
-//        if username == Defaults[.username] && Defaults[.password] == password {
-//            Defaults[.isUserLogged] = true
-//
-//        }
-        provider.request(.login(username: username, password: password)) { result in
+        provider.request(.login(username: username, password: password)) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case let .success(moyaResponse):
                 do {
                     let loginResponse = try? moyaResponse.map(LoginResponse.self)
-                    print(loginResponse)
                     guard let accessToken = loginResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
                     self.view?.navigateToTabBarController()

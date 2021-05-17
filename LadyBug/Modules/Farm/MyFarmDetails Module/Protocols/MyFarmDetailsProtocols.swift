@@ -12,6 +12,7 @@ protocol MyFarmDetailsPresenterProtocol {
     var localizer: MyFarmDetailsLocalizer { get }
     var datasource: [MyFarmDetailsUIModel] { get }
     func attach()
+    func getUserInFarm() -> [User]
 }
 
 protocol MyFarmDetailsViewProtocol: class {

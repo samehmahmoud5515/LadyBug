@@ -21,5 +21,6 @@ protocol MoreMenuPresenterProtocol {
 protocol MoreMenuViewProtocol: class {
     func notifiyDataChange()
     func naviageteTo(model: MoreMenuUIModel)
-     func updateJobName(jobName : String )
+    func updateJobName(jobName : String )
+    func navigateToLogin()
 }

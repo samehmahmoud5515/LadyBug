@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyFarmWeatherHeaderView: UIView {
 
@@ -57,5 +58,14 @@ extension MyFarmWeatherHeaderView {
         dateLabel.textColor = .purplishBrown
         timeLabel.textColor = .purplishBrown
         noteDescriptionLabel.textColor = .purplishBrown
+    }
+}
+
+extension MyFarmWeatherHeaderView {
+    func updateViews(with weather: WeatherData) {
+        tempratureLabel.text = weather.temp
+        dateLabel.text = "\(weather.date ?? "") \(weather.location ?? "")"
+        sunImageView.sd_setImage(with: URL(string: weather.weatherIconURL ?? ""))
+        noteDescriptionLabel.text = weather.weatherDescription
     }
 }

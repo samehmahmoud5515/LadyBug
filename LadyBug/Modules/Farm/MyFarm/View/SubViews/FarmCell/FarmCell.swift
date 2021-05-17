@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FarmCell: UITableViewCell {
     
@@ -21,7 +22,15 @@ class FarmCell: UITableViewCell {
     @IBOutlet weak var nextMissionDateLabel: UILabel!
     @IBOutlet weak var bellButton: UIButton!
     
-    func setupUI() {
+    func setupUI(farm: Farm) {
+        farmNameLabel.text = farm.farmedType?.name
+        farmImageView.sd_setImage(with: URL(string: farm.farmedType?.photoURL ?? ""), completed: nil)
+        farmTypeLabel.text = farm.farmedType?.farmActivityTypeName
+        progressView.isHidden = true
+        nextMissionValueLabel.text = farm.comingTask?.name
+        nextMissionDescriptionLabel.text = farm.comingTask?.taskTypeName
+        nextMissionDateLabel.text = farm.comingTask?.startDate?.toDisplayString
+        
         farmNameLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         farmNameLabel.textColor = .purplishBrown
         farmTypeLabel.font = UIFont.get(enFont: .light(9), arFont: .light(9))
@@ -38,5 +47,9 @@ class FarmCell: UITableViewCell {
         
         nextMissionDateLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         nextMissionDateLabel.textColor = .midGreenTwo
+        
+        farmDetailsView.datasource = farm.detailsInfo
+        //layoutSubviews()
+        layoutIfNeeded()
     }
 }

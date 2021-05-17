@@ -13,9 +13,9 @@ class MyFarmDetailsViewController: UIViewController {
     
     var presnter: MyFarmDetailsPresenterProtocol!
     
-    init() {
+    init(farm: Farm) {
         super.init(nibName: "\(MyFarmDetailsViewController.self)", bundle: nil)
-        presnter = MyFarmDetailsPresenter(view: self)
+        presnter = MyFarmDetailsPresenter(view: self, farm: farm)
     }
     
     @available(*, unavailable)
@@ -159,6 +159,7 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
         case .people:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsPeopleCell.self)", for: indexPath) as? MyFarmDetailsPeopleCell ?? MyFarmDetailsPeopleCell()
             cell.setupUI()
+            cell.datasource = presnter.getUserInFarm()
             cell.delegate = self
             return cell
         case .posts:

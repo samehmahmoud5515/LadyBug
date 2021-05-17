@@ -178,6 +178,7 @@ extension RegistrationViewController {
 extension RegistrationViewController: RegistrationViewProtocol {
     func navigateToTabBarController() {
         let vc = TabBarViewController()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.viewControllers = [vc]
     }
 }

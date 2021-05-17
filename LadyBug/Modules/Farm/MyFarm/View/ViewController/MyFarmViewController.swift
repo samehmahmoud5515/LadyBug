@@ -7,12 +7,15 @@
 
 import UIKit
 
-class MyFarmViewController: UIViewController{
+class MyFarmViewController: UIViewController {
     
     //Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addFarmButton: UIButton!
+    let refreshControl = UIRefreshControl()
+
     private var presnter: MyFarmPresenterProtocol!
+    
     init() {
         super.init(nibName: "\(MyFarmViewController.self)", bundle: nil)
         presnter = MyFarmPresenter(view: self)
@@ -27,6 +30,8 @@ class MyFarmViewController: UIViewController{
         super.viewDidLoad()
         setupUI()
         presnter.attach()
+        startLoadingIndicator()
+        presnter.fetchUserFarms()
     }
     
 }
@@ -39,8 +44,8 @@ extension MyFarmViewController  {
         addBarButtonsToNavigationBar()
         registerTableViewCell()
         setupTableViewRowHeight()
-        setupTableViewHeaderView()
         setupTableViewFooter()
+        setupTableViewRefreshControl()
         setupAddFarmButtonFont()
     }
     
@@ -82,17 +87,25 @@ extension MyFarmViewController  {
     }
     
     private func setupTableViewRowHeight() {
-        tableView.estimatedRowHeight = 110
+        tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
     }
     
-    private func setupTableViewHeaderView() {
+    private func setupTableViewHeaderView(with weather: WeatherData) {
         let headerView = MyFarmWeatherHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 182))
+        headerView.updateViews(with: weather)
         tableView.tableHeaderView = headerView
     }
     
     private func setupTableViewFooter() {
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: addFarmButton.bounds.height + 41))
+    }
+    
+    private func setupTableViewRefreshControl() {
+        refreshControl.tintColor = .midGreenTwo
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+           tableView.addSubview(refreshControl)
+        tableView.addSubview(refreshControl)
     }
     
     private func setupAddFarmButtonFont() {
@@ -102,7 +115,19 @@ extension MyFarmViewController  {
 }
 
 extension MyFarmViewController: MyFarmViewProtocol {
+    func stopLoadingIndicatorView() {
+        stopLoadingIndicator()
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
+    }
     
+    func reloadData() {
+        tableView.reloadData()
+        if let weatherData = presnter.getWeatherData() {
+            setupTableViewHeaderView(with: weatherData)
+        }
+    }
 }
 
 extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
@@ -113,12 +138,12 @@ extension MyFarmViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(FarmCell.self)", for: indexPath) as? FarmCell ?? FarmCell()
-        cell.setupUI()
+        cell.setupUI(farm: presnter.getFarms(for: indexPath.row))
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = MyFarmDetailsViewController()
+        let vc = MyFarmDetailsViewController(farm: presnter.getFarms(for: indexPath.row))
         navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -150,5 +175,11 @@ extension MyFarmViewController: UISearchBarDelegate {
         let vc = SuggestionsViewController()
         navigationController?.navigationController?.pushViewController(vc, animated: true)
         return false
+    }
+}
+
+extension MyFarmViewController {
+    @objc func refreshData(_ sender: AnyObject) {
+        presnter.fetchUserFarms()
     }
 }

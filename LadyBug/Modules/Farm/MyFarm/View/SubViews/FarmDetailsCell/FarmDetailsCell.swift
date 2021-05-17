@@ -13,9 +13,9 @@ class FarmDetailsCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     
-    func updateUI() {
-        //titleLabel.text = title
-        //detailsLabel.text = value
+    func updateUI(info: FarmUIModel) {
+        titleLabel.text = info.title
+        detailsLabel.text = info.value
         titleLabel.textColor = .blueGrey
         titleLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         detailsLabel.textColor = .midGreenTwo

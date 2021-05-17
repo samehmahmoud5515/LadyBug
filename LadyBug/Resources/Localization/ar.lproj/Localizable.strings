@@ -83,7 +83,7 @@
 "my_farm_localizer_post_title" = "مزرعة طماطم";
 "my_farm_localizer_type_of_farm_title" = "حقيقية";
 
-"my_farm_localizer_the_number_of_acres_title"="عدد الافدنة";
+"my_farm_number_title"= "عدد";
 "my_farm_localizer_chemical_source_title"="مصدر الكيماوي";
 "my_farm_localizer_history_of_cultivation_title" = "تاريخ الزراعة";
 "my_farm_localizer_seedling_source_title"="مصدر الشتلة";
@@ -340,6 +340,8 @@
 "adjust_the_people_on_your_farm_edit_title" = "تعديل" ;
 "adjust_the_people_on_your_farm_delete_person_title" = "حذف الشخص" ;
 
-
-
+//MARK: - Date
+"date_today_title" = "اليوم";
+"date_tommorow_title" = "غدا";
+"date_after_tommorow_title" = "بعد يومين";
 
