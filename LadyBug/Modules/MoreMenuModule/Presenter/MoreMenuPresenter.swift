@@ -100,10 +100,10 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
                 let data = moyaResponse.data
                 let statusCode = moyaResponse.statusCode
                 AccessTokenManager.removeAccessToken()
-                self.view?.stopIndicator()
+                self?.view?.stopIndicator()
                 self?.view?.navigateToLogin()
             case let .failure(error):
-                self.view?.stopIndicator()
+                self?.view?.stopIndicator()
                 break
             }
         }
