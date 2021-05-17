@@ -7,10 +7,11 @@
 
 import UIKit
 
-class ProductDetailsViewController: UIViewController, ProductDetailsViewProtocol {
+class ProductDetailsViewController: UIViewController{
     
     @IBOutlet weak var productDetailsHeadImage: UIImageView!
     @IBOutlet weak var productDetailsCropsLabel: UILabel!
+    @IBOutlet weak var productDetailsCropsTitle: UILabel!
     @IBOutlet weak var productDetailsSupplierLabel: UILabel!
     @IBOutlet weak var productDetailsCityLabel: UILabel!
     @IBOutlet weak var productDetailsCurrencyLabel: UILabel!
@@ -27,10 +28,12 @@ class ProductDetailsViewController: UIViewController, ProductDetailsViewProtocol
     @IBOutlet weak var tableView: DynamicHeightTableView!
     
     private var presnter: ProductDetailsPresenterProtocols!
+    var product: Products!
     
-    init() {
+    init(product: Products){
         super.init(nibName: "\(ProductDetailsViewController.self)", bundle: nil)
         presnter = ProductDetailsPresenter(view : self )
+        self.product = product
     }
     
     @available(*, unavailable)
@@ -39,8 +42,10 @@ class ProductDetailsViewController: UIViewController, ProductDetailsViewProtocol
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.startLoadingIndicator()
         setupUI()
         setFont()
+        setDate()
         tableView.delegate = self
         tableView.dataSource = self
         presnter.attach()
@@ -49,6 +54,7 @@ class ProductDetailsViewController: UIViewController, ProductDetailsViewProtocol
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        self.stopLoadingIndicator()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -126,9 +132,9 @@ extension ProductDetailsViewController {
         navigationController?.popViewController(animated: true)
     }
     @objc func presentDialogue() {
-           let vc = StandardAlertViewController(title: "هل تريد ارشفة المزرعة ؟", message: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديدصورة حقيقية لتصميم الموقع.", delegate: self)
-                vc.modalPresentationStyle = .overCurrentContext
-                present(vc, animated: false, completion: nil)
+        let vc = StandardAlertViewController(title: "هل تريد ارشفة المزرعة ؟", message: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديدصورة حقيقية لتصميم الموقع.", delegate: self)
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false, completion: nil)
     }
 }
 extension ProductDetailsViewController: StandardAlertViewControllerDelegate {
@@ -147,6 +153,7 @@ extension ProductDetailsViewController {
         productDetailsCityLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         productDetailsPriceLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
         productDetailsCurrencyLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
+        productDetailsSupplierLabel.text = product.name
         productDetailsDescrptionProductLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         productDetailsDescrptionProductContentLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         productDetailsAdviceLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
@@ -156,11 +163,26 @@ extension ProductDetailsViewController {
         productDetailsButtonLabelTile.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         productDetailsButtonNumberLabelTitle.font = UIFont.get(enFont: .regular(13), arFont: .regular(13))
     }
+    
+    private func setDate(){
+        productDetailsCropsLabel.text  = product.farmedType
+        //  productDetailsSupplierLabel.text =
+        productDetailsCityLabel.text = product.city
+        guard let price = product.price else {
+            return
+        }
+        productDetailsPriceLabel.text = String(price)
+        productDetailsDescrptionProductContentLabel.text = product.description
+        productDetailsButtonNumberLabelTitle.text = product.sellerMobile
+    }
+    
 }
 extension ProductDetailsViewController: UITableViewDelegate,UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presnter.datasource.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch presnter.datasource[indexPath.row] {
         case let .city(city):
@@ -178,11 +200,30 @@ extension ProductDetailsViewController: UITableViewDelegate,UITableViewDataSourc
             return cell
         case let .moreLinkes(moreLinkes):
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(WebsiteLinkTableViewCell.self)", for: indexPath) as? WebsiteLinkTableViewCell ?? WebsiteLinkTableViewCell()
+            cell.delegate = self
             cell.setupUI(model: moreLinkes)
             return cell
         }
-        
     }
-    
 }
 
+extension ProductDetailsViewController : ProductDetailsViewProtocol{
+    func stopIndicator() {
+        self.stopLoadingIndicator()
+    }
+    
+    func setDataToTableView() -> Products {
+        return product
+    }
+}
+
+extension ProductDetailsViewController : ProductDetailsOtherLinkProtocol {
+    func otherLinkButtonDidTapped(_ cell: WebsiteLinkTableViewCell) {
+        
+        if let index = tableView.indexPath(for: cell) {
+            if let url = NSURL(string: product.otherLinks ?? ""){
+                UIApplication.shared.openURL(url as URL)
+            }
+        }
+    }
+}

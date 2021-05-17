@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 protocol ProductDetailsPresenterProtocols {
     var localizer:ProductDetailsLocalizer { get }
     var images: ProductDetailsImages { get }
@@ -13,6 +14,12 @@ protocol ProductDetailsPresenterProtocols {
     func attach()
     
 }
+
 protocol ProductDetailsViewProtocol : class {
-    
+    func stopIndicator()
+    func setDataToTableView() -> Products
+}
+
+protocol ProductDetailsOtherLinkProtocol : class  {
+    func otherLinkButtonDidTapped(_ cell: WebsiteLinkTableViewCell)
 }

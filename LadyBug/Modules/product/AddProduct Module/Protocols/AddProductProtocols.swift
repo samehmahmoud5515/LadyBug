@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+
 protocol  AddProductPresenterProtocol {
     var localizer: AddProductLocalizer { get }
     var images: AddProductImage { get }
@@ -26,4 +28,5 @@ protocol  AddProductViewProtocol: class {
     func getProductsRelations()
     func didSelectItem(item: String)
 }
+
 

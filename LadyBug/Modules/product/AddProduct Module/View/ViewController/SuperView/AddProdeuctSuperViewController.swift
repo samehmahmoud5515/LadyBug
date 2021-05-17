@@ -228,7 +228,8 @@ extension AddProdeuctSuperViewController {
     }
     
     private func setupNavigationButton(){
-        let Vc = ProductDetailsViewController()
+        let product : Products = Products.init()
+        let Vc = ProductDetailsViewController(product: product)
         navigationController?.pushViewController(Vc, animated: true)
     }
     

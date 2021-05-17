@@ -161,10 +161,7 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
 extension MoreMenuViewController: MoreMenuViewProtocol {
     func stopIndicator() {
         self.stopLoadingIndicator()
-        
     }
-    
-    
     func naviageteTo(model: MoreMenuUIModel) {
         switch model {
         case .interests:

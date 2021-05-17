@@ -14,7 +14,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
     var images = MoreMenuImages()
     var datasource = [MoreMenuUIModel]()
     var user = JObsUserInfo()
-    let logoutProvider = MoyaProvider<LogoutEndpoint>()
+    let logoutProvider = MoyaProvider<LogoutEndpoint>(plugins: [AuthorizableTokenPlugin()])
     let profileProvider = MoyaProvider<GetProfileEndPoint>(plugins: [AuthorizableTokenPlugin()])
     let jobsProvider = MoyaProvider<JobsEndPoint>()
     init(view: MoreMenuViewProtocol) {
@@ -99,7 +99,9 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
                 let data = moyaResponse.data
                 let statusCode = moyaResponse.statusCode
                 AccessTokenManager.removeAccessToken()
+                self.view?.stopIndicator()
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }
@@ -133,11 +135,13 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol{
                     let jobsResponse = try? moyaResponse.map(JobsResponse.self)
                     guard let jobs = jobsResponse?.data?.all else { return }
                     self.view?.updateJobName(jobName: jobs.first(where: { $0.id == self.user.humanJobID })?.name ?? "")
-                    print(jobs.first(where: { $0.id == self.user.humanJobID })?.name ?? "")
+                    self.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")
+                    self.view?.stopIndicator()
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }

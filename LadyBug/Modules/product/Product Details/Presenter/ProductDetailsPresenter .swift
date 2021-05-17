@@ -11,7 +11,7 @@ class ProductDetailsPresenter : ProductDetailsPresenterProtocols{
     var images = ProductDetailsImages()
     weak var view : ProductDetailsViewProtocol?
     var datasource = [ProductDetailsUIModel]()
-    init(view : ProductDetailsViewProtocol ){
+    init(view : ProductDetailsViewProtocol){
         self.view = view
     }
     func attach() {
@@ -21,17 +21,17 @@ class ProductDetailsPresenter : ProductDetailsPresenterProtocols{
         
         let city = ProductInfo()
         city.title = localizer.city
-        city.Content = localizer.cityContent
+        city.Content = view?.setDataToTableView().city! as! String
         datasource += [.city(city)]
         
         let region = ProductInfo()
         region.title = localizer.CityRegion
-        region.Content = localizer.CityRegionContent
+        region.Content = view?.setDataToTableView().district as! String
         datasource += [.region(region)]
         
         let suitableCrop = ProductInfo()
         suitableCrop.title = localizer.suitableCropTitle
-        suitableCrop.Content = localizer.suitableCropContent
+        suitableCrop.Content = view?.setDataToTableView().farmedType as! String
         datasource += [.suitableCrop(suitableCrop)]
         
         let moreLinkes = ProductInfo()
