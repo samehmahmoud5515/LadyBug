@@ -13,6 +13,8 @@ protocol  AddProductPresenterProtocol {
     var images: AddProductImage { get }
     var datasource: [AddProductUIModel] { get }
     var cities: [City]{get}
+    var selectedCity: City? { get set }
+    var selectedRegion: District? { get set }
     var farmedTypes: [FarmedType] {get}
     func handleCellDidTapped(index: Int)
     func attach()

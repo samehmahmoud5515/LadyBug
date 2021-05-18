@@ -15,6 +15,8 @@ class AddProductPresenter: AddProductPresenterProtocol {
     var cities = [City]()
     var farmedTypes = [FarmedType]()
     var provider = MoyaProvider<ProductsEndPoint>(plugins: [AuthorizableTokenPlugin()])
+    var selectedCity: City?
+    var selectedRegion: District?
     
     init(view: AddProductViewProtocol) {
         self.view = view
@@ -90,6 +92,8 @@ class AddProductPresenter: AddProductPresenterProtocol {
                     guard let farmedTypes = productsRelationsResponse?.data?.farmedTypes else { return }
                     self?.farmedTypes = farmedTypes
                     self?.cities = cities
+                    self?.selectedCity = cities.first
+                    self?.selectedRegion = cities.first?.districts?.first
                     self?.view?.getProductsRelations()
                     self?.view?.notifiyDataChange()
                 } catch {
