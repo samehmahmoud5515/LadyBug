@@ -166,28 +166,31 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
         case let .appropriateCrop(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
-                postCell.setupUI(model: model)
+                postCell.setupUI(header: model.header, title: model.titile)
                  self.tableView.rowHeight = 84
             }
         case let .city(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
-                postCell.setupUI(model: model)
-                postCell.selectionView.datasource = presnter.cities.compactMap{$0.name}       //cities.compactMap{$0.self}
-                 self.tableView.rowHeight = 84
+                postCell.setupUI(header: model.header, title: model.titile)
+                postCell.selectionView.datasource = presnter.cities.compactMap{$0.name}
+                postCell.delegate = self
+                self.tableView.rowHeight = 84
             }
         case let .region(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
-                postCell.setupUI(model: model)
-                let region = presnter.cities.compactMap{$0.districts}
-                //postCell.selectionView.datasource = region.compactMap{$0.}
-                 self.tableView.rowHeight = 84
+                let districts = presnter.selectedCity?.districts?.compactMap { $0.name } ?? []
+                postCell.selectionView.datasource = districts
+                postCell.setupUI(header: model.header, title: districts.first ?? model.titile)
+                postCell.delegate = self
+                
+                self.tableView.rowHeight = 84
             }
         case let .otherSites(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductSelectionTableViewCell {
-                postCell.setupUI(model: model)
+                postCell.setupUI(header: model.header, title: model.titile)
                 self.tableView.rowHeight = 84
             }
         case let .description(model):
@@ -245,5 +248,23 @@ extension AddProdeuctSuperViewController: TextViewUpdateProtocol {
     func textViewChanged() {
         tableView.beginUpdates()
         tableView.endUpdates()
+    }
+}
+
+extension AddProdeuctSuperViewController: AddProductSelectionTableViewCellSelectionDelegate {
+    func didSelectItem(item: String, cell: AddProductSelectionTableViewCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            switch presnter.datasource[indexPath.row] {
+            case .city:
+                let model = presnter.cities.first(where: { $0.name == item })
+                presnter.selectedCity = model
+                tableView.reloadRows(at: [IndexPath(row: indexPath.row + 1, section: 0)], with: .none)
+            case .region:
+                let model = presnter.selectedCity?.districts?.first(where: { $0.name == item})
+                presnter.selectedRegion = model
+            default:
+                break
+            }
+        }
     }
 }

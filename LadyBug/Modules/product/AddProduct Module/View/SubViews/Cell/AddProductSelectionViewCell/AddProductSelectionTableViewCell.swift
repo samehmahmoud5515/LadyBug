@@ -7,12 +7,29 @@
 
 import UIKit
 
+protocol AddProductSelectionTableViewCellSelectionDelegate: class {
+    func didSelectItem(item: String, cell: AddProductSelectionTableViewCell)
+}
+
 class AddProductSelectionTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var selectionView: StandardSelectionView!
+    @IBOutlet weak var selectionView: StandardSelectionView!
     
-    func setupUI(model: AddProductModel) {
-        selectionView.setupUI(title: model.header, selectionTitle: model.titile, placeholderColor: .purplishBrown)
-        
+    weak var delegate: AddProductSelectionTableViewCellSelectionDelegate?
+    
+    func setupUI(header: String, title: String) {
+        selectionView.setupUI(title: header, selectionTitle: title, placeholderColor: .purplishBrown)
+        selectionView.delegate = self
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        delegate = nil
+    }
+}
+
+extension AddProductSelectionTableViewCell: StandardSelectionViewDelegate {
+    func didSelectItem(item: String) {
+        delegate?.didSelectItem(item: item, cell: self)
     }
 }
