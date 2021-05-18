@@ -28,4 +28,7 @@ class MyFarmDetailsPresenter: MyFarmDetailsPresenterProtocol {
         return farm.users ?? []
     }
     
+    func getFarmDetailsUIModel() -> [FarmUIModel] {
+        return farm.detailsInfo
+    }
 }
