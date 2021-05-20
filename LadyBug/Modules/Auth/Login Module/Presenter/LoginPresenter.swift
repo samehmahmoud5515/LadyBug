@@ -8,6 +8,7 @@
 import Moya
 
 class LoginPresenter: LoginPresenterProtocol {
+    
     weak var view: LoginViewProtocol?
     var localizer = loginLocalizer()
     var images = LoginImages()
@@ -26,13 +27,15 @@ class LoginPresenter: LoginPresenterProtocol {
                     let loginResponse = try? moyaResponse.map(LoginResponse.self)
                     guard let accessToken = loginResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
+                    self.view?.stopIndicator()
                     self.view?.navigateToTabBarController()
                 } catch {
                     print("Parsing Error")
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }
-    }    
+    }
 }

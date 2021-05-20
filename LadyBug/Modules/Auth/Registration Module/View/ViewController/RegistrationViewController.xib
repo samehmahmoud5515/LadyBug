@@ -15,6 +15,7 @@
                 <outlet property="emailField" destination="UKn-ql-xcx" id="eOQ-aU-T1d"/>
                 <outlet property="mobileField" destination="sbD-xM-Bd4" id="Xz4-ur-Iei"/>
                 <outlet property="passwordField" destination="gNr-Ku-IuZ" id="HnZ-lL-XW2"/>
+                <outlet property="registrationGalleryImageVew" destination="slE-Co-jkY" id="FIX-ok-oGX"/>
                 <outlet property="registrationImageVew" destination="iHg-yD-2cA" id="MYz-Ao-KfW"/>
                 <outlet property="retypePasswordField" destination="LBx-GD-uaY" id="LAu-Ng-BUf"/>
                 <outlet property="scrollView" destination="ujn-qa-0bK" id="sqv-Ui-gpc"/>
@@ -46,12 +47,29 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="slE-Co-jkY">
+                                            <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="94" id="BVU-5t-q7j"/>
+                                                <constraint firstAttribute="width" constant="94" id="cO0-wI-8Jy"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96470588235294119" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="iHg-yD-2cA" firstAttribute="top" secondItem="Diw-ff-dzv" secondAttribute="top" constant="27" id="CVo-UJ-FCW"/>
                                         <constraint firstAttribute="trailing" secondItem="iHg-yD-2cA" secondAttribute="trailing" constant="27" id="a6a-qz-wT2"/>
                                         <constraint firstItem="iHg-yD-2cA" firstAttribute="leading" secondItem="Diw-ff-dzv" secondAttribute="leading" constant="27" id="akZ-Hr-kQ4"/>
+                                        <constraint firstItem="slE-Co-jkY" firstAttribute="centerX" secondItem="Diw-ff-dzv" secondAttribute="centerX" id="dhW-0T-cyQ"/>
+                                        <constraint firstItem="slE-Co-jkY" firstAttribute="centerY" secondItem="Diw-ff-dzv" secondAttribute="centerY" id="i47-io-fPM"/>
                                         <constraint firstAttribute="bottom" secondItem="iHg-yD-2cA" secondAttribute="bottom" constant="27" id="ymS-Fh-MTg"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -83,6 +101,9 @@
                                             <color key="value" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="AddImageActionButton:" destination="-1" eventType="touchUpInside" id="OqH-yf-uaW"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-mc-4if">
                                     <rect key="frame" x="24" y="209" width="366" height="460"/>
