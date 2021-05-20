@@ -17,6 +17,16 @@ class AddProductPresenter: AddProductPresenterProtocol {
     var provider = MoyaProvider<ProductsEndPoint>(plugins: [AuthorizableTokenPlugin()])
     var selectedCity: City?
     var selectedRegion: District?
+    var price: Double?
+    var descriptionArLocalized: String?
+    var descriptionEnLocalizedc: String?
+    var nameArLocalized: String?
+    var nameEnLocalized: String?
+    var otherLinks: String?
+    var sellerMobile: String?
+    var internalAssets: [String]?
+    var externalAssets: [String]?
+    var selectedFarmedType: FarmedType?
     
     init(view: AddProductViewProtocol) {
         self.view = view
@@ -29,6 +39,7 @@ class AddProductPresenter: AddProductPresenterProtocol {
     func prepareDatasource() {
         
         let addImage = AddProductModel()
+        
         datasource += [.addImage(addImage)]
         
         let productTitle = AddProductModel()
@@ -52,8 +63,8 @@ class AddProductPresenter: AddProductPresenterProtocol {
         datasource += [.region(region)]
         
         let moreLinks = AddProductModel()
-        moreLinks.header = localizer.moreLinks
-        moreLinks.titile = localizer.moreLinksContent
+        moreLinks.header = localizer.moreLinksContent
+        moreLinks.titile = localizer.moreLinks
         datasource += [.otherSites(moreLinks)]
         
         let descriptions = AddProductModel()
@@ -94,6 +105,7 @@ class AddProductPresenter: AddProductPresenterProtocol {
                     self?.cities = cities
                     self?.selectedCity = cities.first
                     self?.selectedRegion = cities.first?.districts?.first
+                    self?.selectedFarmedType = farmedTypes.first
                     self?.view?.getProductsRelations()
                     self?.view?.notifiyDataChange()
                 } catch {
@@ -104,8 +116,11 @@ class AddProductPresenter: AddProductPresenterProtocol {
             }
         }
     }
-    func createProduct(product : Products) {
-        provider.request(.createProduct(product: product)) { result in
+    
+    func createProduct() {
+        guard let price = self.price , let descriptionArLocalized = self.descriptionArLocalized , let nameArLocalized = self.nameArLocalized, let cityID = selectedCity?.id , let districtID = selectedRegion?.id , let otherLinks = self.otherLinks, let sellerMobile = self.sellerMobile,let internalAssets = self.internalAssets , let externalAssets = self.externalAssets, let farmedTypeID = selectedFarmedType?.id else {return}
+        
+        provider.request(.createProduct(price: price, descriptionArLocalized: descriptionArLocalized, descriptionEnLocalized: self.descriptionEnLocalizedc ?? "" , nameArLocalized: nameArLocalized, nameEnLocalized: self.nameEnLocalized ?? "", cityID: cityID, districtID: districtID, otherLinks: otherLinks, sellerMobile: sellerMobile, internalAssets: internalAssets, externalAssets: externalAssets, farmedTypeID: farmedTypeID)) { result in
             switch result {
             case let .success(moyaResponse):
                 do {
@@ -119,4 +134,6 @@ class AddProductPresenter: AddProductPresenterProtocol {
             }
         }
     }
+    
+ 
 }

@@ -1991,10 +1991,10 @@
 		218C783F2629E72B00DA440A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				218C78492629E72B00DA440A /* Add Image */,
 				218C78402629E72B00DA440A /* AddProductPriceViewCell  */,
 				218C78432629E72B00DA440A /* AddProductDescribationViewCell */,
 				218C78462629E72B00DA440A /* AddProductSelectionViewCell */,
-				218C78492629E72B00DA440A /* Add Image */,
 				218C784C2629E72B00DA440A /* AddProductTextViewCell */,
 			);
 			path = Cell;

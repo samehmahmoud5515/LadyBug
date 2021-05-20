@@ -11,7 +11,7 @@ enum ProductsEndPoint {
     case userProducts
     case getProducts(productId : Int )
     case getProductsRelations
-    case createProduct(product : Products)
+    case createProduct( price: Double, descriptionArLocalized : String, descriptionEnLocalized : String, nameArLocalized: String, nameEnLocalized: String, cityID: Int, districtID: Int , otherLinks: String , sellerMobile: String , internalAssets : [String] , externalAssets: [String] , farmedTypeID: Int )
     case updateProduct(productId : Int, product : Products)
     case sellProducts(productId : Int)
     case citesAndCrops
@@ -80,8 +80,8 @@ extension ProductsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderPro
             return .requestPlain
         case .getProductsRelations:
             return .requestPlain
-        case let .createProduct(product):
-            let paramters = ["price": product.price , "description_ar_localized": product.descriptionArLocalized , "description_en_localized": product.descriptionEnLocalized, "name_ar_localized": product.nameArlocalized, "name_en_localized": product.nameEnLocalized, "city_id": product.cityID, "district_id": product.districtID , "other_links": product.otherLinks , "seller_mobile": product.sellerMobile , "internal_assets": product.internalAssets , "external_assets": product.externalAssets , "farmed_type_id": product.farmedTypeId ] as [String : Any]
+        case let .createProduct( price, descriptionArLocalized, descriptionEnLocalized, nameArLocalized, nameEnLocalized, cityID, districtID, otherLinks, sellerMobile, internalAssets, externalAssets, farmedTypeID):
+            let paramters = ["price": price , "description_ar_localized": descriptionArLocalized , "description_en_localized": descriptionEnLocalized, "name_ar_localized": nameArLocalized, "name_en_localized": nameEnLocalized, "city_id": cityID, "district_id": districtID , "other_links": otherLinks , "seller_mobile": sellerMobile , "internal_assets": internalAssets , "external_assets": externalAssets , "farmed_type_id": farmedTypeID ] as [String : Any]
             return .requestParameters(parameters: paramters, encoding: JSONEncoding.default)
         case let .updateProduct(productId, product) :
             let paramters = ["price": product.price , "description_ar_localized": product.descriptionArLocalized , "description_en_localized": product.descriptionEnLocalized, "name_ar_localized": product.nameArlocalized, "name_en_localized": product.nameEnLocalized, "city_id": product.cityID, "district_id": product.districtID , "other_links": product.otherLinks , "seller_mobile": product.sellerMobile , "internal_assets": product.internalAssets , "external_assets": product.externalAssets , "farmed_type_id": product.farmedTypeId ] as [String : Any]

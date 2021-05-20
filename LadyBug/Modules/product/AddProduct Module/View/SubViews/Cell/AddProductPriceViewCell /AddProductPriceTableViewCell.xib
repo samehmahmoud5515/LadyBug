@@ -34,7 +34,7 @@
             <connections>
                 <outlet property="PriceView" destination="t73-np-eqQ" id="Fab-SA-A2L"/>
             </connections>
-            <point key="canvasLocation" x="-143" y="74"/>
+            <point key="canvasLocation" x="-143.47826086956522" y="73.660714285714278"/>
         </tableViewCell>
     </objects>
 </document>

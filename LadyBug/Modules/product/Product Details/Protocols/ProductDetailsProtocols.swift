@@ -12,6 +12,7 @@ protocol ProductDetailsPresenterProtocols {
     var images: ProductDetailsImages { get }
     var datasource: [ProductDetailsUIModel] { get }
     func attach()
+    var product : Products{get}
     
 }
 

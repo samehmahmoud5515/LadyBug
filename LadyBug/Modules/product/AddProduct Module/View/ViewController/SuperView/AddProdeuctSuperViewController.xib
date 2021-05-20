@@ -49,6 +49,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="AddProductActionButton:" destination="-1" eventType="touchUpInside" id="hiu-CS-QJF"/>
+                        <action selector="createProductActionButton:" destination="-1" eventType="touchUpInside" id="ULZ-2E-Ja3"/>
                     </connections>
                 </button>
             </subviews>

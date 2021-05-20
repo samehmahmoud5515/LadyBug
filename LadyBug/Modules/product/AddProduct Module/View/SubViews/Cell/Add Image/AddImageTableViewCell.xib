@@ -51,12 +51,29 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48N-3B-Wdw">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="126"/>
+                                                <connections>
+                                                    <action selector="addProductMainPictureImageActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xju-ex-RFV"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cl1-mJ-5eL">
+                                                <rect key="frame" x="-3.5" y="-0.5" width="116" height="127"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96470588235294119" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="48N-3B-Wdw" firstAttribute="centerX" secondItem="J8K-he-imM" secondAttribute="centerX" id="67M-Al-PO3"/>
+                                            <constraint firstItem="48N-3B-Wdw" firstAttribute="width" secondItem="J8K-he-imM" secondAttribute="width" id="AVN-3X-V8P"/>
                                             <constraint firstItem="vn6-mc-dEY" firstAttribute="centerY" secondItem="J8K-he-imM" secondAttribute="centerY" id="FIw-it-7fa"/>
+                                            <constraint firstItem="cl1-mJ-5eL" firstAttribute="width" secondItem="J8K-he-imM" secondAttribute="width" multiplier="1.06422" id="Wn9-aj-0DD"/>
+                                            <constraint firstItem="cl1-mJ-5eL" firstAttribute="height" secondItem="J8K-he-imM" secondAttribute="height" multiplier="1.00794" id="Yrm-Mw-rdV"/>
+                                            <constraint firstItem="cl1-mJ-5eL" firstAttribute="centerY" secondItem="J8K-he-imM" secondAttribute="centerY" id="dz0-Qg-Oza"/>
                                             <constraint firstAttribute="width" secondItem="J8K-he-imM" secondAttribute="height" multiplier="103:119" id="ixk-zP-mK0"/>
                                             <constraint firstItem="vn6-mc-dEY" firstAttribute="centerX" secondItem="J8K-he-imM" secondAttribute="centerX" id="oqP-Vv-Yx7"/>
+                                            <constraint firstItem="48N-3B-Wdw" firstAttribute="centerY" secondItem="J8K-he-imM" secondAttribute="centerY" id="tkS-eK-WiW"/>
+                                            <constraint firstItem="cl1-mJ-5eL" firstAttribute="centerX" secondItem="J8K-he-imM" secondAttribute="centerX" id="vqE-MB-ZVz"/>
+                                            <constraint firstItem="48N-3B-Wdw" firstAttribute="height" secondItem="J8K-he-imM" secondAttribute="height" id="xPO-XZ-0vy"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -96,12 +113,29 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-DM-I19">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="126"/>
+                                                <connections>
+                                                    <action selector="addProductInteriorPictureActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wKZ-C8-Mcd"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YfV-xg-Oi4">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="126"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96470588235294119" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="YfV-xg-Oi4" firstAttribute="centerY" secondItem="qzq-U9-11p" secondAttribute="centerY" id="18C-9h-9d5"/>
+                                            <constraint firstItem="YfV-xg-Oi4" firstAttribute="height" secondItem="qzq-U9-11p" secondAttribute="height" id="AI9-Lb-mBH"/>
+                                            <constraint firstItem="YfV-xg-Oi4" firstAttribute="centerX" secondItem="qzq-U9-11p" secondAttribute="centerX" id="Jjo-ho-ydh"/>
+                                            <constraint firstItem="hEt-DM-I19" firstAttribute="centerX" secondItem="qzq-U9-11p" secondAttribute="centerX" id="OFw-s5-a6U"/>
+                                            <constraint firstItem="hEt-DM-I19" firstAttribute="centerY" secondItem="qzq-U9-11p" secondAttribute="centerY" id="SAA-dC-e1c"/>
+                                            <constraint firstItem="hEt-DM-I19" firstAttribute="width" secondItem="qzq-U9-11p" secondAttribute="width" id="Vzc-Ur-0MC"/>
                                             <constraint firstItem="Wxo-d9-cXl" firstAttribute="centerX" secondItem="qzq-U9-11p" secondAttribute="centerX" id="YGv-hB-GPp"/>
                                             <constraint firstAttribute="width" secondItem="qzq-U9-11p" secondAttribute="height" multiplier="188:119" id="fKO-qm-3ox"/>
                                             <constraint firstItem="Wxo-d9-cXl" firstAttribute="centerY" secondItem="qzq-U9-11p" secondAttribute="centerY" id="p3s-oJ-i2d"/>
+                                            <constraint firstItem="YfV-xg-Oi4" firstAttribute="width" secondItem="qzq-U9-11p" secondAttribute="width" id="ygk-Hw-Y22"/>
+                                            <constraint firstItem="hEt-DM-I19" firstAttribute="height" secondItem="qzq-U9-11p" secondAttribute="height" id="yhw-Q3-38C"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -136,16 +170,20 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addProductInteriorPictureButton" destination="hEt-DM-I19" id="Y6S-iF-sM6"/>
+                <outlet property="addProductInteriorPictureGulleryImageView" destination="YfV-xg-Oi4" id="9uc-om-1u9"/>
                 <outlet property="addProductInteriorPictureImageView" destination="Lgv-0m-U4i" id="DFD-Td-Vqf"/>
                 <outlet property="addProductInteriorPictureView" destination="qzq-U9-11p" id="z3X-6M-v8f"/>
                 <outlet property="addProductInteriorPictureViewTitle" destination="AGC-JC-sTV" id="qVC-m2-wBS"/>
                 <outlet property="addProductInteriorPicturetitle" destination="ecY-DY-WYO" id="kuL-l9-DG5"/>
+                <outlet property="addProductMainPictureGulleryImageView" destination="cl1-mJ-5eL" id="hAA-zD-0JV"/>
+                <outlet property="addProductMainPictureImageButton" destination="48N-3B-Wdw" id="Tbg-62-fnd"/>
                 <outlet property="addProductMainPictureImageView" destination="UqU-0f-C5f" id="ass-LB-iBo"/>
                 <outlet property="addProductMainPictureView" destination="J8K-he-imM" id="3lw-vx-mnS"/>
                 <outlet property="addProductMainPictureViewTitle" destination="N7h-7b-QQ0" id="26d-9G-YIP"/>
                 <outlet property="addProductMainPicturetitle" destination="mqq-d6-XKL" id="lLD-kW-xoc"/>
             </connections>
-            <point key="canvasLocation" x="41.304347826086961" y="37.834821428571423"/>
+            <point key="canvasLocation" x="-57.24637681159421" y="33.816964285714285"/>
         </tableViewCell>
     </objects>
     <resources>

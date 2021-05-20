@@ -11,8 +11,10 @@ class ProductDetailsPresenter : ProductDetailsPresenterProtocols{
     var images = ProductDetailsImages()
     weak var view : ProductDetailsViewProtocol?
     var datasource = [ProductDetailsUIModel]()
-    init(view : ProductDetailsViewProtocol){
+    var product = Products()
+    init(view : ProductDetailsViewProtocol ,product: Products ){
         self.view = view
+        self.product = product
     }
     func attach() {
         prepareDatasource() 

@@ -8,11 +8,11 @@
 import UIKit
 
 class AddProductTextViewTableViewCell: UITableViewCell {
-
-   @IBOutlet weak var textView: StandardTextView!
-       
-   func setupUI(textViewUpdateDelegate: TextViewUpdateProtocol?) {
-       textView.textViewUpdateDelegate = textViewUpdateDelegate
-   }
     
+    @IBOutlet weak var textView: StandardTextView!
+    
+    func setupUI(textViewUpdateDelegate: TextViewUpdateProtocol?) {
+        textView.textViewUpdateDelegate = textViewUpdateDelegate
+        textView.textView.isScrollEnabled = true
+    }
 }

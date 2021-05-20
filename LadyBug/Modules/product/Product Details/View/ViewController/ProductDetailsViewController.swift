@@ -28,12 +28,11 @@ class ProductDetailsViewController: UIViewController{
     @IBOutlet weak var tableView: DynamicHeightTableView!
     
     private var presnter: ProductDetailsPresenterProtocols!
-    var product: Products!
+    
     
     init(product: Products){
         super.init(nibName: "\(ProductDetailsViewController.self)", bundle: nil)
-        presnter = ProductDetailsPresenter(view : self )
-        self.product = product
+        presnter = ProductDetailsPresenter(view : self, product: product  )
     }
     
     @available(*, unavailable)
@@ -153,7 +152,7 @@ extension ProductDetailsViewController {
         productDetailsCityLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         productDetailsPriceLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
         productDetailsCurrencyLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
-        productDetailsSupplierLabel.text = product.name
+        productDetailsSupplierLabel.text = presnter.product.name//product.name
         productDetailsDescrptionProductLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         productDetailsDescrptionProductContentLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         productDetailsAdviceLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
@@ -165,15 +164,15 @@ extension ProductDetailsViewController {
     }
     
     private func setDate(){
-        productDetailsCropsLabel.text  = product.farmedType
+        productDetailsCropsLabel.text  = presnter.product.farmedType
         //  productDetailsSupplierLabel.text =
-        productDetailsCityLabel.text = product.city
-        guard let price = product.price else {
+        productDetailsCityLabel.text = presnter.product.city
+        guard let price = presnter.product.price else {
             return
         }
         productDetailsPriceLabel.text = String(price)
-        productDetailsDescrptionProductContentLabel.text = product.description
-        productDetailsButtonNumberLabelTitle.text = product.sellerMobile
+        productDetailsDescrptionProductContentLabel.text = presnter.product.description
+        productDetailsButtonNumberLabelTitle.text = presnter.product.sellerMobile
     }
     
 }
@@ -213,15 +212,14 @@ extension ProductDetailsViewController : ProductDetailsViewProtocol{
     }
     
     func setDataToTableView() -> Products {
-        return product
+        return presnter.product
     }
 }
 
 extension ProductDetailsViewController : ProductDetailsOtherLinkProtocol {
     func otherLinkButtonDidTapped(_ cell: WebsiteLinkTableViewCell) {
-        
         if let index = tableView.indexPath(for: cell) {
-            if let url = NSURL(string: product.otherLinks ?? ""){
+            if let url = NSURL(string: presnter.product.otherLinks ?? ""){
                 UIApplication.shared.openURL(url as URL)
             }
         }

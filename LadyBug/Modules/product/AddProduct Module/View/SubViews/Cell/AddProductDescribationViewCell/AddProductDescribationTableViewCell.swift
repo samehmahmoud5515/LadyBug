@@ -11,11 +11,9 @@ class AddProductDescribationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var descriptiontextView: StandardTextFieldView!
 
-    func setUI( model : AddProductModel ){
-        descriptiontextView.setupUI(isPasswordField: false, placeholder: model.header , nextButton: true)
-        descriptiontextView.setupFloatingTitle(with: model.titile)
+    func setupUI(header: String, title: String){
+        descriptiontextView.setupUI(isPasswordField: false, placeholder: header , nextButton: true)
+        descriptiontextView.setupFloatingTitle(with: title)
         descriptiontextView.setupSpacing(insets: .zero)
-        
-        
     }
 }

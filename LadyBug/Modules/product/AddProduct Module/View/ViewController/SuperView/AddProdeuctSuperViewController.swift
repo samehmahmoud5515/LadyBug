@@ -7,13 +7,12 @@
 
 import UIKit
 
-class AddProdeuctSuperViewController: UIViewController {
-   
+class AddProdeuctSuperViewController: UIViewController{
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addProductButton: UIButton!
     
     private var presnter: AddProductPresenterProtocol!
-    
     init() {
         super.init(nibName: "\(AddProdeuctSuperViewController.self)", bundle: nil)
         presnter = AddProductPresenter(view: self)
@@ -40,6 +39,7 @@ class AddProdeuctSuperViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
 }
 
 // MARK:- UI Setup
@@ -114,6 +114,9 @@ extension AddProdeuctSuperViewController{
         let TextView = UINib(nibName: "\(AddProductTextViewTableViewCell.self)", bundle: nil)
         tableView.register(TextView, forCellReuseIdentifier: "\(AddProductTextViewTableViewCell.self)")
         
+        let priceView = UINib(nibName: "\(AddProductPriceTableViewCell.self)", bundle: nil)
+        tableView.register(priceView, forCellReuseIdentifier: "\(AddProductPriceTableViewCell.self)")
+        
     }
     
     private func setupTableViewRowHeight() {
@@ -132,7 +135,7 @@ extension AddProdeuctSuperViewController: AddProductViewProtocol {
         
     }
     
-     func didSelectItem(item: String) {
+    func didSelectItem(item: String) {
         
     }
     
@@ -153,63 +156,69 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
         case .addImage(_):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddImageTableViewCell.self)", for: indexPath)
             cell.selectionStyle = .none
-            if let postCell = cell as? AddImageTableViewCell {
-                postCell.setupFontUI()
+            if let addImage = cell as? AddImageTableViewCell {
+                addImage.setupFontUI()
+                addImage.delegate = self
                 setupTableViewRowHeight()
             }
         case let .productTitle(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductDescribationTableViewCell {
-                postCell.setUI(model: model)
+            if let productTitle = cell as? AddProductDescribationTableViewCell {
+                productTitle.setupUI(header: "", title: model.titile)
+                presnter.nameArLocalized = productTitle.descriptiontextView.inputText
                 setupTableViewRowHeight()
             }
         case let .appropriateCrop(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductSelectionTableViewCell {
-                postCell.setupUI(header: model.header, title: model.titile)
-                 self.tableView.rowHeight = 84
+            if let appropriateCrop = cell as? AddProductSelectionTableViewCell {
+                appropriateCrop.setupUI(header: model.header, title: presnter.farmedTypes.compactMap{$0.name}.first ?? model.titile )
+                appropriateCrop.selectionView.datasource = presnter.farmedTypes.compactMap{$0.name}
+                self.tableView.rowHeight = 84
             }
         case let .city(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductSelectionTableViewCell {
-                postCell.setupUI(header: model.header, title: model.titile)
-                postCell.selectionView.datasource = presnter.cities.compactMap{$0.name}
-                postCell.delegate = self
+            if let city = cell as? AddProductSelectionTableViewCell {
+                city.setupUI(header: model.header, title: presnter.cities.compactMap{$0.name}.first ?? model.titile)
+                city.selectionView.datasource = presnter.cities.compactMap{$0.name}
+                city.delegate = self
                 self.tableView.rowHeight = 84
             }
         case let .region(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductSelectionTableViewCell {
+            if let region = cell as? AddProductSelectionTableViewCell {
                 let districts = presnter.selectedCity?.districts?.compactMap { $0.name } ?? []
-                postCell.selectionView.datasource = districts
-                postCell.setupUI(header: model.header, title: districts.first ?? model.titile)
-                postCell.delegate = self
-                
+                region.selectionView.datasource = districts
+                region.setupUI(header: model.header, title: districts.first ?? model.titile)
+                region.delegate = self
                 self.tableView.rowHeight = 84
             }
         case let .otherSites(model):
-            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductSelectionTableViewCell {
-                postCell.setupUI(header: model.header, title: model.titile)
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
+            if let otherSites = cell as? AddProductDescribationTableViewCell {
+                otherSites.setupUI(header: "" , title:  model.titile)
+                presnter.otherLinks = otherSites.descriptiontextView.inputText
                 self.tableView.rowHeight = 84
             }
-        case let .description(model):
+        case  .description:
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductTextViewTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductTextViewTableViewCell {
-                postCell.setupUI(textViewUpdateDelegate: self)
+            if let description = cell as? AddProductTextViewTableViewCell {
+                description.setupUI(textViewUpdateDelegate: self)
+                presnter.descriptionArLocalized = description.textView.textView.text
                 setupTableViewRowHeight()
             }
         case let .phoneNumber(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
             if let postCell = cell as? AddProductDescribationTableViewCell {
-                postCell.setUI(model: model)
+                postCell.setupUI(header: model.header, title:  model.titile)
+                presnter.sellerMobile = postCell.descriptiontextView.inputText
                 setupTableViewRowHeight()
             }
         case let .price(model):
-            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductDescribationTableViewCell {
-                postCell.setUI(model: model)
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductPriceTableViewCell.self)", for: indexPath)
+            if let price = cell as? AddProductPriceTableViewCell {
+                price.setUI(model: model)
                 setupTableViewRowHeight()
+                presnter.price = Double(price.PriceView.inputText)
             }
         }
         return cell
@@ -246,8 +255,6 @@ extension AddProdeuctSuperViewController {
 
 extension AddProdeuctSuperViewController: TextViewUpdateProtocol {
     func textViewChanged() {
-        tableView.beginUpdates()
-        tableView.endUpdates()
     }
 }
 
@@ -262,9 +269,64 @@ extension AddProdeuctSuperViewController: AddProductSelectionTableViewCellSelect
             case .region:
                 let model = presnter.selectedCity?.districts?.first(where: { $0.name == item})
                 presnter.selectedRegion = model
+            case .appropriateCrop:
+                let model = presnter.farmedTypes.first(where: { $0.name == item})
+                presnter.selectedFarmedType = model
+                tableView.reloadRows(at: [IndexPath(row: indexPath.row + 0, section: 0)], with: .none)
             default:
                 break
             }
         }
     }
 }
+
+extension AddProdeuctSuperViewController{
+    @IBAction func createProductActionButton(_ sender: UIButton) {
+        presnter.createProduct()
+    }
+}
+
+extension AddProdeuctSuperViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate , AddProductImageProtocol {
+    
+    
+    func addImageButtonDidTapped(_ cell: AddImageTableViewCell) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+        self.startLoadingIndicator()
+        
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0) ) as?  AddImageTableViewCell
+        switch cell!.detectImage{
+        case true :
+            if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+                cell?.addProductMainPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell?.addProductMainPictureGulleryImageView.image = editedImage
+            } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                cell?.addProductMainPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell?.addProductMainPictureGulleryImageView.image = originalImage
+            }
+        case false:
+            if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+                cell?.addProductInteriorPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell?.addProductInteriorPictureGulleryImageView.image = editedImage
+                
+            } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                cell?.addProductInteriorPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell?.addProductInteriorPictureGulleryImageView.image = originalImage
+            }
+        }
+        self.stopLoadingIndicator()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.stopLoadingIndicator()
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+

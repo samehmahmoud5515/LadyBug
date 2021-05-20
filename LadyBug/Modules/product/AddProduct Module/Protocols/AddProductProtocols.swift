@@ -15,11 +15,21 @@ protocol  AddProductPresenterProtocol {
     var cities: [City]{get}
     var selectedCity: City? { get set }
     var selectedRegion: District? { get set }
+    var price: Double?{ get set }
+    var descriptionArLocalized: String?{ get set }
+    var descriptionEnLocalizedc: String?{ get set }
+    var nameArLocalized: String?{ get set }
+    var nameEnLocalized: String?{ get set }
+    var otherLinks: String?{ get set }
+    var sellerMobile: String?{ get set }
+    var internalAssets: [String]?{ get set }
+    var externalAssets: [String]?{ get set }
+    var selectedFarmedType: FarmedType?{ get set }
     var farmedTypes: [FarmedType] {get}
     func handleCellDidTapped(index: Int)
     func attach()
     func getItemFor(index: Int) -> AddProductUIModel
-    func createProduct(product : Products)
+    func createProduct()
     func getCitysAndCrops()
 }
 
@@ -30,5 +40,10 @@ protocol  AddProductViewProtocol: class {
     func getProductsRelations()
     func didSelectItem(item: String)
 }
+
+protocol AddProductImageProtocol : class  {
+    func addImageButtonDidTapped(_ cell: AddImageTableViewCell)
+}
+
 
 

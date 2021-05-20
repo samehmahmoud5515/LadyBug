@@ -14,9 +14,9 @@ class WebsiteLinkTableViewCell: UITableViewCell {
     weak var delegate : ProductDetailsOtherLinkProtocol?
     
     func setupFontUI() {
-           pressHereLabelButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
-           moreLinkesLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
-  }
+        pressHereLabelButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
+        moreLinkesLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
+    }
     func setupUI(model: ProductInfo ) {
         moreLinkesLabel.text = model.title
         pressHereLabelButton.setTitle(model.Content, for: .normal)
@@ -24,7 +24,7 @@ class WebsiteLinkTableViewCell: UITableViewCell {
     }
     
     @IBAction func PressHereActionButton(_ sender: UIButton) {
-         delegate?.otherLinkButtonDidTapped(self)
+        delegate?.otherLinkButtonDidTapped(self)
     }
 }
 
