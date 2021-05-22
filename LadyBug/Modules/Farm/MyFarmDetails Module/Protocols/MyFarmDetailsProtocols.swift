@@ -14,6 +14,8 @@ protocol MyFarmDetailsPresenterProtocol {
     func attach()
     func getUserInFarm() -> [User]
     func getFarmDetailsUIModel() -> [FarmUIModel]
+    func getFarmPosts() -> [Post]
+    func getServiceTables() -> [ServiceTable]
 }
 
 protocol MyFarmDetailsViewProtocol: class {

@@ -8,9 +8,16 @@
 import UIKit
 
 class MyFarmDetailsPostsTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var addTitleLabel: UILabel!
     @IBOutlet weak var addTitleButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var posts = [Post]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,15 +53,14 @@ extension MyFarmDetailsPostsTableViewCell {
 
 extension MyFarmDetailsPostsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MyFarmDetailsPostsChildCell.self)", for: indexPath) as? MyFarmDetailsPostsChildCell ?? MyFarmDetailsPostsChildCell()
-        cell.setupUI()
+        let post = posts[indexPath.row]
+        cell.setupUI(title: post.farm, desc: post.content, logo: post.farmedTypePhoto)
         return cell
     }
-    
-    
 }
 

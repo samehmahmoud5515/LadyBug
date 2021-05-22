@@ -19,36 +19,36 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="360" height="225"/>
+            <rect key="frame" x="0.0" y="0.0" width="360" height="74"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhF-HL-QVK">
-                    <rect key="frame" x="0.0" y="0.0" width="360" height="225"/>
+                    <rect key="frame" x="0.0" y="0.0" width="360" height="74"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="LNG-HY-8HI">
-                            <rect key="frame" x="0.0" y="0.0" width="360" height="225"/>
+                            <rect key="frame" x="0.0" y="0.0" width="360" height="74"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="اختر نوع سؤالك" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTw-5W-hcl">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="اختر نوع سؤالك" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTw-5W-hcl">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QX8-MZ-5Qu">
-                                    <rect key="frame" x="0.0" y="29.5" width="360" height="195.5"/>
+                                    <rect key="frame" x="0.0" y="29.5" width="360" height="44.5"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_drop_down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="vuL-eq-Apf">
-                                            <rect key="frame" x="330" y="93" width="14" height="10"/>
+                                            <rect key="frame" x="330" y="17.5" width="14" height="10"/>
                                             <color key="tintColor" red="0.52941176469999995" green="0.60784313729999995" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TXd-Il-owZ">
-                                            <rect key="frame" x="16" y="11" width="41.5" height="173.5"/>
+                                            <rect key="frame" x="16" y="11" width="41.5" height="22.5"/>
                                             <subviews>
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="crN-1N-Oai">
-                                                    <rect key="frame" x="0.0" y="75" width="0.0" height="24"/>
+                                                    <rect key="frame" x="0.0" y="-0.5" width="0.0" height="24"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFr-Qg-8Xe">
-                                                    <rect key="frame" x="0.0" y="76.5" width="41.5" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="1" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjF-y3-gl1">
-                            <rect key="frame" x="0.0" y="0.0" width="360" height="225"/>
+                            <rect key="frame" x="0.0" y="0.0" width="360" height="74"/>
                             <connections>
                                 <action selector="viewDidTapped:" destination="-1" eventType="touchUpInside" id="EZx-IN-uRQ"/>
                             </connections>
@@ -101,7 +101,7 @@
                 <constraint firstItem="JhF-HL-QVK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FvB-pk-pf4"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-53.623188405797109" y="72.65625"/>
+            <point key="canvasLocation" x="-53.623188405797109" y="2.0089285714285712"/>
         </view>
     </objects>
     <resources>

@@ -225,9 +225,7 @@
 		504969B025F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049698025F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.swift */; };
 		504969B125F81E23002C3E40 /* MyFarmDetailsPostsChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5049698225F81E23002C3E40 /* MyFarmDetailsPostsChildCell.xib */; };
 		504969B225F81E23002C3E40 /* MyFarmDetailsPostsChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049698325F81E23002C3E40 /* MyFarmDetailsPostsChildCell.swift */; };
-		504969B325F81E23002C3E40 /* MyFarmDetailsPostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5049698425F81E23002C3E40 /* MyFarmDetailsPostsCell.xib */; };
 		504969B425F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5049698525F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib */; };
-		504969B525F81E23002C3E40 /* MyFarmDetailsPostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049698625F81E23002C3E40 /* MyFarmDetailsPostsCell.swift */; };
 		504969B625F81E23002C3E40 /* MyFarmDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049698925F81E23002C3E40 /* MyFarmDetailsView.swift */; };
 		504969B725F81E23002C3E40 /* MyFarmDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5049698A25F81E23002C3E40 /* MyFarmDetailsView.xib */; };
 		504969B825F81E23002C3E40 /* MyFarmDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5049698B25F81E23002C3E40 /* MyFarmDetailsCell.xib */; };
@@ -656,9 +654,7 @@
 		5049698025F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPostsTableViewCell.swift; sourceTree = "<group>"; };
 		5049698225F81E23002C3E40 /* MyFarmDetailsPostsChildCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFarmDetailsPostsChildCell.xib; sourceTree = "<group>"; };
 		5049698325F81E23002C3E40 /* MyFarmDetailsPostsChildCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPostsChildCell.swift; sourceTree = "<group>"; };
-		5049698425F81E23002C3E40 /* MyFarmDetailsPostsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFarmDetailsPostsCell.xib; sourceTree = "<group>"; };
 		5049698525F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFarmDetailsPostsTableViewCell.xib; sourceTree = "<group>"; };
-		5049698625F81E23002C3E40 /* MyFarmDetailsPostsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsPostsCell.swift; sourceTree = "<group>"; };
 		5049698925F81E23002C3E40 /* MyFarmDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFarmDetailsView.swift; sourceTree = "<group>"; };
 		5049698A25F81E23002C3E40 /* MyFarmDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFarmDetailsView.xib; sourceTree = "<group>"; };
 		5049698B25F81E23002C3E40 /* MyFarmDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFarmDetailsCell.xib; sourceTree = "<group>"; };
@@ -2941,11 +2937,9 @@
 		5049697F25F81E22002C3E40 /* MyFarmDetailsPostsCell */ = {
 			isa = PBXGroup;
 			children = (
+				5049698525F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib */,
 				5049698025F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.swift */,
 				5049698125F81E23002C3E40 /* MyFarmDetailsPostsChildCell */,
-				5049698425F81E23002C3E40 /* MyFarmDetailsPostsCell.xib */,
-				5049698525F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.xib */,
-				5049698625F81E23002C3E40 /* MyFarmDetailsPostsCell.swift */,
 			);
 			path = MyFarmDetailsPostsCell;
 			sourceTree = "<group>";
@@ -2981,9 +2975,9 @@
 		5049698D25F81E23002C3E40 /* MyFarmDetailsServiceTableCell */ = {
 			isa = PBXGroup;
 			children = (
+				5049699A25F81E23002C3E40 /* MyFarmDetailsServiceTableCell.xib */,
 				5049698E25F81E23002C3E40 /* MyFarmDetailsServiceTableCell.swift */,
 				5049698F25F81E23002C3E40 /* SubViews */,
-				5049699A25F81E23002C3E40 /* MyFarmDetailsServiceTableCell.xib */,
 			);
 			path = MyFarmDetailsServiceTableCell;
 			sourceTree = "<group>";
@@ -4703,7 +4697,6 @@
 				50AF3EC8260AD19A00CBCD0C /* CreateFarmViewController.xib in Resources */,
 				21112D1526191F650037B8AE /* FarmPersonSelectionTableViewCell.xib in Resources */,
 				503CB5BB25E07DD900B7A393 /* ProductCell.xib in Resources */,
-				504969B325F81E23002C3E40 /* MyFarmDetailsPostsCell.xib in Resources */,
 				50AF3EB5260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib in Resources */,
 				504969C125F81E23002C3E40 /* MyFarmDetailsServiceTableCell.xib in Resources */,
 				508537E32617F76C00CCFEA7 /* AddTaskViewController.xib in Resources */,
@@ -4983,7 +4976,6 @@
 				218C78582629E72C00DA440A /* AddProductUIModel.swift in Sources */,
 				217D1EAB2608293C0025462F /* UIModel.swift in Sources */,
 				2101D91025F2FB0200FB0DB9 /* YourProductsProtocols.swift in Sources */,
-				504969B525F81E23002C3E40 /* MyFarmDetailsPostsCell.swift in Sources */,
 				50A77D3125D9EA550054E80D /* TabBarViewController.swift in Sources */,
 				218C78652629E72C00DA440A /* AddProdeuctSuperViewController.swift in Sources */,
 				508FDAE025F04A1800686ECE /* MyCropsCell.swift in Sources */,

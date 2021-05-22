@@ -165,12 +165,12 @@ extension MyFarmDetailsViewController: UITableViewDataSource, UITableViewDelegat
         case .posts:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsPostsTableViewCell.self)", for: indexPath) as? MyFarmDetailsPostsTableViewCell ?? MyFarmDetailsPostsTableViewCell()
             cell.setupUI()
-            cell.layoutSubviews()
+            cell.posts = presnter.getFarmPosts()
             return cell
         case .tasks:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsServiceTableCell.self)", for: indexPath) as? MyFarmDetailsServiceTableCell ?? MyFarmDetailsServiceTableCell()
             cell.setupUI()
-            cell.layoutSubviews()
+//            cell.layoutSubviews()
             return cell
         }
     }

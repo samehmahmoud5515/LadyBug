@@ -173,7 +173,7 @@ struct FarmTask: Codable {
     var farmID, serviceTableID, taskTypeID, quantity: Int?
     var quantityUnitID: Int?
     var dueAt: String?
-    var done: Bool?
+    var done: Bool = false
     var createdAt, updatedAt: String?
     var deletedAt: String?
     var taskTypeName: String?
@@ -368,7 +368,8 @@ struct ServiceTable: Codable {
     var name: String?
     var farmID, tasksCount: Int?
     var tasks: [FarmTask]?
-
+    var isSelected = false
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case farmID = "farm_id"
