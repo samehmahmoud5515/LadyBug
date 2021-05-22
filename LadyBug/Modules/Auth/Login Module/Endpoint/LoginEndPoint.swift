@@ -43,5 +43,5 @@ extension LoginEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtoc
     
     var authorizationType: AuthorizationType {
         return .bearer
-    }    
+    }
 }

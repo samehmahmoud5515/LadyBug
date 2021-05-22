@@ -23,54 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1AC2A73D-573A-4A7B-B540-1185CFDF8447"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LadyBug/Modules/Auth/Registration Module/View/ViewController/RegistrationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "didSelectItem(item:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1AC2A73D-573A-4A7B-B540-1185CFDF8447 - 11b3a8f1de6180a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LadyBug.RegistrationViewController.didSelectItem(item: Swift.String) -&gt; ()"
-                  moduleName = "LadyBug"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohamedabdelhamedahmed/Desktop/Projects/LadyBug/LadyBug/Modules/Auth/Registration%20Module/View/ViewController/RegistrationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "251"
-                  endingLineNumber = "251"
-                  offsetFromSymbolStart = "54">
-               </Location>
-               <Location
-                  uuid = "1AC2A73D-573A-4A7B-B540-1185CFDF8447 - 90dc7d5b32e94538"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (LadyBug.JobsInfo) -&gt; Swift.Bool in LadyBug.RegistrationViewController.didSelectItem(item: Swift.String) -&gt; ()"
-                  moduleName = "LadyBug"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohamedabdelhamedahmed/Desktop/Projects/LadyBug/LadyBug/Modules/Auth/Registration%20Module/View/ViewController/RegistrationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "251"
-                  endingLineNumber = "251"
-                  offsetFromSymbolStart = "82">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E76D59B8-7EB6-4D8C-A1AF-7D75338606CE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

@@ -115,6 +115,11 @@ extension LoginViewController{
     }
 }
 extension LoginViewController: LoginViewProtocol {
+    
+    func stopIndicator() {
+         self.stopLoadingIndicator()
+    }
+    
     func navigateToTabBarController() {
         let vc = TabBarViewController()
         navigationController?.viewControllers = [vc]
@@ -186,6 +191,7 @@ extension LoginViewController {
 
 extension LoginViewController {
     @IBAction func loginButtonDidTapped(_ sender: Any) {
+        self.startLoadingIndicator()
         presenter.login(with: userNameField.inputText, password: passwordField.inputText)
     }
 }

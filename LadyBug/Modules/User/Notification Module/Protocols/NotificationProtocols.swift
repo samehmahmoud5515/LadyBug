@@ -17,7 +17,6 @@ import Foundation
         func unreadNotification(notificationId : String )
     }
     protocol NotificationViewProtocol: class {
-        
         func reloadData()
-        
+        func stopIndicator()
     }

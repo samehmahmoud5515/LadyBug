@@ -8,7 +8,10 @@
 import Foundation
 
 class AccessTokenManager {
-    static var accessToken = Defaults[.accessToken]
+    
+    static var accessToken: String? {
+        Defaults[.accessToken]
+    }
     
     static var isAccessTokenEmpty: Bool {
         return Defaults[.accessToken]?.isEmpty ?? true

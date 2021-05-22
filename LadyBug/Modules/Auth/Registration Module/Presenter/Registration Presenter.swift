@@ -28,10 +28,14 @@ class RegistrationPresenter: RegistrationPresenterProtocol{
                     guard let accessToken = registrationResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
                     self.view?.navigateToTabBarController()
+                    self.view?.stopIndicator()
+                    print(accessToken)
                 } catch {
+                    self.view?.stopIndicator()
                     print("Parsing Error")
                 }
             case let .failure(error):
+                self.view?.stopIndicator()
                 break
             }
         }

@@ -11,6 +11,7 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var registrationImageVew: UIImageView!
+    @IBOutlet weak var registrationGalleryImageVew: UIImageView!
     @IBOutlet weak var attachAPictureButton: UIButton!
     @IBOutlet weak var termsAndConditionsButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
@@ -24,7 +25,7 @@ class RegistrationViewController: UIViewController {
     var presenter: RegistrationPresenterProtocol!
     
     var selectedJobId : String = ""
-
+    
     init() {
         super.init(nibName: "\(RegistrationViewController.self)", bundle: nil)
         presenter = RegistrationPresenter(view: self)
@@ -50,6 +51,8 @@ class RegistrationViewController: UIViewController {
         createAccountButton.isUserInteractionEnabled = false
         createAccountButton.backgroundColor = UIColor.lightBlueGrey
     }
+    
+    
 }
 
 extension RegistrationViewController: StandardTextFieldViewProtocol {
@@ -176,6 +179,10 @@ extension RegistrationViewController {
 }
 
 extension RegistrationViewController: RegistrationViewProtocol {
+    func stopIndicator() {
+        self.stopLoadingIndicator()
+    }
+    
     func navigateToTabBarController() {
         let vc = TabBarViewController()
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -243,6 +250,7 @@ extension RegistrationViewController{
 
 extension RegistrationViewController  {
     @IBAction func createAccount(_ sender: UIButton) {
+        self.startLoadingIndicator()
         presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: selectedJobId , photo: "")
     }
 }
@@ -257,4 +265,41 @@ extension RegistrationViewController : StandardSelectionViewDelegate {
         selectProfessionSelectionView.setupUI(selectionTitle: presenter.localizer.chooseYourProfession)
         selectProfessionSelectionView.datasource = presenter.jobs.compactMap{$0.name}
     }
+}
+
+extension RegistrationViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate  {
+    
+    func addImageButtonDidTapped() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+        self.startLoadingIndicator()
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+                registrationGalleryImageVew.contentMode = .scaleAspectFill
+                registrationGalleryImageVew.image = editedImage
+            } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+               registrationGalleryImageVew.contentMode = .scaleAspectFill
+                registrationGalleryImageVew.image = originalImage
+            }
+        self.stopLoadingIndicator()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.stopLoadingIndicator()
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension RegistrationViewController{
+    
+@IBAction func AddImageActionButton(_ sender: UIButton) {
+    addImageButtonDidTapped()
+}
+    
 }
