@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import Photos
 
-class AddProdeuctSuperViewController: UIViewController{
+class AddProductViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addProductButton: UIButton!
     
     private var presnter: AddProductPresenterProtocol!
     init() {
-        super.init(nibName: "\(AddProdeuctSuperViewController.self)", bundle: nil)
+        super.init(nibName: "\(AddProductViewController.self)", bundle: nil)
         presnter = AddProductPresenter(view: self)
     }
     
@@ -43,7 +44,7 @@ class AddProdeuctSuperViewController: UIViewController{
 }
 
 // MARK:- UI Setup
-extension AddProdeuctSuperViewController {
+extension AddProductViewController {
     private func setupUI() {
         setupNaviagtionBarUI()
         addBarButtonsToNavigationBar()
@@ -84,7 +85,7 @@ extension AddProdeuctSuperViewController {
         return UIBarButtonItem(customView: button)
     }
 }
-extension AddProdeuctSuperViewController{
+extension AddProductViewController{
     
     private func tabelDelegateAndDataSourceSet(){
         tableView.delegate = self
@@ -105,8 +106,8 @@ extension AddProdeuctSuperViewController{
         let AddImage = UINib(nibName: "\(AddImageTableViewCell.self)", bundle: nil)
         tableView.register(AddImage, forCellReuseIdentifier: "\(AddImageTableViewCell.self)")
         
-        let Describation = UINib(nibName: "\(AddProductDescribationTableViewCell.self)", bundle: nil)
-        tableView.register(Describation, forCellReuseIdentifier: "\(AddProductDescribationTableViewCell.self)")
+        let Describation = UINib(nibName: "\(AddProductDescriptionCell.self)", bundle: nil)
+        tableView.register(Describation, forCellReuseIdentifier: "\(AddProductDescriptionCell.self)")
         
         let Selection = UINib(nibName: "\(AddProductSelectionTableViewCell.self)", bundle: nil)
         tableView.register(Selection, forCellReuseIdentifier: "\(AddProductSelectionTableViewCell.self)")
@@ -126,7 +127,7 @@ extension AddProdeuctSuperViewController{
     }
 }
 
-extension AddProdeuctSuperViewController: AddProductViewProtocol {
+extension AddProductViewController: AddProductViewProtocol {
     func stopIndicator() {
         self.startLoadingIndicator()
     }
@@ -144,7 +145,7 @@ extension AddProdeuctSuperViewController: AddProductViewProtocol {
     }
 }
 
-extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSource {
+extension AddProductViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presnter.datasource.count
     }
@@ -162,11 +163,11 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
                 setupTableViewRowHeight()
             }
         case let .productTitle(model):
-            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
-            if let productTitle = cell as? AddProductDescribationTableViewCell {
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescriptionCell.self)", for: indexPath)
+            if let productTitle = cell as? AddProductDescriptionCell {
                 productTitle.setupUI(header: "", title: model.titile)
-                presnter.nameArLocalized = productTitle.descriptiontextView.inputText
                 setupTableViewRowHeight()
+                productTitle.delegate = self
             }
         case let .appropriateCrop(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductSelectionTableViewCell.self)", for: indexPath)
@@ -193,72 +194,67 @@ extension AddProdeuctSuperViewController: UITableViewDelegate, UITableViewDataSo
                 self.tableView.rowHeight = 84
             }
         case let .otherSites(model):
-            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
-            if let otherSites = cell as? AddProductDescribationTableViewCell {
-                otherSites.setupUI(header: "" , title:  model.titile)
-                presnter.otherLinks = otherSites.descriptiontextView.inputText
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescriptionCell.self)", for: indexPath)
+            if let otherSites = cell as? AddProductDescriptionCell {
+                otherSites.setupUI(header: "", title: model.titile)
                 self.tableView.rowHeight = 84
+                otherSites.delegate = self
             }
-        case  .description:
+        case .description:
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductTextViewTableViewCell.self)", for: indexPath)
             if let description = cell as? AddProductTextViewTableViewCell {
-                description.setupUI(textViewUpdateDelegate: self)
-                presnter.descriptionArLocalized = description.textView.textView.text
+                description.setupUI()
                 setupTableViewRowHeight()
+                description.delegate = self
             }
         case let .phoneNumber(model):
-            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescribationTableViewCell.self)", for: indexPath)
-            if let postCell = cell as? AddProductDescribationTableViewCell {
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductDescriptionCell.self)", for: indexPath)
+            if let postCell = cell as? AddProductDescriptionCell {
                 postCell.setupUI(header: model.header, title:  model.titile)
-                presnter.sellerMobile = postCell.descriptiontextView.inputText
                 setupTableViewRowHeight()
+                postCell.delegate = self
             }
         case let .price(model):
             cell = tableView.dequeueReusableCell(withIdentifier: "\(AddProductPriceTableViewCell.self)", for: indexPath)
             if let price = cell as? AddProductPriceTableViewCell {
                 price.setUI(model: model)
                 setupTableViewRowHeight()
-                presnter.price = Double(price.PriceView.inputText)
+                price.delegate = self
             }
         }
         return cell
     }
 }
 
-extension AddProdeuctSuperViewController{
+extension AddProductViewController{
     func naviageteTo(model: AddProductUIModel) {
         
     }
 }
 //MARK:- Actions
-extension AddProdeuctSuperViewController {
+extension AddProductViewController {
     @objc func didTappedBackButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }
-extension AddProdeuctSuperViewController {
+extension AddProductViewController {
     @IBAction func AddProductActionButton(_ sender: UIButton) {
-        setupNavigationButton()
+        presnter.createProduct()
     }
     
-    private func setupNavigationButton(){
-        let product : Products = Products.init()
-        let Vc = ProductDetailsViewController(product: product)
-        navigationController?.pushViewController(Vc, animated: true)
-    }
-    
-    private func setupButtonUI(){
+    private func setupButtonUI() {
         addProductButton.titleLabel?.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         addProductButton.titleLabel?.text = presnter.localizer.addProductButton
     }
 }
 
-extension AddProdeuctSuperViewController: TextViewUpdateProtocol {
-    func textViewChanged() {
+extension AddProductViewController: TextViewUpdateProtocol {
+    func textViewChanged(text: String, _ textView: StandardTextView) {
+        presnter.descriptionArLocalized = text
     }
 }
 
-extension AddProdeuctSuperViewController: AddProductSelectionTableViewCellSelectionDelegate {
+extension AddProductViewController: AddProductSelectionTableViewCellSelectionDelegate {
     func didSelectItem(item: String, cell: AddProductSelectionTableViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
             switch presnter.datasource[indexPath.row] {
@@ -280,13 +276,7 @@ extension AddProdeuctSuperViewController: AddProductSelectionTableViewCellSelect
     }
 }
 
-extension AddProdeuctSuperViewController{
-    @IBAction func createProductActionButton(_ sender: UIButton) {
-        presnter.createProduct()
-    }
-}
-
-extension AddProdeuctSuperViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate , AddProductImageProtocol {
+extension AddProductViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate, AddProductImageProtocol {
     
     
     func addImageButtonDidTapped(_ cell: AddImageTableViewCell) {
@@ -295,38 +285,80 @@ extension AddProdeuctSuperViewController : UIImagePickerControllerDelegate , UIN
         imagePickerController.allowsEditing = true
         imagePickerController.sourceType = .photoLibrary
         present(imagePickerController, animated: true, completion: nil)
-        self.startLoadingIndicator()
-        
+        startLoadingIndicator()
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0) ) as?  AddImageTableViewCell
-        switch cell!.detectImage{
-        case true :
-            if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-                cell?.addProductMainPictureGulleryImageView.contentMode = .scaleAspectFill
-                cell?.addProductMainPictureGulleryImageView.image = editedImage
-            } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                cell?.addProductMainPictureGulleryImageView.contentMode = .scaleAspectFill
-                cell?.addProductMainPictureGulleryImageView.image = originalImage
+        guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? AddImageTableViewCell else { return }
+        
+        switch cell.isExternalAsset {
+        case true:
+            if let editedImage = info[.editedImage] as? UIImage {
+                cell.addProductMainPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell.addProductMainPictureGulleryImageView.image = editedImage
+                presnter.selectedExternalAssetUrl = MediaUpload(image: editedImage, fileName: UUID().uuidString)
+            } else if let originalImage = info[.originalImage] as? UIImage {
+                cell.addProductMainPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell.addProductMainPictureGulleryImageView.image = originalImage
+                presnter.selectedExternalAssetUrl = MediaUpload(image: originalImage, fileName: UUID().uuidString)
             }
         case false:
-            if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-                cell?.addProductInteriorPictureGulleryImageView.contentMode = .scaleAspectFill
-                cell?.addProductInteriorPictureGulleryImageView.image = editedImage
-                
+            if let editedImage = info[.editedImage] as? UIImage {
+                cell.addProductInteriorPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell.addProductInteriorPictureGulleryImageView.image = editedImage
+                presnter.selectedInternalAssetUrl = MediaUpload(image: editedImage, fileName: UUID().uuidString)
             } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                cell?.addProductInteriorPictureGulleryImageView.contentMode = .scaleAspectFill
-                cell?.addProductInteriorPictureGulleryImageView.image = originalImage
+                cell.addProductInteriorPictureGulleryImageView.contentMode = .scaleAspectFill
+                cell.addProductInteriorPictureGulleryImageView.image = originalImage
+                presnter.selectedInternalAssetUrl = MediaUpload(image: originalImage, fileName: UUID().uuidString)
             }
         }
-        self.stopLoadingIndicator()
+        
+        
+        
+        stopLoadingIndicator()
         dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.stopLoadingIndicator()
+        stopLoadingIndicator()
         picker.dismiss(animated: true, completion: nil)
     }
 }
 
+extension AddProductViewController {
+    func navigateToAddProduct(product: Product) {
+        let vc = ProductDetailsViewController(product: product)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension AddProductViewController: AddProductDescriptionCellDelegate {
+    func didChangeText(text: String, cell: AddProductDescriptionCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            switch presnter.datasource[indexPath.row] {
+            case .productTitle:
+                presnter.nameArLocalized = text
+            case .phoneNumber:
+                presnter.sellerMobile = text
+            case .otherSites:
+                presnter.otherLinks = text
+            default:
+                break
+            }
+        }
+    }
+}
+
+extension AddProductViewController: AddProductPriceTableViewCellProtocol {
+    func didChangeText(text: String, _ cell: AddProductPriceTableViewCell) {
+        presnter.price = text
+    }
+}
+
+extension AddProductViewController: AddProductTextViewTableViewCellDelegate {
+    func textViewChanged(text: String, _ cell: AddProductTextViewTableViewCell) {
+        presnter.descriptionArLocalized = text
+    }
+}
