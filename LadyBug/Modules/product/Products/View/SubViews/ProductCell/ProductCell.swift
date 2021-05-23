@@ -15,7 +15,7 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var pricevalue: UILabel!
     
-    func setup( products : Products){
+    func setup( products : Product){
         productTitleLabel.text = products.name
         productDescriptionLabel.text = products.description
         cityLabel.text = products.city

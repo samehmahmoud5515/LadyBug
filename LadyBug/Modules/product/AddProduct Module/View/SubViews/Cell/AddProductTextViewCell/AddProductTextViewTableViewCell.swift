@@ -7,12 +7,24 @@
 
 import UIKit
 
+protocol AddProductTextViewTableViewCellDelegate: class {
+    func textViewChanged(text: String, _ cell: AddProductTextViewTableViewCell)
+}
+
 class AddProductTextViewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textView: StandardTextView!
     
-    func setupUI(textViewUpdateDelegate: TextViewUpdateProtocol?) {
-        textView.textViewUpdateDelegate = textViewUpdateDelegate
+    weak var delegate: AddProductTextViewTableViewCellDelegate?
+    
+    func setupUI() {
+        textView.textViewUpdateDelegate = self
         textView.textView.isScrollEnabled = true
+    }
+}
+
+extension AddProductTextViewTableViewCell: TextViewUpdateProtocol {
+    func textViewChanged(text: String, _ textView: StandardTextView) {
+        delegate?.textViewChanged(text: text, self)
     }
 }

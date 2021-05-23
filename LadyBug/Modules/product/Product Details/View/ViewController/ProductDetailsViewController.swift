@@ -30,9 +30,9 @@ class ProductDetailsViewController: UIViewController{
     private var presnter: ProductDetailsPresenterProtocols!
     
     
-    init(product: Products){
+    init(product: Product){
         super.init(nibName: "\(ProductDetailsViewController.self)", bundle: nil)
-        presnter = ProductDetailsPresenter(view : self, product: product  )
+        presnter = ProductDetailsPresenter(view : self, product: product)
     }
     
     @available(*, unavailable)
@@ -211,7 +211,7 @@ extension ProductDetailsViewController : ProductDetailsViewProtocol{
         self.stopLoadingIndicator()
     }
     
-    func setDataToTableView() -> Products {
+    func setDataToTableView() -> Product {
         return presnter.product
     }
 }

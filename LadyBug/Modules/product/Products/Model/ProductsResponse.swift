@@ -17,11 +17,11 @@ struct ProductsResponse: Codable {
 
 // MARK: - ProductsData
 struct ProductsData: Codable {
-    var all: [Products]?
+    var all: [Product]?
 }
 
 // MARK: - Products
-struct Products: Codable {
+struct Product: Codable {
     var id: Int?
     var name: String?
     var price: Double?

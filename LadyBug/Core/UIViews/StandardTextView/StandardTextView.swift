@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TextViewUpdateProtocol: class {
-    func textViewChanged()
+    func textViewChanged(text: String, _ textView: StandardTextView)
 }
 
 class StandardTextView: UIView {
@@ -69,7 +69,7 @@ extension StandardTextView: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         adjustUITextViewHeight()
-        textViewUpdateDelegate?.textViewChanged()
+        textViewUpdateDelegate?.textViewChanged(text: textView.text, self)
         placeholderLabel.isHidden = textView.text.count != 0
     }
 }

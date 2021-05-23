@@ -147,7 +147,7 @@ extension ProductsViewController {
     }
     
     private func navigateToAddProductViewController(){
-            let Vc = AddProdeuctSuperViewController()
+            let Vc = AddProductViewController()
         navigationController?.navigationController?.pushViewController(Vc, animated: true)
     }
 }

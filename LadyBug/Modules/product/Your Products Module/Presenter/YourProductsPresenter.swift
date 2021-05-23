@@ -13,7 +13,7 @@ class YourProductsPresenter:YourProductsPresenterProtocol{
     var images =  YourProductsImage()
     weak var view : YourProductsViewProtocol?
     let userProductsProvider = MoyaProvider<ProductsEndPoint>(plugins: [AuthorizableTokenPlugin()])
-    var userProducts = [Products]()
+    var userProducts = [Product]()
     func attach() {
     }
     init(view: YourProductsViewProtocol) {

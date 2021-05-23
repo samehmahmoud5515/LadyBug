@@ -12,7 +12,7 @@ class ProductsPresenter: ProductsPresenterProtocol {
     var localizer = ProductsLocalizer()
     var images = ProductsImages()
     let productsProvider = MoyaProvider<ProductsEndPoint>(plugins: [AuthorizableTokenPlugin()])
-    var products = [Products]()
+    var products = [Product]()
     weak var view: ProductsViewProtocol?
     
     init(view: ProductsViewProtocol) {
