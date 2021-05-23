@@ -92,7 +92,7 @@
 		21767A3B25F592D00039E2B8 /* MyPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21767A3925F592D00039E2B8 /* MyPostsViewController.xib */; };
 		217D1EA72608293C0025462F /* ProductDetailsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1E912608293C0025462F /* ProductDetailsImages.swift */; };
 		217D1EA82608293C0025462F /* ProductDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1E932608293C0025462F /* ProductDetailsLocalizer.swift */; };
-		217D1EA92608293C0025462F /* ProductDetailsPresenter .swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1E952608293C0025462F /* ProductDetailsPresenter .swift */; };
+		217D1EA92608293C0025462F /* ProductDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1E952608293C0025462F /* ProductDetailsPresenter.swift */; };
 		217D1EAA2608293C0025462F /* ProductDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1E972608293C0025462F /* ProductDetailsModel.swift */; };
 		217D1EAB2608293C0025462F /* UIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1E982608293C0025462F /* UIModel.swift */; };
 		217D1EAC2608293C0025462F /* ProductDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D1E9D2608293C0025462F /* ProductDetailsTableViewCell.swift */; };
@@ -193,6 +193,7 @@
 		502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */; };
 		5031C2E9263348E10027CFB4 /* CommonHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */; };
 		5031C2EF26334D6D0027CFB4 /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */; };
+		503930B32659DEC300A4C061 /* CreateProductReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503930B22659DEC300A4C061 /* CreateProductReponse.swift */; };
 		503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CB59E25E07AF700B7A393 /* ProductsViewController.swift */; };
 		503CB5A125E07AF700B7A393 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503CB59F25E07AF700B7A393 /* ProductsViewController.xib */; };
 		503CB5A625E07B8100B7A393 /* ProductsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CB5A525E07B8100B7A393 /* ProductsLocalizer.swift */; };
@@ -522,7 +523,7 @@
 		21767A3925F592D00039E2B8 /* MyPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsViewController.xib; sourceTree = "<group>"; };
 		217D1E912608293C0025462F /* ProductDetailsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsImages.swift; sourceTree = "<group>"; };
 		217D1E932608293C0025462F /* ProductDetailsLocalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsLocalizer.swift; sourceTree = "<group>"; };
-		217D1E952608293C0025462F /* ProductDetailsPresenter .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProductDetailsPresenter .swift"; sourceTree = "<group>"; };
+		217D1E952608293C0025462F /* ProductDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsPresenter.swift; sourceTree = "<group>"; };
 		217D1E972608293C0025462F /* ProductDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsModel.swift; sourceTree = "<group>"; };
 		217D1E982608293C0025462F /* UIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIModel.swift; sourceTree = "<group>"; };
 		217D1E9D2608293C0025462F /* ProductDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -625,6 +626,7 @@
 		502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeaderProtocol.swift; sourceTree = "<group>"; };
 		5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
+		503930B22659DEC300A4C061 /* CreateProductReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductReponse.swift; sourceTree = "<group>"; };
 		503CB59E25E07AF700B7A393 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		503CB59F25E07AF700B7A393 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
 		503CB5A525E07B8100B7A393 /* ProductsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsLocalizer.swift; sourceTree = "<group>"; };
@@ -1821,7 +1823,7 @@
 		217D1E942608293C0025462F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				217D1E952608293C0025462F /* ProductDetailsPresenter .swift */,
+				217D1E952608293C0025462F /* ProductDetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1963,6 +1965,7 @@
 				218C783B2629E72B00DA440A /* AddProductUIModel.swift */,
 				218C783C2629E72B00DA440A /* AddProductModel.swift */,
 				21A64D332651325600CC48AC /* CitesAndCropsModel.swift */,
+				503930B22659DEC300A4C061 /* CreateProductReponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -4942,7 +4945,7 @@
 				2101D90E25F2FA1900FB0DB9 /* Products Localizer.swift in Sources */,
 				509C1487260D4DD1004CECA2 /* AddPostTextViewCell.swift in Sources */,
 				216647F525FE88920028E335 /* ImageLocalizer.swift in Sources */,
-				217D1EA92608293C0025462F /* ProductDetailsPresenter .swift in Sources */,
+				217D1EA92608293C0025462F /* ProductDetailsPresenter.swift in Sources */,
 				217D1EB22608293C0025462F /* ProductDetailsProtocols.swift in Sources */,
 				504969D325F81E37002C3E40 /* AddPeopleToYourFarmViewController.swift in Sources */,
 				213751F825F4348000E342EF /* FollowersProtocols.swift in Sources */,
@@ -5118,6 +5121,7 @@
 				500D58C32659A75E0013FE15 /* AddProductViewController.swift in Sources */,
 				50212E16260BF97B00589DAE /* ChemicalSourceView.swift in Sources */,
 				21A7070A260DECD60094EC56 /* SuggestionsProtocols.swift in Sources */,
+				503930B32659DEC300A4C061 /* CreateProductReponse.swift in Sources */,
 				50AF3E8E260ABEBF00CBCD0C /* PostDetailsViewController.swift in Sources */,
 				504969CA25F81E23002C3E40 /* MyFarmDetailsUIModel.swift in Sources */,
 				2166480125FEAF3B0028E335 /* Protocols.swift in Sources */,

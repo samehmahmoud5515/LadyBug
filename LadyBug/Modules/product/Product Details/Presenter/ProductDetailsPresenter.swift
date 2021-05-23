@@ -6,12 +6,13 @@
 //
 
 import Foundation
-class ProductDetailsPresenter : ProductDetailsPresenterProtocols{
+class ProductDetailsPresenter: ProductDetailsPresenterProtocols{
     var localizer = ProductDetailsLocalizer()
     var images = ProductDetailsImages()
     weak var view : ProductDetailsViewProtocol?
     var datasource = [ProductDetailsUIModel]()
-    var product = Product()
+    var product: Product
+    
     init(view : ProductDetailsViewProtocol, product: Product) {
         self.view = view
         self.product = product

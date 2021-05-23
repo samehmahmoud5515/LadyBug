@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductDetailsViewController: UIViewController{
     
@@ -72,6 +73,7 @@ extension ProductDetailsViewController {
         addBarButtonsToNavigationBar()
         registerTableViewCell()
         setupTableViewRowHeight()
+        updateProductDetailsHeadImage()
     }
     private func registerTableViewCell() {
         
@@ -125,7 +127,11 @@ extension ProductDetailsViewController {
         return UIBarButtonItem(customView: titleLabel)
     }
     
+    private func updateProductDetailsHeadImage() {
+        productDetailsHeadImage.sd_setImage(with: URL(string: presnter.product.externalAssets?.first ?? ""))
+    }
 }
+
 extension ProductDetailsViewController {
     @objc func didTappedBackButton() {
         navigationController?.popViewController(animated: true)

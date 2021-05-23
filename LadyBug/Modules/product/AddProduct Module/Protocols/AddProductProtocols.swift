@@ -39,7 +39,7 @@ protocol AddProductViewProtocol: class {
     func stopIndicator()
     func getProductsRelations()
     func didSelectItem(item: String)
-    func navigateToAddProduct(product: Product)
+    func navigateToProductDetails(product: Product)
 }
 
 protocol AddProductImageProtocol : class  {

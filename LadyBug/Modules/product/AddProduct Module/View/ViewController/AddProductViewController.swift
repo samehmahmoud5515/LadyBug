@@ -239,6 +239,7 @@ extension AddProductViewController {
 }
 extension AddProductViewController {
     @IBAction func AddProductActionButton(_ sender: UIButton) {
+        startLoadingIndicator()
         presnter.createProduct()
     }
     
@@ -328,7 +329,7 @@ extension AddProductViewController : UIImagePickerControllerDelegate, UINavigati
 }
 
 extension AddProductViewController {
-    func navigateToAddProduct(product: Product) {
+    func navigateToProductDetails(product: Product) {
         let vc = ProductDetailsViewController(product: product)
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -120,17 +120,20 @@ class AddProductPresenter: AddProductPresenterProtocol {
     func createProduct() {
         guard let price = price, let descriptionArLocalized = descriptionArLocalized, let nameArLocalized = nameArLocalized, let cityID = selectedCity?.id , let districtID = selectedRegion?.id , let otherLinks = otherLinks, let sellerMobile = sellerMobile, let farmedTypeID = selectedFarmedType?.id else { return }
         
-        provider.request(.createProduct(price: price, descriptionArLocalized: descriptionArLocalized, descriptionEnLocalized: descriptionArLocalized, nameArLocalized: nameArLocalized, nameEnLocalized: nameArLocalized, cityID: cityID, districtID: districtID, otherLinks: otherLinks, sellerMobile: sellerMobile, internalAssets: selectedInternalAssetUrl, externalAssets: selectedExternalAssetUrl, farmedTypeID: farmedTypeID)) { result in
+        provider.request(.createProduct(price: price, descriptionArLocalized: descriptionArLocalized, descriptionEnLocalized: descriptionArLocalized, nameArLocalized: nameArLocalized, nameEnLocalized: nameArLocalized, cityID: cityID, districtID: districtID, otherLinks: otherLinks, sellerMobile: sellerMobile, internalAssets: selectedInternalAssetUrl, externalAssets: selectedExternalAssetUrl, farmedTypeID: farmedTypeID)) { [weak self] result in
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let productsResponse = try? moyaResponse.map(ProductsResponse.self)
-                    guard let products = productsResponse?.data else { return }
+                    let productsResponse = try? moyaResponse.map(CreateProductReponse.self)
+                    guard let product = productsResponse?.data else { return }
+                    self?.view?.stopIndicator()
+                    self?.view?.navigateToProductDetails(product: product)
                 } catch {
                     print("Parsing Error")
+                    self?.view?.stopIndicator()
                 }
             case let .failure(error):
-                break
+                self?.view?.stopIndicator()
             }
         }
     }
