@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MyPostsViewController: UIViewController, MyPostsViewProtocol {
-
+class MyPostsViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     //Attribuites
     private var presnter: MyPostsPresenterProtocol!
     
@@ -23,11 +23,11 @@ class MyPostsViewController: UIViewController, MyPostsViewProtocol {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
+        presnter.getUserPosts()
         presnter.attach()
     }
     
@@ -40,7 +40,7 @@ class MyPostsViewController: UIViewController, MyPostsViewProtocol {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
+    
 }
 
 // MARK:- UI Setup
@@ -59,8 +59,8 @@ extension MyPostsViewController {
         navigationItem.largeTitleDisplayMode = .never
     }
     private func addBarButtonsToNavigationBar() {
-           navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
-       }
+        navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
+    }
     private func getLeftButton() -> UIBarButtonItem {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
         button.setImage(UIImage(named: presnter.images.back), for: .normal)
@@ -80,8 +80,8 @@ extension MyPostsViewController {
         
         return UIBarButtonItem(customView: titleLabel)
     }
- 
-   
+    
+    
     
     private func registerTableViewCell() {
         let nib = UINib(nibName: "\(MyPostsCell.self)", bundle: nil)
@@ -147,5 +147,15 @@ extension MyPostsViewController: MyPostsCellDelegate {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }
+    }
+}
+
+extension MyPostsViewController : MyPostsViewProtocol{
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
+    func stopIndicator() {
+        self.stopLoadingIndicator()
     }
 }

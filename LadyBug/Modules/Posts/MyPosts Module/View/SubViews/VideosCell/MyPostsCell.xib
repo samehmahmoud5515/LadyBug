@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,19 +38,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="W5U-d2-bxQ">
-                                                <rect key="frame" x="58.5" y="9" width="59.5" height="63"/>
+                                                <rect key="frame" x="58.5" y="24" width="59.5" height="32"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jB4-bP-DCb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59.5" height="45.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.5" height="14.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAz-du-5Sd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
-                                                                <state key="normal" title="كن متابع">
-                                                                    <color key="titleColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="محمد خليفة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5U3-fy-A00">
-                                                                <rect key="frame" x="0.0" y="31" width="59.5" height="14.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="59.5" height="14.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -59,7 +52,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="منذ ساعة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47c-C5-Ueq">
-                                                        <rect key="frame" x="0.0" y="48.5" width="45" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="17.5" width="45" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.67450980390000004" green="0.69411764710000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -67,7 +60,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طبيب بيطري" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyO-Yb-lkB">
-                                                <rect key="frame" x="122.5" y="43.5" width="47" height="11"/>
+                                                <rect key="frame" x="122.5" y="27.5" width="47" height="11"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <color key="textColor" red="0.67450980390000004" green="0.69411764710000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -85,16 +78,16 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="uyO-Yb-lkB" firstAttribute="leading" secondItem="5U3-fy-A00" secondAttribute="trailing" constant="4.5" id="14e-Lv-Df1"/>
                                             <constraint firstItem="q3l-dA-kqt" firstAttribute="centerY" secondItem="faP-QJ-n33" secondAttribute="centerY" id="2VF-xj-kn8"/>
                                             <constraint firstItem="uyO-Yb-lkB" firstAttribute="bottom" secondItem="5U3-fy-A00" secondAttribute="bottom" id="NFP-ic-hEs"/>
-                                            <constraint firstItem="W5U-d2-bxQ" firstAttribute="top" secondItem="faP-QJ-n33" secondAttribute="top" constant="9" id="RWd-lw-FYT"/>
                                             <constraint firstItem="ODD-i5-PDa" firstAttribute="top" secondItem="faP-QJ-n33" secondAttribute="top" constant="17" id="V3M-ev-MRV"/>
                                             <constraint firstAttribute="bottom" secondItem="ODD-i5-PDa" secondAttribute="bottom" constant="10.5" id="dx0-ak-w6m"/>
                                             <constraint firstItem="q3l-dA-kqt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uyO-Yb-lkB" secondAttribute="trailing" id="iO1-Y7-FcV"/>
                                             <constraint firstItem="W5U-d2-bxQ" firstAttribute="leading" secondItem="ODD-i5-PDa" secondAttribute="trailing" constant="12.5" id="qmm-F8-2A9"/>
+                                            <constraint firstItem="W5U-d2-bxQ" firstAttribute="centerY" secondItem="ODD-i5-PDa" secondAttribute="centerY" id="rhu-xs-r8t"/>
                                             <constraint firstItem="ODD-i5-PDa" firstAttribute="leading" secondItem="faP-QJ-n33" secondAttribute="leading" id="sbN-wI-4Gv"/>
                                             <constraint firstAttribute="trailing" secondItem="q3l-dA-kqt" secondAttribute="trailing" id="udG-8g-Dye"/>
                                         </constraints>
@@ -131,7 +124,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="1am-hL-98l" secondAttribute="trailing" id="45u-RF-1ir"/>
                                             <constraint firstAttribute="bottom" secondItem="1am-hL-98l" secondAttribute="bottom" id="9Ve-LR-dgq"/>
@@ -174,7 +167,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="iK7-rs-shy" secondAttribute="bottom" constant="10" id="Cli-ER-1SM"/>
                                             <constraint firstItem="rdU-v6-AyA" firstAttribute="leading" secondItem="iK7-rs-shy" secondAttribute="trailing" constant="22" id="H11-uq-OGB"/>
@@ -208,7 +201,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="beAFollowerButton" destination="BAz-du-5Sd" id="aUp-Jj-3yH"/>
                 <outlet property="dislikeButton" destination="rdU-v6-AyA" id="jlO-Nb-dr4"/>
                 <outlet property="likeButton" destination="iK7-rs-shy" id="v5t-43-9hs"/>
                 <outlet property="openProblemButton" destination="q3l-dA-kqt" id="594-Ts-dLD"/>
@@ -231,8 +223,5 @@
         <image name="garden2" width="275" height="183"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="tabBar_profile_ic" width="21" height="21"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -291,6 +291,7 @@ struct Post: Codable {
     var postType: String?
     var likersCount, dislikersCount, commentsCount: Int?
     var likers, dislikers: [String]?
+    var likedByMe, dislikedByMe: Bool?
     var comments: [Comment]?
     var createdAt: String?
 
@@ -305,6 +306,8 @@ struct Post: Codable {
         case dislikersCount = "dislikers_count"
         case commentsCount = "comments_count"
         case likers, dislikers, comments
+        case likedByMe = "liked_by_me"
+        case dislikedByMe = "disliked_by_me"
         case createdAt = "created_at"
     }
 }

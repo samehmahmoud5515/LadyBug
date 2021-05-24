@@ -10,7 +10,6 @@ import UIKit
 class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
 
     @IBOutlet weak var postImageAspectRatioConstraint: NSLayoutConstraint!
-    @IBOutlet weak var beAFollowerButton: UIButton!
     @IBOutlet weak var postOwnerNameLabel: UILabel!
     @IBOutlet weak var postOwnerJobLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -24,7 +23,6 @@ class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
     weak var delegate: MyPostsCellDelegate?
     
     func setupUI(localizer: MyPostsLocalizer) {
-        beAFollowerButton.titleLabel?.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         postOwnerNameLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         postOwnerJobLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         timeLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
