@@ -49,7 +49,7 @@ class FarmCell: UITableViewCell {
         nextMissionDateLabel.textColor = .midGreenTwo
         
         farmDetailsView.datasource = farm.detailsInfo
-        //layoutSubviews()
+
         layoutIfNeeded()
     }
 }

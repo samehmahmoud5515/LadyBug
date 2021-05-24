@@ -163,8 +163,8 @@ extension AddPostViewController {
 }
 
 extension AddPostViewController: TextViewUpdateProtocol {
-    func textViewChanged() {
+    func textViewChanged(text: String, _ textView: StandardTextView) {
         tableView.beginUpdates()
         tableView.endUpdates()
-    }    
+    }
 }

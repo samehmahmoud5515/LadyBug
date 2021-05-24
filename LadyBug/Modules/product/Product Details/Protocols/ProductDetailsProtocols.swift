@@ -12,13 +12,13 @@ protocol ProductDetailsPresenterProtocols {
     var images: ProductDetailsImages { get }
     var datasource: [ProductDetailsUIModel] { get }
     func attach()
-    var product : Products{get}
+    var product : Product{get}
     
 }
 
 protocol ProductDetailsViewProtocol : class {
     func stopIndicator()
-    func setDataToTableView() -> Products
+    func setDataToTableView() -> Product
 }
 
 protocol ProductDetailsOtherLinkProtocol : class  {

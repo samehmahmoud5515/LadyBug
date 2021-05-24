@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyFarmDetailsPostsChildCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var farmImageView: UIImageView!
     
-    func setupUI() {
+    func setupUI(title: String?, desc: String?, logo: String?) {
+        titleLabel.text = title
+        descLabel.text = desc
+        farmImageView.sd_setImage(with: URL(string: logo ?? ""))
+        
         titleLabel.textColor = .purplishBrown
         descLabel.textColor = .purplishBrown
         

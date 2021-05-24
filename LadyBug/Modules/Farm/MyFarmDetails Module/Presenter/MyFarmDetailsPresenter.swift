@@ -31,4 +31,12 @@ class MyFarmDetailsPresenter: MyFarmDetailsPresenterProtocol {
     func getFarmDetailsUIModel() -> [FarmUIModel] {
         return farm.detailsInfo
     }
+    
+    func getFarmPosts() -> [Post] {
+        return farm.posts ?? []
+    }
+    
+    func getServiceTables() -> [ServiceTable] {
+        return farm.serviceTables ?? []
+    }
 }

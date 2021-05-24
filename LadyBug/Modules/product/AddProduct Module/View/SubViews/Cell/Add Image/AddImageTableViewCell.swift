@@ -21,7 +21,7 @@ class AddImageTableViewCell: UITableViewCell {
     @IBOutlet weak var addProductInteriorPicturetitle: UILabel!
     @IBOutlet weak var addProductMainPictureImageButton: UIButton!
     @IBOutlet weak var addProductInteriorPictureButton: UIButton!
-    var detectImage: Bool = true
+    var isExternalAsset: Bool = true
     weak var delegate : AddProductImageProtocol?
     
     func setupFontUI() {
@@ -33,12 +33,12 @@ class AddImageTableViewCell: UITableViewCell {
     
     @IBAction func addProductMainPictureImageActionButton(_ sender: UIButton) {
         delegate?.addImageButtonDidTapped(self)
-        detectImage = true
+        isExternalAsset = true
     }
     
     @IBAction func addProductInteriorPictureActionButton(_ sender: UIButton) {
         delegate?.addImageButtonDidTapped(self)
-        detectImage = false
+        isExternalAsset = false
     }
     
 }

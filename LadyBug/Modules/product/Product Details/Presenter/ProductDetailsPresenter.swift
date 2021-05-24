@@ -6,16 +6,18 @@
 //
 
 import Foundation
-class ProductDetailsPresenter : ProductDetailsPresenterProtocols{
+class ProductDetailsPresenter: ProductDetailsPresenterProtocols{
     var localizer = ProductDetailsLocalizer()
     var images = ProductDetailsImages()
     weak var view : ProductDetailsViewProtocol?
     var datasource = [ProductDetailsUIModel]()
-    var product = Products()
-    init(view : ProductDetailsViewProtocol ,product: Products ){
+    var product: Product
+    
+    init(view : ProductDetailsViewProtocol, product: Product) {
         self.view = view
         self.product = product
     }
+    
     func attach() {
         prepareDatasource() 
     }
@@ -23,7 +25,7 @@ class ProductDetailsPresenter : ProductDetailsPresenterProtocols{
         
         let city = ProductInfo()
         city.title = localizer.city
-        city.Content = view?.setDataToTableView().city! as! String
+        city.Content = product.city ?? ""
         datasource += [.city(city)]
         
         let region = ProductInfo()

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductDetailsViewController: UIViewController{
     
@@ -30,9 +31,9 @@ class ProductDetailsViewController: UIViewController{
     private var presnter: ProductDetailsPresenterProtocols!
     
     
-    init(product: Products){
+    init(product: Product){
         super.init(nibName: "\(ProductDetailsViewController.self)", bundle: nil)
-        presnter = ProductDetailsPresenter(view : self, product: product  )
+        presnter = ProductDetailsPresenter(view : self, product: product)
     }
     
     @available(*, unavailable)
@@ -72,6 +73,7 @@ extension ProductDetailsViewController {
         addBarButtonsToNavigationBar()
         registerTableViewCell()
         setupTableViewRowHeight()
+        updateProductDetailsHeadImage()
     }
     private func registerTableViewCell() {
         
@@ -125,7 +127,11 @@ extension ProductDetailsViewController {
         return UIBarButtonItem(customView: titleLabel)
     }
     
+    private func updateProductDetailsHeadImage() {
+        productDetailsHeadImage.sd_setImage(with: URL(string: presnter.product.externalAssets?.first ?? ""))
+    }
 }
+
 extension ProductDetailsViewController {
     @objc func didTappedBackButton() {
         navigationController?.popViewController(animated: true)
@@ -211,7 +217,7 @@ extension ProductDetailsViewController : ProductDetailsViewProtocol{
         self.stopLoadingIndicator()
     }
     
-    func setDataToTableView() -> Products {
+    func setDataToTableView() -> Product {
         return presnter.product
     }
 }

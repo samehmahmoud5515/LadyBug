@@ -15,7 +15,14 @@ class MyFarmDetailsServiceTableView: UIView {
     @IBOutlet weak var addTaskTitleLabel: UILabel!
     @IBOutlet weak var addTaskButton: UIButton!
     
-    var datasource = [true, false, false, false, false]
+    var datasource = [ServiceTable]() {
+        didSet {
+            serviceTableCollectionView.reloadData()
+            tasksTableView.reloadData()
+        }
+    }
+    
+    var selectedServiceTableIndex = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -94,12 +101,12 @@ extension MyFarmDetailsServiceTableView {
 
 extension MyFarmDetailsServiceTableView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return datasource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MyFarmServiceTableCell.self)", for: indexPath) as? MyFarmServiceTableCell ?? MyFarmServiceTableCell()
-        cell.setupUI(isSelected: true)
+        cell.setupUI(isSelected: datasource[indexPath.row].isSelected)
         return cell
     }
     
@@ -107,18 +114,21 @@ extension MyFarmDetailsServiceTableView: UICollectionViewDataSource, UICollectio
 
 extension MyFarmDetailsServiceTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datasource.count
+        return datasource[selectedServiceTableIndex].tasks?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyFarmDetailsTaskCell.self)", for: indexPath) as? MyFarmDetailsTaskCell ?? MyFarmDetailsTaskCell()
-        cell.setupUI(isSelected: datasource[indexPath.row])
+        let item = datasource[selectedServiceTableIndex].tasks?[indexPath.row]
+        let isDone = item?.done ?? false
+        cell.setupUI(isSelected: isDone)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selection = !datasource[indexPath.row]
-        datasource[indexPath.row] = selection
+        guard var item = datasource[selectedServiceTableIndex].tasks?[indexPath.row] else { return }
+        let selection = !(item.done)
+        item.done = selection
         if let cell = tableView.cellForRow(at: indexPath) as? MyFarmDetailsTaskCell {
             cell.setupUI(isSelected: selection)
         }

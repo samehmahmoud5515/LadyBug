@@ -9,10 +9,9 @@ import Moya
 enum ProductsEndPoint {
     case products
     case userProducts
-    case getProducts(productId : Int )
+    case getProducts(productId: Int)
     case getProductsRelations
-    case createProduct( price: Double, descriptionArLocalized : String, descriptionEnLocalized : String, nameArLocalized: String, nameEnLocalized: String, cityID: Int, districtID: Int , otherLinks: String , sellerMobile: String , internalAssets : [String] , externalAssets: [String] , farmedTypeID: Int )
-    case updateProduct(productId : Int, product : Products)
+    case createProduct(price: String, descriptionArLocalized : String, descriptionEnLocalized : String, nameArLocalized: String, nameEnLocalized: String, cityID: Int, districtID: Int, otherLinks: String, sellerMobile: String, internalAssets: MediaUpload?, externalAssets: MediaUpload?, farmedTypeID: Int)
     case sellProducts(productId : Int)
     case citesAndCrops
 }
@@ -36,8 +35,6 @@ extension ProductsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderPro
             return "/api/v1/products/relations/index"
         case .createProduct:
             return "/api/v1/products"
-        case let .updateProduct(productId, product) :
-            return "/api/v1/products/" + String(productId)
         case let .sellProducts(productId):
             return "/api/v1/products/toggle_sell/" + String(productId)
         case .citesAndCrops:
@@ -47,22 +44,10 @@ extension ProductsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderPro
     
     var method: Method {
         switch self {
-        case .products:
-            return .get
-        case .userProducts:
-            return .get
-        case .getProducts:
-            return .get
-        case .getProductsRelations:
+        case .products, .userProducts, .getProducts, .getProductsRelations, .sellProducts, .citesAndCrops:
             return .get
         case .createProduct:
             return .post
-        case .updateProduct:
-            return .post
-        case .sellProducts:
-            return .get
-        case .citesAndCrops:
-            return .get
         }
     }
     
@@ -72,33 +57,57 @@ extension ProductsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderPro
     
     var task: Task {
         switch self {
-        case .products:
+        case .products, .userProducts, .getProducts, .getProductsRelations, .sellProducts, .citesAndCrops:
             return .requestPlain
-        case .userProducts:
-            return .requestPlain
-        case .getProducts:
-            return .requestPlain
-        case .getProductsRelations:
-            return .requestPlain
-        case let .createProduct( price, descriptionArLocalized, descriptionEnLocalized, nameArLocalized, nameEnLocalized, cityID, districtID, otherLinks, sellerMobile, internalAssets, externalAssets, farmedTypeID):
-            let paramters = ["price": price , "description_ar_localized": descriptionArLocalized , "description_en_localized": descriptionEnLocalized, "name_ar_localized": nameArLocalized, "name_en_localized": nameEnLocalized, "city_id": cityID, "district_id": districtID , "other_links": otherLinks , "seller_mobile": sellerMobile , "internal_assets": internalAssets , "external_assets": externalAssets , "farmed_type_id": farmedTypeID ] as [String : Any]
-            return .requestParameters(parameters: paramters, encoding: JSONEncoding.default)
-        case let .updateProduct(productId, product) :
-            let paramters = ["price": product.price , "description_ar_localized": product.descriptionArLocalized , "description_en_localized": product.descriptionEnLocalized, "name_ar_localized": product.nameArlocalized, "name_en_localized": product.nameEnLocalized, "city_id": product.cityID, "district_id": product.districtID , "other_links": product.otherLinks , "seller_mobile": product.sellerMobile , "internal_assets": product.internalAssets , "external_assets": product.externalAssets , "farmed_type_id": product.farmedTypeId ] as [String : Any]
-            return .requestParameters(parameters: paramters, encoding: JSONEncoding.default)
-        case  .sellProducts:
-            return .requestPlain
-        case .citesAndCrops:
-            return .requestPlain
+        case let .createProduct(price, descriptionArLocalized, descriptionEnLocalized, nameArLocalized, nameEnLocalized, cityID, districtID, otherLinks, sellerMobile, internalAssets, externalAssets, farmedTypeID):
+
+            var formData: [Moya.MultipartFormData] = []
+            if let externalAssetsData = externalAssets?.image.jpegData(compressionQuality: 0) {
+                formData.append(Moya.MultipartFormData(provider: .data(externalAssetsData), name: "external_assets[]", fileName: externalAssets?.fileName ?? "", mimeType: "image/jpeg"))
+            }
+            
+            if let internalAssetsData = internalAssets?.image.jpegData(compressionQuality: 0.1) {
+                formData.append(Moya.MultipartFormData(provider: .data(internalAssetsData), name: "internal_assets[]", fileName: internalAssets?.fileName ?? "", mimeType: "image/jpeg"))
+            }
+            
+            let priceData = price.data(using: .utf8) ?? Data()
+            let descriptionArLocalizedData = descriptionArLocalized.data(using: .utf8) ?? Data()
+            let descriptionEnLocalizedData = descriptionEnLocalized.data(using: .utf8) ?? Data()
+            let nameArLocalizedData = nameArLocalized.data(using: .utf8) ?? Data()
+            let nameEnLocalizedData = nameEnLocalized.data(using: .utf8) ?? Data()
+            let cityIdData = "\(cityID)".data(using: .utf8) ?? Data()
+            let districtIdData = "\(districtID)".data(using: .utf8) ?? Data()
+            let otherLinksData = otherLinks.data(using: .utf8) ?? Data()
+            let sellerMobileData = sellerMobile.data(using: .utf8) ?? Data()
+            let farmedTypeIdData = "\(farmedTypeID)".data(using: .utf8) ?? Data()
+            
+            formData.append(Moya.MultipartFormData(provider: .data(priceData), name: "price"))
+            formData.append(Moya.MultipartFormData(provider: .data(descriptionArLocalizedData), name: "description_ar_localized"))
+            formData.append(Moya.MultipartFormData(provider: .data(descriptionEnLocalizedData), name: "description_en_localized"))
+            formData.append(Moya.MultipartFormData(provider: .data(nameArLocalizedData), name: "name_ar_localized"))
+            formData.append(Moya.MultipartFormData(provider: .data(nameEnLocalizedData), name: "name_en_localized"))
+            formData.append(Moya.MultipartFormData(provider: .data(cityIdData), name: "city_id"))
+            formData.append(Moya.MultipartFormData(provider: .data(districtIdData), name: "district_id"))
+            formData.append(Moya.MultipartFormData(provider: .data(otherLinksData), name: "other_links"))
+            formData.append(Moya.MultipartFormData(provider: .data(sellerMobileData), name: "seller_mobile"))
+            formData.append(Moya.MultipartFormData(provider: .data(farmedTypeIdData), name: "farmed_type_id"))
+            
+            return .uploadMultipart(formData)
         }
     }
+    
     var headers: [String : String]? {
-        
-        return commonHeader
+        var headers = commonHeader
+        switch self {
+        case .createProduct:
+            headers.updateValue("application/json", forKey: "Content-Type")
+        default:
+            break
+        }
+        return headers
     }
     
     var authorizationType: AuthorizationType {
         .bearer
     }
 }
-

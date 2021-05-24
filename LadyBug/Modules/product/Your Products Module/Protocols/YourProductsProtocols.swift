@@ -10,7 +10,7 @@ import Foundation
 protocol YourProductsPresenterProtocol {
     var localizer: YourProductsLocalizer { get }
     var images: YourProductsImage { get }
-    var userProducts : [Products] {get}
+    var userProducts : [Product] {get}
     func attach()
     func getUserProducts()
 

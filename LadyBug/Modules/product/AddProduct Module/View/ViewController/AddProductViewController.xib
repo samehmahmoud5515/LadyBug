@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddProdeuctSuperViewController" customModule="LadyBug" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddProductViewController" customModule="LadyBug" customModuleProvider="target">
             <connections>
                 <outlet property="addProductButton" destination="Gfl-an-ogV" id="abI-c1-slJ"/>
                 <outlet property="tableView" destination="LBw-oz-hPL" id="fiN-Gf-7MR"/>
@@ -32,7 +33,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfl-an-ogV">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfl-an-ogV">
                     <rect key="frame" x="24" y="783" width="366" height="56"/>
                     <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -48,12 +49,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="AddProductActionButton:" destination="-1" eventType="touchUpInside" id="hiu-CS-QJF"/>
-                        <action selector="createProductActionButton:" destination="-1" eventType="touchUpInside" id="ULZ-2E-Ja3"/>
+                        <action selector="AddProductActionButton:" destination="-1" eventType="touchUpInside" id="tHa-wA-LQi"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="HYO-bf-ERW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Asn-Yv-ck3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gfl-an-ogV" secondAttribute="bottom" constant="23" id="Dhk-xn-XAf"/>
@@ -67,11 +68,13 @@
                 <constraint firstItem="Gfl-an-ogV" firstAttribute="trailing" secondItem="LBw-oz-hPL" secondAttribute="trailing" constant="-24" id="npd-Nq-zgK"/>
                 <constraint firstItem="LBw-oz-hPL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rYx-Fz-VWw"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="93.75"/>
         </view>
     </objects>
     <resources>
         <image name="create_farm_bg" width="614" height="1857"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
