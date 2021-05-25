@@ -201,6 +201,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="PostOwnerImage" destination="ODD-i5-PDa" id="WjK-RH-KHx"/>
                 <outlet property="dislikeButton" destination="rdU-v6-AyA" id="jlO-Nb-dr4"/>
                 <outlet property="likeButton" destination="iK7-rs-shy" id="v5t-43-9hs"/>
                 <outlet property="openProblemButton" destination="q3l-dA-kqt" id="594-Ts-dLD"/>

@@ -11,7 +11,7 @@ protocol MyPostsPresenterProtocol {
     var postsDatasource: [String] { get }
     var localizer: MyPostsLocalizer { get }
     var images: MyPostsImages { get }
-    var myPosts: [Post] {get}
+    var myPosts: [UserPost] {get}
     func attach()
     func setupCellUI(_ cell: MyPostsCellProtocol, index: Int)
     func didTappedCell(with index: Int)
@@ -24,7 +24,7 @@ protocol MyPostsViewProtocol: class {
 }
 
 protocol MyPostsCellProtocol {
-    func setupUI(localizer: MyPostsLocalizer)
+    func setupUI(localizer: MyPostsLocalizer , postData: UserPost )
 }
 
 protocol MyPostsCellDelegate: class {

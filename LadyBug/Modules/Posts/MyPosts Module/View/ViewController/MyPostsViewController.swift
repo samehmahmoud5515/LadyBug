@@ -26,8 +26,8 @@ class MyPostsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         presnter.getUserPosts()
+        setupUI()
         presnter.attach()
     }
     
@@ -102,7 +102,7 @@ extension MyPostsViewController {
 
 extension MyPostsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presnter.postsDatasource.count
+        presnter.myPosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -127,19 +127,34 @@ extension MyPostsViewController: MyPostsCellDelegate {
     
     func likeButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            print(index)
+            if presnter.myPosts[index.row].likedByMe == true{
+                cell.likeButton.setImage(UIImage(named: presnter.images.like), for: .normal)
+                cell.likeButton.backgroundColor = .midGreenTwo
+            }else if presnter.myPosts[index.row].likedByMe == false {
+                cell.likeButton.setImage(UIImage(named: presnter.images.likeGrey), for: .normal)
+                cell.likeButton.backgroundColor = .blueyGrey
+            }
         }
     }
     
     func dislikeButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            print(index)
+            if presnter.myPosts[index.row].likedByMe == true{
+                cell.dislikeButton.setImage(UIImage(named: presnter.images.dislikeRed), for: .normal)
+                cell.dislikeButton.backgroundColor = .tomatoRed
+            }else if presnter.myPosts[index.row].likedByMe == false {
+                cell.dislikeButton.setImage(UIImage(named: presnter.images.dislike), for: .normal)
+                cell.dislikeButton.backgroundColor = .blueyGrey
+            }
         }
     }
     
     func shareButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            print(index)
+            let objectsToShare = [cell.postImageView , cell.postDescLabel] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC, animated: true, completion: nil)
         }
     }
     

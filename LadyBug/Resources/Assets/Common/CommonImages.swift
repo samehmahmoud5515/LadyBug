@@ -31,6 +31,8 @@ class CommonImages: CommonFruitsAndVegetablesImages {
     var tasks = "common_tasks_ic"
     var share = "common_share_ic"
     var like = "common_like_ic"
+    var likeGrey = "comman_like_gray"
+    var dislikeRed = "comman_dislike_red"
     var dislike = "common_dislike_ic"
     var back = "back"
     var filter = "common_filter_ic"

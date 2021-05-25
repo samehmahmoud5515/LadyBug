@@ -8,9 +8,10 @@
 import UIKit
 
 class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
-
+    
     @IBOutlet weak var postImageAspectRatioConstraint: NSLayoutConstraint!
     @IBOutlet weak var postOwnerNameLabel: UILabel!
+    @IBOutlet weak var PostOwnerImage: UIImageView!
     @IBOutlet weak var postOwnerJobLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var openProblemButton: UIButton!
@@ -22,7 +23,18 @@ class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
     
     weak var delegate: MyPostsCellDelegate?
     
-    func setupUI(localizer: MyPostsLocalizer) {
+    func setupUI(localizer: MyPostsLocalizer , postData: UserPost )
+    {
+        PostOwnerImage.sd_setImage(with: URL(string: postData.author?.photoURL ?? ""))
+        postOwnerNameLabel.text = postData.author?.name
+        postOwnerJobLabel.text = postData.author?.jobName
+        timeLabel.text = postData.createdAt
+        postDescLabel.text = postData.content
+        postImageView.sd_setImage(with: URL(string: postData.imageAssets?.first ?? ""))
+        setupUI()
+    }
+       func setupUI(){
+        
         postOwnerNameLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         postOwnerJobLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
         timeLabel.font = UIFont.get(enFont: .regular(10), arFont: .regular(10))
@@ -30,7 +42,7 @@ class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
         postDescLabel.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
         openProblemButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
         openProblemButton.layer.cornerRadius = 5
-
+        
         openProblemButton.layer.masksToBounds = true
         if let myImage = self.postImageView.image {
             postImageAspectRatioConstraint.constant = myImage.size.width / myImage.size.height

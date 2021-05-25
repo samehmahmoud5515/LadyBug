@@ -13,7 +13,7 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
     var postsDatasource: [String] = ["1","1","1","1","1","1"]
     weak var view: MyPostsViewProtocol?
     let myPostsProvider = MoyaProvider<PostsEndPoint>(plugins: [AuthorizableTokenPlugin()])
-    var myPosts = [Post]()
+    var myPosts = [UserPost]()
     var images = MyPostsImages()
     var localizer = MyPostsLocalizer()
     
@@ -26,7 +26,7 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
     }
     
     func setupCellUI(_ cell: MyPostsCellProtocol, index: Int) {
-        cell.setupUI(localizer: localizer)
+        cell.setupUI(localizer: localizer, postData: myPosts[index])
     }
     
     func didTappedCell(with index: Int) {
@@ -39,10 +39,9 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
             case let .success(moyaResponse):
                 do {
                     let userPostsResponse = try? moyaResponse.map(UserPostsResponse.self)
-                    print(userPostsResponse?.data)
                     guard let posts = userPostsResponse?.data.all  else { return }
-                   // self?.myPosts = posts
-                    //self?.view?.reloadData()
+                    self?.myPosts = posts
+                    self?.view?.reloadData()
                     self?.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")

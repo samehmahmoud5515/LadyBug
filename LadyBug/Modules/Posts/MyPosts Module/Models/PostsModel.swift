@@ -18,10 +18,10 @@ struct UserPostsResponse: Codable {
 
 // MARK: - DataClass
 struct Posts: Codable {
-    var all: [All]
+    var all: [UserPost]
 }
 
-struct All: Codable {
+struct UserPost: Codable {
     var id: Int?
     var content: String?
     var author: User?
@@ -34,7 +34,7 @@ struct All: Codable {
     var likersCount, dislikersCount, commentsCount: Int?
     var likers, dislikers: [User]?
     var likedByMe, dislikedByMe: Bool?
-    //var comments: [Comment]?
+    var comments: [PostComment]?
     var createdAt: String?
     
     enum CodingKeys: String, CodingKey {
@@ -50,60 +50,38 @@ struct All: Codable {
         case likers, dislikers
         case likedByMe = "liked_by_me"
         case dislikedByMe = "disliked_by_me"
-        //case comments
+        case comments
         case createdAt = "created_at"
     }
 }
 
-// MARK: - Comment
-//struct Comment: Codable {
-//    var id: Int?
-//    var content: String?
-//    var commenter: Commenter?
-//    var postID: Int?
-//    var assets: [String]?
-//    var repliesCount, likersCount, dislikersCount: Int?
-//    var likers, dislikers, replies: [String]?
-//    var createdAt: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, content, commenter
-//        case postID = "post_id"
-//        case assets
-//        case repliesCount = "replies_count"
-//        case likersCount = "likers_count"
-//        case dislikersCount = "dislikers_count"
-//        case likers, dislikers, replies
-//        case createdAt = "created_at"
-//    }
-//}
-//// MARK: - Author
-//struct Author: Codable {
-//    var id: Int?
-//    var name: Name?
-//    var email: Email?
-//    var mobile: String?
-//    var activityPoints: Int?
-//    var jobName: JobName?
-//    var photoURL: String?
-//    var status: Status?
-//    var isNotifiable: Bool?
-//    var mobileVerified, emailVerified: Int?
-//    var roles: [Role]?
-//    var rating: String?
-//    var isFollowing, isRated: Bool?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name, email, mobile
-//        case activityPoints = "activity_points"
-//        case jobName = "job_name"
-//        case photoURL = "photo_url"
-//        case status
-//        case isNotifiable = "is_notifiable"
-//        case mobileVerified = "mobile_verified"
-//        case emailVerified = "email_verified"
-//        case roles, rating
-//        case isFollowing = "is_following"
-//        case isRated = "is_rated"
-//    }
-//}
+//MARK:-
+
+struct PostComment: Codable {
+    var id: Int?
+    var content: String?
+    var commenter: Commenter?
+    var postID: Int?
+    var assets: [String]?
+    var repliesCount, likersCount, dislikersCount: Int?
+    var likers, dislikers: [User]?
+    var likedByMe, dislikedByMe: Bool?
+    var replies: [String]?
+    var createdAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, content, commenter
+        case postID = "post_id"
+        case assets
+        case repliesCount = "replies_count"
+        case likersCount = "likers_count"
+        case dislikersCount = "dislikers_count"
+        case likers, dislikers
+        case likedByMe = "liked_by_me"
+        case dislikedByMe = "disliked_by_me"
+        case replies
+        case createdAt = "created_at"
+    }
+}
+
+
