@@ -13,13 +13,16 @@ extension UIViewController {
 
     func startLoadingIndicator() {
         let activityIndicator = UIViewController.activityIndicator
-        activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .whiteLarge
         activityIndicator.color = .midGreenTwo
-        DispatchQueue.main.async {
-            self.view.addSubview(activityIndicator)
-        }
+        view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        activityIndicator.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        activityIndicator.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        activityIndicator.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
         activityIndicator.startAnimating()
     }
 
