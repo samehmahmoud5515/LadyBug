@@ -13,6 +13,8 @@ class FarmTypeView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var dataSource = [true, false]
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         nibSetup()
@@ -64,18 +66,22 @@ extension FarmTypeView {
 
 extension FarmTypeView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(FarmTypeCell.self)", for: indexPath) as? FarmTypeCell ?? FarmTypeCell()
-        if indexPath.row == 0 {
-            cell.setupUI(isSelected: true)
-        } else {
-            cell.setupUI(isSelected: false)
-        }
+        cell.setupUI(isSelected: dataSource[indexPath.row])
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var item = dataSource[indexPath.row]
+        item = !item
+        dataSource[indexPath.row] = item
+        if let cell = collectionView.cellForItem(at: indexPath) as? FarmTypeCell {
+            cell.setupUI(isSelected: item)
+        }
+    }
     
 }
