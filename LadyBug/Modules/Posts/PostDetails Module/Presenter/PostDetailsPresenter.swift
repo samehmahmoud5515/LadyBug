@@ -33,7 +33,7 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let setLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
+                    let setLikeResponse = try? moyaResponse.map(BaseResponse.self)
                     if setLikeResponse?.success == true{
                         completion()
                     }
@@ -53,7 +53,7 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let setDisLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
+                    let setDisLikeResponse = try? moyaResponse.map(BaseResponse.self)
                     print()
                     if setDisLikeResponse?.success == true{
                         completion()
@@ -70,11 +70,11 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
     }
     
     func setCommentLike( commentId : Int ,   completion: @escaping () -> () ) {
-        provider.request(.commentsToggleLike(id: commentId)){ [weak self ] result in
+        provider.request(.toggleCommentLike(id: commentId)){ [weak self ] result in
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let setLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
+                    let setLikeResponse = try? moyaResponse.map(BaseResponse.self)
                     if setLikeResponse?.success == true{
                         completion()
                     }
@@ -90,11 +90,11 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
     }
     
     func setCommentDisLike( commentId : Int , completion: @escaping () -> ()  ) {
-        provider.request(.commentsToggleDislike(id: commentId)) { [weak self ] result in
+        provider.request(.toggleCommentDislike(id: commentId)) { [weak self ] result in
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let setDisLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
+                    let setDisLikeResponse = try? moyaResponse.map(BaseResponse.self)
                     print()
                     if setDisLikeResponse?.success == true{
                         completion()
@@ -115,7 +115,7 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let solvePost = try? moyaResponse.map(UserPostBasicResponse.self)
+                    let solvePost = try? moyaResponse.map(BaseResponse.self)
                     print(solvePost?.message)
                 } catch {
                     print("Parsing Error")

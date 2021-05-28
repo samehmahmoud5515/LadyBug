@@ -9,8 +9,6 @@ import Moya
 
 class MyPostsPresenter: MyPostsPresenterProtocol {
     
-    var numberOfSectionsInHeader: Int = 2
-    var postsDatasource: [String] = ["1","1","1","1","1","1"]
     weak var view: MyPostsViewProtocol?
     let provider = MoyaProvider<PostsEndPoint>(plugins: [AuthorizableTokenPlugin()])
     var myPosts = [UserPost]()
@@ -59,18 +57,16 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let setLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
+                    let setLikeResponse = try? moyaResponse.map(BaseResponse.self)
                     if setLikeResponse?.success == true{
                         completion()
                     }
                     print(setLikeResponse?.message)
                 } catch {
                     print("Parsing Error")
-                    self?.view?.stopIndicator()
                 }
             case let .failure(error):
                 print(error)
-                self?.view?.stopIndicator()
                 break
             }
         }
@@ -81,8 +77,7 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let setDisLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
-                    print()
+                    let setDisLikeResponse = try? moyaResponse.map(BaseResponse.self)
                     if setDisLikeResponse?.success == true{
                         completion()
                     }
@@ -92,7 +87,6 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
                     self?.view?.stopIndicator()
                 }
             case let .failure(error):
-                print(error)
                 self?.view?.stopIndicator()
                 break
             }

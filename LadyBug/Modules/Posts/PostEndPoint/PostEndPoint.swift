@@ -11,8 +11,8 @@ enum PostsEndPoint {
     case getUserPosts
     case toggleDislike(id: Int )
     case toggleLike(id: Int)
-    case commentsToggleLike(id: Int)
-    case commentsToggleDislike(id: Int)
+    case toggleCommentLike(id: Int)
+    case toggleCommentDislike(id: Int)
     case solvePost(postId : Int)
     case editComment(postId : Int)
     case createComment
@@ -33,9 +33,9 @@ extension PostsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtoc
             return "/api/v1/posts/toggle_dislike/" + String(postId)
         case let .toggleLike(id: postId ) :
             return "/api/v1/posts/toggle_like/" + String(postId)
-        case let .commentsToggleLike(id: postId):
+        case let .toggleCommentLike(id: postId):
             return "/api/v1/comments/toggle_like/" + String(postId)
-        case let .commentsToggleDislike(id: postId ) :
+        case let .toggleCommentDislike(id: postId ) :
             return "/api/v1/comments/toggle_dislike/" + String(postId)
         case let .solvePost(postId):
             return "/api/v1/posts/toggle_solve/" + String(postId)
@@ -48,7 +48,7 @@ extension PostsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtoc
     
     var method: Method {
         switch self {
-        case .getUserPosts , .toggleDislike , .toggleLike , .commentsToggleDislike , .commentsToggleLike, .solvePost :
+        case .getUserPosts , .toggleDislike , .toggleLike , .toggleCommentDislike , .toggleCommentLike, .solvePost :
             return .get
         case .editComment , .createComment :
             return .post
@@ -61,7 +61,7 @@ extension PostsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtoc
     
     var task: Task {
         switch self {
-        case .getUserPosts, .toggleDislike, .toggleLike, .commentsToggleDislike, .commentsToggleLike, .solvePost, .editComment , .createComment :
+        case .getUserPosts, .toggleDislike, .toggleLike, .toggleCommentDislike, .toggleCommentLike, .solvePost, .editComment , .createComment :
             return .requestPlain
             
         }

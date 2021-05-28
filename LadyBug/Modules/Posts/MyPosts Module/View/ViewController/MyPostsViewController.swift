@@ -155,7 +155,7 @@ extension MyPostsViewController: MyPostsCellDelegate {
     
     func shareButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            let objectsToShare = [cell.postImageView , cell.postDescLabel] as [Any]
+            let objectsToShare = [ presnter.myPosts[index.row].content, presnter.myPosts[index.row].author?.name] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             self.present(activityVC, animated: true, completion: nil)

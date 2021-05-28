@@ -8,7 +8,6 @@
 import Foundation
 
 protocol MyPostsPresenterProtocol {
-    var postsDatasource: [String] { get }
     var localizer: MyPostsLocalizer { get }
     var images: MyPostsImages { get }
     var myPosts: [UserPost] {get set }

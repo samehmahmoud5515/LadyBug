@@ -272,17 +272,12 @@ extension PostDetailsViewController {
 
 extension PostDetailsViewController {
     
-    @IBAction func sendActionButton(_ sender: UIButton) {
-        
-        
-        
+    @IBAction func addComment(_ sender: UIButton) {
     }
     
     @IBAction func uploadCommentPhotos(_ sender: UIButton) {
-        
         addImageButtonDidTapped()
     }
-    
 }
 
 extension PostDetailsViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate  {

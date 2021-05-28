@@ -17,15 +17,17 @@ class MoreMenuProfileCell: UITableViewCell {
     @IBOutlet weak var profileEditeLabel: UILabel!
     @IBOutlet weak var profileArrowImageView: UIImageView!
     @IBOutlet weak var profilePointNumberLabel: UILabel!
-    //@IBOutlet weak var profilePointsNumberTitleLAbel: UILabel!
     @IBOutlet weak var profilePointlabel: UILabel!
     
-    func updateJobName( jobName : String ){
-        pofileOccupationLabel.text = jobName
-    }
-    func setupUI(model: MoreMenuProfileModel, data : JObsUserInfo ) {
+    
+    func setupUI(model: MoreMenuProfileModel, data : User ) {
+        guard let photo = data.photoURL else{return}
+        profileImageView.sd_setImage(with: URL(string: photo))
+
         profileImageView.image = UIImage(named: model.profileImage)
         
+        pofileOccupationLabel.text = data.jobName
+
         profileUserNameLabel.text = data.name
         
         profileNumberLabel.text = data.mobile

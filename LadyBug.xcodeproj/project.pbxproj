@@ -83,6 +83,7 @@
 		2166B8A625E081C8008FE0A0 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */; };
 		2166B8A725E081C8008FE0A0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B8A125E081C8008FE0A0 /* RegistrationViewController.swift */; };
 		2166B8A825E081C8008FE0A0 /* RegistrationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166B8A325E081C8008FE0A0 /* RegistrationProtocols.swift */; };
+		217470972661B07D00B6BBBC /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217470962661B07D00B6BBBC /* BaseResponseModel.swift */; };
 		21767A2525F58F4E0039E2B8 /* MyPosts Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A2425F58F4E0039E2B8 /* MyPosts Localizer.swift */; };
 		21767A2725F58F570039E2B8 /* MyPosts Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A2625F58F570039E2B8 /* MyPosts Images.swift */; };
 		21767A2B25F58FD20039E2B8 /* MyPosts Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21767A2A25F58FD20039E2B8 /* MyPosts Protocols.swift */; };
@@ -518,6 +519,7 @@
 		2166B8A025E081C8008FE0A0 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		2166B8A125E081C8008FE0A0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2166B8A325E081C8008FE0A0 /* RegistrationProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationProtocols.swift; sourceTree = "<group>"; };
+		217470962661B07D00B6BBBC /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		21767A2425F58F4E0039E2B8 /* MyPosts Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPosts Localizer.swift"; sourceTree = "<group>"; };
 		21767A2625F58F570039E2B8 /* MyPosts Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPosts Images.swift"; sourceTree = "<group>"; };
 		21767A2A25F58FD20039E2B8 /* MyPosts Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPosts Protocols.swift"; sourceTree = "<group>"; };
@@ -1462,7 +1464,6 @@
 		2137520425F58DFC00E342EF /* MyPosts Module */ = {
 			isa = PBXGroup;
 			children = (
-				2179A85F2659970500C6C192 /* Models */,
 				2137521425F58DFD00E342EF /* Protocols */,
 				2137520A25F58DFC00E342EF /* Presenter */,
 				2137520525F58DFC00E342EF /* Resources */,
@@ -1782,20 +1783,20 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		217470952661AF8900B6BBBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2179A8602659975A00C6C192 /* PostsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2179A85C265991F700C6C192 /* PostEndPoint */ = {
 			isa = PBXGroup;
 			children = (
 				2179A85D2659924900C6C192 /* PostEndPoint.swift */,
 			);
 			path = PostEndPoint;
-			sourceTree = "<group>";
-		};
-		2179A85F2659970500C6C192 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2179A8602659975A00C6C192 /* PostsModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		217BAEBD264DB68C00EE10AF /* User */ = {
@@ -2618,6 +2619,7 @@
 				5028D08326333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift */,
 				5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */,
 				2184237F26488ED300FFF5BF /* PasswordEndPoint.swift */,
+				217470962661B07D00B6BBBC /* BaseResponseModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -4076,6 +4078,7 @@
 		50BBB66F264DC75F005E709E /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				217470952661AF8900B6BBBC /* Model */,
 				2179A85C265991F700C6C192 /* PostEndPoint */,
 				509643A725E2EF3E0000FB60 /* AddPost Module */,
 				2137520425F58DFC00E342EF /* MyPosts Module */,
@@ -5091,6 +5094,7 @@
 				5090FBF625E44D4C008D5B06 /* InterestedSelectionLocalizer.swift in Sources */,
 				504FCF7A260D5E9D000FFD0A /* AddPostImageCell.swift in Sources */,
 				5054F0A0260D5B4D00675FE7 /* AddPostImageViewCell.swift in Sources */,
+				217470972661B07D00B6BBBC /* BaseResponseModel.swift in Sources */,
 				503DFC6425DB34840093CAF2 /* HomeHeaderViewEditCell.swift in Sources */,
 				5097F50325FBAE47000E14C4 /* CropsInfoHeaderViewCell.swift in Sources */,
 				504969C625F81E23002C3E40 /* MyFarmDetailsPeopleChildCell.swift in Sources */,

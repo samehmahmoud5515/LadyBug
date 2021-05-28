@@ -18,7 +18,9 @@ class YourProductsCellTableViewCell: UITableViewCell {
     
     func setup( products : Product){
         if let image = products.internalAssets{
-            productImageView.sd_setImage(with: URL(string: image.first ?? "" ))
+            if let image = image.first {
+                productImageView.sd_setImage(with: URL(string: image ))
+            }
         }
         productTitleLabel.text = products.name
         productDescriptionLabel.text = products.description

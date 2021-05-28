@@ -24,6 +24,7 @@ class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
     
     weak var delegate: MyPostsCellDelegate?
     
+    
     func setupUI(localizer: MyPostsLocalizer , postData: UserPost )
     {
         setupUI()
@@ -42,6 +43,10 @@ class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
         {
             playButton.setBackgroundImage( nil , for: .normal)
         }
+        if postData.videoAssets != []{
+            playButton.setBackgroundImage( UIImage(named: "play.fill") , for: .normal)
+        }
+        
         setColorForButton(postData: postData)
     }
     func setupUI(){

@@ -6,9 +6,6 @@
 //
 
 import UIKit
-protocol CommentNumber: class  {
-    func setCommentNumber(number : Int)
-}
 
 class PostDetailsSectionHeaderView: UIView {
 
