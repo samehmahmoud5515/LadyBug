@@ -10,6 +10,7 @@ import Foundation
 extension Date {
     static var parsingFormat = "yyyy-MM-dd hh:mm:ss"
     static var dateDisplayFormat = "yyyy-MM-dd"
+    static var timeFormat = "h:mm"
 }
 
 extension Date {
@@ -27,6 +28,14 @@ extension Date {
         } else {
             return self.toString
         }
+    }
+    
+    var toTime: String {
+        let format = DateFormatter()
+        format.dateFormat = Date.timeFormat
+        format.locale = Locale.current
+        format.timeZone = TimeZone.current
+        return format.string(from: self)
     }
     
     var toString: String {

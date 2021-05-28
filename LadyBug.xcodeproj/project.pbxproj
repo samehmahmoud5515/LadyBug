@@ -193,6 +193,10 @@
 		502ACE8425F455CD0031D3CE /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */; };
 		5031C2E9263348E10027CFB4 /* CommonHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */; };
 		5031C2EF26334D6D0027CFB4 /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */; };
+		503480392661233400881ABB /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503480372661233400881ABB /* AddTaskViewController.xib */; };
+		5034803A2661233400881ABB /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503480382661233400881ABB /* AddTaskViewController.swift */; };
+		50348041266123AA00881ABB /* TasksEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50348040266123AA00881ABB /* TasksEndPoint.swift */; };
+		5034804626612ACE00881ABB /* TodaysTasksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5034804526612ACE00881ABB /* TodaysTasksResponse.swift */; };
 		503930B32659DEC300A4C061 /* CreateProductReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503930B22659DEC300A4C061 /* CreateProductReponse.swift */; };
 		503CB5A025E07AF700B7A393 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CB59E25E07AF700B7A393 /* ProductsViewController.swift */; };
 		503CB5A125E07AF700B7A393 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503CB59F25E07AF700B7A393 /* ProductsViewController.xib */; };
@@ -300,8 +304,6 @@
 		5072D39A25DAD2D8005363CB /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5072D39825DAD2D8005363CB /* HomeHeaderView.xib */; };
 		5072D39E25DAD485005363CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39D25DAD485005363CB /* HomePresenter.swift */; };
 		5072D3A225DAD4B7005363CB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D3A125DAD4B7005363CB /* HomeProtocols.swift */; };
-		508537E22617F76C00CCFEA7 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */; };
-		508537E32617F76C00CCFEA7 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */; };
 		508D16EF262915AD004ED2D4 /* LoginEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */; };
 		508D16F32629161D004ED2D4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D16F22629161D004ED2D4 /* Environment.swift */; };
 		508FDAD225F0471B00686ECE /* MyCropsParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */; };
@@ -626,6 +628,10 @@
 		502ACE8325F455CD0031D3CE /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeaderProtocol.swift; sourceTree = "<group>"; };
 		5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
+		503480372661233400881ABB /* AddTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
+		503480382661233400881ABB /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		50348040266123AA00881ABB /* TasksEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksEndPoint.swift; sourceTree = "<group>"; };
+		5034804526612ACE00881ABB /* TodaysTasksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysTasksResponse.swift; sourceTree = "<group>"; };
 		503930B22659DEC300A4C061 /* CreateProductReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductReponse.swift; sourceTree = "<group>"; };
 		503CB59E25E07AF700B7A393 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		503CB59F25E07AF700B7A393 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
@@ -733,8 +739,6 @@
 		5072D39825DAD2D8005363CB /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		5072D39D25DAD485005363CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		5072D3A125DAD4B7005363CB /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
-		508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = LadyBug/Modules/AddTask/View/AddTaskViewController.swift; sourceTree = SOURCE_ROOT; };
-		508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddTaskViewController.xib; path = LadyBug/Modules/AddTask/View/AddTaskViewController.xib; sourceTree = SOURCE_ROOT; };
 		508D16EE262915AD004ED2D4 /* LoginEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPoint.swift; sourceTree = "<group>"; };
 		508D16F22629161D004ED2D4 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		508FDAD025F0471B00686ECE /* MyCropsParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsParentCell.swift; sourceTree = "<group>"; };
@@ -1584,7 +1588,6 @@
 		216647F825FEA8780028E335 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5001432025F99A6600D1630E /* MyTasks Module */,
 				216647FA25FEADBF0028E335 /* Images */,
 				216647F925FEA8A80028E335 /* Localizer */,
 			);
@@ -2215,6 +2218,7 @@
 		5001432025F99A6600D1630E /* MyTasks Module */ = {
 			isa = PBXGroup;
 			children = (
+				5034804426612ABC00881ABB /* Model */,
 				5001433125F99B0D00D1630E /* Resources */,
 				5001432D25F99AE400D1630E /* Contract */,
 				5001432825F99ABF00D1630E /* Presenter */,
@@ -2509,19 +2513,9 @@
 		50206EBD260E6BEA0095E995 /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
-				50206EBE260E6BF50095E995 /* View */,
+				503480362661233400881ABB /* View */,
 			);
 			path = AddTask;
-			sourceTree = "<group>";
-		};
-		50206EBE260E6BF50095E995 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				508537E02617F76C00CCFEA7 /* AddTaskViewController.swift */,
-				508537E12617F76C00CCFEA7 /* AddTaskViewController.xib */,
-			);
-			name = View;
-			path = "../New Group/View";
 			sourceTree = "<group>";
 		};
 		50206EC8260E9C900095E995 /* Archive */ = {
@@ -2621,6 +2615,41 @@
 				5031C2EE26334D6D0027CFB4 /* AccessTokenManager.swift */,
 			);
 			path = AccessTokenManager;
+			sourceTree = "<group>";
+		};
+		503480362661233400881ABB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				503480372661233400881ABB /* AddTaskViewController.xib */,
+				503480382661233400881ABB /* AddTaskViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5034803D2661238300881ABB /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				5034803F2661239000881ABB /* EndPoint */,
+				5001432025F99A6600D1630E /* MyTasks Module */,
+				50206EBD260E6BEA0095E995 /* AddTask */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		5034803F2661239000881ABB /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				50348040266123AA00881ABB /* TasksEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		5034804426612ABC00881ABB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5034804526612ACE00881ABB /* TodaysTasksResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		503CB59B25E07AD100B7A393 /* Products */ = {
@@ -4392,13 +4421,13 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5034803D2661238300881ABB /* Tasks */,
 				508D16EC26291548004ED2D4 /* Auth */,
 				217BAEBD264DB68C00EE10AF /* User */,
 				21A64D2F2651313900CC48AC /* product */,
 				50068C5725E48A650097A870 /* MoreMenuModule */,
 				50BC86FC260543520065D8FE /* Profile Module */,
 				50206EC8260E9C900095E995 /* Archive */,
-				50206EBD260E6BEA0095E995 /* AddTask */,
 				21A706ED260DECD50094EC56 /* Suggestions Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
 				50BBB670264DC854005E709E /* Crops */,
@@ -4714,6 +4743,7 @@
 				506A5A2925E5671A0014D59A /* MoreMenuNotificationsCell.xib in Resources */,
 				5099491B25E4642D0085CFBF /* ForgotPasswordViewController.xib in Resources */,
 				50A77D3B25D9EEE10054E80D /* TSRotger-Black.ttf in Resources */,
+				503480392661233400881ABB /* AddTaskViewController.xib in Resources */,
 				50A77D3C25D9EEE10054E80D /* TSRotger-Bold.ttf in Resources */,
 				5019069F25D89140002D55F1 /* LaunchScreen.storyboard in Resources */,
 				50D4ACC625FBF8C900880E55 /* MapViewController.xib in Resources */,
@@ -4727,7 +4757,6 @@
 				503CB5BB25E07DD900B7A393 /* ProductCell.xib in Resources */,
 				50AF3EB5260AC75D00CBCD0C /* PostDetailsSectionHeaderView.xib in Resources */,
 				504969C125F81E23002C3E40 /* MyFarmDetailsServiceTableCell.xib in Resources */,
-				508537E32617F76C00CCFEA7 /* AddTaskViewController.xib in Resources */,
 				50FA84A325DC6325008A9216 /* FarmDetailsView.xib in Resources */,
 				509643C925E2F1C40000FB60 /* AddPostCell.xib in Resources */,
 				2121AC2026052027001A2EDD /* HelpViewController.xib in Resources */,
@@ -4884,6 +4913,7 @@
 				21CE318925F597D30015467B /* MyPostsPresenter.swift in Sources */,
 				21A70709260DECD60094EC56 /* SuggestionsViewController.swift in Sources */,
 				504969BE25F81E23002C3E40 /* MyFarmDetailsTaskCell.swift in Sources */,
+				5034803A2661233400881ABB /* AddTaskViewController.swift in Sources */,
 				50AF3EAC260AC64C00CBCD0C /* PostDetailsCell.swift in Sources */,
 				501F740225DAB54300333F16 /* UIView+IBInspectable.swift in Sources */,
 				2166B89625E081BC008FE0A0 /* LoginProtocols.swift in Sources */,
@@ -4925,6 +4955,7 @@
 				50D6137525DC1CEC00228385 /* MyFarmViewController.swift in Sources */,
 				217D1EA72608293C0025462F /* ProductDetailsImages.swift in Sources */,
 				21A64D342651325600CC48AC /* CitesAndCropsModel.swift in Sources */,
+				50348041266123AA00881ABB /* TasksEndPoint.swift in Sources */,
 				217DB1D4263EC33800AE6B10 /* FollowersModel.swift in Sources */,
 				2101D8FA25F2E46D00FB0DB9 /* NotificationImage.swift in Sources */,
 				504969B025F81E23002C3E40 /* MyFarmDetailsPostsTableViewCell.swift in Sources */,
@@ -5092,7 +5123,6 @@
 				503CB5D425E0A1B200B7A393 /* VideosImages.swift in Sources */,
 				217D1EB12608293C0025462F /* ProductDetailsViewController.swift in Sources */,
 				504969AB25F81E23002C3E40 /* MyFarmDetailsImages.swift in Sources */,
-				508537E22617F76C00CCFEA7 /* AddTaskViewController.swift in Sources */,
 				501F740025DAB54300333F16 /* UIView+InterfaceLayoutDirection.swift in Sources */,
 				213751DB25F3FE0500E342EF /* CropsInfoDetailsProtocols.swift in Sources */,
 				50D07A7C2650AAB10032D6F8 /* Date.swift in Sources */,
@@ -5135,6 +5165,7 @@
 				50AF3E94260ABED900CBCD0C /* PostDetailsPresenter.swift in Sources */,
 				2101D91E25F3589400FB0DB9 /* YourProductsTabelViewController.swift in Sources */,
 				508FDAE525F04D1800686ECE /* MyCropsUIModel.swift in Sources */,
+				5034804626612ACE00881ABB /* TodaysTasksResponse.swift in Sources */,
 				501F73F225DAB4CA00333F16 /* UserDefaults.swift in Sources */,
 				213751FE25F436A300E342EF /* FollowersTableViewCell.swift in Sources */,
 				2104FBEE26225C210014E584 /* AdjustThePeopleOnYourFarmImage.swift in Sources */,

@@ -28,13 +28,13 @@ class MyTasksSectionHeaderView: UIView {
         guard let contentView = contentView else { return }
         contentView.frame = self.bounds
         addSubview(contentView)
-        setupUI()
     }
     
 }
 
 extension MyTasksSectionHeaderView {
-    private func setupUI() {
+    func setupUI(title: String) {
+        titleLabel.text = title
         titleLabel.textColor = .purplishBrown
         titleLabel.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
     }
