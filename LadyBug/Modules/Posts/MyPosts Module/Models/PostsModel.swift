@@ -8,6 +8,18 @@
 
 import Foundation
 
+// MARK: - UserPostBasicResponse
+struct UserPostBasicResponse: Codable {
+    var success: Bool?
+    var data: DataClass?
+    var message: String?
+    var code: Int?
+}
+
+// MARK: - DataClass
+struct DataClass: Codable {
+}
+
 // MARK: - UserPostsResponse
 struct UserPostsResponse: Codable {
     var success: Bool

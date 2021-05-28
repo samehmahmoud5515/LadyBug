@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wo6-dV-GpB">
-                        <rect key="frame" x="0.0" y="5" width="399" height="459"/>
+                        <rect key="frame" x="0.0" y="8" width="399" height="453"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H8m-O6-5uj">
-                                <rect key="frame" x="14" y="0.0" width="371" height="459"/>
+                                <rect key="frame" x="14" y="0.0" width="371" height="453"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="faP-QJ-n33">
                                         <rect key="frame" x="0.0" y="0.0" width="371" height="73.5"/>
@@ -74,7 +74,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="openProblemButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z61-Wl-Bfk"/>
+                                                    <action selector="openProblemButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ofQ-Kg-GpL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -100,16 +100,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsD-bQ-ae0">
-                                        <rect key="frame" x="0.0" y="175" width="371" height="230"/>
+                                        <rect key="frame" x="0.0" y="175" width="371" height="224"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garden2" translatesAutoresizingMaskIntoConstraints="NO" id="1am-hL-98l">
-                                                <rect key="frame" x="0.0" y="0.0" width="371" height="230"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="371" height="224"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1am-hL-98l" secondAttribute="height" multiplier="1.5" priority="750" id="pVe-0J-UZE"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1I-P8-EeM">
-                                                <rect key="frame" x="161.5" y="92.5" width="48" height="44.5"/>
+                                                <rect key="frame" x="161.5" y="89.5" width="48" height="44.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="6xB-Xk-V3Q"/>
@@ -135,7 +135,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oh-fA-1QW">
-                                        <rect key="frame" x="0.0" y="415" width="371" height="44"/>
+                                        <rect key="frame" x="0.0" y="409" width="371" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK7-rs-shy">
                                                 <rect key="frame" x="0.0" y="12" width="73" height="22"/>
@@ -149,14 +149,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-v6-AyA">
-                                                <rect key="frame" x="95" y="12" width="72" height="22"/>
+                                                <rect key="frame" x="95" y="12" width="87" height="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="-12" maxY="0.0"/>
-                                                <state key="normal" title="اعجبني" image="common_dislike_ic">
+                                                <state key="normal" title="لا يعجبني" image="common_dislike_ic">
                                                     <color key="titleColor" red="0.54117647059999996" green="0.63921568630000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="dislikeButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchDragInside" id="Vac-4W-wjv"/>
+                                                    <action selector="dislikeButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zgk-EN-NG7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2u-kJ-ovG">
@@ -194,17 +194,19 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wo6-dV-GpB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="1GU-m2-9h6"/>
+                    <constraint firstItem="wo6-dV-GpB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1GU-m2-9h6"/>
                     <constraint firstItem="wo6-dV-GpB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BOY-D7-Ccr"/>
-                    <constraint firstAttribute="bottom" secondItem="wo6-dV-GpB" secondAttribute="bottom" constant="5" id="Dza-Xy-BUC"/>
+                    <constraint firstAttribute="bottom" secondItem="wo6-dV-GpB" secondAttribute="bottom" constant="8" id="Dza-Xy-BUC"/>
                     <constraint firstAttribute="trailing" secondItem="wo6-dV-GpB" secondAttribute="trailing" id="xuq-kI-c3o"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="PostOwnerImage" destination="ODD-i5-PDa" id="WjK-RH-KHx"/>
                 <outlet property="dislikeButton" destination="rdU-v6-AyA" id="jlO-Nb-dr4"/>
                 <outlet property="likeButton" destination="iK7-rs-shy" id="v5t-43-9hs"/>
                 <outlet property="openProblemButton" destination="q3l-dA-kqt" id="594-Ts-dLD"/>
+                <outlet property="playButton" destination="Z1I-P8-EeM" id="E9P-oh-Bz9"/>
                 <outlet property="postDescLabel" destination="9YO-lQ-BlA" id="cNE-6j-JB4"/>
                 <outlet property="postImageAspectRatioConstraint" destination="pVe-0J-UZE" id="ilB-ro-cMv"/>
                 <outlet property="postImageView" destination="1am-hL-98l" id="1aX-BH-GEH"/>

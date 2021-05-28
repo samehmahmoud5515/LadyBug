@@ -12,12 +12,11 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
     var numberOfSectionsInHeader: Int = 2
     var postsDatasource: [String] = ["1","1","1","1","1","1"]
     weak var view: MyPostsViewProtocol?
-    let myPostsProvider = MoyaProvider<PostsEndPoint>(plugins: [AuthorizableTokenPlugin()])
+    let provider = MoyaProvider<PostsEndPoint>(plugins: [AuthorizableTokenPlugin()])
     var myPosts = [UserPost]()
     var images = MyPostsImages()
     var localizer = MyPostsLocalizer()
-    
-    init(view: MyPostsViewProtocol) {
+    init(view: MyPostsViewProtocol ) {
         self.view = view
     }
     
@@ -34,7 +33,7 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
     }
     
     func getUserPosts() {
-        myPostsProvider.request(.getUserPosts) { [weak self ] result in
+        provider.request(.getUserPosts) { [weak self ] result in
             switch result {
             case let .success(moyaResponse):
                 do {
@@ -54,4 +53,51 @@ class MyPostsPresenter: MyPostsPresenterProtocol {
             }
         }
     }
+    
+    func setLike( postId : Int ,   completion: @escaping () -> () ) {
+        provider.request(.toggleLike(id: postId)){ [weak self ] result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let setLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
+                    if setLikeResponse?.success == true{
+                        completion()
+                    }
+                    print(setLikeResponse?.message)
+                } catch {
+                    print("Parsing Error")
+                    self?.view?.stopIndicator()
+                }
+            case let .failure(error):
+                print(error)
+                self?.view?.stopIndicator()
+                break
+            }
+        }
+    }
+    
+    func setDisLike( postId : Int , completion: @escaping () -> ()  ) {
+        provider.request(.toggleDislike(id: postId)) { [weak self ] result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let setDisLikeResponse = try? moyaResponse.map(UserPostBasicResponse.self)
+                    print()
+                    if setDisLikeResponse?.success == true{
+                        completion()
+                    }
+                    print(setDisLikeResponse?.message)
+                } catch {
+                    print("Parsing Error")
+                    self?.view?.stopIndicator()
+                }
+            case let .failure(error):
+                print(error)
+                self?.view?.stopIndicator()
+                break
+            }
+        }
+    }
+    
+    
 }

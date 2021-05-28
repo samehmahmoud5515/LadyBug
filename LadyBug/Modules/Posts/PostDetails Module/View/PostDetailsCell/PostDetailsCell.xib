@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,19 +38,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WOk-sl-Cd0">
-                                                <rect key="frame" x="58.5" y="9" width="59.5" height="63"/>
+                                                <rect key="frame" x="58.5" y="24" width="59.5" height="32"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="66j-FD-QJ8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59.5" height="45.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.5" height="14.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7o-tQ-NiQ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
-                                                                <state key="normal" title="كن متابع">
-                                                                    <color key="titleColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="محمد خليفة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCK-N8-5CL">
-                                                                <rect key="frame" x="0.0" y="31" width="59.5" height="14.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="59.5" height="14.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -59,7 +52,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="منذ ساعة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA3-wf-UQG">
-                                                        <rect key="frame" x="0.0" y="48.5" width="45" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="17.5" width="45" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.67450980390000004" green="0.69411764710000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -67,7 +60,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طبيب بيطري" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUC-Rd-cg5">
-                                                <rect key="frame" x="122.5" y="43.5" width="47" height="11"/>
+                                                <rect key="frame" x="122.5" y="27.5" width="47" height="11"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <color key="textColor" red="0.67450980390000004" green="0.69411764710000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -78,11 +71,15 @@
                                                 <state key="normal" image="post_details_options_ic">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openProblemButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SAg-SO-TT1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="8wZ-wo-6ow" secondAttribute="bottom" constant="10.5" id="Efj-Sr-8TI"/>
+                                            <constraint firstItem="WOk-sl-Cd0" firstAttribute="centerY" secondItem="8wZ-wo-6ow" secondAttribute="centerY" id="IDy-03-zqu"/>
                                             <constraint firstItem="PUC-Rd-cg5" firstAttribute="leading" secondItem="PCK-N8-5CL" secondAttribute="trailing" constant="4.5" id="IHq-bU-TBy"/>
                                             <constraint firstItem="T12-10-0Vs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PUC-Rd-cg5" secondAttribute="trailing" id="Nnz-m9-REt"/>
                                             <constraint firstItem="WOk-sl-Cd0" firstAttribute="leading" secondItem="8wZ-wo-6ow" secondAttribute="trailing" constant="12.5" id="O67-QF-JHx"/>
@@ -91,7 +88,6 @@
                                             <constraint firstItem="PUC-Rd-cg5" firstAttribute="bottom" secondItem="PCK-N8-5CL" secondAttribute="bottom" id="YKU-ma-RNm"/>
                                             <constraint firstItem="8wZ-wo-6ow" firstAttribute="leading" secondItem="PBP-ID-MrY" secondAttribute="leading" id="pMa-Fs-aNv"/>
                                             <constraint firstAttribute="trailing" secondItem="T12-10-0Vs" secondAttribute="trailing" constant="-14" id="pTB-wZ-q55"/>
-                                            <constraint firstItem="WOk-sl-Cd0" firstAttribute="top" secondItem="PBP-ID-MrY" secondAttribute="top" constant="9" id="tDc-dQ-clz"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vss-gh-gj2">
@@ -121,9 +117,12 @@
                                                 <state key="normal" backgroundImage="play.fill" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s67-0M-jFJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="v7H-pO-DPw" firstAttribute="centerX" secondItem="UKZ-Nx-D7h" secondAttribute="centerX" id="L1S-Bs-wTf"/>
                                             <constraint firstAttribute="bottom" secondItem="cnn-3x-Eji" secondAttribute="bottom" id="Mlu-zs-faI"/>
@@ -143,21 +142,30 @@
                                                 <state key="normal" title="اعجبني" image="common_like_ic">
                                                     <color key="titleColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="likeButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="05X-LV-5gS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os8-79-49K">
-                                                <rect key="frame" x="95" y="12" width="72" height="22"/>
+                                                <rect key="frame" x="95" y="12" width="87" height="22"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="-12" maxY="0.0"/>
-                                                <state key="normal" title="اعجبني" image="common_dislike_ic">
+                                                <state key="normal" title="لا يعجبني" image="common_dislike_ic">
                                                     <color key="titleColor" red="0.54117647059999996" green="0.63921568630000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="dislikeButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="moW-Tj-QCb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-aZ-BHw">
                                                 <rect key="frame" x="436" y="13" width="17" height="22"/>
                                                 <state key="normal" image="common_share_ic"/>
+                                                <connections>
+                                                    <action selector="shareButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Wy-33-WHW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="AZv-mb-287" secondAttribute="bottom" constant="10" id="1zw-eo-7F9"/>
                                             <constraint firstItem="Os8-79-49K" firstAttribute="leading" secondItem="AZv-mb-287" secondAttribute="trailing" constant="22" id="B7J-Bk-nR5"/>
@@ -173,8 +181,11 @@
                                     <constraint firstItem="AZv-mb-287" firstAttribute="leading" secondItem="cnn-3x-Eji" secondAttribute="leading" id="y6M-cH-6b1"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGw-wg-DGA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGw-wg-DGA">
                                 <rect key="frame" x="14" y="17" width="169.5" height="46"/>
+                                <connections>
+                                    <action selector="postOwnerDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kgu-EV-rDF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,13 +210,14 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="beAFollowerButton" destination="M7o-tQ-NiQ" id="JLc-cu-aMZ"/>
                 <outlet property="dislikeButton" destination="Os8-79-49K" id="GVT-eC-va4"/>
                 <outlet property="likeButton" destination="AZv-mb-287" id="6e6-Rt-zrd"/>
                 <outlet property="optionsButton" destination="T12-10-0Vs" id="FIq-nk-Hjy"/>
+                <outlet property="playButton" destination="v7H-pO-DPw" id="dMa-du-cvF"/>
                 <outlet property="postDescLabel" destination="Vss-gh-gj2" id="PGp-eB-YjW"/>
                 <outlet property="postImageAspectRatioConstraint" destination="hSe-9u-YZG" id="0KJ-o1-nHM"/>
                 <outlet property="postImageView" destination="cnn-3x-Eji" id="XvJ-vU-1gu"/>
+                <outlet property="postOwnerImage" destination="8wZ-wo-6ow" id="gEP-4e-Mnn"/>
                 <outlet property="postOwnerJobLabel" destination="PUC-Rd-cg5" id="AKS-TT-i29"/>
                 <outlet property="postOwnerNameLabel" destination="PCK-N8-5CL" id="Gcv-6Z-xrq"/>
                 <outlet property="shareButton" destination="Wiw-aZ-BHw" id="UhB-MU-rmb"/>
@@ -222,8 +234,5 @@
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="post_details_options_ic" width="20" height="20"/>
         <image name="tabBar_profile_ic" width="21" height="21"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -49,20 +49,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-G6-adQ">
-                                <rect key="frame" x="62" y="63.5" width="330" height="81.5"/>
-                                <string key="text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من صورة حقيقية لتصميم الموقع.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bc-Zt-fem">
-                                <rect key="frame" x="157" y="153" width="72" height="24"/>
+                                <rect key="frame" x="157" y="153" width="87" height="24"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="-12" maxY="0.0"/>
-                                <state key="normal" title="اعجبني" image="common_dislike_ic">
+                                <state key="normal" title="لا يعجبني" image="common_dislike_ic">
                                     <color key="titleColor" red="0.54117647059999996" green="0.63921568630000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="disLikeButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g5G-Hb-OLL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elI-8a-1Wu">
                                 <rect key="frame" x="62" y="153" width="73" height="24"/>
@@ -71,6 +67,9 @@
                                 <state key="normal" title="اعجبني" image="common_like_ic">
                                     <color key="titleColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="likeButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="C6s-kh-Mbh"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-9G-r4F">
                                 <rect key="frame" x="0.0" y="186" width="409" height="1"/>
@@ -79,6 +78,13 @@
                                     <constraint firstAttribute="height" constant="0.90000000000000002" id="ILc-rx-8x6"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-G6-adQ">
+                                <rect key="frame" x="62" y="63.5" width="330" height="81.5"/>
+                                <string key="text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من صورة حقيقية لتصميم الموقع.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -120,6 +126,7 @@
                 <outlet property="commenterNameLabel" destination="0JO-qU-b23" id="qQb-Ry-tS7"/>
                 <outlet property="dislikeButton" destination="8bc-Zt-fem" id="RqX-LO-ySh"/>
                 <outlet property="likeButton" destination="elI-8a-1Wu" id="tf5-CB-GSV"/>
+                <outlet property="ownerCommentImage" destination="QBD-Wv-Vkf" id="UDk-0d-8gG"/>
                 <outlet property="timeLabel" destination="fFz-I1-Wud" id="C5J-nc-C05"/>
             </connections>
             <point key="canvasLocation" x="99.275362318840592" y="123.54910714285714"/>

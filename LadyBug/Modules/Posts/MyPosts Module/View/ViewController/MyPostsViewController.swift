@@ -26,7 +26,7 @@ class MyPostsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presnter.getUserPosts()
+        self.startLoadingIndicator()
         setupUI()
         presnter.attach()
     }
@@ -34,6 +34,7 @@ class MyPostsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        presnter.getUserPosts()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -121,30 +122,33 @@ extension MyPostsViewController: MyPostsCellDelegate {
     
     func openProblemButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            print(index)
+            let postDetails = PostDetailsViewController(post: presnter.myPosts[index.row])
+            navigationController?.pushViewController(postDetails, animated: true)
         }
     }
     
     func likeButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            if presnter.myPosts[index.row].likedByMe == true{
-                cell.likeButton.setImage(UIImage(named: presnter.images.like), for: .normal)
-                cell.likeButton.backgroundColor = .midGreenTwo
-            }else if presnter.myPosts[index.row].likedByMe == false {
-                cell.likeButton.setImage(UIImage(named: presnter.images.likeGrey), for: .normal)
-                cell.likeButton.backgroundColor = .blueyGrey
+            guard let id = presnter.myPosts[index.row].id else {return}
+            presnter.setLike(postId: id){ [weak self]() in
+                guard var model = self?.presnter.myPosts[index.row] else {return}
+                guard let modelReverse = self?.presnter.myPosts[index.row].likedByMe else {return}
+                model.likedByMe = !modelReverse
+                self?.presnter.myPosts[index.row] = model
+                self?.presnter.setupCellUI(cell, index: index.row)
             }
         }
     }
     
     func dislikeButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            if presnter.myPosts[index.row].likedByMe == true{
-                cell.dislikeButton.setImage(UIImage(named: presnter.images.dislikeRed), for: .normal)
-                cell.dislikeButton.backgroundColor = .tomatoRed
-            }else if presnter.myPosts[index.row].likedByMe == false {
-                cell.dislikeButton.setImage(UIImage(named: presnter.images.dislike), for: .normal)
-                cell.dislikeButton.backgroundColor = .blueyGrey
+            guard let id = presnter.myPosts[index.row].id else {return}
+            presnter.setDisLike(postId: id){ [weak self]() in
+                guard var model = self?.presnter.myPosts[index.row] else {return}
+                guard let modelReverse = self?.presnter.myPosts[index.row].dislikedByMe else {return}
+                model.dislikedByMe = !modelReverse
+                self?.presnter.myPosts[index.row] = model
+                self?.presnter.setupCellUI(cell, index: index.row)
             }
         }
     }
@@ -155,6 +159,7 @@ extension MyPostsViewController: MyPostsCellDelegate {
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             self.present(activityVC, animated: true, completion: nil)
+            print(index)
         }
     }
     

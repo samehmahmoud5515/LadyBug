@@ -11,11 +11,13 @@ protocol MyPostsPresenterProtocol {
     var postsDatasource: [String] { get }
     var localizer: MyPostsLocalizer { get }
     var images: MyPostsImages { get }
-    var myPosts: [UserPost] {get}
+    var myPosts: [UserPost] {get set }
     func attach()
     func setupCellUI(_ cell: MyPostsCellProtocol, index: Int)
     func didTappedCell(with index: Int)
     func getUserPosts()
+    func setLike( postId : Int, completion: @escaping () -> () )
+    func setDisLike( postId : Int, completion: @escaping () -> ()  )
 }
 
 protocol MyPostsViewProtocol: class {

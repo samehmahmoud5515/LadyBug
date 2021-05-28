@@ -1216,8 +1216,8 @@
 			children = (
 				2121AC0D26052026001A2EDD /* Resources */,
 				2121AC1326052026001A2EDD /* Presenter */,
-				2121AC1526052026001A2EDD /* View */,
 				2121AC1926052026001A2EDD /* Protocols */,
+				2121AC1526052026001A2EDD /* View */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -1460,8 +1460,8 @@
 			children = (
 				2179A85F2659970500C6C192 /* Models */,
 				2137521425F58DFD00E342EF /* Protocols */,
-				2137520525F58DFC00E342EF /* Resources */,
 				2137520A25F58DFC00E342EF /* Presenter */,
+				2137520525F58DFC00E342EF /* Resources */,
 				2137520C25F58DFC00E342EF /* View */,
 			);
 			path = "MyPosts Module";
@@ -1808,8 +1808,8 @@
 			isa = PBXGroup;
 			children = (
 				217D1EA52608293C0025462F /* Protocols */,
-				217D1E8F2608293C0025462F /* Resources */,
 				217D1E942608293C0025462F /* Presenter */,
+				217D1E8F2608293C0025462F /* Resources */,
 				217D1E962608293C0025462F /* Models */,
 				217D1E992608293C0025462F /* View */,
 			);
