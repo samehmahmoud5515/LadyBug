@@ -171,7 +171,6 @@ extension ProductDetailsViewController {
     
     private func setDate(){
         productDetailsCropsLabel.text  = presnter.product.farmedType
-        //  productDetailsSupplierLabel.text =
         productDetailsCityLabel.text = presnter.product.city
         guard let price = presnter.product.price else {
             return

@@ -8,12 +8,11 @@
 import Moya
 
 class MoreMenuPresenter: MoreMenuPresenterProtocol {
-    
     weak var view: MoreMenuViewProtocol?
     var localizer = MoreMenuLocalizer()
     var images = MoreMenuImages()
     var datasource = [MoreMenuUIModel]()
-    var user = JObsUserInfo()
+    var user = User()
     let logoutProvider = MoyaProvider<LogoutEndpoint>(plugins: [AuthorizableTokenPlugin()])
     let profileProvider = MoyaProvider<GetProfileEndPoint>(plugins: [AuthorizableTokenPlugin()])
     let jobsProvider = MoyaProvider<JobsEndPoint>()
@@ -109,16 +108,18 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
             }
         }
     }
+    
     func getProfile() {
         profileProvider.request(.getProfile) { [weak self] result in
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let getProfileResponed = try? moyaResponse.map(ProfileResponed.self)
-                    guard let getGetProfile = getProfileResponed?.data else { return }
-                    self?.user = getGetProfile
-                    self?.view?.notifiyDataChange()
-                    self?.fetchJobs()
+                    let getProfileResponed = try? moyaResponse.map(ProfileResponse.self)
+                    if getProfileResponed?.success == true {
+                        guard let getGetProfile = getProfileResponed?.data else { return }
+                        self?.user = getGetProfile
+                        self?.view?.notifiyDataChange()
+                    }
                     self?.view?.stopIndicator()
                 } catch {
                     self?.view?.stopIndicator()
@@ -131,6 +132,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
         }
     }
     
+    
     func fetchJobs() {
         jobsProvider.request(.jobs) { [weak self] result in
             switch result {
@@ -138,8 +140,8 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
                 do {
                     let jobsResponse = try? moyaResponse.map(JobsResponse.self)
                     guard let jobs = jobsResponse?.data?.all else { return }
-                    guard let humanJobID = self?.user.humanJobID else { return }
-                    self?.view?.updateJobName(jobName: jobs.first(where: { $0.id == humanJobID })?.name ?? "")
+                    //guard let humanJobID = self?.user.humanJobID else { return }
+                    // self?.view?.updateJobName(jobName: jobs.first(where: { $0.id == humanJobID })?.name ?? "")
                     self?.view?.stopIndicator()
                 } catch {
                     print("Parsing Error")

@@ -17,13 +17,18 @@ class YourProductsCellTableViewCell: UITableViewCell {
     @IBOutlet weak var currencylabel: UILabel!
     
     func setup( products : Product){
-           productTitleLabel.text = products.name
-           productDescriptionLabel.text = products.description
-           cityLabel.text = products.city
-           guard let price = products.price else {return}
-           priceLabel.text = String(price)
-           setupUI()
-       }
+        if let image = products.internalAssets{
+            if let image = image.first {
+                productImageView.sd_setImage(with: URL(string: image ))
+            }
+        }
+        productTitleLabel.text = products.name
+        productDescriptionLabel.text = products.description
+        cityLabel.text = products.city
+        guard let price = products.price else {return}
+        priceLabel.text = String(price)
+        setupUI()
+    }
     
     func setupUI() {
         productTitleLabel.textColor = .purplishBrown

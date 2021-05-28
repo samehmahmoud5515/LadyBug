@@ -27,3 +27,4 @@ struct RegisterResult: Codable {
         case expiresInMinutes = "expires_in_minutes"
     }
 }
+

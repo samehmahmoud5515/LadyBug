@@ -251,7 +251,7 @@ extension RegistrationViewController{
 extension RegistrationViewController  {
     @IBAction func createAccount(_ sender: UIButton) {
         self.startLoadingIndicator()
-        presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: selectedJobId , photo: "")
+        presenter.setNewUser(name: userNameField.inputText, email: emailField.inputText, mobile: mobileField.inputText, password: passwordField.inputText, passwordConfirmation: retypePasswordField.inputText, humanJobId: selectedJobId )
     }
 }
 
@@ -279,13 +279,15 @@ extension RegistrationViewController : UIImagePickerControllerDelegate , UINavig
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-                registrationGalleryImageVew.contentMode = .scaleAspectFill
-                registrationGalleryImageVew.image = editedImage
-            } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-               registrationGalleryImageVew.contentMode = .scaleAspectFill
-                registrationGalleryImageVew.image = originalImage
-            }
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            registrationGalleryImageVew.contentMode = .scaleAspectFill
+            registrationGalleryImageVew.image = editedImage
+            presenter.userImage = MediaUpload(image: editedImage, fileName: UUID().uuidString)
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            registrationGalleryImageVew.contentMode = .scaleAspectFill
+            registrationGalleryImageVew.image = originalImage
+            presenter.userImage = MediaUpload(image: originalImage, fileName: UUID().uuidString)
+        }
         self.stopLoadingIndicator()
         dismiss(animated: true, completion: nil)
     }
@@ -298,8 +300,8 @@ extension RegistrationViewController : UIImagePickerControllerDelegate , UINavig
 
 extension RegistrationViewController{
     
-@IBAction func AddImageActionButton(_ sender: UIButton) {
-    addImageButtonDidTapped()
-}
+    @IBAction func AddImageActionButton(_ sender: UIButton) {
+        addImageButtonDidTapped()
+    }
     
 }
