@@ -114,6 +114,7 @@ extension MyFarmDetailsServiceTableView: UICollectionViewDataSource, UICollectio
 
 extension MyFarmDetailsServiceTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard !datasource.isEmpty else { return 0 }
         return datasource[selectedServiceTableIndex].tasks?.count ?? 0
     }
     

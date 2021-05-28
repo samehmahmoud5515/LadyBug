@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyTasksHeaderView: UIView {
 
@@ -60,5 +61,12 @@ extension MyTasksHeaderView {
         timeLabel.textColor = .purplishBrown
         noteDescriptionLabel.textColor = .purplishBrown
         taskTitleLabel.textColor = .purplishBrown
+    }
+    
+    func updateUI(weatherData: WeatherData) {
+        tempratureLabel.text = weatherData.temp
+        dateLabel.text = weatherData.date
+        noteDescriptionLabel.text = weatherData.weatherDescription
+        sunImageView.sd_setImage(with: URL(string: weatherData.weatherIconURL ?? ""))
     }
 }

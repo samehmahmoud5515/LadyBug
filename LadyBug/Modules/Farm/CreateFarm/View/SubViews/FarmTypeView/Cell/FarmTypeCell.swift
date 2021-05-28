@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CreateFarmTypeCell {
+    func setupUI(isSelected: Bool)
+}
+
 class FarmTypeCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var selectionButton: UIButton!
