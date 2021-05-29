@@ -10,15 +10,14 @@ import Moya
 class ProfilePresenter: ProfilePresenterProtocol {
     
     weak var view: ProfileViewProtocol?
-    
     var localizer = ProfileLocalizer()
-    
     var images = ProfileImages()
-    
     let provider = MoyaProvider<UpdateUserEndPoint>(plugins: [AuthorizableTokenPlugin()])
+    var user: User
     
-    init(view: ProfileViewProtocol) {
+    init(view: ProfileViewProtocol, user: User) {
         self.view = view
+        self.user = user
     }
     
     func attach() {
