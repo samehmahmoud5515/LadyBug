@@ -14,6 +14,8 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
     
     weak var view: PostDetailsViewProtocol?
     
+    var commentImage: MediaUpload?
+    
     let provider = MoyaProvider<PostsEndPoint>(plugins: [AuthorizableTokenPlugin()])
     
     var post : UserPost
@@ -124,5 +126,22 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
                 break
             }
         }
+    }
+
+    func createComment(content: String, postId: Int) {
+      provider.request(.createComment(content: content, postId: postId, photo: commentImage )) { result in
+                 switch result {
+                 case let .success(moyaResponse):
+                     do {
+                         let addcCommentResponse = try? moyaResponse.map(AddComment.self)
+                         print(addcCommentResponse?.message as Any)
+                     } catch {
+                         print("Parsing Error")
+                     }
+                 case let .failure(error):
+                     print(error)
+                     break
+                 }
+             }
     }
 }

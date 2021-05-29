@@ -14,7 +14,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     var datasource = [MoreMenuUIModel]()
     var user = User()
     let logoutProvider = MoyaProvider<LogoutEndpoint>(plugins: [AuthorizableTokenPlugin()])
-    let profileProvider = MoyaProvider<GetProfileEndPoint>(plugins: [AuthorizableTokenPlugin()])
+    let profileProvider = MoyaProvider<ProfileEndPoint>(plugins: [AuthorizableTokenPlugin()])
     let jobsProvider = MoyaProvider<JobsEndPoint>()
     
     init(view: MoreMenuViewProtocol) {

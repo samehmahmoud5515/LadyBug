@@ -28,13 +28,17 @@ class MyPostsCell: UITableViewCell, MyPostsCellProtocol {
     func setupUI(localizer: MyPostsLocalizer , postData: UserPost )
     {
         setupUI()
-        PostOwnerImage.sd_setImage(with: URL(string: postData.author?.photoURL ?? ""))
+        if let imageURL = postData.author?.photoURL {
+        PostOwnerImage.sd_setImage(with: URL(string: imageURL))
+        }
         postOwnerNameLabel.text = postData.author?.name
         postOwnerJobLabel.text = postData.author?.jobName
         timeLabel.text = postData.createdAt
         postDescLabel.text = postData.content
         if let image = postData.imageAssets{
-            postImageView.sd_setImage(with: URL(string: image.first ?? "" ))
+             if let image = image.first{
+            postImageView.sd_setImage(with: URL(string: image ))
+            }
             playButton.setBackgroundImage( nil , for: .normal)
         } else {
             playButton.setBackgroundImage( nil , for: .normal)
