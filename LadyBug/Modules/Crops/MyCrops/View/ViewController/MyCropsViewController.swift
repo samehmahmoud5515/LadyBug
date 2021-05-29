@@ -93,8 +93,8 @@ extension MyCropsViewController {
          }
      }
     private func registerTableViewCell() {
-        let strechedNib = UINib(nibName: "\(MyCropsStretchedParentCell.self)", bundle: nil)
-        tableView.register(strechedNib, forCellReuseIdentifier: "\(MyCropsStretchedParentCell.self)")
+        let strechedNib = UINib(nibName: "\(MyCropsNewsCell.self)", bundle: nil)
+        tableView.register(strechedNib, forCellReuseIdentifier: "\(MyCropsNewsCell.self)")
         
         let normalNib = UINib(nibName: "\(MyCropsParentCell.self)", bundle: nil)
         tableView.register(normalNib, forCellReuseIdentifier: "\(MyCropsParentCell.self)")
@@ -138,7 +138,7 @@ extension MyCropsViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch presnter.cropsDatasource[indexPath.row] {
         case .crops:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyCropsStretchedParentCell.self)", for: indexPath) as? MyCropsStretchedParentCell ?? MyCropsStretchedParentCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyCropsNewsCell.self)", for: indexPath) as? MyCropsNewsCell ?? MyCropsNewsCell()
             return cell
         case .products:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyCropsParentCell.self)", for: indexPath) as? MyCropsParentCell ?? MyCropsParentCell()

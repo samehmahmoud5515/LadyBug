@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCropsStretchedParentCellView: UIView {
+class MyCropsNewsView: UIView {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,7 +23,7 @@ class MyCropsStretchedParentCellView: UIView {
     }
         
     private func nibSetup() {
-        Bundle.main.loadNibNamed("\(MyCropsStretchedParentCellView.self)",
+        Bundle.main.loadNibNamed("\(MyCropsNewsView.self)",
                                  owner: self, options: nil)
         guard let contentView = contentView else { return }
         contentView.frame = self.bounds
@@ -32,15 +32,15 @@ class MyCropsStretchedParentCellView: UIView {
     }
 }
 
-extension MyCropsStretchedParentCellView {
+extension MyCropsNewsView {
     private func setupUI() {
         registerCollectionViewCells()
         setupCollectionViewLayout()
     }
     
     private func registerCollectionViewCells() {
-        let nib = UINib(nibName: "\(MyCropsStretchedCell.self)", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "\(MyCropsStretchedCell.self)")
+        let nib = UINib(nibName: "\(MyCropsNewsViewCell.self)", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "\(MyCropsNewsViewCell.self)")
     }
     
     private func setupCollectionViewLayout() {
@@ -54,13 +54,13 @@ extension MyCropsStretchedParentCellView {
     }
 }
 
-extension MyCropsStretchedParentCellView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MyCropsNewsView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MyCropsStretchedCell.self)", for: indexPath) as? MyCropsStretchedCell ?? MyCropsStretchedCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MyCropsNewsViewCell.self)", for: indexPath) as? MyCropsNewsViewCell ?? MyCropsNewsViewCell()
         cell.setupUI()
         return cell
     }

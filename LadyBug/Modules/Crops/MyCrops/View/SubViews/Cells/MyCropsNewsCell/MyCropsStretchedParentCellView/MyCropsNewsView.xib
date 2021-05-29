@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyCropsStretchedParentCellView" customModule="LadyBug" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyCropsNewsView" customModule="LadyBug" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="aDt-3e-sb8" id="aca-Ir-veE"/>
                 <outlet property="contentView" destination="i5M-Pr-FkT" id="iFM-8w-Oao"/>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCropsStretchedParentCell: UITableViewCell {
+class MyCropsNewsCell: UITableViewCell {
 
     
 }

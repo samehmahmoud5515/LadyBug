@@ -295,12 +295,12 @@
 		506E4D0B25EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D0925EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib */; };
 		506E4D1225EDC3B9003BD749 /* MyCropsTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D1025EDC3B9003BD749 /* MyCropsTableViewHeaderView.swift */; };
 		506E4D1325EDC3B9003BD749 /* MyCropsTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D1125EDC3B9003BD749 /* MyCropsTableViewHeaderView.xib */; };
-		506E4D1925EDC8E2003BD749 /* MyCropsStretchedParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D1725EDC8E2003BD749 /* MyCropsStretchedParentCell.swift */; };
-		506E4D1A25EDC8E2003BD749 /* MyCropsStretchedParentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D1825EDC8E2003BD749 /* MyCropsStretchedParentCell.xib */; };
-		506E4D2025EDC95F003BD749 /* MyCropsStretchedParentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D1E25EDC95F003BD749 /* MyCropsStretchedParentCellView.swift */; };
-		506E4D2125EDC95F003BD749 /* MyCropsStretchedParentCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D1F25EDC95F003BD749 /* MyCropsStretchedParentCellView.xib */; };
-		506E4D2C25EDCC25003BD749 /* MyCropsStretchedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D2A25EDCC25003BD749 /* MyCropsStretchedCell.swift */; };
-		506E4D2D25EDCC25003BD749 /* MyCropsStretchedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D2B25EDCC25003BD749 /* MyCropsStretchedCell.xib */; };
+		506E4D1925EDC8E2003BD749 /* MyCropsNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D1725EDC8E2003BD749 /* MyCropsNewsCell.swift */; };
+		506E4D1A25EDC8E2003BD749 /* MyCropsNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D1825EDC8E2003BD749 /* MyCropsNewsCell.xib */; };
+		506E4D2025EDC95F003BD749 /* MyCropsNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D1E25EDC95F003BD749 /* MyCropsNewsView.swift */; };
+		506E4D2125EDC95F003BD749 /* MyCropsNewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D1F25EDC95F003BD749 /* MyCropsNewsView.xib */; };
+		506E4D2C25EDCC25003BD749 /* MyCropsNewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D2A25EDCC25003BD749 /* MyCropsNewsViewCell.swift */; };
+		506E4D2D25EDCC25003BD749 /* MyCropsNewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D2B25EDCC25003BD749 /* MyCropsNewsViewCell.xib */; };
 		506E4D3325EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E4D3125EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.swift */; };
 		506E4D3425EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506E4D3225EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.xib */; };
 		5072D39925DAD2D8005363CB /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072D39725DAD2D8005363CB /* HomeHeaderView.swift */; };
@@ -733,12 +733,12 @@
 		506E4D0925EDA9FC003BD749 /* MyCropsHeaderViewEditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsHeaderViewEditCell.xib; sourceTree = "<group>"; };
 		506E4D1025EDC3B9003BD749 /* MyCropsTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsTableViewHeaderView.swift; sourceTree = "<group>"; };
 		506E4D1125EDC3B9003BD749 /* MyCropsTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsTableViewHeaderView.xib; sourceTree = "<group>"; };
-		506E4D1725EDC8E2003BD749 /* MyCropsStretchedParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsStretchedParentCell.swift; sourceTree = "<group>"; };
-		506E4D1825EDC8E2003BD749 /* MyCropsStretchedParentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsStretchedParentCell.xib; sourceTree = "<group>"; };
-		506E4D1E25EDC95F003BD749 /* MyCropsStretchedParentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsStretchedParentCellView.swift; sourceTree = "<group>"; };
-		506E4D1F25EDC95F003BD749 /* MyCropsStretchedParentCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsStretchedParentCellView.xib; sourceTree = "<group>"; };
-		506E4D2A25EDCC25003BD749 /* MyCropsStretchedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsStretchedCell.swift; sourceTree = "<group>"; };
-		506E4D2B25EDCC25003BD749 /* MyCropsStretchedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsStretchedCell.xib; sourceTree = "<group>"; };
+		506E4D1725EDC8E2003BD749 /* MyCropsNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsNewsCell.swift; sourceTree = "<group>"; };
+		506E4D1825EDC8E2003BD749 /* MyCropsNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsNewsCell.xib; sourceTree = "<group>"; };
+		506E4D1E25EDC95F003BD749 /* MyCropsNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsNewsView.swift; sourceTree = "<group>"; };
+		506E4D1F25EDC95F003BD749 /* MyCropsNewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsNewsView.xib; sourceTree = "<group>"; };
+		506E4D2A25EDCC25003BD749 /* MyCropsNewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsNewsViewCell.swift; sourceTree = "<group>"; };
+		506E4D2B25EDCC25003BD749 /* MyCropsNewsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsNewsViewCell.xib; sourceTree = "<group>"; };
 		506E4D3125EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCropsTableViewSectionHeaderView.swift; sourceTree = "<group>"; };
 		506E4D3225EDCF57003BD749 /* MyCropsTableViewSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCropsTableViewSectionHeaderView.xib; sourceTree = "<group>"; };
 		5072D39725DAD2D8005363CB /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
@@ -3403,27 +3403,27 @@
 			isa = PBXGroup;
 			children = (
 				508FDACF25F046F600686ECE /* MyCropsParentCell */,
-				506E4D1625EDC840003BD749 /* MyCropsStretchedParentCell */,
+				506E4D1625EDC840003BD749 /* MyCropsNewsCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		506E4D1625EDC840003BD749 /* MyCropsStretchedParentCell */ = {
+		506E4D1625EDC840003BD749 /* MyCropsNewsCell */ = {
 			isa = PBXGroup;
 			children = (
 				506E4D1D25EDC937003BD749 /* MyCropsStretchedParentCellView */,
-				506E4D1725EDC8E2003BD749 /* MyCropsStretchedParentCell.swift */,
-				506E4D1825EDC8E2003BD749 /* MyCropsStretchedParentCell.xib */,
+				506E4D1725EDC8E2003BD749 /* MyCropsNewsCell.swift */,
+				506E4D1825EDC8E2003BD749 /* MyCropsNewsCell.xib */,
 			);
-			path = MyCropsStretchedParentCell;
+			path = MyCropsNewsCell;
 			sourceTree = "<group>";
 		};
 		506E4D1D25EDC937003BD749 /* MyCropsStretchedParentCellView */ = {
 			isa = PBXGroup;
 			children = (
 				506E4D2925EDCBE1003BD749 /* Cell */,
-				506E4D1E25EDC95F003BD749 /* MyCropsStretchedParentCellView.swift */,
-				506E4D1F25EDC95F003BD749 /* MyCropsStretchedParentCellView.xib */,
+				506E4D1E25EDC95F003BD749 /* MyCropsNewsView.swift */,
+				506E4D1F25EDC95F003BD749 /* MyCropsNewsView.xib */,
 			);
 			path = MyCropsStretchedParentCellView;
 			sourceTree = "<group>";
@@ -3431,8 +3431,8 @@
 		506E4D2925EDCBE1003BD749 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				506E4D2A25EDCC25003BD749 /* MyCropsStretchedCell.swift */,
-				506E4D2B25EDCC25003BD749 /* MyCropsStretchedCell.xib */,
+				506E4D2A25EDCC25003BD749 /* MyCropsNewsViewCell.swift */,
+				506E4D2B25EDCC25003BD749 /* MyCropsNewsViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -4791,14 +4791,14 @@
 				506E4D0525EDA9CF003BD749 /* MyCropsHeaderViewCropCell.xib in Resources */,
 				50068C7425E48A650097A870 /* MoreMenuViewController.xib in Resources */,
 				50A77D3925D9EEE10054E80D /* TSRotger-Light.ttf in Resources */,
-				506E4D1A25EDC8E2003BD749 /* MyCropsStretchedParentCell.xib in Resources */,
+				506E4D1A25EDC8E2003BD749 /* MyCropsNewsCell.xib in Resources */,
 				503F7A1925DAA69F00EBD730 /* HomeViewController.xib in Resources */,
 				504969D425F81E37002C3E40 /* AddPeopleToYourFarmViewController.xib in Resources */,
 				50E3014925D8A031008271B6 /* Localizable.strings in Resources */,
 				504969DA25F81E52002C3E40 /* StandardSelectionView.xib in Resources */,
 				504969E025F81F4B002C3E40 /* StandardTextFieldView.xib in Resources */,
 				2137520325F436CD00E342EF /* FollowersViewController.xib in Resources */,
-				506E4D2125EDC95F003BD749 /* MyCropsStretchedParentCellView.xib in Resources */,
+				506E4D2125EDC95F003BD749 /* MyCropsNewsView.xib in Resources */,
 				21767A3725F592810039E2B8 /* MyPostsCell.xib in Resources */,
 				50A54C1425E3FF5C0052F701 /* InterestedSelectionCell.xib in Resources */,
 				506A5A2D25E5671A0014D59A /* MoreMenuLanguageCell.xib in Resources */,
@@ -4813,7 +4813,7 @@
 				50212E17260BF97B00589DAE /* ChemicalSourceView.xib in Resources */,
 				50AF3EAD260AC64C00CBCD0C /* PostDetailsCell.xib in Resources */,
 				50D6137625DC1CEC00228385 /* MyFarmViewController.xib in Resources */,
-				506E4D2D25EDCC25003BD749 /* MyCropsStretchedCell.xib in Resources */,
+				506E4D2D25EDCC25003BD749 /* MyCropsNewsViewCell.xib in Resources */,
 				218C785A2629E72C00DA440A /* AddProductPriceTableViewCell.xib in Resources */,
 				5097F4FE25FBAC49000E14C4 /* CropsInfoHeaderView.xib in Resources */,
 				2101D8FE25F2E46D00FB0DB9 /* NotificationsCellTableViewCell.xib in Resources */,
@@ -4962,7 +4962,7 @@
 				504969C925F81E23002C3E40 /* MyFarmDetailsViewController.swift in Sources */,
 				506A5A2E25E5671A0014D59A /* MoreMenuLanguageCell.swift in Sources */,
 				501F740B25DAB59200333F16 /* UIViewController+Present.swift in Sources */,
-				506E4D2025EDC95F003BD749 /* MyCropsStretchedParentCellView.swift in Sources */,
+				506E4D2025EDC95F003BD749 /* MyCropsNewsView.swift in Sources */,
 				503CB5B325E07BE100B7A393 /* ProductsProtocols.swift in Sources */,
 				50D07A802650B1F50032D6F8 /* DateLocalizer.swift in Sources */,
 				5001432F25F99B0700D1630E /* MyTasksProtocol.swift in Sources */,
@@ -5014,9 +5014,9 @@
 				218C78562629E72C00DA440A /* AddProductLocalizer.swift in Sources */,
 				50A54C1925E400950052F701 /* InterestedSelectionHeaderView.swift in Sources */,
 				50BC0A7B25E5C0D2006653FD /* MyCropsImages.swift in Sources */,
-				506E4D1925EDC8E2003BD749 /* MyCropsStretchedParentCell.swift in Sources */,
+				506E4D1925EDC8E2003BD749 /* MyCropsNewsCell.swift in Sources */,
 				2121AC1E26052027001A2EDD /* HelpPresenter.swift in Sources */,
-				506E4D2C25EDCC25003BD749 /* MyCropsStretchedCell.swift in Sources */,
+				506E4D2C25EDCC25003BD749 /* MyCropsNewsViewCell.swift in Sources */,
 				50AF3ED5260AD2E400CBCD0C /* CreateFramImages.swift in Sources */,
 				50068C7125E48A650097A870 /* MoreMenuUIModel.swift in Sources */,
 				50BC0A7F25E5C0FB006653FD /* MyCropsPresenter.swift in Sources */,

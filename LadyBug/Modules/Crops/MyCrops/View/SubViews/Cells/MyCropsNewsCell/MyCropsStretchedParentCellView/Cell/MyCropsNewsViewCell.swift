@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCropsStretchedCell: UICollectionViewCell {
+class MyCropsNewsViewCell: UICollectionViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
