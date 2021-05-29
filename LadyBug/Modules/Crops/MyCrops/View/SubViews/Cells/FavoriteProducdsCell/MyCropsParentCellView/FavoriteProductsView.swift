@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCropsParentCellView: UIView {
+class FavoriteProductsView: UIView {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,7 +23,7 @@ class MyCropsParentCellView: UIView {
     }
         
     private func nibSetup() {
-        Bundle.main.loadNibNamed("\(MyCropsParentCellView.self)",
+        Bundle.main.loadNibNamed("\(FavoriteProductsView.self)",
                                  owner: self, options: nil)
         guard let contentView = contentView else { return }
         contentView.frame = self.bounds
@@ -32,15 +32,15 @@ class MyCropsParentCellView: UIView {
     }
 }
 
-extension MyCropsParentCellView {
+extension FavoriteProductsView {
     private func setupUI() {
         registerCollectionViewCells()
         setupCollectionViewLayout()
     }
     
     private func registerCollectionViewCells() {
-        let nib = UINib(nibName: "\(MyCropsCell.self)", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "\(MyCropsCell.self)")
+        let nib = UINib(nibName: "\(FavoriteProductViewCell.self)", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "\(FavoriteProductViewCell.self)")
     }
     
     private func setupCollectionViewLayout() {
@@ -54,13 +54,13 @@ extension MyCropsParentCellView {
     }
 }
 
-extension MyCropsParentCellView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension FavoriteProductsView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MyCropsCell.self)", for: indexPath) as? MyCropsCell ?? MyCropsCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(FavoriteProductViewCell.self)", for: indexPath) as? FavoriteProductViewCell ?? FavoriteProductViewCell()
         cell.setupUI()
         return cell
     }

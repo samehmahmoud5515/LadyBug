@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCropsCell: UICollectionViewCell {
+class FavoriteProductViewCell: UICollectionViewCell {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

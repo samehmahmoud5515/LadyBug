@@ -96,8 +96,8 @@ extension MyCropsViewController {
         let strechedNib = UINib(nibName: "\(MyCropsNewsCell.self)", bundle: nil)
         tableView.register(strechedNib, forCellReuseIdentifier: "\(MyCropsNewsCell.self)")
         
-        let normalNib = UINib(nibName: "\(MyCropsParentCell.self)", bundle: nil)
-        tableView.register(normalNib, forCellReuseIdentifier: "\(MyCropsParentCell.self)")
+        let normalNib = UINib(nibName: "\(FavoriteProductsCell.self)", bundle: nil)
+        tableView.register(normalNib, forCellReuseIdentifier: "\(FavoriteProductsCell.self)")
     }
     
     private func setupTableViewRowHeight() {
@@ -141,7 +141,7 @@ extension MyCropsViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyCropsNewsCell.self)", for: indexPath) as? MyCropsNewsCell ?? MyCropsNewsCell()
             return cell
         case .products:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(MyCropsParentCell.self)", for: indexPath) as? MyCropsParentCell ?? MyCropsParentCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(FavoriteProductsCell.self)", for: indexPath) as? FavoriteProductsCell ?? FavoriteProductsCell()
             return cell
         }
     }

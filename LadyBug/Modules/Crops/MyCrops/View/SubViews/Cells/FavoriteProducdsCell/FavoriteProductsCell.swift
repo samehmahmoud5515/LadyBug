@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCropsParentCell: UITableViewCell {
+class FavoriteProductsCell: UITableViewCell {
 
     
 }
