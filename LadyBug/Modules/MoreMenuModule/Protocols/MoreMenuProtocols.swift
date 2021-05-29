@@ -11,7 +11,7 @@ protocol MoreMenuPresenterProtocol {
     var localizer: MoreMenuLocalizer { get }
     var images: MoreMenuImages { get }
     var datasource: [MoreMenuUIModel] { get }
-    var user : User { get }
+    var user: User? { get }
     func handleCellDidTapped(index: Int)
     func attach()
     func logout()
@@ -20,7 +20,7 @@ protocol MoreMenuPresenterProtocol {
 
 protocol MoreMenuViewProtocol: class {
     func notifiyDataChange()
-    func naviageteTo(model: MoreMenuUIModel)
+    func navigateTo(model: MoreMenuUIModel)
     func stopIndicator()
     func navigateToLogin()
 }

@@ -101,6 +101,7 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
         presnter.datasource.count
     }
     
+    // TODO:- group the same case
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch presnter.datasource[indexPath.row] {
         case let .profile(MoreMenuProfileModel):
@@ -162,13 +163,15 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
     func stopIndicator() {
         self.stopLoadingIndicator()
     }
-    func naviageteTo(model: MoreMenuUIModel) {
+    
+    func navigateTo(model: MoreMenuUIModel) {
         switch model {
         case .interests:
             let interestedSelectionViewController = MyCropsViewController()
             navigationController?.navigationController?.pushViewController(interestedSelectionViewController, animated: true)
         case .profile:
-            let profileVc = ProfileViewController()
+            guard let user = presnter.user else { return }
+            let profileVc = ProfileViewController(user: user)
             navigationController?.navigationController?.pushViewController(profileVc, animated: true)
         case .notification:
             let notificationViewController = NotificationViewController()

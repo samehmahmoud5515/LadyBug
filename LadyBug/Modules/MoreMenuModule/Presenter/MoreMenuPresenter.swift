@@ -12,7 +12,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
     var localizer = MoreMenuLocalizer()
     var images = MoreMenuImages()
     var datasource = [MoreMenuUIModel]()
-    var user = User()
+    var user: User?
     let logoutProvider = MoyaProvider<LogoutEndpoint>(plugins: [AuthorizableTokenPlugin()])
     let profileProvider = MoyaProvider<ProfileEndPoint>(plugins: [AuthorizableTokenPlugin()])
     let jobsProvider = MoyaProvider<JobsEndPoint>()
@@ -89,7 +89,7 @@ class MoreMenuPresenter: MoreMenuPresenterProtocol {
         case .logOut:
             logout()
         default:
-            view?.naviageteTo(model: model)
+            view?.navigateTo(model: model)
         }
     }
     

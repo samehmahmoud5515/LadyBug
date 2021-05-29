@@ -1936,7 +1936,8 @@
 			children = (
 				21842382264C1DD700FFF5BF /* ProfileEndPoint.swift */,
 			);
-			path = ProfileEndpoint;
+			name = ProfileEndpoint;
+			path = ../../Modules/MoreMenuModule/ProfileEndpoint;
 			sourceTree = "<group>";
 		};
 		218C78322629E72B00DA440A /* AddProduct Module */ = {
@@ -2348,7 +2349,6 @@
 		50068C5725E48A650097A870 /* MoreMenuModule */ = {
 			isa = PBXGroup;
 			children = (
-				21842381264C1D9600FFF5BF /* ProfileEndpoint */,
 				213FB5EA262F367F006DAF1C /* LogoutEndpoint */,
 				50068C6B25E48A650097A870 /* Protocols */,
 				50068C5825E48A650097A870 /* Resources */,
@@ -2616,6 +2616,7 @@
 		5028D08226333AF300C7EAA9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				21842381264C1D9600FFF5BF /* ProfileEndpoint */,
 				5028D08326333C4D00C7EAA9 /* AuthorizableTokenPlugin.swift */,
 				5031C2E8263348E10027CFB4 /* CommonHeaderProtocol.swift */,
 				2184237F26488ED300FFF5BF /* PasswordEndPoint.swift */,
@@ -4446,23 +4447,23 @@
 		50E3011F25D89950008271B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5034803D2661238300881ABB /* Tasks */,
-				508D16EC26291548004ED2D4 /* Auth */,
-				217BAEBD264DB68C00EE10AF /* User */,
-				21A64D2F2651313900CC48AC /* product */,
-				50068C5725E48A650097A870 /* MoreMenuModule */,
-				50BBB66F264DC75F005E709E /* Posts */,
-				503F7A1325DAA63100EBD730 /* Home Module */,
-				50BC86FC260543520065D8FE /* Profile Module */,
-				50206EC8260E9C900095E995 /* Archive */,
-				21A706ED260DECD50094EC56 /* Suggestions Module */,
 				50E3012025D89956008271B6 /* AppDelegate */,
+				50206EC8260E9C900095E995 /* Archive */,
+				508D16EC26291548004ED2D4 /* Auth */,
 				50BBB670264DC854005E709E /* Crops */,
+				50BBB66E264DC713005E709E /* Farm */,
 				2121AC0C26052026001A2EDD /* Help */,
+				503F7A1325DAA63100EBD730 /* Home Module */,
 				50A54C0725E3FF180052F701 /* InterestedSelection Module */,
 				50D4ACB425FBF8C900880E55 /* Map Module */,
-				50BBB66E264DC713005E709E /* Farm */,
+				50068C5725E48A650097A870 /* MoreMenuModule */,
+				50BBB66F264DC75F005E709E /* Posts */,
+				21A64D2F2651313900CC48AC /* product */,
+				50BC86FC260543520065D8FE /* Profile Module */,
+				21A706ED260DECD50094EC56 /* Suggestions Module */,
 				50A77D2D25D9E9100054E80D /* TabBar Module */,
+				5034803D2661238300881ABB /* Tasks */,
+				217BAEBD264DB68C00EE10AF /* User */,
 				503CB5BF25E0A11200B7A393 /* Videos Module */,
 			);
 			path = Modules;

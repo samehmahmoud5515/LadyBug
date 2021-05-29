@@ -7,22 +7,28 @@
 
 import Moya
 
-enum GetProfileEndPoint {
+enum ProfileEndPoint {
     case getProfile
 }
 
-extension GetProfileEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
+extension ProfileEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
     
     var baseURL: URL {
         Environment.baseUrl
     }
 
     var path: String {
-        "/api/v1/auth/me"
+        switch self {
+        case .getProfile:
+            return "/api/v1/auth/me"
+        }
     }
 
     var method: Method {
-        .get
+        switch self {
+        case .getProfile:
+            return .get
+        }
     }
 
     var sampleData: Data {

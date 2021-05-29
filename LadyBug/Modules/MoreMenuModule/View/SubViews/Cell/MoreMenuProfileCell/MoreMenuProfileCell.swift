@@ -20,27 +20,27 @@ class MoreMenuProfileCell: UITableViewCell {
     @IBOutlet weak var profilePointlabel: UILabel!
     
     
-    func setupUI(model: MoreMenuProfileModel, data : User ) {
-        guard let photo = data.photoURL else{return}
-        profileImageView.sd_setImage(with: URL(string: photo))
-
+    func setupUI(model: MoreMenuProfileModel, data : User?) {
+        setupFonts()
+        profileImageView.sd_setImage(with: URL(string: data?.photoURL ?? ""))
+        
         profileImageView.image = UIImage(named: model.profileImage)
         
-        pofileOccupationLabel.text = data.jobName
-
-        profileUserNameLabel.text = data.name
+        pofileOccupationLabel.text = data?.jobName
         
-        profileNumberLabel.text = data.mobile
-                
+        profileUserNameLabel.text = data?.name
+        
+        profileNumberLabel.text = data?.mobile
+        
         profilePointsImageView.image = UIImage(named: model.numberOfPointsImage)
         
         profilePointsLabel.text = model.numberOfPointsTitle
         
         profileEditeLabel.text = model.editTitle
-        guard let activityPoints =  data.activityPoints  else{return}
+        guard let activityPoints = data?.activityPoints  else { return }
         profilePointNumberLabel.text = String(activityPoints)
-        setupFonts()
-     }
+    }
+    
     private func setupFonts(){
         profileUserNameLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))
         profileNumberLabel.font = UIFont.get(enFont: .regular(14), arFont: .regular(14))

@@ -20,9 +20,9 @@ class ProfileViewController: UIViewController {
     
     var presenter: ProfilePresenterProtocol!
     
-    init() {
+    init(user: User) {
         super.init(nibName: "\(ProfileViewController.self)", bundle: nil)
-        presenter = ProfilePresenter(view: self)
+        presenter = ProfilePresenter(view: self, user: user)
     }
     
     required init?(coder: NSCoder) {
@@ -35,14 +35,7 @@ class ProfileViewController: UIViewController {
         presenter.attach()
         observeOnKeyboard()
         hideKeyboardWhenTappedAround()
-        
-        userNameField.delegate = self
-        userNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.username, nextButton: true)
-        
-        emailNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.email, nextButton: true)
-        emailNameField.delegate = self
-        
-        jobSelection.setupUI(selectionTitle: "اختر مهنتك")
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +89,10 @@ extension ProfileViewController {
         setupNaviagtionBarUI()
         addBarButtonsToNavigationBar()
         setupButtonsFonts()
+        setupUserNameField()
+        setupEmailNameFieldUI()
+        setupJobSelectionUI()
+        updateUIWithUser()
     }
     
     private func setupNaviagtionBarUI() {
@@ -134,6 +131,24 @@ extension ProfileViewController {
         updateButton.titleLabel?.font = UIFont.get(enFont: .bold(16), arFont: .bold(16))
         createNewPasswordButton.titleLabel?.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
         addPictureButton.titleLabel?.font = UIFont.get(enFont: .regular(12), arFont: .regular(12))
+    }
+    
+    private func setupUserNameField() {
+        userNameField.delegate = self
+        userNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.username, nextButton: true)
+    }
+    
+    private func setupEmailNameFieldUI() {
+        emailNameField.setupUI(isPasswordField: false, placeholder: presenter.localizer.email, nextButton: true)
+        emailNameField.delegate = self
+    }
+    
+    private func setupJobSelectionUI() {
+        jobSelection.setupUI(selectionTitle: "اختر مهنتك")
+    }
+    
+    private func updateUIWithUser() {
+        
     }
     
 }
