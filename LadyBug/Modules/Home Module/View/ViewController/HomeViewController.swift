@@ -105,8 +105,8 @@ extension HomeViewController {
 
 extension HomeViewController: HomeViewProtocol {
     func navigateToPostDetails() {
-        let vc = PostDetailsViewController()
-        navigationController?.navigationController?.pushViewController(vc, animated: true)
+        //let vc = PostDetailsViewController(post: nil!)
+        //navigationController?.navigationController?.pushViewController(vc, animated: true)
     }
     
     func notifyHeaderViewDatasourceChanged() {

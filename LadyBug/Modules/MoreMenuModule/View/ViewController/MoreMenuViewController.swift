@@ -211,11 +211,6 @@ extension MoreMenuViewController: MoreMenuViewProtocol {
         }
     }
     
-    func updateJobName(jobName : String ){
-        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? MoreMenuProfileCell{
-            cell.updateJobName(jobName: jobName)
-        }
-    }
 }
 
 extension MoreMenuViewController {

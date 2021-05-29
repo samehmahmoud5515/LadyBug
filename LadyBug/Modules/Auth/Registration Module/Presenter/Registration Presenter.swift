@@ -13,28 +13,32 @@ class RegistrationPresenter: RegistrationPresenterProtocol{
     var images = ImageLocalizer()
     var localizer = RegistrationLocalizer()
     var jobs = [JobsInfo]()
+    var userImage: MediaUpload?
     let provider = MoyaProvider<RegistrationEndpoint>()
     let jobsProvider = MoyaProvider<JobsEndPoint>()
     init(view: RegistrationViewProtocol) {
         self.view = view
     }
     
-    func setNewUser(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String, photo: String) {
-        provider.request(.setNewUser(name: name, email: email, mobile: mobile, password: password, passwordConfirmation: passwordConfirmation, humanJobId: humanJobId, photo: photo)) { result in
+    func setNewUser(name: String, email: String, mobile: String, password: String, passwordConfirmation: String, humanJobId: String) {
+        provider.request(.setNewUser(name: name, email: email, mobile: mobile, password: password, passwordConfirmation: passwordConfirmation, humanJobId: humanJobId, photo: userImage)) { result in
             switch result {
             case let .success(moyaResponse):
                 do {
                     let registrationResponse = try? moyaResponse.map(RegisterResponse.self)
+                    print(registrationResponse?.message as Any)
+                    if registrationResponse?.success == true {
                     guard let accessToken = registrationResponse?.data?.accessToken else { return }
                     AccessTokenManager.saveAccessToken(token: accessToken)
                     self.view?.navigateToTabBarController()
+                    }
                     self.view?.stopIndicator()
-                    print(accessToken)
                 } catch {
                     self.view?.stopIndicator()
                     print("Parsing Error")
                 }
             case let .failure(error):
+                print(error)
                 self.view?.stopIndicator()
                 break
             }
@@ -47,11 +51,9 @@ class RegistrationPresenter: RegistrationPresenterProtocol{
                 case let .success(moyaResponse):
                     do {
                         let jobsResponse = try? moyaResponse.map(JobsResponse.self)
-                        print(jobsResponse)
                         guard let jobs = jobsResponse?.data?.all else { return }
                         self.jobs = jobs
                         self.view?.setselectProfessionSelectionView()
-                        print(jobs)
                     } catch {
                         print("Parsing Error")
                     }

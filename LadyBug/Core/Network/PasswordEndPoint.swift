@@ -24,9 +24,9 @@ extension PasswordEndpoint: TargetType, AccessTokenAuthorizable, CommonHeaderPro
         switch self {
             
         case .createNewPassword:
-            return  "/public/api/v1/users/12"
+            return  ""
         case .forgetPassword:
-            return  "/api/v1/auth/me"
+            return  ""
             
         }
     }

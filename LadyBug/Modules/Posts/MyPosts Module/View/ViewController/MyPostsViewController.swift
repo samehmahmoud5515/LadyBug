@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MyPostsViewController: UIViewController, MyPostsViewProtocol {
-
+class MyPostsViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     //Attribuites
     private var presnter: MyPostsPresenterProtocol!
     
@@ -23,10 +23,10 @@ class MyPostsViewController: UIViewController, MyPostsViewProtocol {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.startLoadingIndicator()
         setupUI()
         presnter.attach()
     }
@@ -34,13 +34,14 @@ class MyPostsViewController: UIViewController, MyPostsViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        presnter.getUserPosts()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
+    
 }
 
 // MARK:- UI Setup
@@ -59,8 +60,8 @@ extension MyPostsViewController {
         navigationItem.largeTitleDisplayMode = .never
     }
     private func addBarButtonsToNavigationBar() {
-           navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
-       }
+        navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
+    }
     private func getLeftButton() -> UIBarButtonItem {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
         button.setImage(UIImage(named: presnter.images.back), for: .normal)
@@ -80,8 +81,8 @@ extension MyPostsViewController {
         
         return UIBarButtonItem(customView: titleLabel)
     }
- 
-   
+    
+    
     
     private func registerTableViewCell() {
         let nib = UINib(nibName: "\(MyPostsCell.self)", bundle: nil)
@@ -102,7 +103,7 @@ extension MyPostsViewController {
 
 extension MyPostsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presnter.postsDatasource.count
+        presnter.myPosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -121,24 +122,43 @@ extension MyPostsViewController: MyPostsCellDelegate {
     
     func openProblemButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            print(index)
+            let postDetails = PostDetailsViewController(post: presnter.myPosts[index.row])
+            navigationController?.pushViewController(postDetails, animated: true)
         }
     }
     
     func likeButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            print(index)
+            guard let id = presnter.myPosts[index.row].id else {return}
+            presnter.setLike(postId: id){ [weak self]() in
+                guard var model = self?.presnter.myPosts[index.row] else {return}
+                guard let modelReverse = self?.presnter.myPosts[index.row].likedByMe else {return}
+                model.likedByMe = !modelReverse
+                self?.presnter.myPosts[index.row] = model
+                self?.presnter.setupCellUI(cell, index: index.row)
+            }
         }
     }
     
     func dislikeButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
-            print(index)
+            guard let id = presnter.myPosts[index.row].id else {return}
+            presnter.setDisLike(postId: id){ [weak self]() in
+                guard var model = self?.presnter.myPosts[index.row] else {return}
+                guard let modelReverse = self?.presnter.myPosts[index.row].dislikedByMe else {return}
+                model.dislikedByMe = !modelReverse
+                self?.presnter.myPosts[index.row] = model
+                self?.presnter.setupCellUI(cell, index: index.row)
+            }
         }
     }
     
     func shareButtonDidTapped(_ cell: MyPostsCell) {
         if let index = tableView.indexPath(for: cell) {
+            let objectsToShare = [ presnter.myPosts[index.row].content, presnter.myPosts[index.row].author?.name] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC, animated: true, completion: nil)
             print(index)
         }
     }
@@ -147,5 +167,15 @@ extension MyPostsViewController: MyPostsCellDelegate {
         if let index = tableView.indexPath(for: cell) {
             print(index)
         }
+    }
+}
+
+extension MyPostsViewController : MyPostsViewProtocol{
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
+    func stopIndicator() {
+        self.stopLoadingIndicator()
     }
 }

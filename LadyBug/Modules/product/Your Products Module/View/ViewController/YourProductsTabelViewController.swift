@@ -45,13 +45,13 @@ class YourProductsTabelViewController: UIViewController{
     }
 }
 extension YourProductsTabelViewController: YourProductsViewProtocol {
-func reloadData() {
-    tableView.reloadData()
-}
-
-func stopIndicator() {
-    self.stopLoadingIndicator()
-}
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
+    func stopIndicator() {
+        self.stopLoadingIndicator()
+    }
     
 }
 extension YourProductsTabelViewController{
@@ -63,36 +63,36 @@ extension YourProductsTabelViewController{
         setupTableViewRowHeight()
     }
     
-   private func setupNaviagtionBarUI() {
-             navigationController?.setNavigationBarHidden(false, animated: false)
-             navigationController?.navigationBar.barTintColor = .white
-             navigationController?.navigationBar.prefersLargeTitles = false
-             navigationItem.largeTitleDisplayMode = .never
-         }
-       
+    private func setupNaviagtionBarUI() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
     private func addBarButtonsToNavigationBar() {
-         navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
-     }
-     
-     private func getLeftButton() -> UIBarButtonItem {
-         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        navigationItem.leftBarButtonItems = [getLeftButton(), getTitleBarButton()]
+    }
+    
+    private func getLeftButton() -> UIBarButtonItem {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
         button.setImage(UIImage(named: presnter.images.back), for: .normal)
-         button.backgroundColor = .paleGreyThree
-         button.layer.masksToBounds = true
-         button.layer.cornerRadius = 17
+        button.backgroundColor = .paleGreyThree
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 17
         button.addTarget(self, action: #selector(didTappedBackButton), for: .touchUpInside)
-         return UIBarButtonItem(customView: button)
-     }
-     
-     private func getTitleBarButton() -> UIBarButtonItem {
-         let titleLabel = UILabel()
+        return UIBarButtonItem(customView: button)
+    }
+    
+    private func getTitleBarButton() -> UIBarButtonItem {
+        let titleLabel = UILabel()
         titleLabel.text = presnter.localizer.navigationitle
         titleLabel.textColor = .purplishBrown
-         titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
-         titleLabel.sizeToFit()
-         
-         return UIBarButtonItem(customView: titleLabel)
-     }
+        titleLabel.font = UIFont.get(enFont: .regular(16), arFont: .regular(16))
+        titleLabel.sizeToFit()
+        
+        return UIBarButtonItem(customView: titleLabel)
+    }
     private func registerTableViewCell() {
         let nib = UINib(nibName: "\(YourProductsCellTableViewCell.self)", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "\(YourProductsCellTableViewCell.self)")
@@ -100,13 +100,13 @@ extension YourProductsTabelViewController{
     
     private func setupTableViewRowHeight() {
         tableView.rowHeight = 106
-
+        
     }
 }
 extension YourProductsTabelViewController{
-
-@objc func didTappedBackButton() {
-    navigationController?.popViewController(animated: true)
+    
+    @objc func didTappedBackButton() {
+        navigationController?.popViewController(animated: true)
     }
     
 }
@@ -120,5 +120,9 @@ extension YourProductsTabelViewController :UITableViewDataSource,UITableViewDele
         cell.setup(products: presnter.userProducts[indexPath.row])
         return cell
         
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let subView = ProductDetailsViewController(product:presnter.userProducts[indexPath.row])
+           self.navigationController?.pushViewController(subView, animated: true)
     }
 }
