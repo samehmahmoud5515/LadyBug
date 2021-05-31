@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - LoginResponse
 struct LoginResponse: Codable {
-    var success: Bool?
+    var success: Bool
     var data: LoginResult?
     var message: String?
     var code: Int?

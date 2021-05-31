@@ -24,12 +24,14 @@ class LoginPresenter: LoginPresenterProtocol {
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let loginResponse = try? moyaResponse.map(LoginResponse.self)
-                    print(loginResponse?.message)
-                    if loginResponse?.success == true {
-                    guard let accessToken = loginResponse?.data?.accessToken else { return }
-                    AccessTokenManager.saveAccessToken(token: accessToken)
-                    self.view?.navigateToTabBarController()
+                    let response = try moyaResponse.map(LoginResponse.self)
+                    if response.success {
+                        if let accessToken = response.data?.accessToken,
+                           let userId = response.data?.user?.id {
+                            AccessTokenManager.saveAccessToken(token: accessToken)
+                            Defaults[.userId] = "\(userId)"
+                        }
+                        self.view?.navigateToTabBarController()
                     }
                     self.view?.stopIndicator()
                 } catch {
@@ -37,7 +39,6 @@ class LoginPresenter: LoginPresenterProtocol {
                 }
             case let .failure(error):
                 self.view?.stopIndicator()
-                break
             }
         }
     }

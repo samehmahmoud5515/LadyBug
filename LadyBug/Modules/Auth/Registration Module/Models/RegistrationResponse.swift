@@ -8,7 +8,7 @@
 import Foundation
 
 struct RegisterResponse : Codable {
-    let success: Bool?
+    let success: Bool
     let data: RegisterResult?
     let message: String?
     let code: Int?

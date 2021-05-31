@@ -9,6 +9,7 @@ import Moya
 
 enum ProfileEndPoint {
     case getProfile
+    case updateUser(userId: String)
 }
 
 extension ProfileEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
@@ -21,6 +22,8 @@ extension ProfileEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProt
         switch self {
         case .getProfile:
             return "/api/v1/auth/me"
+        case .updateUser(let userId):
+            return "/api/v1/users" + userId
         }
     }
 
@@ -28,6 +31,8 @@ extension ProfileEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProt
         switch self {
         case .getProfile:
             return .get
+        case .updateUser:
+            return .post
         }
     }
 
@@ -37,8 +42,10 @@ extension ProfileEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProt
 
     var task: Task {
         switch self {
-        case .getProfile :
+        case .getProfile:
              return .requestPlain
+        case .updateUser:
+            return .requestPlain
         }
     }
 

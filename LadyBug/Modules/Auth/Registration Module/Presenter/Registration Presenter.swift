@@ -25,17 +25,18 @@ class RegistrationPresenter: RegistrationPresenterProtocol{
             switch result {
             case let .success(moyaResponse):
                 do {
-                    let registrationResponse = try? moyaResponse.map(RegisterResponse.self)
-                    print(registrationResponse?.message as Any)
-                    if registrationResponse?.success == true {
-                    guard let accessToken = registrationResponse?.data?.accessToken else { return }
-                    AccessTokenManager.saveAccessToken(token: accessToken)
-                    self.view?.navigateToTabBarController()
+                    let response = try moyaResponse.map(RegisterResponse.self)
+                    if response.success {
+                        if let token = response.data?.accessToken,
+                           let id = response.data?.user?.id {
+                            AccessTokenManager.saveAccessToken(token: token)
+                            Defaults[.userId] = "\(id)"
+                        }
+                        self.view?.navigateToTabBarController()
                     }
                     self.view?.stopIndicator()
                 } catch {
                     self.view?.stopIndicator()
-                    print("Parsing Error")
                 }
             case let .failure(error):
                 print(error)
