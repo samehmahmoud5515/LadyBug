@@ -86,3 +86,9 @@ struct PostComment: Codable {
 }
 
 
+struct AddComment: Codable {
+    var success: Bool?
+    var message: String?
+    var data: PostComment?
+    var code: Int?
+}

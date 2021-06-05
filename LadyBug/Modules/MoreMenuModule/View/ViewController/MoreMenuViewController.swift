@@ -110,7 +110,7 @@ extension MoreMenuViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case let .notification(notificationModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuNotificationsCell.self)", for: indexPath) as? MoreMenuNotificationsCell ?? MoreMenuNotificationsCell()
-            cell.setupUI(model: notificationModel)
+            cell.setupUI(model: notificationModel, data: presnter.user)
             return cell
         case let .language(languageModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(MoreMenuLanguageCell.self)", for: indexPath) as? MoreMenuLanguageCell ?? MoreMenuLanguageCell()

@@ -15,7 +15,7 @@ enum PostsEndPoint {
     case toggleCommentDislike(id: Int)
     case solvePost(postId : Int)
     case editComment(postId : Int)
-    case createComment
+    case createComment(content: String, postId: Int, photo: MediaUpload?)
 }
 
 extension PostsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtocol {
@@ -61,9 +61,22 @@ extension PostsEndPoint: TargetType, AccessTokenAuthorizable, CommonHeaderProtoc
     
     var task: Task {
         switch self {
-        case .getUserPosts, .toggleDislike, .toggleLike, .toggleCommentDislike, .toggleCommentLike, .solvePost, .editComment , .createComment :
+        case .getUserPosts, .toggleDislike, .toggleLike, .toggleCommentDislike, .toggleCommentLike, .solvePost, .editComment :
             return .requestPlain
+        case let .createComment(content, postId, photo) :
             
+            var formData: [Moya.MultipartFormData] = []
+            if let userPhoto = photo?.image.jpegData(compressionQuality: 0) {
+                formData.append(Moya.MultipartFormData(provider: .data(userPhoto), name: "assets[]", fileName: photo?.fileName ?? "", mimeType: "image/jpeg"))
+            }
+            
+            let content = content.data(using: .utf8) ?? Data()
+            let postId = "\(postId)".data(using: .utf8) ?? Data()
+            
+            formData.append(Moya.MultipartFormData(provider: .data(content), name: "content"))
+            formData.append(Moya.MultipartFormData(provider: .data(postId), name: "post_id"))
+            
+            return .uploadMultipart(formData)
         }
     }
     var headers: [String : String]? {

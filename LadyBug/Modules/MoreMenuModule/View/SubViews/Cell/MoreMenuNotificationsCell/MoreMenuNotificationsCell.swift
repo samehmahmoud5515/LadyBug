@@ -14,10 +14,12 @@ class MoreMenuNotificationsCell: UITableViewCell {
     @IBOutlet weak var notificationswitchButton: UISwitch!
     
     
-     func setupUI(model: MoreMenuNotificationModel) {
+    func setupUI(model: MoreMenuNotificationModel , data : User  ) {
         notificationswitchButton.isOn = model.isNotificationOn
         notificationsLabel.text = model.title
         notificationsImageView.image = UIImage(named: model.image)
+        guard let isNotifiable = data.isNotifiable else{return}
+        notificationswitchButton.isOn = isNotifiable
         setupFonts()
        }
     private func setupFonts(){

@@ -46,7 +46,7 @@ class PostDetailsViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-
+    
 }
 
 extension PostDetailsViewController: PostDetailsViewProtocol {
@@ -264,7 +264,7 @@ extension PostDetailsViewController: StandardAlertViewControllerDelegate {
 
 extension PostDetailsViewController {
     @objc func didTappedCheckButton() {
-        let vc = StandardAlertViewController(title: "هل تم حل مشكلتك ؟", message: "", delegate: self)
+        let vc = StandardAlertViewController(title: "هل تم حل مشكلتك ؟", message: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من صورة حقيقية لتصميم الموقع.", delegate: self)
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: false, completion: nil)
     }
@@ -273,6 +273,8 @@ extension PostDetailsViewController {
 extension PostDetailsViewController {
     
     @IBAction func addComment(_ sender: UIButton) {
+        guard let id = presnter.post.id else{return}
+        presnter.createComment(content: commentTextView.text, postId: id )
     }
     
     @IBAction func uploadCommentPhotos(_ sender: UIButton) {
@@ -292,14 +294,15 @@ extension PostDetailsViewController : UIImagePickerControllerDelegate , UINaviga
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-//            registrationGalleryImageVew.contentMode = .scaleAspectFill
-//            registrationGalleryImageVew.image = editedImage
-//
-//        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-//            registrationGalleryImageVew.contentMode = .scaleAspectFill
-//            registrationGalleryImageVew.image = originalImage
-//        }
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            
+            presnter.commentImage = MediaUpload(image: editedImage, fileName: UUID().uuidString)
+            
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            presnter.commentImage = MediaUpload(image: originalImage, fileName: UUID().uuidString)
+            
+        }
         self.stopLoadingIndicator()
         dismiss(animated: true, completion: nil)
     }
@@ -313,18 +316,18 @@ extension PostDetailsViewController : UIImagePickerControllerDelegate , UINaviga
 extension PostDetailsViewController{
     
     func observeOnKeyboard() {
-          NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-          NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-      }
-      @objc func keyboardWillShow(notification: NSNotification) {
-          
-          let userInfo = notification.userInfo
-          let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        let userInfo = notification.userInfo
+        let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
         addCommentBottomConst.constant = keyboardFrame.size.height
         view.layoutIfNeeded()
-      }
-      @objc func keyboardWillHide(notification: NSNotification) {
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
         addCommentBottomConst.constant = .zero
         view.layoutIfNeeded()
-      }
+    }
 }

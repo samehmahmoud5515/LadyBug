@@ -11,12 +11,15 @@ protocol PostDetailsPresenterProtocol {
     var images: PostDetailsImages { get }
     var localizer: PostDetailsLocalizer { get }
     func attach()
+    var commentImage: MediaUpload?{get set}
     var post : UserPost {get set}
     func setLike( postId : Int, completion: @escaping () -> () )
     func setDisLike( postId : Int, completion: @escaping () -> () )
     func setCommentLike( commentId : Int ,   completion: @escaping () -> () )
     func setCommentDisLike( commentId : Int , completion: @escaping () -> ()  )
     func solvePost(postId : Int)
+    func createComment(content: String, postId: Int)
+
 }
 
 protocol PostDetailsViewProtocol: class {

@@ -26,6 +26,10 @@ class CommentCell: UITableViewCell {
     func setupUI(comment: PostComment) {
         
         setup()
+        if let imageURL = comment.commenter?.photoURL {
+        ownerCommentImage.sd_setImage(with: URL(string: imageURL))
+        }
+        commenterJobLabel.text = comment.commenter?.jobName
         commenterNameLabel.text = comment.commenter?.name
         commentLabel.text = comment.content
         timeLabel.text = comment.createdAt

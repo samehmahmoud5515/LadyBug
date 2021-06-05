@@ -5,15 +5,16 @@
 //  Created by SAMEH on 21/02/2021.
 //
 
-import Foundation
+import Moya
 
 class AddPostPresenter: AddPostPresenterProtocol {
+ 
     weak var view: AddPostViewProtocol?
     
     var images = AddPostImages()
     var localizer = AddPostLocalizer()
-    
     var datasource = [AddPostUIModel]()
+
     
     init(view: AddPostViewProtocol) {
         self.view = view
@@ -33,4 +34,6 @@ class AddPostPresenter: AddPostPresenterProtocol {
     func getItemFor(index: Int) -> AddPostUIModel {
         return datasource[index]
     }
+    
+    
 }

@@ -19,7 +19,7 @@ struct UserFarmsResponse: Codable {
 struct WeatherFarmResponse: Codable {
     var weatherData: WeatherData?
     var farms: [Farm]?
-
+    
     enum CodingKeys: String, CodingKey {
         case weatherData = "weather_data"
         case farms
@@ -53,7 +53,7 @@ struct Farm: Codable {
     var posts: [Post]?
     var serviceTables: [ServiceTable]?
     var comingTask: FarmTask?
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case adminID = "admin_id"
@@ -136,7 +136,7 @@ struct SaltDetail: Codable {
     var ph, co3, hco3, cl: Int?
     var so4, ca, mg, k: Int?
     var na, na2CO3: Double?
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case saltableType = "saltable_type"
@@ -177,7 +177,7 @@ struct FarmTask: Codable {
     var createdAt, updatedAt: String?
     var deletedAt: String?
     var taskTypeName: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case startAt = "start_at"
@@ -211,7 +211,7 @@ struct FarmedType: Codable {
     var photoURL: String?
     var selected: Int?
     var farmedTypeClasses: [FarmedTypeClass]?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case farmActivityTypeName = "farm_activity_type_name"
@@ -228,7 +228,7 @@ struct FarmedTypeClass: Codable {
     var name: String?
     var farmedTypeID: Int?
     var farmedTypeName: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case farmedTypeID = "farmed_type_id"
@@ -258,7 +258,7 @@ struct Detail: Codable {
     var saltConcentrationValue: Int?
     var saltConcentrationUnit: Unit?
     var saltDetail: SaltDetail?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, type
         case acidityType = "acidity_type"
@@ -294,7 +294,7 @@ struct Post: Codable {
     var likedByMe, dislikedByMe: Bool?
     var comments: [Comment]?
     var createdAt: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, content, author, farm
         case farmedTypePhoto = "farmed_type_photo"
@@ -323,7 +323,7 @@ struct Comment: Codable {
     var repliesCount, likersCount, dislikersCount: Int?
     var likers, dislikers, replies: [String]?
     var createdAt: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, content, commenter
         case postID = "post_id"
@@ -343,18 +343,22 @@ struct Commenter: Codable {
     var email: String?
     var mobile: String?
     var activityPoints, humanJobID, emailVerified, mobileVerified: Int?
+    var jobName: String?
+    var photoURL: String?
     var status: String?
     var emailVerifiedAt: String?
     var createdAt, updatedAt: String?
     var deletedAt: String?
     var isNotifiable: Bool?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, email, mobile
         case activityPoints = "activity_points"
         case humanJobID = "human_job_id"
         case emailVerified = "email_verified"
         case mobileVerified = "mobile_verified"
+        case jobName = "job_name"
+        case photoURL = "photo_url"
         case status
         case emailVerifiedAt = "email_verified_at"
         case createdAt = "created_at"
@@ -387,7 +391,7 @@ struct WeatherData: Codable {
     var weatherIconURL: String?
     var temp, date, sunrise, sunset: String?
     var location: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case weatherDescription = "weather_description"
         case weatherIconURL = "weather_icon_url"
